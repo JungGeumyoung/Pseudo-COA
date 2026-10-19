@@ -99,7 +99,7 @@ def cmd_sim_input(a):
     if order is not None:
         err, _ = validate(c, order)
         if err:
-            print("COA 검사 오류 %d건 — 시뮬레이터 입력을 만들지 않는다. validate로 확인할 것" % len(err), file=sys.stderr)
+            print("COA 검사 오류 %d건 — 시뮬레이터 입력을 만들지 않습니다. validate로 확인하세요" % len(err), file=sys.stderr)
             sys.exit(1)
     _write(c.sim_input(order), a.o)
 

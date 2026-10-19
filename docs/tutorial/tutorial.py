@@ -47,16 +47,16 @@ def step1():
     h(1, "사례 폴더: cases/%s/" % CID)
     c = load_case(CID)
     print(repr(c))
-    for name, use in (("situation.json", "① 상황(input): COA를 만들어야 할 상황. 생성 모델이 받는다 (익명화)"),
+    for name, use in (("situation.json", "① 상황(input): COA를 만들어야 할 상황. 생성 모델이 받습니다 (익명화)"),
                       ("coa.json", "② pseudo-GT COA(order): 그 연대가 실제로 내린 명령. few-shot 예시 (익명화)"),
-                      ("scenario.json", "③ 시나리오: 적의 실제 계획, 숨은 적, 환경, 시작·끝. 시뮬레이터만 받는다"),
-                      ("history.json", "④ 실제 경과: 평가에만 쓴다. 시뮬레이터에도 주지 않는다"),
+                      ("scenario.json", "③ 시나리오: 적의 실제 계획, 숨은 적, 환경, 시작·끝. 시뮬레이터만 받습니다"),
+                      ("history.json", "④ 실제 경과: 평가에만 씁니다. 시뮬레이터에도 주지 않습니다"),
                       ("source.json", "출처, 결과 라벨, 축척, 자동 검사 결과"),
                       ("real_names/", "①②의 실명판 (사람 검토용)"),
                       ("README.md, map.svg", "사람이 읽는 사례 요약·명령서와 약도")):
         print("- %-16s %s" % (name, use))
-    print("\n파이썬에서는 load_case(id)의 속성으로 읽는다: c.situation, c.coa, c.scenario, c.history, c.meta")
-    print("익명화는 이름만 바꾼다. id와 좌표는 실명판과 같다(395고지 → %s)." %
+    print("\n파이썬에서는 load_case(id)의 속성으로 읽습니다: c.situation, c.coa, c.scenario, c.history, c.meta")
+    print("익명화는 이름만 바꿉니다. id와 좌표는 실명판과 같습니다(395고지 → %s)." %
           next(f["alias"] for f in c.situation["terrain"]["features"] if f["id"] == "H395"))
 
 
@@ -65,17 +65,17 @@ def step2():
     I = load_case(CID).situation
     print("관점 부대:", I["perspective"]["alias"], "| 상급 임무:", I["higher_context"]["higher_mission"])
     print("부여 과업:", I["higher_context"]["assigned_task"])
-    print("\n가용 부대(available_forces) — order의 전투편성이 이 id를 쓴다")
+    print("\n가용 부대(available_forces) — order의 전투편성이 이 id를 씁니다")
     for f in I["available_forces"]:
         print("   %-3s %-10s %s %s%s %s%%" % (f["id"], f["alias"], f["echelon"], f["type"], f["modifier"], f["strength_pct"]))
-    print("\n지형(terrain.features) %d개 — order의 objective·area 등이 이 id를 쓴다. 좌표는 200×200 캔버스, 1단위 = %sm, 북쪽 +y" % (
+    print("\n지형(terrain.features) %d개 — order의 objective·area 등이 이 id를 씁니다. 좌표는 200×200 캔버스, 1단위 = %sm, 북쪽 +y" % (
         len(I["terrain"]["features"]), I["terrain"]["scale_m_per_unit"]))
     for f in I["terrain"]["features"][:5]:
         print("   %-8s %-8s %-8s xy=%s 준비=%s" % (f["id"], f["alias"], f["kind"], f["xy"], f.get("preparation", "")))
-    print("\n적(enemy_forces) — 연대가 명령 시점에 알던 적만 있다")
+    print("\n적(enemy_forces) — 연대가 명령 시점에 알던 적만 있습니다")
     for e in I["enemy_forces"]:
         print("   %-3s %-10s %s %-9s 태세=%s xy=%s" % (e["id"], e["alias"], e["echelon"], e["type"], e["posture"], e["position"]["xy"]))
-    print("\n상급·인접 부대의 조건부 행동(higher_rules) — 시뮬레이터가 실행한다")
+    print("\n상급·인접 부대의 조건부 행동(higher_rules) — 시뮬레이터가 실행합니다")
     for r in I["higher_context"].get("higher_rules", []):
         print("   %s %s %s → %s | trigger: %s" % (r["unit"], r["timing"], r["action"]["mode"], r["action"]["objective_ref"], r["trigger"]["text"]))
 
@@ -97,7 +97,7 @@ def step3():
         for it in t["items"]:
             print("      %-6s %-5s params=%s%s" % (it["timing"], it["verb"], it.get("params"),
                                                  "  trigger=" + it["trigger"]["text"] if it.get("trigger") else ""))
-    print("\n통제수단(control_measures) — order 안에서 정의하고 참조한다")
+    print("\n통제수단(control_measures) — order 안에서 정의하고 참조합니다")
     for c in O["execution"]["coordinating"]["control_measures"]:
         print("   %-8s %-18s 점 %d개" % (c["id"], c["kind"], len(c["xy"]) if isinstance(c["xy"][0], list) else 1))
 
@@ -107,11 +107,11 @@ def step4():
     print("아군 과업 timing:  즉시 = 명령과 함께 시작 / 이어서 = 같은 group 앞 항목이 끝나면 / 명에 의해 = trigger가 참이 되면")
     print("적 계획 timing:    계획 = start 시각에 / 이어서 / 조건 = trigger가 참이 되면")
     print("상급 규칙 timing:  계획 / 조건")
-    print("\n반응 조건(trigger, reserve.commit, disengage)은 전투력 두 가지뿐이다:")
+    print("\n반응 조건(trigger, reserve.commit, disengage)은 전투력 두 가지뿐입니다:")
     show({"type": "losses_exceed", "group": "G1", "fraction": 0.4, "text": "제1대대 누적 손실 40% 초과"})
     show({"type": "strength_in_area", "side": "enemy", "ref": "H395", "min_echelon": "중대", "text": "적 중대 이상이 고지 A 안에 있음"})
-    print("   ref가 점이면 반경 500m, min_echelon은 유닛 환산값(소대 1, 중대 4, 대대 15, 연대 48) 이상을 뜻한다(docs/02 §4).")
-    print("시각은 조건이 아니라 일정이다: time_elapsed의 value = D일 00:00부터 경과 시간(h). 'D+1일 06:00' = 30")
+    print("   ref가 점이면 반경 500m, min_echelon은 유닛 환산값(소대 1, 중대 4, 대대 15, 연대 48) 이상을 뜻합니다(docs/simulation/how_to_simulate.md §4).")
+    print("시각은 조건이 아니라 일정입니다: time_elapsed의 value = D일 00:00부터 경과 시간(h). 'D+1일 06:00' = 30")
     show({"type": "time_elapsed", "value": 6, "text": "D일 06:00"})
 
 
@@ -125,7 +125,7 @@ def step5():
             when = it.get("start", {}).get("value") if it["timing"] == "계획" else (it.get("trigger") or {}).get("text", "")
             print("   %-4s %-4s %-12s → %-7s %s%s" % (g["group"], it["timing"], it["mode"], it.get("objective_ref"), when,
                                                    "  repeat=%s" % it["repeat"] if it.get("repeat") else ""))
-    print("\n숨은 적(hidden_enemy) — 연대가 몰랐던 부대. 생성 모델은 못 보고 시뮬레이터에는 처음부터 있다")
+    print("\n숨은 적(hidden_enemy) — 연대가 몰랐던 부대. 생성 모델은 못 보고 시뮬레이터에는 처음부터 있습니다")
     for e in S["hidden_enemy"]:
         print("   %s %s %s xy=%s" % (e["id"], e["unit"], e["echelon"], e["position"]["xy"]))
     print("\n외생 사건(exogenous) — 전투 결과와 무관한 환경")
@@ -151,7 +151,7 @@ def step7():
     for et in ("중대", "대대", "연대"):
         print("   보병 %s = %s" % (et, T["counts"]["infantry"][et]))
     print("   전차 중대 = %s" % T["counts"]["armor"]["중대"])
-    print("modifier '+' '-'와 strength_pct 적용 규칙은 docs/02 §3에 있다. 이 표는 보정 대상인 초안이다.")
+    print("modifier '+' '-'와 strength_pct 적용 규칙은 docs/simulation/how_to_simulate.md §3에 있습니다. 이 표는 보정 대상인 초안입니다.")
 
 
 def step8():
@@ -179,7 +179,7 @@ def step9():
     print("\n프롬프트 보기:  python -m pseudo_coa prompt %s --cond DF" % CID)
     print("실제 생성:      python -m pseudo_coa generate %s --out runs/%s.json --sim-out runs/%s.sim.json" % (CID, CID, CID))
     v = load_case(CID).sim_input()
-    print("시뮬레이터 입력(sim_input)의 키:", list(v.keys()), "— order만 새 COA로 바뀐다")
+    print("시뮬레이터 입력(sim_input)의 키:", list(v.keys()), "— order만 새 COA로 바뀝니다")
 
 
 STEPS = [step1, step2, step3, step4, step5, step6, step7, step8, step9]

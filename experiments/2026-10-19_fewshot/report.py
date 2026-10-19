@@ -54,7 +54,7 @@ def main():
     M = [("place_km", "배치 거리 km ↓"), ("main_j", "주력 구성 J"), ("reserve_agree", "예비 유무 일치"), ("reserve_j", "예비 구성 J"),
          ("commit_type", "투입조건 type"), ("commit_ref", "투입조건 대상"), ("key_j", "핵심지형 J"), ("obj_j", "과업 지형 J"),
          ("mission_verb", "임무 동사"), ("mission_obj", "임무 목표"), ("verb_j", "동사 집합 J")]
-    L += ["", "## 2. pseudo-GT와의 구조 일치", "", "높을수록 GT와 비슷하다(배치 거리만 낮을수록). J = Jaccard. "
+    L += ["", "## 2. pseudo-GT와의 구조 일치", "", "높을수록 GT와 비슷합니다(배치 거리만 낮을수록). J = Jaccard. "
           "배치 거리의 비교 기준(모든 부대를 GT 배치 중심 평균에 둠): %s km." % fmt(mean([r.get("place_km_naive") for r in S[conds[0]].values()])), "",
           "| 지표 | " + " | ".join(conds) + " |", "|---|" + "---|" * len(conds)]
     for k, name in M:
@@ -108,7 +108,7 @@ def main():
         L.append("| %s (%d) | %s |" % (m, len(ids), " | ".join(cells)))
     # 7. 심사 점수와 실제 결과
     L += ["", "## 7. GT 심사 점수와 실제 결과 (심사가 결과를 예측하는가)", "",
-          "GT order의 심사 점수를 그 전투의 실제 결과 라벨별로 평균했다. 심사가 결과를 예측한다면 success가 가장 높아야 한다.", "",
+          "GT order의 심사 점수를 그 전투의 실제 결과 라벨별로 평균했습니다. 심사가 결과를 예측한다면 success가 가장 높아야 합니다.", "",
           "| 실제 결과 (n) | overall | " + " | ".join(CRIT) + " |", "|---|---|" + "---|" * len(CRIT)]
     for lab in ("success", "partial", "failure"):
         js = [J["GT"][i] for i in J["GT"] if ROW[i]["outcome"] == lab]

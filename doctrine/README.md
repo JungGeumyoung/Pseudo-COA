@@ -1,26 +1,26 @@
 # 교범 묶음
 
-생성 모델의 입력에 넣는 교범 조항이다(파이프라인 조건 `D`, `DF`). 미 육군 공개 교범 원문(영문)에서 골랐다.
+생성 모델의 입력에 넣는 교범 조항입니다(파이프라인 조건 `D`, `DF`). 미 육군 공개 교범 원문(영문)에서 골랐습니다.
 
 | 파일 | 내용 | 프롬프트에 들어가나 |
 |---|---|---|
-| `doctrine_pack.json` | 아래 전부. 생성 코드(`pseudo_coa/generate/prompt.py`)가 읽는다 | — |
+| `doctrine_pack.json` | 아래 전부. 생성 코드(`pseudo_coa/generate/prompt.py`)가 읽습니다 | — |
 | `verbs.md` | 한국어 과업 동사 ↔ 교범 정의(FM 3-90 부록 B 등) 32개 조항 | 예. 임무 유형과 상관없이 모두 |
 | `orders.md` (`core`) | 명령의 구성 요소 16개 조항: 임무 문장, 지휘관 의도·최종상태, 작전개념, 방책 진술·요도, 사실과 가정, 예비(FM 5-0, ADP 5-0, ADP 3-0) | 예. 모두 |
 | `mission_<유형>.md` | 임무 유형별 관련 조항 8개(지역방어·기동방어·공격·역습·지연·철수·추격·경계) | 예. 그 사례의 임무 유형 것만 |
 
-프롬프트에는 교범 1(동사) → 교범 2(명령 구성 요소) → 교범 3(임무 유형) 순서로 들어간다. OPORD 양식 원문(FM 5-0 부록 D 그림 D-2)은 넣지 않는다. 보안 표시, 참고문헌, 부록 참조, 4항 지속지원과 5항 지휘통신처럼 이 스키마에 없는 항목이 대부분이기 때문이다. 양식은 JSON 스키마(`schema/coa.schema.json`, 구조화 출력으로 강제)와 system 프롬프트의 명령서 번호가 정한다.
+프롬프트에는 교범 1(동사) → 교범 2(명령 구성 요소) → 교범 3(임무 유형) 순서로 들어갑니다. OPORD 양식 원문(FM 5-0 부록 D 그림 D-2)은 넣지 않습니다. 보안 표시, 참고문헌, 부록 참조, 4항 지속지원과 5항 지휘통신처럼 이 스키마에 없는 항목이 대부분이기 때문입니다. 양식은 JSON 스키마(`schema/coa.schema.json`, 구조화 출력으로 강제)와 system 프롬프트의 명령서 번호가 정합니다.
 
 ## 고른 방법
 
-- **명령 구성 요소**: 방책 진술·요도(FM 5-0 5-105~5-110), 임무 문장·의도·최종상태(ADP 5-0 2-100~2-105), 사실과 가정(ADP 5-0 2-135~2-138), 예비(ADP 3-0 3-40) 등을 손으로 골랐다.
-- **동사 정의**: 한국어 과업 동사마다 뜻이 가장 가까운 교범 조항을 손으로 골랐다. 예를 들어 고수는 retain(FM 3-90 B-55), 고착은 fix(B-35)다. 정찰·격퇴·견제·공격·초월은 1:1로 맞는 조항이 없어 넣지 않았다.
-- **임무 유형별 조항**: 교범 10종을 문단 단위로 자른 코퍼스(7,843문단)에서 임무 유형별 검색어(예: 지역방어는 area defense, engagement area, counterattack, reserve…)의 등장 횟수로 점수를 매겨 상위 8개를 골랐다. 한 교범이 절반을 넘지 않게 했다. 검색어는 각 `mission_<유형>.md`의 머리에 있다.
+- **명령 구성 요소**: 방책 진술·요도(FM 5-0 5-105~5-110), 임무 문장·의도·최종상태(ADP 5-0 2-100~2-105), 사실과 가정(ADP 5-0 2-135~2-138), 예비(ADP 3-0 3-40) 등을 손으로 골랐습니다.
+- **동사 정의**: 한국어 과업 동사마다 뜻이 가장 가까운 교범 조항을 손으로 골랐습니다. 예를 들어 고수는 retain(FM 3-90 B-55), 고착은 fix(B-35)입니다. 정찰·격퇴·견제·공격·초월은 1:1로 맞는 조항이 없어 넣지 않았습니다.
+- **임무 유형별 조항**: 교범 10종을 문단 단위로 자른 코퍼스(7,843문단)에서 임무 유형별 검색어(예: 지역방어는 area defense, engagement area, counterattack, reserve…)의 등장 횟수로 점수를 매겨 상위 8개를 골랐습니다. 한 교범이 절반을 넘지 않게 했습니다. 검색어는 각 `mission_<유형>.md`의 머리에 있습니다.
 
 ## 출처
 
-`doctrine_pack.json`의 `sources`에 판본이 있다. FM 3-90 Tactics(2023), ADP 3-90 Offense and Defense(2019), FM 5-0(2024) 등이다. 모두 표지에 "Approved for public release; distribution is unlimited"가 적힌 공개 문서다.
+`doctrine_pack.json`의 `sources`에 판본이 있습니다. FM 3-90 Tactics(2023), ADP 3-90 Offense and Defense(2019), FM 5-0(2024) 등입니다. 모두 표지에 "Approved for public release; distribution is unlimited"가 적힌 공개 문서입니다.
 
 ## 바꾸려면
 
-다른 교범(예: 한국군 교범)으로 바꾸려면 `doctrine_pack.json`을 같은 꼴로 만들면 된다. 꼴은 `{"verbs": [{verb, term, ref, text}], "missions": {유형: [{ref, text}]}}`다. `pseudo_coa/generate/prompt.py`의 `doctrine_text()`가 이 파일만 읽는다.
+다른 교범(예: 한국군 교범)으로 바꾸려면 `doctrine_pack.json`을 같은 꼴로 만들면 됩니다. 꼴은 `{"verbs": [{verb, term, ref, text}], "missions": {유형: [{ref, text}]}}`입니다. `pseudo_coa/generate/prompt.py`의 `doctrine_text()`가 이 파일만 읽습니다.
