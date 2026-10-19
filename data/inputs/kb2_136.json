@@ -1,0 +1,609 @@
+{
+ "id": "kb2_136",
+ "schema": "reduced-opord/0.6",
+ "mission_type": "지역방어",
+ "input": {
+  "perspective": {
+   "unit": "아군 연대",
+   "alias": "아군 연대",
+   "echelon": "해병연대"
+  },
+  "higher_context": {
+   "higher_unit": "상급 사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "상급 사단은 장단·하천 1 지구에서 주저항선과 전방 전초진지를 방어하여 휴전협상 중 현 전선을 유지한다.",
+   "higher_intent": "전초진지로 적의 기습과 도하를 조기에 저지하고 포병 화력으로 적 공격부대를 하천 1 일대에서 격멸한다. 주저항선은 반드시 확보한다.",
+   "assigned_task": "마을 2에서 하천 1에 이르는 사단 좌측 지역의 주저항선과 8개 전초진지를 방어하고 경계·정찰을 실시한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "인접 연대 1",
+     "alias": "인접 연대 1",
+     "side": "우측(동쪽)",
+     "mission": "주저항선과 전초진지를 방어한다.",
+     "type": "marine",
+     "echelon": "연대",
+     "xy": [
+      168,
+      82
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "상급 사단 일반지원 포병",
+     "text": "적 대대 이상이 지점 1 일대에 있으면 도하지점에 차단사격을 한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T5",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 지점 1 일대에 있음"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "T5"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 마을 2 동쪽에서 지점 1 동쪽까지 정면 약 11km다. 주저항선 전방 2.5km 안에 8개 전초진지를 둔다. 후방은 하천 2, 우측은 인접 연대 1다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "연대 우측 전투지경선",
+     "between": [
+      "아군 연대",
+      "인접 연대 1"
+     ],
+     "xy": [
+      [
+       150,
+       40
+      ],
+      [
+       150,
+       81
+      ],
+      [
+       153,
+       135
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 좌측 한계",
+     "between": [
+      "아군 연대",
+      "마을 2 중립지역"
+     ],
+     "xy": [
+      [
+       38,
+       40
+      ],
+      [
+       38,
+       80
+      ],
+      [
+       38,
+       100
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 좌측"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 중앙"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제9중대",
+    "alias": "제9중대",
+    "echelon": "중대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "personnel": 200,
+    "location": {
+     "note": "연대 작전지역 내 제3대대 지역"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제10중대",
+    "alias": "제10중대",
+    "echelon": "중대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "personnel": 190,
+    "location": {
+     "note": "연대 작전지역 내 제3대대 전초 지역"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제11중대",
+    "alias": "제11중대",
+    "echelon": "중대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "personnel": 200,
+    "location": {
+     "note": "연대 작전지역 내 제3대대 지역"
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "전차 소대 1",
+    "alias": "전차 소대 1",
+    "echelon": "소대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "작전통제",
+    "equipment": "전차 5대(추정)",
+    "location": {
+     "note": "제3대대 후방 지역"
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "포병 대대 1",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 18문(추정)",
+    "location": {
+     "note": "연대 후방 하천 2 북안"
+    }
+   },
+   {
+    "id": "F8",
+    "unit": "박격포 중대 1",
+    "alias": "박격포 중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "4.2인치 박격포 12문(추정)",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "하천 1이 연대 정면을 가로질러 동북에서 서남으로 흐르고 남쪽 2.5km에 주저항선이 있다. 36·고지 B는 도하지점 가까이 적 진지에서 1km 안에 있는 고립된 고지다. 후방에는 하천 2이 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "고지 A",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      104,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T2",
+     "name": "고지 B",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      112,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T3",
+     "name": "고지 C",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      124,
+      94
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T4",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "line": [
+      [
+       0,
+       112
+      ],
+      [
+       50,
+       110
+      ],
+      [
+       92,
+       108
+      ],
+      [
+       100,
+       110
+      ],
+      [
+       110,
+       117
+      ],
+      [
+       128,
+       126
+      ],
+      [
+       160,
+       136
+      ],
+      [
+       200,
+       145
+      ]
+     ]
+    },
+    {
+     "id": "T5",
+     "name": "지점 1",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      97,
+      109
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T6",
+     "name": "마을 1",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      110,
+      55
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T7",
+     "name": "마을 2",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      34,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T8",
+     "name": "지점 2",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      102,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "polygon": [
+      [
+       90,
+       114
+      ],
+      [
+       112,
+       121
+      ],
+      [
+       110,
+       127
+      ],
+      [
+       90,
+       120
+      ]
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T9",
+     "name": "지점 3",
+     "alias": "지점 3",
+     "kind": "area",
+     "xy": [
+      115,
+      136
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "polygon": [
+      [
+       100,
+       130
+      ],
+      [
+       130,
+       132
+      ],
+      [
+       130,
+       142
+      ],
+      [
+       100,
+       140
+      ]
+     ]
+    },
+    {
+     "id": "T10",
+     "name": "하천 2",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      100,
+      20
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "도로 1",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       110,
+       55
+      ],
+      [
+       112,
+       68
+      ],
+      [
+       112,
+       80
+      ],
+      [
+       110,
+       88
+      ],
+      [
+       108,
+       95
+      ],
+      [
+       106,
+       100
+      ],
+      [
+       104,
+       104
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "도로 2",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       118,
+       74
+      ],
+      [
+       118,
+       82
+      ],
+      [
+       118,
+       92
+      ],
+      [
+       115,
+       102
+      ],
+      [
+       112,
+       110
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "하천 2",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       0,
+       0
+      ],
+      [
+       200,
+       0
+      ],
+      [
+       200,
+       22
+      ],
+      [
+       0,
+       30
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 대대 1",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "D-13일 36·고지 B를 공격한 부대로 하천 1 북안 전방 진지에 있다.",
+    "posture": "공격준비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      102,
+      118
+     ],
+     "note": "하천 1 북안 전방 진지",
+     "ref": "T8",
+     "frontage_m": 2000
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 연대 1",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "제2대대 후방 종심에 2개 대대",
+    "posture": "예비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      115,
+      136
+     ],
+     "note": "종심 진지",
+     "ref": "T9",
+     "frontage_m": 3000
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 연대 2",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "연대 좌측 정면 대치",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      60,
+      125
+     ],
+     "note": "마을 2 북동쪽 진지",
+     "frontage_m": 5000
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 포병 1",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "D-13일 공격 때 전차·자주포와 함께 강력한 화력을 지원했다.",
+    "posture": "방어",
+    "equipment": "야포·박격포, 전차·자주포 일부",
+    "position": {
+     "xy": [
+      105,
+      155
+     ],
+     "note": "하천 1 북쪽 종심"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 17:00",
+   "light": "dusk",
+   "notes": "일몰 약 18:40. 적은 D-13일 18:00에 도하 기습했다. 휴전협상 중 고착 전선."
+  }
+ }
+}

@@ -1,0 +1,882 @@
+{
+ "note": "미 육군 공개 교범에서 고른 조항. verbs는 한국어 과업 동사와 교범 정의의 대응, missions는 임무 유형별 검색 상위 조항, core는 명령 양식·작전개념 일반 조항(파이프라인 기본 프롬프트에는 넣지 않음).",
+ "sources": {
+  "ADP 3-0": "ADP 3-0 Operations (Mar 2025)",
+  "ADP 3-90": "ADP 3-90 Offense and Defense (Jul 2019)",
+  "ADP 5-0": "ADP 5-0 The Operations Process (Jul 2019)",
+  "ATP 5-0.2-1": "ATP 5-0.2-1 Staff Reference Guide Vol I (Dec 2020)",
+  "FM 3-0": "FM 3-0 Operations (Mar 2025)",
+  "FM 3-90": "FM 3-90 Tactics (May 2023)",
+  "FM 5-0": "FM 5-0 Planning and Orders Production (Nov 2024, C1 Aug 2025)"
+ },
+ "verbs": [
+  {
+   "ref": "FM 3-90 B-57",
+   "manual": "FM 3-90",
+   "section": "SEIZE",
+   "pdf_page": 421,
+   "text": "Seize is a tactical mission task in which a unit takes possession of a designated area by using overwhelming force. An enemy force can no longer place direct fire on a seized objective. The arrow points to the location or objective to seize. This task differs from secure because it requires offensive action to obtain control of the designated area or objective. It differs from the task of occupy because it involves overcoming anticipated enemy opposition. Once a friendly force seizes a physical objective, it clears the terrain within that objective by killing, capturing, or forcing the withdrawal of all enemy forces. Figure B-26 depicts the seize tactical mission task. Figure B-26. Seize task",
+   "verb": "탈취",
+   "term": "seize"
+  },
+  {
+   "ref": "FM 3-90 B-56",
+   "manual": "FM 3-90",
+   "section": "SECURE",
+   "pdf_page": 421,
+   "text": "Secure is a tactical mission task in which a unit prevents the enemy from damaging or destroying a force, facility, or geographical location. This task normally involves conducting area security operations. A force given the mission of securing a unit, facility, or geographic location, such as a route or base, not only prevents enemy forces from over running or occupying the secured location, but also prevents enemy direct fires and observed indirect fires from impacting the secured location, unit, or facility. Stated simply, the secured area or location is safe enough to build and project combat power. There is a difference between control and secure. The control tactical mission task Figure B-25. Secure task allows enemy direct and indirect fires to affect the location being controlled while secure does not. A unit does not have to physically occupy the area immediately around the unit, facility, or geographic location it is securing if it can prevent the enemy from occupying or firing at that location by other means. The commander states the mission duration in terms of time or event when assigning a mission to secure a given unit, facility, or geographic location. The direction of the arrow has no significance, but the symbol includes the entire area to be secured. Figure B-25 depicts the secure tactical mission task.",
+   "verb": "확보",
+   "term": "secure"
+  },
+  {
+   "ref": "FM 3-90 B-53",
+   "manual": "FM 3-90",
+   "section": "OCCUPY",
+   "pdf_page": 420,
+   "text": "Occupy is a tactical mission task in which a unit moves into an area to control it without enemy opposition. Both the friendly force’s movement to and occupation of the area occur without enemy opposition. A unit can control an area without occupying it, but not vice versa. That is the difference between the tactical mission tasks of occupy and control. The symbol should encompass the entire area that a commander desires to occupy. Units typically occupy assembly areas, objectives, and",
+   "verb": "점령",
+   "term": "occupy"
+  },
+  {
+   "ref": "FM 3-90 B-55",
+   "manual": "FM 3-90",
+   "section": "RETAIN",
+   "pdf_page": 421,
+   "text": "Retain is a tactical mission task in which a unit prevents enemy occupation or use of terrain. A commander assigning this task specifies the area to retain and the duration of the retention, which is time or event driven. While a unit is conducting this task, it expects enemy forces to attack and prepares for decisive engagement. A unit tasked to retain a specific piece of terrain does not necessarily have to occupy it. The direction of the arrow has no significance, but the symbol includes the entire area to be retained. Figure B-24 depicts the retain tactical mission task. Figure B-24. Retain task",
+   "verb": "고수",
+   "term": "retain"
+  },
+  {
+   "ref": "FM 3-90 B-16",
+   "manual": "FM 3-90",
+   "section": "CLEAR",
+   "pdf_page": 414,
+   "text": "Clear is a tactical mission task in which a unit eliminates all enemy forces within an assigned area. Friendly forces do this by destroying, capturing, or forcing the withdrawal of enemy forces, so they cannot execute organized resistance and interfere with the friendly unit’s mission. In all cases, this task requires a thorough reconnaissance to discover the enemy force’s locations. After discovering the enemy force’s location, the clearing force maneuvers against the enemy force. The bar connecting the arrows designates the desired limit of advance for the clearing force. The bar also establishes the width of the area to clear. Figure B-8 depicts the clear tactical mission task. Figure B-8. Clear task",
+   "verb": "소탕",
+   "term": "clear"
+  },
+  {
+   "ref": "FM 3-90 B-23",
+   "manual": "FM 3-90",
+   "section": "DESTROY",
+   "pdf_page": 415,
+   "text": "Destroy is a tactical mission task that physically renders an enemy force combat-ineffective until it is reconstituted. Alternatively, to destroy a combat system is to damage it so badly that it cannot perform any function or be restored to a usable condition without being entirely rebuilt. The amount of damage needed to render a unit combat ineffective depends on the unit’s type, discipline, and morale. Destroying armored or dug in targets with area fire weapons requires considerable ammunition and time, so forces do not normally attempt it unless they have terminally guided munitions. Figure B-11 depicts the destroy tactical mission task. Figure B-11. Destroy task",
+   "verb": "격멸",
+   "term": "destroy"
+  },
+  {
+   "ref": "FM 3-90 B-29",
+   "manual": "FM 3-90",
+   "section": "DISRUPT",
+   "pdf_page": 416,
+   "text": "Disrupt is a tactical mission task in which a unit upsets an enemy’s formation or tempo and causes the enemy force to attack prematurely or in a piecemeal fashion. Units disrupt an enemy force by integrating direct and indirect fires, terrain, and obstacles. This increases an enemy force’s vulnerability to friendly fires. It may temporarily knock a unit out of a battle. Disruption is not an end; it is the means to an end. The center arrow points toward the targeted enemy unit. Figure B-13 depicts the disrupt tactical mission task.",
+   "verb": "와해",
+   "term": "disrupt"
+  },
+  {
+   "ref": "FM 3-90 B-35",
+   "manual": "FM 3-90",
+   "section": "EXFILTRATE",
+   "pdf_page": 418,
+   "text": "Fix is a tactical mission task in which a unit prevents the enemy from moving from a specific location for a specific period. This may occur by engaging an enemy force to prevent its withdrawal for use elsewhere, or by using deception, such as transmitting false orders. A commander uses fix in offensive and defensive actions; it is always a supporting effort. The point of the arrow faces toward the desired enemy unit to fix. The broken part of the arrow indicates the desired location for that event to occur. Figure B-16 depicts the fix tactical mission task.",
+   "verb": "고착",
+   "term": "fix"
+  },
+  {
+   "ref": "FM 3-90 B-5",
+   "manual": "FM 3-90",
+   "section": "BLOCK",
+   "pdf_page": 412,
+   "text": "Block is a tactical mission task that denies the enemy access to an area or an avenue of approach. A blocking task normally requires the friendly force to block the enemy force for a certain time, or until a specific event has occurred. The line perpendicular to the enemy’s line of advance indicates the limit of enemy advance. A blocking unit may have to hold terrain and become decisively engaged. Block as a tactical mission task differs from the tactical mission task of fix. A blocked enemy force can move in any direction other than the obstructed one, while a fixed enemy force cannot move in any direction. Figure B-2 depicts the block tactical mission task.",
+   "verb": "차단",
+   "term": "block / interdict"
+  },
+  {
+   "ref": "FM 3-90 B-46",
+   "manual": "FM 3-90",
+   "section": "INTERDICT",
+   "pdf_page": 419,
+   "text": "Interdict is a tactical mission task where a unit prevents, disrupts, or delays the enemy’s use of an area or route in any domain. It is an offensive action that desynchronizes the enemy. Interdiction is a supporting effort conducted to complement and reinforce other ongoing offensive or defensive operations. The two arrows should cross on the unit or location targeted for interdiction. An interdiction tasking must specify how long to interdict, defined as a length of time or some event that must occur before the interdiction is lifted, and the exact effect desired from the interdiction. Figure B-20 depicts the interdict tactical mission task. Figure B-20. Interdict task",
+   "verb": "차단",
+   "term": "interdict"
+  },
+  {
+   "ref": "FM 3-90 B-19",
+   "manual": "FM 3-90",
+   "section": "CONTAIN",
+   "pdf_page": 415,
+   "text": "Contain is a tactical mission task in which a unit stops, holds, or surrounds an enemy force. This causes the enemy to center their activity on a given front and prevent them from withdrawing any part of their forces for use elsewhere. Contain may identify a specific enemy unit, or geographic terms or time may express the limits of the containment. Containment allows an enemy force to reposition itself within the designated geographic area, while fixing an enemy does not. The contain graphic encompasses the entire area desired to contain enemy forces during the development of alternative courses of action. Figure B-9 depicts the contain tactical mission task. Figure B-9. Contain task",
+   "verb": "저지",
+   "term": "contain"
+  },
+  {
+   "ref": "FM 3-90 B-51",
+   "manual": "FM 3-90",
+   "section": "ISOLATE",
+   "pdf_page": 420,
+   "text": "Isolate is a tactical mission task in which a unit seals off an enemy, physically and psychologically, from sources of support and denies it freedom of movement. An isolated force is prevented from having contact with other enemy forces. A unit does not allow an isolated enemy force sanctuary within its present position. Instead, a unit continues to conduct offensive actions against an enemy force. The position or direction of the arrow has no significance, but the graphic surrounds the targeted enemy unit. Figure B-21 depicts the isolate tactical mission task.",
+   "verb": "봉쇄",
+   "term": "isolate"
+  },
+  {
+   "ref": "FM 3-90 B-52",
+   "manual": "FM 3-90",
+   "section": "NEUTRALIZE",
+   "pdf_page": 420,
+   "text": "Neutralize is a tactical mission task in which a unit renders the enemy incapable of interfering with an operation. The two lines cross over the symbol of the unit or facility targeted for neutralization. When assigning a task to neutralize, a commander specifies the enemy force or materiel to neutralize and the duration, which is time or event driven. The neutralized target may become effective again when casualties are replaced, damage is repaired, or effort resulting in the neutralization is lifted. A unit normally uses a combination of lethal and nonlethal effects to neutralize enemy personnel or materiel. The assets required to neutralize a target vary according to the type and size Figure B-22. Neutralize task of the target and the weapon and munitions combination used. Figure B-22 depicts the neutralize tactical mission task.",
+   "verb": "무력화",
+   "term": "neutralize"
+  },
+  {
+   "ref": "FM 3-90 B-7",
+   "manual": "FM 3-90",
+   "section": "BREACH",
+   "pdf_page": 412,
+   "text": "Breach is a tactical mission task in which a unit breaks through or establishes a passage through an enemy obstacle. An enemy obstacle can include enemy defenses, obstacles, minefields, or fortifications. Units attempt to bypass and avoid obstacles and enemy defensive positions to the maximum extent possible to maintain tempo and momentum. Breaching enemy defenses and obstacle systems is normally the last choice. If a breach is necessary, units employ all available means to break through or establish a passage. A breach is a synchronized combined arms operation under the control of the maneuver commander. Tactical Mission Tasks",
+   "verb": "돌파",
+   "term": "breach"
+  },
+  {
+   "ref": "FM 3-90 B-9",
+   "manual": "FM 3-90",
+   "section": "BYPASS",
+   "pdf_page": 413,
+   "text": "Bypass is a tactical mission task in which a unit deliberately avoids contact with an obstacle or an enemy force. A commander orders a bypass to maintain momentum while deliberately avoiding combat with an enemy force. A bypass can take place in offensive or defensive actions. The arms of the graphic go on both sides of the location or unit that will be bypassed. Figure B-5 depicts the bypass tactical mission task.",
+   "verb": "우회",
+   "term": "bypass"
+  },
+  {
+   "ref": "FM 3-90 5-124",
+   "manual": "FM 3-90",
+   "section": "COUNTERATTACK",
+   "pdf_page": 141,
+   "text": "A counterattack is a variation of attack by a defending force against an attacking enemy force. Units should not counterattack unless there is a reasonable chance of success. Units executing a counterattack can use all or part of the defending force, to include their reserve, against an attacking enemy. The specific purpose for a counterattack is to deny to the enemy the attainment of the enemy’s purpose and regain the initiative from the enemy through offensive action. Counterattacking forces maneuver to isolate and destroy designated enemy forces. Counterattacking forces can attack by fire into an engagement area to defeat or destroy an enemy force, restore the original position, or block an enemy penetration. In sustained defensive actions, units counterattack toward limited objectives, such as regaining lost battle positions (BPs). Once launched, counterattacks become their echelon’s main effort. (Figure 5-9 illustrates projected major counterattacks.)",
+   "verb": "역습",
+   "term": "counterattack"
+  },
+  {
+   "ref": "FM 3-90 8-8",
+   "manual": "FM 3-90",
+   "section": "AREA DEFENSE",
+   "pdf_page": 171,
+   "text": "An area defense is a type of defensive operation that concentrates on denying enemy forces access to designated terrain for a specific time rather than destroying the enemy outright (ADP 3-90). The purpose of an area defense is to retain the terrain where the bulk of the defending force positions itself in mutually supporting prepared positions. Units maintain their positions and control the terrain between these positions. The main effort focuses fires into engagement areas, possibly supplemented by a counterattack. Units at all echelons can conduct an area defense. They may use an area defense to transition to offensive operations, retrograde, or stability operations. The variations of an area defense are defense of linear obstacle, perimeter defense, and reverse slope defense. (See Chapter 9 for more information on area defense.)",
+   "verb": "방어",
+   "term": "area defense"
+  },
+  {
+   "ref": "FM 3-90 9-4",
+   "manual": "FM 3-90",
+   "section": "ORGANIZATION OF FORCES FOR AN AREA DEFENSE",
+   "pdf_page": 195,
+   "text": "An area defense is organized with a security force, main body, and a reserve. Since an area defense focuses on retaining key terrain, most of the unit’s combat power in the main battle area is positioned to support the defense of that terrain, while security forces provide early warning. See paragraphs 9-24 through 9-37 for more information on position selection in the defense.",
+   "verb": "방어",
+   "term": "area defense 편성"
+  },
+  {
+   "ref": "FM 3-90 11-13",
+   "manual": "FM 3-90",
+   "section": "DELAY",
+   "pdf_page": 231,
+   "text": "A delay is when a force under pressure trades space for time by slowing down the enemy’s momentum and inflicting maximum damage on enemy forces without becoming decisively engaged (ADP 3-90). A delay is one of the most demanding of all ground combat operations. A delay wears down enemy forces so that friendly forces can regain the initiative through offensive action, buys time to establish an effective defense, or determines enemy intentions as part of a security operation. Normally in a delay, inflicting casualties on enemy forces is secondary to gaining time. For example, a flank security force conducts a delay operation to provide time for the protected force to establish a viable defense along its threatened flank. A force conducting a delay normally avoids a decisive engagement except when preventing enemy penetration of a phase line for a specific duration.",
+   "verb": "지연",
+   "term": "delay"
+  },
+  {
+   "ref": "FM 3-90 11-16",
+   "manual": "FM 3-90",
+   "section": "DELAY",
+   "pdf_page": 231,
+   "text": "A delay succeeds by causing enemy forces to fight through a series of defensive positions. A delaying force must offer a continued threat of serious opposition, causing enemy forces to repeatedly deploy and maneuver. Delaying forces displace to subsequent positions before enemy forces are able to concentrate sufficient resources to decisively engage and defeat delaying forces in their current position. The length of time a force can remain in a position without facing the danger of decisive engagement is primarily a function of relative combat power and the mission variables, such as terrain and weather.",
+   "verb": "지연",
+   "term": "delay"
+  },
+  {
+   "ref": "FM 3-90 7-1",
+   "manual": "FM 3-90",
+   "section": "GENERAL CONSIDERATIONS FOR A PURSUIT",
+   "pdf_page": 159,
+   "text": "A pursuit is a type of offensive operation to catch or cut off a disorganized hostile force attempting to escape, with the aim of destroying it. Pursuit operations begin when an enemy force loses internal cohesion and is unable to mount an organized defense. A pursuit leaves enemy forces trapped, unprepared, unable to defend, and faced with the options of surrender or destruction. Pursuits include the rapid shifting of units, continuous day and night movements, hasty attacks, containment of bypassed enemy forces, large numbers of prisoners, and a willingness to forgo some synchronization to maintain pressure on a fleeing enemy. Pursuits require swift maneuver and attacks by friendly forces to strike the enemy force’s most vulnerable areas. A successful pursuit requires flexible forces, initiative by commanders at all echelons, and a high tempo during execution.",
+   "verb": "추격",
+   "term": "pursuit"
+  },
+  {
+   "ref": "FM 3-90 11-81",
+   "manual": "FM 3-90",
+   "section": "WITHDRAW",
+   "pdf_page": 243,
+   "text": "A withdrawal may be assisted or unassisted. It may or may not take place under enemy pressure. These two factors combined produce the four techniques shown in figure 11-6. The figure also depicts the tactical mission symbols for a withdrawal and a withdrawal under enemy pressure.",
+   "verb": "철수",
+   "term": "withdrawal"
+  },
+  {
+   "ref": "FM 3-90 B-24",
+   "manual": "FM 3-90",
+   "section": "DISENGAGE",
+   "pdf_page": 416,
+   "text": "Disengage is a tactical mission task in which a unit breaks contact with an enemy to conduct another mission or to avoid becoming decisively engaged. It involves moving to a location where enemy forces cannot engage the friendly force with either direct fires or observed indirect fires. Disengaging from enemy forces while displacing from one position to the next is a difficult procedure. Figure B-12 depicts the disengage tactical mission task.",
+   "verb": "이탈",
+   "term": "disengage"
+  },
+  {
+   "ref": "FM 3-90 13-99",
+   "manual": "FM 3-90",
+   "section": "COVER",
+   "pdf_page": 292,
+   "text": "Cover is a type of security operation done independent of the main body to protect them by fighting to gain time while preventing enemy ground observation of and direct fire against the main body (ADP 3- 90). The covering force’s distance forward of the main body depends on the main body commander’s intentions and instructions, the terrain, the enemy location and strength, and the main body and covering force’s rates of march. The frontage assigned to a security force executing a cover is the same frontage as the assigned area of the main body. It is here that the covering force executes assigned tasks. The biggest difference between a guard force and a covering force is that a covering force is able to operate independently of the main body, while a guard force relies on indirect support from the main body.",
+   "verb": "엄호",
+   "term": "cover"
+  },
+  {
+   "ref": "FM 3-90 13-72",
+   "manual": "FM 3-90",
+   "section": "GUARD",
+   "pdf_page": 286,
+   "text": "Guard is a type of security operation conducted to protect the main body by fighting to gain time while preventing enemy ground observation of and direct fire against the main body (ADP 3-90). A guard differs from a screen in that a guard force contains sufficient combat power to defeat, cause the withdrawal of, or fix the lead elements of an enemy ground force before it can engage the main body with direct fire. A guard force routinely engages enemy forces with direct and indirect fires. A screening force, however, primarily uses indirect fires or close air support to destroy enemy reconnaissance elements and slow the movement of other enemy forces. A guard force uses all means at its disposal to prevent enemy forces from penetrating to a position to observe and engage the main body. It operates within the range of the main body’s Security Operations fire support weapons, deploying over a narrower front than a comparable-sized screening force to permit concentrating combat power.",
+   "verb": "경계",
+   "term": "guard"
+  },
+  {
+   "ref": "FM 3-90 13-56",
+   "manual": "FM 3-90",
+   "section": "SCREEN",
+   "pdf_page": 281,
+   "text": "Screen is a type of security operation that primarily provides early warning to the protected force (ADP 3-90). Screens provide less protection than guards or covers. Screen missions are defensive in nature and accomplished by establishing a series of observation posts and patrols to ensure observation of the assigned sector. The screen force gains and maintains enemy contact consistent with the fundamentals and destroys or repels enemy reconnaissance units by conducting counterreconnaissance. Counterreconnaissance is a tactical mission task that encompasses all measures taken by a unit to counter enemy reconnaissance and surveillance efforts. A unit performing a screen observes, identifies, and reports enemy actions. Generally, a screening force engages and destroys enemy reconnaissance elements within its capabilities—augmented by indirect fires—but otherwise fights only in self-defense. The screen has the minimum combat power necessary to provide early warning and allows commanders to retain the bulk of the main body’s combat power for commitment at the decisive place and time. A screen provides the least amount of protection of any security mission; it does not have the combat power to develop the situation.",
+   "verb": "차장",
+   "term": "screen"
+  },
+  {
+   "ref": "FM 3-90 B-42",
+   "manual": "FM 3-90",
+   "section": "FOLLOW AND SUPPORT",
+   "pdf_page": 419,
+   "text": "Follow and support is a tactical mission task in which a committed force follows and supports a lead force conducting an offensive operation. A follow and support force is not a reserve but is a force committed to specific tasks. It contains an arrow graphic around the symbol of the unit being assigned this task. Figure B-19 depicts the follow and support tactical mission task.",
+   "verb": "후속지원",
+   "term": "follow and support"
+  },
+  {
+   "ref": "FM 3-90 B-38",
+   "manual": "FM 3-90",
+   "section": "FOLLOW AND ASSUME",
+   "pdf_page": 418,
+   "text": "Follow and assume is a tactical mission task in which a committed force follows and supports a lead force conducting an offensive operation and continues the mission if the lead force cannot continue. The lead force may be unable to continue for several reasons such as becoming fixed or attrited by enemy forces. The follow and assume force is not a reserve, but it is committed to accomplish specific tasks. Planners place the box part of the associated task military symbol around the icons of units assigned this task. Figure B-18 depicts the follow and assume tactical mission task. Figure B-18. Follow and assume",
+   "verb": "후속인수",
+   "term": "follow and assume"
+  },
+  {
+   "ref": "FM 3-90 B-58",
+   "manual": "FM 3-90",
+   "section": "SUPPORT BY FIRE",
+   "pdf_page": 422,
+   "text": "Support by fire is a tactical mission task in which a unit engages the enemy by direct fire in support of another maneuvering force. The primary objective of the support force is normally to fix and suppress enemy forces so that they cannot effectively fire on the maneuvering force. The secondary objective is to destroy enemy forces if they try to reposition. The commander specifies the desired effect on enemy forces when assigning this task. The support by fire tasked is rarely applicable to units larger than company size. Figure B-27 depicts the support by fire tactical mission task. Figure B-27. Support by fire task",
+   "verb": "화력지원",
+   "term": "support by fire"
+  },
+  {
+   "ref": "FM 3-90 B-3",
+   "manual": "FM 3-90",
+   "section": "ATTACK BY FIRE",
+   "pdf_page": 411,
+   "text": "Attack by fire is a tactical mission task using direct and indirect fires to engage an enemy from a distance. Friendly forces use direct fires, supported by indirect fires, to engage an enemy force without closing with the enemy to destroy, suppress, fix, or deceive that enemy. This task is usually given when the mission does not dictate or support occupation of the objective. An attack by fire is not done in conjunction with a maneuvering force. When assigning this task, the commander must state the desired effect on enemy forces, such as neutralize, fix, or disrupt. A commander may assign the force conducting an attack by fire to a battle position with either Figure B-1. Attack by fire task a sector of fire or an engagement area. The arrow points at the targeted force or objective, and the commander places the base of the arrow in the general area from which the commander wants to deliver the attack. Attack by fire positions are rarely applicable to units larger than company size. Figure B-1 on page B-1 depicts the attack by fire tactical mission task.",
+   "verb": "화력공격",
+   "term": "attack by fire"
+  },
+  {
+   "ref": "FM 3-90 9-71",
+   "manual": "FM 3-90",
+   "section": "PERIMETER DEFENSE",
+   "pdf_page": 210,
+   "text": "The reserve may be a designated unit or a provisional force organized from available personnel and equipment. The reserve forms a second line of defense behind the perimeter forces. Ideally, the reserve is mobile enough to react to enemy action along any part of the perimeter. Units position the reserve to block the most dangerous avenue of approach and assigns on-order positions on other critical avenues. They may task combat vehicles initially occupying firing positions on the perimeter with the mission of reinforcing the reserve. Control Measures",
+   "verb": "예비",
+   "term": "reserve"
+  },
+  {
+   "ref": "FM 3-90 5-130",
+   "manual": "FM 3-90",
+   "section": "COUNTERATTACK",
+   "pdf_page": 143,
+   "text": "A counterattack force is a committed force if its commander’s defensive scheme hinges on a counterattack to destroy, dislocate, disintegrate, or isolate the attacking enemy force. The reserve becomes a committed force when ordered to conduct planned counterattacks. Units conducting mobile defenses allocate field artillery, engineers, and other combat enablers to their striking forces because their defensive schemes hinge on counterattacks by their striking forces. In this case, commanders designate other forces as their reserves. Planning a Counterattack",
+   "verb": "역습",
+   "term": "counterattack force"
+  }
+ ],
+ "missions": {
+  "지역방어": [
+   {
+    "ref": "FM 3-90 17-15",
+    "manual": "FM 3-90",
+    "section": "TACTICAL OBSTACLES",
+    "pdf_page": 331,
+    "text": "A reserved obstacle is an obstacle of any type, for which the commander restricts execution authority (ATP 3-90.8). The commander specifies a unit that is responsible for preparing, guarding, and executing reserved-obstacle emplacement. Units execute reserved obstacles only on command of the authorized commander or based on specific criteria identified by the commander. The purpose of a reserved obstacle is to retain control over the mobility along an avenue of approach. Commanders use reserved obstacles when failure to maintain control over the mobility along an avenue of approach will have disastrous effects on the current battle or future operations."
+   },
+   {
+    "ref": "FM 3-90 17-60",
+    "manual": "FM 3-90",
+    "section": "OBSTACLE CONTROL MEASURES",
+    "pdf_page": 338,
+    "text": "An obstacle belt is a brigade-level command and control measure, normally depicted graphically, to show where within an obstacle zone the ground tactical commander plans to limit friendly obstacle employment and focus the defense (JP 3-15). It assigns an intent to the obstacle plan and provides the Countermobility necessary guidance on the overall effect of obstacles within a belt. Commanders plan obstacle belts within assigned obstacle zones to grant obstacle emplacement authority to their major subordinate units. Obstacle belts also focus obstacles to support the brigade scheme of maneuver and ensure that obstacles do not interfere with the maneuver of any higher headquarters."
+   },
+   {
+    "ref": "FM 3-90 8-69",
+    "manual": "FM 3-90",
+    "section": "MOVEMENT AND MANEUVER",
+    "pdf_page": 181,
+    "text": "When planning obstacles, units consider not only current operations but also future operations. They design obstacles for current operations, so they do not hinder future operations. Units can designate certain obstacles to shape the battlefield as high priority reserved obstacles. Units assign responsibility for preparation of reserved obstacles to a subordinate unit but retain authority for ordering their completion. One example of a reserved obstacle is a destruction of a highway bridge over a major river. Such obstacles receive the highest priority in preparation and, if ordered, execution by the designated subordinate unit."
+   },
+   {
+    "ref": "FM 3-90 9-97",
+    "manual": "FM 3-90",
+    "section": "PERIMETER DEFENSE",
+    "pdf_page": 214,
+    "text": "Units employ all available resources necessary to ensure success when counterattacking. Their reserves’ counterattack usually becomes their main effort on their commitment. One of commanders’ most critical decisions is the commitment of their reserve. Therefore, commanders avoid premature or piecemeal commitment of reserves. Commanders may reinforce their reserves before commitment to give them greater capabilities to counter enemy action. Units do not counterattack as an automatic reaction to an enemy penetration. Nor do commanders commit reserves solely because enemy forces reach a certain phase line or Area Defense other location. Units may employ fire support assets and local counterattacks by forces already defending to destroy, disrupt, or attrit enemy penetrations, thus avoiding the need to commit reserves. Units launch their counterattacks when enemy forces present their flanks, overextend, or the enemy forces’ momentum dissipates. Units can target counterattacks to isolate and destroy selected enemy forces within the MBA once they can identify the flanks of the enemy force’s main effort."
+   },
+   {
+    "ref": "FM 3-90 17-12",
+    "manual": "FM 3-90",
+    "section": "TACTICAL OBSTACLES",
+    "pdf_page": 331,
+    "text": "The primary purposes of tactical obstacles are to shape enemy maneuver and to maximize the effects of fires. Tactical obstacles directly attack the ability of a force to move, mass, and reinforce; therefore, they affect the tempo of operations. Units integrate obstacles into the scheme of maneuver to enhance the effects of fires. Preexisting obstacles that a unit reinforces and integrates with observation and fires may become tactical obstacles. The types of tactical obstacles are clearly distinguished by the differences in execution criteria. The three types are—  Directed obstacles.  Situational obstacles.  Reserved obstacles."
+   },
+   {
+    "ref": "ADP 3-90 4-64",
+    "manual": "ADP 3-90",
+    "section": "MOVEMENT AND MANEUVER",
+    "pdf_page": 71,
+    "text": "Commanders designate obstacle zones, belts, and groups depending on their authority. When planning obstacles, commanders and staffs also consider future operations. Commanders design obstacles for current operations so they do not hinder planned future operations. Any commander authorized to employ obstacles can designate certain obstacles to shape the battlefield. There are two categories of reinforcing obstacles: tactical and protective. Tactical obstacles shape enemy maneuver to maximize the effects of fires. Tactical obstacles deny the ability of a force to move, mass, and reinforce; therefore, they affect the tempo of operations. There are three types of tactical obstacles: directed, situational, and reserved. Commanders employ protective obstacles to protect people, equipment, supplies, and facilities against threats. Protective obstacles have two roles, defense or security."
+   },
+   {
+    "ref": "ADP 3-90 4-16",
+    "manual": "ADP 3-90",
+    "section": "AREA DEFENSE",
+    "pdf_page": 63,
+    "text": "The area defense is a type of defensive operation that concentrates on denying enemy forces access to designated terrain for a specific time rather than destroying the enemy outright. The focus of an area defense is on retaining terrain where the bulk of a defending force positions itself in mutually supporting, prepared positions. Units maintain their positions and control the terrain between the position of enemy forces and the terrain they desire. The decisive operation focuses fires into engagement areas, possibly supplemented by a counterattack. Commanders can use their reserve to reinforce fires, add depth, block, or restore a position by counterattack; to seize the initiative; and to destroy enemy forces. Units at all echelons can conduct an area defense. The Battle of Kursk in July 1943 is a historical example of an area defense by the Soviets. (See FM 3-90-1 for a discussion of the advantages and disadvantages of the use of a defense in depth and a forward defense during the conduct of an area defense.)"
+   },
+   {
+    "ref": "ADP 3-90 2-73",
+    "manual": "ADP 3-90",
+    "section": "RESERVE",
+    "pdf_page": 33,
+    "text": "While joint doctrine has three definitions for reserve, the following Army definition applies to Army tactical operations. A reserve is that portion of a body of troops that is withheld from action at the beginning of an engagement to be available for a decisive movement. A reserve is an uncommitted force and thus does not normally have a full suite of combat multipliers available to it until it is committed. It is normally the echelon’s main effort once it is committed. Commanders constitute a reserve and base the size of the reserve on the level of uncertainty in the current tactical situation. Commanders consider survivability and the most likely mission when positioning their reserve. While commanders can assign their reserve a wide variety of tasks to perform on commitment, a reserve remains prepared to accomplish other missions. The primary tasks for a reserve are to—  Retain the initiative.  Take advantage of unexpected success.  Counter tactical reverses that threaten the integrity of the friendly force’s operations. A successful commander retains a reserve, reconstituting one whenever possible on the commitment of the original reserve."
+   }
+  ],
+  "기동방어": [
+   {
+    "ref": "FM 3-90 8-9",
+    "manual": "FM 3-90",
+    "section": "MOBILE DEFENSE",
+    "pdf_page": 171,
+    "text": "A mobile defense is a type of defensive operation that concentrates on the destruction or defeat of the enemy through a decisive attack by a striking force (ADP 3-90). The mobile defense focuses on defeating or destroying enemy forces by allowing them to advance to a point where they are exposed to a decisive counterattack. A mobile defense includes a fixing force and a striking force:  A fixing force is a force designated to supplement the striking force by preventing the enemy from moving from a specific area for a specific time (ADP 3-90). Units use the fixing force to hold attacking enemy forces in position, to turn attacking enemy forces into ambush areas, and to retain areas from which to launch the striking force.  The striking force is a dedicated counterattack force in a mobile defense constituted with the bulk of available combat power (ADP 3-90)."
+   },
+   {
+    "ref": "ADP 3-90 4-17",
+    "manual": "ADP 3-90",
+    "section": "MOBILE DEFENSE",
+    "pdf_page": 63,
+    "text": "The mobile defense is a type of defensive operation that concentrates on the destruction or defeat of the enemy through a decisive attack by a striking force. The mobile defense focuses on defeating or destroying enemy forces by allowing them to advance to a point where they are exposed to a decisive counterattack by a striking force. The striking force is a dedicated counterattack force in a mobile defense constituted with the bulk of available combat power. A fixing force is a force designated to supplement the striking force by preventing the enemy from moving from a specific area for a specific time. A fixing force supplements a striking force by holding attacking enemy forces in position, by canalizing attacking enemy forces into ambush areas, and by retaining areas from which to launch the striking force. German General Manstein’s Donbas Operation in the Ukraine in February 1943 was a mobile defense."
+   },
+   {
+    "ref": "FM 3-90 10-12",
+    "manual": "FM 3-90",
+    "section": "CONTROL MEASURES FOR A MOBILE DEFENSE",
+    "pdf_page": 222,
+    "text": "Commanders provide the striking force commander with control measures to focus the striking force at the decisive time and place and to deconflict fires with the fixing force. At a minimum, the striking force commander needs to know decision points that lead to the commitment of the striking force, the limit of advance, and boundaries of the striking force’s assigned area. If the overall commander imposes either an axis of attack or a direction of attack as a control measure, that higher echelon commander restricts the Mobile Defense striking force commander’s freedom of maneuver. However, such restrictions may be necessary to avoid contact with enemy forces that could distract the striking force from accomplishing its primary mission. Units may have to determine and transmit these control measures rapidly for subordinates to take advantage of an opportunity to commit the striking force in the counterattack. Units also develop graphics that help them recover the defense’s integrity if the striking force is not successful in its attack. (Appendix A explains these control measures.)"
+   },
+   {
+    "ref": "FM 3-90 10-7",
+    "manual": "FM 3-90",
+    "section": "ORGANIZATION OF FORCES FOR A MOBILE DEFENSE",
+    "pdf_page": 221,
+    "text": "A fixing force is a force designated to supplement the striking force by preventing the enemy from moving from a specific area for a specific time. The fixing force is used to hold attacking enemy forces in position, by canalizing attacking enemy forces into engagement areas, and to retain areas from which to launch the striking force. A fixing force is organized with the minimum combat power needed to accomplish its mission. The fixing force turns, blocks, and delays an attacking enemy force. It tries to shape an enemy penetration or contain an enemy force’s advance. Typically, it has most of the countermobility assets of the defending unit. The fixing force may conduct defensive actions over considerable depth within the MBA. However, it must be prepared to stop and hold terrain on short notice to assist the striking force on its commitment. The operations of the fixing force establish the conditions for a decisive attack by the striking force at a favorable location. The fixing force sets the condition for the striking force. The fixing force executes its portion of the defense by combining an area defense and a delaying action."
+   },
+   {
+    "ref": "FM 3-90 10-20",
+    "manual": "FM 3-90",
+    "section": "SUSTAINMENT",
+    "pdf_page": 223,
+    "text": "When planning to sustain the mobile defense, planners must look beyond the fixing force’s supporting effort to support the striking force’s counterattack. The greater the distance the striking force must cover when moving from its assembly area to its final objective, the greater the amount of supplies needed to support that move. Once committed, units in the striking force require priority of fuel, ammunition, and maintenance support over comparable units in the fixing force. Units establish casualty treatment and evacuation procedures for both the fixing force and the striking force. The fixing force will likely suffer a higher percentage of casualties than the striking force as it absorbs the enemy force’s attack. When the striking force must move a considerable distance from its assembly area, units should consider establishing a tactical assembly area near the fixing force prior to the assault on the enemy. Commanders weigh the benefits of establishing these bases against the cost in terms of combat power or effort diverted from the support mission to secure intermediate staging bases before establishing them. (See ATP 3-35 for additional information on intermediate staging bases.)"
+   },
+   {
+    "ref": "FM 3-90 10-8",
+    "manual": "FM 3-90",
+    "section": "ORGANIZATION OF FORCES FOR A MOBILE DEFENSE",
+    "pdf_page": 221,
+    "text": "The striking force is a dedicated counterattack force in a mobile defense constituted with the bulk of available combat power. The commander’s most critical decisions are when, where, and under what conditions they should commit the striking force. The striking force contains the maximum combat power available to commanders at the time of its counterattack. This is the main effort for the unit during the mobile defense. The striking force is a combined arms force that has greater combat power and mobility than the force it seeks to defeat or destroy. Units consider the effects of surprise when determining the relative combat power of their striking forces and their targeted enemy units. The striking force is normally task-organized with all support and sustainment assets before its commitment. Units should position mobility enhancing assets near the lead elements of their striking forces."
+   },
+   {
+    "ref": "FM 3-0 6-199",
+    "manual": "FM 3-0",
+    "section": "MOBILE DEFENSE",
+    "pdf_page": 170,
+    "text": "A mobile defense is a type of defensive operation that concentrates on the destruction or defeat of the enemy through a decisive attack by a striking force (ADP 3-90). The mobile defense focuses on defeating or destroying enemy forces by allowing them to advance to a point where they are exposed to a decisive counterattack by a striking force. The striking force is a dedicated counterattack force in a mobile defense constituted with the bulk of available combat power (ADP 3-90). A fixing force is a force designated to supplement the striking force by preventing the enemy from moving from a specific area for a specific time (ADP 3-90). The fixing force is used to hold attacking enemy forces in position, to turn attacking enemy forces into ambush areas, and to retain areas from which to launch the striking force."
+   },
+   {
+    "ref": "FM 3-90 10-29",
+    "manual": "FM 3-90",
+    "section": "FIX THE ENEMY",
+    "pdf_page": 225,
+    "text": "Fixing the enemy force establishes conditions necessary for the main effort by the striking force. Typically, commanders of the defending force allow the enemy force to penetrate the MBA before the striking force attacks as shown in figure 10-4 on page 10-8. The fixing force may employ a combination of area defense, delay, and strong point techniques to shape the enemy penetration. The intent of the fixing force is not necessarily to defeat the enemy force but to shape the penetration of the enemy force to facilitate a decisive counterattack by the striking force. Commanders ensure that the missions and task organization of subordinate units within the fixing force are consistent with the concept for preventing the enemy penetration. Defensive positions within the fixing force may not be contiguous since the fixing force contains only the minimum-essential combat power to accomplish its mission."
+   }
+  ],
+  "공격": [
+   {
+    "ref": "FM 3-90 A-47",
+    "manual": "FM 3-90",
+    "section": "OFFENSIVE OPERATIONS CONTROL MEASURES",
+    "pdf_page": 389,
+    "text": "The attack position is the last position an attacking force occupies or passes through before crossing the line of departure (ADP 3-90). An attack position facilitates an attacking force’s deployment and last- minute coordination before it crosses the LD. Located on the friendly side of the LD, an attack position offers cover and concealment for the attacking force. Commanders use it primarily at battalion level and below. Whenever possible, units move through the attack position without stopping. An attacking unit occupies an attack position for various reasons, including when the unit is waiting for specific results from preparation fires or when it is necessary to conduct additional coordination, such as a forward passage of lines. If the attacking unit occupies the attack position, it stays there for the shortest amount of time possible to avoid offering enemy forces a lucrative target. Figure A-25 on page A-14 depicts ATTACK POSITIONS BLUE and GOLD. Axis of Advance"
+   },
+   {
+    "ref": "FM 3-90 2-58",
+    "manual": "FM 3-90",
+    "section": "ENVELOPMENT",
+    "pdf_page": 79,
+    "text": "Envelopment is a form of maneuver in which an attacking force avoids an enemy’s principal defense by attacking along an assailable flank. An envelopment avoids the enemy force’s strength—the enemy’s front—where the effects of enemy fires and obstacles are generally the greatest and attacks the enemy to the flank or rear. Envelopments force the enemy to fight in two or more directions simultaneously to meet the converging efforts of an attack. Envelopments focus either on seizing terrain, destroying enemy forces, or interdicting enemy withdrawal routes. Units prefer to conduct an envelopment instead of a penetration or a frontal attack because generally the flanks of the defending forces are weaker and provide the attacking forces the most opportunities to destroy the enemy force. The main effort focuses on attacking an assailable flank. If no assailable flank is available, the attacking force creates one through the conduct of a penetration. The three variations of the envelopment are—  Single envelopment.  Double envelopment.  Vertical envelopment."
+   },
+   {
+    "ref": "FM 3-90 5-147",
+    "manual": "FM 3-90",
+    "section": "SPOILING ATTACK",
+    "pdf_page": 146,
+    "text": "A spoiling attack is a variation of an attack employed against an enemy preparing for an attack. The objective of a spoiling attack is to disrupt the enemy force’s offensive capabilities and timelines while destroying targeted enemy personnel and equipment. A spoiling attack is not to seize terrain or other physical objectives. Units perform spoiling attacks whenever possible during their performance of defensive tasks. Spoiling attacks strike enemy forces while they are halted in assembly areas or attack positions, often when they are preparing for their own offensive operations. A spoiling attack usually involves armored, attack helicopter, or fire support elements attacking enemy assembly positions in front of the main battle area. Figure 5-11 depicts a spoiling attack."
+   },
+   {
+    "ref": "FM 3-90 A-51",
+    "manual": "FM 3-90",
+    "section": "OFFENSIVE OPERATIONS CONTROL MEASURES",
+    "pdf_page": 390,
+    "text": "The direction of attack is a specific direction or assigned route a force uses and does not deviate from when attacking (ADP 3-90). It is a restrictive control measure that requires a subordinate unit to attack as indicated and is not normally allowed to bypass the enemy. It is normally used at battalion and lower levels. Direction of attack is a more restrictive control measure than axis of advance and units are not free to maneuver off the assigned route. Direction of attack is normally used in counterattacks or to ensure that supporting attacks make maximal contribution to the main attack. It is also used during night attacks, infiltrations, and when attacking through obscuration. When using a direction of attack, commanders designate a PD at the beginning. Figure A-25 on page A-14 depicts DIRECTION OF ATTACK JOAN. Final Coordination Line"
+   },
+   {
+    "ref": "ADP 3-90 3-23",
+    "manual": "ADP 3-90",
+    "section": "ATTACK POSITION",
+    "pdf_page": 44,
+    "text": "The attack position is the last position an attacking force occupies or passes through before crossing the line of departure. An attack position facilitates the deployment and last minute coordination of an attacking force before it crosses the line of departure (LD). (See paragraph 3-31 for a discussion of the LD.) It is located on the friendly side of the LD and offers cover and concealment. Whenever possible, units move through their attack positions without stopping. If a unit occupies an attack position, it stays there for the shortest amount of time possible to avoid offering the enemy a target."
+   },
+   {
+    "ref": "FM 3-90 5-9",
+    "manual": "FM 3-90",
+    "section": "COMMON CONTROL MEASURES ASSOCIATED WITH AN ATTACK",
+    "pdf_page": 120,
+    "text": "Units can use any other control measures necessary to control an attack. Short of the LD, units may designate assembly areas and attack positions where they prepare for offensive actions or wait for established required conditions to initiate the attack. Beyond the LD, units may designate checkpoints, PLs, probable Attack lines of deployment (PLDs), assault positions, direct fire control measures, and indirect fire support coordination measures (FSCMs). Between the PLD and the objective, units can use a final coordination line (FCL), assault positions, support by fire and attack by fire positions, and a time of assault to further control the final stage of their attacks. Beyond the objective, commanders can impose a LOA if they do not want their units to conduct exploitation or a pursuit or template where they want their forces to position after the completion of the attack such as a battle position or blocking position."
+   },
+   {
+    "ref": "FM 3-90 5-131",
+    "manual": "FM 3-90",
+    "section": "COUNTERATTACK",
+    "pdf_page": 143,
+    "text": "Units plan their counterattacks against enemy forces when those enemy forces are vulnerable. Their defenses create gaps between attacking enemy units, exposing the flanks and rear of elements of attacking enemy forces as they advance. The seizure of defended positions typically leaves attacking enemy forces temporarily disorganized, depleted, and ill prepared to meet sudden counterattacks. Units must assess their situations rapidly since opportunities for effective local counterattacks are usually brief and must execute their counterattacks swiftly. They assign objectives or attack by fire positions to counterattacking forces, depending on if they intend their counterattacking forces to close with and assault enemy forces. Local counterattacks may or may not be the result of previous deliberate planning."
+   },
+   {
+    "ref": "ATP 5-0.2-1 A-51",
+    "manual": "ATP 5-0.2-1",
+    "section": "(ATP 3-90.4/MCWP 3-17.8)",
+    "pdf_page": 183,
+    "text": "Gap crossing comprises five phases. These phases are for planning purposes only with no intentional pauses between phases during execution. The five phases are—  Advance to the gap (Phase I). Attack to secure nearside terrain that offers favorable crossing sites and road networks and provides enough area to stage crossing forces while preventing congestion and an undesirable massing of assets.  Assault across the gap (Phase II). Units assault across the gap to seize the far side objective, eliminating direct fire into the crossing sites.  Advance from the far side (Phase III). Attack to secure the exit bank and intermediate objectives that eliminate direct and observed indirect fires into the crossing area.  Secure the bridgehead line (Phase IV). Secure bridgehead objectives, defeating any enemy counterattacks. This provides the necessary time and space for building up forces to attack out of the bridgehead.  Continue the attack (Phase V). Attack out of the bridgehead to defeat the enemy at a subsequent or final objective. This is considered a phase of gap crossing because the timing and initiation of this phase are typically dependent on the success of the other four phases of gap crossing. Table A-5 on page 168 shows a division conducting a deliberate wet-gap crossing and the roles of various command posts in each phase of the gap crossing."
+   }
+  ],
+  "역습": [
+   {
+    "ref": "FM 3-90 9-97",
+    "manual": "FM 3-90",
+    "section": "PERIMETER DEFENSE",
+    "pdf_page": 214,
+    "text": "Units employ all available resources necessary to ensure success when counterattacking. Their reserves’ counterattack usually becomes their main effort on their commitment. One of commanders’ most critical decisions is the commitment of their reserve. Therefore, commanders avoid premature or piecemeal commitment of reserves. Commanders may reinforce their reserves before commitment to give them greater capabilities to counter enemy action. Units do not counterattack as an automatic reaction to an enemy penetration. Nor do commanders commit reserves solely because enemy forces reach a certain phase line or Area Defense other location. Units may employ fire support assets and local counterattacks by forces already defending to destroy, disrupt, or attrit enemy penetrations, thus avoiding the need to commit reserves. Units launch their counterattacks when enemy forces present their flanks, overextend, or the enemy forces’ momentum dissipates. Units can target counterattacks to isolate and destroy selected enemy forces within the MBA once they can identify the flanks of the enemy force’s main effort."
+   },
+   {
+    "ref": "FM 3-90 1-94",
+    "manual": "FM 3-90",
+    "section": "MOVEMENT AND MANEUVER WARFIGHTING FUNCTION",
+    "pdf_page": 38,
+    "text": "A reserve is that portion of a body of troops that is withheld from action at the beginning of an engagement to be available for a decisive movement (ADP 3-90). Commanders employ their reserves to exploit success or prevent failure. A reserve provides the unit flexibility by responding to unexpected situations and enables friendly forces to exploit or regain the initiative quickly because it is an uncommitted force. Once committed, a reserve’s actions normally become or reinforce the echelon’s main effort. Often a commander’s most difficult and important decision concerns the time, place, and circumstances for committing the reserve. Commanders do not employ their reserve as a follow and support force or a follow and assume force. Other considerations for commanders are not placing artillery and other fire support Army Tactics systems and reconnaissance assets in reserve. Such systems committed to echelon support operations are not in reserve."
+   },
+   {
+    "ref": "FM 3-90 10-12",
+    "manual": "FM 3-90",
+    "section": "CONTROL MEASURES FOR A MOBILE DEFENSE",
+    "pdf_page": 222,
+    "text": "Commanders provide the striking force commander with control measures to focus the striking force at the decisive time and place and to deconflict fires with the fixing force. At a minimum, the striking force commander needs to know decision points that lead to the commitment of the striking force, the limit of advance, and boundaries of the striking force’s assigned area. If the overall commander imposes either an axis of attack or a direction of attack as a control measure, that higher echelon commander restricts the Mobile Defense striking force commander’s freedom of maneuver. However, such restrictions may be necessary to avoid contact with enemy forces that could distract the striking force from accomplishing its primary mission. Units may have to determine and transmit these control measures rapidly for subordinates to take advantage of an opportunity to commit the striking force in the counterattack. Units also develop graphics that help them recover the defense’s integrity if the striking force is not successful in its attack. (Appendix A explains these control measures.)"
+   },
+   {
+    "ref": "ADP 3-0 4-13",
+    "manual": "ADP 3-0",
+    "section": "DECISIVE POINTS",
+    "pdf_page": 46,
+    "text": "A decisive point is key terrain, key event, critical factor, or function that, when acted upon, enables commanders to gain a marked advantage over an enemy or contribute materially to achieving success (JP 5-0). Decisive points help commanders select clear, conclusive, attainable objectives that directly contribute to achieving an end state. Commanders visualize decisive points in each of the five domains and Army Campaign Support three dimensions. Geographic decisive points can include port facilities, communications networks and nodes, and bases of operation. Specific events and elements of an enemy force can be decisive points. Examples of these events include commitment of the enemy reserve or enemy resupply efforts. Space and cyberspace-enabled capabilities may also represent decisive points. Enemy morale could be a decisive point, and the ability of enemy forces to communicate with their sources of support could also be a decisive point."
+   },
+   {
+    "ref": "FM 3-90 5-7",
+    "manual": "FM 3-90",
+    "section": "RESERVE",
+    "pdf_page": 120,
+    "text": "The strength and composition of the reserve vary with the mission variables, the form of maneuver, and the risk accepted. In an attack, the combat power allocated to the reserve depends primarily on the level of uncertainty about enemy forces, especially the strength of any expected enemy counterattacks. For example, in a hasty attack a reserve can contain up to one third of a force’s combat power. Alternatively, units size their reserve to defeat their enemy’s projected available counterattack forces in deliberate attacks. They should not constitute their reserves by weakening their main effort. A reserve requires mobility equal to or greater than the most dangerous enemy ground threat, and it should be able to counter that threat. See paragraphs 1-94 through 1-100 more information on a reserve."
+   },
+   {
+    "ref": "FM 3-90 10-8",
+    "manual": "FM 3-90",
+    "section": "ORGANIZATION OF FORCES FOR A MOBILE DEFENSE",
+    "pdf_page": 221,
+    "text": "The striking force is a dedicated counterattack force in a mobile defense constituted with the bulk of available combat power. The commander’s most critical decisions are when, where, and under what conditions they should commit the striking force. The striking force contains the maximum combat power available to commanders at the time of its counterattack. This is the main effort for the unit during the mobile defense. The striking force is a combined arms force that has greater combat power and mobility than the force it seeks to defeat or destroy. Units consider the effects of surprise when determining the relative combat power of their striking forces and their targeted enemy units. The striking force is normally task-organized with all support and sustainment assets before its commitment. Units should position mobility enhancing assets near the lead elements of their striking forces."
+   },
+   {
+    "ref": "ADP 3-90 2-73",
+    "manual": "ADP 3-90",
+    "section": "RESERVE",
+    "pdf_page": 33,
+    "text": "While joint doctrine has three definitions for reserve, the following Army definition applies to Army tactical operations. A reserve is that portion of a body of troops that is withheld from action at the beginning of an engagement to be available for a decisive movement. A reserve is an uncommitted force and thus does not normally have a full suite of combat multipliers available to it until it is committed. It is normally the echelon’s main effort once it is committed. Commanders constitute a reserve and base the size of the reserve on the level of uncertainty in the current tactical situation. Commanders consider survivability and the most likely mission when positioning their reserve. While commanders can assign their reserve a wide variety of tasks to perform on commitment, a reserve remains prepared to accomplish other missions. The primary tasks for a reserve are to—  Retain the initiative.  Take advantage of unexpected success.  Counter tactical reverses that threaten the integrity of the friendly force’s operations. A successful commander retains a reserve, reconstituting one whenever possible on the commitment of the original reserve."
+   },
+   {
+    "ref": "FM 5-0 4-72",
+    "manual": "FM 5-0",
+    "section": "DEVELOP AN OPERATIONAL APPROACH",
+    "pdf_page": 84,
+    "text": "Decisive points are not centers of gravity; they are keys to attacking or protecting them. Some decisive points are geographic. Some examples of decisive points include port facilities, distribution networks and nodes, and bases of operations. Events and elements of an enemy force are decisive points. An example of an enemy element might be the commitment of the enemy operational reserve. An example of an event is the reopening of a major oil refinery. A common characteristic of decisive points is their importance to a center of gravity. A decisive point’s importance requires the enemy to commit significant resources to defend it. The loss of a decisive point weakens a center of gravity and may expose more decisive points. Army Design Methodology Determine a Direct or Indirect Approach"
+   }
+  ],
+  "지연": [
+   {
+    "ref": "FM 3-90 11-64",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 240,
+    "text": "As an enemy force attacks and maneuvers against a delaying force, delaying commanders continuously assess the situation to guide the displacements of the delay force to avoid becoming decisively engaged. Units use lethal and nonlethal capabilities from multiple domains to engage enemy forces while the delaying force disengages and withdraws from delay positions. Integrated fires and FPFs directed at and in front of enemy positions allow a delaying force to disengage."
+   },
+   {
+    "ref": "FM 3-90 11-28",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 234,
+    "text": "Units designate additional PLs beyond those established by the higher echelon as necessary to control the unit’s movement during the delay. A delay line is a phase line over which an enemy is not allowed to cross before a specific date and time or enemy condition. The delay line is depicted as part of the graphic control measure. Designating delay lines is a command decision that imposes a high degree of risk on the delaying unit. The delaying unit does everything in its power—including becoming decisively engaged—to prevent enemy forces from crossing that line before the time indicated. A delay line may also be event driven. For example, commanders can order delaying units to prevent penetration of the delay line until supporting engineers complete construction of rearward obstacle belts. Planning a Delay"
+   },
+   {
+    "ref": "FM 3-90 11-20",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 232,
+    "text": "Units delaying using subsequent positions when the assigned area is so wide that available forces cannot occupy more than a single tier of positions. In a delay using subsequent bounds, all delaying units are Retrograde committed to each of the series of BPs or across the assigned area on the same PL. Most of the delaying force is located well forward. The mission dictates the delay from one BP or PL to the next. Units stagger the movement of delaying elements so that elements are not moving at the same time. Figure 11-2 illustrates a delay from subsequent positions."
+   },
+   {
+    "ref": "FM 3-90 11-35",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 235,
+    "text": "Commanders must clearly describe three certain characteristics to their subordinate conducting a delay mission. First, they direct one of two methods: delay within the assigned area or delay forward of a specified line or terrain feature for a specified time. Commanders usually base that time on another unit completing its activities, such as establishing rearward defensive positions. A mission of delay in the assigned area implies that force integrity is a prime consideration. In this case, the delaying force delays enemy forces as long as possible while avoiding decisive engagement. Generally, this force displaces upon meeting predetermined criteria, such as when an enemy force reaches a disengagement line. The control measures are the same for both alternatives except that during a delay forward of a specified line for a specified time, commanders annotate the PL with the specified time. If commanders establish delay lines, mission accomplishment outweighs preservation of the force’s integrity. It may require that delaying force hold a given position until ordered to displace. Figure 11-4 on page 11-8 depicts a delay forward of a specified line for a specified time."
+   },
+   {
+    "ref": "FM 3-90 11-19",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 232,
+    "text": "Units normally prefer to bound from alternating positions when adequate forces are available and the assigned area has sufficient depth. In a delay using alternating bounds, two or more units in a single assigned area occupy delaying positions in depth. As the first unit engages enemy forces, the second unit occupies the next position in depth and prepares to assume responsibility for the operation. The first force disengages and passes around or through the second force. It then moves to the next position and prepares to reengage enemy forces while the second force engages enemy forces. Units normally use alternate positions when their delaying forces operate on narrow fronts. A delay using alternating bounds is particularly useful on the most dangerous avenues of approach because it offers greater security than a delay using subsequent bounds. However, it requires more forces and continuous maneuver coordination. Additionally, delaying forces risk losing contact with enemy forces between their delay positions. Figure 11-1 depicts a delay from alternating positions."
+   },
+   {
+    "ref": "FM 3-90 11-70",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 241,
+    "text": "A delay operation terminates when the delaying force conducts a rearward passage of lines through a defending force, the delaying force reaches defensible terrain and transitions to the defense, the advancing enemy force reaches a culminating point, or the delaying force transitions to the offense. If the advancing enemy force reaches a culmination point, the delaying force maintains contact in current positions, withdraws to perform another mission, or transitions to the offense. In all cases, the senior commander must plan for the expected outcome of the delay. If commanders expect a friendly counterattack, they plan for the forward passage of the counterattack force, conserve resources to ensure combat superiority, and handover appropriate assigned areas."
+   },
+   {
+    "ref": "FM 3-90 11-17",
+    "manual": "FM 3-90",
+    "section": "DELAY",
+    "pdf_page": 231,
+    "text": "Commanders normally assign subordinate units contiguous assigned areas deeper than they are wide. They use obstacles, implement fires, and move throughout the depth of each assigned area. If units plan the delay to last a short time or the assigned area’s depth is limited, the delaying unit may need to delay from a single set of positions. If units expect the delay to last for a longer period, or if sufficient depth is available, the delaying unit may delay using either an alternating or subsequent bounding technique to execute the delay."
+   },
+   {
+    "ref": "ATP 5-0.2-1 B-25",
+    "manual": "ATP 5-0.2-1",
+    "section": "DELAY",
+    "pdf_page": 202,
+    "text": "Ordinarily, the greater the available depth, the lower the risk involved to the delaying force and the greater the chance of success. A commander must provide the following guidance for a delay mission:  Whether to delay within the AO or delay forward of a specified line or terrain feature for a specified time.  Acceptable risk.  Whether the delaying force may use the entire AO or will delay from specific battle positions.  Whether the delaying force will use alternate or subsequent positions. Defensive Tactics, Techniques, Procedures, and Considerations"
+   }
+  ],
+  "철수": [
+   {
+    "ref": "FM 3-90 A-31",
+    "manual": "FM 3-90",
+    "section": "ZEKE.",
+    "pdf_page": 384,
+    "text": "A passage of lines occurs under two conditions. A forward passage of lines occurs when a unit passes through another unit’s positions while moving toward the enemy (ADP 3-90). A rearward passage of lines occurs when a unit passes through another unit’s positions while moving away from the enemy (ADP 3-90). Ideally, a passage of lines does not interfere with the conduct of the stationary unit’s operations. Figure A-17 shows the symbols for both a forward and a rearward passage of lines. The arrow goes in the direction the passing unit is moving. Figure A-17. Forward and rearward passage of lines Passage Point"
+   },
+   {
+    "ref": "ADP 3-90 5-18",
+    "manual": "ADP 3-90",
+    "section": "PASSAGE OF LINES",
+    "pdf_page": 84,
+    "text": "A passage of lines is an operation in which a force moves forward or rearward through another force’s combat positions with the intention of moving into or out of contact with the enemy (JP 3-18). A passage of lines may be designated as a forward or rearward passage of lines. A passage of lines occurs under two conditions:  A forward passage of lines occurs when a unit passes through another unit’s positions while moving toward the enemy.  A rearward passage of lines occurs when a unit passes through another unit’s positions while moving away from the enemy. Ideally, a passage of lines does not interfere with conducting the stationary unit’s operations. (See FM 3-90-2 for additional information on passage of lines.)"
+   },
+   {
+    "ref": "FM 3-90 13-98",
+    "manual": "FM 3-90",
+    "section": "GUARD",
+    "pdf_page": 292,
+    "text": "During a retrograde, the rear guard normally deploys its ground maneuver elements abreast, behind the main body’s forward maneuver units, generally across the entire assigned area. After the main body conducts a rearward passage of lines, the rear guard accepts battle handover and then defends or delays. Alternatively, the rear guard may conduct a relief in place as part of a military deception plan or may take advantage of defendable terrain. In both cases, the rear guard establishes passage points and assists the rearward passage of the main body, if necessary. The rear guard accomplishes its defensive mission in the same way as any other guard operation after the main body clears the security area. As the main body moves, the rear guard moves to subsequent PLs in depth. Contact with the enemy force may eventually be lost if it does not follow the retrograding friendly force. Fighting a defense or a delay is necessary if an enemy force detects the movement and attacks."
+   },
+   {
+    "ref": "FM 3-90 8-145",
+    "manual": "FM 3-90",
+    "section": "TRANSITION TO THE RETROGRADE",
+    "pdf_page": 193,
+    "text": "Defending units unable to maintain the integrity of their defense must transition to a retrograde operation or risk destruction. A retrograde involves either a delay, withdrawal, or retirement operation. These operations may occur simultaneously or sequentially. As in other operations, the commander’s intent and concept of operations drive planning for retrograde operations. Each variation of the retrograde operation has its unique planning considerations, but considerations common to all retrograde operations are risk, the synchronization of forces, and rear operations. Chapter 11 addresses planning, preparing, and executing considerations for retrograde operations. However, many key considerations receive special emphasis during the transition from the defense to the retrograde."
+   },
+   {
+    "ref": "FM 3-90 16-3",
+    "manual": "FM 3-90",
+    "section": "GENERAL CONSIDERATIONS FOR A PASSAGE OF LINES",
+    "pdf_page": 319,
+    "text": "Units can conduct two variations of a passage of lines: a forward passage of lines or a rearward passage of lines. A forward passage of lines occurs when a unit passes through another unit’s positions while moving toward the enemy (ADP 3-90). A rearward passage of lines occurs when a unit passes through another unit’s positions while moving away from the enemy (ADP 3-90). Ideally, the passing unit’s operations do not interfere with the stationary unit."
+   },
+   {
+    "ref": "FM 3-90 4-70",
+    "manual": "FM 3-90",
+    "section": "CORDON AND SEARCH",
+    "pdf_page": 114,
+    "text": "The enemy may force cordon and search operations, or a unit may execute them voluntarily. A retrograde is a transitional operation; it is not conducted in isolation. Stay-behind reconnaissance forces may be employed to observe activity for a period after the cordon and search force departs the objective area. Retrograde is not complete until all personnel, including stay-behind forces, arrive in the designated assembly area. Retrograde is the most vulnerable phase of cordon and search operations, possibly rife with personnel accountability issues and interdiction by enemy forces along anticipated retrograde routes. Leaders strongly consider using intelligence, surveillance, and reconnaissance and joint fires assets to support the retrograde. (See Chapter 11 for additional information on retrograde operations.) Principles for a Cordon and Search"
+   },
+   {
+    "ref": "FM 3-90 16-1",
+    "manual": "FM 3-90",
+    "section": "GENERAL CONSIDERATIONS FOR A PASSAGE OF LINES",
+    "pdf_page": 319,
+    "text": "A passage of lines is an operation in which a force moves forward or rearward through another force’s combat positions with the intention of moving into or out of contact with the enemy (JP 3-18). There are two types: a forward passage of lines and a rearward passage of lines. Units perform a passage of lines to continue their attacks or perform counterattack, retrograde, and security operations that involve advancing or withdrawing through other units’ positions. A passage of lines potentially involves close combat. It involves transferring the responsibility for the assigned area between two units. That transfer of authority usually occurs when roughly two thirds of the passing force have moved through one or more passage points. The headquarters directing the passage of lines is responsible for determining when the passage of lines starts and ends. If not directed by higher authority, the stationary unit commander and the passing unit commanders determine—by mutual agreement—the time to pass command. They disseminate this information to the lowest levels of both organizations."
+   },
+   {
+    "ref": "FM 3-90 11-80",
+    "manual": "FM 3-90",
+    "section": "WITHDRAW",
+    "pdf_page": 243,
+    "text": "Commanders plan and coordinate a withdrawal in the same manner as a delay, although some mission variables apply differently between a delay and a withdrawal. A withdrawal always begins under the threat of enemy interference. Because the force is most vulnerable if the enemy force attacks, commanders always plan for a withdrawal under pressure. They then develop contingencies for a withdrawal without pressure. In both cases, their main considerations are to—  Plan a deliberate break from the enemy force.  Displace the main body rapidly, free of enemy interference.  Safeguard the withdrawal routes.  Retain sufficient maneuver and functional and multifunctional support and sustainment capabilities throughout the operation to support forces in contact with the enemy force."
+   }
+  ],
+  "추격": [
+   {
+    "ref": "FM 3-90 C-2",
+    "manual": "FM 3-90",
+    "section": "ENCIRCLEMENT OVERVIEW",
+    "pdf_page": 425,
+    "text": "Typically, encirclements result from penetrations and envelopments, or are extensions of exploitation and pursuit operations that bypass large enemy forces in order to maintain momentum. As such, they are not a separate form of maneuver but an extension of an ongoing operation. They may be planned sequels or result from exploiting an unforeseen opportunity. They usually result from the linkup of two encircling arms conducting a double envelopment. However, they can occur in situations where an attacking unit uses a major obstacle, such as a shoreline, as a second encircling force. Although a commander may designate terrain objectives in an encirclement, isolating and destroying or defeating enemy forces are the focus. Ideally, an encirclement results in the surrender of the encircled force. This minimizes friendly force losses and resource expenditures. A key consideration prior to executing an encirclement is understanding that the encircling force is fixed and therefore unavailable for other operations until the enemy force being encircled is reduced."
+   },
+   {
+    "ref": "FM 3-90 C-3",
+    "manual": "FM 3-90",
+    "section": "ORGANIZATION OF FORCES FOR AN ENCIRCLEMENT",
+    "pdf_page": 425,
+    "text": "An encirclement operation usually has at least two phases—the actual encirclement and actions taken against the isolated enemy forces. Commanders consider adjusting subordinate units’ task organizations between phases to maximize unit effectiveness in each phase. The first phase is the actual encirclement that results in the enemy force’s isolation. The organization of forces for an encirclement is similar to that of a movement to contact or an envelopment. The unit executing an encirclement organizes encircling forces into a direct pressure force and one or more encircling arms. Armored, mechanized, and motorized infantry, air assault, and airborne units are especially well suited for use as an encircling force since they have the tactical mobility to reach positions that cut enemy ground lines of communication. Bypassed and non-encircled enemy forces on the flanks and rear of advancing friendly forces require all around security."
+   },
+   {
+    "ref": "FM 3-90 3-7",
+    "manual": "FM 3-90",
+    "section": "TYPES OF OFFENSIVE OPERATIONS",
+    "pdf_page": 91,
+    "text": "A pursuit is a type of offensive operation to catch or cut off a disorganized hostile force attempting to escape, with the aim of destroying it. Pursuits entail rapid movement and decentralized control. Pursuits require the pursuing force to retain more mobility than the enemy force. Any offensive operation can transition into a pursuit if enemy resistance breaks down and enemy forces flee. Pursuits generally follow successful exploitations with the purpose of completing the destruction of enemy forces before they can reorganize. There are two variations of pursuits:  Frontal.  Combination. See Chapter 7 for more information on pursuit."
+   },
+   {
+    "ref": "FM 3-90 7-5",
+    "manual": "FM 3-90",
+    "section": "ORGANIZATION OF FORCES FOR A PURSUIT",
+    "pdf_page": 160,
+    "text": "Normally, commanders do not organize specifically for pursuit operations ahead of time, although unit staffs may plan for a pursuit as a branch or sequel to the current order. Therefore, units must be flexible to react when the situation presents itself. A unit’s maneuver and sustainment forces continue their ongoing activities, while the commander readjusts priorities to better support the pursuit and ensures subordinate units are as self-sufficient as resources permit. Units request and acquire additional support from higher echelon headquarters based on the mission variables. For most pursuits, commanders assign subordinate forces security, direct pressure, encircling, follow and support, and reserve missions. The direct pressure force is a force employed in a pursuit that orients on the enemy main body to prevent enemy disengagement or defensive reconstitution. The encircling force is the force that maneuvers to the rear or flank of the enemy to prevent the enemy’s escape. The enemy can be destroyed between the direct pressure force and encircling force. The encircling force advances or flies along routes parallel to the enemy’s line of retreat. If the encircling force cannot outdistance the enemy to cut the enemy off, the encircling force may also attack the flank of a retreating enemy. Given sufficient resources, units can assign more than one force the encirclement mission. The subordinate unit assigned the follow and support mission polices the battlefield to prevent the dissipation of the combat power of the unit assigned the direct pressure mission. The discussion beginning in paragraph B-42 addresses the duties of a follow and support force. Reserves allow commanders to take advantage of unforeseen opportunities or respond to enemy counterattacks."
+   },
+   {
+    "ref": "ADP 3-90 3-18",
+    "manual": "ADP 3-90",
+    "section": "PURSUIT",
+    "pdf_page": 43,
+    "text": "A pursuit is a type of offensive operation designed to catch or cut off a hostile force attempting to escape, with the aim of destroying it. There are two variations of the pursuit: frontal and combination. A pursuit normally follows a successful exploitation. However, if enemy resistance breaks down and enemy forces begin fleeing the battlefield, any type of offensive operation can transition into a pursuit. Pursuits entail rapid movement and decentralized control. Bold action and calculated initiative are required in the conduct of a pursuit. The Third U.S. Army’s actions in France between August and September 1944 during World War II is an example of a pursuit."
+   },
+   {
+    "ref": "FM 3-90 C-29",
+    "manual": "FM 3-90",
+    "section": "DEFENDING ENCIRCLED",
+    "pdf_page": 431,
+    "text": "If a unit finds itself encircled, they immediately form a perimeter defense which can evolve into defending an encirclement. If this happens, distinct tactics exist for the encircled force. An encircled force has the following options: continue to defend encircled, conduct a breakout, exfiltrate toward other friendly forces, or attack deeper into enemy-controlled territory. Once encircled, the unit’s form of maneuver depends on the senior commander’s intent and mission variables, including the—  Availability of defensible terrain.  Relative combat power of friendly and enemy forces.  Sustainment status of the encircled force and its ability to be resupplied, including the ability to treat and evacuate wounded Soldiers.  Morale and fighting capacity of the Soldiers."
+   },
+   {
+    "ref": "FM 3-90 7-16",
+    "manual": "FM 3-90",
+    "section": "CONTROL MEASURES FOR A PURSUIT",
+    "pdf_page": 163,
+    "text": "If the encircling force is a ground element, the control measures are almost identical to those used during an envelopment, as shown in figure 7-3. Units designate routes, axis of advance, or assigned areas adjacent to that of direct pressure forces to allow the encircling force to move parallel to retrograding enemy forces and eventually move ahead of those enemy forces. Commanders can designate terrain objectives as guides for encircling forces. However, commanders may change these objectives rapidly and frequently, based on the progress of encircling forces and enemy actions. These objectives should be terrain features that provide encircling forces defensible terrain that enemy forces cannot easily bypass. Units often select choke points, such as defiles and bridges, as objectives for the encircling force."
+   },
+   {
+    "ref": "ADP 3-90 4-111",
+    "manual": "ADP 3-90",
+    "section": "BREAKOUT",
+    "pdf_page": 78,
+    "text": "A breakout is an operation conducted by an encircled force to regain freedom of movement or contact with friendly units. A breakout differs from other attacks only in that a simultaneous defense in other areas of the perimeter must be maintained. An encircled force normally attempts to conduct a breakout when—  Opportunity exists to attack.  An encircled force does not have sufficient relative combat power to defend itself against enemy forces attempting the encirclement.  An encircled force does not have adequate terrain available to conduct its defense.  An encircled force cannot sustain itself long enough to be relieved by forces outside the encirclement."
+   }
+  ],
+  "경계": [
+   {
+    "ref": "FM 3-90 13-24",
+    "manual": "FM 3-90",
+    "section": "LOCATION AND ORIENTATION OF THE SECURITY AREA",
+    "pdf_page": 273,
+    "text": "Main body units determine the location, orientation, and depth of the security area where their security forces operate. Units identify avenues of approach and NAIs. Depth in the security area provides the main body with time to react to approaching enemy. Occupying a deep security area allows the security force to destroy enemy reconnaissance assets without compromising critical observation posts or positions. It also prevents enemy forces from penetrating the security area and prevents gaps from occurring when observation posts or units displace or are lost. Security forces cover less depth in a wide area because they have fewer resources to position in depth. Very shallow security areas may require units to resource their security forces to perform guard operations to provide more reaction time."
+   },
+   {
+    "ref": "FM 3-90 13-63",
+    "manual": "FM 3-90",
+    "section": "SCREEN",
+    "pdf_page": 282,
+    "text": "Screening forces establish observation posts with overlapping fields of observation when establishing screens. Security force units adjust the locations of subordinate screening elements to take Security Operations advantage of established links with higher echelon sensors and collection assets. Patrols reconnoiter areas that observation posts cannot observe. The force retains a small reserve, if possible. The screening force establishes observation posts in depth on high-speed avenues of approach if forces are available and the depth of the security area allows. Screening force units plan routes between their initial and subsequent screen lines to facilitate rapid occupation of these subsequent screen lines. They deploy their assets in depth in positions where those assets can react to contingencies that develop during the screen mission. They take advantage of surveillance, target acquisition, and night observation equipment and information provided by higher level systems to expand the area and quality of security provided."
+   },
+   {
+    "ref": "FM 3-90 13-102",
+    "manual": "FM 3-90",
+    "section": "COVER",
+    "pdf_page": 292,
+    "text": "A covering force performs all the tasks of screening and guard forces. A covering force for a stationary force performs a defensive mission, while a covering force for a moving force generally conducts Security Operations offensive actions. A covering force normally operates forward of the main body in the offense or defense, or to the rear for a retrograde operation. Unusual circumstances could dictate a flank covering force, but this is normally a screen or guard mission. Organization of a Covering Force"
+   },
+   {
+    "ref": "FM 3-90 13-5",
+    "manual": "FM 3-90",
+    "section": "OBSERVATION POSTS",
+    "pdf_page": 269,
+    "text": "An observation post is a position from which observations are made or fires are directed and adjusted. All observation posts should possess appropriate communications. While aerial observers and sensor systems are extremely useful, those systems do not constitute aerial observation posts. The security force unit determines tentative initial observation post locations along or behind the screen line to ensure effective surveillance of their sectors of observation and designated NAIs. The unit or asset that occupies each observation post may shift its exact location to achieve the commander’s intent. Units may place more than one observation post along high-speed avenues of approach to allow the tracking of an enemy contact from one observation post to another, which allows the maintaining of the enemy contact without requiring security forces to displace. Security force commanders task subordinate units to perform reconnaissance and combat patrols to cover gaps between observation posts. Units place restrictive FSCMs around observation post locations to prevent fratricide."
+   },
+   {
+    "ref": "FM 3-90 13-61",
+    "manual": "FM 3-90",
+    "section": "SCREEN",
+    "pdf_page": 282,
+    "text": "A screen normally requires the subordinate elements of the security force to deploy abreast. A screen force normally organizes itself into a number of observation posts determined by the number of avenues of approach into the main body and any additional NAIs the security force must cover, as specified by the main force commander. The screening force may retain a small reserve to extract endangered observation posts. Screen Control Measures"
+   },
+   {
+    "ref": "ATP 5-0.2-1 G-106",
+    "manual": "ATP 5-0.2-1",
+    "section": "(UMCP).",
+    "pdf_page": 290,
+    "text": "Recovery operations are coordinated with maintenance efforts and commander's priorities. Tips include—  Use maintenance time guidelines established by the commander to make repair-or-recovery decisions.  Use the right recovery equipment for the recovery mission. In general, wheeled recovery systems recover wheeled vehicles and tracked recovery systems recover tracked vehicles.  Keep recovery vehicles as far forward as the tactical situation permits.  Establish recovery priorities when recovery assets are limited. Units Involved in Recovery Operations"
+   },
+   {
+    "ref": "ADP 3-90 5-7",
+    "manual": "ADP 3-90",
+    "section": "SECURITY OPERATIONS",
+    "pdf_page": 82,
+    "text": "The four types of security operations are—  Area security is a type of security operation conducted to protect friendly forces, lines of communications, and activities within a specific area. The security force may be protecting the civilian population, civil institutions, and civilian infrastructure with the unit’s AO.  Cover is a type of security operation done independent of the main body to protect them by fighting to gain time while preventing enemy ground observation of and direct fire against the main body. Commanders use the cover task offensively and defensively. (Cover as a doctrinal term also has other definitions.) Enabling Operations  Guard is a type of security operation done to protect the main body by fighting to gain time while preventing enemy ground observation of and direct fire against the main body. Units performing a guard cannot operate independently. They rely upon fires, functional support, and multifunctional support assets of the main body.  Screen is a type of security operation that primarily provides early warning to the protected force."
+   },
+   {
+    "ref": "FM 3-0 6-159",
+    "manual": "FM 3-0",
+    "section": "SECURITY OPERATIONS",
+    "pdf_page": 163,
+    "text": "There are several general considerations when performing security operations. These apply to all security tasks, but they are most applicable to the performance of screen, guard, and cover tasks. The screen, guard, and cover tasks share many common control measures, starting with boundaries defining the security area. The main body unit establishes the security area. For a security force operating to the front of the main body, the lateral boundaries of the security area are normally an extension of the lateral boundaries of the main body. The security force’s rear boundary is normally the battle handover line. (See ADP 3-90 for additional information on common security control measures for security operations.)"
+   }
+  ]
+ },
+ "core": [
+  {
+   "ref": "FM 5-0 D-1",
+   "manual": "FM 5-0",
+   "section": "PLANS AND ORDERS",
+   "pdf_page": 211,
+   "text": "An output of planning is a plan or order—a directive for future action. Commanders issue plans and orders to subordinates to communicate their understanding of the situation and their vision for how the operation should unfold. Plans and orders synchronize the action of forces in time, space, and purpose to achieve objectives and accomplish the mission. They also inform others outside the organization on how to cooperate and provide support. Plans, orders, and their attachments (annexes, appendixes, tabs, and exhibits) follow the basic five-paragraph format of— - Situation. - Mission. - Execution. - Sustainment. - Command and signal. Note. The formats in this appendix account for information categories that address the range of military operations, and they are applicable up to theater army headquarters. Planners are not required to develop all subparagraphs to the base plan, nor are they required to develop all attachments as listed in this appendix. Planners may add subparagraphs or attachments as required."
+  },
+  {
+   "ref": "FM 5-0 5-177",
+   "manual": "FM 5-0",
+   "section": "STEP 7-ORDERS PRODUCTION, DISSEMINATION, AND TRANSITION",
+   "pdf_page": 145,
+   "text": "The staff turns the selected COA into a clear, concise order with the required supporting information. The COA statement becomes the concept of operations for the plan. The COA sketch becomes the basis for the operation overlay. Planners use their knowledge, experience, skills, and judgement to fill in missing details for any part of the operation not analyzed during COA analysis. If time permits, the staff may conduct a more detailed analysis of the selected COA to more fully synchronize the operation and complete the plan. The staff writes the OPORD or OPLAN following the Army’s OPORD format. (See figure 5-18 on page 132 for a depiction of orders production, dissemination, and transition. See Appendix D for more information on the OPORD format.)"
+  },
+  {
+   "ref": "FM 5-0 4-66",
+   "manual": "FM 5-0",
+   "section": "DEVELOP AN OPERATIONAL APPROACH",
+   "pdf_page": 83,
+   "text": "An operational approach is not a course of action—a scheme developed to accomplish a mission (JP 5-0). An operational approach provides focus and boundaries for the development of COAs during the MDMP. A COA is more detailed than an operational approach, including details such as task organization, unit boundaries, and tasks to accomplish. (See Chapter 5 for more details on developing a COA.)"
+  },
+  {
+   "ref": "FM 5-0 5-95",
+   "manual": "FM 5-0",
+   "section": "STEP 3-COURSE OF ACTION DEVELOPMENT",
+   "pdf_page": 115,
+   "text": "To array forces is to determine the forces necessary to accomplish the mission and to provide a basis for the scheme of maneuver. To do this, planners consider— - The higher echelon commander’s intent and concept of operations. - The unit mission statement and the commander’s intent and planning guidance. - The air and ground avenues of approach. - As many possible enemy COAs as time permits, starting with the most likely and including the most dangerous."
+  },
+  {
+   "ref": "FM 5-0 5-105",
+   "manual": "FM 5-0",
+   "section": "STEP 3-COURSE OF ACTION DEVELOPMENT",
+   "pdf_page": 116,
+   "text": "As the staff develops the concept of operations, it captures the details within a COA statement (narrative) and sketch (graphic). The initial concept of operations includes, but is not limited to, the following: - The purpose of the operation. - A statement of where the commander will accept operational or tactical risk. - Identification of critical friendly events and transitions between phases (if the operation is phased). - Unit’s assigned area. - Assigned areas of subordinate units (AO, zone, or sector). - Designation of deep-close-rear operations. - Designation of the main effort and how its task and purpose are most critical to accomplishment of the unit’s mission. - Designation of supporting efforts, along with their tasks and purposes, linked to how they support the main effort and the accomplishment of the unit’s mission. - Designation of the reserve, including its location and composition. - Reconnaissance and security activities. - Identification of maneuver options that may develop during an operation. - Location of engagement areas, attack objectives, or counterattack objectives. - Scheme of fires. - Scheme of sustainment. - Scheme of protection. - Integration of obstacle effects with maneuver and fires. - Priorities for each warfighting function. - Informational considerations. - Themes, messages, and means of delivery. The Military Decision-Making Process - Military deception operations (on a need-to-know basis). - Key control measures. - Essential stability tasks as necessary. Assign Headquarters"
+  },
+  {
+   "ref": "FM 5-0 5-108",
+   "manual": "FM 5-0",
+   "section": "STEP 3-COURSE OF ACTION DEVELOPMENT",
+   "pdf_page": 117,
+   "text": "At this point in the process, planners have sufficient information to prepare a COA statement and update supporting sketches that have been built for each COA. The COA statement clearly portrays how the unit accomplishes the mission. The COA sketch provides a picture of the combined arms aspects of the concept, including the positioning of forces. The COA statement clearly and concisely describes the COA sketch. Together, the statement and sketch cover the who (task organization), what (tasks), when, where, and why (purpose) for all subordinate units and synchronizes their actions to accomplish the unit’s mission while accounting for associated risk."
+  },
+  {
+   "ref": "FM 5-0 5-109",
+   "manual": "FM 5-0",
+   "section": "STEP 3-COURSE OF ACTION DEVELOPMENT",
+   "pdf_page": 118,
+   "text": "The COA sketch depicts the array of forces and control measures. It generally includes— - Assigned areas, including unit boundaries and support areas by phase, as necessary. - Friendly unit and organization symbols (at least one level down). - The line of departure or line of contact and phase lines, if used. - Reconnaissance and security graphics. - Movement and maneuver control measures. - Ground and air axes of advance. - Assembly areas, battle positions, strong points, engagement areas, and objectives. - Obstacle control measures. - Tactical mission tasks and operation symbols. - Essential direct fire control measures. - Fire support coordination and airspace coordination measures. - Designation of main effort, supporting efforts, and reserve. - Location of command posts (CPs) and critical communications nodes. - Known or templated enemy locations. - Population concentrations. - Other applicable tactical control measures."
+  },
+  {
+   "ref": "FM 5-0 5-110",
+   "manual": "FM 5-0",
+   "section": "STEP 3-COURSE OF ACTION DEVELOPMENT",
+   "pdf_page": 118,
+   "text": "A finalized COA statement describes the selected COA in detail. It generally includes— - Mission. - Commander’s intent. - Concept of operations. - If the operation is phased, main effort, supporting efforts, and reserve as appropriate, by phase. - Scheme of maneuver. - Scheme of intelligence. - Scheme of information collection. - Scheme of fires. - Scheme of air and missile defense. - Scheme of protection. - Scheme of engineering. - Scheme of sustainment. - Task and purpose of subordinate units, including priorities for employment of the reserve. - Scheme of command and control. - Risks to mission with identified mitigation."
+  },
+  {
+   "ref": "ADP 5-0 2-100",
+   "manual": "ADP 5-0",
+   "section": "KEY COMPONENTS OF A PLAN",
+   "pdf_page": 47,
+   "text": "The mission statement, commander’s intent, and concept of operations are key components of a plan that serve as the framework for an operation. Commanders ensure their mission and commander’s intent nest with those of their higher headquarters. While the commander’s intent focuses on the end state, the concept of operations focuses on the way or sequence of actions by which the force will achieve the end state. The concept of operations expands on the mission statement and commander’s intent. Within the concept of operations, commanders establish objectives as intermediate goals toward achieving the operation’s end state."
+  },
+  {
+   "ref": "ADP 5-0 2-101",
+   "manual": "ADP 5-0",
+   "section": "MISSION STATEMENT",
+   "pdf_page": 47,
+   "text": "The mission is the task, together with the purpose, that clearly indicates the action to be taken and the reason therefore (JP 3-0). Commanders analyze a mission based on their higher commander’s intent, specified tasks, and implied tasks. Results of that analysis yield the essential task—the task that when executed accomplishes the mission. The essential task becomes the “what” of the mission statement—a clear statement of the action to be taken and the reason for taking it. The five elements of a mission statement answer these questions: - Who will execute the operation (unit or organization)? - What is the unit’s essential task (normally a tactical mission task or tactical enabling task)? - Where will the operation occur (AO, objective, engagement areas, or grid coordinates)? - When will the operation begin (by time or event)? - Why will the force conduct the operation (for what purpose)?"
+  },
+  {
+   "ref": "ADP 5-0 2-104",
+   "manual": "ADP 5-0",
+   "section": "COMMANDER’S INTENT",
+   "pdf_page": 48,
+   "text": "Key tasks are those activities the force must perform as a whole to achieve the desired end state (ADP 6-0). During execution—when significant opportunities present themselves or the concept of operations no longer fits the situation—subordinates use key tasks to keep their efforts focused on achieving the desired end state. Examples of key tasks include terrain the force must control or an effect the force must have on the enemy."
+  },
+  {
+   "ref": "ADP 5-0 2-105",
+   "manual": "ADP 5-0",
+   "section": "COMMANDER’S INTENT",
+   "pdf_page": 48,
+   "text": "The end state is a set of desired future conditions the commander wants to exist when an operation ends. Commanders describe the operation’s end state by stating the desired conditions of the friendly force in relationship to desired conditions of the enemy, terrain, and civil considerations. A clearly defined end state promotes unity of effort among the force and with unified action partners."
+  },
+  {
+   "ref": "ADP 5-0 2-135",
+   "manual": "ADP 5-0",
+   "section": "DETERMINE RELEVANT FACTS AND DEVELOP ASSUMPTIONS",
+   "pdf_page": 53,
+   "text": "Commanders and staffs gather key facts and develop assumptions as they build their plan. A fact is something known to exist or have happened—a statement known to be true. Facts concerning the operational and mission variables serve as the basis for developing situational understanding during planning. When listing facts, planners are careful they are directly relevant to a COA or help commanders make a decision. Any captured, recorded, and most importantly briefed fact must add value to the planning conversation."
+  },
+  {
+   "ref": "ADP 5-0 2-136",
+   "manual": "ADP 5-0",
+   "section": "DETERMINE RELEVANT FACTS AND DEVELOP ASSUMPTIONS",
+   "pdf_page": 53,
+   "text": "An assumption provides a supposition about the current situation or future course of events, presumed to be true in the absence of facts. Assumptions must be valid (logical and realistic) and necessary for planning to continue. Assumptions address gaps in knowledge that are critical for the planning process to continue. Staffs continually review assumptions to ensure validity and to challenge if they appear unrealistic."
+  },
+  {
+   "ref": "ADP 5-0 2-138",
+   "manual": "ADP 5-0",
+   "section": "DETERMINE RELEVANT FACTS AND DEVELOP ASSUMPTIONS",
+   "pdf_page": 53,
+   "text": "Commanders and staffs continuously question whether their assumptions are valid throughout planning and the operations process. Key points concerning the use of assumptions include— - Assumptions must be logical, realistic, and considered likely to be true. - Assumptions are necessary for continued planning. - Too many assumptions result in a higher probability that the plan or proposed solution may be invalid. - The use of assumptions requires the staff to develop branches to execute if one or more key assumptions prove false. - Often, an unstated assumption may prove more dangerous than a stated assumption proven wrong."
+  },
+  {
+   "ref": "ADP 3-0 3-40",
+   "manual": "ADP 3-0",
+   "section": "MAIN EFFORT, SUPPORTING EFFORT, AND RESERVE",
+   "pdf_page": 44,
+   "text": "A reserve is that portion of a body of troops that is withheld from action at the beginning of an engagement to be available for a decisive movement (ADP 3-90). A reserve is an uncommitted force, and thus it does not normally have a full suite of combat multipliers available to it until it is committed. It is normally the echelon’s main effort once committed. Commanders constitute a reserve and base the size of the reserve on the level of uncertainty; more uncertainty requires a larger reserve. Commanders provide priorities of planning for the reserve and position it where it can best support these priorities. Commanders who commit their reserve form a new one."
+  }
+ ]
+}

@@ -1,21 +1,30 @@
 # COA 시뮬레이션 데이터셋 `reduced-opord/0.6`
 
-6·25전쟁 연대급 전투 **50건**을 시뮬레이터가 읽을 수 있는 **축약 작전명령(OPORD)** 꼴로 정리한 데이터셋이다. 사례마다 네 가지가 있다. 명령 시점의 상황, 그 연대가 실제로 내린 초기 배치 명령(모범 답안), 적의 계획과 환경, 실제 경과다.
+6·25전쟁 연대급 전투 **50건**을 시뮬레이터가 읽을 수 있는 **축약 작전명령(OPORD)** 꼴로 정리한 데이터셋과, 이를 few-shot 예시로 써서 새 COA(방책)를 생성하는 파이프라인이다.
 
-쓰임은 둘이다.
-1. **few-shot 예시**: 생성 모델이 처음 보는 상황에서 COA(방책)를 명령 꼴로 만들 때 예시로 쓴다.
-2. **시뮬레이션 시나리오**: 그렇게 만든 COA를 pysc2에서 같은 상황, 같은 적 계획으로 돌려 모범 답안·실제 결과와 비교한다.
+## 넘기는 자료
+
+| 자료 | 위치 | 설명 |
+|---|---|---|
+| **COA를 만들어야 할 상황** (input만 있는 판) | [`data/inputs/`](data/inputs) | 사례 50건의 명령 시점 상황. 익명화. 생성 모델이 받는 것 |
+| **pseudo-GT COA** (상황 + 명령) | [`data/anon/`](data/anon) | 그 연대가 실제로 내린 초기 배치 명령의 재구성. few-shot 예시. 익명화 |
+| **pseudo-GT 전체판** | [`data/cases/`](data/cases) | 위 둘 + 적의 실제 계획·숨은 적·외생 사건(`scenario`) + 실제 경과(`history`). 시뮬레이터 입력과 평가 기준 |
+| **입력에 들어갈 교범** | [`doctrine/`](doctrine) | 과업 동사의 교범 정의 + 임무 유형별 조항(미 육군 공개 교범) |
+| **파이프라인 스크립트** | [`pipeline/`](pipeline), [docs/06](docs/06_pipeline.md) | 상황 + 교범 + 예시 → 생성 → 검사 → 시뮬레이터 입력. 생성 품질 실험 포함 |
+| **JSON 양식 튜토리얼** | [`tutorial/`](tutorial) | 사례 하나를 열어 보며 9단계로 양식 익히기 (`python3 tutorial/tutorial.py`) |
 
 ```
-                    ┌──────────── few-shot 예시: data/anon/*.json 의 {input → order} ────────────┐
-                    ▼                                                                            │
- data/anon/<id>.json  input (익명화)  ──▶  생성 모델  ──▶  새 order  ──▶  tools/validate_order.py
-                                                                              │ 통과
- data/cases/<id>.json  input + scenario ──────────────────────────────────────┤
-                                                                              ▼
-                                                         tools/case_io.py sim  ──▶  pysc2 시뮬레이터
-                                                                                          │ 결과
- data/cases/<id>.json  history ──▶ tools/case_io.py eval ──────────────▶  평가: 실제 결과·모범 답안 결과와 비교
+ data/inputs/<id>.json   situation ─────┐
+ doctrine/doctrine_pack.json  교범 ──────┤
+ data/anon/*.json  pseudo-GT 예시 ───────┤  (평가 사례 자신과 같은 전투는 뺀다)
+                                         ▼
+                           pipeline/generate_coa.py ──▶ 새 order ──▶ tools/validate_order.py
+                                                                          │ 통과
+ data/cases/<id>.json  input + scenario ──────────────────────────────────┤
+                                                                          ▼
+                                                     tools/case_io.py sim ──▶ pysc2 시뮬레이터
+                                                                                     │ 결과
+ data/cases/<id>.json  history ──▶ tools/case_io.py eval ─────────▶ 평가: 실제 결과·pseudo-GT 결과와 비교
 ```
 
 > **핵심 규칙 세 가지**
@@ -37,15 +46,16 @@ python3 tools/validate_order.py --all                     # 통과 50 / 50
 python3 tools/case_io.py sim  data/cases/kb2_023.json > sim_input.json    # input + order + scenario
 python3 tools/case_io.py eval data/cases/kb2_023.json > eval_target.json  # history (평가 전용)
 
-# 3) 생성 모델이 받을 입력(익명화본)
-python3 tools/case_io.py prompt data/cases/kb2_023.json > given.json
+# 3) 새 COA 생성 → 검사 → 시뮬레이터 입력 (Claude Code CLI 로그인 또는 OpenAI 호환 서버 필요)
+python3 pipeline/generate_coa.py --case kb2_023 --dry-run > prompt.txt                     # 프롬프트만 보기
+python3 pipeline/generate_coa.py --case kb2_023 --out runs/kb2_023.json --sim-out runs/kb2_023.sim.json
 
-# 4) 새로 생성한 COA를 검사하고 시뮬레이터 입력으로 만들기
+# 4) 다른 곳에서 만든 COA를 검사하고 시뮬레이터 입력으로 만들기
 python3 tools/validate_order.py data/cases/kb2_023.json new_order.json    # 오류가 없어야 한다
 python3 tools/case_io.py sim data/cases/kb2_023.json --order new_order.json > sim_input.json
 ```
 
-처음이라면 [03. 사례 따라가기](docs/03_walkthrough_kb2_023.md)부터 읽는다. 백마고지 사례 하나로 전체 구조를 볼 수 있다.
+처음이라면 [튜토리얼](tutorial/README.md)(`python3 tutorial/tutorial.py`)부터 본다. 그다음 [03. 사례 따라가기](docs/03_walkthrough_kb2_023.md)로 백마고지 사례 하나를 시뮬레이터가 읽는 순서대로 따라간다.
 
 ## 폴더 구조
 
@@ -58,14 +68,29 @@ Pseudo-COA/
 │   ├── 02_simulator_contract.md  시뮬레이터 계약: 읽는 순서, 유닛 환산, 사건 판정, 규칙 실행, 종료·평가
 │   ├── 03_walkthrough_kb2_023.md 사례 하나를 처음부터 끝까지 (백마고지)
 │   ├── 04_vocabulary.md          열거값 사전: 동사, mode, kind 등과 50건의 실제 빈도
-│   └── 05_open_questions.md      시뮬레이션 팀이 정해야 할 것 (Q1~Q16)
+│   ├── 05_open_questions.md      시뮬레이션 팀이 정해야 할 것 (Q1~Q16)
+│   └── 06_pipeline.md            COA 생성 파이프라인과 생성 품질 실험 결과
+├── tutorial/
+│   ├── README.md                 JSON 양식 튜토리얼 (9단계)
+│   └── tutorial.py               단계별로 사례를 열어 보여 주는 스크립트
+├── doctrine/
+│   ├── README.md                 교범 조항을 고른 방법과 출처
+│   ├── doctrine_pack.json        파이프라인이 읽는 교범 묶음
+│   ├── verbs.md                  과업 동사 ↔ 교범 정의
+│   └── mission_<유형>.md         임무 유형별 조항 (8개 유형)
+├── pipeline/
+│   ├── generate_coa.py           상황 → 프롬프트 → 생성 → 검사 → 시뮬레이터 입력
+│   ├── prompt.py                 system 규칙, 교범·예시 조립, 예시 고르기
+│   ├── backends.py               생성 모델 호출 (Claude Code CLI / OpenAI 호환)
+│   └── experiment/               생성 품질 실험 (run_gen → score → judge → report, results/)
 ├── schema/
 │   ├── reduced-opord-0.6.schema.json   사례 파일 전체의 JSON Schema
 │   └── order.schema.json               order 블록만 (생성 모델의 구조화 출력에 그대로 쓸 수 있다)
 ├── sim_unit_table.json           부대 규모 → 시뮬레이션 유닛 수, SC2 유닛 매핑 제안, 초기 계수 (보정 대상 초안)
 ├── data/
-│   ├── cases/<id>.json           사례 50건 전체 (meta, input, order, scenario, history, checks)
-│   ├── anon/<id>.json            익명화본 (input, order만). 생성 모델에 주는 것
+│   ├── inputs/<id>.json          COA를 만들어야 할 상황 (익명화 input + mission_type)
+│   ├── anon/<id>.json            pseudo-GT COA 익명화본 (input, order). few-shot 예시
+│   ├── cases/<id>.json           pseudo-GT 전체판 (meta, input, order, scenario, history, checks)
 │   ├── index.jsonl               사례당 한 줄 요약
 │   └── CASES.md                  사례 목록과 품질 표시
 ├── examples/
@@ -158,8 +183,12 @@ Pseudo-COA/
 
 ## 새 COA를 생성할 때
 
-- **입력**: `data/anon/<id>.json`의 `input`. 실명·날짜·작전명을 별칭으로 바꾼 것이다. id와 좌표는 원본과 같다.
-- **few-shot 예시**: 다른 사례의 `anon` `{input → order}` 쌍. **평가할 사례 자신은 예시에서 뺀다**(leave-one-out).
+[`pipeline/generate_coa.py`](pipeline/generate_coa.py)가 아래를 모두 한다. 직접 구현할 때의 규칙은 다음과 같다.
+
+
+- **입력**: `data/inputs/<id>.json`의 `input`. 실명·날짜·작전명을 별칭으로 바꾼 것이다. id와 좌표는 원본과 같다.
+- **few-shot 예시**: 다른 사례의 `anon` `{input → order}` 쌍. **평가할 사례 자신과 같은 전투는 예시에서 뺀다**(leave-one-out).
+- **교범**: `doctrine/doctrine_pack.json`. 프롬프트 조립은 [`pipeline/prompt.py`](pipeline/prompt.py)와 [06. 파이프라인](docs/06_pipeline.md)에 있다.
 - **출력 형식**: [`schema/order.schema.json`](schema/order.schema.json). 구조화 출력 스키마로 그대로 쓸 수 있다.
 - **생성 모델에 주면 안 되는 것**: `meta`, `scenario`, `history`, `checks`. 숨은 적과 실제 결과가 들어 있다.
 - **검사**: `tools/validate_order.py <case> <new_order>`. 오류가 있으면 시뮬레이션하지 않는다.

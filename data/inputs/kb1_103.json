@@ -1,0 +1,690 @@
+{
+ "id": "kb1_103",
+ "schema": "reduced-opord/0.6",
+ "mission_type": "공격",
+ "input": {
+  "perspective": {
+   "unit": "아군 연대",
+   "alias": "아군 연대",
+   "echelon": "연대"
+  },
+  "higher_context": {
+   "higher_unit": "상급 사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "상급 사단은 하천 1-마을 1-고지 G 선에서 마을 3 북쪽을 방어하면서 북쪽으로 제한된 공격을 실시해 서측의 적을 유인한다.",
+   "higher_intent": "역포위 위험이 큰 깊은 공격 대신 고지 A을 탈취해 도로 1 감제 고지를 확보하고, 적의 공세를 사단 정면으로 끌어 하천 1 돌출부의 위기를 완화한다.",
+   "assigned_task": "고지 A을 탈취한다. 인접 연대 2는 우측에서 견제 공격한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "인접 연대 1",
+     "alias": "인접 연대 1",
+     "side": "좌(서)",
+     "mission": "마을 1 동남쪽과 마을 1 북쪽 고지군을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      30,
+      66
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "인접 연대 2",
+     "alias": "인접 연대 2",
+     "side": "우(동)",
+     "mission": "마을 2 북쪽 도로변을 방어하며 아군 연대 우측에서 견제 공격한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      155,
+      110
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "인접 사단 1",
+     "alias": "인접 사단 1",
+     "side": "우(동), 고지 G 이동",
+     "mission": "고지 G 동쪽 정면을 방어한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      188,
+      130
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "상급 사단",
+     "text": "D일 10:00 포병 대대 1과 전폭기가 고지 A 일대에 준비 사격과 폭격을 집중한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 10,
+      "text": "D일 10:00 준비 사격"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "H1"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "D일 11:00 인접 연대 2가 마을 2 북쪽에서 상주 방향 도로를 따라 견제 공격한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 11,
+      "text": "D일 11:00 H시"
+     },
+     "action": {
+      "mode": "fix",
+      "objective_ref": "R2",
+      "axis_xy": [
+       [
+        158,
+        96
+       ],
+       [
+        160,
+        110
+       ],
+       [
+        160,
+        125
+       ],
+       [
+        159,
+        140
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "인접 연대 1는 마을 1 일대를 계속 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T1"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 서쪽 인접 연대 1, 동쪽 인접 연대 2 사이의 고지 A-고지 C 서측 정면이며 남쪽은 도로 1 남쪽 고지군까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "인접 연대 1-아군 연대 전투지경선",
+     "between": [
+      "인접 연대 1",
+      "아군 연대"
+     ],
+     "xy": [
+      [
+       62,
+       40
+      ],
+      [
+       62,
+       100
+      ],
+      [
+       66,
+       150
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "아군 연대-인접 연대 2 전투지경선",
+     "between": [
+      "아군 연대",
+      "인접 연대 2"
+     ],
+     "xy": [
+      [
+       138,
+       40
+      ],
+      [
+       136,
+       100
+      ],
+      [
+       134,
+       150
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 고지 A 남쪽"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 서쪽"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "포병 대대 1",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "105mm·155mm 곡사포",
+    "location": {
+     "note": "도로 1 남쪽 포진지"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "항공 1",
+    "alias": "항공 1",
+    "echelon": "중대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "후방 기지"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "하천 1 동안의 마을 1에서 마을 2에 이르는 도로 북쪽 산악지대. 고지 A·고지 B·고지 C이 도로와 그 남쪽 마을 3 방향을 감제한다. 능선은 좁고 가팔라 대부대 기동이 어렵다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H1",
+     "name": "고지 A",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      88,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 518,
+     "preparation": "fortified"
+    },
+    {
+     "id": "H2",
+     "name": "고지 B",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      52,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 328
+    },
+    {
+     "id": "H3",
+     "name": "고지 C",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      128,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 839
+    },
+    {
+     "id": "H4",
+     "name": "고지 D",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      82,
+      86
+     ],
+     "estimated": true,
+     "elevation_m": 465
+    },
+    {
+     "id": "H5",
+     "name": "고지 E",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      92,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 464
+    },
+    {
+     "id": "H6",
+     "name": "고지 F",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      24,
+      74
+     ],
+     "estimated": true,
+     "elevation_m": 303
+    },
+    {
+     "id": "H7",
+     "name": "고지 G",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      176,
+      136
+     ],
+     "estimated": true,
+     "elevation_m": 741
+    },
+    {
+     "id": "H8",
+     "name": "고지 H",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      186,
+      74
+     ],
+     "estimated": true,
+     "elevation_m": 902
+    },
+    {
+     "id": "T1",
+     "name": "마을 1",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      18,
+      58
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T2",
+     "name": "마을 2",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      158,
+      94
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T3",
+     "name": "마을 3",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      165,
+      3
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "K1",
+     "name": "능선 1",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      87,
+      94
+     ],
+     "line": [
+      [
+       88,
+       76
+      ],
+      [
+       86,
+       86
+      ],
+      [
+       87,
+       96
+      ],
+      [
+       88,
+       108
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "도로 1",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       18,
+       58
+      ],
+      [
+       40,
+       64
+      ],
+      [
+       60,
+       68
+      ],
+      [
+       80,
+       72
+      ],
+      [
+       100,
+       74
+      ],
+      [
+       120,
+       79
+      ],
+      [
+       140,
+       86
+      ],
+      [
+       158,
+       94
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "도로 2",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       158,
+       94
+      ],
+      [
+       160,
+       110
+      ],
+      [
+       160,
+       125
+      ],
+      [
+       158,
+       150
+      ],
+      [
+       155,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "도로 3",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       158,
+       94
+      ],
+      [
+       160,
+       70
+      ],
+      [
+       162,
+       45
+      ],
+      [
+       164,
+       20
+      ],
+      [
+       165,
+       3
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "W1",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       0,
+       0
+      ],
+      [
+       10,
+       0
+      ],
+      [
+       12,
+       40
+      ],
+      [
+       10,
+       80
+      ],
+      [
+       8,
+       120
+      ],
+      [
+       10,
+       200
+      ],
+      [
+       0,
+       200
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 연대 1",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 60,
+    "identified": false,
+    "known_at_start": "고지 A에 강력히 준비된 진지의 적 존재는 인지했으나 소속은 미상",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      88,
+      110
+     ],
+     "ref": "H1",
+     "frontage_m": 1500,
+     "polygon": [
+      [
+       80,
+       102
+      ],
+      [
+       96,
+       102
+      ],
+      [
+       98,
+       116
+      ],
+      [
+       82,
+       118
+      ]
+     ],
+     "note": "고지 A 정상과 남쪽 능선 상단의 준비된 진지"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 연대 2",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 3000,
+    "identified": true,
+    "known_at_start": "귀순한 연대 작전참모 진술로 식별. 사단 9,000명으로 보충 완료, D일 18:00 총공세 예정",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      110,
+      128
+     ],
+     "frontage_m": 2000,
+     "note": "고지 A과 고지 C 사이 북쪽 고지군"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 연대 3",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 3000,
+    "identified": true,
+    "known_at_start": "[부대] 예하로 귀순자 진술에 따라 상주-마을 2 축선 서측에 배치 추정",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      140,
+      140
+     ],
+     "frontage_m": 2000,
+     "note": "고지 C 북쪽, 상주 도로 서측 고지군"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 연대 4",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 3000,
+    "identified": true,
+    "known_at_start": "[부대] 예하, 2제대로 추정",
+    "posture": "예비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      120,
+      160
+     ],
+     "note": "사단 후방 고지군"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "적 연대 5",
+    "alias": "적 연대 5",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "상주-마을 2 도로 동측 고지군에서 공격 준비",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      180,
+      120
+     ],
+     "frontage_m": 2500,
+     "note": "마을 2 북동쪽 고지군"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 08:00",
+   "light": "day",
+   "notes": "8월 하순부터 9월 초 맑은 늦여름 날씨. 주간에는 전폭기 지원이 가능하다. 적은 D일 18:00 총공세를 개시할 것이라는 귀순자 진술이 있다."
+  }
+ }
+}

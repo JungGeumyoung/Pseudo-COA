@@ -1,0 +1,796 @@
+{
+ "id": "kb2_017",
+ "schema": "reduced-opord/0.6",
+ "mission_type": "공격",
+ "input": {
+  "perspective": {
+   "unit": "아군 연대",
+   "alias": "아군 연대",
+   "echelon": "연대"
+  },
+  "higher_context": {
+   "higher_unit": "상급 사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "상급 사단은 지점 1 주저항선을 방어하고 주저항선 북쪽 약 2km에 전초진지를 확보하며 위력수색과 야간잠복으로 적의 공격을 견제한다.",
+   "higher_intent": "적 제91연대의 공격 거점인 고지 A와 고지 B를 선제 제한공격으로 탈취해 적의 공격 위협을 없앤다. 마을 1 동남쪽 고지군과 개활지, 마을 2-마을 4 일대를 감제해 이후 작전 여건을 만든다.",
+   "assigned_task": "아군 연대는 고지 A와 고지 B를 탈취하고 그곳에 전초진지를 설치한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "인접 연대 1",
+     "alias": "인접 연대 1",
+     "side": "우측",
+     "mission": "고지 K 동북쪽 고지 L 전초진지를 유지하며 적 제103연대와 대치한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      170,
+      85
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "인접 연대 2",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 사단 후방에 위치한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      110,
+      30
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "인접 연대 1는 고지 L 전초진지를 계속 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T17"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "적 대대 이상이 고지 A에 있으면 사단은 인접 연대 2 일부를 아군 연대 지역에 지원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 고지 A 안에 있음"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T1"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "아군 연대는 사단 좌측 지역을 맡는다. 고지 J 일대 주저항선에서 북쪽 마을 1-고지 C-고지 B-고지 A-마을 2 전초선까지이며, 우측은 고지 K 서쪽에서 인접 연대 1와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "아군 연대-인접 연대 1 전투지경선",
+     "between": [
+      "아군 연대",
+      "인접 연대 1"
+     ],
+     "xy": [
+      [
+       148,
+       40
+      ],
+      [
+       148,
+       100
+      ],
+      [
+       150,
+       160
+      ],
+      [
+       152,
+       195
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "아군 연대 좌측 전투지경선",
+     "between": [
+      "아군 연대",
+      "좌측 인접 부대"
+     ],
+     "xy": [
+      [
+       40,
+       40
+      ],
+      [
+       40,
+       120
+      ],
+      [
+       38,
+       195
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "포병대대 1",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문(추정)",
+    "location": {
+     "note": "주저항선 후방 포진지",
+     "xy": [
+      100,
+      55
+     ]
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "전차소대 1",
+    "alias": "전차소대 1",
+    "echelon": "소대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "전차 5대(추정)",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "포병대대 2",
+    "alias": "포병대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "자주포 18문(추정)",
+    "location": {
+     "note": "사단 지역 후방",
+     "xy": [
+      120,
+      45
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "중부전선 하천 1 남쪽, 마을 1 동남쪽 고지군. 아군 주저항선(지점 1)과 적 주저항선(고지 G-고지 H-고지 I) 사이 약 9km의 전초지대이다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "고지 A",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      115,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "fortified",
+     "polygon": [
+      [
+       109,
+       113
+      ],
+      [
+       121,
+       113
+      ],
+      [
+       123,
+       120
+      ],
+      [
+       117,
+       125
+      ],
+      [
+       109,
+       123
+      ]
+     ]
+    },
+    {
+     "id": "T2",
+     "name": "고지 B",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      95,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "deliberate",
+     "polygon": [
+      [
+       90,
+       116
+      ],
+      [
+       100,
+       116
+      ],
+      [
+       101,
+       123
+      ],
+      [
+       94,
+       125
+      ],
+      [
+       89,
+       122
+      ]
+     ]
+    },
+    {
+     "id": "T3",
+     "name": "고지 C",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      72,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 373,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T4",
+     "name": "고지 D",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      90,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 345
+    },
+    {
+     "id": "T5",
+     "name": "고지 E",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      130,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 364
+    },
+    {
+     "id": "T6",
+     "name": "고지 F",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      100,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty"
+    },
+    {
+     "id": "T7",
+     "name": "마을 1",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      55,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T8",
+     "name": "마을 2",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      135,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T9",
+     "name": "마을 3",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      158,
+      136
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T10",
+     "name": "마을 4",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      120,
+      145
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T11",
+     "name": "마을 5",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      55,
+      175
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T12",
+     "name": "고지 G",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      85,
+      168
+     ],
+     "estimated": true,
+     "elevation_m": 533,
+     "preparation": "fortified"
+    },
+    {
+     "id": "T13",
+     "name": "고지 H",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      112,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "fortified"
+    },
+    {
+     "id": "T14",
+     "name": "고지 I",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      140,
+      166
+     ],
+     "estimated": true,
+     "elevation_m": 562,
+     "preparation": "fortified"
+    },
+    {
+     "id": "T15",
+     "name": "고지 J",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      80,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 765,
+     "preparation": "fortified"
+    },
+    {
+     "id": "T16",
+     "name": "고지 K",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      150,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "fortified"
+    },
+    {
+     "id": "T17",
+     "name": "고지 L",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      165,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 575,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T18",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      152
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "line": [
+      [
+       20,
+       158
+      ],
+      [
+       55,
+       152
+      ],
+      [
+       90,
+       152
+      ],
+      [
+       130,
+       154
+      ],
+      [
+       180,
+       158
+      ]
+     ]
+    },
+    {
+     "id": "T19",
+     "name": "지점 1",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      110,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "line": [
+      [
+       40,
+       82
+      ],
+      [
+       80,
+       82
+      ],
+      [
+       110,
+       80
+      ],
+      [
+       148,
+       80
+      ]
+     ],
+     "preparation": "fortified"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "도로 1",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       55,
+       148
+      ],
+      [
+       80,
+       146
+      ],
+      [
+       100,
+       146
+      ],
+      [
+       120,
+       145
+      ],
+      [
+       135,
+       132
+      ],
+      [
+       158,
+       136
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "도로 2",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       100,
+       50
+      ],
+      [
+       98,
+       65
+      ],
+      [
+       97,
+       80
+      ],
+      [
+       98,
+       92
+      ],
+      [
+       100,
+       104
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 중대 1",
+    "alias": "적 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 120,
+    "equipment": "기관총, 암벽 화력거점",
+    "identified": true,
+    "known_at_start": "고지 A 전초진지 점령 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      115,
+      119
+     ],
+     "ref": "T1",
+     "note": "고지 A 정상과 암벽 화력거점"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 중대 2",
+    "alias": "적 중대 2",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 100,
+    "personnel": 80,
+    "identified": true,
+    "known_at_start": "고지 B 전초진지 점령 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      95,
+      121
+     ],
+     "ref": "T2",
+     "note": "고지 B 정상"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 중대 3",
+    "alias": "적 중대 3",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 120,
+    "identified": true,
+    "known_at_start": "고지 C 거점 점령 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      72,
+      133
+     ],
+     "ref": "T3",
+     "note": "고지 C 정상과 남쪽 능선"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 연대 1",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "personnel": 1800,
+    "identified": true,
+    "known_at_start": "마을 5-고지 G-고지 H-고지 I 주저항선 점령 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      105,
+      170
+     ],
+     "frontage_m": 9000,
+     "polygon": [
+      [
+       50,
+       165
+      ],
+      [
+       140,
+       160
+      ],
+      [
+       145,
+       175
+      ],
+      [
+       50,
+       182
+      ]
+     ],
+     "note": "마을 5-고지 G-고지 H-고지 I 주저항선"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "적 포병 연대 1",
+    "alias": "적 포병 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 100,
+    "equipment": "야포·박격포",
+    "identified": true,
+    "known_at_start": "사단 정면 지원 확인",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      110,
+      188
+     ],
+     "note": "적 주저항선 후방 포진지(추정)"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "적 전차 중대 1",
+    "alias": "적 전차 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "전차 10대",
+    "identified": true,
+    "known_at_start": "사단 정면 전차 10대 확인",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      115,
+      158
+     ],
+     "note": "마을 4 북쪽 도로변(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 03:30",
+   "light": "night",
+   "notes": "6월 초여름. 여명 약 05:00. 휴전회담 교착으로 공격은 제한공격이다. 미 공군 근접항공지원은 주간 요청으로 가능하다."
+  }
+ }
+}
