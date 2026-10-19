@@ -1,0 +1,410 @@
+{
+ "id": "kb2_029",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 04:00",
+  "start_t": 4,
+  "horizon_h": 97,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G3",
+    "fraction": 0.7,
+    "text": "제3대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제53연대(-) 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 휴전 전에 점령지역을 넓히려 한다. 적 제7사단은 2개월 예행연습을 거친 제53연대로 351고지를 빼앗아 동해안 저지대를 감제하고, 아군 역습을 증원 대대와 사단 예비로 막아 고지를 굳힌다.",
+   "groups": [
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "H351",
+       "axis_xy": [
+        [
+         112,
+         165
+        ],
+        [
+         108,
+         145
+        ],
+        [
+         105,
+         122
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7.5,
+        "text": "D일 07:30"
+       },
+       "text": "재공격 전에 351고지 진지에 공격준비사격을 한다.",
+       "basis": "서술: 자정 공격과 08:00 재공격이 포격 지원 아래 이뤄졌다."
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "H339",
+       "axis_xy": [
+        [
+         112,
+         165
+        ],
+        [
+         108,
+         140
+        ],
+        [
+         106,
+         116
+        ]
+       ],
+       "text": "339고지와 남쪽 능선의 역습 부대에 차단사격을 한다.",
+       "basis": "추정: 아군 역습이 거듭 저지된 데 포병 차단사격이 작용했다고 본다."
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H351N",
+       "axis_xy": [
+        [
+         105,
+         134
+        ],
+        [
+         104,
+         130
+        ],
+        [
+         105,
+         127
+        ],
+        [
+         105,
+         126
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 8,
+        "text": "D일 08:00"
+       },
+       "repeat": {
+        "max": 5,
+        "interval_h": 1.6
+       },
+       "text": "2개 중대로 351고지 북단을 정면과 측방에서 거듭 공격한다.",
+       "basis": "서술: 08:00에 2개 중대로 재공격하고 수차례 공격을 거듭했다. 횟수·간격은 추정."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "H351",
+       "axis_xy": [
+        [
+         105,
+         126
+        ],
+        [
+         105,
+         124
+        ],
+        [
+         105,
+         122
+        ]
+       ],
+       "text": "351고지 북단에서 정상과 8부 능선 쪽으로 공격한다.",
+       "basis": "서술: 북단 점령 뒤 9중대가 8부 능선에서 적의 진출을 저지했다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R3",
+       "axis_xy": [
+        [
+         105,
+         126
+        ],
+        [
+         106,
+         134
+        ],
+        [
+         108,
+         142
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 제53연대 2대대 손실 0.6 초과"
+       },
+       "text": "손실이 커지면 351고지 북쪽 기슭으로 물러난다.",
+       "basis": "추정: 자정 공격이 진내사격에 물러난 데서 문턱을 추정했다."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "R3",
+       "axis_xy": [
+        [
+         112,
+         148
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 4,
+        "text": "D일 04:00"
+       },
+       "text": "351고지 북쪽 구릉지 진지를 지키며 증원을 준비한다.",
+       "basis": "서술: 적 제7사단이 남강 동쪽 구릉지에 배치되어 있었다."
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H351",
+       "axis_xy": [
+        [
+         112,
+         148
+        ],
+        [
+         108,
+         142
+        ],
+        [
+         106,
+         134
+        ],
+        [
+         105,
+         126
+        ],
+        [
+         105,
+         122
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H351",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 351고지 안에 있음"
+       },
+       "text": "아군이 351고지에 역습해 들어오면 1개 대대를 증원한다.",
+       "basis": "서술: D+1일 03:20 역습 부대가 정상에 이르자 적이 병력을 증원했다."
+      },
+      {
+       "timing": "이어서",
+       "mode": "counterattack",
+       "objective_ref": "H351",
+       "axis_xy": [
+        [
+         105,
+         126
+        ],
+        [
+         105,
+         124
+        ],
+        [
+         105,
+         122
+        ]
+       ],
+       "repeat": {
+        "max": 6,
+        "interval_h": 5
+       },
+       "text": "351고지에 들어온 아군을 역습해 몰아낸다.",
+       "basis": "추정: 아군 역습 6차와 제50연대 2대대 공격 4차가 모두 밀려났다."
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "H339",
+       "axis_xy": [
+        [
+         105,
+         122
+        ],
+        [
+         106,
+         119
+        ],
+        [
+         106,
+         116
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G3",
+        "fraction": 0.35,
+        "text": "제3대대 손실 0.35 초과"
+       },
+       "text": "351고지 8부 능선을 넘어 339고지 쪽으로 공격한다.",
+       "basis": "추정: 9중대가 8부 능선에서 적의 진출을 저지하다 339고지로 물러났다."
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H351",
+       "axis_xy": [
+        [
+         110,
+         172
+        ],
+        [
+         110,
+         160
+        ],
+        [
+         108,
+         145
+        ],
+        [
+         106,
+         134
+        ],
+        [
+         105,
+         124
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.4,
+        "text": "적 제53연대(-) 손실 0.4 초과"
+       },
+       "text": "제53연대 손실이 커지면 1개 대대를 351고지에 증원한다.",
+       "basis": "추정: 적이 5일간 아군 역습 10차를 막아냈으므로 사단 예비 투입을 가정했다. 이 연대는 뒤에 351고지 진지를 맡았다."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제7사단 제51연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 2000,
+    "position": {
+     "xy": [
+      110,
+      172
+     ],
+     "note": "적 제7사단 예비. 351고지 북쪽 약 5km 후방(추정)."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "night",
+    "duration_h": 1,
+    "note": "구간 시작 때 야간이다."
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+3일 19:30",
+    "t": 91.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   }
+  ]
+ }
+}

@@ -1,0 +1,743 @@
+{
+ "id": "kb1_070",
+ "schema": "reduced-opord/0.6",
+ "mission_type": "지역방어",
+ "input": {
+  "perspective": {
+   "unit": "아군 연대",
+   "alias": "아군 연대",
+   "echelon": "연대"
+  },
+  "higher_context": {
+   "higher_unit": "상급 사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "상급 사단은 마을 1 서측에서 신탄진 일대 경부철교 동측까지 하천 1선을 방어하여 마을 6으로 향하는 적의 남진을 저지한다.",
+   "higher_intent": "정면 48km를 모두 지킬 수 없으므로 적의 도하 공격이 예상되는 지점 1'(마을 7 정면)와 지점 2'(마을 1 정면)에 병력을 집중하고, 1개 연대를 사단 예비로 확보한다. 하천 1선을 고수한다.",
+   "assigned_task": "아군 연대는 마을 1 동쪽 하천 2에서 마을 1 서측 마을 2까지 하천 1 남안을 방어하여 지점 2' 축선으로 도하하는 적을 저지한다. 수색중대를 배속하고 포병대대 1가 직접지원한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "인접 연대 1",
+     "alias": "인접 연대 1",
+     "side": "동측(우측)",
+     "mission": "마을 7 정면 지점 1' 축선의 하천 1선을 방어한다. D-1일 마을 7에 도착해 인접 연대 2와 임무를 교대한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      199,
+      140
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "인접 연대 2",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "인접 연대 1 도착 후 마을 6비행장 일대에서 사단 예비가 된다. 조치원 전투 손실로 전투력이 감소했다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      199,
+      60
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "인접 연대 1는 D-1일 마을 7 정면 하천 1선 진지를 점령해 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": -12,
+      "text": "D-1일 12:00 마을 7 진지 점령"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T12"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "사단 예비 인접 연대 2는 마을 1 정면 방어가 무너질 위기에 처하면 사단 명령으로 마을 1-마을 5 축선에 증원된다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.5,
+      "text": "제제3대대 손실 0.5 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T6"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "북쪽은 하천 1, 동쪽은 하천 2(인접 연대 1와의 경계), 서쪽은 마을 2 서측, 남쪽은 마을 3 남쪽까지다. 하천 1 남안 정면은 직선 약 10km다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "아군 연대-인접 연대 1 전투지경선(하천 2)",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       150,
+       135
+      ],
+      [
+       150,
+       118
+      ],
+      [
+       152,
+       90
+      ],
+      [
+       150,
+       40
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "아군 연대 서측 경계(마을 2 서측)",
+     "between": [
+      "아군 연대",
+      "사단 좌측 개방 측방"
+     ],
+     "xy": [
+      [
+       45,
+       135
+      ],
+      [
+       45,
+       110
+      ],
+      [
+       35,
+       70
+      ],
+      [
+       25,
+       30
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "아군 연대 후방 경계(마을 3 남측)",
+     "between": [
+      "아군 연대",
+      "사단 후방지역"
+     ],
+     "xy": [
+      [
+       25,
+       30
+      ],
+      [
+       90,
+       30
+      ],
+      [
+       150,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제제3대대",
+    "alias": "제제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "relationship": "건제",
+    "equipment": "소총중대 3개(K·I·L중대), 화기중대(M중대)",
+    "location": {
+     "note": "재편성 후 연대 작전지역 내 마을 1 일대로 이동 중"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제제1대대",
+    "alias": "제제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "relationship": "건제",
+    "equipment": "소총중대 3개, 화기중대",
+    "location": {
+     "note": "재편성 후 연대 작전지역 내 후방으로 이동 중"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "equipment": "경전차·장갑차량 일부(추정)",
+    "location": {
+     "note": "사단에서 배속, 연대 작전지역으로 이동 중"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "포병대대 1",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 약 12문(추정), 차량 약 70대 이상",
+    "location": {
+     "note": "연대 작전지역 내 후방으로 이동 중"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "하천 1은 폭 500~1,000m, 수심 2~5m, 유속 매시 5~10km로 도섭이 불가능한 천연 장애물이다. 마을 1는 하천 1 남안에 있고 지점 2'가 마을 1에서 마을 3·마을 5을 거쳐 남으로 이어진다. 남안은 구릉과 고지가 이어지나 정면 10km에 비해 병력이 적어 공백이 생긴다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      122
+     ],
+     "line": [
+      [
+       200,
+       128
+      ],
+      [
+       160,
+       124
+      ],
+      [
+       115,
+       121
+      ],
+      [
+       80,
+       122
+      ],
+      [
+       55,
+       120
+      ],
+      [
+       40,
+       110
+      ],
+      [
+       10,
+       90
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T2",
+     "name": "마을 1",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      115,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T3",
+     "name": "하천 2",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      150,
+      110
+     ],
+     "line": [
+      [
+       150,
+       122
+      ],
+      [
+       151,
+       105
+      ],
+      [
+       153,
+       85
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T4",
+     "name": "마을 2",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      58,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T5",
+     "name": "마을 3",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      50,
+      42
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T6",
+     "name": "마을 4",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      85,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T7",
+     "name": "지점 1",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      115,
+      121
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T8",
+     "name": "고지 A",
+     "alias": "고지 A",
+     "kind": "ridge",
+     "xy": [
+      108,
+      114
+     ],
+     "polygon": [
+      [
+       93,
+       118
+      ],
+      [
+       128,
+       118
+      ],
+      [
+       130,
+       106
+      ],
+      [
+       95,
+       106
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty"
+    },
+    {
+     "id": "T9",
+     "name": "지점 2",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      142,
+      112
+     ],
+     "polygon": [
+      [
+       134,
+       120
+      ],
+      [
+       150,
+       121
+      ],
+      [
+       151,
+       102
+      ],
+      [
+       132,
+       102
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T10",
+     "name": "마을 5",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      25,
+      2
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T11",
+     "name": "마을 6",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      199,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T12",
+     "name": "마을 7",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      199,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "도로 1",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       120
+      ],
+      [
+       115,
+       112
+      ],
+      [
+       128,
+       104
+      ],
+      [
+       130,
+       92
+      ],
+      [
+       118,
+       80
+      ],
+      [
+       90,
+       72
+      ],
+      [
+       65,
+       55
+      ],
+      [
+       50,
+       42
+      ],
+      [
+       25,
+       2
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "도로 2",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       200
+      ],
+      [
+       113,
+       175
+      ],
+      [
+       116,
+       150
+      ],
+      [
+       115,
+       135
+      ],
+      [
+       115,
+       124
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "도로 3",
+     "alias": "도로 3",
+     "kind": "trail",
+     "xy": [
+      [
+       58,
+       112
+      ],
+      [
+       62,
+       102
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       78,
+       84
+      ],
+      [
+       85,
+       78
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       200,
+       132
+      ],
+      [
+       160,
+       129
+      ],
+      [
+       115,
+       126
+      ],
+      [
+       80,
+       127
+      ],
+      [
+       55,
+       125
+      ],
+      [
+       37,
+       114
+      ],
+      [
+       8,
+       95
+      ],
+      [
+       0,
+       90
+      ],
+      [
+       0,
+       82
+      ],
+      [
+       12,
+       86
+      ],
+      [
+       43,
+       106
+      ],
+      [
+       57,
+       116
+      ],
+      [
+       80,
+       118
+      ],
+      [
+       115,
+       117
+      ],
+      [
+       160,
+       119
+      ],
+      [
+       200,
+       123
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 연대 1",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "적 [부대] 주력이 지점 2'로 마을 1 북안에 접근 중임은 알았으나 연대 번호와 정확한 위치는 미확인",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      115,
+      138
+     ],
+     "polygon": [
+      [
+       98,
+       128
+      ],
+      [
+       135,
+       128
+      ],
+      [
+       135,
+       150
+      ],
+      [
+       98,
+       150
+      ]
+     ],
+     "frontage_m": 3700,
+     "note": "마을 1 정면 하천 1 북안, 도하 준비"
+    },
+    "preparation": "hasty",
+    "equipment": "보트·뗏목 등 도하 장비"
+   },
+   {
+    "id": "E2",
+    "unit": "적 연대 2",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "사단 규모 남하는 추정되나 후속 연대의 위치는 미확인",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      113,
+      170
+     ],
+     "note": "지점 2' 북쪽 축선 후방"
+    },
+    "preparation": "none"
+   },
+   {
+    "id": "E3",
+    "unit": "적 대대 1",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "적 제4사단이 전차를 앞세우고 남진 중임을 식별",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      115,
+      145
+     ],
+     "note": "마을 1 북안 지점 2'상, 도하 지원 사격"
+    },
+    "equipment": "T-34 전차(대수 미상)"
+   },
+   {
+    "id": "E4",
+    "unit": "적 연대 3",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "사단 포병의 존재는 추정, 진지 미확인",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      112,
+      160
+     ],
+     "note": "마을 1 북방 하천 1 북안 후방"
+    },
+    "equipment": "76mm·122mm 포(추정)"
+   }
+  ],
+  "conditions": {
+   "start_time": "D-2일 18:00",
+   "light": "dusk",
+   "notes": "7월 중순 장마철로 하천 1 수위가 높고 유속이 빠르다. 연대는 앞선 전투 손실 후 재편성 직후이며 통신 장비가 부족하다. 사단 정면이 넓어 좌측(서측) 측방은 개방되어 있다."
+  }
+ }
+}

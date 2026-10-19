@@ -1,0 +1,1075 @@
+{
+ "id": "kb2_022",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제15연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제1사단 제15연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "제1사단은 제임스타운선의 역곡천-임진강 선에서 주저항선을 방어하고 임진강 서안 고양대 일대에 전진진지를 확보한다.",
+   "higher_intent": "주저항선을 감제하는 고양대 전진진지를 적에게 내주지 않고, 임진강 서안의 배수진 형세에서도 주저항선을 온전히 유지한다.",
+   "assigned_task": "제15연대는 주저항선을 방어하고 피탈된 고양대 니키·테시고지를 탈취하여 전진진지를 회복한다. 사단 수색중대와 제1중박격포중대를 배속한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제12연대",
+     "alias": "인접 연대 1",
+     "side": "우측",
+     "mission": "역곡천 남안 일대 주저항선을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      165,
+      110
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제11연대 제3대대",
+     "alias": "인접 연대 2 예하 대대",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 대기하며 명에 의해 제15연대에 배속되어 역습한다.",
+     "type": "infantry",
+     "echelon": "대대",
+     "other_names": [
+      "제11연대"
+     ],
+     "xy": [
+      130,
+      35
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "제1사단 포병",
+     "text": "사단 포병과 미 공군 근접항공지원은 H시부터 니키·테시고지에 대한 제15연대 역습을 지원한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 32.33,
+      "text": "D+1일 08:20 역습 개시"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "T18"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "사단은 제15연대 역습이 저지되고 적 대대 이상이 고양대에 남아 있으면 사단 예비 제11연대 제3대대를 제15연대에 배속한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "text": "제3대대(+사단 수색중대) 손실 0.2 초과이고 적 대대 이상이 고양대에 있음",
+      "and": [
+       {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.2,
+        "text": "제3대대(+사단 수색중대) 손실 0.2 초과"
+       },
+       {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T18",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 고양대에 있음"
+       }
+      ]
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T18",
+      "axis_xy": [
+       [
+        130,
+        35
+       ],
+       [
+        126,
+        70
+       ],
+       [
+        120,
+        92
+       ],
+       [
+        113,
+        98
+       ],
+       [
+        100,
+        106
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제15연대 작전지역은 임진강 서안 고양대 전진진지와 제3대대 주진지, 임진강 동안 주저항선이다. 좌측은 사단 좌측 경계, 우측은 제12연대와의 경계다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제15연대-제12연대 전투지경선",
+     "between": [
+      "제15연대",
+      "제12연대"
+     ],
+     "xy": [
+      [
+       160,
+       0
+      ],
+      [
+       148,
+       60
+      ],
+      [
+       140,
+       110
+      ],
+      [
+       132,
+       135
+      ],
+      [
+       135,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "사단 좌측 전투지경선",
+     "between": [
+      "제15연대",
+      "좌측 인접부대"
+     ],
+     "xy": [
+      [
+       60,
+       0
+      ],
+      [
+       62,
+       100
+      ],
+      [
+       58,
+       200
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(임진강 동안)"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(임진강 동안 주저항선)"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 좌측 전방, 임진강 서안 주진지 지역"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "연대 수색중대",
+    "alias": "수색중대 1",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "-",
+    "strength_pct": 35,
+    "relationship": "건제",
+    "location": {
+     "note": "2개 소대 잔여 인원은 니키·테시고지 동굴호에 고립, 제2소대 등 일부만 가용",
+     "ref": "T18"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "사단 수색중대",
+    "alias": "수색중대 2",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "location": {
+     "note": "사단 지역에서 배속되어 제3대대 지역으로 이동 중"
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "제1중박격포중대",
+    "alias": "박격포중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "equipment": "4.2인치 박격포",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "제1사단 포병",
+    "alias": "포병 1",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "임진강 동안 후방"
+    }
+   },
+   {
+    "id": "F8",
+    "unit": "지원 전차부대",
+    "alias": "전차부대 1",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "전차 16대",
+    "location": {
+     "note": "임진강 동안 후방"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "연천 북방 임진강 서안 고양대 일대. 평균 200~300m 구릉지이며 임진강이 역곡천과 합류해 S자로 흐르며 연대 지역을 양단한다. 니키·테시고지와 주저항선 일부는 적이 점령한 마량산(315)보다 낮아 감제된다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "니키고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      92,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "고작동 북쪽 약 1km 전진진지, 베티고지 북서 0.7km, 무명고지 북쪽 0.5km",
+     "preparation": "hasty",
+     "other_names": [
+      "Nikki"
+     ]
+    },
+    {
+     "id": "T2",
+     "name": "테시고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      106,
+      123
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "105고지 북쪽 300m, 니키고지 동쪽 전진진지",
+     "preparation": "hasty",
+     "other_names": [
+      "테리고지",
+      "Tessie"
+     ]
+    },
+    {
+     "id": "T3",
+     "name": "105고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      106,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 105,
+     "evidence": "테시고지 남쪽 300m"
+    },
+    {
+     "id": "T4",
+     "name": "베티고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      97,
+      115
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "니키고지 동남쪽 0.7km",
+     "other_names": [
+      "Betty"
+     ]
+    },
+    {
+     "id": "T5",
+     "name": "무명고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      92,
+      115
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "니키고지 남쪽 0.5km"
+    },
+    {
+     "id": "T6",
+     "name": "소노리고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      84,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "199고지와 니키고지 사이 전진진지"
+    },
+    {
+     "id": "T7",
+     "name": "199고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      92,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 199,
+     "evidence": "제3대대 주진지",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T8",
+     "name": "209고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      78,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 209,
+     "evidence": "제3대대 주진지 좌단 북쪽 능선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T9",
+     "name": "신촌",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      108,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제3대대 주진지 우단"
+    },
+    {
+     "id": "T10",
+     "name": "고작동",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      100,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전진진지 남쪽 1km 주저항선"
+    },
+    {
+     "id": "T11",
+     "name": "242고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      130,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 242,
+     "evidence": "주저항선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T12",
+     "name": "202고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      126,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 202,
+     "evidence": "주저항선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T13",
+     "name": "264고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      130,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 264,
+     "evidence": "주저항선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T14",
+     "name": "마량산",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      76,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 315,
+     "evidence": "적 주거점, 연대 지역 감제",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T15",
+     "name": "백석동",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      64,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 주거점 서단",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T16",
+     "name": "회산동",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      92,
+      142
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 주거점",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T17",
+     "name": "하후동",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      112,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 주거점 동단",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T18",
+     "name": "고양대",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      98,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "니키·테시고지 일대 전진진지 지역",
+     "polygon": [
+      [
+       86,
+       114
+      ],
+      [
+       110,
+       114
+      ],
+      [
+       110,
+       127
+      ],
+      [
+       86,
+       127
+      ]
+     ]
+    },
+    {
+     "id": "T19",
+     "name": "임진강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      114,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "역곡천과 합류해 S자로 흐르며 연대 지역 양단",
+     "line": [
+      [
+       150,
+       200
+      ],
+      [
+       135,
+       160
+      ],
+      [
+       125,
+       135
+      ],
+      [
+       120,
+       112
+      ],
+      [
+       114,
+       99
+      ],
+      [
+       100,
+       96
+      ],
+      [
+       85,
+       94
+      ],
+      [
+       75,
+       80
+      ],
+      [
+       80,
+       50
+      ],
+      [
+       100,
+       30
+      ],
+      [
+       110,
+       0
+      ]
+     ]
+    },
+    {
+     "id": "T20",
+     "name": "역곡천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      160,
+      139
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "동쪽에서 임진강에 합류, 남안에 제12연대 배치",
+     "line": [
+      [
+       200,
+       145
+      ],
+      [
+       170,
+       140
+      ],
+      [
+       145,
+       138
+      ],
+      [
+       125,
+       135
+      ]
+     ]
+    },
+    {
+     "id": "T21",
+     "name": "임진강 도하점",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      113,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서안 제3대대의 후방 연결로로 추정(배수진 형세)"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "동안 보급로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       132,
+       0
+      ],
+      [
+       128,
+       40
+      ],
+      [
+       126,
+       70
+      ],
+      [
+       120,
+       90
+      ],
+      [
+       113,
+       98
+      ],
+      [
+       104,
+       103
+      ],
+      [
+       100,
+       106
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "마량산-니키 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       76,
+       140
+      ],
+      [
+       80,
+       134
+      ],
+      [
+       84,
+       128
+      ],
+      [
+       88,
+       124
+      ],
+      [
+       92,
+       120
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "회산동-테시 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       92,
+       142
+      ],
+      [
+       96,
+       136
+      ],
+      [
+       100,
+       131
+      ],
+      [
+       104,
+       127
+      ],
+      [
+       106,
+       123
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "니키-테시 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       84,
+       116
+      ],
+      [
+       88,
+       118
+      ],
+      [
+       92,
+       120
+      ],
+      [
+       99,
+       122
+      ],
+      [
+       106,
+       123
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "임진강",
+     "alias": "하천 1",
+     "active": "항상",
+     "gap_at": [
+      113,
+      98
+     ],
+     "polygon": [
+      [
+       149,
+       200
+      ],
+      [
+       134,
+       160
+      ],
+      [
+       124,
+       135
+      ],
+      [
+       119,
+       113
+      ],
+      [
+       113,
+       100.5
+      ],
+      [
+       100,
+       97.2
+      ],
+      [
+       84.5,
+       95.2
+      ],
+      [
+       73.8,
+       80
+      ],
+      [
+       79,
+       49
+      ],
+      [
+       99,
+       29
+      ],
+      [
+       109,
+       0
+      ],
+      [
+       111,
+       0
+      ],
+      [
+       101,
+       31
+      ],
+      [
+       81,
+       51
+      ],
+      [
+       76.2,
+       80
+      ],
+      [
+       85.5,
+       92.8
+      ],
+      [
+       100,
+       94.8
+      ],
+      [
+       115,
+       97.5
+      ],
+      [
+       121,
+       111
+      ],
+      [
+       126,
+       135
+      ],
+      [
+       136,
+       160
+      ],
+      [
+       151,
+       200
+      ]
+     ]
+    },
+    {
+     "id": "I2",
+     "name": "역곡천",
+     "alias": "하천 2",
+     "active": "항상",
+     "polygon": [
+      [
+       200,
+       146
+      ],
+      [
+       170,
+       141
+      ],
+      [
+       145,
+       139
+      ],
+      [
+       125,
+       136
+      ],
+      [
+       125,
+       134
+      ],
+      [
+       145,
+       137
+      ],
+      [
+       170,
+       139
+      ],
+      [
+       200,
+       144
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제348연대 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "D+1일 07:00 니키고지 탈출 대원 보고로 니키·테시고지 점령 확인",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      98,
+      121
+     ],
+     "note": "니키·테시고지 지상진지와 교통호를 점령, 아군 동굴호를 포위",
+     "ref": "T18",
+     "frontage_m": 1500,
+     "polygon": [
+      [
+       88,
+       118
+      ],
+      [
+       109,
+       119
+      ],
+      [
+       109,
+       126
+      ],
+      [
+       88,
+       124
+      ]
+     ]
+    },
+    "other_names": [
+     "적 제116사단 제348연대"
+    ]
+   },
+   {
+    "id": "E2",
+    "unit": "적 제348연대(-)",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 95,
+    "identified": true,
+    "known_at_start": "마량산-회산동-하후동 일대 주거점 점령",
+    "posture": "방어",
+    "preparation": "fortified",
+    "equipment": "국부군 출신 고참병 위주",
+    "position": {
+     "xy": [
+      90,
+      140
+     ],
+     "note": "마량산-회산동-하후동 주거점, 고양대 증원 가능",
+     "frontage_m": 4000,
+     "polygon": [
+      [
+       70,
+       136
+      ],
+      [
+       114,
+       137
+      ],
+      [
+       114,
+       146
+      ],
+      [
+       70,
+       146
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 포병 제2사단",
+    "alias": "적 사단 1",
+    "nation": "중국",
+    "echelon": "사단",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제116사단 지원 포병, D일 종일 포격과 임진강 서안 차단사격 실시",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      75,
+      160
+     ],
+     "note": "마량산 후방 포병진지(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 지원 전차부대",
+    "alias": "적 전차부대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "제116사단이 전차 지원을 받는다는 첩보",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      80,
+      150
+     ],
+     "note": "마량산 후방(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D+1일 07:00",
+   "light": "day",
+   "notes": "적이 D일 19:00 포격 후 2개 중대로 니키·테시고지를 공격해 지상진지를 장악했다. 연대 수색중대 2개 소대 잔여 인원이 동굴호에 고립되어 있다. 임진강 서안 진지는 배후가 강으로 막혀 있다."
+  }
+ }
+}

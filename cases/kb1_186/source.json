@@ -1,0 +1,145 @@
+{
+ "id": "kb1_186",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-08-26",
+   "end_date": "1951-08-29",
+   "d_day": "1951-08-27",
+   "order_time": "1951-08-26 오후(D-1일 13:00 추정)",
+   "text": "제20연대가 제9연대를 대신해 투입된 8월 26일부터 602고지·591고지 점령으로 884고지 일대를 장악한 8월 29일까지(4일). D일은 공격 개시일인 8월 27일, H시는 D일 06:00이다.",
+   "why": "구간 지정 ②를 따랐다. 연대 교대로 관점 연대와 작전지역이 새로 정해지고, 양방향 공격과 예비 초월 투입이 한 명령에 담겨 참조 사례로 적합하다. 8월 18~25일 제9연대의 정면 동시공격은 대조 방책으로 남긴다."
+  },
+  "perspective_rationale": "관점은 지정에 따라 국군 제11사단 제20연대로 한다. 제20연대는 8월 26일 제9연대를 대신해 884고지 공격을 맡았고, 대대별 기동(제3대대 동측, 제1대대 서측, 제2대대 예비 후속)이 서술에 나와 있어 연대 명령으로 재구성할 수 있다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "D일 06:00 공격 뒤 제3대대가 884고지 북반부를, 제1대대가 서측 8부 능선에서 돌격해 884고지를 탈환했다. 이어 예비 제2대대가 8월 29일 602고지와 591고지를 점령해 사단이 884고지 일대를 완전히 장악했고, 그 뒤 북한군 역습도 저지했다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "884고지를 (100,100)에 두고 서술의 방향·거리(591고지 북쪽 1.8km, 602고지 북서 1km, 751고지 남쪽 1.2km, 703고지 동북 3km, 소하천 동쪽 2km, 향로봉 남동 9km)로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_186_884고지_전투",
+  "title": "884고지 전투",
+  "dates": "1951. 8. 18.∼29.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '884고지 전투' (pdf 556쪽)",
+  "pdf_page": 556,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 3
+   },
+   "sim_value": 9,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제9연대가 884고지와 591고지를 동시에 공격(884고지에 1개 대대, 591고지에 연대특공대)하여 전투력을 분산",
+    "alternative": "제20연대처럼 884고지에 2개 대대를 양방향으로 집중하고, 예비 대대로 점령 후 602·591고지를 순차 공격",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "884고지 점령 후 602고지·591고지를 확보하지 않은 채 고지를 유지하다가 역습에 피탈",
+    "alternative": "884고지 탈취 직후 예비를 투입해 역습 발진 지형인 602고지·591고지까지 탈취",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "손실이 누적된 제9연대로 8월 25일까지 같은 공격을 반복",
+    "alternative": "더 이른 시점에 제20연대로 교대 투입",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "제9연대가 3번이나 884고지를 점령하고도 번번이 북한군의 역습에 고지를 피탈당하고 많은 병력손실을 입게 되자, 사단장 오덕준 준장은 8월 26일 제9연대를 대신하여 제20연대를 공격에 투입하였다."
+   }
+  ],
+  "segment_suggestion": "연대 교대 시점(8월 26일)을 경계로 나눈다. ① 8월 18일~25일: 제9연대의 884고지·591고지 동시 공격과 세 차례 점령·피탈(이 중 8월 18일 하루를 대표 구간으로 쓸 수 있음). ② 8월 26일~29일(4일): 제20연대의 양방향 공격과 예비 제2대대의 602·591고지 점령. 참조 사례로는 ② 구간이 적합하고, ①은 대조 방책으로 쓴다.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2202,
+   "duration_s": 315.8,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31841,
+     "cache_read_input_tokens": 47889,
+     "cache_creation_input_tokens": 38497
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6173,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17413
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 29,
+   "flagged": [],
+   "cost_usd": 0.0647712
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E2[0]: '격퇴'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

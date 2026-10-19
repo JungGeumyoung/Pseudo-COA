@@ -1,0 +1,384 @@
+{
+ "id": "kb2_136",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 17:00",
+  "start_t": 17,
+  "horizon_h": 19,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제584연대 제2대대 손실 0.7 초과"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G3",
+    "fraction": 0.7,
+    "text": "제9중대(+전차 1개 소대) 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제584연대는 D-13일 기습의 손실을 만회하려고 일몰 무렵 강력한 포격 아래 제2대대로 사천강을 건너 36진지를 포위·탈취하고, 종심 대대로 도하지점을 거쳐 계속 증원하여 진지를 장악한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "31진지와 36진지에 공격준비사격을 한다.",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         105,
+         155
+        ],
+        [
+         124,
+         94
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 17.5,
+        "text": "D일 17:30"
+       },
+       "basis": "D-13일 31진지 교란 포격과 공격 전 집중 포격 사례"
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "text": "36진지와 주저항선 보급로에 화력을 집중하여 아군 증원을 차단한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         105,
+         155
+        ],
+        [
+         104,
+         104
+        ]
+       ],
+       "basis": "서술: 강력한 화력지원 아래 공격. 표적 배분은 추정"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "사천강 북안에서 36진지와 37진지에 직접사격으로 공격 대대를 지원한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         118,
+         128
+        ],
+        [
+         104,
+         104
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00"
+       },
+       "basis": "D-13일 전차·자주포 지원 사례에서 추정"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "도하지점을 건너 36진지를 사면에서 포위하여 공격한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         102,
+         118
+        ],
+        [
+         98,
+         113
+        ],
+        [
+         97,
+         109
+        ],
+        [
+         100,
+         106
+        ],
+        [
+         104,
+         104
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       },
+       "basis": "서술: 19일 18:00 대대 규모 공격, 제1파 격퇴 뒤 200m 앞에서 재편해 재돌입. 반복 횟수와 간격은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "36진지를 점령하고 확보한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         104,
+         104
+        ]
+       ],
+       "basis": "공격 목표 확보"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "사천강 북안 전방 진지로 철수한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         104,
+         104
+        ],
+        [
+         100,
+         106
+        ],
+        [
+         97,
+         109
+        ],
+        [
+         98,
+         113
+        ],
+        [
+         102,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 제584연대 제2대대 손실 0.6 초과"
+       },
+       "basis": "추정: 대대 전투력 상실 시 철수"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "도하지점을 거쳐 중대 단위로 36진지의 공격 대대를 증원한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         115,
+         136
+        ],
+        [
+         104,
+         124
+        ],
+        [
+         98,
+         113
+        ],
+        [
+         97,
+         109
+        ],
+        [
+         104,
+         104
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T1",
+        "min_echelon": "소대",
+        "group": "E1",
+        "text": "적 제584연대 제2대대 소대 이상이 36진지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       },
+       "basis": "서술: 도하부대가 포격에도 계속 증원. 간격·횟수 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "36진지를 되찾은 아군에게 역습한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         115,
+         136
+        ],
+        [
+         104,
+         124
+        ],
+        [
+         98,
+         113
+        ],
+        [
+         97,
+         109
+        ],
+        [
+         104,
+         104
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 36진지 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 2
+       },
+       "basis": "서술: 제11중대 역습부대와 수차례 백병전. 문턱 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "종심 진지로 철수한다.",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         104,
+         104
+        ],
+        [
+         97,
+         109
+        ],
+        [
+         98,
+         113
+        ],
+        [
+         104,
+         124
+        ],
+        [
+         115,
+         136
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.4,
+        "text": "적 제584연대(-) 손실 0.4 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "판문점 북동쪽 진지를 방어한다.",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         60,
+         125
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 17,
+        "text": "D일 17:00"
+       },
+       "basis": "서술에 제582연대 공격 기록 없음"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 제195사단 전차·자주포 중대",
+    "alias": "적 전차 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "전차·자주포 4~6대(추정)",
+    "position": {
+     "xy": [
+      118,
+      128
+     ],
+     "note": "사천강 북안 사격진지(추정). 연대는 위치를 몰랐다."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 18:40",
+    "t": 18.67,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "일몰부터 D+1일 일출까지 야간"
+   },
+   {
+    "when": "D+1일 05:40",
+    "t": 29.67,
+    "kind": "dawn",
+    "duration_h": 0.6,
+    "note": "여명"
+   },
+   {
+    "when": "D일 17:00",
+    "t": 17,
+    "kind": "air_window",
+    "duration_h": 1.7,
+    "note": "일몰 전 항공 가능 시간대"
+   },
+   {
+    "when": "D+1일 06:20",
+    "t": 30.33,
+    "kind": "air_window",
+    "duration_h": 5.7,
+    "note": "주간 항공 가능 시간대"
+   }
+  ]
+ }
+}

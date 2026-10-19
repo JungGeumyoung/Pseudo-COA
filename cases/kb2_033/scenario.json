@@ -1,0 +1,368 @@
+{
+ "id": "kb2_033",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 01:00",
+  "start_t": 1,
+  "horizon_h": 31,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대(-) 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제208연대 주력 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제70사단은 휴전 전에 북진능선 주저항선을 탈취해 김화 공략의 발판을 만든다. 제208연대는 탈취한 365고지와 380고지를 고수하고, 잃으면 공격준비사격 뒤 증강 대대로 야간에 재공격하며 K고지와 400고지를 끝까지 고수한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F-H380",
+       "text": "365고지와 380고지 피탈 진지를 고수한다.",
+       "basis": "서술: 박격포와 자동화기 사격으로 역습에 저항",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "D일 01:00부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F-H400",
+       "axis_xy": [
+        [
+         96,
+         104
+        ],
+        [
+         98,
+         110
+        ],
+        [
+         99,
+         117
+        ],
+        [
+         101,
+         121
+        ]
+       ],
+       "text": "손실이 커지면 능선을 따라 K고지와 400고지로 철수한다.",
+       "basis": "추정: 손실 0.5 초과 시 철수",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "적 제208연대 공격부대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F-H365",
+       "axis_xy": [
+        [
+         104,
+         140
+        ],
+        [
+         96,
+         104
+        ],
+        [
+         90,
+         96
+        ]
+       ],
+       "text": "역습하는 아군에 박격포와 야포 사격을 집중한다.",
+       "basis": "서술: 중공군 박격포와 자동화기 사격 극복",
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 1.5
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "BP1",
+       "axis_xy": [
+        [
+         104,
+         140
+        ],
+        [
+         99,
+         117
+        ],
+        [
+         96,
+         104
+        ]
+       ],
+       "text": "재공격 전 북진능선 주저항선에 20분간 공격준비사격을 한다.",
+       "basis": "서술: 자정 지날 무렵 20분간 공격준비사격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 24,
+        "text": "D+1일 00:00"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F-HK",
+       "text": "K고지와 400고지를 고수한다.",
+       "basis": "서술: K고지는 전투 끝까지 중공군 통제",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "D일 01:00부터"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F-H380",
+       "axis_xy": [
+        [
+         101,
+         121
+        ],
+        [
+         99,
+         117
+        ],
+        [
+         98,
+         110
+        ],
+        [
+         96,
+         104
+        ]
+       ],
+       "text": "증강 1개 대대로 주저항선을 재공격한다. 2개 중대는 중앙 380고지로, 1개 중대씩 좌우 진지로 공격한다.",
+       "basis": "서술: 자정 지날 무렵 증강 대대로 공격, 우측 1개 중대, 좌측 1개 중대, 중앙 2개 중대",
+       "start": {
+        "type": "time_elapsed",
+        "value": 24.33,
+        "text": "D+1일 00:20(공격준비사격 직후)"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F-H400",
+       "axis_xy": [
+        [
+         96,
+         104
+        ],
+        [
+         98,
+         110
+        ],
+        [
+         99,
+         117
+        ],
+        [
+         101,
+         121
+        ]
+       ],
+       "text": "공격이 소모되면 K고지에 일부를 남기고 400고지로 철수한다.",
+       "basis": "추정: 손실 0.5 초과 시 철수",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 제208연대 주력 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F-H380",
+       "axis_xy": [
+        [
+         103,
+         138
+        ],
+        [
+         101,
+         124
+        ],
+        [
+         99,
+         117
+        ],
+        [
+         98,
+         110
+        ],
+        [
+         96,
+         104
+        ]
+       ],
+       "text": "중앙 380고지 공격에 증강 1개 중대를 추가 투입한다.",
+       "basis": "서술: 새벽 4시경 증강 1개 중대 추가 투입. 문턱값 추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.25,
+        "text": "적 제208연대 주력 손실 0.25 초과",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "side": "enemy",
+          "group": "E2",
+          "ref": "BP1",
+          "min_echelon": "중대",
+          "text": "적 제208연대 주력 중대 이상이 주저항선 안에 있음"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F-TRI",
+       "axis_xy": [
+        [
+         145,
+         128
+        ],
+        [
+         135,
+         118
+        ],
+        [
+         140,
+         108
+        ]
+       ],
+       "text": "삼각고지와 저격능선 전초를 계속 압박해 제29연대를 고착한다.",
+       "basis": "서술: D-2일 밤부터 제29연대 전초 공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "D일 01:00부터"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E5",
+    "unit": "중공군 제70사단 증원 1개 중대(+)",
+    "alias": "적 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 100,
+    "personnel": 200,
+    "equipment": "자동화기, 수류탄",
+    "position": {
+     "xy": [
+      103,
+      138
+     ],
+     "ref": "F-AZONE",
+     "note": "A지구 후방 대기"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 01:00",
+    "t": 1,
+    "kind": "night",
+    "duration_h": 4,
+    "note": "야간 역습"
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:00",
+    "t": 29,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 2.5,
+    "note": "주간 근접항공지원 가능"
+   }
+  ]
+ }
+}

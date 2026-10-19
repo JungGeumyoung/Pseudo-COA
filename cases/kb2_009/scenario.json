@@ -1,0 +1,694 @@
+{
+ "id": "kb2_009",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 18:00",
+  "start_t": 18,
+  "horizon_h": 150,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "대전차공격대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 월비산 정면 연대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제9사단은 월비산을 탈취해 고성 방면의 안정을 보장한다. 탐색 공격으로 아군 편성을 확인한 뒤 월비산 정면과 해안 축으로 동시에 공격하고, 이어 351고지·261고지·208고지로 공격을 넓혀 아군 전초를 남쪽으로 밀어낸다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         85,
+         152
+        ],
+        [
+         86,
+         145
+        ],
+        [
+         87,
+         135
+        ],
+        [
+         88,
+         128
+        ],
+        [
+         90,
+         121
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22.33,
+        "text": "D일 22:20 탐색 공격"
+       },
+       "text": "1개 중대로 월비산 방어편성을 탐색 공격한다.",
+       "basis": "서술: D일 22:20경 탐색 공격"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         85,
+         152
+        ],
+        [
+         86,
+         145
+        ],
+        [
+         87,
+         135
+        ],
+        [
+         88,
+         128
+        ],
+        [
+         90,
+         121
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 29,
+        "text": "D+1일 05:00 공격 재개"
+       },
+       "repeat": {
+        "max": 5,
+        "interval_h": 1
+       },
+       "text": "연대 주력으로 월비산을 파상공격한다.",
+       "basis": "서술: D+1일 새벽 5차에 걸친 파상공격. 시작 시각과 간격은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         90,
+         121
+        ],
+        [
+         89,
+         116
+        ],
+        [
+         88,
+         110
+        ]
+       ],
+       "text": "1개 대대로 351고지를 공격한다.",
+       "basis": "서술: 승리의 여세로 대대규모가 351고지 공격"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         90,
+         121
+        ],
+        [
+         89,
+         116
+        ],
+        [
+         88,
+         110
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 351고지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 10
+       },
+       "text": "351고지를 야간 기습으로 역습한다.",
+       "basis": "서술: D+1일 자정 기습으로 351고지 재탈취. 간격 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         90,
+         121
+        ],
+        [
+         95,
+         121
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F4",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 261고지 안에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 4
+       },
+       "text": "261고지로 역습한다.",
+       "basis": "서술: 261고지 탈환 직후 아침까지 공방. 간격 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F9",
+       "axis_xy": [
+        [
+         90,
+         121
+        ],
+        [
+         87,
+         135
+        ],
+        [
+         85,
+         152
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 월비산 정면 연대 손실 0.6 초과"
+       },
+       "text": "남강 북안으로 철수한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         118,
+         168
+        ],
+        [
+         120,
+         160
+        ],
+        [
+         118,
+         152
+        ],
+        [
+         116,
+         146
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 29,
+        "text": "D+1일 05:00"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 2
+       },
+       "text": "1개 대대 일부로 구선봉을 공격한다.",
+       "basis": "서술: D+1일 새벽 2차례 공격"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         118,
+         168
+        ],
+        [
+         120,
+         160
+        ],
+        [
+         118,
+         152
+        ],
+        [
+         116,
+         146
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 36,
+        "text": "D+1일 12:00"
+       },
+       "text": "1개 대대로 구선봉을 공격한다.",
+       "basis": "서술: 낮에 재개된 대대규모 공격. 시각 추정"
+      },
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         116,
+         146
+        ],
+        [
+         129,
+         146
+        ],
+        [
+         131,
+         135
+        ],
+        [
+         124,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 96,
+        "text": "D+3일 24:00"
+       },
+       "text": "감호 남안 아군을 견제 공격한다.",
+       "basis": "서술: D+3일 자정 무렵 감호 남안 공격, 약 1시간"
+      },
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         116,
+         146
+        ],
+        [
+         129,
+         146
+        ],
+        [
+         131,
+         135
+        ],
+        [
+         124,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 146,
+        "text": "D+6일 02:00"
+       },
+       "text": "감호 남안 아군을 견제 공격한다.",
+       "basis": "서술: D+6일 351·261고지 공격의 견제"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         118,
+         152
+        ],
+        [
+         105,
+         145
+        ],
+        [
+         104,
+         130
+        ],
+        [
+         106,
+         118
+        ],
+        [
+         106,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 147,
+        "text": "D+6일 03:00"
+       },
+       "text": "1개 대대로 208고지를 기습한다.",
+       "basis": "서술: D+6일 03:00 208고지 기습"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         182
+        ],
+        [
+         92,
+         165
+        ],
+        [
+         87,
+         145
+        ],
+        [
+         88,
+         128
+        ],
+        [
+         90,
+         121
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.4,
+        "text": "적 월비산 정면 연대 손실 0.4 초과"
+       },
+       "text": "월비산 정면 연대를 증원한다.",
+       "basis": "추정: 손실을 입은 공격 연대에 예비 투입"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         100,
+         182
+        ],
+        [
+         92,
+         165
+        ],
+        [
+         87,
+         145
+        ],
+        [
+         88,
+         128
+        ],
+        [
+         90,
+         121
+        ],
+        [
+         88,
+         110
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 102,
+        "text": "D+4일 06:00"
+       },
+       "text": "1개 대대로 351고지를 공격한다.",
+       "basis": "서술: D+4일 06:00 351고지 공격. 부대 배정은 추정"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         100,
+         182
+        ],
+        [
+         95,
+         160
+        ],
+        [
+         96,
+         140
+        ],
+        [
+         98,
+         128
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 153,
+        "text": "D+6일 09:00"
+       },
+       "text": "직사포 준비사격 뒤 261고지를 공격한다.",
+       "basis": "서술: 208고지 탈환 뒤 목표를 261고지로 바꿈. 시각과 부대 배정 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         92,
+         178
+        ],
+        [
+         91,
+         150
+        ],
+        [
+         90,
+         121
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 28.5,
+        "text": "D+1일 04:30"
+       },
+       "text": "월비산에 공격준비사격을 한다.",
+       "basis": "추정: 통상 전법"
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         92,
+         178
+        ],
+        [
+         96,
+         150
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 151,
+        "text": "D+6일 07:00"
+       },
+       "text": "261고지에 76mm 직사포 집중사격을 한다.",
+       "basis": "서술: 76mm 직사포 1천여 발 집중"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         105,
+         170
+        ],
+        [
+         102,
+         145
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 151,
+        "text": "D+6일 07:00"
+       },
+       "text": "261고지에 직사포 사격을 증강한다.",
+       "basis": "추정: 1천여 발 집중에 필요한 화력 증강"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 상급부대 지원 직사포대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 90,
+    "personnel": 250,
+    "equipment": "76mm 직사포 12문(추정)",
+    "position": {
+     "xy": [
+      105,
+      170
+     ],
+     "note": "남강 북방 해안 축 포진지(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 17:30",
+    "t": 17.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 10.5,
+    "note": "주간 함재기 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 17:30",
+    "t": 41.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 07:00",
+    "t": 55,
+    "kind": "air_window",
+    "duration_h": 10.5,
+    "note": "주간 항공 가능"
+   },
+   {
+    "when": "D+2일 17:30",
+    "t": 65.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 07:00",
+    "t": 79,
+    "kind": "air_window",
+    "duration_h": 10.5,
+    "note": "주간 항공 가능"
+   },
+   {
+    "when": "D+3일 17:30",
+    "t": 89.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+4일 07:00",
+    "t": 103,
+    "kind": "other",
+    "duration_h": 10.5,
+    "note": "미 순양함 로스앤젤레스호 고성 해역 도착, 8인치 함포 지원 가능"
+   },
+   {
+    "when": "D+4일 17:30",
+    "t": 113.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+5일 07:00",
+    "t": 127,
+    "kind": "air_window",
+    "duration_h": 10.5,
+    "note": "주간 항공 가능"
+   },
+   {
+    "when": "D+5일 17:30",
+    "t": 137.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+6일 07:00",
+    "t": 151,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+6일 17:30",
+    "t": 161.5,
+    "kind": "night",
+    "duration_h": 6.5,
+    "note": "야간"
+   }
+  ]
+ }
+}

@@ -1,0 +1,625 @@
+{
+ "id": "kb1_039",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "김포지구전투사령부",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "김포지구 전투사령부"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "육군본부",
+   "higher_alias": "상급 사단",
+   "higher_mission": "한강선에서 서울 서측방을 방어하고 적의 한강 남안 진출을 저지한다.",
+   "higher_intent": "김포반도로 도하한 적 제6사단을 최대한 지연시켜 영등포 방면 진출을 늦추고 한강 남안 아군의 퇴로를 확보한다.",
+   "assigned_task": "김포반도에서 적 제6사단의 남하를 지연하고 김포읍 방면을 방어한다.",
+   "adjacent_units": [],
+   "higher_rules": []
+  },
+  "area_of_operations": {
+   "text": "김포반도 전역이다. 서쪽은 염하, 북쪽과 동쪽은 한강이 경계다. 전투는 통진에서 장림사거리, 운유산, 김포읍으로 이어지는 48번 도로 축에 집중된다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "사령부 작전지역 서측 경계(염하)",
+     "between": [
+      "김포지구전투사령부",
+      "없음"
+     ],
+     "xy": [
+      [
+       10,
+       60
+      ],
+      [
+       12,
+       130
+      ],
+      [
+       10,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "사령부 작전지역 북동측 경계(한강변)",
+     "between": [
+      "김포지구전투사령부",
+      "없음"
+     ],
+     "xy": [
+      [
+       120,
+       200
+      ],
+      [
+       140,
+       170
+      ],
+      [
+       170,
+       130
+      ],
+      [
+       195,
+       80
+      ],
+      [
+       200,
+       70
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "보병학교 후보생대대",
+    "alias": "제1대대",
+    "other_names": [
+     "후보생대대"
+    ],
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "equipment": "소총중대 3개, 화기중대(81mm 박격포·기관총)",
+    "relationship": "작전통제",
+    "location": {
+     "note": "김포반도 북부 최초 진지에서 180고지 방면 적에게 측방을 공격받고 장림 방면으로 철수 중",
+     "xy": [
+      100,
+      115
+     ]
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제12연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 50,
+    "relationship": "작전통제",
+    "location": {
+     "note": "장림 일대. 일부는 한강변에서 분산되어 제2중대 위주로 운용 가능",
+     "xy": [
+      112,
+      92
+     ]
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "기갑연대 장갑중대",
+    "alias": "제3중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "M8 장갑차",
+    "relationship": "작전통제",
+    "location": {
+     "note": "김포읍",
+     "xy": [
+      188,
+      41
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "기갑연대 도보중대",
+    "alias": "제4중대",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "작전통제",
+    "location": {
+     "note": "김포읍",
+     "xy": [
+      186,
+      39
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "김포반도 중부. 북서쪽 문수산과 통진에서 장림사거리를 지나 김포평야, 운유산, 김포읍으로 48번 도로가 이어지고 장림에서 305번 도로가 양곡을 거쳐 인천으로 갈라진다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "문수산",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      20,
+      160
+     ],
+     "estimated": true,
+     "elevation_m": 376,
+     "evidence": "적 1개 대대가 중화기와 함께 석권한 염하변 고지"
+    },
+    {
+     "id": "T2",
+     "name": "통진",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      88,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "통진-김포가도의 기점"
+    },
+    {
+     "id": "T3",
+     "name": "장림사거리",
+     "alias": "지점 1",
+     "other_names": [
+      "장림",
+      "장림 삼거리"
+     ],
+     "kind": "crossing",
+     "xy": [
+      110,
+      94
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "48번 도로와 305번 도로의 분기점"
+    },
+    {
+     "id": "T4",
+     "name": "장림 북쪽 구릉",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      110,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "후보생대대가 장림-김포읍 도로를 제압하려고 진지를 점령한 구릉",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T5",
+     "name": "천마산",
+     "alias": "고지 B",
+     "other_names": [
+      "60고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      112,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 60,
+     "evidence": "장림 남쪽, 장림-양곡 도로를 차단하는 고지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T6",
+     "name": "양곡",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      110,
+      56
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "장림 남쪽 4km"
+    },
+    {
+     "id": "T7",
+     "name": "김포평야",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      132,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "장림과 운유산 사이의 개활지",
+     "polygon": [
+      [
+       118,
+       92
+      ],
+      [
+       140,
+       86
+      ],
+      [
+       146,
+       72
+      ],
+      [
+       128,
+       70
+      ],
+      [
+       116,
+       82
+      ]
+     ]
+    },
+    {
+     "id": "T8",
+     "name": "58고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      130,
+      68
+     ],
+     "estimated": true,
+     "elevation_m": 58,
+     "evidence": "운유산 서쪽 2km"
+    },
+    {
+     "id": "T9",
+     "name": "운유산",
+     "alias": "고지 D",
+     "other_names": [
+      "△110"
+     ],
+     "kind": "hill",
+     "xy": [
+      150,
+      68
+     ],
+     "estimated": true,
+     "elevation_m": 110,
+     "evidence": "김포 방어의 마지막 요충지"
+    },
+    {
+     "id": "T10",
+     "name": "김포읍",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      188,
+      40
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "기갑연대 장갑중대·도보중대 위치"
+    },
+    {
+     "id": "T11",
+     "name": "180고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      70,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 180,
+     "evidence": "염하 상륙 적이 후보생대대 좌측방을 공격한 고지"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "48번 도로",
+     "alias": "도로 1",
+     "other_names": [
+      "통진-김포가도",
+      "김포 가도",
+      "통진-김포-서울 도로"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       88,
+       122
+      ],
+      [
+       100,
+       108
+      ],
+      [
+       110,
+       94
+      ],
+      [
+       130,
+       82
+      ],
+      [
+       150,
+       72
+      ],
+      [
+       170,
+       55
+      ],
+      [
+       188,
+       40
+      ],
+      [
+       200,
+       33
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "305번 도로",
+     "alias": "도로 2",
+     "other_names": [
+      "장림-인천 도로",
+      "장림-양곡 도로"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       110,
+       94
+      ],
+      [
+       112,
+       80
+      ],
+      [
+       111,
+       68
+      ],
+      [
+       110,
+       56
+      ],
+      [
+       108,
+       30
+      ],
+      [
+       105,
+       0
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "W1",
+     "name": "한강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       200,
+       70
+      ],
+      [
+       200,
+       200
+      ],
+      [
+       120,
+       200
+      ],
+      [
+       140,
+       170
+      ],
+      [
+       170,
+       130
+      ],
+      [
+       195,
+       80
+      ]
+     ]
+    },
+    {
+     "id": "W2",
+     "name": "염하",
+     "alias": "하천 2",
+     "other_names": [
+      "강화해협"
+     ],
+     "polygon": [
+      [
+       0,
+       60
+      ],
+      [
+       8,
+       60
+      ],
+      [
+       12,
+       130
+      ],
+      [
+       10,
+       200
+      ],
+      [
+       0,
+       200
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제6사단 제13연대 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 100,
+    "equipment": "각종 중화기",
+    "identified": true,
+    "known_at_start": "문수산 일대를 석권하고 통진-김포가도를 따라 공격을 계속하는 1개 대대규모로 식별",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      92,
+      118
+     ],
+     "note": "통진 남동쪽 48번 도로 상",
+     "frontage_m": 1000
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제6사단 제13연대(-)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "제13연대 주력이 선두 대대를 후속할 것으로 추정",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      60,
+      145
+     ],
+     "note": "문수산-통진 사이 후속 중으로 추정",
+     "frontage_m": 2000
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제13연대 지원 포병대대",
+    "alias": "적 포병대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "76mm 야포·122mm 곡사포(추정)",
+    "identified": false,
+    "known_at_start": "제13연대에 1개 포병대대가 배속된 것으로 추정",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      55,
+      150
+     ],
+     "note": "문수산 동쪽 추정"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 제13연대 지원 자주포 포대",
+    "alias": "적 포대 1",
+    "nation": "북한",
+    "echelon": "포대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "SU-76 자주포(추정)",
+    "identified": false,
+    "known_at_start": "자주포 포대가 도로 축으로 후속하는 것으로 추정",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      82,
+      128
+     ],
+     "note": "통진 북서쪽 48번 도로 상 추정"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "적 제13연대 지원 전차소대",
+    "alias": "적 소대 1",
+    "nation": "북한",
+    "echelon": "소대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "전차 3~4대(추정)",
+    "identified": false,
+    "known_at_start": "전차소대가 지원하는 것으로 추정",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      85,
+      125
+     ],
+     "note": "통진 부근 48번 도로 상 추정"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "적 제6사단 염하 상륙부대",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "새벽 염하변으로 상륙해 180고지에서 후보생대대 좌측방을 공격",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      70,
+      135
+     ],
+     "note": "180고지 일대"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 11:00",
+   "light": "day",
+   "notes": "6월 하순 주간이다. 사령부는 급편부대로 진지 공사 시간이 없고 포병 지원이 없다. 후보생대대는 철수 직후라 화기와 탄약이 부족하다."
+  }
+ }
+}

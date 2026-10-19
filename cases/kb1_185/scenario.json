@@ -1,0 +1,559 @@
+{
+ "id": "kb1_185",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 05:00",
+  "start_t": 5,
+  "horizon_h": 128,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제2대대 누적 손실 0.7 초과 시 종료",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제3대대 누적 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G3",
+      "fraction": 0.7,
+      "text": "제1대대(+연대특공대) 누적 손실 0.7 초과"
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제19연대 누적 손실 0.7 초과 시 종료",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E2",
+      "fraction": 0.7,
+      "text": "적 제21연대 누적 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "E3",
+      "fraction": 0.7,
+      "text": "적 예비대 누적 손실 0.7 초과"
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제13사단은 924고지-1000고지-751고지 능선을 진지 방어하고, 아군이 돌입하면 서북쪽 무명고지의 예비대를 축차 증원해 역습으로 진지를 회복하며, 직접지원 포병으로 동쪽 접근로를 집중 포격해 능선 허리를 끝까지 유지한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "적 제19연대는 924고지 진지를 고수한다.",
+       "objective_ref": "H924",
+       "axis_xy": [
+        [
+         100,
+         100
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       },
+       "basis": "서술: 제19연대가 924고지를 방어"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 924고지에 돌입하면 즉시 역습해 진지를 회복한다.",
+       "objective_ref": "H924",
+       "axis_xy": [
+        [
+         95,
+         104
+        ],
+        [
+         97,
+         102
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 924고지 목표 안에 있음"
+       },
+       "repeat": {
+        "max": 5,
+        "interval_h": 3
+       },
+       "basis": "서술: D일 924고지 점령 직후 역습, D+2일 5회 백병전. 반복 횟수 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 765고지로 물러나 제21연대와 합류한다.",
+       "objective_ref": "H765",
+       "axis_xy": [
+        [
+         100,
+         100
+        ],
+        [
+         97,
+         103
+        ],
+        [
+         93,
+         107
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "적 제19연대 손실 0.5 초과"
+       },
+       "basis": "추정: 924고지 상실 후 잔존 병력이 765고지 방향으로 물러남"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "적 제21연대는 1000고지-751고지 진지를 고수한다.",
+       "objective_ref": "H751",
+       "axis_xy": [
+        [
+         100,
+         118
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       },
+       "basis": "서술: 제21연대가 751고지 방어"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 1000고지에 들어오면 1개 대대로 역습한다.",
+       "objective_ref": "H1000",
+       "axis_xy": [
+        [
+         100,
+         116
+        ],
+        [
+         100,
+         112
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CP1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 1000고지 일대에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       },
+       "basis": "서술: D+4일 정오 1000고지 중간에서 1개 대대 규모 공격. 반복 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 884고지 방향으로 철수한다.",
+       "objective_ref": "H884",
+       "axis_xy": [
+        [
+         100,
+         108
+        ],
+        [
+         100,
+         118
+        ],
+        [
+         100,
+         124
+        ],
+        [
+         100,
+         130
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 제21연대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "적 예비대는 서북쪽 무명고지에서 증원 태세를 유지한다.",
+       "objective_ref": "H_UNK",
+       "axis_xy": [
+        [
+         82,
+         125
+        ],
+        [
+         82,
+         125
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       },
+       "basis": "서술: 예비대가 서북쪽 무명고지에서 증원 태세"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "제19연대 손실이 늘면 765고지를 거쳐 924고지로 증원한다.",
+       "objective_ref": "H924",
+       "axis_xy": [
+        [
+         82,
+         125
+        ],
+        [
+         86,
+         118
+        ],
+        [
+         90,
+         112
+        ],
+        [
+         93,
+         107
+        ],
+        [
+         97,
+         103
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.2,
+        "text": "적 제19연대 손실 0.2 초과"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       },
+       "basis": "서술: 예비대를 계속 증원해 924고지 방어력 강화. 문턱 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "제21연대 손실이 늘면 1000고지-751고지로 증원한다.",
+       "objective_ref": "H751",
+       "axis_xy": [
+        [
+         82,
+         125
+        ],
+        [
+         88,
+         122
+        ],
+        [
+         94,
+         119
+        ],
+        [
+         100,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.2,
+        "text": "적 제21연대 손실 0.2 초과"
+       },
+       "basis": "서술: 751고지 방어력 강화. 문턱 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "아군 공격 개시와 함께 709고지-924고지 능선과 1000고지 접근로에 집중 포격한다.",
+       "objective_ref": "H709",
+       "axis_xy": [
+        [
+         78,
+         112
+        ],
+        [
+         110,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       },
+       "repeat": {
+        "max": 10,
+        "interval_h": 12
+       },
+       "basis": "서술: 직접지원 포병 1개 대대, D+2일 집중 포격으로 제3대대 진로 차단"
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "적 제21연대 1개 대대는 765고지 진지를 고수한다.",
+       "objective_ref": "H765",
+       "axis_xy": [
+        [
+         93,
+         107
+        ],
+        [
+         93,
+         107
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       },
+       "basis": "서술: D+3일 765고지에서 제21연대 1개 대대가 강력히 저항"
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "text": "아군 중대 이상이 924고지 서북쪽으로 우회하면 765고지에서 공격해 저지한다.",
+       "objective_ref": "H924",
+       "axis_xy": [
+        [
+         93,
+         107
+        ],
+        [
+         95,
+         104
+        ],
+        [
+         97,
+         102
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H765",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 765고지 일대에 있음"
+       },
+       "basis": "서술: D+2일 제2대대가 765고지에서 적의 공격으로 정지"
+      }
+     ]
+    },
+    {
+     "group": "HE2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "예비대 손실이 커지면 사단 후방 증원 대대가 무명고지를 거쳐 1000고지로 증원한다.",
+       "objective_ref": "H1000",
+       "axis_xy": [
+        [
+         78,
+         135
+        ],
+        [
+         82,
+         125
+        ],
+        [
+         90,
+         116
+        ],
+        [
+         96,
+         111
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.3,
+        "text": "적 예비대 손실 0.3 초과"
+       },
+       "basis": "서술: 적 사단이 예비대를 계속 증원. 문턱 추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제13사단 제21연대 1개 대대(765고지)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 450,
+    "position": {
+     "xy": [
+      93,
+      107
+     ],
+     "ref": "H765",
+     "note": "765고지 진지. 연대는 924고지 일대 제19연대 진지로만 파악"
+    },
+    "other_names": [
+     "제21연대 1개 대대"
+    ]
+   },
+   {
+    "id": "HE2",
+    "unit": "북한군 제13사단 후방 증원 대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 400,
+    "position": {
+     "xy": [
+      78,
+      135
+     ],
+     "note": "무명고지 북서쪽 사단 후방. 추정"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명, 06:00 이후 주간"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "weather",
+    "duration_h": 14,
+    "note": "폭우. 시야·관측사격·기동 제한"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 19:30",
+    "t": 91.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+4일 19:30",
+    "t": 115.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 항공 가능 시간대(D일, D+2일~D+5일 주간 같은 시간대)"
+   }
+  ]
+ }
+}

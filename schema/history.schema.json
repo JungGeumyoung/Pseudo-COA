@@ -1,0 +1,294 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "reduced-opord/0.6 history block",
+ "description": "실제 경과 블록 (cases/<id>/history.json의 \"history\"). 평가 전용",
+ "type": "object",
+ "required": [
+  "enemy_actual",
+  "reinforcements_actual",
+  "friendly_actual",
+  "environment_actual",
+  "historical_result",
+  "outcome_metrics"
+ ],
+ "properties": {
+  "enemy_actual": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "group",
+     "actions"
+    ],
+    "properties": {
+     "group": {
+      "type": "string"
+     },
+     "actions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "when",
+        "t",
+        "mode",
+        "axis_xy",
+        "note"
+       ],
+       "properties": {
+        "when": {
+         "type": "string"
+        },
+        "t": {
+         "type": "number"
+        },
+        "mode": {
+         "type": "string",
+         "enum": [
+          "attack",
+          "fix",
+          "hold",
+          "infiltrate",
+          "counterattack",
+          "withdraw",
+          "bombard",
+          "reinforce",
+          "demolish",
+          "pursue"
+         ]
+        },
+        "from_ref": {
+         "type": "string"
+        },
+        "axis_xy": {
+         "type": "array",
+         "items": {
+          "type": "array",
+          "items": {
+           "type": "number"
+          },
+          "minItems": 2,
+          "maxItems": 2
+         }
+        },
+        "target_ref": {
+         "type": "string"
+        },
+        "note": {
+         "type": "string"
+        }
+       }
+      },
+      "minItems": 1
+     }
+    }
+   },
+   "minItems": 1
+  },
+  "reinforcements_actual": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "unit",
+     "entry_when",
+     "entry_t"
+    ],
+    "properties": {
+     "id": {
+      "type": "string"
+     },
+     "unit": {
+      "type": "string"
+     },
+     "entry_when": {
+      "type": "string"
+     },
+     "entry_t": {
+      "type": "number"
+     },
+     "from_ref": {
+      "type": "string"
+     },
+     "note": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "friendly_actual": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "group",
+     "actions"
+    ],
+    "properties": {
+     "group": {
+      "type": "string"
+     },
+     "actions": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "when",
+        "t",
+        "verb",
+        "text"
+       ],
+       "properties": {
+        "when": {
+         "type": "string"
+        },
+        "t": {
+         "type": "number"
+        },
+        "verb": {
+         "type": "string"
+        },
+        "text": {
+         "type": "string"
+        },
+        "ref": {
+         "type": "string"
+        }
+       }
+      },
+      "minItems": 1
+     }
+    }
+   }
+  },
+  "environment_actual": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "when",
+     "t",
+     "kind",
+     "note"
+    ],
+    "properties": {
+     "when": {
+      "type": "string"
+     },
+     "t": {
+      "type": "number"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "fog",
+       "flood",
+       "night",
+       "air",
+       "weather",
+       "other"
+      ]
+     },
+     "note": {
+      "type": "string"
+     },
+     "ref": {
+      "type": "string"
+     }
+    }
+   }
+  },
+  "historical_result": {
+   "type": "object",
+   "required": [
+    "friendly",
+    "enemy",
+    "terrain_held",
+    "end_state_achieved",
+    "losses",
+    "duration_h"
+   ],
+   "properties": {
+    "friendly": {
+     "type": "string"
+    },
+    "enemy": {
+     "type": "string"
+    },
+    "terrain_held": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "end_state_achieved": {
+     "type": "string",
+     "enum": [
+      "yes",
+      "partial",
+      "no"
+     ]
+    },
+    "losses": {
+     "type": "string"
+    },
+    "friendly_loss_pct": {
+     "type": "number"
+    },
+    "enemy_loss_pct": {
+     "type": "number"
+    },
+    "duration_h": {
+     "type": "number"
+    }
+   }
+  },
+  "outcome_metrics": {
+   "type": "object",
+   "required": [
+    "status_at_horizon",
+    "terrain_held_at_horizon",
+    "key_times"
+   ],
+   "properties": {
+    "status_at_horizon": {
+     "type": "string"
+    },
+    "terrain_held_at_horizon": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "friendly_loss_pct": {
+     "type": "number"
+    },
+    "enemy_loss_pct": {
+     "type": "number"
+    },
+    "key_times": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "t",
+       "text"
+      ],
+      "properties": {
+       "t": {
+        "type": "number"
+       },
+       "text": {
+        "type": "string"
+       },
+       "ref": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

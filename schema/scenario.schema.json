@@ -1,0 +1,574 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "reduced-opord/0.6 scenario block",
+ "description": "시나리오 블록 (cases/<id>/scenario.json의 \"scenario\"). 시뮬레이터 전용",
+ "type": "object",
+ "required": [
+  "start",
+  "start_t",
+  "horizon_h",
+  "stop_conditions",
+  "enemy_plan",
+  "hidden_enemy",
+  "exogenous"
+ ],
+ "properties": {
+  "start": {
+   "type": "string"
+  },
+  "start_t": {
+   "type": "number"
+  },
+  "horizon_h": {
+   "type": "number"
+  },
+  "stop_conditions": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "type",
+     "text"
+    ],
+    "properties": {
+     "type": {
+      "type": "string",
+      "enum": [
+       "time_elapsed",
+       "losses_exceed",
+       "strength_in_area"
+      ]
+     },
+     "text": {
+      "type": "string"
+     },
+     "group": {
+      "type": "string"
+     },
+     "ref": {
+      "type": "string"
+     },
+     "fraction": {
+      "type": "number"
+     },
+     "value": {
+      "type": "number"
+     },
+     "side": {
+      "type": "string",
+      "enum": [
+       "friendly",
+       "enemy"
+      ]
+     },
+     "min_echelon": {
+      "type": "string",
+      "enum": [
+       "소대",
+       "중대",
+       "대대",
+       "연대"
+      ]
+     },
+     "and": {
+      "type": "array",
+      "items": {
+       "type": "object",
+       "required": [
+        "type",
+        "text"
+       ],
+       "properties": {
+        "type": {
+         "type": "string",
+         "enum": [
+          "time_elapsed",
+          "losses_exceed",
+          "strength_in_area"
+         ]
+        },
+        "text": {
+         "type": "string"
+        },
+        "group": {
+         "type": "string"
+        },
+        "ref": {
+         "type": "string"
+        },
+        "fraction": {
+         "type": "number"
+        },
+        "value": {
+         "type": "number"
+        },
+        "side": {
+         "type": "string",
+         "enum": [
+          "friendly",
+          "enemy"
+         ]
+        },
+        "min_echelon": {
+         "type": "string",
+         "enum": [
+          "소대",
+          "중대",
+          "대대",
+          "연대"
+         ]
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "enemy_plan": {
+   "type": "object",
+   "required": [
+    "intent",
+    "groups"
+   ],
+   "properties": {
+    "intent": {
+     "type": "string"
+    },
+    "groups": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "group",
+       "items"
+      ],
+      "properties": {
+       "group": {
+        "type": "string"
+       },
+       "items": {
+        "type": "array",
+        "items": {
+         "type": "object",
+         "required": [
+          "timing",
+          "mode",
+          "text",
+          "basis"
+         ],
+         "properties": {
+          "timing": {
+           "type": "string",
+           "enum": [
+            "계획",
+            "이어서",
+            "조건"
+           ]
+          },
+          "start": {
+           "type": "object",
+           "required": [
+            "type",
+            "text"
+           ],
+           "properties": {
+            "type": {
+             "type": "string",
+             "enum": [
+              "time_elapsed",
+              "losses_exceed",
+              "strength_in_area"
+             ]
+            },
+            "text": {
+             "type": "string"
+            },
+            "group": {
+             "type": "string"
+            },
+            "ref": {
+             "type": "string"
+            },
+            "fraction": {
+             "type": "number"
+            },
+            "value": {
+             "type": "number"
+            },
+            "side": {
+             "type": "string",
+             "enum": [
+              "friendly",
+              "enemy"
+             ]
+            },
+            "min_echelon": {
+             "type": "string",
+             "enum": [
+              "소대",
+              "중대",
+              "대대",
+              "연대"
+             ]
+            },
+            "and": {
+             "type": "array",
+             "items": {
+              "type": "object",
+              "required": [
+               "type",
+               "text"
+              ],
+              "properties": {
+               "type": {
+                "type": "string",
+                "enum": [
+                 "time_elapsed",
+                 "losses_exceed",
+                 "strength_in_area"
+                ]
+               },
+               "text": {
+                "type": "string"
+               },
+               "group": {
+                "type": "string"
+               },
+               "ref": {
+                "type": "string"
+               },
+               "fraction": {
+                "type": "number"
+               },
+               "value": {
+                "type": "number"
+               },
+               "side": {
+                "type": "string",
+                "enum": [
+                 "friendly",
+                 "enemy"
+                ]
+               },
+               "min_echelon": {
+                "type": "string",
+                "enum": [
+                 "소대",
+                 "중대",
+                 "대대",
+                 "연대"
+                ]
+               }
+              }
+             }
+            }
+           }
+          },
+          "trigger": {
+           "type": "object",
+           "required": [
+            "type",
+            "text"
+           ],
+           "properties": {
+            "type": {
+             "type": "string",
+             "enum": [
+              "time_elapsed",
+              "losses_exceed",
+              "strength_in_area"
+             ]
+            },
+            "text": {
+             "type": "string"
+            },
+            "group": {
+             "type": "string"
+            },
+            "ref": {
+             "type": "string"
+            },
+            "fraction": {
+             "type": "number"
+            },
+            "value": {
+             "type": "number"
+            },
+            "side": {
+             "type": "string",
+             "enum": [
+              "friendly",
+              "enemy"
+             ]
+            },
+            "min_echelon": {
+             "type": "string",
+             "enum": [
+              "소대",
+              "중대",
+              "대대",
+              "연대"
+             ]
+            },
+            "and": {
+             "type": "array",
+             "items": {
+              "type": "object",
+              "required": [
+               "type",
+               "text"
+              ],
+              "properties": {
+               "type": {
+                "type": "string",
+                "enum": [
+                 "time_elapsed",
+                 "losses_exceed",
+                 "strength_in_area"
+                ]
+               },
+               "text": {
+                "type": "string"
+               },
+               "group": {
+                "type": "string"
+               },
+               "ref": {
+                "type": "string"
+               },
+               "fraction": {
+                "type": "number"
+               },
+               "value": {
+                "type": "number"
+               },
+               "side": {
+                "type": "string",
+                "enum": [
+                 "friendly",
+                 "enemy"
+                ]
+               },
+               "min_echelon": {
+                "type": "string",
+                "enum": [
+                 "소대",
+                 "중대",
+                 "대대",
+                 "연대"
+                ]
+               }
+              }
+             }
+            }
+           }
+          },
+          "mode": {
+           "type": "string",
+           "enum": [
+            "attack",
+            "fix",
+            "hold",
+            "infiltrate",
+            "counterattack",
+            "withdraw",
+            "bombard",
+            "reinforce",
+            "demolish",
+            "pursue"
+           ]
+          },
+          "objective_ref": {
+           "type": "string"
+          },
+          "axis_xy": {
+           "type": "array",
+           "items": {
+            "type": "array",
+            "items": {
+             "type": "number"
+            },
+            "minItems": 2,
+            "maxItems": 2
+           }
+          },
+          "text": {
+           "type": "string"
+          },
+          "basis": {
+           "type": "string"
+          },
+          "repeat": {
+           "type": "object",
+           "required": [
+            "max",
+            "interval_h"
+           ],
+           "properties": {
+            "max": {
+             "type": "number"
+            },
+            "interval_h": {
+             "type": "number"
+            }
+           }
+          }
+         }
+        },
+        "minItems": 1
+       }
+      }
+     },
+     "minItems": 1
+    }
+   }
+  },
+  "hidden_enemy": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "unit",
+     "alias",
+     "nation",
+     "echelon",
+     "type",
+     "modifier",
+     "strength_pct",
+     "position"
+    ],
+    "properties": {
+     "echelon": {
+      "type": "string",
+      "enum": [
+       "분대",
+       "소대",
+       "중대",
+       "포대",
+       "대대",
+       "연대",
+       "여단",
+       "사단"
+      ]
+     },
+     "type": {
+      "type": "string",
+      "enum": [
+       "infantry",
+       "armor",
+       "mech_infantry",
+       "artillery",
+       "mortar",
+       "antitank",
+       "aviation",
+       "engineer",
+       "recon",
+       "marine",
+       "other"
+      ]
+     },
+     "modifier": {
+      "type": "string",
+      "enum": [
+       "",
+       "+",
+       "-"
+      ]
+     },
+     "strength_pct": {
+      "type": "number"
+     },
+     "personnel": {
+      "type": "number"
+     },
+     "equipment": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "unit": {
+      "type": "string"
+     },
+     "alias": {
+      "type": "string"
+     },
+     "other_names": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "nation": {
+      "type": "string"
+     },
+     "position": {
+      "type": "object",
+      "required": [
+       "xy",
+       "note"
+      ],
+      "properties": {
+       "ref": {
+        "type": "string"
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "note": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   }
+  },
+  "exogenous": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "when",
+     "t",
+     "kind",
+     "note"
+    ],
+    "properties": {
+     "when": {
+      "type": "string"
+     },
+     "t": {
+      "type": "number"
+     },
+     "duration_h": {
+      "type": "number"
+     },
+     "ref": {
+      "type": "string"
+     },
+     "note": {
+      "type": "string"
+     },
+     "kind": {
+      "type": "string",
+      "enum": [
+       "fog",
+       "night",
+       "dawn",
+       "flood",
+       "weather",
+       "air_window",
+       "other"
+      ]
+     }
+    }
+   }
+  }
+ }
+}

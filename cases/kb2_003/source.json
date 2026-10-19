@@ -1,0 +1,146 @@
+{
+ "id": "kb2_003",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-10-12",
+   "end_date": "1951-10-16",
+   "d_day": "1951-10-12",
+   "order_time": "D-1일 18:00(추정, 351고지·148고지 선 확보 직후)",
+   "text": "제1차 월비산 전투 전체. 연대가 351고지-148고지 선을 확보한 뒤 D일 06:00 월비산을 공격해 D+3일 탈취하고 D+4일 0시 무렵 역습을 격퇴할 때까지.",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대장이 제2대대를 주공, 제1대대를 조공으로 정한 첫 결심이다."
+  },
+  "perspective_rationale": "수도사단장이 월비산 공격 임무를 전방 2개 연대 가운데 제1기갑연대에 주었다. 이 연대가 작전지역을 맡았고 서술도 이 연대 중심이어서 지정된 관점과 같다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "D일과 D+1일 공격은 실패했다. D+3일 삼면 공격으로 월비산을 탈취했고 D+4일 자정 무렵 북한군 역습을 격퇴했다. 수도사단은 사살 891명, 포로 37명의 전과를 냈고 전사 70명, 부상 250명의 피해를 입었다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 월비산 서쪽 약 9km, 남쪽 약 11km 지점(추정). 월비산을 (90,110)에 둔다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_003_제1차_월비산_전투",
+  "title": "제1차 월비산 전투",
+  "dates": "1951. 10. 12.~15.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '제1차 월비산 전투' (pdf 23쪽)",
+  "pdf_page": 23,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 20,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 3,
+    "B4": 3,
+    "B5": 3,
+    "B6": 2
+   },
+   "sim_value": 9,
+   "richness": 11
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "이틀간의 2방향 공격 실패 후 201고지·146고지의 위협(증원 통로·주공 배후)을 고려해 삼면 동시 공격으로 방책 변경",
+    "alternative": "10월 12~13일과 같은 주공·조공 2방향 공격을 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "350고지 북쪽의 201고지와 146고지를 점령하고 있는 북한군을 격퇴하지 하고는 월비산에 대한 증원 차단이 불가능할 뿐만 아니라 주공인 제2대대가 배후 위협을 받아 공격에 집중할 수 없다고 판단하였다."
+   },
+   {
+    "decision": "월비산 공격에 앞서 동쪽 351고지와 148고지 선을 먼저 확보",
+    "alternative": "선행 고지 확보 없이 월비산을 직접 공격",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "사단장의 명령대로 월비산 공격에 반드시 필요한 351고지와 148고지 선을 확보한 후 10월 12일 오전 6시에 월비산을 공격하였다."
+   },
+   {
+    "decision": "10월 15일 공격에 포병과 항공 지원을 결합해 돌격선 진출을 보장",
+    "alternative": "항공 지원 없이 포병만으로 공격",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1188,
+   "duration_s": 295.6,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 28932,
+     "cache_read_input_tokens": 47687,
+     "cache_creation_input_tokens": 35205
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6245,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 15133
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 27,
+   "flagged": [],
+   "cost_usd": 0.0756312
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "통천": "하천 1'"
+ }
+}

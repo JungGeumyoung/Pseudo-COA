@@ -1,0 +1,143 @@
+{
+ "id": "kb2_040",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-07-21",
+   "end_date": "1953-07-24",
+   "d_day": "1953-07-21",
+   "order_time": "D일 04:00 (1953-07-21 04:00, 제8사단 제10연대 진지 인수 시점)",
+   "text": "제3연대가 사단 우측 전선을 인수한 D일 04:00부터 제5연대에 방어 임무를 넘긴 D+3일 21:00까지의 별우-406고지 전초진지 방어와 역습.",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대장이 주진지와 별우-406고지 전초진지 편성을 명령한 연대의 첫 결심이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제3연대를 쓴다. 제3연대는 D일 04:00부로 새말-거리실 간 사단 우측 작전지역을 맡았고, 406고지 전투의 방어와 역습을 모두 수행했다. 425고지를 방어한 제8연대는 인접 연대로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "제2대대는 첫 야간에 4차례 공격을 격퇴했고 D+3일 새벽 406고지를 역습으로 되찾았다. 그러나 같은 날 정오경 대대 규모 이상의 공격으로 406고지를 잃고 별우 지역에서 철수했다. 주저항선은 유지했으나 연대는 전력 소모로 제5연대와 교대했다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 남서 모서리(0,0). 금성천이 북서에서 흘러와 거리실 부근에서 동남동으로 꺾이는 것으로 놓고 서술의 상대 위치로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_040_425고지_및_406고지_전투",
+  "title": "425고지 및 406고지 전투",
+  "dates": "1953. 7. 20.~24.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '425고지 및 406고지 전투' (pdf 169쪽)",
+  "pdf_page": 169,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 4,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 16
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "406고지를 제6중대 1개 중대로 방어하고 증원 없이 대대 화기 전환만으로 대응",
+    "alternative": "7월 23일 밤 소대규모 공격 직후(재공격을 예상한 시점) 406고지에 예비 중대를 사전 증강하거나 제1대대를 조기 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "406고지 탈환 후 제1대대를 투입했으나 정오경 대대규모 이상 중공군에 밀려 철수",
+    "alternative": "탈환 직후 포병 화력 구역을 406고지 북쪽 접근로에 집중하고 사단 예비 제5연대를 조기 투입해 고수",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "425고지 3차전에서 돌출고지의 제1중대를 철수시키고 정상에 포격을 집중한 뒤 반격",
+    "alternative": "제1중대가 돌출고지를 끝까지 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2959,
+   "duration_s": 334.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31498,
+     "cache_read_input_tokens": 43157,
+     "cache_creation_input_tokens": 41965
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 8729,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18000
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 5,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 33,
+   "flagged": [],
+   "cost_usd": 0.14274920000000002
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

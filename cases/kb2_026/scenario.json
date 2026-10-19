@@ -1,0 +1,391 @@
+{
+ "id": "kb2_026",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 05:00",
+  "start_t": 5,
+  "horizon_h": 65,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제3대대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제538연대(-) 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제538연대는 689고지를 주저항선 바로 앞의 전진거점으로 굳힌다. 고지에는 소규모 병력만 두고, 아군이 고지에 오르면 590고지와 620고지의 관측과 포병 집중사격을 이용해 곧바로 역습해 되찾는다. 손실이 커지면 사단 증원 병력으로 역습을 이어 간다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "689고지 정상과 북사면을 1개 중대 내외로 고수한다.",
+       "objective_ref": "f_689",
+       "axis_xy": [
+        [
+         95,
+         121
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작"
+       },
+       "basis": "서술: 적이 D-2일 새벽 고지를 점령함"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 북쪽 능선을 따라 620고지로 물러난다.",
+       "objective_ref": "f_620",
+       "axis_xy": [
+        [
+         95,
+         118
+        ],
+        [
+         97,
+         124
+        ],
+        [
+         102,
+         132
+        ],
+        [
+         108,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "전방대대 손실 0.5 초과"
+       },
+       "basis": "추정: 고지 수비 병력은 소규모이며 역습 병력에게 고지를 넘긴다."
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "아군이 고지에 오르면 689고지에 집중사격을 한다.",
+       "objective_ref": "f_689",
+       "axis_xy": [
+        [
+         105,
+         165
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 OBJ1 안에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 4
+       },
+       "basis": "서술: 강력한 포격지원을 받는 적 역습"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군이 고지를 점령하면 620고지에서 북쪽 능선으로 2개 중대가 역습한다.",
+       "objective_ref": "f_689",
+       "axis_xy": [
+        [
+         108,
+         140
+        ],
+        [
+         102,
+         132
+        ],
+        [
+         97,
+         124
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 OBJ1 안에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 5
+       },
+       "basis": "서술: 1차 탈환 직후 적 2개 중대 역습. 반복 횟수와 간격은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "590고지와 620고지에서 1개 대대로 두 방향 역습한다.",
+       "objective_ref": "f_689",
+       "axis_xy": [
+        [
+         78,
+         135
+        ],
+        [
+         82,
+         129
+        ],
+        [
+         88,
+         123
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 OBJ1 안에 있음",
+        "and": [
+         {
+          "type": "losses_exceed",
+          "group": "E1",
+          "fraction": 0.5,
+          "text": "전방대대 손실 0.5 초과"
+         }
+        ]
+       },
+       "basis": "서술: 3차 탈환 뒤 적 1개 대대 역습. 문턱은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 590고지와 620고지 공격거점으로 물러난다.",
+       "objective_ref": "f_620",
+       "axis_xy": [
+        [
+         95,
+         118
+        ],
+        [
+         97,
+         124
+        ],
+        [
+         102,
+         132
+        ],
+        [
+         108,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.45,
+        "text": "제538연대(-) 손실 0.45 초과"
+       },
+       "basis": "추정: 5차 공격 때 약 160명을 잃고 고지 탈환을 멈춤"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "제538연대 손실이 커지면 620고지로 증원한다.",
+       "objective_ref": "f_620",
+       "axis_xy": [
+        [
+         110,
+         170
+        ],
+        [
+         108,
+         155
+        ],
+        [
+         108,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.25,
+        "text": "제538연대(-) 손실 0.25 초과"
+       },
+       "basis": "서술: 4차 탈환 뒤 '병력을 증원받은 중공군'의 반격. 문턱은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "counterattack",
+       "text": "이어서 북쪽 능선으로 689고지에 역습한다.",
+       "objective_ref": "f_689",
+       "axis_xy": [
+        [
+         108,
+         140
+        ],
+        [
+         102,
+         132
+        ],
+        [
+         97,
+         124
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "basis": "서술: 증원 병력의 반격으로 아군이 후퇴함"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+2일 19:00 야간 기습으로 689고지를 공격한다.",
+       "objective_ref": "f_689",
+       "axis_xy": [
+        [
+         108,
+         140
+        ],
+        [
+         102,
+         132
+        ],
+        [
+         97,
+         124
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 67,
+        "text": "D+2일 19:00"
+       },
+       "basis": "서술: D+2일 저녁 적의 기습. 시각은 추정, 적의 야간 공격 선호"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "제180사단 증원대대",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      110,
+      170
+     ],
+     "note": "620고지 북쪽 후방 집결지(추정)"
+    },
+    "other_names": [
+     "중공군 제180사단 증원 병력"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명, 06:00 무렵 일출"
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 11.5,
+    "note": "근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D일 18:30",
+    "t": 18.5,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 11.5,
+    "note": "근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+1일 18:30",
+    "t": 42.5,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 07:00",
+    "t": 55,
+    "kind": "air_window",
+    "duration_h": 11.5,
+    "note": "근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+2일 18:30",
+    "t": 66.5,
+    "kind": "night",
+    "duration_h": 3.5,
+    "note": "야간"
+   }
+  ]
+ }
+}

@@ -1,0 +1,789 @@
+{
+ "id": "kb1_070",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "미 제24사단 제34연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제34연대",
+    "34th Infantry Regiment"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제24사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제24사단",
+    "24th Infantry Division"
+   ],
+   "higher_mission": "제24사단은 공주 서측에서 신탄진 일대 경부철교 동측까지 금강선을 방어하여 대전으로 향하는 적의 남진을 저지한다.",
+   "higher_intent": "정면 48km를 모두 지킬 수 없으므로 적의 도하 공격이 예상되는 1번 국도(대평리 정면)와 23번 국도(공주 정면)에 병력을 집중하고, 1개 연대를 사단 예비로 확보한다. 금강선을 고수한다.",
+   "assigned_task": "제34연대는 공주 동쪽 구곡천에서 공주 서측 검상리까지 금강 남안을 방어하여 23번 국도 축선으로 도하하는 적을 저지한다. 사단 수색중대를 배속하고 제63포병대대가 직접지원한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "미 제24사단 제19연대",
+     "alias": "인접 연대 1",
+     "side": "동측(우측)",
+     "mission": "대평리 정면 1번 국도 축선의 금강선을 방어한다. D-1일 대평리에 도착해 제21연대와 임무를 교대한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "other_names": [
+      "제19연대"
+     ],
+     "xy": [
+      199,
+      140
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "미 제24사단 제21연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "제19연대 도착 후 대전비행장 일대에서 사단 예비가 된다. 조치원 전투 손실로 전투력이 감소했다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "other_names": [
+      "제21연대"
+     ],
+     "xy": [
+      199,
+      60
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제19연대는 D-1일 대평리 정면 금강선 진지를 점령해 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": -12,
+      "text": "D-1일 12:00 대평리 진지 점령"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T12"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "사단 예비 제21연대는 공주 정면 방어가 무너질 위기에 처하면 사단 명령으로 공주-논산 축선에 증원된다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.5,
+      "text": "제3대대 손실 0.5 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T6"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "북쪽은 금강, 동쪽은 구곡천(제19연대와의 경계), 서쪽은 검상리 서측, 남쪽은 이인리 남쪽까지다. 금강 남안 정면은 직선 약 10km다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제34연대-제19연대 전투지경선(구곡천)",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       150,
+       135
+      ],
+      [
+       150,
+       118
+      ],
+      [
+       152,
+       90
+      ],
+      [
+       150,
+       40
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제34연대 서측 경계(검상리 서측)",
+     "between": [
+      "아군 연대",
+      "사단 좌측 개방 측방"
+     ],
+     "xy": [
+      [
+       45,
+       135
+      ],
+      [
+       45,
+       110
+      ],
+      [
+       35,
+       70
+      ],
+      [
+       25,
+       30
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "제34연대 후방 경계(이인리 남측)",
+     "between": [
+      "아군 연대",
+      "사단 후방지역"
+     ],
+     "xy": [
+      [
+       25,
+       30
+      ],
+      [
+       90,
+       30
+      ],
+      [
+       150,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제34연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "relationship": "건제",
+    "equipment": "소총중대 3개(K·I·L중대), 화기중대(M중대)",
+    "location": {
+     "note": "재편성 후 연대 작전지역 내 공주 일대로 이동 중"
+    },
+    "other_names": [
+     "3대대"
+    ]
+   },
+   {
+    "id": "F2",
+    "unit": "제34연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "relationship": "건제",
+    "equipment": "소총중대 3개, 화기중대",
+    "location": {
+     "note": "재편성 후 연대 작전지역 내 후방으로 이동 중"
+    },
+    "other_names": [
+     "1대대"
+    ]
+   },
+   {
+    "id": "F3",
+    "unit": "제24사단 수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "equipment": "경전차·장갑차량 일부(추정)",
+    "location": {
+     "note": "사단에서 배속, 연대 작전지역으로 이동 중"
+    },
+    "other_names": [
+     "사단 수색중대"
+    ]
+   },
+   {
+    "id": "F4",
+    "unit": "제63포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 약 12문(추정), 차량 약 70대 이상",
+    "location": {
+     "note": "연대 작전지역 내 후방으로 이동 중"
+    },
+    "other_names": [
+     "63포병대대",
+     "63rd Field Artillery Battalion"
+    ]
+   }
+  ],
+  "terrain": {
+   "area_text": "금강은 폭 500~1,000m, 수심 2~5m, 유속 매시 5~10km로 도섭이 불가능한 천연 장애물이다. 공주는 금강 남안에 있고 23번 국도가 공주에서 이인리·논산을 거쳐 남으로 이어진다. 남안은 구릉과 고지가 이어지나 정면 10km에 비해 병력이 적어 공백이 생긴다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "금강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      122
+     ],
+     "line": [
+      [
+       200,
+       128
+      ],
+      [
+       160,
+       124
+      ],
+      [
+       115,
+       121
+      ],
+      [
+       80,
+       122
+      ],
+      [
+       55,
+       120
+      ],
+      [
+       40,
+       110
+      ],
+      [
+       10,
+       90
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "강폭 500~1,000m, 수심 2~5m, 유속 매시 5~10km, 도섭 불가"
+    },
+    {
+     "id": "T2",
+     "name": "공주",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      115,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "금강 남안, 23번 국도가 지나는 대전 접근로의 길목"
+    },
+    {
+     "id": "T3",
+     "name": "구곡천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      150,
+      110
+     ],
+     "line": [
+      [
+       150,
+       122
+      ],
+      [
+       151,
+       105
+      ],
+      [
+       153,
+       85
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주 동쪽 4km, 연대 동측 경계"
+    },
+    {
+     "id": "T4",
+     "name": "검상리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      58,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주 서측, 연대 방어지역 서단"
+    },
+    {
+     "id": "T5",
+     "name": "이인리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      50,
+      42
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주 남서쪽 10km, 23번 국도상"
+    },
+    {
+     "id": "T6",
+     "name": "삼교리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      85,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주와 이인리 중간"
+    },
+    {
+     "id": "T7",
+     "name": "공주 정면 도하지점",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      115,
+      121
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "23번 국도가 금강을 건너는 곳, 연대가 판단한 적 주 도하지점"
+    },
+    {
+     "id": "T8",
+     "name": "공주 남안 고지군",
+     "alias": "고지 A",
+     "kind": "ridge",
+     "xy": [
+      108,
+      114
+     ],
+     "polygon": [
+      [
+       93,
+       118
+      ],
+      [
+       128,
+       118
+      ],
+      [
+       130,
+       106
+      ],
+      [
+       95,
+       106
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "논산가도 서쪽 강안 진지 지역",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T9",
+     "name": "논산도로-구곡천 사이 지역",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      142,
+      112
+     ],
+     "polygon": [
+      [
+       134,
+       120
+      ],
+      [
+       150,
+       121
+      ],
+      [
+       151,
+       102
+      ],
+      [
+       132,
+       102
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "논산도로에서 구곡천까지 약 1.5km"
+    },
+    {
+     "id": "T10",
+     "name": "논산",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      25,
+      2
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "23번 국도 남쪽 방향, 캔버스 밖 방향점"
+    },
+    {
+     "id": "T11",
+     "name": "대전",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      199,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 후방 주요 거점, 캔버스 밖 동남 방향점"
+    },
+    {
+     "id": "T12",
+     "name": "대평리",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      199,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1번 국도 금강 도하지점, 제19연대 정면, 캔버스 밖 동북 방향점"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "23번 국도(공주-논산 도로)",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       120
+      ],
+      [
+       115,
+       112
+      ],
+      [
+       128,
+       104
+      ],
+      [
+       130,
+       92
+      ],
+      [
+       118,
+       80
+      ],
+      [
+       90,
+       72
+      ],
+      [
+       65,
+       55
+      ],
+      [
+       50,
+       42
+      ],
+      [
+       25,
+       2
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "논산가도",
+      "공주-논산도로",
+      "논산도로"
+     ]
+    },
+    {
+     "id": "R2",
+     "name": "23번 국도(금강 북안 접근로)",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       200
+      ],
+      [
+       113,
+       175
+      ],
+      [
+       116,
+       150
+      ],
+      [
+       115,
+       135
+      ],
+      [
+       115,
+       124
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "검상리-삼교리 소로",
+     "alias": "도로 3",
+     "kind": "trail",
+     "xy": [
+      [
+       58,
+       112
+      ],
+      [
+       62,
+       102
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       78,
+       84
+      ],
+      [
+       85,
+       78
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "금강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       200,
+       132
+      ],
+      [
+       160,
+       129
+      ],
+      [
+       115,
+       126
+      ],
+      [
+       80,
+       127
+      ],
+      [
+       55,
+       125
+      ],
+      [
+       37,
+       114
+      ],
+      [
+       8,
+       95
+      ],
+      [
+       0,
+       90
+      ],
+      [
+       0,
+       82
+      ],
+      [
+       12,
+       86
+      ],
+      [
+       43,
+       106
+      ],
+      [
+       57,
+       116
+      ],
+      [
+       80,
+       118
+      ],
+      [
+       115,
+       117
+      ],
+      [
+       160,
+       119
+      ],
+      [
+       200,
+       123
+      ]
+     ],
+     "active": "항상",
+     "other_names": [
+      "금강 수면"
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제4사단 제1제대 연대(공주 정면)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "적 제4사단 주력이 23번 국도로 공주 북안에 접근 중임은 알았으나 연대 번호와 정확한 위치는 미확인",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      115,
+      138
+     ],
+     "polygon": [
+      [
+       98,
+       128
+      ],
+      [
+       135,
+       128
+      ],
+      [
+       135,
+       150
+      ],
+      [
+       98,
+       150
+      ]
+     ],
+     "frontage_m": 3700,
+     "note": "공주 정면 금강 북안, 도하 준비"
+    },
+    "preparation": "hasty",
+    "equipment": "보트·뗏목 등 도하 장비"
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제4사단 후속 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "사단 규모 남하는 추정되나 후속 연대의 위치는 미확인",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      113,
+      170
+     ],
+     "note": "23번 국도 북쪽 축선 후방"
+    },
+    "preparation": "none"
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제4사단 지원 전차부대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "적 제4사단이 전차를 앞세우고 남진 중임을 식별",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      115,
+      145
+     ],
+     "note": "공주 북안 23번 국도상, 도하 지원 사격"
+    },
+    "equipment": "T-34 전차(대수 미상)"
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제4사단 포병연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "사단 포병의 존재는 추정, 진지 미확인",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      112,
+      160
+     ],
+     "note": "공주 북방 금강 북안 후방"
+    },
+    "equipment": "76mm·122mm 포(추정)"
+   }
+  ],
+  "conditions": {
+   "start_time": "D-2일 18:00",
+   "light": "dusk",
+   "notes": "7월 중순 장마철로 금강 수위가 높고 유속이 빠르다. 연대는 앞선 전투 손실 후 재편성 직후이며 통신 장비가 부족하다. 사단 정면이 넓어 좌측(서측) 측방은 개방되어 있다."
+  }
+ }
+}

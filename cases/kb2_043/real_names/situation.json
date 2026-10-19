@@ -1,0 +1,1000 @@
+{
+ "id": "kb2_043",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제7연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제6사단 제7연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제6사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제6사단"
+   ],
+   "higher_mission": "제6사단은 유곡리 일대에서 북한군 제1사단의 남진을 저지·지연하여 점촌·상주 방면 진출을 차단한다.",
+   "higher_intent": "제2연대를 유곡리로 철수시키고 함창의 제7연대로 3번 도로 축선을 막는다. 이어 492고지-760고지-651고지-267고지-신기리-우지리를 잇는 반월형 진지로 방어선을 다시 편성한다.",
+   "assigned_task": "제7연대는 점촌 북방으로 나아가 제2연대의 철수를 엄호하고 3번 도로 축선에서 북한군의 남하를 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제2연대",
+     "alias": "인접 연대 1",
+     "side": "서측(좌)",
+     "mission": "조봉 상실로 퇴로가 위협받아 유곡리 방면으로 철수한 뒤 651고지 일대 진지를 점령한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      92,
+      96
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제19연대",
+     "alias": "인접 연대 2",
+     "side": "동측(우)",
+     "mission": "신기리-우지리 선을 방어한다. 조봉에 있던 제3대대는 후방으로 물러났다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      128,
+      86
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "제1연대",
+     "alias": "인접 연대 3",
+     "side": "서측 외곽(사단 좌익)",
+     "mission": "492고지-760고지 선을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      66,
+      95
+     ],
+     "other_names": [
+      "제6사단 제1연대"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제2연대는 사단 지시에 따라 유곡리 방면으로 철수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 10,
+      "text": "D일 10:00 철수 개시"
+     },
+     "action": {
+      "mode": "withdraw",
+      "objective_ref": "T17",
+      "axis_xy": [
+       [
+        100,
+        120
+       ],
+       [
+        96,
+        108
+       ],
+       [
+        97,
+        96
+       ],
+       [
+        104,
+        84
+       ],
+       [
+        108,
+        76
+       ],
+       [
+        110,
+        68
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "제2연대는 철수 뒤 651고지 일대 진지를 점령한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 18,
+      "text": "D일 18:00 진지 점령(추정)"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T2"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "제19연대는 신기리-우지리 선을 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 10,
+      "text": "D일 10:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T21"
+     }
+    },
+    {
+     "unit": "A3",
+     "text": "제1연대는 492고지-760고지 선으로 물러나 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 16,
+      "text": "D일 16:00 진지 점령(추정)"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T10"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 서쪽 제2연대 경계(651고지 동측)와 동쪽 제19연대 경계(신기리 서측) 사이, 유곡리 북방 3번 도로 축선의 358고지-267고지 일대다. 후방 경계는 점촌 북단이다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제7연대-제2연대 전투지경선",
+     "between": [
+      "제7연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       100,
+       45
+      ],
+      [
+       98,
+       70
+      ],
+      [
+       96,
+       92
+      ],
+      [
+       98,
+       112
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제7연대-제19연대 전투지경선",
+     "between": [
+      "제7연대",
+      "A2"
+     ],
+     "xy": [
+      [
+       118,
+       45
+      ],
+      [
+       119,
+       70
+      ],
+      [
+       119,
+       84
+      ],
+      [
+       119,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 후방 경계",
+     "between": [
+      "제7연대",
+      "제6사단"
+     ],
+     "xy": [
+      [
+       100,
+       45
+      ],
+      [
+       118,
+       45
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제7연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "함창 집결지",
+     "ref": "T19",
+     "xy": [
+      100,
+      22
+     ]
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제7연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "함창 집결지",
+     "ref": "T19",
+     "xy": [
+      100,
+      22
+     ]
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제7연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "함창 집결지",
+     "ref": "T19",
+     "xy": [
+      100,
+      22
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제16포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "105mm 곡사포 15문(3개 포대, 포대당 5문)",
+    "relationship": "일반지원",
+    "location": {
+     "note": "점촌 북방 사단 지역",
+     "ref": "T18",
+     "xy": [
+      108,
+      52
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "소백산맥이 남서로 뻗은 표고 600~1,000m 산악지대다. 영강이 가은에서 동쪽으로 흘러 진남교를 지나 3번 도로 동쪽을 따라 점촌으로 내려간다. 3번 도로는 문경-점촌-함창을 남북으로 잇는 유일한 기계화 기동로다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 150,
+   "features": [
+    {
+     "id": "T1",
+     "name": "조봉",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      94,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 중앙 요충. D일 09:00 제19연대 제3대대가 잃었다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T2",
+     "name": "651고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      92,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 651,
+     "evidence": "조봉 남쪽. 제2연대가 진지를 인수한다."
+    },
+    {
+     "id": "T3",
+     "name": "358고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      101,
+      86
+     ],
+     "estimated": true,
+     "elevation_m": 358,
+     "evidence": "651고지와 267고지 사이, 3번 도로 서측."
+    },
+    {
+     "id": "T4",
+     "name": "267고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      113,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 267,
+     "evidence": "유곡리 북쪽 3번 도로 연변. 북한군이 3번 도로를 따라 공격해 온 방향."
+    },
+    {
+     "id": "T5",
+     "name": "583고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      100,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 583,
+     "evidence": "제2연대 제3대대의 원진지. 적 공격을 받았다."
+    },
+    {
+     "id": "T6",
+     "name": "414고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      118,
+      107
+     ],
+     "estimated": true,
+     "elevation_m": 414,
+     "evidence": "불정산 남동측 고지."
+    },
+    {
+     "id": "T7",
+     "name": "불정산",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      110,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "583고지와 414고지 사이 3번 도로 연변 고지."
+    },
+    {
+     "id": "T8",
+     "name": "오정산",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      128,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 810,
+     "evidence": "진남교 동쪽 주요 고지."
+    },
+    {
+     "id": "T9",
+     "name": "어룡산",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      82,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "진남교 서쪽 주요 고지."
+    },
+    {
+     "id": "T10",
+     "name": "760고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      75,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 760,
+     "evidence": "사단 반월형 진지의 좌측 고지."
+    },
+    {
+     "id": "T11",
+     "name": "492고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      58,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 492,
+     "evidence": "사단 반월형 진지의 좌단."
+    },
+    {
+     "id": "T12",
+     "name": "돌모산",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      122,
+      94
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "3번 도로 동측. 기슭에서 전차를 매복할 수 있다."
+    },
+    {
+     "id": "T13",
+     "name": "413고지",
+     "alias": "고지 M",
+     "kind": "hill",
+     "xy": [
+      130,
+      70
+     ],
+     "estimated": true,
+     "elevation_m": 413,
+     "evidence": "작전지역 주요 고지로 언급."
+    },
+    {
+     "id": "T14",
+     "name": "옥녀봉",
+     "alias": "고지 N",
+     "kind": "hill",
+     "xy": [
+      80,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "작전지역 주요 고지로 언급."
+    },
+    {
+     "id": "T15",
+     "name": "영강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      128,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "가은-진남교-점촌으로 반월형을 그리며 흐른다.",
+     "line": [
+      [
+       30,
+       150
+      ],
+      [
+       70,
+       145
+      ],
+      [
+       112,
+       136
+      ],
+      [
+       128,
+       112
+      ],
+      [
+       132,
+       86
+      ],
+      [
+       128,
+       60
+      ],
+      [
+       133,
+       35
+      ],
+      [
+       150,
+       25
+      ]
+     ]
+    },
+    {
+     "id": "T16",
+     "name": "진남교",
+     "alias": "지점 1",
+     "kind": "bridge",
+     "xy": [
+      112,
+      136
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 보전협동부대가 전차를 앞세워 영강을 건넌 곳."
+    },
+    {
+     "id": "T17",
+     "name": "유곡리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      110,
+      68
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "3번 도로상 요충."
+    },
+    {
+     "id": "T18",
+     "name": "점촌",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      110,
+      48
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "3번 도로상 도시."
+    },
+    {
+     "id": "T19",
+     "name": "함창",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      100,
+      22
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제7연대 집결지."
+    },
+    {
+     "id": "T20",
+     "name": "공평리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      106,
+      56
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제7연대 예비 집결지."
+    },
+    {
+     "id": "T21",
+     "name": "신기리",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      123,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 반월형 진지의 우측 지점."
+    },
+    {
+     "id": "T22",
+     "name": "우지리",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      138,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 반월형 진지의 우단."
+    },
+    {
+     "id": "T23",
+     "name": "문경",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      115,
+      178
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "3번 도로 북단."
+    },
+    {
+     "id": "T24",
+     "name": "가은",
+     "alias": "마을 8",
+     "kind": "town",
+     "xy": [
+      62,
+      142
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "영강 상류 마을."
+    },
+    {
+     "id": "T25",
+     "name": "은성",
+     "alias": "마을 9",
+     "kind": "town",
+     "xy": [
+      52,
+      152
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제13사단의 남하 방면."
+    },
+    {
+     "id": "T26",
+     "name": "문경탄광",
+     "alias": "지점 2",
+     "kind": "other",
+     "xy": [
+      98,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "영강을 건넌 적 보전협동부대가 기동한 방면."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "3번 국도",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       178
+      ],
+      [
+       113,
+       155
+      ],
+      [
+       112,
+       136
+      ],
+      [
+       110,
+       118
+      ],
+      [
+       112,
+       100
+      ],
+      [
+       114,
+       88
+      ],
+      [
+       113,
+       80
+      ],
+      [
+       110,
+       68
+      ],
+      [
+       110,
+       48
+      ],
+      [
+       104,
+       35
+      ],
+      [
+       100,
+       22
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "977번 지방도",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       178
+      ],
+      [
+       100,
+       165
+      ],
+      [
+       80,
+       152
+      ],
+      [
+       62,
+       142
+      ],
+      [
+       45,
+       130
+      ],
+      [
+       30,
+       120
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "문경-농암 도로"
+     ]
+    }
+   ],
+   "impassable": [
+    {
+     "id": "W1",
+     "name": "영강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       30,
+       151.5
+      ],
+      [
+       70,
+       146.5
+      ],
+      [
+       112,
+       137.5
+      ],
+      [
+       129.5,
+       112.5
+      ],
+      [
+       133.5,
+       86
+      ],
+      [
+       129.5,
+       60
+      ],
+      [
+       134.5,
+       35.5
+      ],
+      [
+       151,
+       26.5
+      ],
+      [
+       149,
+       23.5
+      ],
+      [
+       131.5,
+       34.5
+      ],
+      [
+       126.5,
+       60
+      ],
+      [
+       130.5,
+       86
+      ],
+      [
+       126.5,
+       111.5
+      ],
+      [
+       112,
+       134.5
+      ],
+      [
+       70,
+       143.5
+      ],
+      [
+       30,
+       148.5
+      ]
+     ],
+     "active": "항상",
+     "gap_at": [
+      112,
+      136
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제1사단 예하 1개 연대(조봉 방면)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "D일 09:00 두 방향에서 조봉을 공격해 점령했다.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      94,
+      110
+     ],
+     "ref": "T1",
+     "frontage_m": 1500,
+     "note": "조봉 정상과 북사면"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제1사단 예하 2개 대대(583고지 방면)",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "D일 07:00경 제2연대 제1대대와 583고지 제3대대를 공격 중이다.",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      100,
+      124
+     ],
+     "ref": "T5",
+     "frontage_m": 2000,
+     "note": "583고지 북쪽에서 문경탄광 일대"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제1사단 보전협동부대(3번 도로 축선)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 90,
+    "equipment": "전차 동반",
+    "identified": true,
+    "known_at_start": "D일 아침 전차를 앞세워 진남교 부근에서 영강을 건넜다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      110,
+      126
+     ],
+     "ref": "R1",
+     "note": "진남교 남쪽 3번 도로 연변"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제109전차연대 일부",
+    "alias": "적 전차대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "-",
+    "strength_pct": 80,
+    "equipment": "T-34 전차 약 10대(추정)",
+    "identified": true,
+    "known_at_start": "보전협동부대의 선두에서 전차가 확인되었다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      112,
+      132
+     ],
+     "ref": "T16",
+     "note": "진남교 남단"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "북한군 제1사단 예비 연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": false,
+    "known_at_start": "추정. 사단 제2제대가 영강 북안에 있을 것이다.",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      114,
+      155
+     ],
+     "ref": "R1",
+     "frontage_m": 2000,
+     "note": "진남교 북쪽 3번 도로 연변(추정)"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "북한군 제13사단 선두 연대",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "문경 서쪽 산악지대를 거쳐 은성 방면으로 남하 중이다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      52,
+      152
+     ],
+     "ref": "T25",
+     "frontage_m": 2000,
+     "note": "은성 방면"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 10:00",
+   "light": "day",
+   "notes": "7월 장마철 고온다습. 산악 경사가 급하고 3번 도로만 전차가 기동할 수 있다. 사단 장비는 편제의 약 70%이고 탄약 보급은 원활하다."
+  }
+ }
+}

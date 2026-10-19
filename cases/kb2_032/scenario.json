@@ -1,0 +1,569 @@
+{
+ "id": "kb2_032",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D+1일 02:00",
+  "start_t": 26,
+  "horizon_h": 81,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제1대대와 제3대대 손실이 모두 0.7 초과(아군 전투력 30% 미만)",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.7,
+      "text": "제1대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제3대대 손실 0.7 초과"
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "text": "적 1218고지 전방 대대와 어은산 대대 손실이 모두 0.7 초과(적 전투력 30% 미만)",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E2",
+      "fraction": 0.7,
+      "text": "적 1218고지 전방 대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "E4",
+      "fraction": 0.7,
+      "text": "적 어은산 대대 손실 0.7 초과"
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제33사단은 1090고지를 점령·유지해 제62연대 주저항선 공격의 발판으로 삼는다. 고지를 잃으면 야간 포격 후 1218고지 능선과 크리스마스고지-M1고지 능선으로 협공해 되찾고, 목표 A 무명고지를 증강해 1090고지 접근을 감제한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "text": "1090고지 정상과 파괴된 아군 진지를 방어한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 26,
+        "text": "D+1일 02:00"
+       },
+       "basis": "D일 야간 3차례 공격으로 정상에 돌입한 부대가 그대로 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         100,
+         110
+        ],
+        [
+         100,
+         111.5
+        ],
+        [
+         100,
+         114
+        ],
+        [
+         100,
+         117
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "text": "손실이 크면 1218고지 능선으로 철수한다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "점령부대 손실 0.6 초과"
+       },
+       "basis": "추정: 아군 3차 공격에 고지를 내준 서술"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         140
+        ],
+        [
+         100,
+         110
+        ]
+       ],
+       "text": "매일 야간 공격 전 1090고지 일대에 공격준비사격을 집중한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 45.5,
+        "text": "D+1일 21:30"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       },
+       "basis": "D일 21:30, D+1일 22:00, D+2일 22:00 공격 전 포격 서술"
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "text": "아군 중대 이상이 1090고지를 점령하면 고지에 집중 포격한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 1090고지 안에 있음"
+       },
+       "basis": "아군 역습마다 집중포격을 받은 서술"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         100,
+         117
+        ],
+        [
+         100,
+         114
+        ],
+        [
+         100,
+         111.5
+        ],
+        [
+         100,
+         110
+        ]
+       ],
+       "text": "아군이 1090고지에 역습하면 1218고지 능선으로 후속 병력을 보낸다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 OBJ 1090 안에 있음"
+       },
+       "basis": "후속병력과 합세해 재공격한 서술"
+      },
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         98,
+         116
+        ],
+        [
+         97,
+         113
+        ],
+        [
+         98,
+         111
+        ],
+        [
+         100,
+         110
+        ]
+       ],
+       "text": "야간 22:00에 2개 중대로 1090고지 서측에서 공격한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 46,
+        "text": "D+1일 22:00"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       },
+       "basis": "D+1일 22:00 2개 중대 공격, D+2일 22:00 동·서 협공 서술"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T10",
+       "axis_xy": [
+        [
+         100,
+         110
+        ],
+        [
+         98,
+         109
+        ],
+        [
+         95,
+         108.5
+        ],
+        [
+         93,
+         108
+        ]
+       ],
+       "text": "이어서 1090고지 서쪽 능선 진지를 공격한다.",
+       "basis": "D+2일 04:00 역습으로 제1중대 진지를 탈취한 서술"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         100,
+         110
+        ],
+        [
+         100,
+         114
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "text": "손실이 크면 1218고지로 철수한다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 1218고지 전방 대대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T4",
+       "text": "크리스마스고지 전초를 방어한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 26,
+        "text": "D+1일 02:00"
+       },
+       "basis": "전투전초"
+      },
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         105,
+         113
+        ],
+        [
+         106,
+         111
+        ],
+        [
+         104,
+         110
+        ],
+        [
+         102,
+         109.5
+        ],
+        [
+         100,
+         110
+        ]
+       ],
+       "text": "야간 22:00에 M1고지 능선으로 1090고지 동측을 공격한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 70,
+        "text": "D+2일 22:00"
+       },
+       "basis": "D+2일 22:00 고지 동쪽과 서쪽에서 반격 서술"
+      }
+     ]
+    },
+    {
+     "group": "E7",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         122
+        ],
+        [
+         100,
+         117
+        ],
+        [
+         100,
+         114
+        ],
+        [
+         100,
+         111.5
+        ],
+        [
+         100,
+         110
+        ]
+       ],
+       "text": "아군 대대가 1090고지를 점령하면 공격준비사격 후 대대로 고지 중앙과 동·서 3방향에서 역습한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 OBJ 1090 안에 있음"
+       },
+       "basis": "D+3일 정오 대대규모 3방향 반격 서술, 문턱은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "text": "이어서 1090고지를 방어한다.",
+       "basis": "D+4일 아군 공격 때 고지 점령"
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T7",
+       "text": "목표 A 무명고지를 방어한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 26,
+        "text": "D+1일 02:00"
+       },
+       "basis": "1090고지 감제 거점"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         97,
+         130
+        ],
+        [
+         96,
+         120
+        ],
+        [
+         96,
+         113
+        ],
+        [
+         98.9,
+         108.9
+        ]
+       ],
+       "text": "아군 대대가 1090고지에 공격해 오면 어은산 병력으로 목표 A를 증강한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 OBJ 1090 안에 있음"
+       },
+       "basis": "중공군이 목표 A 병력을 증강해 놓은 서술, 문턱은 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T3",
+       "text": "어은산 주진지를 방어한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 26,
+        "text": "D+1일 02:00"
+       },
+       "basis": "적 주요 거점"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         97,
+         130
+        ],
+        [
+         99,
+         125
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "text": "1218고지 전방 대대 손실이 크면 1218고지로 병력을 보낸다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.4,
+        "text": "적 1218고지 전방 대대 손실 0.4 초과"
+       },
+       "basis": "추정: 반복 공격의 후속병력 공급"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E6",
+    "unit": "중공군 제33사단 목표 A 무명고지 경계부대",
+    "alias": "적 소대 1",
+    "nation": "중국(중공군)",
+    "echelon": "소대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 100,
+    "personnel": 50,
+    "equipment": "기관총·자동화기 화력거점",
+    "position": {
+     "xy": [
+      98.9,
+      108.9
+     ],
+     "ref": "T7",
+     "note": "목표 A 무명고지 화력거점"
+    }
+   },
+   {
+    "id": "E7",
+    "unit": "중공군 제33사단 예비 대대",
+    "alias": "적 대대 3",
+    "nation": "중국(중공군)",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 650,
+    "position": {
+     "xy": [
+      100,
+      123
+     ],
+     "ref": "T2",
+     "note": "1218고지 반사면 예비진지 추정"
+    }
+   },
+   {
+    "id": "E8",
+    "unit": "중공군 제33사단 북쪽 무명고지 경계부대",
+    "alias": "적 소대 2",
+    "nation": "중국(중공군)",
+    "echelon": "소대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 35,
+    "position": {
+     "xy": [
+      100,
+      111.5
+     ],
+     "ref": "T6",
+     "note": "1090고지 북쪽 150m 무명고지"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D+1일 02:00",
+    "t": 26,
+    "kind": "night",
+    "duration_h": 3.2,
+    "note": "야간, 05:10경 여명"
+   },
+   {
+    "when": "D+1일 05:10",
+    "t": 29.17,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 19:50",
+    "t": 43.83,
+    "kind": "night",
+    "duration_h": 9.4,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 19:50",
+    "t": 67.83,
+    "kind": "night",
+    "duration_h": 9.4,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 19:50",
+    "t": 91.83,
+    "kind": "night",
+    "duration_h": 9.4,
+    "note": "야간"
+   }
+  ]
+ }
+}

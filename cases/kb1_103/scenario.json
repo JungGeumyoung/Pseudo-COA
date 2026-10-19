@@ -1,0 +1,537 @@
+{
+ "id": "kb1_103",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 08:00",
+  "start_t": 8,
+  "horizon_h": 84,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "아군 3개 대대 모두 손실 0.7 초과(전투력 30% 미만)",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.7,
+      "text": "제1대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제2대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G3",
+      "fraction": 0.7,
+      "text": "제3대대 손실 0.7 초과"
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 D일 18:00 총공세로 왜관-다부동 도로를 차단하고 다부동을 거쳐 대구로 돌파한다. 수암산의 적은 진지를 고수하고, 제13사단은 다부동 방향으로, 제3사단 일부는 수암산 양측 간격으로 침투해 465고지와 도로 남쪽 고지를 점령한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H1",
+       "text": "수암산 준비된 진지를 고수한다.",
+       "basis": "서술: 강력히 준비된 진지에서 연대의 공격을 거듭 격퇴함",
+       "start": {
+        "type": "time_elapsed",
+        "value": 8,
+        "text": "D일 08:00부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "CM1",
+       "text": "아군 중대 이상이 수암산 정상부에 들어오면 역습한다.",
+       "basis": "추정: 준비된 방어진지의 통상 역습",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 OBJ 수암산 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "H1",
+       "axis_xy": [
+        [
+         88,
+         110
+        ],
+        [
+         86,
+         122
+        ],
+        [
+         84,
+         135
+        ]
+       ],
+       "text": "손실이 커지면 수암산 북쪽으로 철수한다.",
+       "basis": "추정: 문턱값 서술 없음",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "수암산 적 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H4",
+       "axis_xy": [
+        [
+         110,
+         128
+        ],
+        [
+         104,
+         114
+        ],
+        [
+         96,
+         100
+        ],
+        [
+         88,
+         92
+        ],
+        [
+         82,
+         86
+        ]
+       ],
+       "text": "D일 18:00 수암산 동쪽 간격을 지나 465고지로 공격한다.",
+       "basis": "귀순자 진술: D일 18:00 총공세",
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00 총공세"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         82,
+         86
+        ],
+        [
+         84,
+         78
+        ],
+        [
+         86,
+         73
+        ]
+       ],
+       "text": "이어서 465고지 남쪽 왜관-다부동 도로를 차단한다.",
+       "basis": "서술: 465고지 점령 후 도로 차단"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         140,
+         140
+        ],
+        [
+         136,
+         125
+        ],
+        [
+         145,
+         110
+        ],
+        [
+         152,
+         100
+        ],
+        [
+         158,
+         94
+        ]
+       ],
+       "text": "D일 18:00 유학산 북쪽에서 다부동으로 공격한다.",
+       "basis": "서술: 제13사단이 다부동까지 진출",
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00 총공세"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H4",
+       "axis_xy": [
+        [
+         120,
+         160
+        ],
+        [
+         112,
+         140
+        ],
+        [
+         104,
+         118
+        ],
+        [
+         96,
+         100
+        ],
+        [
+         88,
+         92
+        ]
+       ],
+       "text": "1제대 손실이 커지면 수암산 동쪽 간격으로 증원한다.",
+       "basis": "추정: 2제대 투입 문턱값 서술 없음",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.3,
+        "text": "제19연대 손실 0.3 초과"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         120,
+         160
+        ],
+        [
+         135,
+         140
+        ],
+        [
+         148,
+         115
+        ],
+        [
+         156,
+         98
+        ]
+       ],
+       "text": "다부동 공격 연대의 손실이 커지면 다부동 방향으로 증원한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.3,
+        "text": "제21연대 손실 0.3 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         180,
+         120
+        ],
+        [
+         172,
+         110
+        ],
+        [
+         164,
+         100
+        ],
+        [
+         158,
+         94
+        ]
+       ],
+       "text": "D일 18:00 다부동 북동쪽에서 다부동으로 공격한다.",
+       "basis": "서술: 제1사단이 도로 동측 고지군으로 공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00 총공세"
+       }
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "objective_ref": "H4",
+       "axis_xy": [
+        [
+         80,
+         128
+        ],
+        [
+         78,
+         115
+        ],
+        [
+         76,
+         104
+        ],
+        [
+         78,
+         94
+        ],
+        [
+         82,
+         86
+        ]
+       ],
+       "text": "D일 20:00 야간에 제2대대와 제3대대 사이 간격으로 침투해 465고지를 점령한다.",
+       "basis": "서술: 적이 제3대대와 제2대대 사이 공간을 뚫고 465고지를 점령. 야간 침투 선호를 계획 시각으로 씀",
+       "start": {
+        "type": "time_elapsed",
+        "value": 20,
+        "text": "D일 20:00 야간 침투"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "infiltrate",
+       "objective_ref": "H5",
+       "axis_xy": [
+        [
+         82,
+         86
+        ],
+        [
+         86,
+         74
+        ],
+        [
+         90,
+         66
+        ],
+        [
+         92,
+         60
+        ]
+       ],
+       "text": "이어서 부대 간격을 따라 도로 남쪽 464고지로 침투한다.",
+       "basis": "서술: 제3사단이 도로 남쪽 464고지로 진입"
+      }
+     ]
+    },
+    {
+     "group": "HE2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H8",
+       "axis_xy": [
+        [
+         196,
+         100
+        ],
+        [
+         192,
+         90
+        ],
+        [
+         188,
+         80
+        ],
+        [
+         186,
+         74
+        ]
+       ],
+       "text": "D일 18:00 다부동 동남쪽 가산 방향으로 공격한다.",
+       "basis": "서술: 제1사단 1개 대대가 가산 방향 아군을 공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00 총공세"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제3사단 1개 연대",
+    "alias": "적 연대 6",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 60,
+    "other_names": [
+     "북한군 제3사단"
+    ],
+    "position": {
+     "xy": [
+      80,
+      128
+     ],
+     "ref": "H1",
+     "note": "수암산 북서쪽 고지군. 연대는 수암산 방어 적만 인지했고 이 연대의 존재와 침투 기도는 몰랐음(추정 위치)"
+    }
+   },
+   {
+    "id": "HE2",
+    "unit": "북한군 제1사단 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "position": {
+     "xy": [
+      196,
+      100
+     ],
+     "note": "다부동 동쪽 고지군(추정 위치)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 08:00",
+    "t": 8,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "맑은 날씨, 주간 전폭기 운용 가능"
+   },
+   {
+    "when": "D일 19:00",
+    "t": 19,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 전폭기 운용 가능"
+   },
+   {
+    "when": "D+1일 19:00",
+    "t": 43,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 전폭기 운용 가능"
+   },
+   {
+    "when": "D+2일 19:00",
+    "t": 67,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 전폭기 운용 가능"
+   },
+   {
+    "when": "D+3일 19:00",
+    "t": 91,
+    "kind": "night",
+    "duration_h": 1,
+    "note": "야간(시뮬레이션 종료 직전)"
+   }
+  ]
+ }
+}

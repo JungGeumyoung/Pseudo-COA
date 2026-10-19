@@ -1,0 +1,156 @@
+{
+ "id": "kb2_029",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-06-02",
+   "end_date": "1953-06-06",
+   "d_day": "1953-06-02",
+   "order_time": "D일 04:00",
+   "text": "제1차전: 제38연대가 351고지를 방어하다 잃고, 배속된 제50연대 대대들이 차례로 역습한 구간(6월 2일~6일, 5일간)",
+   "why": "구간 지정 ①이다. 작전지역을 맡은 제38연대가 고지를 방어하고 배속 대대로 역습하는 지역방어 전 과정이 담겨 있어 단독 참조 사례로 알맞다."
+  },
+  "perspective_rationale": "관점 지정에 따라 351고지에서 동해안 37고지까지의 작전지역을 맡은 국군 제15사단 제38연대를 관점으로 한다. 명령 시점은 자정에 시작된 적의 첫 공격을 진내사격으로 물리치고 사단장 지시로 제50연대 3대대를 통합 지휘하게 된 D일 새벽이다. 제50연대 1대대는 실제로 D일 20:00에 배속되었다. 관점 지정이 이 대대를 배속으로 두므로 연대 예비로 편성하고 준비 시한을 D일 20:00으로 두었다. 제50연대 2대대의 D+3일 공격은 사단의 조건부 규칙으로 두었다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "적 제53연대 2대대가 D일 16:00경 351고지 북단을 점령했다. 제50연대 1대대의 역습 6차와 제50연대 2대대의 공격 4차가 모두 실패했다. 제9중대는 D+1일 19:30 339고지로 철수했고, 사단장은 D+4일 05:00 공격을 중단시켰다. 351고지를 잃은 채 구간이 끝났다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "351고지를 (105,122)에 두고, 캔버스 (0,0)을 그 남서쪽 약 16km 지점에 둔 임의 원점",
+   "source": "text",
+   "atlas_pages": "없음(서술로 추정)"
+  },
+  "seed_id": "kb2_029_351고지_전투",
+  "title": "351고지 전투",
+  "dates": "1953. 6. 2.~7. 18.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '351고지 전투' (pdf 121쪽)",
+  "pdf_page": 121,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 4,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 16
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "351고지 북단 상실 후 1개 대대씩 축차적으로 역습(6월 2~5일 10여 차례)",
+    "alternative": "사단예비를 집중해 다수 대대로 동시 역습하거나, 북단 상실 이전(오전 8시 재공격 단계)에 예비를 조기 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "제3차와 제4차 역습을 시도하였으나, 불리한 지세와 병력의 열세로 모두 실패하였다."
+   },
+   {
+    "decision": "6월 15일 제39연대 1대대 주공에 A고지·C고지 조공을 붙인 제한 공격",
+    "alternative": "소규모 공격을 하지 않고 339고지 방어선 강화에 전념하거나 대규모 전력으로 공격",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "소규모 작전으로는 시간낭비와 병력소모만 초래할 뿐 휴전협정 체결을 목전에 둔 시점에서 351고지에 집착하기보다는 현 방어선을 유지하는 것이 상책이라고 상부에 건의하였다."
+   },
+   {
+    "decision": "7월 18일 밤 339고지를 제3중대 1개 중대로 고수하고 악화 후 제1·2중대를 축차 투입",
+    "alternative": "2개 대대 규모의 재공격에 대비해 339고지에 예비를 사전 증강하거나 인접 대대로 조기 역습",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 6월 2~6일(제1차전: 제38연대의 351고지 방어·상실과 제50연대 대대들의 축차 역습, 5일) ② 6월 15일(제2차전: 제39연대의 351고지 공격, 1일) ③ 7월 17~18일(제3차전: 제38연대의 339고지 방어·상실, 2일). 참조 사례로는 ① 또는 ③을 단독 구간으로 쓰는 것이 적합.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.0933,
+   "duration_s": 292.1,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 28284,
+     "cache_read_input_tokens": 54992,
+     "cache_creation_input_tokens": 30441
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6531,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17429
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [
+    {
+     "id": "E:E1[0]",
+     "verdict": "time_copied",
+     "reason": "08:00 재공격은 첫 공격이 진내사격에 격퇴된 뒤 나온 실제 반응 시각인데 이를 그대로 계획 시각으로 옮겼다.",
+     "fix": "08:00이라는 고정 시각 대신 첫 공격 실패 뒤 '이어서' 또는 적 전투력 조건(예: 1차 공격 실패·재편성 완료)에 따라 재공격하도록 바꾼다."
+    },
+    {
+     "id": "E:E3[1]",
+     "verdict": "hidden_condition",
+     "reason": "339고지와 남쪽 능선의 역습 부대에 대한 차단사격은 아군 역습 부대가 해당 지역에 들어와야 발동하는 조건부 행동인데 '이어서'로 되어 있다.",
+     "fix": "timing을 '조건'으로 바꾸고 trigger를 '아군 역습 부대가 339고지·남쪽 능선 지역 안에 있음'과 같은 지역 내 전투력 조건으로 명시한다."
+    }
+   ],
+   "cost_usd": 0.0662912
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

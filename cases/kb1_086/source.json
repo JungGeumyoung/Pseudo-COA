@@ -1,0 +1,150 @@
+{
+ "id": "kb1_086",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-08-04",
+   "end_date": "1950-08-05",
+   "d_day": "1950-08-04",
+   "order_time": "1950-08-03 저녁(D-1일 20:00 추정)",
+   "text": "의성 전투 중 8월 4~5일: 제21연대의 향로봉-366고지 주저항선 방어와 붕괴, 제10연대 제1대대의 261고지 후퇴와 세촌-262고지 재편성",
+   "why": "지정된 구간 ①(권장)을 따랐다. 연대 주저항선 방어가 한 번의 결정적 교전으로 끝나므로 연대급 지역방어 명령을 평가하는 단위로 알맞다."
+  },
+  "perspective_rationale": "관점은 국군 제8사단 제21연대로 지정되었다. 이 연대는 구간 시작 때 의성 북방 향로봉-366고지 주저항선을 맡았고 북한군 제83연대의 주공을 정면으로 받았다. 제10연대(인접)와 제16연대(사단 예비로 추정)의 행동은 higher_context에 두었다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "북한군 제83연대가 366고지의 제3대대를 측면에서 기습해 고지를 점령했고, 이어 제2대대 진지도 점령했다. 좌측이 노출된 향로봉의 제1대대도 진지를 지키지 못해 연대 주저항선이 완전히 붕괴되었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 의성에서 서쪽 약 11km, 남쪽 약 2.5km 지점(추정). 의성은 (110,25), 의성 북방 약 10km의 향로봉은 (120,128), 낙동강은 y≈190에 둔다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_086_의성_전투",
+  "title": "의성 전투",
+  "dates": "1950. 8. 3.~13.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '의성 전투' (pdf 300쪽)",
+  "pdf_page": 300,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 3,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제21연대가 366고지(제3대대)의 측면을 엄호 없이 둔 채 3개 대대를 주저항선에 배치",
+    "alternative": "366고지 측방에 경계·예비 병력을 두거나 예비대로 즉각 역습해 366고지를 회복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": "북한군제83연대는 366고지의 제3대대를 측면에서 기습하여 고지를 점령함과 동시에 제2대대 방어진지를 공격하여 점령하였다. 좌측 방어지역이 노출된 향로봉의 제1대대는 더 이상 진지를유지할 수 없게 되어 연대의 주저항선이 완전 붕괴되었다."
+   },
+   {
+    "decision": "주저항선 돌파 시 318고지-396고지 예비진지를 이용한 역습을 계획",
+    "alternative": "8월 4일 돌파 직후 예비진지에서 향로봉 방향으로 역습을 실시해 감제고지를 회복",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": "주저항선이 돌파될 경우의 역습에 대비해 미천 남쪽 318고지-396고지간 횡격실 능선에 제2선인 예비진지를 구축하였다."
+   },
+   {
+    "decision": "좌우 인접사단과 연결되지 않은 채 향로봉 일대에 방어선 편성",
+    "alternative": "우측 수도사단과의 약 5km 간격을 메우도록 정면을 조정",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": "우측의 수도사단과도 약 5km 에 달하는 병력배치 간격이 형성되는 등 좌우 인접사단과 연결된방어선을 형성할 수 없었다."
+   }
+  ],
+  "segment_suggestion": "11일 전체는 길다. ① 8월 4~5일: 제21연대 향로봉·366고지 주저항선 방어와 붕괴, 제10연대 제1대대의 261고지→세촌-262고지 재편성(권장 구간). ② 8월 7일: 안동-의성 도로 하화터널 부근 격퇴. ③ 8월 10~12일: 사단 역습(장림동·매봉산) 후 구산동 경유 벌전 이동.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 2.0577,
+   "duration_s": 629.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 68860,
+     "cache_read_input_tokens": 130069,
+     "cache_creation_input_tokens": 47890
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6979,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 16094
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [
+    {
+     "id": "E:EN2[3]",
+     "verdict": "disguised_result",
+     "reason": "추격 방향(후평동 명성마을)이 적의 사전 계획이 아니라 실제 아군 제1대대가 감제당해 철수한 결과 지점을 그대로 적 행동으로 옮긴 것이다.",
+     "fix": "이 항목을 시나리오에서 빼고 history에만 남기거나, 261고지 지역 내 적 전투력 규모를 조건으로 하는 '조건' 항목으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.053997199999999995
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

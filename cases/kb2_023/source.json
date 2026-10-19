@@ -1,0 +1,150 @@
+{
+ "id": "kb2_023",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1952-10-06",
+   "end_date": "1952-10-08",
+   "d_day": "1952-10-06",
+   "order_time": "D일 06:00 (1952-10-06 06:00, 적 공격준비사격 직전)",
+   "text": "백마고지 전투의 첫 48시간이다. 적 공격준비사격 직전 제30연대의 초기 배치에서 시작해 D+2일 06:00에 끝난다.",
+   "why": "사용자가 구간을 지정했다. 이 구간에는 귀순자 진술 뒤 증강한 2개 대대 방어, 적 제340연대의 1~4차 공격, 사단 예비의 역습 태세가 모두 들어 있다."
+  },
+  "perspective_rationale": "사용자가 관점을 지정했다. 제30연대는 사단 주저항선 좌일선 연대로서 395고지를 직접 방어했고, 첫 48시간의 방어 결심은 연대장이 내렸다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "D일 19:15 이후 적의 1~3차 공격은 격퇴했다. 그러나 D+1일에 화랑고지 전초를 잃었고 제1대대도 주봉에서 물러났다. 주봉은 제28연대가 역습해 되찾았고, 이후 고지는 제28연대가 맡았다. 구간 끝에 주봉은 아군이, 화랑고지는 적이 차지하고 있었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "395고지 정상 = (100,100). 북쪽 +y, 동쪽 +x",
+   "source": "atlas+text",
+   "atlas_pages": "4권 184쪽 상황도, 185쪽 본문"
+  },
+  "seed_id": "kb2_023_백마고지_전투",
+  "title": "백마고지 전투",
+  "dates": "1952. 10. 6.~15.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '백마고지 전투' (pdf 100쪽)",
+  "pdf_page": 100,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "예비연대(제28연대)를 즉시 역습 태세로 두고, 주봉 상실 약 2시간 만에 역습시켜 탈환",
+    "alternative": "예비연대를 역습 태세로 두지 않거나 역습을 늦춰 중공군이 주봉에 진지를 굳히도록 허용",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "3개 연대를 교대로 투입해 고지 상실 때마다 새 연대로 역습",
+    "alternative": "한 연대로 고지를 계속 고수하게 하고 교대·역습 투입을 하지 않음",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "전초진지인 화랑고지를 1개 중대(제11중대)로 방어",
+    "alternative": "화랑고지와 무명고지 방향에 병력을 증강해 주봉과 전초의 분리를 차단",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "이처럼 전초진지인 화랑고지가피탈됨에 따라 제1대대의 주봉 방어가 위기상황에 처하게 되었다."
+   }
+  ],
+  "segment_suggestion": "① 10월 6~8일: 제30연대의 주봉 방어 → 화랑고지·주봉 상실 → 제28연대 역습·재탈환(제1~5차 공방, 서술이 가장 상세해 연대급 참조 구간으로 적합). ② 10월 9~11일: 3개 연대 교대 투입기, 제29연대 투입과 고지 탈환(제9차 공방). ③ 10월 12~15일: 제30연대 1대대의 화랑고지 1~3봉·장송고지 공격, 제12차 공세, 제28연대 교대 탈환과 제29연대의 전초진지 확보.",
+  "spec_used": true,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.471,
+   "duration_s": 321.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 28602,
+     "cache_read_input_tokens": 35398,
+     "cache_creation_input_tokens": 46952
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9776,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 40090
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 29,
+   "flagged": [
+    {
+     "id": "E:HE1[2]",
+     "verdict": "time_copied",
+     "reason": "D+2일 05:30 2개 대대 공격은 실제 5차 공격이 시작된 시각을 그대로 계획 시각으로 옮긴 것이며 적의 '새벽 공격 선호'는 사전에 정해진 시각이 아니라 추정에 불과하다.",
+     "fix": "이 공격을 특정 계획 시각 대신 앞선 조건부 투입(예: 제334연대 손실 또는 화랑고지 확보 후 '이어서')에 따른 후속 행동으로 바꾸거나, 시각 지정 없이 '화랑고지 확보 후 이어서 주봉을 공격한다'로 수정한다."
+    }
+   ],
+   "cost_usd": 0.052844
+  },
+  "refs_normalized": 0,
+  "conditions_normalized": 0
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

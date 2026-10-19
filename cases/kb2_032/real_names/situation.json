@@ -1,0 +1,783 @@
+{
+ "id": "kb2_032",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제62연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제20사단 제62연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제20사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제20사단"
+   ],
+   "higher_mission": "제20사단은 양구 북방 중동부전선 주저항선을 방어하고 전방 전초진지를 확보하여 적 제33사단의 주저항선 공격을 저지한다.",
+   "higher_intent": "1090고지 등 감제 전초를 확보해 적의 주저항선 공격 발판을 거부하고, 주저항선은 어떤 경우에도 유지한다.",
+   "assigned_task": "제62연대는 1090고지에서 좌측 제5사단 전투지경선까지 방어하고 1090고지 전초진지를 확보한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제61연대",
+     "alias": "인접 연대 1",
+     "side": "우측(동)",
+     "mission": "사단 우측 정면 주저항선 방어",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      160,
+      100
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제5사단",
+     "alias": "인접 사단 1",
+     "side": "좌측(서)",
+     "mission": "좌측 인접 정면 방어",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      40,
+      100
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "제60연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비. 주저항선 피돌파 시 역습",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      120,
+      60
+     ]
+    },
+    {
+     "id": "A4",
+     "unit": "제20사단 포병",
+     "alias": "상급 사단 포병",
+     "side": "후방",
+     "mission": "사단 정면 일반지원 및 연대 직접지원",
+     "type": "artillery",
+     "echelon": "대대",
+     "xy": [
+      100,
+      70
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A3",
+     "text": "사단 예비 제60연대는 적 연대 이상이 제62연대 주저항선 지역에 들어오면 주저항선 회복을 위해 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T12",
+      "min_echelon": "연대",
+      "text": "적 연대 이상이 제62연대 주저항선 지역 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "T12",
+      "axis_xy": [
+       [
+        120,
+        60
+       ],
+       [
+        112,
+        75
+       ],
+       [
+        105,
+        90
+       ],
+       [
+        100,
+        100
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A4",
+     "text": "사단 포병은 연대 역습 H시 직전 1090고지와 1218고지 남쪽 능선에 공격준비사격을 실시한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 28.5,
+      "text": "D+1일 04:30"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "T1"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제62연대는 동쪽 제61연대 경계부터 서쪽 제5사단 전투지경선까지 약 8km 정면을 맡는다. 1090고지는 연대 정면 동측 맨 앞의 전초다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제62연대-제5사단 전투지경선",
+     "between": [
+      "제62연대",
+      "제5사단"
+     ],
+     "xy": [
+      [
+       60,
+       70
+      ],
+      [
+       60,
+       105
+      ],
+      [
+       60,
+       140
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제62연대-제61연대 전투지경선",
+     "between": [
+      "제62연대",
+      "제61연대"
+     ],
+     "xy": [
+      [
+       140,
+       70
+      ],
+      [
+       140,
+       105
+      ],
+      [
+       140,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 동측 1090고지 일대. 제2중대는 1090고지 피탈 후 남쪽 기슭으로 물러나 있음"
+    },
+    "other_names": [
+     "제1·2·3중대"
+    ],
+    "personnel": 800
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 후방 지역"
+    },
+    "personnel": 900
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 938고지 일대"
+    },
+    "other_names": [
+     "제9·10·11중대"
+    ],
+    "personnel": 900
+   },
+   {
+    "id": "F4",
+    "unit": "제62연대 중박격포중대",
+    "alias": "박격포 중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "4.2인치 박격포 8문",
+    "location": {
+     "note": "연대 후방 지역"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제20사단 포병 1개 대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문",
+    "location": {
+     "note": "연대 후방 포진지",
+     "xy": [
+      100,
+      72
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "양구 북방 문등리 서쪽, 표고 1,000m 이상 험준 산악. 어은산-1218고지-1090고지가 남북으로 작은 산맥을 이루고 적이 고봉을 장악해 아군을 감제한다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "1090고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 1090,
+     "evidence": "제62연대 우측 맨 앞 전초. 1218고지 1km 남쪽, 크리스마스고지 300~400m",
+     "polygon": [
+      [
+       98,
+       108.5
+      ],
+      [
+       102,
+       108.5
+      ],
+      [
+       102.5,
+       111
+      ],
+      [
+       100,
+       112
+      ],
+      [
+       97.5,
+       111
+      ]
+     ],
+     "preparation": "hasty"
+    },
+    {
+     "id": "T2",
+     "name": "1218고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      100,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 1218,
+     "evidence": "중공군 주진지, 1090고지 1km 북쪽",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T3",
+     "name": "어은산",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      97,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 1277,
+     "evidence": "문등리 서쪽, 중공군 주요 거점, 1090고지에서 2km",
+     "other_names": [
+      "△1277"
+     ],
+     "preparation": "fortified"
+    },
+    {
+     "id": "T4",
+     "name": "크리스마스고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      105,
+      113
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "중공군 전투전초, 1090고지에서 300~400m",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T5",
+     "name": "M1고지 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      109,
+      109
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "크리스마스고지에서 동남쪽으로 뻗고 서쪽으로 1090고지와 이어짐",
+     "line": [
+      [
+       105,
+       113
+      ],
+      [
+       107,
+       111
+      ],
+      [
+       109,
+       109
+      ],
+      [
+       112,
+       106
+      ]
+     ]
+    },
+    {
+     "id": "T6",
+     "name": "1090고지 북쪽 무명고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      100,
+      111.5
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1090고지 북쪽 150m"
+    },
+    {
+     "id": "T7",
+     "name": "목표 A 무명고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      98.9,
+      108.9
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1090고지 서남쪽 능선상 150m, 1090고지를 감제",
+     "other_names": [
+      "목표 A"
+     ]
+    },
+    {
+     "id": "T8",
+     "name": "938고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      125,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 938,
+     "evidence": "제3대대 방어 지역",
+     "other_names": [
+      "선우고지",
+      "△938"
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T9",
+     "name": "문등리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      115,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "어은산 동쪽"
+    },
+    {
+     "id": "T10",
+     "name": "1090고지 서쪽 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      93,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대 1개 중대 진지",
+     "line": [
+      [
+       98,
+       109
+      ],
+      [
+       95,
+       108.5
+      ],
+      [
+       92,
+       108
+      ],
+      [
+       88,
+       107
+      ]
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T11",
+     "name": "1090고지 남쪽 기슭",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      99,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "피탈 후 제2중대가 물러난 곳",
+     "polygon": [
+      [
+       96,
+       103
+      ],
+      [
+       102,
+       103
+      ],
+      [
+       102,
+       107
+      ],
+      [
+       96,
+       107
+      ]
+     ]
+    },
+    {
+     "id": "T12",
+     "name": "제62연대 주저항선 지역",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      100,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1090고지 남쪽의 연대 주저항선",
+     "polygon": [
+      [
+       60,
+       95
+      ],
+      [
+       140,
+       95
+      ],
+      [
+       140,
+       104
+      ],
+      [
+       60,
+       104
+      ]
+     ],
+     "preparation": "fortified"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "연대 보급로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       100,
+       72
+      ],
+      [
+       100,
+       80
+      ],
+      [
+       99,
+       88
+      ],
+      [
+       99,
+       95
+      ],
+      [
+       99,
+       100
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "1090고지 남쪽 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       99,
+       100
+      ],
+      [
+       99,
+       103
+      ],
+      [
+       99,
+       106
+      ],
+      [
+       99.5,
+       108
+      ],
+      [
+       100,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "1218-1090 연결 능선",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       120
+      ],
+      [
+       100,
+       117
+      ],
+      [
+       100,
+       114
+      ],
+      [
+       100,
+       111.5
+      ],
+      [
+       100,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "938고지-1090고지 동측 능선",
+     "alias": "능선 5",
+     "kind": "ridge",
+     "xy": [
+      [
+       125,
+       95
+      ],
+      [
+       119,
+       100
+      ],
+      [
+       113,
+       104
+      ],
+      [
+       107,
+       107
+      ],
+      [
+       102,
+       109
+      ],
+      [
+       100,
+       110
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "중공군 제33사단 1090고지 점령부대",
+    "alias": "적 중대 1",
+    "nation": "중국(중공군)",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "D일 21:30부터 포격 후 3차례 공격으로 1090고지 정상에 돌입, 2개 중대 내외 추정",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      100,
+      110
+     ],
+     "ref": "T1",
+     "note": "1090고지 정상과 파괴된 아군 진지",
+     "frontage_m": 400
+    },
+    "personnel": 250
+   },
+   {
+    "id": "E2",
+    "unit": "중공군 제33사단 1218고지 전방 대대",
+    "alias": "적 대대 1",
+    "nation": "중국(중공군)",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "1218고지 주진지 점령, 1090고지 공격의 후속 병력 공급원",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      100,
+      120
+     ],
+     "ref": "T2",
+     "note": "1218고지 주진지",
+     "frontage_m": 1200
+    },
+    "personnel": 600
+   },
+   {
+    "id": "E3",
+    "unit": "중공군 제33사단 크리스마스고지 전초부대",
+    "alias": "적 중대 2",
+    "nation": "중국(중공군)",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "크리스마스고지 전투전초 점령",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      105,
+      113
+     ],
+     "ref": "T4",
+     "note": "크리스마스고지와 M1고지 능선 북단"
+    },
+    "personnel": 150
+   },
+   {
+    "id": "E4",
+    "unit": "중공군 제33사단 어은산 주진지 부대",
+    "alias": "적 대대 2",
+    "nation": "중국(중공군)",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "어은산 주진지 점령, 규모는 대대로 추정",
+    "posture": "예비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      97,
+      130
+     ],
+     "ref": "T3",
+     "note": "어은산 일대",
+     "frontage_m": 1500
+    },
+    "personnel": 650
+   },
+   {
+    "id": "E5",
+    "unit": "중공군 제33사단 포병",
+    "alias": "적 포병 1",
+    "nation": "중국(중공군)",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "1090고지 일대에 집중 포격, 위치 미상",
+    "posture": "미상",
+    "position": {
+     "xy": [
+      100,
+      140
+     ],
+     "note": "어은산 북방 추정"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D+1일 02:00",
+   "light": "night",
+   "notes": "6월, 여명 약 05:00. 1090고지 아군 진지는 파괴되고 유선이 끊겼다. 적은 고봉에서 아군 접근로를 감제한다."
+  }
+ }
+}

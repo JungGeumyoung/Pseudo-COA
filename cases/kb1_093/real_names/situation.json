@@ -1,0 +1,715 @@
+{
+ "id": "kb1_093",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제1사단 제12연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제12연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "제1사단은 다부동 정면에서 328고지-수암산-유학산-741고지 주저항선을 회복·확보하여 다부동-대구 접근로를 차단한다.",
+   "higher_intent": "적에게 선점당한 수암산과 유학산을 탈취해 5번 국도와 997번 도로를 감제하는 주저항선을 회복한다. 적이 다부동을 거쳐 대구로 진출하지 못하게 한다.",
+   "assigned_task": "제12연대는 유학산(839고지·837고지)을 탈취하고 수암산 일대를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "국군 제1사단 제15연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서쪽)",
+     "mission": "328고지 일대를 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      40,
+      82
+     ],
+     "other_names": [
+      "제15연대"
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "국군 제1사단 제11연대",
+     "alias": "인접 연대 2",
+     "side": "우측(동쪽)",
+     "mission": "신주막과 674고지 일대에서 다부동 북쪽 5번 국도 접근로를 차단한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      158,
+      88
+     ],
+     "other_names": [
+      "제11연대"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ2",
+     "text": "제11연대는 674고지를 공격한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00 사단 공격 재개 시각(추정)"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "F8",
+      "axis_xy": [
+       [
+        152,
+        62
+       ],
+       [
+        151,
+        68
+       ],
+       [
+        150,
+        73
+       ],
+       [
+        149,
+        77
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ1",
+     "text": "제15연대는 328고지 일대를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터 계속"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F10"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제12연대 작전지역은 서쪽 제15연대 경계에서 동쪽 제11연대 경계까지 수암산-유학산 정면 약 9km이며, 남쪽으로 997번 도로와 망정리까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제12연대-제15연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "ADJ1"
+     ],
+     "xy": [
+      [
+       60,
+       40
+      ],
+      [
+       62,
+       70
+      ],
+      [
+       62,
+       110
+      ],
+      [
+       60,
+       150
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제12연대-제11연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "ADJ2"
+     ],
+     "xy": [
+      [
+       146,
+       40
+      ],
+      [
+       144,
+       65
+      ],
+      [
+       144,
+       82
+      ],
+      [
+       146,
+       100
+      ],
+      [
+       150,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F_1BN",
+    "unit": "제12연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 45,
+    "relationship": "건제",
+    "location": {
+     "note": "원정동 일대, 837고지 남쪽 사면에서 접촉 중",
+     "ref": "F12"
+    },
+    "equipment": "81mm 박격포"
+   },
+   {
+    "id": "F_2BN",
+    "unit": "제12연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 60,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 서부, 수암산 일대"
+    }
+   },
+   {
+    "id": "F_3BN",
+    "unit": "제12연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "517고지 일대에서 유학산 진지를 보강 중",
+     "ref": "F7"
+    }
+   },
+   {
+    "id": "F_10_3BN",
+    "unit": "제10연대 제3대대",
+    "alias": "제4대대",
+    "other_names": [
+     "배속 대대"
+    ],
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "location": {
+     "note": "연대 후방 망정리 일대(추정)",
+     "ref": "F13"
+    }
+   },
+   {
+    "id": "F_ARTY",
+    "unit": "제1사단 포병",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "다부동 남쪽(추정)"
+    },
+    "equipment": "105mm 곡사포"
+   },
+   {
+    "id": "F_AIR",
+    "unit": "유엔 공군 근접항공지원(미군 전방항공통제관 대대관측소 배치)",
+    "alias": "항공 1",
+    "echelon": "대대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "대대관측소에 전방항공통제관 배치"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "경상북도 칠곡군 다부동 서북쪽 수암산-유학산 산악지대. 급경사 능선과 절벽이 많고 도로는 남쪽 997번 도로와 동쪽 5번 국도뿐이다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "수암산",
+     "alias": "고지 A",
+     "other_names": [
+      "숲데미산",
+      "518고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      82,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 518,
+     "evidence": "997번 도로와 369고지-소학산-동석동 접근로를 감제한다."
+    },
+    {
+     "id": "F2",
+     "name": "316고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      82,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 316,
+     "evidence": "수암산 정상 남쪽 800m."
+    },
+    {
+     "id": "F3",
+     "name": "369고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      74,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 369,
+     "evidence": "수암산 서북쪽, 제2대대와 적의 공방 지점."
+    },
+    {
+     "id": "F4",
+     "name": "513고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      88,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 513,
+     "evidence": "수암산 능선 북쪽."
+    },
+    {
+     "id": "F5",
+     "name": "유학산 주봉",
+     "alias": "고지 E",
+     "other_names": [
+      "839고지",
+      "유학산"
+     ],
+     "kind": "hill",
+     "xy": [
+      120,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 839,
+     "evidence": "5번 국도와 다부동 접근로를 제압하는 주봉.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F6",
+     "name": "837고지",
+     "alias": "고지 F",
+     "other_names": [
+      "유학산 제2봉"
+     ],
+     "kind": "hill",
+     "xy": [
+      138,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 837,
+     "evidence": "주봉 동쪽 1.8km.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F7",
+     "name": "517고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      120,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 517,
+     "evidence": "주봉 남쪽 1km, 아군 진지.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F8",
+     "name": "674고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      149,
+      77
+     ],
+     "estimated": true,
+     "elevation_m": 674,
+     "evidence": "837고지 동남쪽 능선, 다부동 북쪽 1.7km, 제11연대 지역."
+    },
+    {
+     "id": "F9",
+     "name": "741고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      172,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 741,
+     "evidence": "사단 주저항선 동쪽 끝."
+    },
+    {
+     "id": "F10",
+     "name": "328고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      40,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 328,
+     "evidence": "제15연대 지역."
+    },
+    {
+     "id": "F11",
+     "name": "다부동",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      152,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "대구 접근로 요충."
+    },
+    {
+     "id": "F12",
+     "name": "원정동",
+     "alias": "마을 2",
+     "other_names": [
+      "원정"
+     ],
+     "kind": "town",
+     "xy": [
+      140,
+      74
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "837고지 남쪽, 제1대대 공격 출발지."
+    },
+    {
+     "id": "F13",
+     "name": "망정리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      112,
+      58
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 후방 정비 지역."
+    },
+    {
+     "id": "F14",
+     "name": "신주막",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      158,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제11연대 지역."
+    },
+    {
+     "id": "F15",
+     "name": "가듬이재",
+     "alias": "지점 1",
+     "kind": "pass",
+     "xy": [
+      100,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사곡동에서 성곡동으로 넘는 고개."
+    },
+    {
+     "id": "F16",
+     "name": "주봉 남쪽 절벽지대",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      119,
+      85
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제3대대 침투로. 적 경계가 약한 급사면.",
+     "polygon": [
+      [
+       115,
+       83
+      ],
+      [
+       123,
+       83
+      ],
+      [
+       123,
+       87
+      ],
+      [
+       115,
+       87
+      ]
+     ]
+    },
+    {
+     "id": "F17",
+     "name": "유학산 주능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      120,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "수암산-839고지-837고지-674고지를 잇는 능선.",
+     "line": [
+      [
+       82,
+       88
+      ],
+      [
+       100,
+       90
+      ],
+      [
+       120,
+       90
+      ],
+      [
+       138,
+       90
+      ],
+      [
+       149,
+       77
+      ]
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "5번 국도",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       160,
+       200
+      ],
+      [
+       158,
+       140
+      ],
+      [
+       156,
+       100
+      ],
+      [
+       158,
+       92
+      ],
+      [
+       152,
+       60
+      ],
+      [
+       150,
+       30
+      ],
+      [
+       148,
+       0
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "997번 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       30,
+       62
+      ],
+      [
+       70,
+       68
+      ],
+      [
+       100,
+       62
+      ],
+      [
+       112,
+       58
+      ],
+      [
+       130,
+       59
+      ],
+      [
+       152,
+       60
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제13사단 1개 대대(839고지)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "D-1일 제15사단과 교대한 제13사단 병력이 주봉을 점령 중인 것으로 파악",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      120,
+      92
+     ],
+     "frontage_m": 1200,
+     "ref": "F5",
+     "note": "주봉 정상과 북쪽 사면 진지"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제13사단 1개 대대(837고지)",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "제1대대와 계속 접촉 중",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      138,
+      92
+     ],
+     "frontage_m": 1000,
+     "ref": "F6",
+     "note": "837고지 정상 진지"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제13사단 1개 대대(예비)",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": false,
+    "known_at_start": "유학산 북쪽 역사면에 예비 대대가 있을 것으로 추정",
+    "posture": "예비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      130,
+      104
+     ],
+     "note": "839-837고지 사이 북쪽 역사면(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "수암산 정면 북한군 1개 대대",
+    "alias": "적 대대 4",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "제2대대와 369고지 일대에서 접촉 중",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      74,
+      98
+     ],
+     "frontage_m": 1000,
+     "ref": "F3",
+     "note": "369고지와 수암산 북쪽 사면"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 05:00",
+   "light": "dawn",
+   "notes": "8월 하순 혹서. 급경사 산악지대라 보급과 후송이 어렵다. 앞서 공군기 오폭이 있어 대대관측소에 미군 전방항공통제관이 배치되었다."
+  }
+ }
+}

@@ -1,0 +1,512 @@
+{
+ "id": "kb2_013",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 07:00",
+  "start_t": 7,
+  "horizon_h": 35,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제2대대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제523연대 전초 점령부대 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제523연대는 D-1일 탈취한 두매리 고지·무명고지 전초를 유지한다. 국군이 고지를 탈취하면 철모고지·중군고개 예비와 대덕산 방어 부대로 즉시 역습하고 박격포·전차포를 집중해 다시 탈취하고 국군을 소모시킨다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "두매리 고지·무명고지·89고지 급편진지를 고수한다.",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         110,
+         112
+        ],
+        [
+         100,
+         119
+        ],
+        [
+         101,
+         109
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 구간 시작"
+       },
+       "basis": "서술: 제7중대 공격 때 적이 주요 지형에 화력거점을 형성하고 완강히 저항"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 두매리 고지에서 중군고개 방면으로 물러난다.",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         110,
+         112
+        ],
+        [
+         108,
+         117
+        ],
+        [
+         106,
+         121
+        ],
+        [
+         106,
+         125
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.4,
+        "text": "전초 점령부대 손실 0.4 초과"
+       },
+       "basis": "서술: 고지에서 물러났던 중공군이 역습. 문턱값 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "국군 중대 이상이 두매리 고지에 있으면 예비 대대와 함께 역습한다.",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         106,
+         125
+        ],
+        [
+         106,
+         121
+        ],
+        [
+         108,
+         117
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "국군 중대 이상이 두매리 고지에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 3
+       },
+       "basis": "서술: D일 11:00 역습, 14:30 진내 돌입"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "철모고지-중군고개-148고지 일대에서 역습을 준비한다.",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         104,
+         125
+        ],
+        [
+         106,
+         125
+        ],
+        [
+         117,
+         125
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "basis": "서술: 제523연대 예비대 투입. 위치 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "국군 중대 이상이 두매리 고지에 있으면 중군고개에서 두매리 고지로 역습한다.",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         104,
+         125
+        ],
+        [
+         106,
+         121
+        ],
+        [
+         108,
+         117
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "국군 중대 이상이 두매리 고지에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 3
+       },
+       "basis": "서술: D일 11:00, D+1일 오후 역습"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "국군 중대 이상이 무명고지에 있으면 철모고지에서 무명고지로 역습한다.",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         100,
+         122
+        ],
+        [
+         100,
+         121
+        ],
+        [
+         100,
+         119
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM2",
+        "min_echelon": "중대",
+        "text": "국군 중대 이상이 무명고지에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 3
+       },
+       "basis": "서술: 제6중대가 철모고지 등 세 방면에서 공격받음"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 크면 중군고개로 물러난다.",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         110,
+         112
+        ],
+        [
+         108,
+         117
+        ],
+        [
+         106,
+         125
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "역습 대대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "대덕산 주진지를 고수한다.",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         86,
+         134
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "basis": "서술: 대덕산·비지산 전면 중점 배치"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "국군 중대 이상이 무명고지에 있으면 1개 중대로 대덕산에서 무명고지로 역습한다.",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         86,
+         134
+        ],
+        [
+         92,
+         128
+        ],
+        [
+         96,
+         123
+        ],
+        [
+         100,
+         119
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM2",
+        "min_echelon": "중대",
+        "text": "국군 중대 이상이 무명고지에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 3
+       },
+       "basis": "서술: 대덕산 방면 공격. 규모 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "104고지와 공격개시선 일대에 포격한다.",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         90,
+         150
+        ],
+        [
+         112,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "basis": "서술: D-1일 104고지 집중 포격. 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "국군이 두매리 고지·무명고지에 들어오면 목표에 집중 포격한다.",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         90,
+         150
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "소대",
+        "text": "국군 소대 이상이 두매리 고지에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 2
+       },
+       "basis": "서술: 역습 전 집중 포격 반복"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "국군이 두매리 고지에 들어오면 철모고지 북쪽에서 전차포로 사격한다.",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         102,
+         128
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "국군 중대 이상이 두매리 고지에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 4
+       },
+       "basis": "서술: D+1일 전차포 100여 발 집중"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "104고지와 국군 접근로에 박격포를 사격한다.",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         102,
+         126
+        ],
+        [
+         112,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "basis": "서술: D-1일 박격포 600여 발"
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "국군이 무명고지에 들어오면 무명고지에 박격포를 집중한다.",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         102,
+         126
+        ],
+        [
+         100,
+         119
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM2",
+        "min_echelon": "소대",
+        "text": "국군 소대 이상이 무명고지에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 2
+       },
+       "basis": "추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 제523연대 직할 박격포중대",
+    "alias": "적 박격포중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "82mm 박격포(추정)",
+    "position": {
+     "xy": [
+      102,
+      126
+     ],
+     "note": "철모고지 북쪽 역사면(추정)",
+     "ref": "F3"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명, 07:45경 일출"
+   },
+   {
+    "when": "D일 08:00",
+    "t": 8,
+    "kind": "air_window",
+    "duration_h": 9,
+    "note": "주간 미 공군 전폭기 가용"
+   },
+   {
+    "when": "D일 17:30",
+    "t": 17.5,
+    "kind": "night",
+    "duration_h": 14,
+    "note": "야간, 혹한"
+   },
+   {
+    "when": "D+1일 07:30",
+    "t": 31.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 08:00",
+    "t": 32,
+    "kind": "air_window",
+    "duration_h": 9,
+    "note": "주간 미 공군 전폭기 가용"
+   }
+  ]
+ }
+}

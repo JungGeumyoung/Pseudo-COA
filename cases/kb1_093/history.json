@@ -1,0 +1,296 @@
+{
+ "id": "kb1_093",
+ "schema": "reduced-opord/0.6",
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        120,
+        92
+       ],
+       [
+        120,
+        90
+       ]
+      ],
+      "note": "주봉 진지를 지켰으나 남쪽 절벽 경계가 약했다."
+     },
+     {
+      "when": "D일 야간(추정)",
+      "t": 23,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        120,
+        97
+       ],
+       [
+        120,
+        94
+       ],
+       [
+        120,
+        90
+       ]
+      ],
+      "target_ref": "OBJ1",
+      "note": "주봉 점령 뒤 역습한 것으로 추정(D+2일 '탈환' 서술 근거)."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        120,
+        92
+       ],
+       [
+        122,
+        100
+       ],
+       [
+        126,
+        108
+       ]
+      ],
+      "note": "839고지에서 격퇴되었다."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일~D+1일",
+      "t": 6,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        138,
+        92
+       ],
+       [
+        138,
+        90
+       ]
+      ],
+      "note": "제1대대의 반복 공격을 백병전으로 막았다."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        138,
+        92
+       ],
+       [
+        136,
+        100
+       ],
+       [
+        134,
+        108
+       ]
+      ],
+      "note": "837고지에서 격퇴되었다."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일~D+1일 야간(추정)",
+      "t": 22,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        130,
+        104
+       ],
+       [
+        134,
+        98
+       ],
+       [
+        138,
+        90
+       ]
+      ],
+      "target_ref": "OBJ2",
+      "note": "837고지와 주봉에 반복 역습(추정)."
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D일~D+2일",
+      "t": 6,
+      "mode": "fix",
+      "axis_xy": [
+       [
+        74,
+        98
+       ],
+       [
+        78,
+        93
+       ],
+       [
+        82,
+        88
+       ]
+      ],
+      "note": "369고지에서 제2대대와 대치했다."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "엄호",
+      "ref": "F7",
+      "text": "517고지에서 제3대대의 공격을 엄호했다."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "탈취",
+      "ref": "RT1",
+      "text": "주봉 남쪽 절벽지대로 침투했다."
+     },
+     {
+      "when": "D일 주간(추정)",
+      "t": 15,
+      "verb": "탈취",
+      "ref": "OBJ1",
+      "text": "주봉을 점령했다."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "verb": "탈취",
+      "ref": "OBJ1",
+      "text": "839고지를 탈환했다."
+     },
+     {
+      "when": "D+2일",
+      "t": 64,
+      "verb": "확보",
+      "ref": "CP1",
+      "text": "제1대대와 유학산에 연결된 방어진지를 구축했다."
+     }
+    ]
+   },
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일~D+1일",
+      "t": 6,
+      "verb": "공격",
+      "ref": "OBJ2",
+      "text": "837고지를 반복 공격했다."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "verb": "탈취",
+      "ref": "OBJ2",
+      "text": "837고지를 탈환했다. 8일간 9회 백병전, 손실 천여 명."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일~D+2일",
+      "t": 6,
+      "verb": "방어",
+      "ref": "F1",
+      "text": "수암산 일대에서 적과 대치했다."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일~D+2일",
+    "t": 6,
+    "kind": "weather",
+    "note": "혹서 속 산악 전투."
+   },
+   {
+    "when": "D일~D+2일",
+    "t": 6,
+    "kind": "air",
+    "note": "대대관측소의 미군 전방항공통제관 통제로 근접항공지원."
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제1사단 제12연대",
+   "enemy": "북한군 제13사단",
+   "terrain_held": [
+    "F5",
+    "F6",
+    "F1"
+   ],
+   "end_state_achieved": "yes",
+   "losses": "제1대대는 8일간 천여 명 손실(보충 포함). 구간 손실 수치는 서술에 없다.",
+   "duration_h": 67,
+   "friendly_loss_pct": 35,
+   "enemy_loss_pct": 50
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "제12연대가 839고지와 837고지를 확보하고 연결된 방어진지를 구축했다. 수암산 정상은 아직 적과 대치 중이다.",
+   "terrain_held_at_horizon": [
+    "F5",
+    "F6",
+    "F7"
+   ],
+   "key_times": [
+    {
+     "t": 6,
+     "text": "제3대대 절벽 침투 개시",
+     "ref": "RT1"
+    },
+    {
+     "t": 15,
+     "text": "주봉 점령(추정)",
+     "ref": "OBJ1"
+    },
+    {
+     "t": 60,
+     "text": "837고지·839고지 탈환",
+     "ref": "OBJ2"
+    }
+   ],
+   "friendly_loss_pct": 35,
+   "enemy_loss_pct": 50
+  }
+ }
+}

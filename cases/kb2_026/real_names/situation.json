@@ -1,0 +1,863 @@
+{
+ "id": "kb2_026",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제18연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제3사단 제18연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제3사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제3사단"
+   ],
+   "higher_mission": "제3사단은 석천리-973고지-949고지-738고지 선의 주저항선을 방어하고 전방 전초인 689고지와 M1고지를 확보하여 적의 전진거점 탈취를 저지한다.",
+   "higher_intent": "689고지를 빨리 되찾아 973고지로 이어지는 능선 접근로를 다시 통제하고 적이 주저항선 바로 앞에 거점을 굳히지 못하게 한다.",
+   "assigned_task": "제18연대는 689고지에 역습하여 고지를 탈취하고 전초진지를 회복한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "제22연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서쪽)",
+     "mission": "949고지-739고지-549고지 북쪽 무명고지 선의 주저항선과 M1고지 전초를 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      35,
+      92
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "제23연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 사단 명에 의해 역습하거나 일선 연대에 배속된다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      95,
+      60
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "제3사단 일반지원 포병",
+     "text": "사단 일반지원 포병은 H시 직전 689고지와 북쪽 기슭에 공격준비사격을 한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 5,
+      "text": "D일 05:00 공격준비사격 개시"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "f_689"
+     }
+    },
+    {
+     "unit": "미 공군 근접항공지원",
+     "text": "역습부대 손실이 커지면 사단은 근접항공지원을 요청해 689고지 일대에 네이팜 공격을 한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.35,
+      "text": "역습부대 손실 0.35 초과"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "f_689"
+     }
+    },
+    {
+     "unit": "제23연대",
+     "text": "제3대대 손실이 절반을 넘으면 사단은 제23연대 1개 대대를 제18연대에 배속해 973고지 정면을 증원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.5,
+      "text": "제3대대 손실 0.5 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "f_973"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제18연대는 통선곡-973고지-882고지 선의 주저항선과 그 전방 590고지 남쪽, 689고지 일대를 맡는다. 좌측은 북한강 상류를 따라 제22연대와, 우측은 석천리 동쪽에서 인접부대와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제18연대-제22연대 전투지경선",
+     "between": [
+      "제18연대",
+      "제22연대"
+     ],
+     "xy": [
+      [
+       60,
+       60
+      ],
+      [
+       60,
+       110
+      ],
+      [
+       63,
+       128
+      ],
+      [
+       70,
+       145
+      ],
+      [
+       70,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제18연대 우측 전투지경선",
+     "between": [
+      "제18연대",
+      "우측 인접부대"
+     ],
+     "xy": [
+      [
+       175,
+       60
+      ],
+      [
+       175,
+       200
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "A1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 우측 주저항선"
+    },
+    "other_names": [
+     "제18연대 제1대대"
+    ]
+   },
+   {
+    "id": "A2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 75,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 좌측 주저항선, 590고지와 689고지 남쪽"
+    },
+    "other_names": [
+     "제18연대 제2대대"
+    ],
+    "equipment": "대대장과 참모 전사, 제7중대 제1소대 고지 동굴에 고립"
+   },
+   {
+    "id": "A3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 중앙 973고지 일대"
+    },
+    "other_names": [
+     "제18연대 제3대대"
+    ]
+   },
+   {
+    "id": "A4",
+    "unit": "연대수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 지휘소 부근"
+    },
+    "other_names": [
+     "제18연대 수색중대"
+    ]
+   },
+   {
+    "id": "A5",
+    "unit": "제11포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "주저항선 후방 포진지"
+    },
+    "equipment": "105mm 곡사포"
+   },
+   {
+    "id": "A6",
+    "unit": "제3중박격포중대",
+    "alias": "박격포중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "973고지 남쪽"
+    },
+    "equipment": "4.2인치 박격포"
+   },
+   {
+    "id": "A7",
+    "unit": "제52전차중대 전차 3대",
+    "alias": "전차소대 1",
+    "echelon": "소대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "973고지 남쪽 도로변"
+    },
+    "equipment": "전차 3대"
+   },
+   {
+    "id": "A8",
+    "unit": "사단 일반지원 포병 2개 대대",
+    "alias": "포병대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "+",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "사단 후방 포진지"
+    },
+    "equipment": "포병 2개 대대"
+   },
+   {
+    "id": "A9",
+    "unit": "미 공군 F-84 근접항공지원",
+    "alias": "항공 1",
+    "echelon": "대대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "사단 요청에 따른 주간 지원"
+    },
+    "equipment": "F-84 전폭기, 네이팜탄"
+   }
+  ],
+  "terrain": {
+   "area_text": "양구 북방 북한강 상류 만곡부 동안이다. 689고지는 590고지와 620고지보다 낮아 적에게 관측되고, 북쪽 능선은 완만하며 남쪽 후사면은 급경사다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "f_689",
+     "name": "689고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      95,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 500,
+     "evidence": "텍사스고지. 실제 높이 500m, 북쪽 완경사, 남쪽 급경사",
+     "other_names": [
+      "텍사스고지",
+      "Texas 고지"
+     ],
+     "preparation": "hasty"
+    },
+    {
+     "id": "f_cave",
+     "name": "689고지 북쪽 동굴거점",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      95,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "고지 북쪽 400m 동굴거점, D-2일 TNT로 폭파"
+    },
+    {
+     "id": "f_590",
+     "name": "590고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      78,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 590,
+     "evidence": "적 공격거점, 973고지 능선 접근로"
+    },
+    {
+     "id": "f_620",
+     "name": "620고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      108,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 620,
+     "evidence": "적 공격거점, 689고지 북쪽"
+    },
+    {
+     "id": "f_973",
+     "name": "973고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      95,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 973,
+     "evidence": "주저항선의 주봉",
+     "preparation": "fortified"
+    },
+    {
+     "id": "f_882",
+     "name": "882고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      140,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 882,
+     "evidence": "연대 주저항선 우측",
+     "preparation": "fortified"
+    },
+    {
+     "id": "f_674",
+     "name": "674고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      135,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 674,
+     "evidence": "적 제542연대 배치"
+    },
+    {
+     "id": "f_songjeong",
+     "name": "송정리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      155,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제542연대 배치 동단"
+    },
+    {
+     "id": "f_tongseon",
+     "name": "통선곡",
+     "alias": "지점 2",
+     "kind": "valley",
+     "xy": [
+      66,
+      86
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 주저항선 좌단"
+    },
+    {
+     "id": "f_seokcheon",
+     "name": "석천리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      168,
+      85
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 주저항선 우단"
+    },
+    {
+     "id": "f_m1",
+     "name": "M1고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      40,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제22연대 전초"
+    },
+    {
+     "id": "f_949",
+     "name": "949고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      45,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 949,
+     "evidence": "제22연대 주저항선"
+    },
+    {
+     "id": "f_739",
+     "name": "739고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      32,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 739,
+     "evidence": "제22연대 주저항선"
+    },
+    {
+     "id": "f_549",
+     "name": "549고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      20,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 549,
+     "evidence": "제22연대 주저항선 좌측"
+    },
+    {
+     "id": "f_738",
+     "name": "738고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      10,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 738,
+     "evidence": "사단 주저항선 좌단"
+    },
+    {
+     "id": "f_679",
+     "name": "679고지",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      40,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 679,
+     "evidence": "적 제543연대 배치"
+    },
+    {
+     "id": "f_572",
+     "name": "572고지",
+     "alias": "고지 M",
+     "kind": "hill",
+     "xy": [
+      25,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 572,
+     "evidence": "적 제543연대 배치"
+    }
+   ],
+   "routes": [
+    {
+     "id": "r_south",
+     "name": "973고지-689고지 남쪽 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       95,
+       88
+      ],
+      [
+       94,
+       96
+      ],
+      [
+       96,
+       104
+      ],
+      [
+       95,
+       110
+      ],
+      [
+       95,
+       118
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "r_west",
+     "name": "689고지 서쪽 접근로",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       78,
+       95
+      ],
+      [
+       79,
+       104
+      ],
+      [
+       83,
+       111
+      ],
+      [
+       88,
+       116
+      ],
+      [
+       95,
+       118
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "r_north",
+     "name": "689고지-620고지 북쪽 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       95,
+       118
+      ],
+      [
+       97,
+       124
+      ],
+      [
+       102,
+       132
+      ],
+      [
+       108,
+       140
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "r_nw",
+     "name": "590고지-689고지 능선",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       78,
+       135
+      ],
+      [
+       82,
+       129
+      ],
+      [
+       88,
+       123
+      ],
+      [
+       95,
+       118
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "r_msr",
+     "name": "주저항선 후방 보급로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       62,
+       78
+      ],
+      [
+       95,
+       80
+      ],
+      [
+       120,
+       80
+      ],
+      [
+       140,
+       82
+      ],
+      [
+       168,
+       80
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "x_river",
+     "name": "북한강 상류",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       69,
+       200
+      ],
+      [
+       72,
+       200
+      ],
+      [
+       72,
+       141
+      ],
+      [
+       64,
+       127
+      ],
+      [
+       59,
+       110
+      ],
+      [
+       59,
+       60
+      ],
+      [
+       56,
+       60
+      ],
+      [
+       56,
+       110
+      ],
+      [
+       61,
+       128
+      ],
+      [
+       69,
+       142
+      ]
+     ],
+     "other_names": [
+      "북한강"
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "제538연대 전방대대",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "689고지 정상과 북쪽 기슭에 1개 중대 내외가 점령하고 590고지 쪽에 후속 병력이 있다.",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      95,
+      121
+     ],
+     "note": "689고지 정상과 북사면, 동굴거점 주변",
+     "frontage_m": 800,
+     "polygon": [
+      [
+       89,
+       115
+      ],
+      [
+       101,
+       115
+      ],
+      [
+       103,
+       126
+      ],
+      [
+       87,
+       126
+      ]
+     ],
+     "ref": "f_689"
+    },
+    "other_names": [
+     "중공군 제180사단 제538연대 1개 대대"
+    ]
+   },
+   {
+    "id": "E2",
+    "unit": "제538연대(-)",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "590고지와 620고지 일대 공격거점에 배치되어 689고지 역습 병력을 낸다.",
+    "posture": "예비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      95,
+      140
+     ],
+     "note": "590고지-620고지 일대",
+     "frontage_m": 3000,
+     "polygon": [
+      [
+       74,
+       132
+      ],
+      [
+       112,
+       136
+      ],
+      [
+       112,
+       148
+      ],
+      [
+       74,
+       144
+      ]
+     ]
+    },
+    "other_names": [
+     "중공군 제180사단 제538연대"
+    ]
+   },
+   {
+    "id": "E3",
+    "unit": "제542연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "674고지-송정리 일대에서 연대 우측 정면과 대치한다.",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      145,
+      125
+     ],
+     "note": "674고지-송정리 선",
+     "frontage_m": 3000,
+     "ref": "f_674"
+    },
+    "other_names": [
+     "중공군 제181사단 제542연대"
+    ]
+   },
+   {
+    "id": "E4",
+    "unit": "제180사단 포병",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "+",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "620고지 북쪽에서 689고지와 주저항선에 집중사격을 한다.",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      105,
+      165
+     ],
+     "note": "620고지 북쪽 포진지"
+    },
+    "other_names": [
+     "중공군 제180사단 포병"
+    ]
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 05:00",
+   "light": "dawn",
+   "notes": "전선 전반은 소강상태다. 적은 고지보다 높은 590고지와 620고지에서 689고지를 관측한다. 동굴로 대피한 제7중대 제1소대의 상태는 확인되지 않았다."
+  }
+ }
+}

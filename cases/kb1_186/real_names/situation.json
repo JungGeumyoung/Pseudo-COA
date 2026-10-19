@@ -1,0 +1,943 @@
+{
+ "id": "kb1_186",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제11사단 제20연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제20연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제11사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제11사단"
+   ],
+   "higher_mission": "국군 제11사단은 국군 제1군단의 우측 공격부대로서 낚시 바늘 능선 북단의 884고지·591고지·602고지를 탈취하여 서화계곡과 남강을 통제하고 해안분지 동측방을 압박한다.",
+   "higher_intent": "제한목표공격으로 방어선의 취약부를 개선한다. 884고지-591고지를 확보해 캔자스선에 대한 적의 위협을 없애고 서화계곡 기동로를 확보한다. 제9연대의 반복된 피탈을 끝내기 위해 새 연대로 바꿔 884고지를 탈취하고 유지한다.",
+   "assigned_task": "제20연대는 제9연대를 대신해 D일 06:00 884고지를 공격·탈취하고, 이어서 602고지와 591고지를 탈취하여 확보한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "국군 제11사단 제9연대",
+     "alias": "인접 연대 1",
+     "echelon": "연대",
+     "type": "infantry",
+     "side": "후방(남측)",
+     "mission": "제20연대와 교대 후 1000고지 일대에서 사단 예비로 751고지 후방을 방어한다.",
+     "xy": [
+      95,
+      78
+     ],
+     "other_names": [
+      "제9연대"
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "국군 제1군단 좌측 공격부대",
+     "alias": "인접 연대 2",
+     "echelon": "사단",
+     "type": "infantry",
+     "side": "좌측(서측)",
+     "mission": "낚시 바늘 능선 남부(924고지-1031고지-965고지)를 공격한다.",
+     "xy": [
+      84,
+      58
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "국군 제11사단 포병·국군 제1군단 포병",
+     "text": "D일 05:00부터 H시까지 884고지에 공격준비사격을 한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 5,
+      "text": "D일 05:00 공격준비사격 개시"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "H884"
+     }
+    },
+    {
+     "unit": "유엔 해군 함포지원부대",
+     "text": "H시부터 591고지와 602고지 일대의 적 증원로에 함포사격을 지원한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "H시(D일 06:00)"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "H591"
+     }
+    },
+    {
+     "unit": "국군 제11사단 제9연대",
+     "text": "적 대대 이상이 751고지 일대에 들어오면 사단 예비로 751고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H751",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 751고지 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H751",
+      "axis_xy": [
+       [
+        95,
+        78
+       ],
+       [
+        97,
+        82
+       ],
+       [
+        99,
+        85
+       ],
+       [
+        100,
+        88
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 751고지 북단에서 남강 남안까지, 서쪽은 602고지 서측, 동쪽은 703고지와 소하천까지다. 북쪽 한계는 남강 남안이다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "연대 좌측 전투지경선",
+     "between": [
+      "국군 제11사단 제20연대",
+      "국군 제1군단 좌측 공격부대"
+     ],
+     "xy": [
+      [
+       88,
+       70
+      ],
+      [
+       87,
+       85
+      ],
+      [
+       86,
+       100
+      ],
+      [
+       85,
+       115
+      ],
+      [
+       85,
+       129
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 우측 한계선(소하천 서안)",
+     "between": [
+      "국군 제11사단 제20연대",
+      "국군 제11사단"
+     ],
+     "xy": [
+      [
+       118,
+       75
+      ],
+      [
+       119,
+       95
+      ],
+      [
+       122,
+       110
+      ],
+      [
+       125,
+       125
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 북측 한계선(남강 남안)",
+     "between": [
+      "국군 제11사단 제20연대",
+      "북한군 제45사단"
+     ],
+     "xy": [
+      [
+       85,
+       129
+      ],
+      [
+       100,
+       130
+      ],
+      [
+       115,
+       129
+      ],
+      [
+       125,
+       128
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제20연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "사단 후방 집결지(1000고지 남쪽)",
+     "xy": [
+      105,
+      68
+     ]
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제20연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "사단 후방 집결지(1000고지 남쪽)",
+     "xy": [
+      108,
+      66
+     ]
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제20연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "사단 후방 집결지(1000고지 남쪽)",
+     "xy": [
+      110,
+      68
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "국군 제11사단 포병",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "751고지 남쪽 사단 포병진지",
+     "xy": [
+      110,
+      60
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "국군 제1군단 포병",
+    "alias": "포병 대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "군단 후방 포병진지",
+     "xy": [
+      130,
+      40
+     ]
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "유엔 해군 함포지원부대",
+    "alias": "포병 포대 1",
+    "echelon": "포대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "동해 해상 함포",
+    "location": {
+     "note": "동해안 해상(캔버스 밖 동쪽)"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "강원도 고성군 수동면 일대 험준한 산악지대. 884고지-591고지가 남북으로 늘어서고 서쪽의 602고지와 삼각형을 이룬다. 남쪽으로 751고지-1000고지-924고지-1031고지-1056고지-965고지가 낚시 바늘 능선을 이룬다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H884",
+     "name": "884고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 884,
+     "evidence": "향로봉 서북 9km. 유개호·지뢰·철조망으로 강화된 적 주진지",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H591",
+     "name": "591고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      100,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 591,
+     "evidence": "884고지 북쪽 1.8km",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H602",
+     "name": "602고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      93,
+      107
+     ],
+     "estimated": true,
+     "elevation_m": 602,
+     "evidence": "884고지 북서 1km",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H751",
+     "name": "751고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      100,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 751,
+     "evidence": "884고지 남쪽 1.2km. 제1대대 공격 출발 고지"
+    },
+    {
+     "id": "H703",
+     "name": "703고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      119,
+      121
+     ],
+     "estimated": true,
+     "elevation_m": 703,
+     "evidence": "884고지 동북 3km. 제3대대 공격 출발, 제2대대 대기 고지"
+    },
+    {
+     "id": "H1000",
+     "name": "1000고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      95,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 1000,
+     "evidence": "낚시 바늘 능선, 751고지 남쪽"
+    },
+    {
+     "id": "H924",
+     "name": "924고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      88,
+      69
+     ],
+     "estimated": true,
+     "elevation_m": 924,
+     "evidence": "낚시 바늘 능선"
+    },
+    {
+     "id": "H1031",
+     "name": "1031고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      82,
+      59
+     ],
+     "estimated": true,
+     "elevation_m": 1031,
+     "evidence": "낚시 바늘 능선"
+    },
+    {
+     "id": "H1056",
+     "name": "1056고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      86,
+      49
+     ],
+     "estimated": true,
+     "elevation_m": 1056,
+     "evidence": "낚시 바늘 능선"
+    },
+    {
+     "id": "H965",
+     "name": "965고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      95,
+      44
+     ],
+     "estimated": true,
+     "elevation_m": 965,
+     "evidence": "낚시 바늘 능선 남단"
+    },
+    {
+     "id": "H954",
+     "name": "954고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      78,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 954,
+     "evidence": "북한군 제13사단 방어 고지, 서측방",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H_HYANG",
+     "name": "향로봉",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      164,
+      36
+     ],
+     "estimated": true,
+     "elevation_m": 1296,
+     "evidence": "884고지 남동 9km"
+    },
+    {
+     "id": "RG_J",
+     "name": "낚시 바늘 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      92,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "884고지에서 965고지까지 J자 종격실 능선",
+     "other_names": [
+      "J-Ridge"
+     ],
+     "line": [
+      [
+       100,
+       118
+      ],
+      [
+       100,
+       100
+      ],
+      [
+       100,
+       88
+      ],
+      [
+       95,
+       78
+      ],
+      [
+       88,
+       69
+      ],
+      [
+       82,
+       59
+      ],
+      [
+       86,
+       49
+      ],
+      [
+       95,
+       44
+      ]
+     ]
+    },
+    {
+     "id": "RV_NAM",
+     "name": "남강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "884고지 북쪽, 연대 북측 한계",
+     "line": [
+      [
+       40,
+       133
+      ],
+      [
+       80,
+       132
+      ],
+      [
+       100,
+       132
+      ],
+      [
+       127,
+       134
+      ],
+      [
+       180,
+       133
+      ]
+     ]
+    },
+    {
+     "id": "RV_STR",
+     "name": "소하천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      120,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "884고지 동쪽 2km, 남북으로 흘러 남강에 합류",
+     "line": [
+      [
+       120,
+       70
+      ],
+      [
+       120,
+       100
+      ],
+      [
+       124,
+       118
+      ],
+      [
+       127,
+       134
+      ]
+     ]
+    },
+    {
+     "id": "V_SEOHWA",
+     "name": "서화계곡",
+     "alias": "지점 1",
+     "kind": "valley",
+     "xy": [
+      60,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "884고지 서쪽 기동로, 공격의 궁극 목적"
+    },
+    {
+     "id": "A_PUNCH",
+     "name": "해안분지",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      45,
+      75
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "884고지 일대가 동측방에서 압박하는 분지"
+    }
+   ],
+   "routes": [
+    {
+     "id": "RT_W",
+     "name": "751고지-884고지 서측 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       88
+      ],
+      [
+       99,
+       91
+      ],
+      [
+       98,
+       94
+      ],
+      [
+       98,
+       97
+      ],
+      [
+       100,
+       100
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT_E",
+     "name": "703고지-884고지 동측 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       119,
+       121
+      ],
+      [
+       116,
+       117
+      ],
+      [
+       112,
+       112
+      ],
+      [
+       108,
+       107
+      ],
+      [
+       104,
+       103
+      ],
+      [
+       100,
+       100
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT_N1",
+     "name": "884고지-602고지 능선",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       100
+      ],
+      [
+       98,
+       102
+      ],
+      [
+       96,
+       104
+      ],
+      [
+       93,
+       107
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT_N2",
+     "name": "884고지-591고지 능선",
+     "alias": "능선 5",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       100
+      ],
+      [
+       101,
+       105
+      ],
+      [
+       101,
+       110
+      ],
+      [
+       100,
+       114
+      ],
+      [
+       100,
+       118
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "IM_NAM",
+     "name": "남강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       40,
+       131
+      ],
+      [
+       100,
+       131
+      ],
+      [
+       127,
+       132
+      ],
+      [
+       180,
+       132
+      ],
+      [
+       180,
+       135
+      ],
+      [
+       127,
+       136
+      ],
+      [
+       100,
+       134
+      ],
+      [
+       40,
+       135
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제45사단 884고지 방어대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "제9연대와 1주일 교전으로 확인. 유개호·지뢰·철조망 진지",
+    "posture": "방어",
+    "preparation": "fortified",
+    "equipment": "박격포, 75mm 직사포, 중·경기관총",
+    "position": {
+     "xy": [
+      100,
+      101
+     ],
+     "ref": "H884",
+     "frontage_m": 800,
+     "note": "884고지 정상과 북·서사면 유개호",
+     "polygon": [
+      [
+       96,
+       97
+      ],
+      [
+       104,
+       97
+      ],
+      [
+       105,
+       104
+      ],
+      [
+       97,
+       105
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제45사단 591고지 방어대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "제9연대 특공대 공격으로 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      100,
+      118
+     ],
+     "ref": "H591",
+     "frontage_m": 700,
+     "note": "591고지 유개호 진지"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제45사단 602고지 방어중대",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "884고지 북서 측방 진지로 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      93,
+      107
+     ],
+     "ref": "H602",
+     "note": "602고지 진지"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제45사단 역습대대",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "제9연대에 일몰 후 3개 제대 파상역습을 반복한 부대",
+    "posture": "예비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      101,
+      126
+     ],
+     "note": "591고지 북쪽 남강 남안 역습 대기지역"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "북한군 제45사단 직접지원 122mm 포병대대",
+    "alias": "적 포병 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "사단 직접지원 포병으로 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "equipment": "122mm 야포",
+    "position": {
+     "xy": [
+      100,
+      145
+     ],
+     "note": "남강 북쪽 포병진지"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "북한군 제13사단 954고지 방어연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "서측방 954고지 방어부대로 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      78,
+      88
+     ],
+     "ref": "H954",
+     "frontage_m": 1500,
+     "note": "서측방 954고지 일대"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D-1일 13:00",
+   "light": "day",
+   "notes": "장마 직후 험준한 산악. 공격대기선 이동은 D-1일 오후부터 D일 새벽까지 야간에 한다. D일 일출 약 05:40, 일몰 약 19:20."
+  }
+ }
+}

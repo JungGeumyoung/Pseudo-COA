@@ -1,0 +1,721 @@
+{
+ "id": "kb2_043",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 10:00",
+  "start_t": 10,
+  "horizon_h": 60,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E3",
+    "fraction": 0.7,
+    "text": "적 보전협동부대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제1사단은 조봉을 딛고 3번 도로 축선으로 유곡리와 점촌을 돌파하려 한다. 조봉 방면 연대가 제2연대를 몰아내는 동안 전차를 앞세운 보전협동부대가 267고지를 친다. 돌파가 막히면 예비 연대와 제13사단을 동쪽으로 돌려 D+2일 다시 공격한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "pursue",
+       "text": "조봉에서 651고지 방면으로 철수하는 제2연대를 추격한다.",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         94,
+         110
+        ],
+        [
+         93,
+         104
+        ],
+        [
+         92,
+         96
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 11,
+        "text": "D일 11:00"
+       },
+       "basis": "서술: 조봉 점령 뒤 제2연대의 퇴로가 위협받았다. 시각 추정."
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "조봉을 방어한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         94,
+         110
+        ]
+       ],
+       "basis": "서술: D+1일 제2연대가 조봉을 공격했을 때 적이 고지에 있었다."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "조봉을 잃으면 야간에 반격한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         90,
+         122
+        ],
+        [
+         92,
+         116
+        ],
+        [
+         94,
+         110
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 조봉 지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 12
+       },
+       "basis": "서술: D+1일 밤 반격과 D+2일 02:00 기습. 문턱 추정."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "583고지를 공격한다.",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         100,
+         124
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 10,
+        "text": "D일 10:00 공격 지속"
+       },
+       "basis": "서술: D일 07:00경부터 583고지 제2연대 제3대대를 공격했다."
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "583고지-불정산 일대를 방어한다.",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         110,
+         116
+        ]
+       ],
+       "basis": "서술: D+1일 제7연대의 583고지·414고지 공격이 적 저항으로 지지부진했다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 크면 진남교 쪽으로 물러난다.",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         106,
+         128
+        ],
+        [
+         112,
+         136
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "3번 도로를 따라 267고지를 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         110,
+         126
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         112,
+         100
+        ],
+        [
+         114,
+         88
+        ],
+        [
+         113,
+         80
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 16,
+        "text": "D일 16:00"
+       },
+       "basis": "추정: 진남교 도하 뒤 축선 전진. 서술은 D일 연대가 3번 도로 축선 적과 정면대결이 불가피했다고 쓴다."
+      },
+      {
+       "timing": "조건",
+       "mode": "hold",
+       "text": "공격이 막히면 불정산 일대에서 방어하며 재공격을 준비한다.",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         112,
+         100
+        ],
+        [
+         110,
+         116
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.3,
+        "text": "손실 0.3 초과"
+       },
+       "basis": "추정"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "3번 도로를 따라 267고지를 다시 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         110,
+         116
+        ],
+        [
+         112,
+         100
+        ],
+        [
+         114,
+         88
+        ],
+        [
+         113,
+         80
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 58,
+        "text": "D+2일 10:00"
+       },
+       "basis": "서술: D+2일 10:00 3번 도로를 따라 267고지 방향으로 공격을 재개했다."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "유곡리를 공격한다.",
+       "objective_ref": "T17",
+       "axis_xy": [
+        [
+         113,
+         80
+        ],
+        [
+         111,
+         74
+        ],
+        [
+         110,
+         68
+        ]
+       ],
+       "basis": "서술: D+2일 22:00까지 교전 뒤 유곡리가 넘어갔다."
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "보전협동부대 선두에서 267고지를 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         112,
+         134
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         112,
+         100
+        ],
+        [
+         114,
+         88
+        ],
+        [
+         113,
+         80
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 16,
+        "text": "D일 16:00"
+       },
+       "basis": "추정: 전차가 보전협동부대를 이끌었다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "전차 손실이 크면 진남교 남쪽으로 물러난다.",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         113,
+         80
+        ],
+        [
+         112,
+         100
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         112,
+         134
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.4,
+        "text": "손실 0.4 초과"
+       },
+       "basis": "추정"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "3번 도로를 따라 267고지를 다시 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         110,
+         118
+        ],
+        [
+         112,
+         100
+        ],
+        [
+         114,
+         88
+        ],
+        [
+         113,
+         80
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 58,
+        "text": "D+2일 10:00"
+       },
+       "basis": "서술: 전차와 포화로 사단이 심각한 위기에 몰렸다."
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "진남교를 건너 불정산 일대로 들어온다.",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         114,
+         155
+        ],
+        [
+         113,
+         145
+        ],
+        [
+         112,
+         136
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         110,
+         116
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "basis": "추정: 사단 제2제대 투입."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "제19연대 정면 돌모산-신기리 방면을 공격한다.",
+       "objective_ref": "T21",
+       "axis_xy": [
+        [
+         110,
+         116
+        ],
+        [
+         116,
+         108
+        ],
+        [
+         120,
+         100
+        ],
+        [
+         122,
+         94
+        ],
+        [
+         123,
+         84
+        ]
+       ],
+       "basis": "서술: D+1일 우측 제19연대가 공격을 받고 밀렸다. 부대 추정."
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "3번 도로 축선 공격에 합류해 267고지를 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         122,
+         94
+        ],
+        [
+         118,
+         88
+        ],
+        [
+         113,
+         80
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 58,
+        "text": "D+2일 10:00"
+       },
+       "basis": "서술: D+2일 공격 재개. 참가 부대 추정."
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "은성에서 동쪽으로 들어와 조봉 서측 산악지대로 진출한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         52,
+         152
+        ],
+        [
+         62,
+         142
+        ],
+        [
+         72,
+         130
+        ],
+        [
+         84,
+         120
+        ],
+        [
+         90,
+         114
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 48,
+        "text": "D+2일 00:00"
+       },
+       "basis": "서술: D+2일 적 군단장이 제13사단을 동쪽으로 이동시켰다. 시각 추정."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "조봉을 공격한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         90,
+         114
+        ],
+        [
+         94,
+         110
+        ]
+       ],
+       "basis": "추정: 제1사단의 조봉 반격을 돕는다."
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "3번 도로를 따라 전차로 돌모산 기슭까지 남하한다.",
+       "objective_ref": "T12",
+       "axis_xy": [
+        [
+         114,
+         160
+        ],
+        [
+         113,
+         145
+        ],
+        [
+         112,
+         136
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         116,
+         104
+        ],
+        [
+         122,
+         94
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 54,
+        "text": "D+2일 06:00"
+       },
+       "basis": "서술: D+2일 전차 4대가 3번 도로를 따라 남하했다. 시각 추정."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "267고지를 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         122,
+         94
+        ],
+        [
+         116,
+         86
+        ],
+        [
+         113,
+         80
+        ]
+       ],
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "제13사단 선두 연대를 뒤따라 은성에서 가은으로 들어온다.",
+       "objective_ref": "T24",
+       "axis_xy": [
+        [
+         45,
+         162
+        ],
+        [
+         52,
+         152
+        ],
+        [
+         62,
+         142
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 50,
+        "text": "D+2일 02:00"
+       },
+       "basis": "추정: 제13사단 동쪽 이동의 후속 제대."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제109전차연대 전차중대(증원)",
+    "alias": "적 전차중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "T-34 전차 4대",
+    "position": {
+     "xy": [
+      114,
+      160
+     ],
+     "ref": "R1",
+     "note": "진남교 북쪽 3번 도로상(추정)"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "북한군 제13사단 후속 연대",
+    "alias": "적 연대 5",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 80,
+    "position": {
+     "xy": [
+      45,
+      162
+     ],
+     "note": "은성 북서 산악지대(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:40",
+    "t": 19.67,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "일몰부터 D+1일 05:40 여명까지 야간."
+   },
+   {
+    "when": "D+1일 05:40",
+    "t": 29.67,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명."
+   },
+   {
+    "when": "D+1일 19:40",
+    "t": 43.67,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간."
+   },
+   {
+    "when": "D+2일 05:40",
+    "t": 53.67,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명."
+   },
+   {
+    "when": "D+2일 19:40",
+    "t": 67.67,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간."
+   },
+   {
+    "when": "D일 10:00",
+    "t": 10,
+    "kind": "weather",
+    "duration_h": 60,
+    "note": "장마철 고온다습. 급경사 산악에서 보병 기동이 느리다."
+   }
+  ]
+ }
+}

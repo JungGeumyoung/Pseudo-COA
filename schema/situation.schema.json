@@ -1,0 +1,901 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "reduced-opord/0.6 input block",
+ "description": "상황 블록 (cases/<id>/situation.json의 \"input\"). 생성 모델 입력",
+ "type": "object",
+ "required": [
+  "perspective",
+  "higher_context",
+  "area_of_operations",
+  "available_forces",
+  "terrain",
+  "enemy_forces",
+  "conditions"
+ ],
+ "properties": {
+  "perspective": {
+   "type": "object",
+   "required": [
+    "unit",
+    "alias",
+    "echelon"
+   ],
+   "properties": {
+    "unit": {
+     "type": "string"
+    },
+    "alias": {
+     "type": "string"
+    },
+    "other_names": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "echelon": {
+     "type": "string",
+     "enum": [
+      "연대",
+      "여단",
+      "연대전투단",
+      "해병연대"
+     ]
+    }
+   }
+  },
+  "higher_context": {
+   "type": "object",
+   "required": [
+    "higher_unit",
+    "higher_alias",
+    "higher_mission",
+    "higher_intent",
+    "assigned_task",
+    "adjacent_units",
+    "higher_rules"
+   ],
+   "properties": {
+    "higher_unit": {
+     "type": "string"
+    },
+    "higher_alias": {
+     "type": "string"
+    },
+    "higher_other_names": {
+     "type": "array",
+     "items": {
+      "type": "string"
+     }
+    },
+    "higher_mission": {
+     "type": "string"
+    },
+    "higher_intent": {
+     "type": "string"
+    },
+    "assigned_task": {
+     "type": "string"
+    },
+    "adjacent_units": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "unit",
+       "alias",
+       "side",
+       "mission"
+      ],
+      "properties": {
+       "id": {
+        "type": "string"
+       },
+       "unit": {
+        "type": "string"
+       },
+       "alias": {
+        "type": "string"
+       },
+       "other_names": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "side": {
+        "type": "string"
+       },
+       "mission": {
+        "type": "string"
+       },
+       "echelon": {
+        "type": "string",
+        "enum": [
+         "분대",
+         "소대",
+         "중대",
+         "포대",
+         "대대",
+         "연대",
+         "여단",
+         "사단"
+        ]
+       },
+       "type": {
+        "type": "string",
+        "enum": [
+         "infantry",
+         "armor",
+         "mech_infantry",
+         "artillery",
+         "mortar",
+         "antitank",
+         "aviation",
+         "engineer",
+         "recon",
+         "marine",
+         "other"
+        ]
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       }
+      }
+     }
+    },
+    "higher_rules": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "unit",
+       "text",
+       "trigger",
+       "action"
+      ],
+      "properties": {
+       "unit": {
+        "type": "string"
+       },
+       "text": {
+        "type": "string"
+       },
+       "timing": {
+        "type": "string",
+        "enum": [
+         "계획",
+         "조건"
+        ]
+       },
+       "trigger": {
+        "type": "object",
+        "required": [
+         "type",
+         "text"
+        ],
+        "properties": {
+         "type": {
+          "type": "string",
+          "enum": [
+           "time_elapsed",
+           "losses_exceed",
+           "strength_in_area"
+          ]
+         },
+         "text": {
+          "type": "string"
+         },
+         "group": {
+          "type": "string"
+         },
+         "ref": {
+          "type": "string"
+         },
+         "fraction": {
+          "type": "number"
+         },
+         "value": {
+          "type": "number"
+         },
+         "side": {
+          "type": "string",
+          "enum": [
+           "friendly",
+           "enemy"
+          ]
+         },
+         "min_echelon": {
+          "type": "string",
+          "enum": [
+           "소대",
+           "중대",
+           "대대",
+           "연대"
+          ]
+         },
+         "and": {
+          "type": "array",
+          "items": {
+           "type": "object",
+           "required": [
+            "type",
+            "text"
+           ],
+           "properties": {
+            "type": {
+             "type": "string",
+             "enum": [
+              "time_elapsed",
+              "losses_exceed",
+              "strength_in_area"
+             ]
+            },
+            "text": {
+             "type": "string"
+            },
+            "group": {
+             "type": "string"
+            },
+            "ref": {
+             "type": "string"
+            },
+            "fraction": {
+             "type": "number"
+            },
+            "value": {
+             "type": "number"
+            },
+            "side": {
+             "type": "string",
+             "enum": [
+              "friendly",
+              "enemy"
+             ]
+            },
+            "min_echelon": {
+             "type": "string",
+             "enum": [
+              "소대",
+              "중대",
+              "대대",
+              "연대"
+             ]
+            }
+           }
+          }
+         }
+        }
+       },
+       "delay_h": {
+        "type": "number"
+       },
+       "action": {
+        "type": "object",
+        "required": [
+         "mode",
+         "objective_ref"
+        ],
+        "properties": {
+         "mode": {
+          "type": "string",
+          "enum": [
+           "attack",
+           "fix",
+           "hold",
+           "infiltrate",
+           "counterattack",
+           "withdraw",
+           "bombard",
+           "reinforce",
+           "demolish",
+           "pursue"
+          ]
+         },
+         "objective_ref": {
+          "type": "string"
+         },
+         "axis_xy": {
+          "type": "array",
+          "items": {
+           "type": "array",
+           "items": {
+            "type": "number"
+           },
+           "minItems": 2,
+           "maxItems": 2
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  },
+  "area_of_operations": {
+   "type": "object",
+   "required": [
+    "text",
+    "boundaries"
+   ],
+   "properties": {
+    "text": {
+     "type": "string"
+    },
+    "boundaries": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "name",
+       "between",
+       "xy",
+       "estimated"
+      ],
+      "properties": {
+       "id": {
+        "type": "string"
+       },
+       "name": {
+        "type": "string"
+       },
+       "between": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "estimated": {
+        "type": "boolean"
+       }
+      }
+     }
+    }
+   }
+  },
+  "available_forces": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "unit",
+     "alias",
+     "echelon",
+     "type",
+     "modifier",
+     "strength_pct",
+     "relationship",
+     "location"
+    ],
+    "properties": {
+     "echelon": {
+      "type": "string",
+      "enum": [
+       "분대",
+       "소대",
+       "중대",
+       "포대",
+       "대대",
+       "연대",
+       "여단",
+       "사단"
+      ]
+     },
+     "type": {
+      "type": "string",
+      "enum": [
+       "infantry",
+       "armor",
+       "mech_infantry",
+       "artillery",
+       "mortar",
+       "antitank",
+       "aviation",
+       "engineer",
+       "recon",
+       "marine",
+       "other"
+      ]
+     },
+     "modifier": {
+      "type": "string",
+      "enum": [
+       "",
+       "+",
+       "-"
+      ]
+     },
+     "strength_pct": {
+      "type": "number"
+     },
+     "personnel": {
+      "type": "number"
+     },
+     "equipment": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "unit": {
+      "type": "string"
+     },
+     "alias": {
+      "type": "string"
+     },
+     "other_names": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "relationship": {
+      "type": "string",
+      "enum": [
+       "건제",
+       "배속",
+       "작전통제",
+       "직접지원",
+       "일반지원",
+       "전술통제"
+      ]
+     },
+     "location": {
+      "type": "object",
+      "required": [
+       "note"
+      ],
+      "properties": {
+       "ref": {
+        "type": "string"
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "note": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   },
+   "minItems": 2
+  },
+  "terrain": {
+   "type": "object",
+   "required": [
+    "area_text",
+    "canvas",
+    "scale_m_per_unit",
+    "features",
+    "routes",
+    "impassable"
+   ],
+   "properties": {
+    "area_text": {
+     "type": "string"
+    },
+    "canvas": {
+     "type": "array",
+     "items": {
+      "type": "number"
+     },
+     "minItems": 2,
+     "maxItems": 2
+    },
+    "scale_m_per_unit": {
+     "type": "number"
+    },
+    "features": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "name",
+       "alias",
+       "kind",
+       "xy",
+       "estimated",
+       "elevation_m",
+       "evidence"
+      ],
+      "properties": {
+       "id": {
+        "type": "string"
+       },
+       "name": {
+        "type": "string"
+       },
+       "alias": {
+        "type": "string"
+       },
+       "other_names": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "kind": {
+        "type": "string",
+        "enum": [
+         "hill",
+         "ridge",
+         "river",
+         "lake",
+         "crossing",
+         "road",
+         "bridge",
+         "town",
+         "valley",
+         "pass",
+         "area",
+         "other"
+        ]
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "line": {
+        "type": "array",
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "polygon": {
+        "type": "array",
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "estimated": {
+        "type": "boolean"
+       },
+       "elevation_m": {
+        "type": "number"
+       },
+       "preparation": {
+        "type": "string",
+        "enum": [
+         "none",
+         "hasty",
+         "deliberate",
+         "fortified"
+        ]
+       },
+       "evidence": {
+        "type": "string"
+       }
+      }
+     },
+     "minItems": 3
+    },
+    "routes": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "name",
+       "alias",
+       "kind",
+       "xy",
+       "estimated"
+      ],
+      "properties": {
+       "id": {
+        "type": "string"
+       },
+       "name": {
+        "type": "string"
+       },
+       "alias": {
+        "type": "string"
+       },
+       "other_names": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "kind": {
+        "type": "string",
+        "enum": [
+         "road",
+         "trail",
+         "valley",
+         "ridge",
+         "rail"
+        ]
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "estimated": {
+        "type": "boolean"
+       }
+      }
+     }
+    },
+    "impassable": {
+     "type": "array",
+     "items": {
+      "type": "object",
+      "required": [
+       "id",
+       "name",
+       "alias",
+       "polygon"
+      ],
+      "properties": {
+       "id": {
+        "type": "string"
+       },
+       "name": {
+        "type": "string"
+       },
+       "alias": {
+        "type": "string"
+       },
+       "other_names": {
+        "type": "array",
+        "items": {
+         "type": "string"
+        }
+       },
+       "polygon": {
+        "type": "array",
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "gap_at": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "active": {
+        "type": "string",
+        "enum": [
+         "항상",
+         "구간 중 발생"
+        ]
+       }
+      }
+     }
+    }
+   }
+  },
+  "enemy_forces": {
+   "type": "array",
+   "items": {
+    "type": "object",
+    "required": [
+     "id",
+     "unit",
+     "alias",
+     "nation",
+     "echelon",
+     "type",
+     "modifier",
+     "strength_pct",
+     "identified",
+     "known_at_start",
+     "posture",
+     "position"
+    ],
+    "properties": {
+     "echelon": {
+      "type": "string",
+      "enum": [
+       "분대",
+       "소대",
+       "중대",
+       "포대",
+       "대대",
+       "연대",
+       "여단",
+       "사단"
+      ]
+     },
+     "type": {
+      "type": "string",
+      "enum": [
+       "infantry",
+       "armor",
+       "mech_infantry",
+       "artillery",
+       "mortar",
+       "antitank",
+       "aviation",
+       "engineer",
+       "recon",
+       "marine",
+       "other"
+      ]
+     },
+     "modifier": {
+      "type": "string",
+      "enum": [
+       "",
+       "+",
+       "-"
+      ]
+     },
+     "strength_pct": {
+      "type": "number"
+     },
+     "personnel": {
+      "type": "number"
+     },
+     "equipment": {
+      "type": "string"
+     },
+     "id": {
+      "type": "string"
+     },
+     "unit": {
+      "type": "string"
+     },
+     "alias": {
+      "type": "string"
+     },
+     "other_names": {
+      "type": "array",
+      "items": {
+       "type": "string"
+      }
+     },
+     "nation": {
+      "type": "string"
+     },
+     "identified": {
+      "type": "boolean"
+     },
+     "known_at_start": {
+      "type": "string"
+     },
+     "posture": {
+      "type": "string",
+      "enum": [
+       "방어",
+       "공격준비",
+       "예비",
+       "집결",
+       "이동",
+       "미상"
+      ]
+     },
+     "preparation": {
+      "type": "string",
+      "enum": [
+       "none",
+       "hasty",
+       "deliberate",
+       "fortified"
+      ]
+     },
+     "position": {
+      "type": "object",
+      "required": [
+       "xy",
+       "note"
+      ],
+      "properties": {
+       "ref": {
+        "type": "string"
+       },
+       "xy": {
+        "type": "array",
+        "items": {
+         "type": "number"
+        },
+        "minItems": 2,
+        "maxItems": 2
+       },
+       "polygon": {
+        "type": "array",
+        "items": {
+         "type": "array",
+         "items": {
+          "type": "number"
+         },
+         "minItems": 2,
+         "maxItems": 2
+        }
+       },
+       "frontage_m": {
+        "type": "number"
+       },
+       "note": {
+        "type": "string"
+       }
+      }
+     }
+    }
+   },
+   "minItems": 1
+  },
+  "conditions": {
+   "type": "object",
+   "required": [
+    "start_time",
+    "light",
+    "notes"
+   ],
+   "properties": {
+    "start_time": {
+     "type": "string"
+    },
+    "light": {
+     "type": "string",
+     "enum": [
+      "day",
+      "night",
+      "dawn",
+      "dusk"
+     ]
+    },
+    "notes": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

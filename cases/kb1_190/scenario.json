@@ -1,0 +1,412 @@
+{
+ "id": "kb1_190",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 32,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E2",
+      "fraction": 0.7,
+      "text": "적 우측 봉우리 대대 손실 0.7 초과"
+     }
+    ],
+    "text": "적 주봉·우측 봉우리 대대 모두 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제12사단은 제32사단과 교대한 직후 제30연대로 백석산 정상의 기존 진지를 고수하고, 아군이 정상에 돌입하면 883고지의 연대 예비로 역습해 정상을 되찾는다. 좌우의 제32연대와 제31연대는 측방 화력으로 정상 방어를 지원한다. 정상 유지가 어려우면 883고지와 1220고지 방향으로 물러나 주방어선을 북쪽에 다시 편성한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "text": "백석산 주봉의 기존 진지를 고수한다.",
+       "basis": "서술: 적 제12사단이 백석산에 제30연대를 배치했다. 기존 제32사단의 강력한 방어진지를 인수했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 0,
+        "text": "D일 00:00 이후 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         100,
+         121
+        ],
+        [
+         103,
+         124
+        ],
+        [
+         106,
+         128
+        ],
+        [
+         110,
+         132
+        ]
+       ],
+       "text": "손실이 크고 아군 중대 이상이 주봉에 있으면 883고지 방향으로 철수한다.",
+       "basis": "서술: 제2대대의 공격으로 왼쪽 측방에 위협을 느낀 적이 철수했다. 문턱값은 추정.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "적 주봉 대대 손실 0.5 초과",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "side": "friendly",
+          "ref": "OBJ1",
+          "min_echelon": "중대",
+          "text": "아군 중대 이상이 목표 1 안에 있음"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T2",
+       "text": "백석산 우측 봉우리와 동남능선 상단 진지를 고수한다.",
+       "basis": "서술: 제2대대의 공격이 지연될 만큼 우측 봉우리 저항이 강했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 0,
+        "text": "D일 00:00 이후 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         107,
+         118
+        ],
+        [
+         108,
+         124
+        ],
+        [
+         110,
+         128
+        ],
+        [
+         110,
+         132
+        ]
+       ],
+       "text": "손실이 크면 883고지 방향으로 철수한다.",
+       "basis": "추정: 우측 봉우리가 함락되기 전에 잔존 병력을 연대 예비 쪽으로 물린다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "적 우측 봉우리 대대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T15",
+       "text": "연대 지원화기로 서남능선과 동남능선의 접근로에 사격한다.",
+       "basis": "서술: 연대당 120mm 박격포 2문, 76mm·45mm 직사포 각 2문 보유. 시각은 아군 공격 개시에 맞춘 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         110,
+         132
+        ],
+        [
+         108,
+         129
+        ],
+        [
+         106,
+         127
+        ],
+        [
+         103,
+         124
+        ],
+        [
+         100,
+         121
+        ]
+       ],
+       "text": "아군 중대 이상이 주봉에 들어오면 883고지에서 주봉으로 역습한다.",
+       "basis": "서술: 제1대대가 주봉을 점령한 직후 적 역습으로 밀려났다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 1
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T13",
+       "axis_xy": [
+        [
+         110,
+         132
+        ],
+        [
+         100,
+         138
+        ],
+        [
+         88,
+         144
+        ],
+        [
+         76,
+         150
+        ],
+        [
+         68,
+         152
+        ]
+       ],
+       "text": "손실이 크면 1220고지 방향으로 철수한다.",
+       "basis": "서술: 백석산 함락 후 북한군은 주방어선을 1220고지와 어은산으로 물렸다. 문턱값은 추정.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.4,
+        "text": "적 예비대대 손실 0.4 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T15",
+       "axis_xy": [
+        [
+         62,
+         120
+        ],
+        [
+         72,
+         118
+        ],
+        [
+         82,
+         116
+        ],
+        [
+         90,
+         116
+        ]
+       ],
+       "text": "892고지 능선에서 서남능선으로 측방 사격을 실시한다.",
+       "basis": "추정: 백석산 좌측에 배치된 제32연대가 인접 연대 정면을 방어하며 측방 화력을 지원한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         120,
+         140
+        ],
+        [
+         116,
+         130
+        ],
+        [
+         112,
+         120
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "text": "917고지 일대에서 동남능선으로 측방 사격을 실시한다.",
+       "basis": "추정: 백석산 우측에 배치된 제31연대가 측방 화력을 지원한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T15",
+       "text": "서남능선 중간의 전초진지를 고수해 돌격선 접근을 지연한다.",
+       "basis": "서술: 적이 남쪽 고지에 전초부대를 추진했고 제1대대가 돌격선에 들어가기까지 3시간의 혈전을 치렀다. 규모와 위치는 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 0,
+        "text": "D일 00:00 이후 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         91,
+         116
+        ],
+        [
+         95,
+         118
+        ],
+        [
+         100,
+         121
+        ]
+       ],
+       "text": "손실이 크면 주봉 진지로 물러난다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E6",
+        "fraction": 0.5,
+        "text": "적 전초 중대 손실 0.5 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E6",
+    "unit": "북한군 제12사단 제30연대 전초 중대(서남능선)",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 100,
+    "equipment": "기관총 4정(추정)",
+    "position": {
+     "xy": [
+      91,
+      116
+     ],
+     "ref": "T15",
+     "note": "서남능선 중간, 돌격선 남쪽의 전초진지(추정). 연대는 정상 진지만 판단했다."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. 07:00 무렵부터 주간 시계."
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능 시간대."
+   },
+   {
+    "when": "D일 18:30",
+    "t": 18.5,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "야간. 급경사 산악에서 기동과 관측이 제한된다."
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명."
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 7,
+    "note": "주간 근접항공지원 가능 시간대(구간 끝까지)."
+   }
+  ]
+ }
+}

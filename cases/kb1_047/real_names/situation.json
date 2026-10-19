@@ -1,0 +1,741 @@
+{
+ "id": "kb1_047",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제6사단 제2연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제2연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제6사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제6사단"
+   ],
+   "higher_mission": "제6사단은 춘천·홍천 축선에서 적의 남진을 저지한다.",
+   "higher_intent": "춘천 정면을 지키는 동안 44번 도로 축선의 적 제12사단을 말고개에서 막는다. 이로써 홍천과 사단 주력의 동측방을 보호한다.",
+   "assigned_task": "말고개 일대에서 44번 도로를 따라 홍천으로 들어오는 적 제12사단을 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "국군 제6사단 제7연대",
+     "alias": "인접 연대 1",
+     "side": "서측(좌측)",
+     "mission": "춘천 정면을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      20,
+      170
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "국군 제6사단 제19연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비, 춘천 지역)",
+     "mission": "사단 예비로서 투입을 준비한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      10,
+      120
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A2",
+     "text": "적 연대 이상이 말고개 지역에 들어오면 사단은 예비인 제19연대를 홍천 축선으로 돌려 말고개 방어를 증원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T3",
+      "min_echelon": "연대",
+      "text": "적 연대 이상이 말고개 지역 안에 있음"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T3",
+      "axis_xy": [
+       [
+        10,
+        120
+       ],
+       [
+        30,
+        70
+       ],
+       [
+        45,
+        52
+       ],
+       [
+        70,
+        72
+       ],
+       [
+        98,
+        96
+       ],
+       [
+        112,
+        112
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 한계리·철정리 남쪽에서 성산리까지 이어지는 44번 도로 축선이다. 서측은 제7연대와 경계를 이루고, 동측은 화양강을 따라 열려 있다. 후방 경계는 성산리 남서쪽이다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 연대 전투지경선",
+     "between": [
+      "국군 제6사단 제2연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       85,
+       200
+      ],
+      [
+       90,
+       150
+      ],
+      [
+       75,
+       100
+      ],
+      [
+       40,
+       70
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "우측 작전지역 한계선",
+     "between": [
+      "국군 제6사단 제2연대",
+      "미상(개방 측방)"
+     ],
+     "xy": [
+      [
+       165,
+       200
+      ],
+      [
+       158,
+       150
+      ],
+      [
+       148,
+       120
+      ],
+      [
+       120,
+       80
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "후방 경계선",
+     "between": [
+      "국군 제6사단 제2연대",
+      "국군 제6사단"
+     ],
+     "xy": [
+      [
+       40,
+       70
+      ],
+      [
+       90,
+       80
+      ],
+      [
+       120,
+       80
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제2연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 75,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내. 직전 철수 뒤 철정초등학교에서 재편성했다."
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내. 직전 철수 뒤 철정초등학교에서 재편성했다."
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제2연대 대전차포중대",
+    "alias": "대전차포중대",
+    "echelon": "중대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "equipment": "57mm 대전차포 6문(추정)",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제6사단 포병 제3포대",
+    "alias": "포병 포대 1",
+    "echelon": "포대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 5문(추정)",
+    "location": {
+     "note": "성산리 남서쪽 홍천 방향 후방",
+     "xy": [
+      75,
+      75
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "홍천 북동쪽 철정리~성산리 사이의 44번 도로 축선이다. 큰말고개와 작은말고개가 도로와 주변 저지대를 내려다본다. 화양강이 말고개 남동측을 끼고 흐른다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "큰말고개",
+     "alias": "지점 1",
+     "kind": "pass",
+     "xy": [
+      121,
+      125
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "44번 도로와 주변 저지대를 감제한다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T2",
+     "name": "작은말고개",
+     "alias": "지점 2",
+     "kind": "pass",
+     "xy": [
+      115,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "통과 도로에 굽은 곳이 많아 대전차 방어에 유리하다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T3",
+     "name": "말고개 지역",
+     "alias": "지점 3",
+     "kind": "area",
+     "xy": [
+      118,
+      124
+     ],
+     "polygon": [
+      [
+       98,
+       138
+      ],
+      [
+       124,
+       140
+      ],
+      [
+       138,
+       122
+      ],
+      [
+       126,
+       106
+      ],
+      [
+       104,
+       112
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "기계화부대가 홍천으로 가려면 지나야 하는 관문이다."
+    },
+    {
+     "id": "T4",
+     "name": "철정리",
+     "alias": "마을 1",
+     "other_names": [
+      "철정초등학교"
+     ],
+     "kind": "town",
+     "xy": [
+      130,
+      145
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 재편성지이며 말고개 북쪽의 예상 적 집결지다."
+    },
+    {
+     "id": "T5",
+     "name": "한계리",
+     "alias": "마을 2",
+     "other_names": [
+      "한계마을"
+     ],
+     "kind": "town",
+     "xy": [
+      130,
+      158
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "홍천 북동쪽 15km. 451번 도로와 44번 도로가 만난다."
+    },
+    {
+     "id": "T6",
+     "name": "성산리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      98,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 지휘소 위치이며 말고개 남서쪽에 있다."
+    },
+    {
+     "id": "T7",
+     "name": "홍천",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      45,
+      52
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "방어 목적지이자 사단 후방 거점이다."
+    },
+    {
+     "id": "T8",
+     "name": "397고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      132,
+      136
+     ],
+     "estimated": true,
+     "elevation_m": 397,
+     "evidence": "말고개 북쪽, 적 중앙 정면의 고지다."
+    },
+    {
+     "id": "T9",
+     "name": "371고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      102,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 371,
+     "evidence": "좌일선 진지 후방의 고지다."
+    },
+    {
+     "id": "T10",
+     "name": "복골",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      138,
+      146
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "397고지 너머 철정리 동쪽 골짜기 마을이다."
+    },
+    {
+     "id": "T11",
+     "name": "현리",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      118,
+      199
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "451번 도로의 북쪽 기점이며 지도 북쪽 밖에 있다."
+    },
+    {
+     "id": "T12",
+     "name": "화양강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      120,
+      102
+     ],
+     "line": [
+      [
+       200,
+       134
+      ],
+      [
+       170,
+       130
+      ],
+      [
+       140,
+       128
+      ],
+      [
+       132,
+       114
+      ],
+      [
+       120,
+       102
+      ],
+      [
+       105,
+       88
+      ],
+      [
+       80,
+       68
+      ],
+      [
+       50,
+       40
+      ],
+      [
+       30,
+       25
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "말고개를 끼고 흘러 연대 남동측방을 보호한다."
+    },
+    {
+     "id": "T13",
+     "name": "내촌천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      145,
+      145
+     ],
+     "line": [
+      [
+       160,
+       200
+      ],
+      [
+       152,
+       170
+      ],
+      [
+       145,
+       145
+      ],
+      [
+       140,
+       128
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "철정리 남쪽에서 화양강과 합류한다."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R44",
+     "name": "44번 도로",
+     "alias": "도로 1",
+     "other_names": [
+      "홍천가도"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       140,
+       200
+      ],
+      [
+       136,
+       175
+      ],
+      [
+       130,
+       158
+      ],
+      [
+       130,
+       145
+      ],
+      [
+       126,
+       136
+      ],
+      [
+       121,
+       125
+      ],
+      [
+       115,
+       116
+      ],
+      [
+       108,
+       106
+      ],
+      [
+       98,
+       96
+      ],
+      [
+       70,
+       72
+      ],
+      [
+       45,
+       52
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R451",
+     "name": "451번 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       118,
+       199
+      ],
+      [
+       122,
+       185
+      ],
+      [
+       126,
+       170
+      ],
+      [
+       130,
+       158
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "W1",
+     "name": "화양강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       200,
+       135.5
+      ],
+      [
+       170,
+       131.5
+      ],
+      [
+       141,
+       129.5
+      ],
+      [
+       133.3,
+       115
+      ],
+      [
+       121,
+       103.2
+      ],
+      [
+       106,
+       89.3
+      ],
+      [
+       81,
+       69.3
+      ],
+      [
+       51,
+       41.3
+      ],
+      [
+       31,
+       26.3
+      ],
+      [
+       29,
+       23.7
+      ],
+      [
+       49,
+       38.7
+      ],
+      [
+       79,
+       66.7
+      ],
+      [
+       104,
+       86.7
+      ],
+      [
+       119,
+       100.8
+      ],
+      [
+       130.7,
+       113
+      ],
+      [
+       139,
+       126.5
+      ],
+      [
+       170,
+       128.5
+      ],
+      [
+       200,
+       132.5
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제12사단 제32연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 2500,
+    "identified": true,
+    "known_at_start": "직전 전투에서 접촉했다. 3개 대대로 44번 도로를 따라 추격 중이다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      136,
+      178
+     ],
+     "frontage_m": 1500,
+     "note": "한계리 북쪽 44번 도로 축선에서 남하 중(추정)"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제12사단 제30연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 2500,
+    "identified": true,
+    "known_at_start": "제32연대와 함께 제1제대로 3개 대대를 이끌고 추격 중이다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      124,
+      188
+     ],
+     "frontage_m": 1500,
+     "note": "한계리 북서쪽 451번 도로와 서측 능선 방향(추정)"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제12사단 자주포대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 90,
+    "equipment": "SU-76 자주포 약 16대(추정)",
+    "identified": true,
+    "known_at_start": "보병 선두에서 44번 도로로 진출 중이다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      140,
+      192
+     ],
+     "frontage_m": 500,
+     "note": "44번 도로 위 종대(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D-1일 17:00",
+   "light": "day",
+   "notes": "하절기. 연대는 직전 전투에서 철수해 재편성한 직후이고 진지는 급편 수준이다. 적 자주포에 맞설 수단은 57mm 대전차포와 근접 육탄공격뿐이다."
+  }
+ }
+}

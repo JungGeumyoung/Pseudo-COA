@@ -1,0 +1,152 @@
+{
+ "id": "kb1_043",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-06-26",
+   "end_date": "1950-06-27",
+   "d_day": "1950-06-26",
+   "order_time": "D-1일 23:00",
+   "text": "소양교 전투 전체: 제7연대가 옥산포 역습 뒤 소양강 남안 주저항선으로 물러나 방어를 시작한 D일 03:00부터 주저항선이 돌파되어 춘천 시가지로 철수를 결심한 D+1일 정오까지",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대의 첫 결심으로 둔다. 이 결심은 옥산포 역습 직후 제1대대를 우두산에서 소양강 남안 계획 진지로 물리고 소양교 정면을 방어하기로 한 것이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제6사단 제7연대를 쓴다. 제7연대는 소양교와 봉의산 정면의 작전지역을 맡았고 서술의 대부분이 이 연대의 방어다. 근화동의 제19연대와 가래모기의 사단 근무대대는 인접 부대로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "D일에는 SU-76 자주포 3대를 소양교에서 파괴하고 종일 적의 도하를 저지했다. 그러나 D+1일 10:00 소양강 최후저항선이 돌파되어 정오경 춘천 시가지로 철수했고, 이어 486고지로 이탈했다. 북한군 제2사단의 진출을 지연시켜 서울 우회 포위 계획은 좌절시켰다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "임의 원점. 캔버스 (0,0)을 춘천 시가지 남서쪽 약 10km 지점에 두고 소양교를 (105,107)에 둔다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_043_소양교_전투",
+  "title": "소양교 전투",
+  "dates": "1950. 6. 26.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '소양교 전투' (pdf 202쪽)",
+  "pdf_page": 202,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 21,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 3,
+    "B4": 2,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 7,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "26일 새벽 5시 제7연대 1대대를 소양강 북안 옥산포 능선에서 남안의 계획된 진지로 철수시켜 하천선에서 방어",
+    "alternative": "북안 옥산포·우두산 진지를 계속 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "소양교 남안에 대전차포 진지를 두어 교량을 건너는 자주포를 직접 사격으로 파괴",
+    "alternative": "교량 통로에 대전차 화기를 두지 않거나 다른 곳에 배치",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "27일 정오경 최후저항선 돌파 후 춘천시가지 지연과 486고지 급편방어로 전환",
+    "alternative": "소양강 남안 진지에서 계속 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.0363,
+   "duration_s": 273.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 25470,
+     "cache_read_input_tokens": 46733,
+     "cache_creation_input_tokens": 30722
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7892,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 13861
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [
+    {
+     "id": "E:E1[1]",
+     "verdict": "disguised_result",
+     "reason": "적이 우두동을 거쳐 소양강 북안까지 진출한 범위는 국군 제1대대가 실제로 저지하며 철수·도하한 전투 결과이지 적이 스스로 정한 공격 목표선이 아니다.",
+     "fix": "진출 범위를 특정하지 않고 '우두동 방향 공격 계속'으로 바꾸거나 북안 진출 여부는 history로 옮긴다."
+    }
+   ],
+   "cost_usd": 0.0748996
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [
+   "friendly_actual: 아군 연대"
+  ],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

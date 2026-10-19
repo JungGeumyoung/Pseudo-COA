@@ -1,0 +1,842 @@
+{
+ "id": "kb2_008",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제29연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제9사단 제29연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제9사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제9사단"
+   ],
+   "higher_mission": "제9사단은 새로 인수한 철원 서북방 방어정면을 방어하여 철원 일대와 3번 도로·43번 도로를 확보한다.",
+   "higher_intent": "281고지와 395고지를 사단 방어선의 방파제로 고수하여 적의 전초 탈취 기도를 좌절시킨다. 제28연대를 사단 예비로 두고 전초가 위기에 처하면 역습한다.",
+   "assigned_task": "사단 좌측 중강리-유정리-284고지-395고지-281고지 선을 방어하고 281고지와 395고지를 고수한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ30",
+     "unit": "제30연대",
+     "alias": "인접 연대 1",
+     "side": "우측(동쪽)",
+     "mission": "사단 우측 정면을 방어한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      180,
+      125
+     ]
+    },
+    {
+     "id": "ADJ28",
+     "unit": "제28연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 전초 지역 역습을 준비한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      110,
+      55
+     ],
+     "other_names": [
+      "사단 예비 연대"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ28",
+     "text": "적 대대 이상이 395고지에 있고 제1대대 손실이 0.4를 넘으면 제28연대가 2개 대대로 395고지를 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "text": "적 대대 이상이 395고지 안에 있음",
+      "side": "enemy",
+      "ref": "H395",
+      "min_echelon": "대대",
+      "and": [
+       {
+        "type": "losses_exceed",
+        "text": "제1대대 손실 0.4 초과",
+        "group": "G1",
+        "fraction": 0.4
+       }
+      ]
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H395",
+      "axis_xy": [
+       [
+        110,
+        55
+       ],
+       [
+        100,
+        75
+       ],
+       [
+        92,
+        94
+       ],
+       [
+        88,
+        110
+       ],
+       [
+        85,
+        122
+       ],
+       [
+        82,
+        132
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제29연대는 사단 좌측을 맡는다. 서쪽은 좌측 인접부대, 동쪽은 제30연대와의 전투지경선이다. 전방은 281고지-395고지-284고지-유정리-중강리 선 북쪽 적 거점선 앞까지, 후방은 역곡천 남쪽 예비 지역까지다.",
+   "boundaries": [
+    {
+     "id": "B_LEFT",
+     "name": "연대 좌측 전투지경선",
+     "between": [
+      "제29연대",
+      "좌측 인접부대"
+     ],
+     "xy": [
+      [
+       25,
+       200
+      ],
+      [
+       27,
+       140
+      ],
+      [
+       28,
+       100
+      ],
+      [
+       30,
+       50
+      ],
+      [
+       30,
+       0
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B_RIGHT",
+     "name": "제29연대-제30연대 전투지경선",
+     "between": [
+      "제29연대",
+      "제30연대"
+     ],
+     "xy": [
+      [
+       165,
+       200
+      ],
+      [
+       163,
+       140
+      ],
+      [
+       160,
+       100
+      ],
+      [
+       158,
+       50
+      ],
+      [
+       156,
+       0
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 우측 지역"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 좌측 지역"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "전방 진지 후방 3~4km, 역곡천 남쪽",
+     "xy": [
+      72,
+      76
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "사단 포병대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "역곡천 남쪽 사단 포병 진지",
+     "xy": [
+      95,
+      45
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "철원 서북방 10~13km, 역곡천 북방의 돌출 구릉지대. 281고지와 395고지가 북쪽 적 거점선과 남쪽 역곡천 사이에 솟아 있고, 남쪽으로 3번 도로와 43번 도로가 지난다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H281",
+     "name": "281고지",
+     "alias": "고지 A",
+     "other_names": [
+      "화살머리고지",
+      "Arrow Head"
+     ],
+     "kind": "hill",
+     "xy": [
+      60,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 281,
+     "preparation": "deliberate",
+     "evidence": "사단 방어선의 방파제 역할을 하는 전초진지. 395고지 남서쪽 약 3km. 제6중대가 방어."
+    },
+    {
+     "id": "H395",
+     "name": "395고지",
+     "alias": "고지 B",
+     "other_names": [
+      "백마고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      82,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 395,
+     "preparation": "deliberate",
+     "evidence": "281고지 북동쪽 약 3km의 전초진지. 철원 일대를 감제."
+    },
+    {
+     "id": "H284",
+     "name": "284고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      110,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 284,
+     "preparation": "deliberate",
+     "evidence": "연대 방어선 중강리-유정리-284고지-395고지-281고지의 일부. 제1대대 담당."
+    },
+    {
+     "id": "V_BANGSEOK",
+     "name": "방석동",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      47,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제2대대가 방석동-281고지 일대에 배치."
+    },
+    {
+     "id": "V_YUJEONG",
+     "name": "유정리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      130,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 방어선상 지명."
+    },
+    {
+     "id": "V_JUNGGANG",
+     "name": "중강리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      150,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 방어선 우측 끝 지명."
+    },
+    {
+     "id": "T_CHEORWON",
+     "name": "철원",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      178,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "고지군은 철원 서북방 10~13km. 사단이 방어하는 요충."
+    },
+    {
+     "id": "X_YEOKGOK",
+     "name": "역곡천 도섭점",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      72,
+      93
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "예비대대가 역곡천 남쪽에서 전초로 나가는 통로로 추정."
+    },
+    {
+     "id": "RG_281W",
+     "name": "281고지 서쪽 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      52,
+      108
+     ],
+     "line": [
+      [
+       44,
+       102
+      ],
+      [
+       50,
+       106
+      ],
+      [
+       56,
+       109
+      ],
+      [
+       60,
+       110
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술상 281고지로 오르는 서쪽 능선."
+    },
+    {
+     "id": "RG_395E",
+     "name": "395고지 동쪽 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      92,
+      130
+     ],
+     "line": [
+      [
+       82,
+       132
+      ],
+      [
+       88,
+       131
+      ],
+      [
+       95,
+       129
+      ],
+      [
+       102,
+       126
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술상 395고지 동쪽 능선."
+    },
+    {
+     "id": "H396",
+     "name": "396고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      40,
+      150
+     ],
+     "estimated": true,
+     "elevation_m": 396,
+     "preparation": "fortified",
+     "evidence": "중공군 제126사단 거점선 396-459-596-501-431고지의 서단."
+    },
+    {
+     "id": "H459",
+     "name": "459고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      62,
+      162
+     ],
+     "estimated": true,
+     "elevation_m": 459,
+     "preparation": "fortified",
+     "evidence": "중공군 거점선."
+    },
+    {
+     "id": "H596",
+     "name": "596고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      88,
+      178
+     ],
+     "estimated": true,
+     "elevation_m": 596,
+     "preparation": "fortified",
+     "evidence": "중공군 거점선."
+    },
+    {
+     "id": "H501",
+     "name": "501고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      115,
+      168
+     ],
+     "estimated": true,
+     "elevation_m": 501,
+     "preparation": "fortified",
+     "evidence": "중공군 거점선."
+    },
+    {
+     "id": "H431",
+     "name": "431고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      140,
+      160
+     ],
+     "estimated": true,
+     "elevation_m": 431,
+     "preparation": "fortified",
+     "evidence": "중공군 거점선의 동단."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R3",
+     "name": "3번 도로",
+     "alias": "도로 1",
+     "other_names": [
+      "연천-전곡-서울 도로"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       178,
+       72
+      ],
+      [
+       155,
+       60
+      ],
+      [
+       130,
+       48
+      ],
+      [
+       105,
+       36
+      ],
+      [
+       80,
+       24
+      ],
+      [
+       55,
+       12
+      ],
+      [
+       40,
+       0
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R43",
+     "name": "43번 도로",
+     "alias": "도로 2",
+     "other_names": [
+      "운천-서울 도로"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       22,
+       130
+      ],
+      [
+       20,
+       105
+      ],
+      [
+       18,
+       80
+      ],
+      [
+       15,
+       55
+      ],
+      [
+       12,
+       30
+      ],
+      [
+       8,
+       0
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "TR_396_281",
+     "name": "396고지-281고지 계곡로",
+     "alias": "도로 3",
+     "kind": "valley",
+     "xy": [
+      [
+       40,
+       150
+      ],
+      [
+       42,
+       140
+      ],
+      [
+       46,
+       130
+      ],
+      [
+       50,
+       122
+      ],
+      [
+       55,
+       115
+      ],
+      [
+       60,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "TR_596_395",
+     "name": "596고지-395고지 능선로",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       88,
+       178
+      ],
+      [
+       87,
+       166
+      ],
+      [
+       86,
+       155
+      ],
+      [
+       84,
+       145
+      ],
+      [
+       83,
+       138
+      ],
+      [
+       82,
+       132
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "RV_YEOKGOK",
+     "name": "역곡천",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       0,
+       83
+      ],
+      [
+       50,
+       90
+      ],
+      [
+       90,
+       93
+      ],
+      [
+       130,
+       98
+      ],
+      [
+       200,
+       103
+      ],
+      [
+       200,
+       106
+      ],
+      [
+       130,
+       101
+      ],
+      [
+       90,
+       96
+      ],
+      [
+       50,
+       93
+      ],
+      [
+       0,
+       86
+      ]
+     ],
+     "gap_at": [
+      72,
+      93
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "중공군 제126사단 제376연대 제1대대",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 600,
+    "equipment": "박격포, 기관총",
+    "identified": false,
+    "known_at_start": "396고지 일대 거점진지에 대대 규모 배치 확인, 부대 번호 미식별",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      40,
+      150
+     ],
+     "ref": "H396",
+     "frontage_m": 1500,
+     "note": "396고지 거점. 281고지 정면."
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "중공군 제126사단 제376연대 제2대대",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 600,
+    "equipment": "각종 박격포, 기관총",
+    "identified": false,
+    "known_at_start": "596고지 일대 거점진지에 대대 규모 배치 확인, 부대 번호 미식별",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      88,
+      176
+     ],
+     "ref": "H596",
+     "frontage_m": 1500,
+     "note": "596고지 거점. 395고지 정면."
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "중공군 제126사단 제376연대(-)",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 700,
+    "identified": false,
+    "known_at_start": "459고지 일대 거점진지",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      62,
+      162
+     ],
+     "ref": "H459",
+     "frontage_m": 1500,
+     "note": "459고지 거점. 제376연대 잔여."
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "중공군 제126사단 제377연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 2500,
+    "identified": false,
+    "known_at_start": "501고지 일대 거점진지",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      115,
+      168
+     ],
+     "ref": "H501",
+     "frontage_m": 3000,
+     "note": "501고지 일대."
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "중공군 제126사단 제378연대",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 2500,
+    "identified": false,
+    "known_at_start": "431고지 일대 거점진지",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      140,
+      162
+     ],
+     "ref": "H431",
+     "frontage_m": 3000,
+     "note": "431고지 일대."
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "중공군 122mm 야포대대",
+    "alias": "적 포병 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "122mm 야포",
+    "identified": true,
+    "known_at_start": "제126사단을 지원하는 122mm 야포대대 존재 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      90,
+      192
+     ],
+     "note": "적 거점선 후방 추정."
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 22:30",
+   "light": "night",
+   "notes": "11월 초 야간. 적이 281고지에 1시간 공격준비포격을 시작했다. 전선은 소강상태였고 아군은 방어정면을 인수한 지 오래지 않았다."
+  }
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "id": "kb2_005",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-10-17",
+   "end_date": "1951-10-21",
+   "d_day": "1951-10-17",
+   "order_time": "1951-10-16 저녁(D-1일 20:00 추정)",
+   "text": "금성천-교암산 전투 중 제2연대 투입 이후 585고지-무명고지-교암산 공격(5일)",
+   "why": "구간 지정 ②를 따랐다. 군단이 폴라선 진격을 명령하자 사단이 제2연대를 새로 투입해 작전지역을 맡긴 때부터 교암산을 탈취할 때까지다."
+  },
+  "perspective_rationale": "구간 ②가 시작될 때 585고지-교암산 지역의 작전지역은 제2연대가 맡았다. 사단장은 정면이 좁아지자 제2연대를 투입했고, 이 구간의 서술은 제2연대 대대들의 기동이 중심이다. 관점 지정과도 맞는다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "585고지는 공격 사흘째(10. 19.)에 점령했다. 10. 20. 무명고지, 10. 21. 교암산을 점령해 폴라선을 확보했다. 적 예비사단이 증원되어 일정은 늦어졌다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 백암산 남서쪽 약 10km 지점(추정). 금성천 동서 구간은 y≈60, 북한강은 x≈170.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_005_금성천_교암산_전투",
+  "title": "금성천-교암산 전투",
+  "dates": "1951. 10. 13.~21.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '금성천-교암산 전투' (pdf 30쪽)",
+  "pdf_page": 30,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 3
+   },
+   "sim_value": 9,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "10월 21일 교암산 공격에서 제1대대를 동쪽능선으로 우회시켜 배후를 치고 제3대대가 정면에서 고착",
+    "alternative": "양 대대 모두 급경사 정면 축선으로 공격",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "제3대대가 지원사격을 요청하며 적진으로 돌진하고, 제1대대가 실시한 배후 기습이 성공하면서 중공군 진영은 동요하기 시작하였다."
+   },
+   {
+    "decision": "10월 19일 585고지에 제3대대를 추가 투입하여 서쪽 우회·동쪽 돌격의 협공으로 전환",
+    "alternative": "제1·2대대만으로 정면·동쪽 후방 공격을 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "10월 15일 제19연대 제2대대가 삼면 급경사인 529고지를 공격",
+    "alternative": "541고지 탈취 후 그 방향에서 529고지로 접근하거나 병력을 집중",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 10. 13.~16.: 제7·19연대의 금성천 남안 소탕·도하·노매드선 진출(565·462·472·541·529고지). ② 10. 17.~21.: 제2연대 투입 이후 585고지-무명고지-교암산 공격(5일) — 연대 관점 참조 사례로는 ② 구간 권장.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2385,
+   "duration_s": 322.4,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31809,
+     "cache_read_input_tokens": 48526,
+     "cache_creation_input_tokens": 38471
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7688,
+     "cache_read_input_tokens": 12750,
+     "cache_creation_input_tokens": 16065
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 32,
+   "flagged": [
+    {
+     "id": "E:H1[1]",
+     "verdict": "hidden_condition",
+     "reason": "야간 역습이 '국군 진출 부대'라는 적 상태에 대한 반응인데도 고정 시각(D일 20:00)의 계획 행동으로 기술되어 있다.",
+     "fix": "조건을 '국군 대대 이상이 585고지 남사면 안에 있음'과 같은 전투력 기반 조건으로 바꾸고 timing을 조건으로 변경한다."
+    }
+   ],
+   "cost_usd": 0.0425672
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "H1[1]: counterattack"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "적근산": "지점 1'",
+  "주파령": "지점 2'"
+ }
+}

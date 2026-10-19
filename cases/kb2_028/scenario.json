@@ -1,0 +1,430 @@
+{
+ "id": "kb2_028",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 16:00",
+  "start_t": 16,
+  "horizon_h": 56,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "HE1",
+    "fraction": 0.7,
+    "text": "적 제89연대 공격 대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 휴전 전에 서화리계곡 감제고지를 빼앗으려 한다. 집중포격 뒤 제45사단 제89연대와 제91연대가 1개 대대씩 야간에 812고지와 854고지를 공격한다. 제89연대 대대는 소양강 서안으로 우회해 무명고지를 먼저 치고, 자정 무렵 812고지를 기습한다. 812고지를 점령하면 아군 역습을 반격으로 막고 예비 대대로 고지를 증원한다.",
+   "groups": [
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "각종 포 약 200문으로 제12사단 정면을 포격한다.",
+       "objective_ref": "H812",
+       "axis_xy": [
+        [
+         110,
+         165
+        ],
+        [
+         100,
+         140
+        ],
+        [
+         90,
+         111
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 16,
+        "text": "D일 16:00"
+       },
+       "basis": "서술: D일 16:00 각종 포 200문 포격 개시."
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "812고지에 집중포격을 하여 기습공격을 엄호한다.",
+       "objective_ref": "H812",
+       "axis_xy": [
+        [
+         110,
+         165
+        ],
+        [
+         95,
+         135
+        ],
+        [
+         90,
+         111
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 23.75,
+        "text": "D일 23:45"
+       },
+       "basis": "서술: 자정 무렵 집중포격과 함께 기습공격. 시각은 추정."
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "소양강 서안을 따라 우회해 무명고지를 공격한다.",
+       "objective_ref": "H_NN",
+       "axis_xy": [
+        [
+         115,
+         138
+        ],
+        [
+         117,
+         128
+        ],
+        [
+         114,
+         120
+        ],
+        [
+         108,
+         115
+        ],
+        [
+         100,
+         112
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "basis": "서술: 22:00 전후 1개 대대가 소양강을 우회해 무명고지를 먼저 공격."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "이어서 집중포격 아래 812고지를 기습 공격한다.",
+       "objective_ref": "H812",
+       "axis_xy": [
+        [
+         106,
+         116
+        ],
+        [
+         100,
+         117
+        ],
+        [
+         95,
+         116
+        ],
+        [
+         90,
+         111
+        ]
+       ],
+       "basis": "서술: 무명고지 공격 뒤 자정 무렵 812고지 기습."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군이 812고지에 들어오면 2개 중대로 후방을 차단하며 반격한다.",
+       "objective_ref": "H812",
+       "axis_xy": [
+        [
+         86,
+         120
+        ],
+        [
+         88,
+         115
+        ],
+        [
+         93,
+         108
+        ],
+        [
+         90,
+         111
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H812",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 812고지 지역 안에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 4
+       },
+       "basis": "서술: 물러난 적 2개 중대가 후방차단과 함께 반격. 반복 횟수와 간격은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 크면 간무봉 쪽 능선으로 철수한다.",
+       "objective_ref": "GANMU",
+       "axis_xy": [
+        [
+         90,
+         111
+        ],
+        [
+         84,
+         119
+        ],
+        [
+         79,
+         126
+        ],
+        [
+         74,
+         132
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "HE1",
+        "fraction": 0.6,
+        "text": "공격 대대 손실 0.6 초과"
+       },
+       "basis": "추정."
+      }
+     ]
+    },
+    {
+     "group": "HE2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "812고지의 공격 대대가 약해지면 1개 대대로 812고지를 증원한다.",
+       "objective_ref": "H812",
+       "axis_xy": [
+        [
+         100,
+         142
+        ],
+        [
+         92,
+         132
+        ],
+        [
+         86,
+         122
+        ],
+        [
+         88,
+         115
+        ],
+        [
+         90,
+         111
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "HE1",
+        "fraction": 0.4,
+        "text": "공격 대대 손실 0.4 초과"
+       },
+       "basis": "서술: D+2일 21:00 이후 1개 대대 규모가 812고지 증원 징후. 문턱은 추정."
+      }
+     ]
+    },
+    {
+     "group": "HE3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "854고지를 공격한다.",
+       "objective_ref": "H854",
+       "axis_xy": [
+        [
+         138,
+         135
+        ],
+        [
+         137,
+         126
+        ],
+        [
+         135,
+         118
+        ],
+        [
+         134,
+         114
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       },
+       "basis": "서술: 제91연대 1개 대대가 854고지를 반복 공격."
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "간무봉에서 소양강 서안까지 진지를 고수하고 공격 부대를 화력으로 지원한다.",
+       "objective_ref": "GANMU",
+       "axis_xy": [
+        [
+         74,
+         132
+        ],
+        [
+         88,
+         132
+        ],
+        [
+         110,
+         130
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 16,
+        "text": "D일 16:00"
+       },
+       "basis": "서술에 제2연대 공격 기록이 없다. 진지 고수로 추정."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제45사단 제89연대 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 600,
+    "position": {
+     "xy": [
+      115,
+      138
+     ],
+     "note": "소양강 서안 서화리계곡 남쪽 공격대기지점. 추정.",
+     "ref": "V_SEOHWA"
+    },
+    "other_names": [
+     "제89연대 공격대대"
+    ]
+   },
+   {
+    "id": "HE2",
+    "unit": "북한군 제45사단 제89연대(-)",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 95,
+    "personnel": 1200,
+    "position": {
+     "xy": [
+      100,
+      142
+     ],
+     "note": "간무봉 동북쪽 후방 예비 위치. 추정."
+    },
+    "other_names": [
+     "제89연대 예비"
+    ]
+   },
+   {
+    "id": "HE3",
+    "unit": "북한군 제45사단 제91연대 1개 대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 600,
+    "position": {
+     "xy": [
+      138,
+      135
+     ],
+     "note": "854고지 북쪽 공격대기지점. 추정.",
+     "ref": "H854"
+    },
+    "other_names": [
+     "제91연대 공격대대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:50",
+    "t": 19.83,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "D일 일몰부터 D+1일 05:20 일출까지 야간."
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 근접항공지원 가능."
+   },
+   {
+    "when": "D+1일 19:50",
+    "t": 43.83,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "D+1일 일몰부터 D+2일 05:20까지 야간."
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 근접항공지원 가능."
+   },
+   {
+    "when": "D+2일 19:50",
+    "t": 67.83,
+    "kind": "night",
+    "duration_h": 4.17,
+    "note": "D+2일 일몰부터 시뮬레이션 종료까지 야간."
+   }
+  ]
+ }
+}

@@ -1,0 +1,143 @@
+{
+ "id": "kb1_190",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-09-29",
+   "end_date": "1951-10-01",
+   "d_day": "1951-09-30",
+   "order_time": "1951-09-29 (D-1일) 제7사단과 교대 후 공격준비 단계",
+   "text": "국군 제8사단이 제7사단과 임무를 교대한 뒤 9월 29일 공격준비를 마치고, 9월 30일 07:00 제10연대를 주공으로 백석산 주봉과 우측 봉우리를 공격해 10월 1일 11:55 주봉을, 이어 우측 봉우리를 점령한 구간.",
+   "why": "구간 지정 ②. 대대 단위 기동(제1대대 서남능선, 제2대대 동남능선)이 서술되어 연대 명령 재구성에 적합하다."
+  },
+  "perspective_rationale": "관점 지정에 따라 국군 제8사단 제10연대를 쓴다. 제10연대는 사단 주공으로 백석산 정면 작전지역을 맡았고 대대별 기동이 서술되어 있다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "D+1일 10:50 제1대대가 주봉을 점령했다가 역습으로 밀려났으나 11:55 다시 완전히 장악하고, 제2대대가 우측 봉우리를 점령했다. 제8사단 전사 50명, 부상 243명."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "백석산 주봉을 (100,121)에 둔 서술 기반 추정 좌표. 캔자스선은 약 10km 남쪽(y≈20).",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_190_백석산_전투",
+  "title": "백석산 전투",
+  "dates": "1951. 9. 24.∼10. 1.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '백석산 전투' (pdf 570쪽)",
+  "pdf_page": 570,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 21,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 2
+   },
+   "sim_value": 8,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제10연대가 제1대대(서남쪽 능선)와 제2대대(동남쪽 능선)를 병진시켰으나 제2대대 공격이 지연되어 제1대대가 단독으로 주봉에 진입",
+    "alternative": "두 대대의 돌격 시점을 일치시키거나 제2대대의 측방 압박이 형성된 뒤 제1대대가 주봉에 돌입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "그러나 제1대대는 우측의 제2대대 공격이 지연되면서 적으로부터 역습을 받아 다시 백석산주봉에서 밀려났다. 곧이어 제2대대의 과감한 공격으로 왼쪽 측방의 위협을 느낀 북한군이 철수하기 시작하자, 제1대대는 재공격에 나서 11시 55분에 백석산 주봉을 완전히 장악하였다."
+   },
+   {
+    "decision": "제10연대장이 9월 30일 공격을 중지하고 탄약·식량을 보급한 뒤 10월 1일 이른 아침에 재개",
+    "alternative": "9월 30일 공격을 중지하지 않고 계속 강행",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제7사단 제8연대가 26일 정상의 좌측 봉우리, 27일 우측 봉우리를 차례로 따로 공격",
+    "alternative": "정상의 두 봉우리를 동시에 공격하거나, 점령한 좌측 봉우리에 병력을 증원해 역습에 대비",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "사단 교대(9월 28일)를 경계로 두 구간. ① 9월 24일~27일(4일): 제7사단 제8연대 주공·제3연대 조공의 1차 공격, 주봉 점령 실패. ② 9월 30일~10월 1일(2일, 준비일 9월 29일 포함 시 3일): 제8사단 제10연대의 2차 공격, 주봉 점령. 대대 단위 기동이 서술된 ②를 참조 구간으로 권장.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.5291,
+   "duration_s": 315.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31794,
+     "cache_read_input_tokens": 26518,
+     "cache_creation_input_tokens": 60280
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7314,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 32420
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [],
+   "cost_usd": 0.0726872
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

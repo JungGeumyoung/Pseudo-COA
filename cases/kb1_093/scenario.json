@@ -1,0 +1,458 @@
+{
+ "id": "kb1_093",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 05:00",
+  "start_t": 5,
+  "horizon_h": 67,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "교대한 적 제13사단은 839고지와 837고지를 고수해 다부동 접근로 감제를 유지한다. 국군이 정상에 들어오면 북쪽 역사면 예비로 야간 역습해 정상을 되찾는다. 수암산 정면은 369고지에서 제2대대를 고착한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         120,
+         92
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "839고지 정상과 북쪽 사면 진지를 고수한다.",
+       "basis": "서술: 제15사단과 교대한 제13사단이 유학산을 점령했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         120,
+         97
+        ],
+        [
+         120,
+         94
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "주봉 일부를 빼앗기면 북쪽 사면 잔여 병력으로 역습한다.",
+       "basis": "추정: D+2일 주봉 '탈환' 서술로 보아 중간에 적이 주봉 일부를 되찾았다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "axis_xy": [
+        [
+         120,
+         92
+        ],
+        [
+         122,
+         100
+        ],
+        [
+         126,
+         108
+        ]
+       ],
+       "text": "손실이 커지면 북쪽 역사면으로 철수한다.",
+       "basis": "추정 문턱값.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.55,
+        "text": "E1 손실 0.55 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         138,
+         92
+        ],
+        [
+         138,
+         90
+        ]
+       ],
+       "text": "837고지 정상 진지를 고수한다.",
+       "basis": "서술: 제1대대의 8일간 반복 공격을 막았다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "axis_xy": [
+        [
+         138,
+         92
+        ],
+        [
+         136,
+         100
+        ],
+        [
+         134,
+         108
+        ]
+       ],
+       "text": "손실이 커지면 북쪽으로 철수한다.",
+       "basis": "추정 문턱값.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "E2 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         126,
+         99
+        ],
+        [
+         122,
+         94
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "아군이 주봉에 들어오면 북쪽 역사면에서 주봉으로 역습한다.",
+       "basis": "추정: 주봉 상실은 유학산 방어 전체를 무너뜨리므로 예비를 먼저 주봉에 투입한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "OBJ2",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         134,
+         98
+        ],
+        [
+         137,
+         93
+        ],
+        [
+         138,
+         90
+        ]
+       ],
+       "text": "아군이 837고지에 들어오면 837고지로 역습한다.",
+       "basis": "서술: 9회에 걸친 백병전. 문턱은 추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 2 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         130,
+         112
+        ],
+        [
+         130,
+         120
+        ]
+       ],
+       "text": "손실이 커지면 북쪽으로 철수한다.",
+       "basis": "추정 문턱값.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "E3 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         128,
+         118
+        ],
+        [
+         120,
+         90
+        ],
+        [
+         120,
+         80
+        ]
+       ],
+       "text": "517고지와 원정동 접근로에 박격포·포 사격을 한다.",
+       "basis": "추정: 사단 포병의 지원 없이 고지 방어가 불가능했을 것이다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 10
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         128,
+         118
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "아군이 주봉에 들어오면 주봉 정상에 집중 사격한다.",
+       "basis": "추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         74,
+         98
+        ],
+        [
+         78,
+         93
+        ],
+        [
+         82,
+         88
+        ]
+       ],
+       "text": "369고지에서 수암산의 제2대대를 고착한다.",
+       "basis": "서술: 수암산 정면 공방 지속.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         74,
+         98
+        ],
+        [
+         78,
+         93
+        ],
+        [
+         82,
+         88
+        ]
+       ],
+       "text": "야간에 수암산 진지를 공격한다.",
+       "basis": "추정: 앞선 구간의 반복 반격.",
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제13사단 포병(1개 대대 규모)",
+    "alias": "적 포병대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 70,
+    "equipment": "76mm 포·120mm 박격포(추정)",
+    "position": {
+     "xy": [
+      128,
+      118
+     ],
+     "note": "유학산 북쪽 계곡(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공 가능, 전방항공통제관 통제"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공 가능"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공 가능"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 4.5,
+    "note": "야간"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "weather",
+    "duration_h": 66,
+    "note": "8월 혹서. 급경사 산악에서 식수·탄약 운반과 후송이 어렵다."
+   }
+  ]
+ }
+}

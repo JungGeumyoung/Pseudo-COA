@@ -1,0 +1,763 @@
+{
+ "id": "kb1_083",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제17연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제17연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제24사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "미 제24보병사단"
+   ],
+   "higher_mission": "미 제24사단은 거창-합천-권빈리 방면에서 북한군 제4사단의 동진을 저지하여 낙동강방어선 점령에 필요한 시간을 확보한다.",
+   "higher_intent": "미 제34연대가 가천-명당산선에서 적을 지연하고, 그 후방 권빈리 일대의 주저항선에서 적의 동진을 막는다.",
+   "assigned_task": "국군 제17연대는 미 제34연대 후방의 551고지-망일산선을 점령하고 권빈리 서쪽에서 적의 동진을 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "미 제34연대",
+     "alias": "인접 연대 1",
+     "side": "전방(서측)",
+     "mission": "가천-명당산선에서 주력은 명당산 서북능선, 1개 대대는 317고지, 1개 대대는 월현산을 점령하여 적을 지연한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      82,
+      75
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "미 제21연대 제1대대",
+     "alias": "인접 대대 1",
+     "side": "남측(합천 방면)",
+     "mission": "합천 일대를 방어하여 북한군 제18연대의 진출을 저지한다.",
+     "type": "infantry",
+     "echelon": "대대",
+     "xy": [
+      172,
+      18
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "미 제34연대는 가천-명당산선에서 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T6"
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "미 제34연대는 손실이 커지면 합천 방향으로 철수한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "A1",
+      "fraction": 0.4,
+      "text": "미 제34연대 손실 0.4 초과(추정)"
+     },
+     "action": {
+      "mode": "withdraw",
+      "objective_ref": "T14"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "미 제21연대 제1대대는 합천 일대를 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T14"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 미 제34연대 후방 전투지경선(가천리 동쪽)부터 권빈리 동쪽까지, 북으로 551고지 북측, 남으로 망일산 남측까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "전방 전투지경선(제17연대-미 제34연대)",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       100,
+       140
+      ],
+      [
+       100,
+       100
+      ],
+      [
+       102,
+       70
+      ],
+      [
+       105,
+       45
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "남측 전투지경선(제17연대-미 제21연대 제1대대)",
+     "between": [
+      "아군 연대",
+      "A2"
+     ],
+     "xy": [
+      [
+       105,
+       45
+      ],
+      [
+       150,
+       48
+      ],
+      [
+       200,
+       50
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "북측 한계선",
+     "between": [
+      "아군 연대",
+      "없음"
+     ],
+     "xy": [
+      [
+       100,
+       140
+      ],
+      [
+       150,
+       140
+      ],
+      [
+       200,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제17연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 650,
+    "equipment": "소총, 기관총, 81mm 박격포",
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(권빈리 서쪽)",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제17연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 650,
+    "equipment": "소총, 기관총, 81mm 박격포",
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(권빈리 서쪽)",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제17연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 650,
+    "equipment": "소총, 기관총, 81mm 박격포",
+    "relationship": "건제",
+    "location": {
+     "note": "권빈리 일대",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제17연대 중화기중대",
+    "alias": "중화기중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 75,
+    "equipment": "박격포 수 문(추정)",
+    "relationship": "건제",
+    "location": {
+     "note": "권빈리 일대",
+     "ref": "T3"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "합천 서북부 권빈리 일대. 거창-합천-고령 방면 도로가 만나는 교통 요지로 황강이 서에서 동으로 흐르고 가천이 가천리에서 합류한다. 북쪽과 서쪽은 험준한 산지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "551고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      120,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 551,
+     "evidence": "권빈리 서쪽 3km",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T2",
+     "name": "망일산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      124,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "551고지와 함께 연대 주저항선을 이룸",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T3",
+     "name": "권빈리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      150,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "거창-고령-합천 중간 교통 요지"
+    },
+    {
+     "id": "T4",
+     "name": "가천리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      90,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "권빈리 서쪽 6km, 가천과 황강 합류점"
+    },
+    {
+     "id": "T5",
+     "name": "317고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      80,
+      102
+     ],
+     "estimated": true,
+     "elevation_m": 317,
+     "evidence": "가천리 서쪽 1km"
+    },
+    {
+     "id": "T6",
+     "name": "명당산",
+     "alias": "고지 D",
+     "other_names": [
+      "383고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      80,
+      62
+     ],
+     "estimated": true,
+     "elevation_m": 383,
+     "evidence": "감토봉 남쪽 3km, 거창 동남쪽 8km"
+    },
+    {
+     "id": "T7",
+     "name": "감토봉",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      68,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "거창 동남쪽 6km"
+    },
+    {
+     "id": "T8",
+     "name": "월현산",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      100,
+      50
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "미 제34연대 1개 대대 배치"
+    },
+    {
+     "id": "T9",
+     "name": "숙성산",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      165,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 후방"
+    },
+    {
+     "id": "T10",
+     "name": "상현리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      165,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 후방"
+    },
+    {
+     "id": "T11",
+     "name": "대야리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      62,
+      50
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "명당산 서남쪽"
+    },
+    {
+     "id": "T12",
+     "name": "덕암리",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      196,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "고령 서쪽, 연대의 이전 위치"
+    },
+    {
+     "id": "T13",
+     "name": "거창",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      25,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 출발지"
+    },
+    {
+     "id": "T14",
+     "name": "합천",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      175,
+      10
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "권빈리 남쪽"
+    },
+    {
+     "id": "T15",
+     "name": "황강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      120,
+      96
+     ],
+     "line": [
+      [
+       25,
+       125
+      ],
+      [
+       60,
+       110
+      ],
+      [
+       90,
+       99
+      ],
+      [
+       120,
+       96
+      ],
+      [
+       150,
+       95
+      ],
+      [
+       163,
+       70
+      ],
+      [
+       172,
+       15
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "거창에서 합천으로 흐르는 낙동강 지류, 하계 도섭 가능 추정"
+    },
+    {
+     "id": "T16",
+     "name": "가천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      90,
+      120
+     ],
+     "line": [
+      [
+       88,
+       145
+      ],
+      [
+       90,
+       120
+      ],
+      [
+       90,
+       100
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "북쪽에서 흘러 가천리에서 황강에 합류"
+    },
+    {
+     "id": "T17",
+     "name": "551고지 서측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      112,
+      106
+     ],
+     "line": [
+      [
+       106,
+       104
+      ],
+      [
+       112,
+       106
+      ],
+      [
+       120,
+       108
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 배치 지역"
+    },
+    {
+     "id": "T18",
+     "name": "망일산 서쪽 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      115,
+      72
+     ],
+     "line": [
+      [
+       106,
+       70
+      ],
+      [
+       115,
+       72
+      ],
+      [
+       124,
+       72
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제2대대 배치 지역"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "거창-가천리-권빈리 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       25,
+       126
+      ],
+      [
+       60,
+       112
+      ],
+      [
+       90,
+       101
+      ],
+      [
+       110,
+       99
+      ],
+      [
+       130,
+       99
+      ],
+      [
+       150,
+       100
+      ],
+      [
+       175,
+       118
+      ],
+      [
+       196,
+       130
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "권빈리-합천 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       150,
+       100
+      ],
+      [
+       160,
+       80
+      ],
+      [
+       165,
+       55
+      ],
+      [
+       170,
+       30
+      ],
+      [
+       175,
+       10
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "감토봉-명당산-망일산 능선길",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       68,
+       84
+      ],
+      [
+       75,
+       72
+      ],
+      [
+       80,
+       62
+      ],
+      [
+       95,
+       62
+      ],
+      [
+       110,
+       68
+      ],
+      [
+       124,
+       72
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제4사단 제5연대 1개 대대(명당산 방면)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "personnel": 450,
+    "identified": true,
+    "known_at_start": "거창에서 황강을 따라 감토봉 방면으로 진출 중",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      66,
+      88
+     ],
+     "note": "감토봉 일대",
+     "ref": "T7",
+     "frontage_m": 1000
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제4사단 제5연대 1개 대대(317고지 방면)",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "personnel": 450,
+    "identified": true,
+    "known_at_start": "거창에서 황강을 따라 동진 중",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      60,
+      106
+     ],
+     "note": "거창 동남쪽 황강 연안",
+     "ref": "R1",
+     "frontage_m": 1000
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제4사단 제5연대 1개 대대(예비)",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "personnel": 450,
+    "identified": true,
+    "known_at_start": "제5연대 후속 제대로 판단",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      55,
+      95
+     ],
+     "note": "감토봉 서쪽",
+     "ref": "T7"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제4사단 제18연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "identified": true,
+    "known_at_start": "합천 방향으로 진출하여 미 제21연대 제1대대를 공격 중",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      90,
+      25
+     ],
+     "note": "합천 서쪽 접근로",
+     "frontage_m": 2000
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 06:00",
+   "light": "day",
+   "notes": "7월 말 혹서기. 산악 지형으로 차량 기동은 도로에 국한된다. 전방에 미 제34연대가 지연 중이다."
+  }
+ }
+}

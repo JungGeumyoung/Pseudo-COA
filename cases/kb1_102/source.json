@@ -1,0 +1,156 @@
+{
+ "id": "kb1_102",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-08-31",
+   "end_date": "1950-09-06",
+   "d_day": "1950-08-31",
+   "order_time": "D일 18:00",
+   "text": "북한군 제6·제7사단의 8월 31일 야간 총공격 직전 미 제35연대의 방어 명령에서 시작해 9월 6일 북한군의 수세 전환까지의 전투 전 기간.",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 연대의 첫 결심인 총공격 직전의 방어 배치로 둔다."
+  },
+  "perspective_rationale": "관점 지정에 따라 남강변과 검암리 일대 작전지역을 맡은 미 제35연대를 관점으로 한다. 관점 지정에 포함된 미 제27연대 제2대대는 연대에 배속된 예비로 둔다. 실제로는 9월 1~3일에 연대 지역에 투입되었으나 관점 지정을 따라 명령 시점에 배속된 것으로 가정한다. 사단 예비 미 제27연대(-)의 함안 역습은 상급 규칙으로 둔다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "북한군 제7사단이 제1·제2대대 간격과 제2대대 강변진지를 돌파했으나 공중폭격과 포병화력으로 저지되었고, 제1대대는 검암리 정면에서 공격을 격퇴했다. 미 제27연대 제2대대가 9월 3일 진지를, 9월 4일 말굽 고지를 탈환하고 후방지역의 적을 격퇴했다. 사단은 방어선을 유지했고 북한군은 수세로 전환했다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 200,
+   "origin": "캔버스 (0,0)은 진동리 서남방 해안 부근, 북쪽 +y. 남강이 캔버스 북부를 서에서 동으로 흘러 동북 모서리에서 낙동강과 합류한다. 1단위 100m로는 연대·인접 연대 지역(약 40km)이 들어가지 않아 200m로 바꾸었다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_102_마산_서북방_전투",
+  "title": "마산 서북방 전투",
+  "dates": "1950. 8. 31.~9. 6.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '마산 서북방 전투' (pdf 338쪽)",
+  "pdf_page": 338,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 21,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 3
+   },
+   "sim_value": 8,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "미 제27연대를 마산에 예비로 두었다가 함안 피탈 즉시 제1대대를 투입해 함안 서측고지에서 저지",
+    "alternative": "예비를 전선에 분산 배치했거나 투입을 늦췄다면 함안 돌파가 마산 방면으로 확대되었을 가능성",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "미 제27연대 제2대대를 남강 정면에 투입해 9월 3일 진지 탈환, 이후 말굽고지·후방 침투 병력 격퇴에 반복 운용",
+    "alternative": "예비대대를 한 곳에 고정시켰다면 제35연대 후방 침투 병력과 제24연대 후방 위협을 동시에 처리하지 못했을 것",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제1·제2대대 간격 돌파에 대해 유엔공군 집중폭격으로 저지",
+    "alternative": "공중지원이 없었다면 간격 돌파가 확대되었을 것",
+    "effect": "direction",
+    "representable": false,
+    "explicit": true,
+    "quote": "제1대대와제2대대 간격을 돌파하였으나 유엔공군의 집중폭격으로 저지되었다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.113,
+   "duration_s": 365.3,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 32033,
+     "cache_read_input_tokens": 51020,
+     "cache_creation_input_tokens": 13739
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 10865,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 16490
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 42,
+   "flagged": [
+    {
+     "id": "E:E4[1]",
+     "verdict": "hidden_condition",
+     "reason": "전투산은 이미 아군이 보유했다가 다시 뺏고 빼앗기는 전투력 변동의 결과로 재점령된 것인데 조건 없이 함안 공격에 이어지는 즉시 행동으로 되어 있다",
+     "fix": "전투산 지역의 적·아군 전투력 조건(예: 해당 지역 아군 전투력이 일정 규모 이하로 저하)을 trigger로 하는 조건부 행동으로 바꾼다"
+    }
+   ],
+   "cost_usd": 0.06050320000000001
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E4[0]: '피탈'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "진주": "지점 1'",
+  "서북방": "[전투명]"
+ }
+}

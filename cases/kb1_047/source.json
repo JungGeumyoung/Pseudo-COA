@@ -1,0 +1,167 @@
+{
+ "id": "kb1_047",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-06-26",
+   "end_date": "1950-06-29",
+   "d_day": "1950-06-27",
+   "order_time": "D-1일 17:00 (1950-06-26 17:00)",
+   "text": "말고개 전투 전체. 1950-06-26 17:00 연대가 말고개 방어진지를 편성한 때부터 1950-06-29 14:00 사단의 홍천 철수 지시까지.",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대의 첫 결심인 6월 26일 17:00 좌·우일선 방어진지 편성이다."
+  },
+  "perspective_rationale": "관점이 국군 제6사단 제2연대로 지정됐다. 이 연대는 구간 시작 때 말고개 작전지역을 맡았다. 뒤에 증원된 제19연대는 상급 규칙과 인접 부대로 둔다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "연대는 6월 28일 자주포 10대를 노획·파괴했다. 같은 날 야간 공격으로 제2대대가 371고지로 물러났으나 6월 29일 00:00 주저항선을 회복했다. 6월 29일 08:00 공격도 4시간 만에 격퇴했고, 14:00 사단 지시로 홍천으로 철수했다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 홍천 남서쪽 약 6km 지점(추정). 한계리에서 홍천까지 약 15km라는 서술로 축척을 맞췄다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_047_말고개_전투",
+  "title": "말고개 전투",
+  "dates": "1950. 6. 27.~29.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '말고개 전투' (pdf 211쪽)",
+  "pdf_page": 211,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "371고지로 철수한 제2대대에 제1대대와 협동 반격을 명령",
+    "alternative": "반격하지 않고 371고지 선에서 방어로 전환",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "굴곡이 많은 작은말고개 도로 양편에 대전차포와 특공대를 배치하고 집중사격으로 보병과 자주포를 분리",
+    "alternative": "대전차 수단을 도로 애로에 두지 않고 고지 방어에만 의존",
+    "effect": "direction",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "6월 28일 5시 30분 제1대대의 복골 방면 역습 후 역포위 우려 시 말고개로 복귀",
+    "alternative": "역습 없이 진지 고수, 또는 복골에서 계속 버팀",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1324,
+   "duration_s": 368.0,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31563,
+     "cache_read_input_tokens": 47487,
+     "cache_creation_input_tokens": 22079
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9958,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 14102
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [
+    {
+     "id": "E:E3[1]",
+     "verdict": "time_copied",
+     "reason": "실제 경과의 '28일 05:00 한계리 점령' 직후라는 시점을 그대로 D+1일 06:00으로 옮겨 적었다.",
+     "fix": "고정 시각 대신 E1의 한계리 점령(이어서)에 뒤따르는 행동으로 바꾼다."
+    },
+    {
+     "id": "E:E1[1]",
+     "verdict": "time_copied",
+     "reason": "실제 경과의 '한계리 점령 뒤 병력 증강' 시점을 그대로 D+1일 06:00 계획 시각으로 옮겨 적었다.",
+     "fix": "고정 시각 대신 한계리 점령에 이어지는 행동('이어서')으로 바꾼다."
+    },
+    {
+     "id": "E:H1[1]",
+     "verdict": "hidden_condition",
+     "reason": "when에는 전투력 조건(손실 0.6초과)을 걸어두고 text에는 '말고개가 뚫리면'이라는 위치·돌파 조건을 섞어 적었다.",
+     "fix": "text를 when과 일치하도록 '제2대대 손실이 커지면 추격한다'처럼 전투력 조건으로만 서술한다."
+    }
+   ],
+   "cost_usd": 0.0707912
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [
+   "friendly_actual: 국군 제6사단"
+  ],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "말고개": "지점 1'"
+ }
+}

@@ -1,0 +1,441 @@
+{
+ "id": "kb2_018",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 12:00",
+  "start_t": 12,
+  "horizon_h": 86,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "아군 연대 건제 대대 전투력 30% 미만(제2대대와 제3대대(-) 손실 모두 0.7 초과)",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "제2대대 손실 0.7 초과",
+      "group": "G2",
+      "fraction": 0.7
+     },
+     {
+      "type": "losses_exceed",
+      "text": "제3대대(-) 손실 0.7 초과",
+      "group": "G3",
+      "fraction": 0.7
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "휴전회담 결렬 위기 속 국지 선제공격으로 장차 공세의 발판이 될 수도고지와 지형능선 전초를 동시에 탈취하고, 동굴 진지의 후속 병력으로 교대·강화하며 국군의 역습을 포격과 반격으로 격퇴한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "수도고지, 663고지, 지형능선, 575고지에 공격준비사격을 집중한다.",
+       "basis": "서술: D일 18:50 공격준비사격 완료 후 공격, 지형능선은 18:40부터 전투. 개시 시각 18:00은 추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 18:00",
+        "value": 18
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "수도고지로 역습하는 국군에게 집중 포격한다.",
+       "basis": "서술: 치열한 포격과 역습 직전 제1연대 1대대장 부상. 문턱 추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         108,
+         90
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 제2대대 방어지역(수도고지 남쪽 접근로) 안에 있음",
+        "side": "friendly",
+        "ref": "CM_BP2",
+        "min_echelon": "중대"
+       },
+       "repeat": {
+        "max": 10,
+        "interval_h": 4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "1개 대대로 수도고지 좌우 계곡에서 수도고지를 공격한다.",
+       "basis": "서술: D일 18:50 1개 대대가 좌우측 계곡으로부터 공격",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         126,
+         114
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         113,
+         102
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 18:50",
+        "value": 18.83
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "수도고지를 점령해 진지를 강화한다.",
+       "basis": "서술: 고지 탈취 후 여섯 차례 역습을 격퇴",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         101
+        ]
+       ]
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "수도고지에 들어온 국군을 반격한다.",
+       "basis": "추정: 8월 전투와 같이 고지 쟁탈 반복",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         113,
+         104
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 수도고지에 있음",
+        "side": "friendly",
+        "ref": "F_SUDO",
+        "min_echelon": "중대"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 3
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "621고지로 철수한다.",
+       "basis": "추정: 대대 전투력 소진 시 철수",
+       "objective_ref": "F_621",
+       "axis_xy": [
+        [
+         110,
+         101
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         126,
+         114
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "적 공격 대대 손실 0.6 초과",
+        "group": "E1",
+        "fraction": 0.6
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "621고지 동굴 진지의 후속 대대로 수도고지 병력을 증원·교대한다.",
+       "basis": "추정: 약 3일간 연속 역습을 견딘 것은 후속 병력 투입을 뜻함",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         124,
+         118
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         113,
+         102
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "적 공격 대대 손실 0.3 초과",
+        "group": "E1",
+        "fraction": 0.3
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "수도고지를 고수한다.",
+       "basis": "추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         101
+        ]
+       ]
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "수도고지를 탈취한 국군을 반격한다.",
+       "basis": "서술: 탈환 직후 중공군 반격. 문턱 추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         121,
+         108
+        ],
+        [
+         113,
+         102
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 대대 이상이 수도고지에 있음",
+        "side": "friendly",
+        "ref": "F_SUDO",
+        "min_echelon": "대대"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 2
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "주방어선에서 1개 중대를 서측 계곡으로 보내 수도고지를 강화한다.",
+       "basis": "추정: 수도고지 장악 대대가 큰 손실을 입으면 주방어선 병력으로 보강",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         118,
+         134
+        ],
+        [
+         112,
+         128
+        ],
+        [
+         108,
+         118
+        ],
+        [
+         105,
+         110
+        ],
+        [
+         109,
+         101
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "후속 대대 손실 0.4 초과",
+        "group": "H1",
+        "fraction": 0.4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "각 1개 중대로 지형능선과 575고지 전초를 공격한다.",
+       "basis": "서술: D일 18:40 지형능선·575고지에 각각 중대 병력 공격",
+       "objective_ref": "F_JH",
+       "axis_xy": [
+        [
+         80,
+         137
+        ],
+        [
+         80,
+         125
+        ],
+        [
+         80,
+         112
+        ],
+        [
+         80,
+         103
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 18:40",
+        "value": 18.67
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "지형능선과 575고지를 고수한다.",
+       "basis": "서술: 제1기갑연대 6차 역습 격퇴",
+       "objective_ref": "F_JH",
+       "axis_xy": [
+        [
+         80,
+         103
+        ]
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제35사단 제103연대 후속 1개 대대",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 700,
+    "position": {
+     "xy": [
+      124,
+      118
+     ],
+     "ref": "F_621",
+     "note": "621고지 북쪽 동굴 진지에 은닉된 후속 대대(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:00",
+    "t": 19,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "D일 야간, 05:30 여명"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 13.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 19:00",
+    "t": 43,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "D+1일 야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 13.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 19:00",
+    "t": 67,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "D+2일 야간"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "air_window",
+    "duration_h": 15.5,
+    "note": "주간 및 초저녁 근접항공지원 가능(서술상 D+3일 20:00 공격 시 근접항공지원)"
+   },
+   {
+    "when": "D+3일 19:00",
+    "t": 91,
+    "kind": "night",
+    "duration_h": 7,
+    "note": "D+3일 야간"
+   }
+  ]
+ }
+}

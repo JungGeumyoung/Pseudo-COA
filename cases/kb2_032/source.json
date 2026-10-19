@@ -1,0 +1,165 @@
+{
+ "id": "kb2_032",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-06-14",
+   "end_date": "1953-06-18",
+   "d_day": "1953-06-14",
+   "order_time": "D+1일 02:00",
+   "text": "1090고지 전투 전체(1953.6.14 21:30 중공군 공격부터 6.18 10:50 1090고지 최종 탈환까지). 명령 시점은 1090고지 정상이 야간 3차례 공격으로 피탈된 직후 연대가 첫 역습을 결심한 D+1일(6.15) 새벽.",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 연대의 첫 결심은 피탈된 1090고지를 여명에 역습으로 되찾는 것이므로 임무 유형 '역습'과 맞는다."
+  },
+  "perspective_rationale": "관점 지정에 따라 1090고지를 포함한 사단 좌측 정면의 작전지역을 맡은 제62연대를 쓴다. 제1대대와 제3대대가 차례로 역습을 수행했으며 모두 연대 예하다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "1090고지는 6.15·6.16·6.17에 탈환 후 다시 피탈되었으나 6.18 10:50 제3대대 제10중대가 목표 A와 1090고지를 탈취해 최종 확보했다. 사단 피해 전사 53, 부상 326, 실종 147, 적 사살 615."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 1090고지 남서 약 14km의 가상점. 1090고지를 (100,110)에 두었다.",
+   "source": "text",
+   "atlas_pages": "없음(서술의 상대 거리로 추정: 1218고지 1km 북, 어은산 2km, 크리스마스고지 300~400m, 무명고지·목표 A 150m)"
+  },
+  "seed_id": "kb2_032_1090고지_전투",
+  "title": "1090고지 전투",
+  "dates": "1953. 6. 14.~18.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '1090고지 전투' (pdf 132쪽)",
+  "pdf_page": 132,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 10,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "6월 18일 연대장이 1090고지를 감제하는 서남쪽 능선의 목표 A를 먼저 점령한 뒤 1090고지를 공격하도록 지시",
+    "alternative": "이전처럼 1090고지 정상을 직접 공격",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "1090고지에서 150m 지점에위치해 감제가 가능하여 1090고지 탈환을 위해서는 반드시 점령해야만 하는 곳이었다."
+   },
+   {
+    "decision": "정면공격과 함께 일부 병력을 측후방으로 우회시키는 공격(6월 15일 3차 공격, 6월 17일 제11중대 서쪽 우회)",
+    "alternative": "정면공격만 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": "동쪽에서 공격한 제9중대가 고지 정상 부근에서 중공군과 격전을 벌이는 동안 서쪽으로 우회한 제11중대가 기습을 가해 공격개시 1시간 30분 만에 1090고지를 탈환하는데 성공하였다."
+   },
+   {
+    "decision": "탈환 후 1개 중대 규모로 고지를 지키다 야간·주간 반격에 매번 상실",
+    "alternative": "탈환 직후 예비대를 증원하고 동서 양측 접근로에 방어 병력과 화력을 사전 배치",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": "협공에 놓인 중대는 약 1시간 동안 이들의 공격을 저지한 후 고지 남쪽 기슭으로 물러남으로써 다시 고지를 내어주게 되었다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2549,
+   "duration_s": 438.8,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31214,
+     "cache_read_input_tokens": 52778,
+     "cache_creation_input_tokens": 33887
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 10450,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17120
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 33,
+   "flagged": [
+    {
+     "id": "E:E5[0]",
+     "verdict": "time_copied",
+     "reason": "실제 포격 시각은 D일 21:30, D+1일 22:00, D+2일 22:00인데 계획 시각을 D+1일 21:30으로 잘못 복사해 날짜와 시각이 실제 경과와 불일치한다.",
+     "fix": "계획 시각을 D+1일 22:00으로 바로잡거나 '매일 야간 공격 전'이라는 상급 규칙에 맞춰 반복(repeat) 규칙으로 바꾼다."
+    },
+    {
+     "id": "E:E2[1]",
+     "verdict": "hidden_condition",
+     "reason": "적의 1090고지 서측 역습은 아군이 낮에 고지를 탈취해 점령하고 있을 때만 의미가 있는 반응인데도 고정된 계획 시각(D+1일 22:00)으로만 되어 있어 아군 점령 여부라는 전투력 조건이 빠져 있다.",
+     "fix": "timing을 '조건'으로 바꾸고 trigger를 '아군 중대 이상이 1090고지 안에 있음'으로 설정한다."
+    },
+    {
+     "id": "E:E3[1]",
+     "verdict": "hidden_condition",
+     "reason": "M1고지 능선에서의 동측 협공도 아군이 1090고지를 점령 중일 때만 성립하는 반격인데 고정된 계획 시각(D+2일 22:00)으로만 기술되어 아군 점령이라는 전투력 조건이 빠져 있다.",
+     "fix": "timing을 '조건'으로 바꾸고 trigger를 '아군 중대 이상이 1090고지 안에 있음'으로 설정한다."
+    }
+   ],
+   "cost_usd": 0.06855119999999999
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "E2[1]: counterattack",
+   "E3[1]: counterattack"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

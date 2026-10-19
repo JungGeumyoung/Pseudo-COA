@@ -1,0 +1,720 @@
+{
+ "id": "kb2_003",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제1기갑연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "수도사단 제1기갑연대",
+    "1기갑연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "수도사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 수도사단"
+   ],
+   "higher_mission": "수도사단은 월비산과 그 일대 고지를 점령해 작전 주도권을 잡고, 동해안의 북한군을 남강 북쪽으로 격퇴한다.",
+   "higher_intent": "월비산을 점령해 고성-통천-원산 도로와 남강 일대를 감제하고 전선을 북쪽으로 밀어 올린다. 이를 위해 동쪽의 351고지와 148고지를 먼저 확보하고 공격 발판으로 쓴다.",
+   "assigned_task": "351고지-148고지 선을 먼저 확보한 뒤 월비산을 탈취한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "수도사단 좌측 전방연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서쪽)",
+     "mission": "현 진지를 방어하고 연대 좌측방을 경계한다(추정).",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      50,
+      110
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제11사단",
+     "alias": "인접 사단 1",
+     "side": "좌측 원방(서쪽)",
+     "mission": "국군 제1군단 주저항선 서측을 방어한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      15,
+      100
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "수도사단",
+     "text": "사단 포병은 D일 05:00부터 월비산 북한군 진지와 장애물에 공격준비사격을 한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 5,
+      "text": "D일 05:00 공격준비사격 개시"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "T1"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 좌측 전방연대와의 전투지경선부터 동해안까지, 351고지-148고지 선부터 남강까지이다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 연대 전투지경선",
+     "between": [
+      "제1기갑연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       72,
+       60
+      ],
+      [
+       70,
+       110
+      ],
+      [
+       72,
+       155
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 전방한계(남강)",
+     "between": [
+      "제1기갑연대",
+      "적"
+     ],
+     "xy": [
+      [
+       72,
+       155
+      ],
+      [
+       100,
+       156
+      ],
+      [
+       140,
+       152
+      ],
+      [
+       162,
+       150
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 351고지-148고지 선 일대"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 351고지-148고지 선 일대"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 351고지-148고지 선 일대"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "연대 중박격포중대",
+    "alias": "중박격포중대",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "4.2인치 박격포",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "수도사단 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "연대 후방 203고지 남쪽 일대",
+     "xy": [
+      112,
+      70
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "동해안 최북단 고성 남쪽의 산악지대다. 표고 459m의 월비산이 최고봉이고, 동쪽으로 351·208·148·187고지, 남쪽으로 339·345·203고지, 북쪽으로 350·201·146고지가 이어진다. 북쪽에는 남강이 동쪽으로 흘러 바다로 들고, 해안을 따라 고성-통천-원산 도로가 난다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "월비산",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      90,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 459,
+     "evidence": "동해안 최북단 표고 459m의 최고봉, 고성-통천 도로와 남강을 감제",
+     "preparation": "fortified",
+     "other_names": [
+      "459고지"
+     ]
+    },
+    {
+     "id": "T2",
+     "name": "351고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      110,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 351,
+     "evidence": "월비산 동쪽 약 2km, 공격 전 확보"
+    },
+    {
+     "id": "T3",
+     "name": "208고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      120,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 208,
+     "evidence": "351고지 동쪽으로 이어지는 고지"
+    },
+    {
+     "id": "T4",
+     "name": "148고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      128,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 148,
+     "evidence": "351고지와 함께 공격 전 확보한 고지"
+    },
+    {
+     "id": "T5",
+     "name": "187고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      138,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 187,
+     "evidence": "148고지 동쪽 해안 방향 고지"
+    },
+    {
+     "id": "T6",
+     "name": "339고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      85,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 339,
+     "evidence": "월비산 남쪽 고지군"
+    },
+    {
+     "id": "T7",
+     "name": "345고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      97,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 345,
+     "evidence": "월비산 남쪽 고지군"
+    },
+    {
+     "id": "T8",
+     "name": "203고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      110,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 203,
+     "evidence": "월비산 남쪽 고지군"
+    },
+    {
+     "id": "T9",
+     "name": "350고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      100,
+      124
+     ],
+     "estimated": true,
+     "elevation_m": 350,
+     "evidence": "제2대대의 중간목표, 월비산 북쪽 접근로상 고지"
+    },
+    {
+     "id": "T10",
+     "name": "261고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      101,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 261,
+     "evidence": "제1대대가 동쪽에서 월비산을 공격한 발판"
+    },
+    {
+     "id": "T11",
+     "name": "201고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      98,
+      138
+     ],
+     "estimated": true,
+     "elevation_m": 201,
+     "evidence": "350고지 북쪽 고지"
+    },
+    {
+     "id": "T12",
+     "name": "146고지",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      110,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 146,
+     "evidence": "350고지 북쪽 고지"
+    },
+    {
+     "id": "T13",
+     "name": "남강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      110,
+      155
+     ],
+     "line": [
+      [
+       58,
+       90
+      ],
+      [
+       62,
+       140
+      ],
+      [
+       80,
+       158
+      ],
+      [
+       110,
+       156
+      ],
+      [
+       140,
+       152
+      ],
+      [
+       163,
+       150
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "북한군을 몰아낼 한계선, 동해로 흐른다"
+    },
+    {
+     "id": "T14",
+     "name": "고성",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      135,
+      162
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연막탄을 고성 남쪽까지 투하"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "고성-통천-원산 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       150,
+       20
+      ],
+      [
+       152,
+       60
+      ],
+      [
+       152,
+       100
+      ],
+      [
+       148,
+       130
+      ],
+      [
+       140,
+       155
+      ],
+      [
+       135,
+       162
+      ],
+      [
+       145,
+       195
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "351고지 보급로",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       115,
+       60
+      ],
+      [
+       118,
+       80
+      ],
+      [
+       115,
+       95
+      ],
+      [
+       112,
+       105
+      ],
+      [
+       110,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "351고지-350고지-월비산 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       110,
+       110
+      ],
+      [
+       105,
+       117
+      ],
+      [
+       100,
+       124
+      ],
+      [
+       95,
+       119
+      ],
+      [
+       90,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "261고지-월비산 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       110,
+       110
+      ],
+      [
+       105,
+       107
+      ],
+      [
+       101,
+       106
+      ],
+      [
+       96,
+       108
+      ],
+      [
+       90,
+       110
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "동해",
+     "alias": "바다 1",
+     "polygon": [
+      [
+       163,
+       0
+      ],
+      [
+       200,
+       0
+      ],
+      [
+       200,
+       200
+      ],
+      [
+       160,
+       200
+      ],
+      [
+       163,
+       150
+      ],
+      [
+       165,
+       80
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제19사단 월비산 방어대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "월비산 정상 일대에 강력한 거점을 편성하고 있다.",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      90,
+      110
+     ],
+     "frontage_m": 1200,
+     "polygon": [
+      [
+       84,
+       104
+      ],
+      [
+       96,
+       104
+      ],
+      [
+       97,
+       114
+      ],
+      [
+       90,
+       118
+      ],
+      [
+       83,
+       114
+      ]
+     ],
+     "note": "월비산 정상과 사면의 축성 진지, 장애물"
+    },
+    "other_names": [
+     "적 제19사단 예하 1개 연대 주력"
+    ]
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제19사단 350고지 대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "월비산 북쪽 350고지에 진지를 두고 있다.",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      100,
+      124
+     ],
+     "frontage_m": 800,
+     "note": "350고지 일대 진지"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제19사단 연대 예비대대",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "350고지 북쪽 남강 남안 고지군에 예비가 있다고 추정한다.",
+    "posture": "예비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      104,
+      139
+     ],
+     "frontage_m": 1200,
+     "note": "201고지-146고지 일대(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제19사단 포병",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "남강 북쪽에서 월비산 방어를 지원할 것으로 본다.",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      95,
+      168
+     ],
+     "note": "남강 북쪽(추정)"
+    },
+    "equipment": "82mm 박격포, 야포(규모 미상)"
+   },
+   {
+    "id": "E5",
+    "unit": "북한군 제9사단 1개 연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "적 제9사단이 해안지역을 맡고 있다.",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      150,
+      170
+     ],
+     "frontage_m": 3000,
+     "note": "남강 북쪽 해안지역"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 06:00",
+   "light": "dawn",
+   "notes": "D-1일에 351고지-148고지 선을 확보했다. 공격준비사격 후 고성 남쪽까지 연막을 쳐 기동을 은폐한다. 포병과 항공 지원이 가능하다."
+  }
+ }
+}

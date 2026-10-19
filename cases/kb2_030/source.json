@@ -1,0 +1,152 @@
+{
+ "id": "kb2_030",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-06-11",
+   "end_date": "1953-06-14",
+   "d_day": "1953-06-11",
+   "order_time": "1953-06-11 01:00(추정)",
+   "text": "D-1일(6.10) 일몰 적 제60군 공세로 973고지·883고지 피탈 직후, 사단예비 제35연대가 973고지 역습 명령을 받은 D일 01:00부터 미주리선 와해(D+3일 23:00)까지 전투 전체",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 제35연대의 첫 결심인 973고지 역습 명령 수령 직후로 둔다."
+  },
+  "perspective_rationale": "사용자가 관점을 제35연대(사단예비, 973고지 역습)로 지정했다. 973고지는 원래 제27연대 지역이었으나 피탈 후 사단장이 973고지 역습 지역을 제35연대에 부여했으므로 제35연대가 973고지 축의 작전지역을 맡은 연대로 본다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "D일 16:00경 973고지를 탈환했으나 19:00경 적의 좌우협공으로 30분 만에 물러났고, D+1일 제2차 역습은 제3대대가 고지 500m 전방까지 진출하는 데 그쳤다. 이후 재편성 미완으로 역습이 중지되고 D+3일 중앙 진지가 1시간 20분 만에 돌파되었다."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 좌하단(0,0)은 황병동 서남쪽 북한강 남안의 임의점, 북쪽 +y",
+   "source": "text",
+   "atlas_pages": "없음(서술의 상대 위치와 거리로 추정, 주저항선 약 10km)"
+  },
+  "seed_id": "kb2_030_미주리선_949고지_973고지_883고지_방어전",
+  "title": "미주리선(949고지-973고지-883고지) 방어전",
+  "dates": "1953. 6. 10.~14.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '미주리선(949고지-973고지-883고지) 방어전' (pdf 124쪽)",
+  "pdf_page": 124,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 2,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 7,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "주저항선 핵심인 973고지와 883고지에 각 1개 중대만 배치하고 제35연대를 황병동에 예비로 보유",
+    "alternative": "핵심 고지에 대대급 병력을 종심 배치하거나 예비를 고지 근접 후방에 추진 배치",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "각 고지에 배치된 1개 중대 병력으로는 각각 연대병력으로 파상공격을 펼치는 중공군을 막아내기는 역부족이었다."
+   },
+   {
+    "decision": "6월 11일 오후 973고지 탈환 후 제2대대 단독으로 고지 확보, 3시간 뒤 좌우협공에 30분 만에 상실",
+    "alternative": "탈환 직후 제3대대를 초월·증원시켜 양 측방을 보강하고 포병 방어사격 구역을 고지 좌우 접근로에 집중",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "6월 11~12일 973고지·883고지에 대한 정면 역습을 세 차례 반복해 3개 연대 전투력을 소모",
+    "alternative": "1차 역습 실패 후 역습을 중지하고 후방 능선에 저지진지를 편성해 제36연대를 온전한 예비로 유지",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "사단장은 제22연대와 제35연대에 의한 역습은 이제 한계에 도달했다고 판단하고제36연대를 역습에 투입하기로 작정하였다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.4118,
+   "duration_s": 378.0,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 33755,
+     "cache_read_input_tokens": 49192,
+     "cache_creation_input_tokens": 40922
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 12485,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18347
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 37,
+   "flagged": [
+    {
+     "id": "E:E4[0]",
+     "verdict": "time_copied",
+     "reason": "02:00은 실제 경과에 기록된 적 제181사단의 실제 증원 투입(돌파 시도) 시각을 그대로 계획 시각으로 옮긴 것이며 '돌파한다'는 10:30경에야 달성된 실제 전투 결과를 즉시 달성되는 계획처럼 서술했다.",
+     "fix": "계획에는 '적 제181사단 후속 연대를 883고지 방면에 투입해 공격한다'는 목표·축선만 남기고, 실제 투입 시각과 진출 결과는 history로 옮기거나 적 전투력 조건(예: 제22연대 저지선 전투력이 일정 수준 이하로 저하 시)에 따른 반응 규칙으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.0870592
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E2[0]: '격퇴'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

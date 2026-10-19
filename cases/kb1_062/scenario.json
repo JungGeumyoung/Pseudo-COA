@@ -1,0 +1,539 @@
+{
+ "id": "kb1_062",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 02:00",
+  "start_t": 2,
+  "horizon_h": 30,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제48연대(-) 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제48연대는 장호원에서 생극-무극리 도로로 남하해 무극리를 거쳐 기름고개를 넘어 음성을 점령한다. 선두대대가 길을 열고 연대 주력과 사단 증원이 후속한다.",
+   "groups": [
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "text": "모도원-동락리 통로로 음성 방면을 정찰한다.",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         88,
+         178
+        ],
+        [
+         90,
+         172
+        ],
+        [
+         98,
+         155
+        ],
+        [
+         100,
+         148
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 2,
+        "text": "D일 02:00"
+       },
+       "basis": "서술: 모도원 부근에서 제2대대 첨병과 교전"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 생극 방면으로 철수한다.",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         90,
+         172
+        ],
+        [
+         82.6,
+         162.4
+        ],
+        [
+         69.7,
+         176.7
+        ],
+        [
+         62.6,
+         181.7
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.3,
+        "text": "정찰대 손실 0.3 초과"
+       },
+       "basis": "추정: 장갑차 1대·사이드카 5대·시체 5구를 남기고 이탈"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "무극리를 지나 무극리-음성 도로로 기름고개 방면을 수색 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         56,
+         150
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00"
+       },
+       "basis": "서술: D일 08:00 1개 중대 규모 적이 기름고개 방면에서 발견됨. 출발 시각 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 보현산 방면 선두대대로 철수한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         82,
+         106
+        ],
+        [
+         78,
+         110
+        ],
+        [
+         73,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.3,
+        "text": "첨병중대 손실 0.3 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "생극-무극리 도로로 남하해 무극리를 지나 기름고개를 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         62,
+         178
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 4,
+        "text": "D일 04:00"
+       },
+       "basis": "서술: D일 11:00 적 본대 1개 대대가 기름고개 서쪽에서 포격하며 공격. 출발 시각 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "385고지를 공격해 음성 도로를 연다.",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ],
+        [
+         94,
+         95
+        ]
+       ],
+       "repeat": {
+        "max": 2,
+        "interval_h": 5
+       },
+       "basis": "추정: 기름고개 정상에서 대치 지속"
+      },
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "text": "야간에 385고지 측방으로 침투한다.",
+       "objective_ref": "CM2",
+       "axis_xy": [
+        [
+         73,
+         112
+        ],
+        [
+         80,
+         100
+        ],
+        [
+         90,
+         94
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "basis": "추정: 연대가 적의 야간침투에 대비함"
+      },
+      {
+       "timing": "조건",
+       "mode": "hold",
+       "text": "보현산-346고지에서 방어한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         81.9,
+         109.6
+        ],
+        [
+         73,
+         112
+        ],
+        [
+         63,
+         110
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "선두대대 손실 0.25 초과"
+       },
+       "basis": "추정: 기름고개 돌파 실패 후 보현산 일대 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "무극리 북쪽으로 철수한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         73,
+         112
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         58,
+         155
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.4,
+        "text": "선두대대 손실 0.4 초과"
+       },
+       "basis": "추정: 보현산 피탈 후 도주"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "생극에서 무극리 북쪽으로 후속한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         57.4,
+         191
+        ],
+        [
+         62.6,
+         181.7
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         57,
+         155
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 12,
+        "text": "D일 12:00"
+       },
+       "basis": "추정: 연대 주력의 후속"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "무극리 북쪽 도로 일대를 확보한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         57,
+         155
+        ],
+        [
+         57,
+         150
+        ]
+       ],
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "장갑차를 앞세우고 포격하며 무극리로 역습한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         57,
+         158
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 무극리 북쪽에 있음"
+       },
+       "basis": "서술: 증원받은 1개 연대 규모가 장갑차를 앞세워 압력. 문턱 추정"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "장호원에서 생극을 거쳐 무극리 북쪽으로 증원한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         64,
+         199
+        ],
+        [
+         62.6,
+         181.7
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         57,
+         156
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24,
+        "text": "D+1일 00:00"
+       },
+       "basis": "서술: 도주한 적이 새 병력을 증원받음. 시각 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "적 제48연대(-)와 함께 무극리로 역습한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         57,
+         156
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69,
+         131
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 무극리 북쪽에 있음"
+       },
+       "basis": "서술: 1개 연대 규모 압력. 문턱 추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 제48연대 선두대대 첨병중대",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 120,
+    "equipment": "경기관총, 박격포",
+    "position": {
+     "xy": [
+      56,
+      150
+     ],
+     "note": "무극리 북쪽 생극-무극리 도로, 선두대대 앞",
+     "ref": "R2"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "적 제15사단 증원대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 100,
+    "equipment": "장갑차, 곡사포 지원",
+    "other_names": [
+     "새로운 증원 병력"
+    ],
+    "position": {
+     "xy": [
+      64,
+      199
+     ],
+     "note": "장호원 방향 생극-무극리 도로 북단",
+     "ref": "T18"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 02:00",
+    "t": 2,
+    "kind": "night",
+    "duration_h": 3.5,
+    "note": "야간. D일 05:30경 박명"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "dawn",
+    "note": "여명"
+   },
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "dawn",
+    "note": "여명"
+   }
+  ]
+ }
+}
