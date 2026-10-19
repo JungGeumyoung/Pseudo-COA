@@ -1,0 +1,3554 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1953-06-11",
+   "end_date": "1953-06-14",
+   "d_day": "1953-06-11",
+   "order_time": "1953-06-11 01:00(추정)",
+   "text": "D-1일(6.10) 일몰 적 제60군 공세로 973고지·883고지 피탈 직후, 사단예비 제35연대가 973고지 역습 명령을 받은 D일 01:00부터 미주리선 와해(D+3일 23:00)까지 전투 전체",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 제35연대의 첫 결심인 973고지 역습 명령 수령 직후로 둔다."
+  },
+  "perspective_rationale": "사용자가 관점을 제35연대(사단예비, 973고지 역습)로 지정했다. 973고지는 원래 제27연대 지역이었으나 피탈 후 사단장이 973고지 역습 지역을 제35연대에 부여했으므로 제35연대가 973고지 축의 작전지역을 맡은 연대로 본다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "D일 16:00경 973고지를 탈환했으나 19:00경 적의 좌우협공으로 30분 만에 물러났고, D+1일 제2차 역습은 제3대대가 고지 500m 전방까지 진출하는 데 그쳤다. 이후 재편성 미완으로 역습이 중지되고 D+3일 중앙 진지가 1시간 20분 만에 돌파되었다."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 좌하단(0,0)은 황병동 서남쪽 북한강 남안의 임의점, 북쪽 +y",
+   "source": "text",
+   "atlas_pages": "없음(서술의 상대 위치와 거리로 추정, 주저항선 약 10km)"
+  },
+  "seed_id": "kb2_030_미주리선_949고지_973고지_883고지_방어전",
+  "title": "미주리선(949고지-973고지-883고지) 방어전",
+  "dates": "1953. 6. 10.~14.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '미주리선(949고지-973고지-883고지) 방어전' (pdf 124쪽)",
+  "pdf_page": 124,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 2,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 7,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "주저항선 핵심인 973고지와 883고지에 각 1개 중대만 배치하고 제35연대를 황병동에 예비로 보유",
+    "alternative": "핵심 고지에 대대급 병력을 종심 배치하거나 예비를 고지 근접 후방에 추진 배치",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "각 고지에 배치된 1개 중대 병력으로는 각각 연대병력으로 파상공격을 펼치는 중공군을 막아내기는 역부족이었다."
+   },
+   {
+    "decision": "6월 11일 오후 973고지 탈환 후 제2대대 단독으로 고지 확보, 3시간 뒤 좌우협공에 30분 만에 상실",
+    "alternative": "탈환 직후 제3대대를 초월·증원시켜 양 측방을 보강하고 포병 방어사격 구역을 고지 좌우 접근로에 집중",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "6월 11~12일 973고지·883고지에 대한 정면 역습을 세 차례 반복해 3개 연대 전투력을 소모",
+    "alternative": "1차 역습 실패 후 역습을 중지하고 후방 능선에 저지진지를 편성해 제36연대를 온전한 예비로 유지",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "사단장은 제22연대와 제35연대에 의한 역습은 이제 한계에 도달했다고 판단하고제36연대를 역습에 투입하기로 작정하였다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.4118,
+   "duration_s": 378.0,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 33755,
+     "cache_read_input_tokens": 49192,
+     "cache_creation_input_tokens": 40922
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 12485,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18347
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 37,
+   "flagged": [
+    {
+     "id": "E:E4[0]",
+     "verdict": "time_copied",
+     "reason": "02:00은 실제 경과에 기록된 적 제181사단의 실제 증원 투입(돌파 시도) 시각을 그대로 계획 시각으로 옮긴 것이며 '돌파한다'는 10:30경에야 달성된 실제 전투 결과를 즉시 달성되는 계획처럼 서술했다.",
+     "fix": "계획에는 '적 제181사단 후속 연대를 883고지 방면에 투입해 공격한다'는 목표·축선만 남기고, 실제 투입 시각과 진출 결과는 history로 옮기거나 적 전투력 조건(예: 제22연대 저지선 전투력이 일정 수준 이하로 저하 시)에 따른 반응 규칙으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.0870592
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "제35연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제5사단 제35연대",
+    "사단예비 연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제5사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제5사단"
+   ],
+   "higher_mission": "제5사단은 548고지-949고지-973고지-883고지 주저항선을 방어하고, 상실한 973고지와 883고지를 역습으로 회복하여 원진지를 회복한다.",
+   "higher_intent": "제36연대로 949고지를 고수하고, 제35연대와 제27연대로 973고지와 883고지를 동시에 역습하여 적이 진지를 강화하기 전에 주저항선을 회복한다. 북한강 만곡부 동안을 확보하여 인접 부대와의 전선 연계를 유지한다.",
+   "assigned_task": "제35연대는 황병동에서 공격하여 973고지를 탈취하고 확보한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제36연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(548고지-949고지)",
+     "mission": "548고지-949고지 주저항선을 방어한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      62,
+      128
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제27연대",
+     "alias": "인접 연대 2",
+     "side": "우측(883고지)",
+     "mission": "사단수색중대와 제35연대 수색중대를 배속받아 883고지를 역습으로 탈취한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      132,
+      100
+     ],
+     "other_names": [
+      "제27연대(+사단수색중대, 제35연대 수색중대)"
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "제20사단",
+     "alias": "인접 사단 1",
+     "side": "우측(통선곡 동쪽)",
+     "mission": "사단 우측에서 주저항선을 방어한다.",
+     "echelon": "사단",
+     "type": "infantry",
+     "xy": [
+      165,
+      110
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A2",
+     "text": "제27연대는 D일 04:30 제2대대로 883고지를 역습한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 4.5,
+      "text": "D일 04:30 사단 명령의 역습 개시 시각"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "H883",
+      "axis_xy": [
+       [
+        130,
+        100
+       ],
+       [
+        132,
+        110
+       ],
+       [
+        133,
+        120
+       ],
+       [
+        133,
+        127
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "제36연대는 949고지 주저항선을 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "명령 시점부터 계속"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "H949"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제35연대 작전지역은 황병동에서 973고지 남쪽·남서쪽 능선을 거쳐 973고지 주봉에 이르는 폭 약 2.5km, 종심 약 6km 지역이다. 좌측은 제36연대, 우측은 제27연대(무명고지-883고지)와 접한다.",
+   "boundaries": [
+    {
+     "id": "BD_L",
+     "name": "제35연대-제36연대 전투지경선",
+     "between": [
+      "제35연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       92,
+       78
+      ],
+      [
+       95,
+       110
+      ],
+      [
+       98,
+       140
+      ],
+      [
+       100,
+       160
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "BD_R",
+     "name": "제35연대-제27연대 전투지경선",
+     "between": [
+      "제35연대",
+      "A2"
+     ],
+     "xy": [
+      [
+       118,
+       78
+      ],
+      [
+       119,
+       110
+      ],
+      [
+       116,
+       131
+      ],
+      [
+       118,
+       160
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제35연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "사단예비로 황병동 일대 집결",
+     "ref": "V_HWANG",
+     "xy": [
+      100,
+      82
+     ]
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제35연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "사단예비로 황병동 일대 집결",
+     "ref": "V_HWANG",
+     "xy": [
+      100,
+      82
+     ]
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제35연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "사단예비로 황병동 일대 집결",
+     "ref": "V_HWANG",
+     "xy": [
+      100,
+      82
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제5사단 포병단 1개 포병대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "105mm 곡사포 18문(추정)",
+    "relationship": "직접지원",
+    "location": {
+     "note": "황병동 남쪽 포진지",
+     "xy": [
+      95,
+      72
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제5사단 중포중대",
+    "alias": "포병 포대 1",
+    "echelon": "포대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "155mm 곡사포(문수 미상)",
+    "relationship": "일반지원",
+    "location": {
+     "note": "북한강 교량 북쪽 포진지",
+     "xy": [
+      80,
+      72
+     ]
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "제5사단 전차중대",
+    "alias": "전차 중대 1",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "황병동 남쪽 도로변",
+     "xy": [
+      92,
+      76
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "북한강 상류와 금성천이 합류하는 삼각 돌출부에서 통선곡에 이르는 약 10km 산악지대다. 700~900m 고지들이 깊은 계곡과 가파른 능선을 이루며, 사단 후방은 북한강이 감싸 교량으로만 연결된다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H973",
+     "name": "973고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      110,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 973,
+     "evidence": "주저항선의 핵심, D-1일 23:40경 적에 피탈",
+     "preparation": "hasty"
+    },
+    {
+     "id": "H883",
+     "name": "883고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      133,
+      127
+     ],
+     "estimated": true,
+     "elevation_m": 883,
+     "evidence": "973고지 우측 주저항선, D-1일 23:50경 피탈",
+     "preparation": "hasty"
+    },
+    {
+     "id": "H949",
+     "name": "949고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      62,
+      133
+     ],
+     "estimated": true,
+     "elevation_m": 949,
+     "other_names": [
+      "우두산"
+     ],
+     "evidence": "제36연대 주저항선 좌측",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H548",
+     "name": "548고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      42,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 548,
+     "evidence": "주저항선 좌단, 합류 삼각 돌출부"
+    },
+    {
+     "id": "H_UNN",
+     "name": "973고지-883고지 간 무명고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      122,
+      131
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "973고지와 883고지 중간의 무명고지"
+    },
+    {
+     "id": "R_OBONG",
+     "name": "오봉능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      115,
+      152
+     ],
+     "line": [
+      [
+       104,
+       156
+      ],
+      [
+       110,
+       150
+      ],
+      [
+       115,
+       152
+      ],
+      [
+       121,
+       149
+      ],
+      [
+       126,
+       155
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전초 지역, 적 제541연대가 그 좌우에서 973고지로 공격"
+    },
+    {
+     "id": "H_SEUNGRI",
+     "name": "승리봉",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      138,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "883고지 전방 소대 전초"
+    },
+    {
+     "id": "H748",
+     "name": "748고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      75,
+      150
+     ],
+     "estimated": true,
+     "elevation_m": 748,
+     "other_names": [
+      "피의 고지"
+     ],
+     "evidence": "전초"
+    },
+    {
+     "id": "H689",
+     "name": "689고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      90,
+      153
+     ],
+     "estimated": true,
+     "elevation_m": 689,
+     "other_names": [
+      "텍사스고지"
+     ],
+     "evidence": "전초"
+    },
+    {
+     "id": "H_SAMGAK",
+     "name": "삼각봉",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      45,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전초"
+    },
+    {
+     "id": "H_DUGYEONG",
+     "name": "두경봉",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      55,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전초"
+    },
+    {
+     "id": "RG_S",
+     "name": "973고지 남쪽 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      110,
+      118
+     ],
+     "line": [
+      [
+       108,
+       103
+      ],
+      [
+       110,
+       112
+      ],
+      [
+       111,
+       122
+      ],
+      [
+       110,
+       135
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "황병동에서 973고지로 오르는 접근로(추정)"
+    },
+    {
+     "id": "RG_SW",
+     "name": "973고지 남서 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      101,
+      118
+     ],
+     "line": [
+      [
+       99,
+       100
+      ],
+      [
+       98,
+       110
+      ],
+      [
+       101,
+       120
+      ],
+      [
+       104,
+       127
+      ],
+      [
+       110,
+       135
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "973고지 서남쪽 접근로(추정)"
+    },
+    {
+     "id": "P_SW_SHOULDER",
+     "name": "973고지 서남 견부",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      104,
+      127
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주봉 서남쪽 능선 견부(추정)"
+    },
+    {
+     "id": "V_HWANG",
+     "name": "황병동",
+     "alias": "마을 1",
+     "kind": "valley",
+     "xy": [
+      100,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제35연대 사단예비 위치, 후방 계곡"
+    },
+    {
+     "id": "T_SONGJEONG",
+     "name": "송정",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      110,
+      178
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제181사단 집결지"
+    },
+    {
+     "id": "T_GABAU",
+     "name": "가바우골",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      128,
+      182
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제181사단 집결지"
+    },
+    {
+     "id": "V_TONGSEON",
+     "name": "통선곡",
+     "alias": "지점 2",
+     "kind": "valley",
+     "xy": [
+      145,
+      115
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주저항선 우단, 어은산 서남쪽"
+    },
+    {
+     "id": "H_EOEUN",
+     "name": "어은산",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      165,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "통선곡 북동쪽"
+    },
+    {
+     "id": "BR_BUKHAN",
+     "name": "북한강 작전용 교량",
+     "alias": "지점 3",
+     "kind": "bridge",
+     "xy": [
+      70,
+      68
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 후방 연결 교량"
+    }
+   ],
+   "routes": [
+    {
+     "id": "RD1",
+     "name": "교량-황병동 보급로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       70,
+       68
+      ],
+      [
+       80,
+       72
+      ],
+      [
+       90,
+       77
+      ],
+      [
+       100,
+       82
+      ],
+      [
+       104,
+       92
+      ],
+      [
+       108,
+       103
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "TR_OBONG",
+     "name": "오봉능선-973고지 능선길",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       115,
+       152
+      ],
+      [
+       113,
+       147
+      ],
+      [
+       112,
+       141
+      ],
+      [
+       110,
+       135
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "TR_883",
+     "name": "883고지-973고지 연결 능선",
+     "alias": "능선 5",
+     "kind": "ridge",
+     "xy": [
+      [
+       133,
+       127
+      ],
+      [
+       127,
+       129
+      ],
+      [
+       122,
+       131
+      ],
+      [
+       116,
+       133
+      ],
+      [
+       110,
+       135
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "IMP_BUKHAN",
+     "name": "북한강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       34,
+       200
+      ],
+      [
+       34,
+       125
+      ],
+      [
+       40,
+       96
+      ],
+      [
+       71,
+       70
+      ],
+      [
+       120,
+       60
+      ],
+      [
+       200,
+       54
+      ],
+      [
+       200,
+       50
+      ],
+      [
+       120,
+       56
+      ],
+      [
+       69,
+       66
+      ],
+      [
+       36,
+       94
+      ],
+      [
+       30,
+       125
+      ],
+      [
+       30,
+       200
+      ]
+     ],
+     "gap_at": [
+      70,
+      68
+     ],
+     "active": "항상"
+    },
+    {
+     "id": "IMP_GEUMSEONG",
+     "name": "금성천",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       0,
+       157
+      ],
+      [
+       31,
+       127
+      ],
+      [
+       31,
+       123
+      ],
+      [
+       0,
+       153
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "제181사단 제541연대 1개 대대(973고지)",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "D-1일 23:40경 973고지를 점령한 것을 확인",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      110,
+      136
+     ],
+     "frontage_m": 800,
+     "ref": "H973",
+     "note": "973고지 주봉과 서남 견부를 점령하고 아군 진지를 이용해 급편방어"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "제181사단 제541연대 1개 대대(883고지)",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "D-1일 23:50경 883고지 점령 확인",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      130,
+      129
+     ],
+     "frontage_m": 1000,
+     "ref": "H883",
+     "note": "883고지와 무명고지 일대 급편방어"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "제181사단 제541연대 1개 대대(오봉능선)",
+    "alias": "적 대대 3",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "오봉능선 전초를 돌파한 후속 제대로 판단",
+    "posture": "예비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      115,
+      152
+     ],
+     "frontage_m": 1200,
+     "ref": "R_OBONG",
+     "note": "오봉능선 일대에서 973고지 지원"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "제181사단 후속 연대",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "송정-가바우골 일대 집결 첩보",
+    "posture": "예비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      118,
+      180
+     ],
+     "frontage_m": 2000,
+     "note": "송정-가바우골 일대 집결"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "제180사단 1개 연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "조공으로 사단 좌측 정면에 투입된 것으로 판단",
+    "posture": "미상",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      65,
+      160
+     ],
+     "frontage_m": 2500,
+     "note": "949고지 정면"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "제60군 포병",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "+",
+    "strength_pct": 100,
+    "identified": true,
+    "equipment": "2개 포병연대, 박격포 238문, 무반동총 89정, 로켓포 63문(군 전체)",
+    "known_at_start": "D-1일 공격준비사격으로 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      115,
+      190
+     ],
+     "note": "송정 북쪽 포진지, 973고지 일대 전역 사격 가능"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 01:00",
+   "light": "night",
+   "notes": "명령 시점은 야간이다. 적은 D-1일 일몰에 공격을 개시해 973고지와 883고지를 점령했다. 사단 병력의 36%가 신병이다. 장비는 완편이고 사단 포병·중포중대·전차중대 화력지원이 가능하다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제2대대, 제3대대, 제1대대(예비) / 지원: 사단 포병단 1개 포병대대(직접지원), 중포중대, 전차중대 / 연대 수색중대는 제27연대에 배속",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제1대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "973고지는 주저항선 중앙의 감제고지로, 확보하면 오봉능선과 883고지 측방을 관측·제압할 수 있다. 아군 접근로는 황병동에서 오르는 남쪽 능선과 남서 능선 2개이며 경사가 급하다. 적은 오봉능선과 883고지 연결 능선으로 973고지에 역습할 수 있다.",
+    "key_terrain": [
+     {
+      "ref": "H973",
+      "why": "주저항선 핵심 감제고지로 회복 목표"
+     },
+     {
+      "ref": "R_OBONG",
+      "why": "적 증원과 역습의 발판"
+     },
+     {
+      "ref": "H_UNN",
+      "why": "883고지와 973고지를 잇는 측방 고지로 적 협공의 통로"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "남쪽 능선 접근로",
+      "user": "friendly",
+      "refs": [
+       "RG_S",
+       "RD1"
+      ],
+      "xy": [
+       [
+        100,
+        82
+       ],
+       [
+        104,
+        92
+       ],
+       [
+        108,
+        103
+       ],
+       [
+        110,
+        112
+       ],
+       [
+        111,
+        122
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     },
+     {
+      "name": "남서 능선 접근로",
+      "user": "friendly",
+      "refs": [
+       "RG_SW"
+      ],
+      "xy": [
+       [
+        100,
+        82
+       ],
+       [
+        99,
+        100
+       ],
+       [
+        98,
+        110
+       ],
+       [
+        101,
+        120
+       ],
+       [
+        104,
+        127
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     },
+     {
+      "name": "오봉능선 역습로",
+      "user": "enemy",
+      "refs": [
+       "TR_OBONG"
+      ],
+      "xy": [
+       [
+        115,
+        152
+       ],
+       [
+        113,
+        147
+       ],
+       [
+        112,
+        141
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     },
+     {
+      "name": "883고지 측방 역습로",
+      "user": "enemy",
+      "refs": [
+       "TR_883"
+      ],
+      "xy": [
+       [
+        133,
+        127
+       ],
+       [
+        127,
+        129
+       ],
+       [
+        122,
+        131
+       ],
+       [
+        116,
+        133
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제541연대는 973고지와 883고지에서 급편방어하다가 아군이 973고지에 오르면 강력한 포격과 함께 오봉능선과 883고지 양측에서 역습해 올 것이다. 1개 대대는 973고지를 지키고, 1개 대대는 오봉능선에서, 1개 대대는 883고지에서 협공할 것이다. 역습은 일몰 이후에 집중될 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E6",
+       "mode": "bombard",
+       "from_ref": "T_SONGJEONG",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         115,
+         190
+        ],
+        [
+         112,
+         160
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "when": "아군 공격 개시부터 계속",
+       "t": 8
+      },
+      {
+       "group": "E1",
+       "mode": "hold",
+       "from_ref": "H973",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         110,
+         136
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "when": "아군 공격 개시 시",
+       "t": 8
+      },
+      {
+       "group": "E3",
+       "mode": "counterattack",
+       "from_ref": "R_OBONG",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         115,
+         152
+        ],
+        [
+         113,
+         147
+        ],
+        [
+         112,
+         141
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "when": "아군 973고지 탈취 직후 일몰 전후",
+       "t": 19
+      },
+      {
+       "group": "E2",
+       "mode": "counterattack",
+       "from_ref": "H883",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         130,
+         129
+        ],
+        [
+         122,
+         131
+        ],
+        [
+         116,
+         133
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "when": "아군 973고지 탈취 직후 일몰 전후",
+       "t": 19
+      }
+     ],
+     "risk_point": "아군이 973고지를 탈취한 직후 진지 편성 전에 적이 포격과 함께 오봉능선과 883고지 양측에서 협공하는 순간"
+    },
+    "unknowns": [
+     "적 후속 연대의 투입 시기와 규모",
+     "973고지 적의 진지 보강 정도",
+     "제27연대의 883고지 역습 성패"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 대대 공격대기지점, 공격로, 중대 배치는 서술에 없어 추정한다.",
+     "why": "서술은 제2대대·제3대대로 공격하고 제2대대 7중대가 초월했다는 사실만 전한다."
+    },
+    {
+     "text": "적은 973고지를 점령한 지 수 시간밖에 되지 않아 진지를 보강하지 못했다.",
+     "why": "D-1일 23:40경 점령 직후 역습한다."
+    },
+    {
+     "text": "제27연대가 883고지를 동시에 역습하여 적 화력을 분산한다.",
+     "why": "사단 명령으로 883고지 역습이 동시에 부여되었다."
+    },
+    {
+     "text": "연대 수색중대는 제27연대에 배속되어 가용하지 않다.",
+     "why": "사단장이 제35연대 수색중대를 883고지 역습에 붙였다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제35연대는 D일 08:00 황병동에서 공격하여 973고지를 탈취하여 사단 주저항선 중앙을 회복하고 883고지를 역습하는 제27연대의 좌측방을 보호한다.",
+   "task_verb": "탈취",
+   "objective_ref": "OBJ1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 8,
+    "text": "D일 08:00 H시"
+   },
+   "purpose": "사단 주저항선 중앙을 회복하고 제27연대의 883고지 역습을 돕는다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "연대는 973고지 주봉과 서남 견부를 확보하고 오봉능선과 883고지 방향 적 역습에 대비한 진지를 편성한다.",
+    "friendly": "제2대대는 973고지 주봉, 제3대대는 서남 견부를 확보하고 제1대대는 역습 준비 상태를 유지한다.",
+    "enemy": "973고지의 적 제541연대 1개 대대를 격퇴하고 적 역습을 저지한다.",
+    "terrain": "973고지 일대 주저항선 중앙 회복"
+   },
+   "concept": {
+    "text": "연대는 2개 대대를 병진하여 남쪽과 남서 능선으로 973고지를 공격한다. 주력 제2대대가 남쪽 능선으로 주봉을 탈취하고 제3대대는 서남 견부를 탈취해 주봉 공격을 화력지원한다. 제1대대는 예비로 적의 협공에 대비해 역습을 준비한다.",
+    "maneuver": "제2대대는 남쪽 능선으로 주봉을 탈취하고 즉시 확보한다. 제3대대는 남서 능선으로 서남 견부를 탈취한 뒤 주봉 공격을 화력지원하고 오봉능선 방향을 방어한다. 제1대대는 예비진지에서 973고지로 역습을 준비한다.",
+    "fires": "H-30분부터 973고지 주봉과 오봉능선에 공격준비사격을 한다. 목표 탈취 후에는 오봉능선과 무명고지 방향에 방어사격을 계획한다. 우선권은 제2대대에 준다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "RP1",
+     "xy": [
+      102,
+      92
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.4,
+      "text": "제2대대 손실 40% 초과"
+     },
+     "priorities": [
+      "973고지 주봉으로 역습",
+      "제2대대 공격로 확보"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1"
+     ],
+     "zone_refs": [
+      "OBJ1",
+      "R_OBONG",
+      "H_UNN"
+     ],
+     "restrictions": "무명고지와 883고지 방향 사격은 접촉점에서 제27연대와 협조한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       109,
+       103
+      ],
+      "ref": "ATK2",
+      "frontage_m": 600,
+      "preparation": "none",
+      "note": "남쪽 능선 하단 공격대기지점",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         107,
+         104
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         111,
+         104
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         109,
+         99
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "남쪽 능선을 따라 공격하여 973고지 주봉을 탈취한다.",
+       "params": {
+        "objective": "OBJ1",
+        "route": "RT2",
+        "axis_xy": [
+         [
+          109,
+          103
+         ],
+         [
+          110,
+          112
+         ],
+         [
+          111,
+          122
+         ],
+         [
+          110,
+          135
+         ]
+        ]
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "973고지 주봉에 진지를 편성하여 확보한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      }
+     ],
+     "purpose": "주저항선 핵심인 973고지 주봉을 회복한다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       99,
+       99
+      ],
+      "ref": "ATK3",
+      "frontage_m": 600,
+      "preparation": "none",
+      "note": "남서 능선 하단 공격대기지점",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         97,
+         100
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         101,
+         100
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         99,
+         96
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "남서 능선을 따라 공격하여 973고지 서남 견부를 탈취한다.",
+       "params": {
+        "objective": "OBJ2",
+        "route": "RT3",
+        "axis_xy": [
+         [
+          99,
+          99
+         ],
+         [
+          98,
+          110
+         ],
+         [
+          101,
+          120
+         ],
+         [
+          104,
+          127
+         ]
+        ]
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력지원",
+       "text": "973고지 주봉을 공격하는 제2대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "OBJ1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "방어",
+       "text": "서남 견부에서 오봉능선 방향을 방어한다.",
+       "params": {
+        "area": "OBJ2"
+       }
+      }
+     ],
+     "purpose": "주력의 좌측방을 보호하고 주봉 공격을 돕는다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       102,
+       92
+      ],
+      "ref": "RP1",
+      "frontage_m": 500,
+      "preparation": "none",
+      "note": "황병동 북쪽 예비진지",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         100,
+         93
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         104,
+         93
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         102,
+         89
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 남쪽 능선으로 973고지 주봉에 역습한다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "제2대대 손실 40% 초과"
+       },
+       "basis": "risk_point: 973고지 탈취 직후 적이 양측에서 협공",
+       "params": {
+        "objective": "OBJ1",
+        "route": "RT_CA"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "973고지 주봉을 확보한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      }
+     ],
+     "purpose": "주력의 공격 실패나 적 역습에 대비해 973고지 확보를 보장한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 01:00 역습 명령 하달",
+      "event": {
+       "type": "time_elapsed",
+       "value": 1,
+       "text": "D일 01:00"
+      }
+     },
+     {
+      "text": "D일 04:30 제27연대 883고지 역습 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4.5,
+       "text": "D일 04:30"
+      }
+     },
+     {
+      "text": "D일 06:00 공격대기지점과 예비진지 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "D일 07:30 공격준비사격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 7.5,
+       "text": "D일 07:30"
+      }
+     },
+     {
+      "text": "D일 08:00 H시, 공격개시선 통과, 예비 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 8,
+       "text": "D일 08:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "AA1",
+      "name": "황병동 집결지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        94,
+        78
+       ],
+       [
+        106,
+        78
+       ],
+       [
+        107,
+        88
+       ],
+       [
+        95,
+        88
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "V_HWANG"
+      ]
+     },
+     {
+      "id": "ATK2",
+      "name": "제2대대 공격대기지점",
+      "kind": "attack_position",
+      "xy": [
+       [
+        109,
+        103
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "ATK3",
+      "name": "제3대대 공격대기지점",
+      "kind": "attack_position",
+      "xy": [
+       [
+        99,
+        99
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "RP1",
+      "name": "예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        102,
+        92
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "LD1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        94,
+        106
+       ],
+       [
+        104,
+        106
+       ],
+       [
+        118,
+        106
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BL1",
+      "name": "제2대대-제3대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        104,
+        95
+       ],
+       [
+        104,
+        110
+       ],
+       [
+        106,
+        125
+       ],
+       [
+        108,
+        140
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "OBJ1",
+      "name": "목표 1(973고지 주봉)",
+      "kind": "objective",
+      "xy": [
+       [
+        105,
+        131
+       ],
+       [
+        115,
+        131
+       ],
+       [
+        116,
+        138
+       ],
+       [
+        106,
+        139
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H973"
+      ]
+     },
+     {
+      "id": "OBJ2",
+      "name": "목표 2(973고지 서남 견부)",
+      "kind": "objective",
+      "xy": [
+       [
+        100,
+        124
+       ],
+       [
+        106,
+        124
+       ],
+       [
+        107,
+        130
+       ],
+       [
+        101,
+        130
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "P_SW_SHOULDER"
+      ]
+     },
+     {
+      "id": "RT2",
+      "name": "제2대대 공격로",
+      "kind": "route",
+      "xy": [
+       [
+        109,
+        103
+       ],
+       [
+        110,
+        112
+       ],
+       [
+        111,
+        122
+       ],
+       [
+        110,
+        131
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG_S"
+      ]
+     },
+     {
+      "id": "RT3",
+      "name": "제3대대 공격로",
+      "kind": "route",
+      "xy": [
+       [
+        99,
+        99
+       ],
+       [
+        98,
+        110
+       ],
+       [
+        101,
+        120
+       ],
+       [
+        103,
+        124
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG_SW"
+      ]
+     },
+     {
+      "id": "RT_CA",
+      "name": "예비 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        102,
+        92
+       ],
+       [
+        106,
+        98
+       ],
+       [
+        109,
+        103
+       ],
+       [
+        110,
+        112
+       ],
+       [
+        111,
+        122
+       ],
+       [
+        110,
+        131
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CP1",
+      "name": "제27연대 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        117,
+        128
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "LOA1",
+      "name": "공격한계선",
+      "kind": "limit_of_advance",
+      "xy": [
+       [
+        100,
+        142
+       ],
+       [
+        110,
+        142
+       ],
+       [
+        118,
+        142
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 01:00",
+  "start_t": 1,
+  "horizon_h": 94,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제2대대와 제3대대 손실이 모두 70% 초과",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.7,
+      "text": "제2대대 손실 70% 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제3대대 손실 70% 초과"
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "text": "적 제541연대 973고지 대대와 오봉능선 대대 손실이 모두 70% 초과",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E1",
+      "fraction": 0.7,
+      "text": "973고지 적 대대 손실 70% 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "E3",
+      "fraction": 0.7,
+      "text": "오봉능선 적 대대 손실 70% 초과"
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제60군은 제181사단으로 탈취한 973고지와 883고지를 아군 진지를 이용해 고수하고, 아군 역습은 포격과 양측 협공으로 격퇴한다. 이후 제181사단 후속 연대로 883고지 남쪽을 돌파하고, 제180사단과 제203사단 제609연대를 좌측에 투입해 D+3일 일몰 무렵 사단 전 정면을 공격하여 아군을 북한강 남쪽으로 몰아낸다.",
+   "groups": [
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         115,
+         190
+        ],
+        [
+         112,
+         160
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "text": "적 제60군 포병은 973고지와 남쪽 접근로에 계속 포격한다.",
+       "basis": "서술: 아군 역습 내내 중공군 포격으로 고전",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "명령 시점부터 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         115,
+         190
+        ],
+        [
+         112,
+         160
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "text": "아군이 973고지 주봉에 오르면 주봉에 집중 포격한다.",
+       "basis": "서술: 강력한 포격을 동반한 좌우협공. 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 973고지 주봉 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         110,
+         136
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "text": "적 제541연대 1개 대대는 973고지를 고수한다.",
+       "basis": "서술: 973고지 점령 후 화망으로 역습 저지",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "명령 시점부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R_OBONG",
+       "axis_xy": [
+        [
+         110,
+         136
+        ],
+        [
+         112,
+         141
+        ],
+        [
+         113,
+         147
+        ],
+        [
+         115,
+         152
+        ]
+       ],
+       "text": "손실이 크면 오봉능선으로 물러나 역습 대대와 합류한다.",
+       "basis": "추정: 아군 탈취 후 적이 양측에서 재공격한 경과로 볼 때 주봉 대대는 물러나 재편",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "973고지 적 대대 손실 50% 초과"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "V_HWANG",
+       "axis_xy": [
+        [
+         110,
+         135
+        ],
+        [
+         111,
+         122
+        ],
+        [
+         110,
+         112
+        ],
+        [
+         108,
+         103
+        ],
+        [
+         104,
+         92
+        ],
+        [
+         100,
+         82
+        ]
+       ],
+       "text": "D+3일 18:00 적 상급부대 총공격에 맞춰 973고지 남쪽 능선으로 아군 중앙 진지를 공격한다.",
+       "basis": "서술: D+3일 18:00 사단 전 정면 압박, 중앙 제35연대 진지 돌파",
+       "start": {
+        "type": "time_elapsed",
+        "value": 90,
+        "text": "D+3일 18:00 계획 공격"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "BR_BUKHAN",
+       "axis_xy": [
+        [
+         100,
+         82
+        ],
+        [
+         90,
+         77
+        ],
+        [
+         80,
+         72
+        ],
+        [
+         70,
+         68
+        ]
+       ],
+       "text": "이어서 황병동 계곡을 따라 북한강 교량 방향으로 추격한다.",
+       "basis": "서술: 중공군 야간 추격으로 아군이 황병동 계곡으로 밀림"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         115,
+         152
+        ],
+        [
+         113,
+         147
+        ],
+        [
+         112,
+         141
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "text": "아군이 973고지 주봉을 점령하면 오봉능선에서 973고지로 역습한다.",
+       "basis": "서술: 탈환 약 3시간 뒤 좌우협공. 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 973고지 주봉 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "RG_S",
+       "axis_xy": [
+        [
+         110,
+         135
+        ],
+        [
+         111,
+         122
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "text": "아군 대대가 남쪽 능선으로 접근하면 능선 상단에서 역습해 남쪽으로 밀어낸다.",
+       "basis": "서술: D+1일 제2대대가 진격 도중 역습을 받아 남쪽으로 밀림. 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "RG_S",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 973고지 남쪽 능선 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "OBJ2",
+       "axis_xy": [
+        [
+         115,
+         152
+        ],
+        [
+         108,
+         140
+        ],
+        [
+         104,
+         127
+        ],
+        [
+         101,
+         120
+        ],
+        [
+         98,
+         110
+        ],
+        [
+         99,
+         100
+        ]
+       ],
+       "text": "D+3일 18:00 남서 능선으로 아군 중앙 진지를 공격한다.",
+       "basis": "서술: 중앙 제35연대에 대한 인해공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 90,
+        "text": "D+3일 18:00 계획 공격"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H883",
+       "axis_xy": [
+        [
+         130,
+         129
+        ],
+        [
+         133,
+         127
+        ]
+       ],
+       "text": "적 제541연대 1개 대대는 883고지와 무명고지를 고수한다.",
+       "basis": "서술: 883고지 역습을 화망과 수류탄으로 격퇴",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "명령 시점부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         130,
+         129
+        ],
+        [
+         122,
+         131
+        ],
+        [
+         116,
+         133
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "text": "아군이 973고지 주봉을 점령하면 무명고지 능선으로 973고지 우측방을 역습한다.",
+       "basis": "서술: 좌우협공. 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 973고지 주봉 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H883",
+       "axis_xy": [
+        [
+         118,
+         180
+        ],
+        [
+         128,
+         160
+        ],
+        [
+         133,
+         140
+        ],
+        [
+         133,
+         127
+        ],
+        [
+         133,
+         118
+        ],
+        [
+         133,
+         114
+        ]
+       ],
+       "text": "적 제181사단 후속 연대는 D+3일 02:00 883고지를 지나 제22연대 중앙과 좌측방을 돌파한다.",
+       "basis": "서술: D+3일 02:00 증원 제181사단의 돌파 시도, 10:30경 883고지 남쪽 1~1.3km 능선 진출",
+       "start": {
+        "type": "time_elapsed",
+        "value": 74,
+        "text": "D+3일 02:00 계획 투입"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "V_HWANG",
+       "axis_xy": [
+        [
+         133,
+         114
+        ],
+        [
+         125,
+         105
+        ],
+        [
+         115,
+         95
+        ],
+        [
+         104,
+         88
+        ]
+       ],
+       "text": "이어서 황병동 방향으로 공격한다.",
+       "basis": "서술: D+3일 18:00 우측 제22연대가 5개 대대 파상공격을 받음"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "H949",
+       "axis_xy": [
+        [
+         65,
+         160
+        ],
+        [
+         63,
+         148
+        ],
+        [
+         62,
+         133
+        ]
+       ],
+       "text": "적 제180사단 1개 연대는 D-1일부터 949고지 정면을 견제한다.",
+       "basis": "서술: 제181사단의 기만 견제공격과 제180사단 조공",
+       "start": {
+        "type": "time_elapsed",
+        "value": 1,
+        "text": "명령 시점부터"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H949",
+       "axis_xy": [
+        [
+         65,
+         160
+        ],
+        [
+         63,
+         148
+        ],
+        [
+         62,
+         133
+        ],
+        [
+         60,
+         110
+        ],
+        [
+         66,
+         85
+        ],
+        [
+         70,
+         68
+        ]
+       ],
+       "text": "D+3일 18:00 949고지를 공격해 북한강 교량 방향으로 돌파한다.",
+       "basis": "서술: 제180사단을 좌측 전선에 투입, 18:00 전 정면 압박",
+       "start": {
+        "type": "time_elapsed",
+        "value": 90,
+        "text": "D+3일 18:00 계획 공격"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H548",
+       "axis_xy": [
+        [
+         50,
+         165
+        ],
+        [
+         45,
+         140
+        ],
+        [
+         42,
+         118
+        ],
+        [
+         50,
+         95
+        ],
+        [
+         65,
+         75
+        ],
+        [
+         70,
+         68
+        ]
+       ],
+       "text": "적 제180사단 다른 1개 연대는 D+3일 18:00 548고지를 거쳐 교량 방향으로 공격한다.",
+       "basis": "서술: 제180사단 좌측 투입. 연대 구분은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 90,
+        "text": "D+3일 18:00 계획 공격"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H949",
+       "axis_xy": [
+        [
+         80,
+         170
+        ],
+        [
+         75,
+         150
+        ],
+        [
+         70,
+         135
+        ],
+        [
+         72,
+         110
+        ],
+        [
+         72,
+         85
+        ],
+        [
+         70,
+         68
+        ]
+       ],
+       "text": "적 제203사단 제609연대는 D+3일 18:00 949고지 동쪽으로 교량 방향을 공격한다.",
+       "basis": "서술: 제203사단 제609연대 좌측 전선 투입",
+       "start": {
+        "type": "time_elapsed",
+        "value": 90,
+        "text": "D+3일 18:00 계획 공격"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         120,
+         195
+        ],
+        [
+         115,
+         170
+        ],
+        [
+         113,
+         147
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "text": "제181사단 고지 방어 부대 손실이 크면 973고지에 증원한다.",
+       "basis": "추정: 적 제60군 예비 제179사단 일부. 서술에는 투입 기록 없음",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.6,
+        "text": "오봉능선 적 대대 손실 60% 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "제180사단 다른 1개 연대",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 2500,
+    "position": {
+     "xy": [
+      50,
+      165
+     ],
+     "note": "548고지 정면 후방 집결(추정)"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "제203사단 제609연대",
+    "alias": "적 연대 4",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 2500,
+    "position": {
+     "xy": [
+      80,
+      175
+     ],
+     "note": "949고지 동북쪽 후방 집결(추정)"
+    }
+   },
+   {
+    "id": "H3",
+    "unit": "제179사단 일부(제60군 예비)",
+    "alias": "적 연대 5",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 100,
+    "position": {
+     "xy": [
+      120,
+      195
+     ],
+     "note": "송정 북쪽 군 예비(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 01:00",
+    "t": 1,
+    "kind": "night",
+    "duration_h": 4,
+    "note": "명령 시점 야간"
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+1일 20:00",
+    "t": 44,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+2일 20:00",
+    "t": 68,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+3일 20:00",
+    "t": 92,
+    "kind": "night",
+    "duration_h": 3,
+    "note": "야간(구간 끝까지)"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E6",
+    "actions": [
+     {
+      "when": "D일 주간",
+      "t": 8,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        115,
+        190
+       ],
+       [
+        112,
+        160
+       ],
+       [
+        110,
+        135
+       ]
+      ],
+      "target_ref": "H973",
+      "note": "973고지 접근로에 포격해 제35연대 공격이 고전함"
+     },
+     {
+      "when": "D일 19:00",
+      "t": 19,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        115,
+        190
+       ],
+       [
+        112,
+        160
+       ],
+       [
+        110,
+        135
+       ]
+      ],
+      "target_ref": "H973",
+      "note": "좌우협공에 앞서 973고지에 강력한 포격"
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 16:00경",
+      "t": 16,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        110,
+        136
+       ],
+       [
+        112,
+        141
+       ],
+       [
+        115,
+        152
+       ]
+      ],
+      "target_ref": "R_OBONG",
+      "note": "제2대대 7중대 초월 돌격으로 973고지에서 밀려남"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        110,
+        135
+       ]
+      ],
+      "target_ref": "H973",
+      "note": "973고지를 다시 고수하며 제2차 역습을 저지"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        110,
+        135
+       ],
+       [
+        110,
+        112
+       ],
+       [
+        104,
+        92
+       ],
+       [
+        100,
+        82
+       ]
+      ],
+      "target_ref": "V_HWANG",
+      "note": "중앙 제35연대 진지를 인해공격해 1시간 20분 만에 돌파"
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 19:00",
+      "t": 19,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        115,
+        152
+       ],
+       [
+        113,
+        147
+       ],
+       [
+        112,
+        141
+       ],
+       [
+        110,
+        135
+       ]
+      ],
+      "target_ref": "H973",
+      "note": "오봉능선에서 973고지 좌측으로 협공, 제2대대가 30분 만에 물러남"
+     },
+     {
+      "when": "D+1일 04:00 이후",
+      "t": 28.0,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        110,
+        135
+       ],
+       [
+        111,
+        122
+       ],
+       [
+        110,
+        112
+       ]
+      ],
+      "target_ref": "RG_S",
+      "note": "남쪽 능선으로 진격하던 제2대대를 역습해 남쪽으로 밀어냄"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        110,
+        135
+       ],
+       [
+        104,
+        127
+       ],
+       [
+        98,
+        110
+       ],
+       [
+        99,
+        100
+       ]
+      ],
+      "target_ref": "OBJ2",
+      "note": "중앙 진지 공격 가담"
+     },
+     {
+      "when": "D+3일 야간",
+      "t": 92,
+      "mode": "pursue",
+      "axis_xy": [
+       [
+        100,
+        82
+       ],
+       [
+        90,
+        77
+       ],
+       [
+        80,
+        72
+       ],
+       [
+        70,
+        68
+       ]
+      ],
+      "target_ref": "BR_BUKHAN",
+      "note": "황병동 계곡으로 야간 추격"
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 04:30",
+      "t": 4.5,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        133,
+        127
+       ]
+      ],
+      "target_ref": "H883",
+      "note": "제27연대 제2대대 역습을 화망으로 격퇴"
+     },
+     {
+      "when": "D일 11:30",
+      "t": 11.5,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        133,
+        127
+       ]
+      ],
+      "target_ref": "H883",
+      "note": "제22연대 제3·제1대대 공격을 수류탄과 기관총으로 격퇴, 아군 1/3 손실"
+     },
+     {
+      "when": "D일 19:00",
+      "t": 19,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        130,
+        129
+       ],
+       [
+        122,
+        131
+       ],
+       [
+        116,
+        133
+       ],
+       [
+        110,
+        135
+       ]
+      ],
+      "target_ref": "H973",
+      "note": "무명고지 쪽에서 973고지 우측으로 협공"
+     },
+     {
+      "when": "D+1일 04:00·13:30",
+      "t": 28,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        122,
+        131
+       ],
+       [
+        133,
+        127
+       ]
+      ],
+      "target_ref": "H883",
+      "note": "제22연대 제2·3차 역습과 무명고지 공격을 격퇴"
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D+3일 02:00",
+      "t": 74,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        128,
+        160
+       ],
+       [
+        133,
+        140
+       ],
+       [
+        133,
+        127
+       ],
+       [
+        133,
+        118
+       ]
+      ],
+      "target_ref": "H883",
+      "note": "증원 제181사단 병력으로 제22연대 중앙과 좌측방 돌파 시도"
+     },
+     {
+      "when": "D+3일 10:30",
+      "t": 82.5,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        133,
+        118
+       ],
+       [
+        133,
+        114
+       ]
+      ],
+      "target_ref": "H883",
+      "note": "883고지 남쪽 1~1.3km 능선까지 진출"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        133,
+        114
+       ],
+       [
+        125,
+        105
+       ],
+       [
+        115,
+        95
+       ]
+      ],
+      "target_ref": "V_HWANG",
+      "note": "우측 제22연대에 5개 대대 규모 파상공격"
+     }
+    ]
+   },
+   {
+    "group": "E5",
+    "actions": [
+     {
+      "when": "D-1일 일몰",
+      "t": -4,
+      "mode": "fix",
+      "axis_xy": [
+       [
+        65,
+        160
+       ],
+       [
+        62,
+        133
+       ]
+      ],
+      "target_ref": "H949",
+      "note": "949고지 견제공격"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        65,
+        160
+       ],
+       [
+        62,
+        133
+       ],
+       [
+        60,
+        110
+       ],
+       [
+        70,
+        68
+       ]
+      ],
+      "target_ref": "BR_BUKHAN",
+      "note": "좌측 전선 공격, 제27연대 저지선 와해"
+     }
+    ]
+   },
+   {
+    "group": "H1",
+    "actions": [
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        50,
+        165
+       ],
+       [
+        42,
+        118
+       ],
+       [
+        50,
+        95
+       ],
+       [
+        70,
+        68
+       ]
+      ],
+      "target_ref": "H548",
+      "note": "제180사단 일부로 좌측 전선 공격(연대 구분 추정)"
+     }
+    ]
+   },
+   {
+    "group": "H2",
+    "actions": [
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        80,
+        175
+       ],
+       [
+        70,
+        135
+       ],
+       [
+        72,
+        110
+       ],
+       [
+        70,
+        68
+       ]
+      ],
+      "target_ref": "H949",
+      "note": "제203사단 제609연대 좌측 전선 투입"
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "RF1",
+    "unit": "제3사단 제22연대",
+    "entry_when": "D일 오전",
+    "entry_t": 9,
+    "from_ref": "BR_BUKHAN",
+    "note": "군단장 지시로 사단에 배속, 북한강을 건너 883고지 역습 임무를 제27연대로부터 인수"
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 8,
+      "verb": "탈취",
+      "text": "남쪽 능선으로 973고지를 공격했으나 적 포격으로 고전",
+      "ref": "OBJ1"
+     },
+     {
+      "when": "D일 16:00경",
+      "t": 16,
+      "verb": "초월",
+      "text": "제7중대가 초월공격해 돌격으로 973고지를 탈취",
+      "ref": "OBJ1"
+     },
+     {
+      "when": "D일 19:00",
+      "t": 19,
+      "verb": "철수",
+      "text": "포격을 동반한 적 좌우협공으로 30분 만에 973고지에서 물러남",
+      "ref": "RG_S"
+     },
+     {
+      "when": "D일 19:30",
+      "t": 19.5,
+      "verb": "방어",
+      "text": "사단장 명령으로 야간방어",
+      "ref": "RG_S"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "공격",
+      "text": "제2차 역습 중 진격이 저지되고 적 역습으로 남쪽으로 밀림",
+      "ref": "RG_S"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "verb": "방어",
+      "text": "중앙 진지에서 적 인해공격을 받아 1시간 20분 만에 진지 돌파",
+      "ref": "V_HWANG"
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 8,
+      "verb": "탈취",
+      "text": "제2대대와 함께 973고지를 공격, 적 포격으로 고전",
+      "ref": "OBJ2"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "공격",
+      "text": "제2차 역습으로 973고지 500m 전방까지 진출",
+      "ref": "OBJ2"
+     },
+     {
+      "when": "D+1일 13:30",
+      "t": 37.5,
+      "verb": "공격",
+      "text": "재편성 미완으로 제3차 역습 참가가 중지됨",
+      "ref": "RG_SW"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "verb": "방어",
+      "text": "중앙 진지에서 돌파당하고 황병동 계곡으로 밀림",
+      "ref": "V_HWANG"
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일~D+3일",
+      "t": 8,
+      "verb": "방어",
+      "text": "서술에 투입 기록 없음, 연대 예비로 유지한 것으로 봄",
+      "ref": "RP1"
+     }
+    ]
+   },
+   {
+    "group": "A2",
+    "actions": [
+     {
+      "when": "D일 04:30",
+      "t": 4.5,
+      "verb": "역습",
+      "text": "제2대대로 883고지를 역습했으나 적 화망에 걸려 실패",
+      "ref": "H883"
+     },
+     {
+      "when": "D+2일 새벽",
+      "t": 52,
+      "verb": "방어",
+      "text": "제36연대로부터 좌측 진지를 인수",
+      "ref": "H949"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "verb": "철수",
+      "text": "적 2개 연대 공격으로 저지선이 와해되어 북한강 교량 쪽으로 밀림",
+      "ref": "BR_BUKHAN"
+     }
+    ]
+   },
+   {
+    "group": "RF1",
+    "actions": [
+     {
+      "when": "D일 11:30",
+      "t": 11.5,
+      "verb": "공격",
+      "text": "제3대대와 제1대대로 883고지를 공격, 병력 1/3을 잃음",
+      "ref": "H883"
+     },
+     {
+      "when": "D일 19:00",
+      "t": 19,
+      "verb": "방어",
+      "text": "야간방어로 전환",
+      "ref": "H883"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "공격",
+      "text": "제2대대로 무명고지를 점령해 883고지를 고립시키려 했으나 실패",
+      "ref": "H_UNN"
+     },
+     {
+      "when": "D+1일 13:30",
+      "t": 37.5,
+      "verb": "공격",
+      "text": "제3차 역습: 제1대대 883고지 정면, 제3대대 남서 능선 돌격, 손실 후 원위치",
+      "ref": "H883"
+     },
+     {
+      "when": "D+3일 02:00",
+      "t": 74,
+      "verb": "방어",
+      "text": "적 증원부대의 돌파로 883고지 남쪽 1~1.3km까지 밀림",
+      "ref": "V_TONGSEON"
+     },
+     {
+      "when": "D+3일 18:00",
+      "t": 90,
+      "verb": "방어",
+      "text": "5개 대대 규모 파상공격을 받음",
+      "ref": "V_TONGSEON"
+     }
+    ]
+   },
+   {
+    "group": "A1",
+    "actions": [
+     {
+      "when": "D+1일 오후",
+      "t": 38,
+      "verb": "역습",
+      "text": "사단장이 제22연대·제35연대 역습의 한계를 판단해 제36연대 역습 투입 결정",
+      "ref": "H973"
+     },
+     {
+      "when": "D+2일 일몰",
+      "t": 67.5,
+      "verb": "공격",
+      "text": "973고지·883고지 공격대기지점에 대대 투입",
+      "ref": "H973"
+     },
+     {
+      "when": "D+3일 오전",
+      "t": 83,
+      "verb": "방어",
+      "text": "적 증원 보고로 역습을 중지하고 제2선으로 이동",
+      "ref": "V_HWANG"
+     },
+     {
+      "when": "D+3일 야간",
+      "t": 92,
+      "verb": "엄호",
+      "text": "북한강 교량 부근 교두보를 구축해 사단 철수를 엄호",
+      "ref": "BR_BUKHAN"
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 19:00",
+    "t": 19,
+    "kind": "night",
+    "note": "일몰 무렵 적이 포격과 함께 973고지를 협공"
+   },
+   {
+    "when": "D+3일 야간",
+    "t": 92,
+    "kind": "night",
+    "note": "적 야간 추격으로 아군이 황병동 계곡으로 밀림"
+   }
+  ],
+  "historical_result": {
+   "friendly": "제35연대(제5사단, 제22연대 배속)",
+   "enemy": "적 제60군(제181사단, 제180사단, 제203사단 제609연대)",
+   "terrain_held": [
+    "BR_BUKHAN"
+   ],
+   "end_state_achieved": "no",
+   "losses": "사단 전체 전사 836명, 부상 1,619명, 실종 714명. 적 사살 4,677명, 살상 추정 4,983명, 포로 20명. 연대별 손실은 서술에 없음.",
+   "duration_h": 94,
+   "friendly_loss_pct": 30,
+   "enemy_loss_pct": 40
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+3일 23:00 사단 전선이 완전히 와해되었다. 973고지·883고지·949고지는 모두 적 수중이고, 제35연대는 중앙 진지를 돌파당해 황병동 계곡으로 밀렸다. 제36연대가 북한강 교량 교두보를 지키며 철수를 엄호하는 중이다.",
+   "terrain_held_at_horizon": [
+    "BR_BUKHAN"
+   ],
+   "key_times": [
+    {
+     "t": 4.5,
+     "text": "제27연대 제2대대 883고지 역습 실패",
+     "ref": "H883"
+    },
+    {
+     "t": 16,
+     "text": "제35연대 973고지 탈취(제2대대 7중대 초월 돌격)",
+     "ref": "H973"
+    },
+    {
+     "t": 19.5,
+     "text": "적 좌우협공으로 973고지에서 물러남",
+     "ref": "H973"
+    },
+    {
+     "t": 28,
+     "text": "제2차 역습: 제3대대 고지 500m 전방 진출, 제2대대는 밀림",
+     "ref": "OBJ2"
+    },
+    {
+     "t": 37.5,
+     "text": "제3차 역습(제22연대) 실패, 제35연대 역습 중지",
+     "ref": "H883"
+    },
+    {
+     "t": 74,
+     "text": "적 증원 연대 883고지 남쪽 돌파 시작",
+     "ref": "H883"
+    },
+    {
+     "t": 90,
+     "text": "적 전 정면 공격 개시",
+     "ref": "V_HWANG"
+    },
+    {
+     "t": 91.3,
+     "text": "제35연대 중앙 진지 돌파",
+     "ref": "V_HWANG"
+    },
+    {
+     "t": 95,
+     "text": "사단 전선 와해",
+     "ref": "BR_BUKHAN"
+    }
+   ],
+   "friendly_loss_pct": 30,
+   "enemy_loss_pct": 40
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb2_030",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E2[0]: '격퇴'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

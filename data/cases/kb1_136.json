@@ -1,0 +1,2433 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-11-04",
+   "end_date": "1950-11-07",
+   "d_day": "1950-11-05",
+   "order_time": "D-1일 08:00 (1950-11-04 08:00)",
+   "text": "제8연대가 제3연대와 교대해 비호산 주봉 방어를 맡은 때부터 11월 5일 새벽 중공군 공격과 주봉 상실, 11월 6일 주봉 탈취까지",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 제8연대가 비호산 작전지역을 처음 맡아 결심한 11월 4일 오전 교대 때다. 11월 2~3일에는 제8연대가 사단 예비였다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제8연대를 쓴다. 구간 시작 때 제8연대는 제3연대와 교대해 비호산 주봉 작전지역을 맡았다. 주봉 상실과 탈취의 주체도 제8연대다. 제3연대의 역습과 제5연대의 535고지 방어는 상급·인접 부대 행동으로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "11월 5일 새벽 535고지가 돌파되고 제8연대 제2대대가 주봉을 잃었다. 11월 6일 08:00 제8연대가 북쪽에서 주봉을 공격해 3시간 만에 탈취했다. 사단은 진지를 회복해 방어에 성공했으나 연대는 한때 주봉을 잃었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 150,
+   "origin": "(0,0)은 비호산 주봉 서쪽 16.5km·남쪽 16.5km 지점이며 주봉은 (110,110)이다. 서술의 상대 위치(개천 동쪽, 군우리 북쪽, 535고지는 남동쪽 2km)로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_136_개천_비호산_전투",
+  "title": "개천-비호산 전투",
+  "dates": "1950. 11. 1.〜7.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '개천-비호산 전투' (pdf 408쪽)",
+  "pdf_page": 408,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "6일 오전 8시 제5연대(남)·제8연대(북)가 고지 남북에서 동시 역습",
+    "alternative": "역습을 하지 않고 후방 진지에서 방어만 지속하거나, 5일처럼 단일 방향으로만 역습",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "2일 제8연대를 용현리에 사단 예비로 보유하고 이후 일선 연대와 교대 운용(교대된 제3연대는 개천에 배치)",
+    "alternative": "3개 연대를 모두 일선에 배치하여 예비 없이 방어",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "5일 제3연대가 포병 화력 지원 하에 미 제9연대와 즉각 합동 역습",
+    "alternative": "즉각 역습을 생략하고 전력을 보존하여 6일 계획 역습에 집중",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1477,
+   "duration_s": 374.0,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 37223,
+     "cache_read_input_tokens": 89274,
+     "cache_creation_input_tokens": 17591
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6407,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 14187
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 25,
+   "flagged": [],
+   "cost_usd": 0.0910992
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "국군 제8연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제7사단 제8연대",
+    "제8연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제7사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제7사단"
+   ],
+   "higher_mission": "상급 사단은 비호산-760고지 선을 방어해 군우리와 개천 일대 도로·철로를 확보하고 미 제8군 우측방과 후방 통로를 보호한다.",
+   "higher_intent": "평야를 감제하는 비호산을 끝까지 확보한다. 적 상급부대가 개천으로 나와 청천강 이북 아군의 후방을 차단하지 못하게 한다. 제3연대는 개천에서 재정비하며 위기 때 역습에 쓴다.",
+   "assigned_task": "제8연대는 D-1일 주간에 제3연대와 교대해 사단 좌일선 비호산 주봉 일대를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "N1",
+     "unit": "국군 제5연대",
+     "alias": "인접 연대 1",
+     "other_names": [
+      "제5연대"
+     ],
+     "side": "우측(동쪽)",
+     "echelon": "연대",
+     "type": "infantry",
+     "mission": "사단 우일선으로 760고지와 535고지 일대를 방어한다.",
+     "xy": [
+      128,
+      106
+     ]
+    },
+    {
+     "id": "N2",
+     "unit": "국군 제3연대",
+     "alias": "인접 연대 2",
+     "other_names": [
+      "제3연대"
+     ],
+     "side": "후방(개천)",
+     "echelon": "연대",
+     "type": "infantry",
+     "mission": "개천에서 사단 예비로 재정비하며 역습을 준비한다.",
+     "xy": [
+      78,
+      108
+     ]
+    },
+    {
+     "id": "N3",
+     "unit": "미 제5연대전투단",
+     "alias": "인접 연대 3",
+     "other_names": [
+      "미 제5연대"
+     ],
+     "side": "우측 외곽(제5연대 동쪽)",
+     "echelon": "연대",
+     "type": "infantry",
+     "mission": "제5연대 동쪽 신성리 북방에서 방어한다.",
+     "xy": [
+      150,
+      96
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "N2",
+     "text": "적 대대 이상이 비호산 주봉 지역에 있으면 제3연대가 개천에서 비호산 방향으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 비호산 주봉 지역 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F1",
+      "axis_xy": [
+       [
+        78,
+        108
+       ],
+       [
+        88,
+        104
+       ],
+       [
+        98,
+        104
+       ],
+       [
+        106,
+        108
+       ],
+       [
+        110,
+        110
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "N2",
+     "text": "제5연대 손실이 0.4를 넘으면 제3연대가 535고지 방면으로 나가 제5연대를 엄호한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "N1",
+      "fraction": 0.4,
+      "text": "제5연대 누적 손실 0.4 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "F3",
+      "axis_xy": [
+       [
+        78,
+        108
+       ],
+       [
+        90,
+        96
+       ],
+       [
+        100,
+        86
+       ],
+       [
+        112,
+        90
+       ],
+       [
+        120,
+        98
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 좌측 청천강 동안에서 우측 비호산-535고지 사이 안부까지, 전방 비호산 북쪽 계곡과 원리 북방에서 후방 용현리-개천 남쪽 선까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제8연대-제5연대 전투지경선",
+     "between": [
+      "국군 제8연대",
+      "국군 제5연대"
+     ],
+     "xy": [
+      [
+       118,
+       175
+      ],
+      [
+       118,
+       122
+      ],
+      [
+       116,
+       106
+      ],
+      [
+       112,
+       95
+      ],
+      [
+       110,
+       75
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 좌측 경계(청천강 동안)",
+     "between": [
+      "국군 제8연대",
+      "국군 제7사단 좌측 외곽"
+     ],
+     "xy": [
+      [
+       65,
+       175
+      ],
+      [
+       60,
+       140
+      ],
+      [
+       50,
+       110
+      ],
+      [
+       45,
+       95
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 후방 경계",
+     "between": [
+      "국군 제8연대",
+      "국군 제7사단 후방지역"
+     ],
+     "xy": [
+      [
+       45,
+       95
+      ],
+      [
+       70,
+       95
+      ],
+      [
+       95,
+       82
+      ],
+      [
+       110,
+       75
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "A1",
+    "unit": "제8연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "용현리 일대 사단 예비 집결지",
+     "ref": "F6"
+    }
+   },
+   {
+    "id": "A2",
+    "unit": "제8연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "용현리 일대 사단 예비 집결지",
+     "ref": "F6"
+    }
+   },
+   {
+    "id": "A3",
+    "unit": "제8연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "용현리 일대 사단 예비 집결지",
+     "ref": "F6"
+    }
+   },
+   {
+    "id": "A4",
+    "unit": "제7사단 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "개천 남동쪽 진지",
+     "xy": [
+      86,
+      96
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "묘향산맥 남쪽 끝, 청천강 하류 평야 동쪽 가장자리의 개천-군우리 일대다. 비호산은 평야에서 가장 높은 감제고지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 150,
+   "features": [
+    {
+     "id": "F1",
+     "name": "비호산",
+     "alias": "고지 A",
+     "other_names": [
+      "비호산 주봉",
+      "622고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      110,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 622,
+     "evidence": "개천 동쪽, 군우리 북쪽의 평야지 최고 감제고지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F2",
+     "name": "760고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      132,
+      114
+     ],
+     "estimated": true,
+     "elevation_m": 760,
+     "evidence": "비호산 동쪽 제5연대 진지"
+    },
+    {
+     "id": "F3",
+     "name": "535고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      120,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 535,
+     "evidence": "비호산 남동쪽 2km 제5연대 제2대대 진지"
+    },
+    {
+     "id": "F4",
+     "name": "개천",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      77,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "비호산 서쪽 교통 요지"
+    },
+    {
+     "id": "F5",
+     "name": "군우리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      45,
+      70
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "비호산 남서쪽 도로·철로 결절점"
+    },
+    {
+     "id": "F6",
+     "name": "용현리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      98,
+      85
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 예비 제8연대 집결지"
+    },
+    {
+     "id": "F7",
+     "name": "신성리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      122,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "535고지 남쪽, 미 제5연대전투단 지역"
+    },
+    {
+     "id": "F8",
+     "name": "원리",
+     "alias": "마을 5",
+     "other_names": [
+      "院里"
+     ],
+     "kind": "town",
+     "xy": [
+      75,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "개천 북방 마을"
+    },
+    {
+     "id": "F9",
+     "name": "비호산 서북능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      94,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주봉에서 원리 방면 도로로 뻗은 능선(추정)",
+     "line": [
+      [
+       108,
+       112
+      ],
+      [
+       100,
+       117
+      ],
+      [
+       92,
+       121
+      ],
+      [
+       85,
+       124
+      ]
+     ]
+    },
+    {
+     "id": "F10",
+     "name": "비호산 북쪽 계곡",
+     "alias": "지점 1",
+     "kind": "valley",
+     "xy": [
+      110,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적이 주봉으로 접근할 수 있는 북쪽 계곡(추정)"
+    },
+    {
+     "id": "F11",
+     "name": "청천강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      45,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서해안에서 동북쪽 희천으로 이어지는 강",
+     "line": [
+      [
+       70,
+       200
+      ],
+      [
+       55,
+       140
+      ],
+      [
+       40,
+       100
+      ],
+      [
+       25,
+       60
+      ],
+      [
+       10,
+       0
+      ]
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "개천-군우리 도로·철로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       77,
+       112
+      ],
+      [
+       70,
+       102
+      ],
+      [
+       62,
+       92
+      ],
+      [
+       55,
+       82
+      ],
+      [
+       45,
+       70
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "개천-원리 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       77,
+       112
+      ],
+      [
+       76,
+       124
+      ],
+      [
+       75,
+       135
+      ],
+      [
+       78,
+       155
+      ],
+      [
+       84,
+       175
+      ],
+      [
+       90,
+       195
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "개천-용현리-신성리 도로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       77,
+       112
+      ],
+      [
+       85,
+       102
+      ],
+      [
+       92,
+       92
+      ],
+      [
+       98,
+       85
+      ],
+      [
+       110,
+       84
+      ],
+      [
+       122,
+       84
+      ],
+      [
+       145,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "비호산 북쪽 계곡길",
+     "alias": "도로 4",
+     "kind": "trail",
+     "xy": [
+      [
+       118,
+       180
+      ],
+      [
+       115,
+       160
+      ],
+      [
+       112,
+       145
+      ],
+      [
+       110,
+       135
+      ],
+      [
+       110,
+       122
+      ],
+      [
+       110,
+       112
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "청천강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       68,
+       200
+      ],
+      [
+       72,
+       200
+      ],
+      [
+       57,
+       140
+      ],
+      [
+       42,
+       100
+      ],
+      [
+       27,
+       60
+      ],
+      [
+       12,
+       0
+      ],
+      [
+       8,
+       0
+      ],
+      [
+       23,
+       60
+      ],
+      [
+       38,
+       100
+      ],
+      [
+       53,
+       140
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제334연대",
+    "alias": "적 연대 1",
+    "other_names": [
+     "적 제112사단 제334연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "D-2일 새벽 비호산의 제3연대를 공격한 적 제112사단 주력. D-1일 오전 북방으로 물러났다. 연대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      106,
+      148
+     ],
+     "frontage_m": 2500,
+     "note": "비호산 북쪽 계곡 북단, 주봉 북방 약 5km"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제335연대",
+    "alias": "적 연대 2",
+    "other_names": [
+     "적 제112사단 제335연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": false,
+    "known_at_start": "D-2일 새벽 760고지의 제5연대를 공격하다 격퇴된 적. 연대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      134,
+      146
+     ],
+     "frontage_m": 2500,
+     "note": "760고지 북방 약 5km"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제336연대",
+    "alias": "적 연대 3",
+    "other_names": [
+     "적 제112사단 제336연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "적 제112사단의 예비로 추정. 위치는 정확하지 않다.",
+    "posture": "예비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      120,
+      172
+     ],
+     "note": "비호산 북방 약 9km 산악지대(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D-1일 08:00",
+   "light": "day",
+   "notes": "초겨울로 야간 기온이 영하다. D-1일 오전부터 소강 상태다. 적은 경무장 보병으로 야간 근접전과 침투를 선호하고 주간에는 아군 항공·포병을 피한다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대, 제3대대(연대 예비) / 지원: 제7사단 포병대대(직접지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "A2"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "A1"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "A3"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "비호산 주봉은 군우리-개천 평야와 도로·철로를 감제하는 핵심 지형이다. 주봉이 넘어가면 개천과 군우리가 열린다. 적 접근로는 북쪽 계곡을 따라 주봉으로 오는 길, 원리 방면 도로로 개천에 오는 길, 535고지 안부로 주봉 남측에 도는 길이다.",
+    "key_terrain": [
+     {
+      "ref": "F1",
+      "why": "평야 최고 감제고지. 개천·군우리 도로와 철로를 통제한다."
+     },
+     {
+      "ref": "F3",
+      "why": "주봉 남동측. 넘어가면 주봉의 측후방이 열린다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "북쪽 계곡 접근로",
+      "user": "enemy",
+      "refs": [
+       "R4",
+       "F10"
+      ],
+      "xy": [
+       [
+        118,
+        180
+       ],
+       [
+        115,
+        160
+       ],
+       [
+        112,
+        145
+       ],
+       [
+        110,
+        135
+       ],
+       [
+        110,
+        122
+       ],
+       [
+        110,
+        112
+       ]
+      ]
+     },
+     {
+      "name": "원리 방면 도로 접근로",
+      "user": "enemy",
+      "refs": [
+       "R2",
+       "F8"
+      ],
+      "xy": [
+       [
+        90,
+        195
+       ],
+       [
+        84,
+        175
+       ],
+       [
+        78,
+        155
+       ],
+       [
+        75,
+        135
+       ],
+       [
+        77,
+        112
+       ]
+      ]
+     },
+     {
+      "name": "535고지 안부 접근로",
+      "user": "enemy",
+      "refs": [
+       "F3"
+      ],
+      "xy": [
+       [
+        134,
+        146
+       ],
+       [
+        130,
+        125
+       ],
+       [
+        124,
+        108
+       ],
+       [
+        120,
+        99
+       ],
+       [
+        114,
+        102
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제112사단은 야간에 2개 연대로 다시 공격해 올 것이다. 1개 연대는 북쪽 계곡을 따라 비호산 주봉으로, 1개 연대는 760고지와 535고지 방면으로 공격해 올 것이다. 예비 연대는 선두가 진지에 돌입하면 주봉 방면으로 투입될 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "F10",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         106,
+         148
+        ],
+        [
+         110,
+         140
+        ],
+        [
+         110,
+         132
+        ],
+        [
+         110,
+         122
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "when": "D일 새벽 야간",
+       "t": 3
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "F2",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         134,
+         146
+        ],
+        [
+         132,
+         130
+        ],
+        [
+         128,
+         116
+        ],
+        [
+         122,
+         104
+        ],
+        [
+         120,
+         99
+        ]
+       ],
+       "when": "D일 새벽 야간",
+       "t": 3
+      },
+      {
+       "group": "E3",
+       "mode": "reinforce",
+       "from_ref": "F10",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         120,
+         172
+        ],
+        [
+         116,
+         158
+        ],
+        [
+         112,
+         145
+        ],
+        [
+         110,
+         130
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "when": "선두 연대 진지 돌입 후"
+      }
+     ],
+     "risk_point": "적 제334연대가 주봉에 돌입하고 동시에 535고지가 뚫려 주봉 남측이 열리는 때"
+    },
+    "unknowns": [
+     "적 예비 연대의 위치와 투입 시기",
+     "적 상급부대 다른 사단의 추가 투입 여부",
+     "적 박격포·포병 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 제2대대는 주봉, 제1대대는 서북능선, 제3대대는 주봉 남쪽 기슭 예비진지에 둔다.",
+     "why": "서술에는 제2대대의 주봉 배치만 있다."
+    },
+    {
+     "text": "제3연대가 만든 주봉의 급편 진지를 그대로 인수해 쓴다.",
+     "why": "제3연대가 D-2일 같은 진지에서 근접전을 치렀다."
+    },
+    {
+     "text": "제5연대는 760고지와 535고지를 지켜 연대 우측방을 엄호한다.",
+     "why": "제5연대가 D-2일 적을 격퇴했다."
+    },
+    {
+     "text": "적은 야간에 공격하고 주간에는 아군 화력을 피한다.",
+     "why": "D-2일 새벽 03:00 공격과 주간 철수에서 보였다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제8연대는 D-1일 18:00까지 제3연대와 교대해 비호산 일대를 점령하고 이를 고수하여 개천·군우리 도로와 철로를 확보하고 사단 좌일선을 유지한다.",
+   "task_verb": "고수",
+   "objective_ref": "F1",
+   "when": {
+    "type": "time_elapsed",
+    "value": -6,
+    "text": "D-1일 18:00 진지 교대 완료"
+   },
+   "purpose": "개천·군우리 도로와 철로를 확보하고 미 제8군 후방 통로를 보호한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "주봉과 서북능선을 확보하고 적 공격이 북쪽 계곡과 원리 북방에서 저지된다.",
+    "friendly": "제2대대가 주봉을, 제1대대가 서북능선을 지키고 제3대대는 역습 전투력을 유지한다.",
+    "enemy": "적 제112사단의 공격이 진지 앞에서 저지되고 큰 손실을 입는다.",
+    "terrain": "비호산 주봉과 개천 접근로를 연대가 통제한다."
+   },
+   "concept": {
+    "text": "제2대대로 주봉을, 제1대대로 서북능선과 원리 방면 도로를 지킨다. 제3대대는 주봉 남쪽 기슭에 두어 주봉 역습과 535고지 쪽 안부 차단에 대비한다. 포병은 북쪽 계곡에 화력을 모은다.",
+    "maneuver": "주봉을 중심으로 2개 대대를 일선에 두고 1개 대대를 예비로 둔다. 적이 주봉에 들면 예비가 역습로로 주봉을 되찾고, 535고지가 뚫리면 남동측 안부를 막는다.",
+    "fires": "직접지원 포병은 북쪽 계곡 교전지역에 우선 화력을 두고 원리 북방 도로에 다음 화력을 둔다. 야간 조명과 진지 앞 방어사격을 준비한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM3",
+     "xy": [
+      108,
+      96
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 비호산 주봉 지역 안에 있음"
+     },
+     "priorities": [
+      "비호산 주봉 역습",
+      "비호산-535고지 안부 차단",
+      "서북능선 증원"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM4",
+      "CM5"
+     ],
+     "restrictions": "제5연대 지역(전투지경선 동쪽) 사격은 제5연대와 협조한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       110,
+       110
+      ],
+      "frontage_m": 1800,
+      "ref": "CM1",
+      "preparation": "hasty",
+      "polygon": [
+       [
+        104,
+        104
+       ],
+       [
+        116,
+        104
+       ],
+       [
+        118,
+        114
+       ],
+       [
+        110,
+        120
+       ],
+       [
+        102,
+        114
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         107,
+         115
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         114,
+         114
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         110,
+         106
+        ]
+       }
+      ],
+      "note": "제3연대의 급편 진지를 인수해 주봉 북사면과 동사면에 2개 중대, 주봉 남쪽에 1개 중대를 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "제3연대와 교대해 비호산 주봉 진지를 점령한다.",
+       "params": {
+        "objective": "CM1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "고수",
+       "text": "비호산 주봉을 고수한다.",
+       "params": {
+        "objective": "F1"
+       }
+      }
+     ],
+     "purpose": "연대 방어의 중심인 주봉을 지켜 개천·군우리를 감제한다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       94,
+       120
+      ],
+      "frontage_m": 2000,
+      "ref": "CM2",
+      "preparation": "hasty",
+      "polygon": [
+       [
+        86,
+        114
+       ],
+       [
+        100,
+        114
+       ],
+       [
+        102,
+        126
+       ],
+       [
+        88,
+        128
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         90,
+         124
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         98,
+         122
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         94,
+         116
+        ]
+       }
+      ],
+      "note": "서북능선에 2개 중대, 능선 남쪽에 1개 중대를 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "비호산 서북능선 진지를 점령한다.",
+       "params": {
+        "objective": "CM2"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "저지",
+       "text": "원리 방면 도로로 개천에 오는 적을 저지한다.",
+       "params": {
+        "area": "CM5"
+       }
+      }
+     ],
+     "purpose": "주봉 좌측을 지키고 개천 접근로를 막는다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       108,
+       96
+      ],
+      "frontage_m": 1200,
+      "ref": "CM3",
+      "preparation": "hasty",
+      "polygon": [
+       [
+        102,
+        92
+       ],
+       [
+        114,
+        92
+       ],
+       [
+        114,
+        100
+       ],
+       [
+        102,
+        100
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         105,
+         97
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         111,
+         97
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         108,
+         93
+        ]
+       }
+      ],
+      "note": "주봉 남쪽 기슭에 두어 주봉과 535고지 안부에 모두 닿게 한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "주봉 남쪽 기슭 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM3"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "역습로를 따라 비호산 주봉으로 역습한다.",
+       "params": {
+        "objective": "F1",
+        "route": "CM6"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "F1",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 비호산 주봉 지역 안에 있음"
+       },
+       "basis": "risk_point: 적 제334연대가 주봉에 돌입"
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "차단",
+       "text": "비호산-535고지 안부를 차단한다.",
+       "params": {
+        "line": "CM9"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "N1",
+        "fraction": 0.4,
+        "text": "제5연대 누적 손실 0.4 초과"
+       },
+       "basis": "risk_point: 535고지가 뚫려 주봉 남측이 열림"
+      }
+     ],
+     "purpose": "주봉 상실과 남동측 돌파에 대비해 방어의 종심을 준다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D-1일 18:00 진지 교대와 점령을 마친다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": -6,
+       "text": "D-1일 18:00"
+      }
+     },
+     {
+      "text": "D-1일 20:00 예비 역습 준비와 포병 방어사격 준비를 마친다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": -4,
+       "text": "D-1일 20:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "주봉 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        104,
+        104
+       ],
+       [
+        116,
+        104
+       ],
+       [
+        118,
+        114
+       ],
+       [
+        110,
+        120
+       ],
+       [
+        102,
+        114
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F1"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "서북능선 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        86,
+        114
+       ],
+       [
+        100,
+        114
+       ],
+       [
+        102,
+        126
+       ],
+       [
+        88,
+        128
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F9"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "연대 예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        102,
+        92
+       ],
+       [
+        114,
+        92
+       ],
+       [
+        114,
+        100
+       ],
+       [
+        102,
+        100
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM4",
+      "name": "북쪽 계곡 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        102,
+        124
+       ],
+       [
+        118,
+        124
+       ],
+       [
+        118,
+        142
+       ],
+       [
+        102,
+        142
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F10",
+       "R4"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "원리 북방 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        70,
+        130
+       ],
+       [
+        84,
+        130
+       ],
+       [
+        84,
+        146
+       ],
+       [
+        70,
+        146
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F8",
+       "R2"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "주봉 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        108,
+        96
+       ],
+       [
+        105,
+        100
+       ],
+       [
+        105,
+        105
+       ],
+       [
+        108,
+        108
+       ],
+       [
+        110,
+        110
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "제1·제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G2",
+       "G1"
+      ],
+      "xy": [
+       [
+        102,
+        150
+       ],
+       [
+        102,
+        115
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "제5연대 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        117,
+        106
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM9",
+      "name": "비호산-535고지 안부 차단선",
+      "kind": "other",
+      "xy": [
+       [
+        112,
+        99
+       ],
+       [
+        116,
+        103
+       ],
+       [
+        119,
+        106
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F3"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D-1일 08:00",
+  "start_t": -16,
+  "horizon_h": 52,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "주봉 방어 제2대대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제334연대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제335연대 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제112사단은 D일 새벽 야간에 주력을 비호산 동쪽 제5연대 정면에 두어 535고지를 돌파하고, 동시에 북쪽에서 비호산 주봉을 친다. 주봉과 535고지를 잡은 뒤 개천으로 나와 청천강 이북 아군의 후방을 차단한다.",
+   "groups": [
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         134,
+         146
+        ],
+        [
+         134,
+         132
+        ],
+        [
+         130,
+         120
+        ],
+        [
+         124,
+         108
+        ],
+        [
+         120,
+         99
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00 공격 개시"
+       },
+       "text": "760고지 서측 안부를 따라 535고지를 공격한다.",
+       "basis": "서술: D일 새벽 3시 사단 규모로 비호산 동쪽 제5연대를 공격, 535고지 제2대대 진지 돌파"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         120,
+         99
+        ],
+        [
+         116,
+         103
+        ],
+        [
+         113,
+         106
+        ],
+        [
+         110,
+         110
+        ]
+       ],
+       "text": "535고지에서 비호산 주봉 남동측을 공격한다.",
+       "basis": "추정: 535고지 돌파 직후 주봉 상실, 남측 협공으로 판단"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         120,
+         99
+        ]
+       ],
+       "text": "535고지에서 진지를 편성해 방어한다.",
+       "basis": "서술: 제3연대가 포병으로 적의 진지 편성을 방해"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         120,
+         99
+        ],
+        [
+         126,
+         112
+        ],
+        [
+         132,
+         128
+        ],
+        [
+         134,
+         146
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 제335연대 누적 손실 0.5 초과"
+       },
+       "text": "손실이 크면 760고지 북방으로 철수한다.",
+       "basis": "추정: D+1일 제5연대 공격에 535고지를 내주고 물러남"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         106,
+         148
+        ],
+        [
+         110,
+         140
+        ],
+        [
+         110,
+         132
+        ],
+        [
+         110,
+         122
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00 공격 개시"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       },
+       "text": "북쪽 계곡을 따라 비호산 주봉을 공격한다.",
+       "basis": "서술: 주봉의 제8연대 제2대대가 비호산 상실. 반복 횟수는 D-2일 3차례 쟁탈전에서 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         110,
+         110
+        ]
+       ],
+       "text": "비호산 주봉에서 진지를 편성해 방어한다.",
+       "basis": "서술: D+1일 3시간 격전 끝에 탈취됨"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F10",
+       "axis_xy": [
+        [
+         110,
+         110
+        ],
+        [
+         110,
+         122
+        ],
+        [
+         110,
+         135
+        ],
+        [
+         106,
+         148
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.55,
+        "text": "적 제334연대 누적 손실 0.55 초과"
+       },
+       "text": "손실이 크면 북쪽 계곡으로 철수한다.",
+       "basis": "추정 문턱값"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         120,
+         172
+        ],
+        [
+         126,
+         158
+        ],
+        [
+         132,
+         140
+        ],
+        [
+         128,
+         120
+        ],
+        [
+         122,
+         104
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "E2",
+        "ref": "F3",
+        "min_echelon": "대대",
+        "text": "적 제335연대 대대 이상이 535고지 지역 안에 있음"
+       },
+       "text": "535고지 돌파구로 전과를 확대한다.",
+       "basis": "추정: 주력이 동쪽 정면에 집중됨"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         120,
+         99
+        ],
+        [
+         114,
+         92
+        ],
+        [
+         106,
+         88
+        ],
+        [
+         98,
+         85
+        ]
+       ],
+       "text": "용현리 방향으로 공격해 개천 남쪽 도로를 위협한다.",
+       "basis": "서술: 개천이 위기에 몰림. 축선은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         106,
+         88
+        ],
+        [
+         118,
+         100
+        ],
+        [
+         128,
+         120
+        ],
+        [
+         132,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.4,
+        "text": "적 제336연대 누적 손실 0.4 초과"
+       },
+       "text": "손실이 크면 760고지 북방으로 철수한다.",
+       "basis": "추정 문턱값"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [],
+  "exogenous": [
+   {
+    "when": "D-1일 17:30",
+    "t": -6.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간. 초겨울로 기온 영하."
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D일 07:30",
+    "t": 7.5,
+    "kind": "air_window",
+    "duration_h": 9.5,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D일 17:30",
+    "t": 17.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간. 기온 영하."
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 07:30",
+    "t": 31.5,
+    "kind": "air_window",
+    "duration_h": 9.5,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D-1일 08:00",
+      "t": -16,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        106,
+        148
+       ]
+      ],
+      "from_ref": "F10",
+      "note": "D-2일 공격 뒤 북방에서 재편성. 소강 상태."
+     },
+     {
+      "when": "D일 03:00",
+      "t": 3,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        106,
+        148
+       ],
+       [
+        110,
+        140
+       ],
+       [
+        110,
+        132
+       ],
+       [
+        110,
+        122
+       ],
+       [
+        110,
+        112
+       ]
+      ],
+      "from_ref": "F10",
+      "target_ref": "F1",
+      "note": "북쪽에서 주봉을 공격. 제8연대 제2대대가 주봉을 잃음."
+     },
+     {
+      "when": "D일 주간~D+1일 08:00",
+      "t": 32.0,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        110,
+        110
+       ]
+      ],
+      "target_ref": "F1",
+      "note": "주봉에서 진지를 편성. 제3연대 포병 화력에 방해받음."
+     },
+     {
+      "when": "D+1일 11:00",
+      "t": 35,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        110,
+        110
+       ],
+       [
+        110,
+        122
+       ],
+       [
+        110,
+        135
+       ]
+      ],
+      "target_ref": "F10",
+      "note": "제8연대의 3시간 공격에 주봉을 내줌."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 03:00",
+      "t": 3,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        134,
+        146
+       ],
+       [
+        134,
+        132
+       ],
+       [
+        130,
+        120
+       ],
+       [
+        124,
+        108
+       ],
+       [
+        120,
+        99
+       ]
+      ],
+      "target_ref": "F3",
+      "note": "사단 규모 공격의 일부로 535고지 제5연대 제2대대 진지를 돌파."
+     },
+     {
+      "when": "D+1일 08:00",
+      "t": 32,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        120,
+        99
+       ],
+       [
+        126,
+        112
+       ],
+       [
+        132,
+        128
+       ]
+      ],
+      "target_ref": "F2",
+      "note": "제5연대 공격에 535고지를 내줌."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "mode": "reinforce",
+      "axis_xy": [
+       [
+        120,
+        172
+       ],
+       [
+        126,
+        158
+       ],
+       [
+        132,
+        140
+       ],
+       [
+        128,
+        120
+       ],
+       [
+        122,
+        104
+       ]
+      ],
+      "target_ref": "F3",
+      "note": "추정: 사단 규모 공격에 가담해 535고지 방면 전과 확대. 서술에 연대 구분 없음."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D-1일 오전",
+      "t": -16,
+      "verb": "점령",
+      "ref": "CM1",
+      "text": "제3연대와 교대해 주봉 진지를 점령."
+     },
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "verb": "철수",
+      "ref": "F1",
+      "text": "적 공격에 비호산 주봉을 상실."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D+1일 08:00",
+      "t": 32,
+      "verb": "공격",
+      "ref": "F1",
+      "text": "연대가 북쪽에서 주봉을 공격. 공격 부대 구성은 서술에 없음."
+     },
+     {
+      "when": "D+1일 11:00",
+      "t": 35,
+      "verb": "탈취",
+      "ref": "F1",
+      "text": "3시간 격전 끝에 주봉을 탈취."
+     }
+    ]
+   },
+   {
+    "group": "N1",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "verb": "철수",
+      "ref": "F3",
+      "text": "535고지 제2대대 진지가 돌파되어 연대가 2km 후방으로 철수."
+     },
+     {
+      "when": "D+1일 08:00",
+      "t": 32,
+      "verb": "초월",
+      "ref": "F7",
+      "text": "신성리에서 미 제5연대전투단을 초월해 535고지를 공격, 탈환."
+     }
+    ]
+   },
+   {
+    "group": "N3",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "verb": "철수",
+      "ref": "F7",
+      "text": "1km 후방으로 철수."
+     }
+    ]
+   },
+   {
+    "group": "N2",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 8,
+      "verb": "엄호",
+      "ref": "F3",
+      "text": "개천에서 출동해 제5연대 철수를 엄호."
+     },
+     {
+      "when": "D일 주간",
+      "t": 12,
+      "verb": "역습",
+      "ref": "F1",
+      "text": "포병으로 적 진지 편성을 방해하며 우측 미군 연대와 합동 역습했으나 실패."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 03:00",
+    "t": 3,
+    "kind": "night",
+    "note": "적이 야간에 공격."
+   },
+   {
+    "when": "D+1일 08:00",
+    "t": 32,
+    "kind": "other",
+    "note": "아군 반격은 주간에 실시."
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제8연대",
+   "enemy": "적 제112사단",
+   "terrain_held": [
+    "F1",
+    "F3"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "서술에 손실 수치 없음. 제2대대가 주봉을 잃었다가 연대가 D+1일 탈취했다.",
+   "duration_h": 51
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+1일 12:00 제8연대가 비호산 주봉을, 제5연대가 535고지를 회복했다. 적은 북쪽으로 물러났다.",
+   "terrain_held_at_horizon": [
+    "F1",
+    "F3",
+    "CM2"
+   ],
+   "key_times": [
+    {
+     "t": -16,
+     "text": "제3연대와 교대해 주봉 점령",
+     "ref": "CM1"
+    },
+    {
+     "t": 3,
+     "text": "적 사단 규모 야간 공격 개시",
+     "ref": "F3"
+    },
+    {
+     "t": 5,
+     "text": "535고지 돌파, 주봉 상실",
+     "ref": "F1"
+    },
+    {
+     "t": 12,
+     "text": "제3연대 역습 실패",
+     "ref": "F1"
+    },
+    {
+     "t": 32,
+     "text": "제8연대·제5연대 남북 공격 재개",
+     "ref": "F1"
+    },
+    {
+     "t": 35,
+     "text": "주봉 탈취",
+     "ref": "F1"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_136",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

@@ -1,0 +1,2703 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1951-09-29",
+   "end_date": "1951-10-01",
+   "d_day": "1951-09-30",
+   "order_time": "1951-09-29 (D-1일) 제7사단과 교대 후 공격준비 단계",
+   "text": "국군 제8사단이 제7사단과 임무를 교대한 뒤 9월 29일 공격준비를 마치고, 9월 30일 07:00 제10연대를 주공으로 백석산 주봉과 우측 봉우리를 공격해 10월 1일 11:55 주봉을, 이어 우측 봉우리를 점령한 구간.",
+   "why": "구간 지정 ②. 대대 단위 기동(제1대대 서남능선, 제2대대 동남능선)이 서술되어 연대 명령 재구성에 적합하다."
+  },
+  "perspective_rationale": "관점 지정에 따라 국군 제8사단 제10연대를 쓴다. 제10연대는 사단 주공으로 백석산 정면 작전지역을 맡았고 대대별 기동이 서술되어 있다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "D+1일 10:50 제1대대가 주봉을 점령했다가 역습으로 밀려났으나 11:55 다시 완전히 장악하고, 제2대대가 우측 봉우리를 점령했다. 제8사단 전사 50명, 부상 243명."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "백석산 주봉을 (100,121)에 둔 서술 기반 추정 좌표. 캔자스선은 약 10km 남쪽(y≈20).",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_190_백석산_전투",
+  "title": "백석산 전투",
+  "dates": "1951. 9. 24.∼10. 1.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '백석산 전투' (pdf 570쪽)",
+  "pdf_page": 570,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 21,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 2
+   },
+   "sim_value": 8,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제10연대가 제1대대(서남쪽 능선)와 제2대대(동남쪽 능선)를 병진시켰으나 제2대대 공격이 지연되어 제1대대가 단독으로 주봉에 진입",
+    "alternative": "두 대대의 돌격 시점을 일치시키거나 제2대대의 측방 압박이 형성된 뒤 제1대대가 주봉에 돌입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "그러나 제1대대는 우측의 제2대대 공격이 지연되면서 적으로부터 역습을 받아 다시 백석산주봉에서 밀려났다. 곧이어 제2대대의 과감한 공격으로 왼쪽 측방의 위협을 느낀 북한군이 철수하기 시작하자, 제1대대는 재공격에 나서 11시 55분에 백석산 주봉을 완전히 장악하였다."
+   },
+   {
+    "decision": "제10연대장이 9월 30일 공격을 중지하고 탄약·식량을 보급한 뒤 10월 1일 이른 아침에 재개",
+    "alternative": "9월 30일 공격을 중지하지 않고 계속 강행",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제7사단 제8연대가 26일 정상의 좌측 봉우리, 27일 우측 봉우리를 차례로 따로 공격",
+    "alternative": "정상의 두 봉우리를 동시에 공격하거나, 점령한 좌측 봉우리에 병력을 증원해 역습에 대비",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "사단 교대(9월 28일)를 경계로 두 구간. ① 9월 24일~27일(4일): 제7사단 제8연대 주공·제3연대 조공의 1차 공격, 주봉 점령 실패. ② 9월 30일~10월 1일(2일, 준비일 9월 29일 포함 시 3일): 제8사단 제10연대의 2차 공격, 주봉 점령. 대대 단위 기동이 서술된 ②를 참조 구간으로 권장.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.5291,
+   "duration_s": 315.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31794,
+     "cache_read_input_tokens": 26518,
+     "cache_creation_input_tokens": 60280
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7314,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 32420
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [],
+   "cost_usd": 0.0726872
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "국군 제8사단 제10연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제10연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제8사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제8사단"
+   ],
+   "higher_mission": "제8사단은 D일 07:00 백석산을 공격하여 주봉과 우측 봉우리를 탈취함으로써 단장의 능선과 문등리 계곡을 감제하여 우측 미 제2사단의 공격을 지원한다.",
+   "higher_intent": "제7사단이 확보한 894고지와 무명고지를 발판으로 신속히 백석산 정상을 장악해 적 주방어선을 북쪽으로 밀어내고 군단 주공의 측방을 보호한다.",
+   "assigned_task": "사단 주공으로 백석산 서남능선과 동남능선을 따라 공격하여 백석산 주봉과 우측 봉우리를 탈취한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "국군 제8사단 제21연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서쪽)",
+     "mission": "892고지-1065고지 방면의 적 제32연대를 견제하여 아군 연대 좌측방을 엄호한다(추정).",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      66,
+      100
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "국군 제8사단 제16연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 주공 연대의 공격을 지원할 준비를 한다(추정).",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      96,
+      60
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "미 제2사단",
+     "alias": "인접 사단 1",
+     "other_names": [
+      "US 2nd Infantry Division"
+     ],
+     "side": "우측(동쪽)",
+     "mission": "1024고지를 확보하고 단장의 능선을 공격한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      150,
+      105
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "제8사단 포병",
+     "text": "D일 06:30부터 백석산 주봉과 우측 봉우리에 공격준비사격을 실시한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6.5,
+      "text": "D일 06:30 공격준비사격"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "T1"
+     }
+    },
+    {
+     "unit": "A3",
+     "text": "미 제2사단은 1024고지를 계속 확보한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00 이후 계속"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T6"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "제1대대 손실이 50%를 넘으면 사단 예비 제16연대가 주봉 방향으로 증원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.5,
+      "text": "제1대대 손실 0.5 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T1"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "아군 연대는 894고지 동쪽에서 무명고지 서쪽까지의 정면을 맡아 백석산 정상까지 공격한다. 우측은 1024고지를 확보한 미 제2사단, 좌측은 제21연대와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       78,
+       40
+      ],
+      [
+       78,
+       100
+      ],
+      [
+       84,
+       130
+      ],
+      [
+       86,
+       170
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "우측 사단 전투지경선",
+     "between": [
+      "아군 연대",
+      "A3"
+     ],
+     "xy": [
+      [
+       120,
+       40
+      ],
+      [
+       116,
+       96
+      ],
+      [
+       115.5,
+       110
+      ],
+      [
+       113,
+       130
+      ],
+      [
+       112,
+       170
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제10연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 서측"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제10연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 동측"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제10연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제10연대 중박격포중대",
+    "alias": "박격포중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "4.2인치 박격포(문수 미상)",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제8사단 포병 1개 대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포(문수 미상)",
+    "location": {
+     "note": "연대 작전지역 남쪽 포진지"
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "배속 노무자",
+    "alias": "노무대 1",
+    "echelon": "중대",
+    "type": "other",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "personnel": 300,
+    "equipment": "대대별 100명, 탄약·식량 운반",
+    "location": {
+     "note": "연대 작전지역 내 보급로 일대"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "강원도 양구 북방 백석산(1142) 일대. 경사 60° 안팎, 표고 800~1,300m 고지군과 협소한 계곡. 도로망이 빈약해 보급·기동·전차 운용이 매우 불리하다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "백석산 주봉",
+     "alias": "고지 A",
+     "other_names": [
+      "1142고지",
+      "백석산",
+      "좌측 봉우리"
+     ],
+     "kind": "hill",
+     "xy": [
+      100,
+      121
+     ],
+     "estimated": true,
+     "elevation_m": 1142,
+     "evidence": "적 제32사단 전술지휘소와 강력한 방어진지, 이후 적 제30연대 배치",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T2",
+     "name": "백석산 우측 봉우리",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      106,
+      119
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "백석산 정상의 2개 봉우리 중 우측 봉우리",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T3",
+     "name": "894고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      82,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 894,
+     "evidence": "백석산 서쪽 약 2km, 제7사단 제8연대가 확보"
+    },
+    {
+     "id": "T4",
+     "name": "696고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      72,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 696,
+     "evidence": "894고지 서쪽 1km"
+    },
+    {
+     "id": "T5",
+     "name": "1024고지 서쪽 무명고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      114,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1024고지 서쪽 300m, 제7사단 제3연대가 확보"
+    },
+    {
+     "id": "T6",
+     "name": "1024고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      117,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 1024,
+     "evidence": "백석산 동남쪽 2km, 미 제2사단이 확보"
+    },
+    {
+     "id": "T7",
+     "name": "901고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      128,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 901,
+     "evidence": "백석산 동남쪽 4km"
+    },
+    {
+     "id": "T8",
+     "name": "554고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      140,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 554,
+     "evidence": "1024고지-901고지-554고지 축의 남동단"
+    },
+    {
+     "id": "T9",
+     "name": "883고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      110,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 883,
+     "evidence": "백석산-883고지-917고지 능선, 적 방어진지 기반",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T10",
+     "name": "917고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      120,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 917,
+     "evidence": "백석산-883고지-917고지 능선"
+    },
+    {
+     "id": "T11",
+     "name": "892고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      62,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 892,
+     "evidence": "서쪽의 892고지-1065고지 능선"
+    },
+    {
+     "id": "T12",
+     "name": "1065고지",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      66,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 1065,
+     "evidence": "서쪽의 892고지-1065고지 능선"
+    },
+    {
+     "id": "T13",
+     "name": "1220고지",
+     "alias": "고지 M",
+     "kind": "hill",
+     "xy": [
+      68,
+      152
+     ],
+     "estimated": true,
+     "elevation_m": 1220,
+     "evidence": "백석산 서북쪽 4.5km, 적 제12사단 지휘소"
+    },
+    {
+     "id": "T14",
+     "name": "어은산",
+     "alias": "고지 N",
+     "other_names": [
+      "1277고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      100,
+      197
+     ],
+     "estimated": true,
+     "elevation_m": 1277,
+     "evidence": "백석산 북쪽 8km"
+    },
+    {
+     "id": "T15",
+     "name": "백석산 서남능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      90,
+      116
+     ],
+     "line": [
+      [
+       82,
+       112
+      ],
+      [
+       86,
+       114
+      ],
+      [
+       90,
+       116
+      ],
+      [
+       94,
+       118
+      ],
+      [
+       100,
+       121
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대가 목표고지 서남쪽 능선으로 공격"
+    },
+    {
+     "id": "T16",
+     "name": "백석산 동남능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      110,
+      113
+     ],
+     "line": [
+      [
+       114,
+       106
+      ],
+      [
+       112,
+       110
+      ],
+      [
+       110,
+       114
+      ],
+      [
+       108,
+       117
+      ],
+      [
+       106,
+       119
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제2대대가 동남쪽 능선으로 공격"
+    },
+    {
+     "id": "T17",
+     "name": "문등리 계곡",
+     "alias": "지점 1",
+     "kind": "valley",
+     "xy": [
+      150,
+      110
+     ],
+     "line": [
+      [
+       146,
+       60
+      ],
+      [
+       148,
+       90
+      ],
+      [
+       150,
+       110
+      ],
+      [
+       152,
+       140
+      ],
+      [
+       154,
+       170
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1024고지 동쪽의 계곡"
+    },
+    {
+     "id": "T18",
+     "name": "단장의 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      178,
+      125
+     ],
+     "line": [
+      [
+       172,
+       100
+      ],
+      [
+       176,
+       115
+      ],
+      [
+       178,
+       125
+      ],
+      [
+       182,
+       140
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "미 제2사단의 공격 목표"
+    },
+    {
+     "id": "T19",
+     "name": "캔자스선",
+     "alias": "지점 2",
+     "kind": "other",
+     "xy": [
+      100,
+      20
+     ],
+     "line": [
+      [
+       0,
+       22
+      ],
+      [
+       60,
+       20
+      ],
+      [
+       120,
+       20
+      ],
+      [
+       200,
+       18
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "백석산 점령으로 전선이 캔자스선에서 10km 북쪽으로 추진"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "894고지 보급로",
+     "alias": "도로 1",
+     "kind": "trail",
+     "xy": [
+      [
+       80,
+       40
+      ],
+      [
+       78,
+       70
+      ],
+      [
+       80,
+       95
+      ],
+      [
+       82,
+       112
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "무명고지 보급로",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       118,
+       40
+      ],
+      [
+       118,
+       70
+      ],
+      [
+       116,
+       92
+      ],
+      [
+       114,
+       106
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "백석산-883고지-917고지 능선길",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       121
+      ],
+      [
+       104,
+       126
+      ],
+      [
+       110,
+       132
+      ],
+      [
+       116,
+       137
+      ],
+      [
+       120,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제12사단 제30연대 1개 대대(주봉)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "제32사단과 교대한 제12사단 제30연대가 백석산에 배치된 것으로 판단",
+    "posture": "방어",
+    "preparation": "fortified",
+    "equipment": "82mm 박격포 5문, 대전차포 7문, 기관총 12정(대대 기준)",
+    "position": {
+     "xy": [
+      100,
+      121
+     ],
+     "frontage_m": 800,
+     "polygon": [
+      [
+       95,
+       118
+      ],
+      [
+       98,
+       124
+      ],
+      [
+       103,
+       124
+      ],
+      [
+       104,
+       119
+      ],
+      [
+       99,
+       116
+      ]
+     ],
+     "ref": "T1",
+     "note": "주봉 일대 기존 방어진지"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제12사단 제30연대 1개 대대(우측 봉우리)",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "우측 봉우리와 동남능선 상단에 배치",
+    "posture": "방어",
+    "preparation": "fortified",
+    "equipment": "82mm 박격포 5문, 대전차포 7문, 기관총 12정(대대 기준)",
+    "position": {
+     "xy": [
+      107,
+      118
+     ],
+     "frontage_m": 1000,
+     "polygon": [
+      [
+       104,
+       121
+      ],
+      [
+       109,
+       122
+      ],
+      [
+       111,
+       116
+      ],
+      [
+       108,
+       113
+      ],
+      [
+       104,
+       116
+      ]
+     ],
+     "ref": "T2",
+     "note": "우측 봉우리와 동남능선 상단"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제12사단 제30연대 예비대대",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "883고지 일대에 연대 예비가 있을 것으로 추정",
+    "posture": "예비",
+    "preparation": "deliberate",
+    "equipment": "120mm 박격포 2문, 76mm·45mm 직사포 각 2문, 고사기관총 4정(연대 지원화기)",
+    "position": {
+     "xy": [
+      110,
+      132
+     ],
+     "frontage_m": 600,
+     "ref": "T9",
+     "note": "883고지 일대 추정"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제12사단 제32연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "백석산 서쪽 능선에 배치 판단",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      64,
+      126
+     ],
+     "frontage_m": 2000,
+     "ref": "T11",
+     "note": "892고지-1065고지 능선"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "북한군 제12사단 제31연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "백석산 동북쪽 능선에 배치 판단",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      120,
+      140
+     ],
+     "frontage_m": 2000,
+     "ref": "T10",
+     "note": "917고지 일대"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 07:00",
+   "light": "day",
+   "notes": "가을 산악지형, 급경사로 기동 속도가 느리다. 도로가 빈약해 노무자로 탄약·식량을 운반한다. 주간 근접항공지원 가능. 제7사단이 894고지와 무명고지를 확보한 상태에서 인수했다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대(+노무자 100명), 제2대대(+노무자 100명), 제3대대(+노무자 100명), 중박격포중대 / 지원: 제8사단 포병 1개 대대(직접지원), 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대(+노무자 100명)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      },
+      {
+       "force": "F6",
+       "part": "노무자 100명"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대(+노무자 100명)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      },
+      {
+       "force": "F6",
+       "part": "노무자 100명"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대(+노무자 100명)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      },
+      {
+       "force": "F6",
+       "part": "노무자 100명"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "중박격포중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "백석산 주봉은 단장의 능선과 문등리 계곡을 감제하는 핵심 지형이고 우측 봉우리는 주봉의 동측방을 지배한다. 접근로는 894고지에서 오르는 서남능선과 무명고지에서 오르는 동남능선 2개뿐이며 급경사로 협소하다. 적의 역습로는 883고지에서 주봉으로 이어지는 능선이다.",
+    "key_terrain": [
+     {
+      "ref": "T1",
+      "why": "단장의 능선과 문등리 계곡 감제, 적 방어의 중심"
+     },
+     {
+      "ref": "T2",
+      "why": "주봉 동측방 지배, 확보하지 못하면 주봉이 측방 위협을 받는다"
+     },
+     {
+      "ref": "T9",
+      "why": "적 예비의 역습 출발지"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "서남능선 접근로",
+      "user": "friendly",
+      "refs": [
+       "T3",
+       "T15",
+       "T1"
+      ],
+      "xy": [
+       [
+        82,
+        112
+       ],
+       [
+        86,
+        114
+       ],
+       [
+        90,
+        116
+       ],
+       [
+        94,
+        118
+       ],
+       [
+        100,
+        121
+       ]
+      ]
+     },
+     {
+      "name": "동남능선 접근로",
+      "user": "friendly",
+      "refs": [
+       "T5",
+       "T16",
+       "T2"
+      ],
+      "xy": [
+       [
+        114,
+        106
+       ],
+       [
+        112,
+        110
+       ],
+       [
+        110,
+        114
+       ],
+       [
+        108,
+        117
+       ],
+       [
+        106,
+        119
+       ]
+      ]
+     },
+     {
+      "name": "883고지 역습로",
+      "user": "enemy",
+      "refs": [
+       "T9",
+       "R3",
+       "T1"
+      ],
+      "xy": [
+       [
+        110,
+        132
+       ],
+       [
+        106,
+        128
+       ],
+       [
+        103,
+        124
+       ],
+       [
+        100,
+        121
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제30연대는 2개 대대로 백석산 주봉과 우측 봉우리의 기존 진지에서 방어하다가 883고지의 예비대대로 주봉에 역습해 올 것이다. 좌우측의 적 제32연대와 제31연대는 892고지와 917고지 일대에서 측방 화력으로 방어를 지원할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "from_ref": "T1",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         121
+        ]
+       ],
+       "when": "D일 07:00 이후 계속",
+       "t": 7
+      },
+      {
+       "group": "E2",
+       "mode": "hold",
+       "from_ref": "T2",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         107,
+         118
+        ]
+       ],
+       "when": "D일 07:00 이후 계속",
+       "t": 7
+      },
+      {
+       "group": "E3",
+       "mode": "counterattack",
+       "from_ref": "T9",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         110,
+         132
+        ],
+        [
+         108,
+         129
+        ],
+        [
+         106,
+         127
+        ],
+        [
+         103,
+         124
+        ],
+        [
+         100,
+         121
+        ]
+       ],
+       "when": "아군이 주봉에 돌입한 직후"
+      },
+      {
+       "group": "E4",
+       "mode": "fix",
+       "from_ref": "T11",
+       "objective_ref": "T15",
+       "axis_xy": [
+        [
+         62,
+         120
+        ],
+        [
+         72,
+         118
+        ],
+        [
+         82,
+         116
+        ],
+        [
+         90,
+         116
+        ]
+       ],
+       "when": "아군 공격 개시 후 측방 사격"
+      },
+      {
+       "group": "E5",
+       "mode": "fix",
+       "from_ref": "T10",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         120,
+         140
+        ],
+        [
+         116,
+         130
+        ],
+        [
+         112,
+         120
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "when": "아군 공격 개시 후 측방 사격"
+      }
+     ],
+     "risk_point": "제1대대가 주봉에 돌입해 손실이 큰 상태에서 제2대대가 우측 봉우리에서 지연되고 적 예비대대가 883고지에서 주봉으로 역습할 때"
+    },
+    "unknowns": [
+     "적 제12사단의 교대 완료 여부와 대대별 실제 배치",
+     "883고지 예비대대의 규모와 위치",
+     "1220고지 적 사단 예비의 투입 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 제1대대는 894고지, 제2대대는 무명고지를 공격대기지점으로 쓰고 중대 배치는 추정한다.",
+     "why": "서술에는 대대 공격 능선만 있고 중대 배치와 출발 위치가 없다."
+    },
+    {
+     "text": "미 제2사단은 1024고지를 계속 확보해 연대 우측방이 안전하다.",
+     "why": "미 제2사단이 D-5일 1024고지를 점령했다."
+    },
+    {
+     "text": "대대별 노무자 100명으로 급경사 능선에서 탄약·식량 보급을 유지할 수 있다.",
+     "why": "도로망이 빈약해 차량 보급이 불가능하다."
+    },
+    {
+     "text": "주간에 근접항공지원을 받을 수 있다.",
+     "why": "유엔 공군의 근접항공지원이 사단 공격을 지원한다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제10연대는 D일 07:00 백석산 서남능선과 동남능선을 따라 공격하여 백석산 주봉과 우측 봉우리를 탈취함으로써 단장의 능선과 문등리 계곡을 감제한다.",
+   "task_verb": "탈취",
+   "objective_ref": "OBJ1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 7,
+    "text": "H시 D일 07:00"
+   },
+   "purpose": "단장의 능선과 문등리 계곡을 감제해 군단 주공 미 제2사단의 공격을 지원한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "아군 연대가 백석산 주봉과 우측 봉우리를 확보하고 883고지 방향의 적 역습을 격퇴할 태세를 갖춘다.",
+    "friendly": "제1대대 주봉, 제2대대 우측 봉우리 확보, 제3대대 역습 가능",
+    "enemy": "적 제30연대가 백석산 정상에서 격퇴되어 북쪽으로 물러남",
+    "terrain": "백석산 주봉과 우측 봉우리 확보"
+   },
+   "concept": {
+    "text": "2개 대대가 서남·동남 두 능선으로 동시에 공격해 주봉과 우측 봉우리를 협공한다. 주공 제1대대는 주봉을, 제2대대는 우측 봉우리를 탈취해 주봉의 동측방을 차단한다. 제3대대는 예비로 주봉에 대한 적 역습에 대비한다.",
+    "maneuver": "제1대대는 894고지에서 서남능선으로 주봉을 공격하고, 제2대대는 무명고지에서 동남능선으로 우측 봉우리를 공격한다. 두 대대는 돌격선에서 포병 사격 연신과 근접항공지원에 맞춰 돌격한다.",
+    "fires": "공격준비사격은 주봉과 우측 봉우리에 집중한다. 돌격 시 화력을 883고지 역습로로 연신해 적 예비를 차단한다. 근접항공지원은 돌격선 도달 시 정상 진지에 요청한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM8",
+     "xy": [
+      92,
+      100
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.4,
+      "text": "제1대대 손실 0.4 초과"
+     },
+     "priorities": [
+      "1순위: 주봉으로 역습",
+      "2순위: 제2대대를 초월해 우측 봉우리 공격"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "OBJ1",
+      "OBJ2",
+      "CM9"
+     ],
+     "restrictions": "돌격선 통과 후에는 정상 사격을 883고지 방향으로 연신한다. 근접항공지원은 아군 대공포판 표시선 북쪽에만 실시한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       84,
+       111
+      ],
+      "ref": "T3",
+      "frontage_m": 800,
+      "polygon": [
+       [
+        79,
+        108
+       ],
+       [
+        80,
+        115
+       ],
+       [
+        88,
+        115
+       ],
+       [
+        88,
+        108
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         86,
+         113
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         84,
+         110
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         81,
+         111
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "894고지 일대 제7사단 확보 진지를 인수"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "D일 07:00 공격로 1을 따라 서남능선으로 백석산 주봉을 공격한다.",
+       "params": {
+        "objective": "OBJ1",
+        "route": "CM4"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "돌격선에서 화력 연신과 근접항공지원에 맞춰 돌격해 백석산 주봉을 탈취한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "883고지 방향의 역습에 대비해 백석산 주봉을 확보한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      }
+     ],
+     "purpose": "사단 주공의 결정적 목표를 장악한다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       113,
+       105
+      ],
+      "ref": "T5",
+      "frontage_m": 700,
+      "polygon": [
+       [
+        110,
+        102
+       ],
+       [
+        110,
+        108
+       ],
+       [
+        115,
+        109
+       ],
+       [
+        116,
+        103
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         113,
+         107
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         111,
+         104
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         115,
+         104
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "무명고지 일대 제7사단 확보 진지를 인수"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "D일 07:00 공격로 2를 따라 동남능선으로 백석산 우측 봉우리를 공격한다.",
+       "params": {
+        "objective": "OBJ2",
+        "route": "CM5"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "백석산 우측 봉우리를 탈취한다.",
+       "params": {
+        "objective": "OBJ2"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "주봉 동측방을 보호하도록 백석산 우측 봉우리를 확보한다.",
+       "params": {
+        "objective": "OBJ2"
+       }
+      }
+     ],
+     "purpose": "주봉의 동측방을 장악해 제1대대의 주봉 탈취를 돕는다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       92,
+       100
+      ],
+      "ref": "CM8",
+      "frontage_m": 600,
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         90,
+         102
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         94,
+         101
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         92,
+         98
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "두 접근로로 모두 투입할 수 있는 연대 중앙 후방"
+     },
+     "items": [
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 역습로를 따라 백석산 주봉으로 역습한다.",
+       "params": {
+        "objective": "OBJ1",
+        "route": "CM9"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "제1대대 손실 0.4 초과"
+       },
+       "basis": "risk_point: 손실이 큰 제1대대가 주봉에서 적 예비대대의 역습을 받는다."
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "초월",
+       "text": "명에 의해 통과지점 1에서 제2대대를 초월한다.",
+       "params": {
+        "passed_group": "G2",
+        "passage_point": "CM10"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G2",
+        "fraction": 0.4,
+        "text": "제2대대 손실 0.4 초과"
+       },
+       "basis": "risk_point: 제2대대가 우측 봉우리에서 지연되어 주봉 동측방이 노출된다."
+      }
+     ],
+     "purpose": "주봉에 대한 적 역습을 격퇴하고 공격 기세를 유지한다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       95,
+       104
+      ],
+      "frontage_m": 200,
+      "note": "서남·동남 능선 모두 사거리 안에 드는 진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "제1대대의 주봉 공격을 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "OBJ1"
+       }
+      }
+     ],
+     "purpose": "주공의 돌격을 근접 화력으로 돕는다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 00:00까지 공격대기지점 점령과 공격준비를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 0,
+       "text": "D일 00:00 공격준비 완료"
+      }
+     },
+     {
+      "text": "D일 06:30 공격준비사격을 개시한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6.5,
+       "text": "D일 06:30"
+      }
+     },
+     {
+      "text": "H시는 D일 07:00이다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 7,
+       "text": "D일 07:00 공격 개시"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        78,
+        110
+       ],
+       [
+        86,
+        110
+       ],
+       [
+        100,
+        104
+       ],
+       [
+        110,
+        104
+       ],
+       [
+        116,
+        104
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T3",
+       "T5"
+      ]
+     },
+     {
+      "id": "OBJ1",
+      "name": "목표 1(백석산 주봉)",
+      "kind": "objective",
+      "xy": [
+       [
+        100,
+        121
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T1"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "OBJ2",
+      "name": "목표 2(백석산 우측 봉우리)",
+      "kind": "objective",
+      "xy": [
+       [
+        106,
+        119
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T2"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "CM4",
+      "name": "공격로 1",
+      "kind": "route",
+      "xy": [
+       [
+        82,
+        112
+       ],
+       [
+        86,
+        114
+       ],
+       [
+        90,
+        116
+       ],
+       [
+        94,
+        118
+       ],
+       [
+        97,
+        120
+       ],
+       [
+        100,
+        121
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T15"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "공격로 2",
+      "kind": "route",
+      "xy": [
+       [
+        114,
+        106
+       ],
+       [
+        112,
+        110
+       ],
+       [
+        110,
+        114
+       ],
+       [
+        108,
+        117
+       ],
+       [
+        106,
+        119
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T16"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        98,
+        96
+       ],
+       [
+        100,
+        108
+       ],
+       [
+        103,
+        120
+       ],
+       [
+        104,
+        130
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "돌격선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        92,
+        116
+       ],
+       [
+        96,
+        115
+       ],
+       [
+        104,
+        114
+       ],
+       [
+        110,
+        114
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "예비 집결지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        88,
+        97
+       ],
+       [
+        88,
+        103
+       ],
+       [
+        96,
+        103
+       ],
+       [
+        96,
+        97
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM9",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        92,
+        100
+       ],
+       [
+        87,
+        107
+       ],
+       [
+        88,
+        113
+       ],
+       [
+        93,
+        117
+       ],
+       [
+        97,
+        120
+       ],
+       [
+        100,
+        121
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM10",
+      "name": "통과지점 1",
+      "kind": "passage_point",
+      "xy": [
+       [
+        111,
+        111
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T16"
+      ]
+     },
+     {
+      "id": "CM11",
+      "name": "미 제2사단 접촉점",
+      "kind": "contact_point",
+      "between": [
+       "G2",
+       "A3"
+      ],
+      "xy": [
+       [
+        115.5,
+        107
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T5",
+       "T6"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 32,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E2",
+      "fraction": 0.7,
+      "text": "적 우측 봉우리 대대 손실 0.7 초과"
+     }
+    ],
+    "text": "적 주봉·우측 봉우리 대대 모두 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제12사단은 제32사단과 교대한 직후 제30연대로 백석산 정상의 기존 진지를 고수하고, 아군이 정상에 돌입하면 883고지의 연대 예비로 역습해 정상을 되찾는다. 좌우의 제32연대와 제31연대는 측방 화력으로 정상 방어를 지원한다. 정상 유지가 어려우면 883고지와 1220고지 방향으로 물러나 주방어선을 북쪽에 다시 편성한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "text": "백석산 주봉의 기존 진지를 고수한다.",
+       "basis": "서술: 적 제12사단이 백석산에 제30연대를 배치했다. 기존 제32사단의 강력한 방어진지를 인수했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 0,
+        "text": "D일 00:00 이후 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         100,
+         121
+        ],
+        [
+         103,
+         124
+        ],
+        [
+         106,
+         128
+        ],
+        [
+         110,
+         132
+        ]
+       ],
+       "text": "손실이 크고 아군 중대 이상이 주봉에 있으면 883고지 방향으로 철수한다.",
+       "basis": "서술: 제2대대의 공격으로 왼쪽 측방에 위협을 느낀 적이 철수했다. 문턱값은 추정.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "적 주봉 대대 손실 0.5 초과",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "side": "friendly",
+          "ref": "OBJ1",
+          "min_echelon": "중대",
+          "text": "아군 중대 이상이 목표 1 안에 있음"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T2",
+       "text": "백석산 우측 봉우리와 동남능선 상단 진지를 고수한다.",
+       "basis": "서술: 제2대대의 공격이 지연될 만큼 우측 봉우리 저항이 강했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 0,
+        "text": "D일 00:00 이후 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         107,
+         118
+        ],
+        [
+         108,
+         124
+        ],
+        [
+         110,
+         128
+        ],
+        [
+         110,
+         132
+        ]
+       ],
+       "text": "손실이 크면 883고지 방향으로 철수한다.",
+       "basis": "추정: 우측 봉우리가 함락되기 전에 잔존 병력을 연대 예비 쪽으로 물린다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "적 우측 봉우리 대대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T15",
+       "text": "연대 지원화기로 서남능선과 동남능선의 접근로에 사격한다.",
+       "basis": "서술: 연대당 120mm 박격포 2문, 76mm·45mm 직사포 각 2문 보유. 시각은 아군 공격 개시에 맞춘 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         110,
+         132
+        ],
+        [
+         108,
+         129
+        ],
+        [
+         106,
+         127
+        ],
+        [
+         103,
+         124
+        ],
+        [
+         100,
+         121
+        ]
+       ],
+       "text": "아군 중대 이상이 주봉에 들어오면 883고지에서 주봉으로 역습한다.",
+       "basis": "서술: 제1대대가 주봉을 점령한 직후 적 역습으로 밀려났다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 1
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T13",
+       "axis_xy": [
+        [
+         110,
+         132
+        ],
+        [
+         100,
+         138
+        ],
+        [
+         88,
+         144
+        ],
+        [
+         76,
+         150
+        ],
+        [
+         68,
+         152
+        ]
+       ],
+       "text": "손실이 크면 1220고지 방향으로 철수한다.",
+       "basis": "서술: 백석산 함락 후 북한군은 주방어선을 1220고지와 어은산으로 물렸다. 문턱값은 추정.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.4,
+        "text": "적 예비대대 손실 0.4 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T15",
+       "axis_xy": [
+        [
+         62,
+         120
+        ],
+        [
+         72,
+         118
+        ],
+        [
+         82,
+         116
+        ],
+        [
+         90,
+         116
+        ]
+       ],
+       "text": "892고지 능선에서 서남능선으로 측방 사격을 실시한다.",
+       "basis": "추정: 백석산 좌측에 배치된 제32연대가 인접 연대 정면을 방어하며 측방 화력을 지원한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         120,
+         140
+        ],
+        [
+         116,
+         130
+        ],
+        [
+         112,
+         120
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "text": "917고지 일대에서 동남능선으로 측방 사격을 실시한다.",
+       "basis": "추정: 백석산 우측에 배치된 제31연대가 측방 화력을 지원한다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T15",
+       "text": "서남능선 중간의 전초진지를 고수해 돌격선 접근을 지연한다.",
+       "basis": "서술: 적이 남쪽 고지에 전초부대를 추진했고 제1대대가 돌격선에 들어가기까지 3시간의 혈전을 치렀다. 규모와 위치는 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 0,
+        "text": "D일 00:00 이후 계속"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         91,
+         116
+        ],
+        [
+         95,
+         118
+        ],
+        [
+         100,
+         121
+        ]
+       ],
+       "text": "손실이 크면 주봉 진지로 물러난다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E6",
+        "fraction": 0.5,
+        "text": "적 전초 중대 손실 0.5 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E6",
+    "unit": "북한군 제12사단 제30연대 전초 중대(서남능선)",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 100,
+    "equipment": "기관총 4정(추정)",
+    "position": {
+     "xy": [
+      91,
+      116
+     ],
+     "ref": "T15",
+     "note": "서남능선 중간, 돌격선 남쪽의 전초진지(추정). 연대는 정상 진지만 판단했다."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. 07:00 무렵부터 주간 시계."
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능 시간대."
+   },
+   {
+    "when": "D일 18:30",
+    "t": 18.5,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "야간. 급경사 산악에서 기동과 관측이 제한된다."
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명."
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 7,
+    "note": "주간 근접항공지원 가능 시간대(구간 끝까지)."
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 07:00",
+      "t": 7,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        100,
+        121
+       ]
+      ],
+      "target_ref": "T1",
+      "note": "주봉 진지에서 제1대대 공격을 저지했다."
+     },
+     {
+      "when": "D+1일 11:40경",
+      "t": 35.67,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        100,
+        121
+       ],
+       [
+        103,
+        124
+       ],
+       [
+        106,
+        128
+       ],
+       [
+        110,
+        132
+       ]
+      ],
+      "from_ref": "T1",
+      "target_ref": "T9",
+      "note": "제2대대 공격으로 왼쪽 측방에 위협을 느끼고 주봉에서 철수했다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 07:00",
+      "t": 7,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        107,
+        118
+       ]
+      ],
+      "target_ref": "T2",
+      "note": "우측 봉우리에서 제2대대 공격을 저지해 지연시켰다."
+     },
+     {
+      "when": "D+1일 12:00경",
+      "t": 36,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        107,
+        118
+       ],
+       [
+        108,
+        124
+       ],
+       [
+        110,
+        132
+       ]
+      ],
+      "from_ref": "T2",
+      "target_ref": "T9",
+      "note": "포병 화력과 근접항공지원을 받은 제2대대의 돌격에 우측 봉우리를 잃고 물러났다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D+1일 11:00경",
+      "t": 35,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        110,
+        132
+       ],
+       [
+        106,
+        127
+       ],
+       [
+        103,
+        124
+       ],
+       [
+        100,
+        121
+       ]
+      ],
+      "from_ref": "T9",
+      "target_ref": "T1",
+      "note": "10:50 주봉을 점령한 제1대대에 역습해 주봉에서 밀어냈다(시각 추정, 역습 부대는 연대 예비로 추정)."
+     },
+     {
+      "when": "D+1일 11:40경",
+      "t": 35.67,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        100,
+        121
+       ],
+       [
+        106,
+        128
+       ],
+       [
+        100,
+        138
+       ],
+       [
+        68,
+        152
+       ]
+      ],
+      "from_ref": "T1",
+      "target_ref": "T13",
+      "note": "제2대대의 측방 위협으로 북쪽으로 철수했다(추정)."
+     }
+    ]
+   },
+   {
+    "group": "E6",
+    "actions": [
+     {
+      "when": "D+1일 06:00~09:00",
+      "t": 30,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        91,
+        116
+       ]
+      ],
+      "target_ref": "T15",
+      "note": "제1대대가 돌격선에 들어가기까지 3시간 혈전을 치르게 했다(전초 존재는 추정)."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 07:00",
+      "t": 7,
+      "verb": "공격",
+      "ref": "CM4",
+      "text": "서남능선으로 주봉을 공격했으나 적 저항으로 공격을 중지했다."
+     },
+     {
+      "when": "D일 야간",
+      "t": 20,
+      "verb": "재보급",
+      "ref": "R1",
+      "text": "배속 노무자 100명으로 탄약과 식량을 보급받았다."
+     },
+     {
+      "when": "D+1일 06:00경",
+      "t": 30,
+      "verb": "공격",
+      "ref": "CM4",
+      "text": "이른 아침 공격을 재개해 3시간 혈전 끝에 돌격선에 들어갔다(개시 시각 추정)."
+     },
+     {
+      "when": "D+1일 09:00경",
+      "t": 33,
+      "verb": "돌격",
+      "ref": "CM7",
+      "text": "근접항공지원에 이어 일제히 돌격을 개시했다."
+     },
+     {
+      "when": "D+1일 10:50",
+      "t": 34.83,
+      "verb": "탈취",
+      "ref": "OBJ1",
+      "text": "백석산 주봉을 점령했다."
+     },
+     {
+      "when": "D+1일 11:00경",
+      "t": 35,
+      "verb": "철수",
+      "ref": "T15",
+      "text": "제2대대 공격 지연 속에 적 역습을 받아 주봉에서 밀려났다."
+     },
+     {
+      "when": "D+1일 11:55",
+      "t": 35.92,
+      "verb": "탈취",
+      "ref": "OBJ1",
+      "text": "적이 철수하기 시작하자 재공격해 주봉을 완전히 장악했다."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 07:00",
+      "t": 7,
+      "verb": "공격",
+      "ref": "CM5",
+      "text": "동남능선으로 우측 봉우리를 공격했으나 적 저항으로 공격을 중지했다."
+     },
+     {
+      "when": "D일 야간",
+      "t": 20,
+      "verb": "재보급",
+      "ref": "R2",
+      "text": "배속 노무자 100명으로 탄약과 식량을 보급받았다."
+     },
+     {
+      "when": "D+1일 이른 아침",
+      "t": 30,
+      "verb": "공격",
+      "ref": "CM5",
+      "text": "공격을 재개했으나 제1대대보다 지연되었다."
+     },
+     {
+      "when": "D+1일 11:30경",
+      "t": 35.5,
+      "verb": "공격",
+      "ref": "OBJ2",
+      "text": "과감한 공격으로 주봉 적의 왼쪽 측방을 위협했다(시각 추정)."
+     },
+     {
+      "when": "D+1일 12:00경",
+      "t": 36,
+      "verb": "탈취",
+      "ref": "OBJ2",
+      "text": "포병 화력지원과 근접항공지원을 받으며 돌격해 우측 봉우리를 점령했다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일~D+1일",
+      "t": 7,
+      "verb": "예비",
+      "ref": "CM8",
+      "text": "투입 기록이 없다. 예비로 대기한 것으로 추정한다."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 07:00~D+1일 12:00",
+    "t": 7,
+    "kind": "air",
+    "note": "D+1일 제1대대 돌격선 도달 직후와 제2대대 돌격 때 유엔 공군 근접항공지원이 있었다."
+   },
+   {
+    "when": "D일 18:30~D+1일 06:00",
+    "t": 18.5,
+    "kind": "night",
+    "note": "공격 중지 후 야간에 노무자로 재보급했다."
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제8사단 제10연대",
+   "enemy": "북한군 제12사단 제30연대",
+   "terrain_held": [
+    "T1",
+    "T2"
+   ],
+   "end_state_achieved": "yes",
+   "losses": "제8사단 전사 50명, 부상 243명. 적 사살 111명, 포로 28명(사단 전과).",
+   "friendly_loss_pct": 11,
+   "enemy_loss_pct": 8,
+   "duration_h": 29
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+1일 14:00 아군 연대가 백석산 주봉과 우측 봉우리를 확보했다. 적 제30연대는 883고지와 1220고지 방향으로 물러났다.",
+   "terrain_held_at_horizon": [
+    "T1",
+    "T2",
+    "T3",
+    "T5"
+   ],
+   "friendly_loss_pct": 11,
+   "enemy_loss_pct": 8,
+   "key_times": [
+    {
+     "t": 7,
+     "text": "제1대대·제2대대 공격 개시",
+     "ref": "CM1"
+    },
+    {
+     "t": 12,
+     "text": "적 저항으로 공격 중지(시각 추정)"
+    },
+    {
+     "t": 33,
+     "text": "제1대대 돌격선 진입, 근접항공지원",
+     "ref": "CM7"
+    },
+    {
+     "t": 34.83,
+     "text": "제1대대 주봉 점령",
+     "ref": "OBJ1"
+    },
+    {
+     "t": 35,
+     "text": "적 역습으로 제1대대 주봉에서 밀려남",
+     "ref": "OBJ1"
+    },
+    {
+     "t": 35.92,
+     "text": "제1대대 주봉 완전 장악",
+     "ref": "OBJ1"
+    },
+    {
+     "t": 36,
+     "text": "제2대대 우측 봉우리 점령(추정)",
+     "ref": "OBJ2"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_190",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

@@ -1,0 +1,2512 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-08-20",
+   "end_date": "1950-08-23",
+   "d_day": "1950-08-21",
+   "order_time": "1950-08-20 20:00 (D-1일 20:00, 추정)",
+   "text": "구간 ③: 북한군 제15사단이 제13사단과 교대한 뒤 제12연대가 제3대대와 배속된 제10연대 제3대대를 투입해 839고지와 837고지를 다시 공격한 구간(8.20~23).",
+   "why": "구간 지정 ③을 따랐다. 새 대대를 투입해 주봉과 제2봉을 동시에 공격하는 연대급 결심이 가장 뚜렷하다."
+  },
+  "perspective_rationale": "관점 지정에 따라 국군 제1사단 제12연대로 정했다. 제12연대는 수암산-유학산 정면 약 9km의 작전지역을 맡았고 839고지와 837고지 공격을 직접 지휘했다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "8월 21일 제3대대가 주봉 남쪽 절벽지대로 침투해 주봉을 점령했다. 8월 23일 제1대대가 837고지를, 제3대대가 839고지를 탈환해 유학산에 연결된 방어진지를 구축했다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 다부동에서 서쪽 약 15.2km, 남쪽 약 6km 지점이다(추정). 다부동은 (152,60)에 둔다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_093_수암산_유학산_전투",
+  "title": "수암산-유학산 전투",
+  "dates": "1950. 8. 13.~30.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '수암산-유학산 전투' (pdf 317쪽)",
+  "pdf_page": 317,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 23,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 3
+   },
+   "sim_value": 9,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "8월 21일 예비인 제3대대를 제10연대 제3대대의 엄호 하에 주봉 남쪽 절벽지대로 침투시켜 주봉 공격",
+    "alternative": "제3대대를 계속 예비·진지 보강에 두고 제1대대 단독으로 837고지 정면 공격을 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "8월 25일 밤 제2대대(-)를 가듬이재로 우회시켜 수암산 능선 북쪽 513고지를 점령",
+    "alternative": "369고지·수암산 남쪽에서의 정면 공격을 계속",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "12일 야간 새 방어선으로 이동하면서 수암산·유학산을 사전 점령하지 못함",
+    "alternative": "북한군보다 먼저 유학산·수암산 주봉에 병력을 올려 방어 편성",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "제1사단은 방어선상의 가장 중요한 지형인 수암산-유학산을 북한군에게 선점당하여 많은 희생을 치르면서 탈환하였고, 마침내 다부동 전선을 방어하였다."
+   }
+  ],
+  "segment_suggestion": "① 8.13~15: 제1대대의 674고지 공격과 임무 인계(제11연대 제3대대)까지. ② 8.16~19: 제1대대의 837고지·유학산 정면 공격 반복과 실패. ③ 8.20~23: 적 사단 교대 후 제3대대(제10연대 제3대대 배속) 투입, 839·837고지 탈환(가장 적합한 구간). ④ 8.25~28: 연대특공대의 316고지 탈환과 제2대대의 가듬이재 우회, 수암산 탈환.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2669,
+   "duration_s": 386.4,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 37046,
+     "cache_read_input_tokens": 88348,
+     "cache_creation_input_tokens": 13896
+    },
+    "stage_b": {
+     "input_tokens": 4,
+     "output_tokens": 10412,
+     "cache_read_input_tokens": 40146,
+     "cache_creation_input_tokens": 22607
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [
+    {
+     "id": "E:E4[1]",
+     "verdict": "hidden_condition",
+     "reason": "'이어서'로 순서를 지정하면서 동시에 '야간에'라는 시각 조건을 텍스트에 섞어 넣어, 실제로는 야간(명암)이라는 전투와 무관한 외생 사건에 공격 개시를 암묵적으로 결부시키고 있다.",
+     "fix": "야간을 조건으로 쓰지 말고 구간 시작의 야간 외생 사건(X[2]/X[4]) 발생 직후로 명시된 계획 시각을 지정하거나, 전투력 조건(예: E4 손실 비율)으로 바꿔 반복 공격 규칙을 정의해야 한다."
+    }
+   ],
+   "cost_usd": 0.047461199999999995
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "국군 제1사단 제12연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제12연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "제1사단은 다부동 정면에서 328고지-수암산-유학산-741고지 주저항선을 회복·확보하여 다부동-대구 접근로를 차단한다.",
+   "higher_intent": "적에게 선점당한 수암산과 유학산을 탈취해 5번 국도와 997번 도로를 감제하는 주저항선을 회복한다. 적이 다부동을 거쳐 대구로 진출하지 못하게 한다.",
+   "assigned_task": "제12연대는 유학산(839고지·837고지)을 탈취하고 수암산 일대를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "국군 제1사단 제15연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서쪽)",
+     "mission": "328고지 일대를 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      40,
+      82
+     ],
+     "other_names": [
+      "제15연대"
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "국군 제1사단 제11연대",
+     "alias": "인접 연대 2",
+     "side": "우측(동쪽)",
+     "mission": "신주막과 674고지 일대에서 다부동 북쪽 5번 국도 접근로를 차단한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      158,
+      88
+     ],
+     "other_names": [
+      "제11연대"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ2",
+     "text": "제11연대는 674고지를 공격한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00 사단 공격 재개 시각(추정)"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "F8",
+      "axis_xy": [
+       [
+        152,
+        62
+       ],
+       [
+        151,
+        68
+       ],
+       [
+        150,
+        73
+       ],
+       [
+        149,
+        77
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ1",
+     "text": "제15연대는 328고지 일대를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터 계속"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F10"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제12연대 작전지역은 서쪽 제15연대 경계에서 동쪽 제11연대 경계까지 수암산-유학산 정면 약 9km이며, 남쪽으로 997번 도로와 망정리까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제12연대-제15연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "ADJ1"
+     ],
+     "xy": [
+      [
+       60,
+       40
+      ],
+      [
+       62,
+       70
+      ],
+      [
+       62,
+       110
+      ],
+      [
+       60,
+       150
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제12연대-제11연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "ADJ2"
+     ],
+     "xy": [
+      [
+       146,
+       40
+      ],
+      [
+       144,
+       65
+      ],
+      [
+       144,
+       82
+      ],
+      [
+       146,
+       100
+      ],
+      [
+       150,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F_1BN",
+    "unit": "제12연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 45,
+    "relationship": "건제",
+    "location": {
+     "note": "원정동 일대, 837고지 남쪽 사면에서 접촉 중",
+     "ref": "F12"
+    },
+    "equipment": "81mm 박격포"
+   },
+   {
+    "id": "F_2BN",
+    "unit": "제12연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 60,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 서부, 수암산 일대"
+    }
+   },
+   {
+    "id": "F_3BN",
+    "unit": "제12연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "517고지 일대에서 유학산 진지를 보강 중",
+     "ref": "F7"
+    }
+   },
+   {
+    "id": "F_10_3BN",
+    "unit": "제10연대 제3대대",
+    "alias": "제4대대",
+    "other_names": [
+     "배속 대대"
+    ],
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "location": {
+     "note": "연대 후방 망정리 일대(추정)",
+     "ref": "F13"
+    }
+   },
+   {
+    "id": "F_ARTY",
+    "unit": "제1사단 포병",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "다부동 남쪽(추정)"
+    },
+    "equipment": "105mm 곡사포"
+   },
+   {
+    "id": "F_AIR",
+    "unit": "유엔 공군 근접항공지원(미군 전방항공통제관 대대관측소 배치)",
+    "alias": "항공 1",
+    "echelon": "대대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "대대관측소에 전방항공통제관 배치"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "경상북도 칠곡군 다부동 서북쪽 수암산-유학산 산악지대. 급경사 능선과 절벽이 많고 도로는 남쪽 997번 도로와 동쪽 5번 국도뿐이다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "수암산",
+     "alias": "고지 A",
+     "other_names": [
+      "숲데미산",
+      "518고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      82,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 518,
+     "evidence": "997번 도로와 369고지-소학산-동석동 접근로를 감제한다."
+    },
+    {
+     "id": "F2",
+     "name": "316고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      82,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 316,
+     "evidence": "수암산 정상 남쪽 800m."
+    },
+    {
+     "id": "F3",
+     "name": "369고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      74,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 369,
+     "evidence": "수암산 서북쪽, 제2대대와 적의 공방 지점."
+    },
+    {
+     "id": "F4",
+     "name": "513고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      88,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 513,
+     "evidence": "수암산 능선 북쪽."
+    },
+    {
+     "id": "F5",
+     "name": "유학산 주봉",
+     "alias": "고지 E",
+     "other_names": [
+      "839고지",
+      "유학산"
+     ],
+     "kind": "hill",
+     "xy": [
+      120,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 839,
+     "evidence": "5번 국도와 다부동 접근로를 제압하는 주봉.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F6",
+     "name": "837고지",
+     "alias": "고지 F",
+     "other_names": [
+      "유학산 제2봉"
+     ],
+     "kind": "hill",
+     "xy": [
+      138,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 837,
+     "evidence": "주봉 동쪽 1.8km.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F7",
+     "name": "517고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      120,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 517,
+     "evidence": "주봉 남쪽 1km, 아군 진지.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F8",
+     "name": "674고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      149,
+      77
+     ],
+     "estimated": true,
+     "elevation_m": 674,
+     "evidence": "837고지 동남쪽 능선, 다부동 북쪽 1.7km, 제11연대 지역."
+    },
+    {
+     "id": "F9",
+     "name": "741고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      172,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 741,
+     "evidence": "사단 주저항선 동쪽 끝."
+    },
+    {
+     "id": "F10",
+     "name": "328고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      40,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 328,
+     "evidence": "제15연대 지역."
+    },
+    {
+     "id": "F11",
+     "name": "다부동",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      152,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "대구 접근로 요충."
+    },
+    {
+     "id": "F12",
+     "name": "원정동",
+     "alias": "마을 2",
+     "other_names": [
+      "원정"
+     ],
+     "kind": "town",
+     "xy": [
+      140,
+      74
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "837고지 남쪽, 제1대대 공격 출발지."
+    },
+    {
+     "id": "F13",
+     "name": "망정리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      112,
+      58
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 후방 정비 지역."
+    },
+    {
+     "id": "F14",
+     "name": "신주막",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      158,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제11연대 지역."
+    },
+    {
+     "id": "F15",
+     "name": "가듬이재",
+     "alias": "지점 1",
+     "kind": "pass",
+     "xy": [
+      100,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사곡동에서 성곡동으로 넘는 고개."
+    },
+    {
+     "id": "F16",
+     "name": "주봉 남쪽 절벽지대",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      119,
+      85
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제3대대 침투로. 적 경계가 약한 급사면.",
+     "polygon": [
+      [
+       115,
+       83
+      ],
+      [
+       123,
+       83
+      ],
+      [
+       123,
+       87
+      ],
+      [
+       115,
+       87
+      ]
+     ]
+    },
+    {
+     "id": "F17",
+     "name": "유학산 주능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      120,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "수암산-839고지-837고지-674고지를 잇는 능선.",
+     "line": [
+      [
+       82,
+       88
+      ],
+      [
+       100,
+       90
+      ],
+      [
+       120,
+       90
+      ],
+      [
+       138,
+       90
+      ],
+      [
+       149,
+       77
+      ]
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "5번 국도",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       160,
+       200
+      ],
+      [
+       158,
+       140
+      ],
+      [
+       156,
+       100
+      ],
+      [
+       158,
+       92
+      ],
+      [
+       152,
+       60
+      ],
+      [
+       150,
+       30
+      ],
+      [
+       148,
+       0
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "997번 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       30,
+       62
+      ],
+      [
+       70,
+       68
+      ],
+      [
+       100,
+       62
+      ],
+      [
+       112,
+       58
+      ],
+      [
+       130,
+       59
+      ],
+      [
+       152,
+       60
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제13사단 1개 대대(839고지)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "D-1일 제15사단과 교대한 제13사단 병력이 주봉을 점령 중인 것으로 파악",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      120,
+      92
+     ],
+     "frontage_m": 1200,
+     "ref": "F5",
+     "note": "주봉 정상과 북쪽 사면 진지"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제13사단 1개 대대(837고지)",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "제1대대와 계속 접촉 중",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      138,
+      92
+     ],
+     "frontage_m": 1000,
+     "ref": "F6",
+     "note": "837고지 정상 진지"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제13사단 1개 대대(예비)",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": false,
+    "known_at_start": "유학산 북쪽 역사면에 예비 대대가 있을 것으로 추정",
+    "posture": "예비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      130,
+      104
+     ],
+     "note": "839-837고지 사이 북쪽 역사면(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "수암산 정면 북한군 1개 대대",
+    "alias": "적 대대 4",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "제2대대와 369고지 일대에서 접촉 중",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      74,
+      98
+     ],
+     "frontage_m": 1000,
+     "ref": "F3",
+     "note": "369고지와 수암산 북쪽 사면"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 05:00",
+   "light": "dawn",
+   "notes": "8월 하순 혹서. 급경사 산악지대라 보급과 후송이 어렵다. 앞서 공군기 오폭이 있어 대대관측소에 미군 전방항공통제관이 배치되었다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대(-), 제3대대, 제10연대 제3대대(배속), 제2대대 / 지원: 사단 포병(직접지원), 근접항공지원(전방항공통제관)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대(-)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F_1BN"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F_3BN"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제10연대 제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F_10_3BN"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제2대대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F_2BN"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "839고지와 837고지는 5번 국도와 다부동 접근로를 감제하는 핵심 지형이다. 주봉 남쪽 절벽지대는 급하지만 적 경계가 약한 침투로이고, 원정동에서 837고지로 오르는 능선은 반복 공격으로 적 화력이 집중된 접근로다.",
+    "key_terrain": [
+     {
+      "ref": "F5",
+      "why": "유학산 주봉으로 연대 정면 전체와 다부동 접근로를 감제한다."
+     },
+     {
+      "ref": "F6",
+      "why": "674고지와 다부동 북쪽 5번 국도를 내려다본다."
+     },
+     {
+      "ref": "F1",
+      "why": "997번 도로와 연대 좌측방을 감제한다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "주봉 남쪽 절벽 침투로",
+      "user": "friendly",
+      "refs": [
+       "F7",
+       "F16",
+       "F5"
+      ],
+      "xy": [
+       [
+        120,
+        80
+       ],
+       [
+        119,
+        83
+       ],
+       [
+        119,
+        86
+       ],
+       [
+        120,
+        90
+       ]
+      ]
+     },
+     {
+      "name": "원정동-837고지 능선",
+      "user": "friendly",
+      "refs": [
+       "F12",
+       "F6"
+      ],
+      "xy": [
+       [
+        140,
+        74
+       ],
+       [
+        139,
+        79
+       ],
+       [
+        138,
+        84
+       ],
+       [
+        138,
+        90
+       ]
+      ]
+     },
+     {
+      "name": "북쪽 역사면 역습로",
+      "user": "enemy",
+      "refs": [
+       "F6"
+      ],
+      "xy": [
+       [
+        130,
+        104
+       ],
+       [
+        134,
+        98
+       ],
+       [
+        138,
+        92
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제13사단은 839고지와 837고지에서 2개 대대로 방어하다가 북쪽 역사면의 1개 대대로 837고지와 주봉으로 야간 역습해 올 것이다. 수암산 정면의 적 1개 대대는 369고지에서 제2대대를 고착할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "from_ref": "F5",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         120,
+         92
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "when": "D일 06:00부터",
+       "t": 6
+      },
+      {
+       "group": "E2",
+       "mode": "hold",
+       "from_ref": "F6",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         138,
+         92
+        ],
+        [
+         138,
+         90
+        ]
+       ],
+       "when": "D일 06:00부터",
+       "t": 6
+      },
+      {
+       "group": "E3",
+       "mode": "counterattack",
+       "from_ref": "F17",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         134,
+         98
+        ],
+        [
+         137,
+         93
+        ],
+        [
+         138,
+         90
+        ]
+       ],
+       "when": "D일 22:00 야간",
+       "t": 22
+      },
+      {
+       "group": "E4",
+       "mode": "fix",
+       "from_ref": "F3",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         74,
+         98
+        ],
+        [
+         78,
+         93
+        ],
+        [
+         82,
+         88
+        ]
+       ],
+       "when": "D일 06:00부터",
+       "t": 6
+      }
+     ],
+     "risk_point": "적 예비 대대가 야간에 837고지로 역습해 피로한 제1대대를 밀어내고 원정동 쪽으로 진출할 때"
+    },
+    "unknowns": [
+     "교대한 제13사단의 실제 병력과 진지 배치",
+     "북쪽 역사면 예비의 규모와 위치",
+     "수암산 정면 적의 증원 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "교대 직후의 적 제13사단은 진지와 지형에 익숙하지 않다.",
+     "why": "D-1일 교대로 주봉 남쪽 절벽 경계가 약할 것으로 판단했다."
+    },
+    {
+     "text": "근접항공지원은 전방항공통제관 통제하에 가용하다.",
+     "why": "오폭 뒤 대대관측소에 전방항공통제관이 배치되었다."
+    },
+    {
+     "text": "수암산 정면의 적은 대규모 공세 여력이 없다.",
+     "why": "제2대대와 369고지 일대에서 공방만 거듭했다."
+    },
+    {
+     "text": "대대 세부 보충: 중대 배치와 공격대기지점은 서술과 모순되지 않게 추정했다.",
+     "why": "서술에 대대 이하 세부가 없다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제12연대는 D일 06:00 유학산 839고지와 837고지를 탈취하여 사단 주저항선을 회복한다.",
+   "task_verb": "탈취",
+   "objective_ref": "OBJ1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 6,
+    "text": "D일 06:00 H시"
+   },
+   "purpose": "다부동-대구 접근로를 감제하는 사단 주저항선을 회복한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "제3대대와 제1대대가 839고지와 837고지를 확보하고 연결된 방어진지를 구축한다. 제2대대는 수암산 일대를 계속 확보한다.",
+    "friendly": "유학산 주능선에 연결된 2개 대대 진지, 수암산 확보",
+    "enemy": "유학산의 적 2개 대대 격퇴, 예비의 역습 저지",
+    "terrain": "839고지, 837고지, 수암산 확보"
+   },
+   "concept": {
+    "text": "제10연대 제3대대가 517고지에서 주봉 정면을 엄호하는 동안 제3대대가 주봉 남쪽 절벽지대로 침투해 839고지를 탈취한다. 제1대대는 원정동에서 837고지를 동시에 공격해 적을 분산시킨다. 제2대대는 수암산 일대를 방어해 좌측방을 보호한다.",
+    "maneuver": "주력 제3대대는 절벽 침투로로 주봉을 기습 탈취하고, 제1대대는 837고지를 공격해 적 예비를 동쪽에 묶는다. 주봉 탈취 뒤 두 대대는 주능선에서 연결한다.",
+    "fires": "사단 포병과 박격포는 H-30분부터 주봉 북쪽 사면과 837고지 정상에 공격준비사격을 하고 우선은 제3대대다. 근접항공지원은 전방항공통제관 통제하에 북쪽 역사면 적 예비를 공격한다.",
+    "main_effort": "G2",
+    "reserve": {
+     "group": "없음",
+     "position_ref": "F13",
+     "xy": [
+      112,
+      58
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.4,
+      "text": "제3대대 손실 0.4 초과 시 제10연대 제3대대가 초월"
+     },
+     "priorities": [
+      "연대 9km 정면에 가용 대대를 모두 공격과 방어에 투입해 별도 예비가 없다.",
+      "제10연대 제3대대가 엄호 후 제3대대 초월을 대비해 사실상 예비 역할을 한다."
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G2",
+      "G1"
+     ],
+     "zone_refs": [
+      "OBJ1",
+      "OBJ2",
+      "EA1"
+     ],
+     "restrictions": "항공 폭격은 전방항공통제관 확인 후에만 실시하고 아군 접촉선 500m 이내 폭격을 금지한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G2",
+     "purpose": "적이 예상하지 못한 방향에서 주봉을 탈취해 유학산 방어를 와해한다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       119,
+       81
+      ],
+      "ref": "AP1",
+      "frontage_m": 800,
+      "note": "517고지 북쪽 사면 공격대기지점",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         117,
+         81
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         121,
+         81
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         119,
+         79
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "주봉 남쪽 절벽지대로 침투하여 839고지를 탈취한다.",
+       "params": {
+        "objective": "OBJ1",
+        "route": "RT1",
+        "axis_xy": [
+         [
+          119,
+          81
+         ],
+         [
+          119,
+          84
+         ],
+         [
+          119,
+          87
+         ],
+         [
+          120,
+          90
+         ]
+        ]
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "839고지에서 837고지 방향 주능선을 확보한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G1",
+     "purpose": "837고지를 탈취하고 적 예비를 동쪽에 묶어 주력의 주봉 탈취를 돕는다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       139,
+       79
+      ],
+      "ref": "AP2",
+      "frontage_m": 600,
+      "note": "원정동 북쪽 837고지 남쪽 사면",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         137,
+         80
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         141,
+         80
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         139,
+         77
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "원정동에서 능선을 따라 837고지를 탈취한다.",
+       "params": {
+        "objective": "OBJ2",
+        "route": "RT2",
+        "axis_xy": [
+         [
+          139,
+          79
+         ],
+         [
+          139,
+          82
+         ],
+         [
+          138,
+          86
+         ],
+         [
+          138,
+          90
+         ]
+        ]
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "837고지를 확보하고 주능선에서 제3대대와 연결한다.",
+       "params": {
+        "objective": "OBJ2"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "제3대대의 침투를 엄호하고 주력의 공격 실패에 대비한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       122,
+       80
+      ],
+      "ref": "F7",
+      "frontage_m": 700,
+      "note": "517고지 정상 일대",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제10연대 제9중대",
+        "xy": [
+         120,
+         80
+        ]
+       },
+       {
+        "label": "제10연대 제10중대",
+        "xy": [
+         124,
+         80
+        ]
+       },
+       {
+        "label": "제10연대 제11중대",
+        "xy": [
+         122,
+         78
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "엄호",
+       "text": "517고지에서 주봉 정면 적을 사격하여 제3대대의 침투를 엄호한다.",
+       "params": {
+        "covered_group": "G2",
+        "target_ref": "OBJ1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "초월",
+       "text": "명에 의해 517고지에서 제3대대를 초월한다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G2",
+        "fraction": 0.4,
+        "text": "제3대대 손실 0.4 초과"
+       },
+       "basis": "가정: 교대 직후 적의 절벽 경계가 약하다는 판단이 틀릴 경우 주력 공격을 이어받는다(문턱값 추정).",
+       "params": {
+        "passed_group": "G2",
+        "passage_point": "PP1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "이어서 839고지를 탈취한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "연대 좌측방과 997번 도로를 보호한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       82,
+       86
+      ],
+      "ref": "F1",
+      "frontage_m": 2000,
+      "note": "수암산과 316고지 일대",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         78,
+         88
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         84,
+         89
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         82,
+         81
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "수암산 일대를 방어한다.",
+       "params": {
+        "area": "F1"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고착",
+       "text": "369고지의 적을 고착한다.",
+       "params": {
+        "target_group": "E4"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 04:00까지 공격대기지점과 엄호진지를 점령한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4,
+       "text": "D일 04:00"
+      }
+     },
+     {
+      "text": "D일 05:30 공격준비사격을 시작한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5.5,
+       "text": "D일 05:30"
+      }
+     },
+     {
+      "text": "D일 06:00 H시, 제3대대와 제1대대가 공격을 개시한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "OBJ1",
+      "name": "목표 1(839고지)",
+      "kind": "objective",
+      "xy": [
+       [
+        116,
+        88
+       ],
+       [
+        124,
+        88
+       ],
+       [
+        124,
+        93
+       ],
+       [
+        116,
+        93
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F5"
+      ]
+     },
+     {
+      "id": "OBJ2",
+      "name": "목표 2(837고지)",
+      "kind": "objective",
+      "xy": [
+       [
+        134,
+        88
+       ],
+       [
+        142,
+        88
+       ],
+       [
+        142,
+        93
+       ],
+       [
+        134,
+        93
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F6"
+      ]
+     },
+     {
+      "id": "LD1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        112,
+        82
+       ],
+       [
+        128,
+        82
+       ],
+       [
+        144,
+        81
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "AP1",
+      "name": "제3대대 공격대기지점",
+      "kind": "attack_position",
+      "xy": [
+       [
+        116,
+        79
+       ],
+       [
+        122,
+        79
+       ],
+       [
+        122,
+        82
+       ],
+       [
+        116,
+        82
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F7"
+      ]
+     },
+     {
+      "id": "AP2",
+      "name": "제1대대 공격대기지점",
+      "kind": "attack_position",
+      "xy": [
+       [
+        136,
+        76
+       ],
+       [
+        142,
+        76
+       ],
+       [
+        142,
+        81
+       ],
+       [
+        136,
+        81
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F12"
+      ]
+     },
+     {
+      "id": "RT1",
+      "name": "절벽 침투로",
+      "kind": "route",
+      "xy": [
+       [
+        119,
+        81
+       ],
+       [
+        119,
+        84
+       ],
+       [
+        119,
+        87
+       ],
+       [
+        120,
+        90
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F16"
+      ]
+     },
+     {
+      "id": "RT2",
+      "name": "837고지 공격로",
+      "kind": "route",
+      "xy": [
+       [
+        139,
+        79
+       ],
+       [
+        139,
+        82
+       ],
+       [
+        138,
+        86
+       ],
+       [
+        138,
+        90
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "PP1",
+      "name": "통과지점 1",
+      "kind": "passage_point",
+      "xy": [
+       [
+        120,
+        82
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BL1",
+      "name": "제1대대-제3대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        128,
+        60
+       ],
+       [
+        129,
+        80
+       ],
+       [
+        129,
+        110
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BL2",
+      "name": "제3대대-제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G2",
+       "G4"
+      ],
+      "xy": [
+       [
+        102,
+        55
+       ],
+       [
+        102,
+        80
+       ],
+       [
+        104,
+        110
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CP1",
+      "name": "접촉점 1",
+      "kind": "contact_point",
+      "xy": [
+       [
+        129,
+        90
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F17"
+      ]
+     },
+     {
+      "id": "EA1",
+      "name": "교전지역 1(북쪽 역사면)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        124,
+        96
+       ],
+       [
+        140,
+        96
+       ],
+       [
+        140,
+        108
+       ],
+       [
+        124,
+        108
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 05:00",
+  "start_t": 5,
+  "horizon_h": 67,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "교대한 적 제13사단은 839고지와 837고지를 고수해 다부동 접근로 감제를 유지한다. 국군이 정상에 들어오면 북쪽 역사면 예비로 야간 역습해 정상을 되찾는다. 수암산 정면은 369고지에서 제2대대를 고착한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         120,
+         92
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "839고지 정상과 북쪽 사면 진지를 고수한다.",
+       "basis": "서술: 제15사단과 교대한 제13사단이 유학산을 점령했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         120,
+         97
+        ],
+        [
+         120,
+         94
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "주봉 일부를 빼앗기면 북쪽 사면 잔여 병력으로 역습한다.",
+       "basis": "추정: D+2일 주봉 '탈환' 서술로 보아 중간에 적이 주봉 일부를 되찾았다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "axis_xy": [
+        [
+         120,
+         92
+        ],
+        [
+         122,
+         100
+        ],
+        [
+         126,
+         108
+        ]
+       ],
+       "text": "손실이 커지면 북쪽 역사면으로 철수한다.",
+       "basis": "추정 문턱값.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.55,
+        "text": "E1 손실 0.55 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         138,
+         92
+        ],
+        [
+         138,
+         90
+        ]
+       ],
+       "text": "837고지 정상 진지를 고수한다.",
+       "basis": "서술: 제1대대의 8일간 반복 공격을 막았다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "구간 시작부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "axis_xy": [
+        [
+         138,
+         92
+        ],
+        [
+         136,
+         100
+        ],
+        [
+         134,
+         108
+        ]
+       ],
+       "text": "손실이 커지면 북쪽으로 철수한다.",
+       "basis": "추정 문턱값.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "E2 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         126,
+         99
+        ],
+        [
+         122,
+         94
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "아군이 주봉에 들어오면 북쪽 역사면에서 주봉으로 역습한다.",
+       "basis": "추정: 주봉 상실은 유학산 방어 전체를 무너뜨리므로 예비를 먼저 주봉에 투입한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "OBJ2",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         134,
+         98
+        ],
+        [
+         137,
+         93
+        ],
+        [
+         138,
+         90
+        ]
+       ],
+       "text": "아군이 837고지에 들어오면 837고지로 역습한다.",
+       "basis": "서술: 9회에 걸친 백병전. 문턱은 추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 2 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "axis_xy": [
+        [
+         130,
+         104
+        ],
+        [
+         130,
+         112
+        ],
+        [
+         130,
+         120
+        ]
+       ],
+       "text": "손실이 커지면 북쪽으로 철수한다.",
+       "basis": "추정 문턱값.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "E3 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         128,
+         118
+        ],
+        [
+         120,
+         90
+        ],
+        [
+         120,
+         80
+        ]
+       ],
+       "text": "517고지와 원정동 접근로에 박격포·포 사격을 한다.",
+       "basis": "추정: 사단 포병의 지원 없이 고지 방어가 불가능했을 것이다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 10
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         128,
+         118
+        ],
+        [
+         120,
+         90
+        ]
+       ],
+       "text": "아군이 주봉에 들어오면 주봉 정상에 집중 사격한다.",
+       "basis": "추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 목표 1 안에 있음"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         74,
+         98
+        ],
+        [
+         78,
+         93
+        ],
+        [
+         82,
+         88
+        ]
+       ],
+       "text": "369고지에서 수암산의 제2대대를 고착한다.",
+       "basis": "서술: 수암산 정면 공방 지속.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         74,
+         98
+        ],
+        [
+         78,
+         93
+        ],
+        [
+         82,
+         88
+        ]
+       ],
+       "text": "야간에 수암산 진지를 공격한다.",
+       "basis": "추정: 앞선 구간의 반복 반격.",
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제13사단 포병(1개 대대 규모)",
+    "alias": "적 포병대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 70,
+    "equipment": "76mm 포·120mm 박격포(추정)",
+    "position": {
+     "xy": [
+      128,
+      118
+     ],
+     "note": "유학산 북쪽 계곡(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공 가능, 전방항공통제관 통제"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공 가능"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공 가능"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 4.5,
+    "note": "야간"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "weather",
+    "duration_h": 66,
+    "note": "8월 혹서. 급경사 산악에서 식수·탄약 운반과 후송이 어렵다."
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        120,
+        92
+       ],
+       [
+        120,
+        90
+       ]
+      ],
+      "note": "주봉 진지를 지켰으나 남쪽 절벽 경계가 약했다."
+     },
+     {
+      "when": "D일 야간(추정)",
+      "t": 23,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        120,
+        97
+       ],
+       [
+        120,
+        94
+       ],
+       [
+        120,
+        90
+       ]
+      ],
+      "target_ref": "OBJ1",
+      "note": "주봉 점령 뒤 역습한 것으로 추정(D+2일 '탈환' 서술 근거)."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        120,
+        92
+       ],
+       [
+        122,
+        100
+       ],
+       [
+        126,
+        108
+       ]
+      ],
+      "note": "839고지에서 격퇴되었다."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일~D+1일",
+      "t": 6,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        138,
+        92
+       ],
+       [
+        138,
+        90
+       ]
+      ],
+      "note": "제1대대의 반복 공격을 백병전으로 막았다."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        138,
+        92
+       ],
+       [
+        136,
+        100
+       ],
+       [
+        134,
+        108
+       ]
+      ],
+      "note": "837고지에서 격퇴되었다."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일~D+1일 야간(추정)",
+      "t": 22,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        130,
+        104
+       ],
+       [
+        134,
+        98
+       ],
+       [
+        138,
+        90
+       ]
+      ],
+      "target_ref": "OBJ2",
+      "note": "837고지와 주봉에 반복 역습(추정)."
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D일~D+2일",
+      "t": 6,
+      "mode": "fix",
+      "axis_xy": [
+       [
+        74,
+        98
+       ],
+       [
+        78,
+        93
+       ],
+       [
+        82,
+        88
+       ]
+      ],
+      "note": "369고지에서 제2대대와 대치했다."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "엄호",
+      "ref": "F7",
+      "text": "517고지에서 제3대대의 공격을 엄호했다."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "탈취",
+      "ref": "RT1",
+      "text": "주봉 남쪽 절벽지대로 침투했다."
+     },
+     {
+      "when": "D일 주간(추정)",
+      "t": 15,
+      "verb": "탈취",
+      "ref": "OBJ1",
+      "text": "주봉을 점령했다."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "verb": "탈취",
+      "ref": "OBJ1",
+      "text": "839고지를 탈환했다."
+     },
+     {
+      "when": "D+2일",
+      "t": 64,
+      "verb": "확보",
+      "ref": "CP1",
+      "text": "제1대대와 유학산에 연결된 방어진지를 구축했다."
+     }
+    ]
+   },
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일~D+1일",
+      "t": 6,
+      "verb": "공격",
+      "ref": "OBJ2",
+      "text": "837고지를 반복 공격했다."
+     },
+     {
+      "when": "D+2일",
+      "t": 60,
+      "verb": "탈취",
+      "ref": "OBJ2",
+      "text": "837고지를 탈환했다. 8일간 9회 백병전, 손실 천여 명."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일~D+2일",
+      "t": 6,
+      "verb": "방어",
+      "ref": "F1",
+      "text": "수암산 일대에서 적과 대치했다."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일~D+2일",
+    "t": 6,
+    "kind": "weather",
+    "note": "혹서 속 산악 전투."
+   },
+   {
+    "when": "D일~D+2일",
+    "t": 6,
+    "kind": "air",
+    "note": "대대관측소의 미군 전방항공통제관 통제로 근접항공지원."
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제1사단 제12연대",
+   "enemy": "북한군 제13사단",
+   "terrain_held": [
+    "F5",
+    "F6",
+    "F1"
+   ],
+   "end_state_achieved": "yes",
+   "losses": "제1대대는 8일간 천여 명 손실(보충 포함). 구간 손실 수치는 서술에 없다.",
+   "duration_h": 67,
+   "friendly_loss_pct": 35,
+   "enemy_loss_pct": 50
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "제12연대가 839고지와 837고지를 확보하고 연결된 방어진지를 구축했다. 수암산 정상은 아직 적과 대치 중이다.",
+   "terrain_held_at_horizon": [
+    "F5",
+    "F6",
+    "F7"
+   ],
+   "key_times": [
+    {
+     "t": 6,
+     "text": "제3대대 절벽 침투 개시",
+     "ref": "RT1"
+    },
+    {
+     "t": 15,
+     "text": "주봉 점령(추정)",
+     "ref": "OBJ1"
+    },
+    {
+     "t": 60,
+     "text": "837고지·839고지 탈환",
+     "ref": "OBJ2"
+    }
+   ],
+   "friendly_loss_pct": 35,
+   "enemy_loss_pct": 50
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_093",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [
+   "F_AIR"
+  ],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [
+   "G1[1]: …연결한다"
+  ],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

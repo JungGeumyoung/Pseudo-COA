@@ -1,0 +1,2915 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1953-07-21",
+   "end_date": "1953-07-24",
+   "d_day": "1953-07-21",
+   "order_time": "D일 04:00 (1953-07-21 04:00, 제8사단 제10연대 진지 인수 시점)",
+   "text": "제3연대가 사단 우측 전선을 인수한 D일 04:00부터 제5연대에 방어 임무를 넘긴 D+3일 21:00까지의 별우-406고지 전초진지 방어와 역습.",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대장이 주진지와 별우-406고지 전초진지 편성을 명령한 연대의 첫 결심이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제3연대를 쓴다. 제3연대는 D일 04:00부로 새말-거리실 간 사단 우측 작전지역을 맡았고, 406고지 전투의 방어와 역습을 모두 수행했다. 425고지를 방어한 제8연대는 인접 연대로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "제2대대는 첫 야간에 4차례 공격을 격퇴했고 D+3일 새벽 406고지를 역습으로 되찾았다. 그러나 같은 날 정오경 대대 규모 이상의 공격으로 406고지를 잃고 별우 지역에서 철수했다. 주저항선은 유지했으나 연대는 전력 소모로 제5연대와 교대했다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 남서 모서리(0,0). 금성천이 북서에서 흘러와 거리실 부근에서 동남동으로 꺾이는 것으로 놓고 서술의 상대 위치로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_040_425고지_및_406고지_전투",
+  "title": "425고지 및 406고지 전투",
+  "dates": "1953. 7. 20.~24.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '425고지 및 406고지 전투' (pdf 169쪽)",
+  "pdf_page": 169,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 4,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 16
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "406고지를 제6중대 1개 중대로 방어하고 증원 없이 대대 화기 전환만으로 대응",
+    "alternative": "7월 23일 밤 소대규모 공격 직후(재공격을 예상한 시점) 406고지에 예비 중대를 사전 증강하거나 제1대대를 조기 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "406고지 탈환 후 제1대대를 투입했으나 정오경 대대규모 이상 중공군에 밀려 철수",
+    "alternative": "탈환 직후 포병 화력 구역을 406고지 북쪽 접근로에 집중하고 사단 예비 제5연대를 조기 투입해 고수",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "425고지 3차전에서 돌출고지의 제1중대를 철수시키고 정상에 포격을 집중한 뒤 반격",
+    "alternative": "제1중대가 돌출고지를 끝까지 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2959,
+   "duration_s": 334.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 31498,
+     "cache_read_input_tokens": 43157,
+     "cache_creation_input_tokens": 41965
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 8729,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18000
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 5,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 33,
+   "flagged": [],
+   "cost_usd": 0.14274920000000002
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "제3연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제7사단 제3연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제7사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제7사단"
+   ],
+   "higher_mission": "제7사단은 금성천 남안 주저항선과 북안 전초진지를 방어하여 휴전 최종 단계에서 현 접촉선을 유지한다.",
+   "higher_intent": "적이 금성천 북안 별우 지역을 확보해 주저항선을 압박하는 것을 막는다. 제8연대(좌)와 제3연대(우)는 금성천을 경계로 방어하고, 제5연대는 사단 예비로 위기 지역에 투입한다.",
+   "assigned_task": "D일 04:00부로 제8사단 제10연대 진지를 인수해 새말-거리실 간 사단 우측 전선을 방어하고, 별우-406고지 간 금성천 북안 전초진지를 유지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제8연대",
+     "alias": "인접 연대 1",
+     "echelon": "연대",
+     "type": "infantry",
+     "side": "좌측(금성천 서쪽)",
+     "mission": "거리실-삼현 간을 방어하고 425고지를 고수한다.",
+     "xy": [
+      45,
+      120
+     ],
+     "other_names": [
+      "국군 제7사단 제8연대"
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제5연대",
+     "alias": "인접 연대 2",
+     "echelon": "연대",
+     "type": "infantry",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 위기 지역 역습과 전선 인수를 준비한다.",
+     "xy": [
+      100,
+      60
+     ],
+     "other_names": [
+      "국군 제7사단 제5연대"
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "제8사단",
+     "alias": "인접 사단 1",
+     "echelon": "사단",
+     "type": "infantry",
+     "side": "우측(새말 동쪽)",
+     "mission": "새말 동쪽 전선을 방어한다.",
+     "xy": [
+      192,
+      75
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제8연대는 425고지를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T6"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "적 대대 이상이 금성천 남안 주저항선 지역에 들어오면 제5연대가 그 지역으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T9",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 금성천 남안 지역 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "T9",
+      "axis_xy": [
+       [
+        100,
+        60
+       ],
+       [
+        100,
+        75
+       ],
+       [
+        100,
+        88
+       ],
+       [
+        100,
+        95
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "좌측은 금성천과 거리실을 잇는 선(제8연대와의 경계), 우측은 새말 동쪽(제8사단과의 경계)이다. 주저항선은 금성천 남안 새말-거리실 선이고, 전초는 금성천 북안 별우-406고지 일대다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제8연대와의 전투지경선(금성천)",
+     "between": [
+      "제3연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       60,
+       200
+      ],
+      [
+       62,
+       160
+      ],
+      [
+       68,
+       125
+      ],
+      [
+       72,
+       102
+      ],
+      [
+       72,
+       40
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제8사단과의 전투지경선",
+     "between": [
+      "제3연대",
+      "A3"
+     ],
+     "xy": [
+      [
+       182,
+       40
+      ],
+      [
+       182,
+       80
+      ],
+      [
+       185,
+       130
+      ],
+      [
+       185,
+       200
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제3연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선 일대(인수 진지)"
+    },
+    "equipment": "60mm·81mm 박격포, 57mm 무반동총, 기관총"
+   },
+   {
+    "id": "F2",
+    "unit": "제3연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 금성천 남안"
+    },
+    "equipment": "60mm 박격포, 57mm 무반동총, 3.5인치 로켓포, 경기관총"
+   },
+   {
+    "id": "F3",
+    "unit": "제3연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 우측 주저항선 일대. 적 제538연대와 대치"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제3연대 중박격포중대",
+    "alias": "박격포 중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    },
+    "equipment": "4.2인치 박격포"
+   },
+   {
+    "id": "F5",
+    "unit": "제11포병단",
+    "alias": "포병 연대 1",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "사단 후방 포진지",
+     "xy": [
+      110,
+      40
+     ]
+    },
+    "equipment": "105mm·155mm 곡사포"
+   },
+   {
+    "id": "F6",
+    "unit": "사단 배속 전차소대",
+    "alias": "전차 소대 1",
+    "echelon": "소대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "금성천 남안 도로 일대",
+     "xy": [
+      120,
+      85
+     ]
+    },
+    "equipment": "전차 5대(추정)"
+   }
+  ],
+  "terrain": {
+   "area_text": "김화지구 남동부. 금성천이 북서에서 흘러와 북한강으로 향하며, 표고 400m 내외의 고지들이 동서로 이어진다. 연대 주저항선은 금성천 남안, 전초는 북안 별우와 406고지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "금성천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      110,
+      100
+     ],
+     "line": [
+      [
+       60,
+       200
+      ],
+      [
+       62,
+       160
+      ],
+      [
+       68,
+       125
+      ],
+      [
+       80,
+       108
+      ],
+      [
+       110,
+       100
+      ],
+      [
+       140,
+       92
+      ],
+      [
+       170,
+       80
+      ],
+      [
+       200,
+       70
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단은 금성천을 연대 간 전투지경선으로 설정했고, 별우는 금성천 북안이다."
+    },
+    {
+     "id": "T2",
+     "name": "406고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      112,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 406,
+     "preparation": "hasty",
+     "evidence": "제21연대가 D-1일에 탈환한 별우-406고지 간 전초진지. 급편 진지다."
+    },
+    {
+     "id": "T3",
+     "name": "별우",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      98,
+      114
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty",
+     "evidence": "금성천 북안 별우 지역. 406고지가 후방을 감제한다."
+    },
+    {
+     "id": "T4",
+     "name": "거리실",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      72,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제3연대 작전지역 좌단, 제8연대 우단."
+    },
+    {
+     "id": "T5",
+     "name": "새말",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      178,
+      70
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제3연대 작전지역 우단."
+    },
+    {
+     "id": "T6",
+     "name": "425고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      52,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 425,
+     "preparation": "hasty",
+     "evidence": "제8연대 제1대대 진지. D-1일 밤부터 적이 공격 중이다."
+    },
+    {
+     "id": "T7",
+     "name": "삼현",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      20,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제8연대 작전지역 좌단."
+    },
+    {
+     "id": "T8",
+     "name": "별우 도하지점",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      100,
+      103
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주저항선과 별우 전초를 잇는 금성천 도섭 지점(추정)."
+    },
+    {
+     "id": "T9",
+     "name": "금성천 남안 지역",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      125,
+      85
+     ],
+     "polygon": [
+      [
+       72,
+       104
+      ],
+      [
+       110,
+       96
+      ],
+      [
+       140,
+       88
+      ],
+      [
+       182,
+       74
+      ],
+      [
+       182,
+       50
+      ],
+      [
+       72,
+       50
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 주저항선 지역."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "금성천 남안 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       72,
+       96
+      ],
+      [
+       90,
+       94
+      ],
+      [
+       105,
+       92
+      ],
+      [
+       120,
+       89
+      ],
+      [
+       140,
+       84
+      ],
+      [
+       160,
+       77
+      ],
+      [
+       178,
+       68
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "별우-406고지 소로",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       100,
+       92
+      ],
+      [
+       100,
+       103
+      ],
+      [
+       98,
+       112
+      ],
+      [
+       104,
+       120
+      ],
+      [
+       109,
+       125
+      ],
+      [
+       112,
+       128
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "406고지 북쪽 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       118,
+       180
+      ],
+      [
+       117,
+       165
+      ],
+      [
+       115,
+       150
+      ],
+      [
+       114,
+       140
+      ],
+      [
+       112,
+       128
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "금성천",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       68,
+       127
+      ],
+      [
+       80,
+       110
+      ],
+      [
+       110,
+       102
+      ],
+      [
+       140,
+       94
+      ],
+      [
+       170,
+       82
+      ],
+      [
+       200,
+       72
+      ],
+      [
+       200,
+       68
+      ],
+      [
+       170,
+       78
+      ],
+      [
+       140,
+       90
+      ],
+      [
+       110,
+       98
+      ],
+      [
+       80,
+       106
+      ],
+      [
+       66,
+       123
+      ]
+     ],
+     "gap_at": [
+      100,
+      103
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "중공군 제135사단 예하 1개 연대(425고지 정면)",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 2000,
+    "identified": true,
+    "known_at_start": "D-1일부터 425고지를 공격 중",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      50,
+      150
+     ],
+     "frontage_m": 2500,
+     "note": "425고지 북쪽 금성천 서안 급편 진지"
+    },
+    "preparation": "hasty"
+   },
+   {
+    "id": "E2",
+    "unit": "중공군 제135사단 예하 1개 연대(별우·406고지 정면)",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 2000,
+    "identified": true,
+    "known_at_start": "금성천 북안으로 밀려나 진지를 급편하고 재공격을 준비 중",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      110,
+      150
+     ],
+     "frontage_m": 3000,
+     "polygon": [
+      [
+       92,
+       140
+      ],
+      [
+       95,
+       160
+      ],
+      [
+       128,
+       160
+      ],
+      [
+       128,
+       140
+      ]
+     ],
+     "note": "406고지 북쪽 능선과 별우 북쪽 고지군 급편 진지"
+    },
+    "preparation": "hasty"
+   },
+   {
+    "id": "E3",
+    "unit": "중공군 제135사단 예하 1개 연대(사단 예비)",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 1900,
+    "identified": false,
+    "known_at_start": "제135사단의 3개 연대 배치만 알려짐. 정확한 위치는 미상",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      95,
+      180
+     ],
+     "note": "금성돌출부 중앙 후방(추정)"
+    },
+    "preparation": "hasty"
+   },
+   {
+    "id": "E4",
+    "unit": "중공군 제180사단 제538연대",
+    "alias": "적 연대 4",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 2000,
+    "identified": true,
+    "known_at_start": "제3대대 정면에 대치",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      160,
+      110
+     ],
+     "frontage_m": 3500,
+     "note": "제3대대 정면 금성천 북안 고지군"
+    },
+    "preparation": "hasty"
+   },
+   {
+    "id": "E5",
+    "unit": "중공군 제135사단 지원 포병",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "공격 전 30분가량 집중 공격준비사격을 실시함",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      90,
+      190
+     ],
+     "note": "적 후방 포진지(추정)"
+    },
+    "preparation": "hasty"
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 04:00",
+   "light": "night",
+   "notes": "장마철 한여름. 휴전회담 최종 단계라 적은 접촉선 확대를 노린다. 적은 공격준비사격 뒤 야간·새벽 공격을 선호한다. 진지는 인수 직후라 급편 상태다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대(-제2중대), 제2대대, 제3대대, 제1대대 제2중대(연대 예비), 중박격포중대 / 지원: 제11포병단, 사단 전차소대",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대(-제2중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1",
+       "part": "-제2중대"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      },
+      {
+       "force": "F6"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제1대대 제2중대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F1",
+       "part": "제2중대"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "중박격포중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "406고지는 별우와 도하지점을 감제하는 전초의 핵심이다. 이곳을 잃으면 별우의 전초는 후방이 노출된다. 적의 주 접근로는 406고지 북쪽 능선과 별우 북쪽 고지군에서 내려오는 경로다.",
+    "key_terrain": [
+     {
+      "ref": "T2",
+      "why": "별우 전초와 별우 도하지점을 감제한다. 잃으면 전초 전체가 고립된다."
+     },
+     {
+      "ref": "T8",
+      "why": "전초진지로 가는 유일한 보급·철수로다."
+     },
+     {
+      "ref": "T6",
+      "why": "좌측 인접 제8연대의 핵심 고지다. 잃으면 연대 좌측방이 노출된다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "406고지 북쪽 능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "R3",
+       "T2"
+      ],
+      "xy": [
+       [
+        118,
+        180
+       ],
+       [
+        117,
+        165
+       ],
+       [
+        115,
+        150
+       ],
+       [
+        114,
+        140
+       ],
+       [
+        112,
+        128
+       ]
+      ]
+     },
+     {
+      "name": "별우 북쪽 접근로",
+      "user": "enemy",
+      "refs": [
+       "T3"
+      ],
+      "xy": [
+       [
+        98,
+        160
+       ],
+       [
+        96,
+        145
+       ],
+       [
+        95,
+        130
+       ],
+       [
+        97,
+        120
+       ],
+       [
+        98,
+        114
+       ]
+      ]
+     },
+     {
+      "name": "별우-406고지 역습로",
+      "user": "friendly",
+      "refs": [
+       "R2",
+       "T8"
+      ],
+      "xy": [
+       [
+        100,
+        92
+       ],
+       [
+        100,
+        103
+       ],
+       [
+        98,
+        112
+       ],
+       [
+        104,
+        120
+       ],
+       [
+        112,
+        128
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제135사단 1개 연대는 공격준비사격 뒤 야간에 2개 대대로 금성천 북안 전초를 공격해 올 것이다. 1개 대대는 406고지 북쪽 능선으로, 1개 대대는 별우 북쪽으로 공격해 올 것이다. 처음에는 소규모로 전초의 강도를 시험하고, 406고지가 흔들리면 예비 연대를 투입해 별우 지역을 확보할 것이다. 적 제538연대는 제3대대를 고착할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E5",
+       "mode": "bombard",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         90,
+         190
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "when": "공격 직전 30분간",
+       "t": 23.5
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         115,
+         150
+        ],
+        [
+         114,
+         140
+        ],
+        [
+         113,
+         134
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "when": "D+1일 새벽(야간)",
+       "t": 24
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         98,
+         155
+        ],
+        [
+         96,
+         145
+        ],
+        [
+         95,
+         130
+        ],
+        [
+         97,
+         120
+        ],
+        [
+         98,
+         114
+        ]
+       ],
+       "when": "D+1일 새벽(야간), 406고지 공격과 동시",
+       "t": 24
+      },
+      {
+       "group": "E3",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         110,
+         165
+        ],
+        [
+         116,
+         150
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "when": "406고지 공격이 진척되면",
+       "t": 30
+      },
+      {
+       "group": "E4",
+       "mode": "fix",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         160,
+         110
+        ],
+        [
+         160,
+         95
+        ],
+        [
+         160,
+         85
+        ]
+       ],
+       "when": "전초 공격과 동시",
+       "t": 24
+      }
+     ],
+     "risk_point": "적 대대 이상이 406고지를 점령해 별우와 도하지점을 감제하면 제2대대가 고립된다."
+    },
+    "unknowns": [
+     "적 제135사단 예비 연대의 위치와 투입 시기",
+     "적이 425고지와 406고지 중 어느 쪽에 주력을 두는지",
+     "적 포병의 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 제2대대는 제5중대를 별우, 제6중대를 406고지, 제7중대를 그 사이에 두고, 제1·제3대대는 각 3개 중대를 횡대로 배치한다.",
+     "why": "서술에 중대 위치가 일부만 나와 있어 보충했다."
+    },
+    {
+     "text": "금성천은 별우 도하지점에서 보병이 건널 수 있다.",
+     "why": "전초 편성과 역습이 이 지점을 통해 이루어졌다."
+    },
+    {
+     "text": "제11포병단과 인접 중대의 직사화기로 406고지 전방에 화력을 집중할 수 있다.",
+     "why": "서술상 역습 때 인접 중대 직사화기와 박격포 화력이 406고지에 집중되었다."
+    },
+    {
+     "text": "사단 전차소대 1개가 연대 우측 도로에서 직접지원한다.",
+     "why": "사단이 2개 전차소대의 화력지원을 받고 있었다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제3연대는 D일 04:00부로 새말-거리실 간 주저항선을 방어하고 별우-406고지 간 전초진지를 확보하여 적의 금성천 북안 별우 지역 확보를 저지한다.",
+   "task_verb": "방어",
+   "objective_ref": "CM3",
+   "when": {
+    "type": "time_elapsed",
+    "value": 4,
+    "text": "D일 04:00 진지 인수"
+   },
+   "purpose": "사단 우측 전선의 현 접촉선을 유지한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "주저항선과 별우-406고지 전초를 유지하고, 적의 공격 부대는 전초 전방에서 격퇴된다.",
+    "friendly": "3개 대대가 주저항선과 전초진지에서 전투력을 유지하고 예비는 역습 능력을 보존한다.",
+    "enemy": "적 제135사단 공격 부대가 406고지와 별우 전방에서 큰 손실을 입고 격퇴된다.",
+    "terrain": "406고지, 별우, 별우 도하지점을 확보한다."
+   },
+   "concept": {
+    "text": "제1·제3대대로 금성천 남안 주저항선을 방어하고, 제2대대로 금성천 북안 별우-406고지 전초진지를 편성해 적의 공격을 전방에서 격퇴한다. 화력은 406고지 전방 교전지역에 집중한다. 제1대대 제2중대를 예비로 두어 406고지 피탈에 즉시 역습한다.",
+    "maneuver": "제2대대는 D일 주간에 별우-406고지 간 전초진지를 점령하고 적정을 탐색한다. 제1대대(-)는 좌측, 제3대대는 우측 주저항선을 방어하며 전초를 화력으로 지원한다. 예비는 도하지점 남쪽에서 406고지 역습을 준비한다.",
+    "fires": "제11포병단과 중박격포중대는 406고지 북쪽 교전지역과 별우 북쪽 접근로에 화력을 집중한다. 적 공격준비사격이 시작되면 적 집결 예상 지역에 대응사격한다. 역습 때는 406고지 정상에 화력을 집중한다.",
+    "main_effort": "G2",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "CM7",
+     "xy": [
+      100,
+      92
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T2",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 406고지 안에 있음"
+     },
+     "priorities": [
+      "406고지 역습",
+      "별우 전초 철수 엄호"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G2",
+      "G1"
+     ],
+     "zone_refs": [
+      "CM6"
+     ],
+     "restrictions": "전초 중대와 근접 전투 중에는 대대장이 화력을 조정한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G2",
+     "purpose": "적의 공격을 전초에서 조기 경고·격퇴하여 별우 지역과 도하지점을 확보한다.",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       104,
+       120
+      ],
+      "frontage_m": 2000,
+      "polygon": [
+       [
+        90,
+        108
+       ],
+       [
+        92,
+        120
+       ],
+       [
+        108,
+        136
+       ],
+       [
+        120,
+        132
+       ],
+       [
+        115,
+        120
+       ],
+       [
+        102,
+        108
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         98,
+         114
+        ],
+        "ref": "T3"
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         112,
+         128
+        ],
+        "ref": "T2"
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         104,
+         121
+        ]
+       },
+       {
+        "label": "제8중대(중화기)",
+        "xy": [
+         100,
+         108
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "제21연대가 탈환한 별우-406고지 간 급편 진지를 인수해 편성한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "별우-406고지 간 전초진지를 점령한다.",
+       "params": {
+        "objective": "CM11"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "경계",
+       "text": "406고지 북쪽 교전지역에 대한 적정탐색으로 연대 정면을 경계한다.",
+       "params": {
+        "area": "CM6"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "철수",
+       "text": "명에 의해 별우 도하지점을 거쳐 주저항선으로 철수한다.",
+       "params": {
+        "destination": "CM9",
+        "route": "CM5"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G2",
+        "fraction": 0.5,
+        "text": "제2대대 손실 0.5 초과"
+       },
+       "basis": "risk_point: 406고지 피탈로 제2대대가 고립될 경우 전투력을 보존한다."
+      }
+     ]
+    },
+    {
+     "group": "G1",
+     "purpose": "연대 좌측 주저항선을 유지하고 전초를 화력으로 지원한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       97,
+       95
+      ],
+      "frontage_m": 4500,
+      "polygon": [
+       [
+        74,
+        92
+       ],
+       [
+        74,
+        102
+       ],
+       [
+        120,
+        96
+       ],
+       [
+        120,
+        86
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         84,
+         98
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         112,
+         94
+        ]
+       },
+       {
+        "label": "제4중대(중화기)",
+        "xy": [
+         98,
+         92
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "인수한 주저항선 좌측 진지. 거리실에서 제8연대와 접촉한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "거리실-대대 전투지경선 간 주저항선을 방어한다.",
+       "params": {
+        "area": "CM9"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력지원",
+       "text": "명에 의해 대대 화기로 제2대대의 406고지 전투를 화력지원한다.",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "CM6"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM6",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 교전지역 안에 있음"
+       },
+       "basis": "적 방책: 적이 406고지 북쪽 능선으로 공격해 온다."
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "확보",
+       "text": "명에 의해 406고지를 확보한다.",
+       "params": {
+        "objective": "CM4",
+        "route": "CM5"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM6",
+        "min_echelon": "대대",
+        "and": [
+         {
+          "type": "losses_exceed",
+          "group": "G2",
+          "fraction": 0.3,
+          "text": "제2대대 손실 0.3 초과"
+         }
+        ],
+        "text": "적 대대 이상이 교전지역 안에 있고 제2대대 손실이 0.3을 넘음"
+       },
+       "basis": "risk_point: 적이 예비를 투입해 406고지를 거듭 공격할 경우 제2대대만으로는 고지를 지킬 수 없다."
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "연대 우측 주저항선을 유지하고 적 제538연대의 고착 공격을 격퇴한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       150,
+       82
+      ],
+      "frontage_m": 5800,
+      "polygon": [
+       [
+        122,
+        82
+       ],
+       [
+        122,
+        95
+       ],
+       [
+        178,
+        76
+       ],
+       [
+        178,
+        64
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         132,
+         89
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         152,
+         82
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         172,
+         74
+        ]
+       },
+       {
+        "label": "제12중대(중화기)",
+        "xy": [
+         148,
+         78
+        ]
+       },
+       {
+        "label": "전차소대",
+        "xy": [
+         140,
+         84
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "인수한 주저항선 우측 진지. 새말에서 제8사단과 접촉한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "대대 전투지경선-새말 간 주저항선을 방어한다.",
+       "params": {
+        "area": "CM10"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력지원",
+       "text": "명에 의해 좌측 중대 직사화기로 제2대대의 406고지 전투를 화력지원한다.",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "T2"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 406고지 안에 있음"
+       },
+       "basis": "risk_point: 적이 406고지에 돌입한다."
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "406고지 피탈에 즉시 역습하여 전초진지를 회복한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       100,
+       92
+      ],
+      "frontage_m": 400,
+      "elements": [
+       {
+        "label": "제2중대",
+        "xy": [
+         100,
+         92
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "별우 도하지점 남쪽 역습로 출발점."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "별우 도하지점 남쪽 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM7"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 제2대대장 지휘 아래 406고지로 역습한다.",
+       "params": {
+        "objective": "CM4",
+        "route": "CM5"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 406고지 안에 있음"
+       },
+       "basis": "risk_point: 적이 406고지를 점령해 별우와 도하지점을 감제한다."
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "전초 전방의 적 공격 부대를 화력으로 와해한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       110,
+       85
+      ],
+      "frontage_m": 300,
+      "preparation": "hasty",
+      "note": "주저항선 후방에서 406고지와 별우 전방을 사거리에 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "406고지 북쪽 교전지역에 제2대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "CM6"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 04:00 진지 인수와 작전지휘권 인수를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4,
+       "text": "D일 04:00"
+      }
+     },
+     {
+      "text": "D일 18:00까지 별우-406고지 전초진지 점령을 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 18,
+       "text": "D일 18:00"
+      }
+     },
+     {
+      "text": "D일 20:00까지 예비의 역습 준비를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 20,
+       "text": "D일 20:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "제1·제3대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G3"
+      ],
+      "xy": [
+       [
+        122,
+        100
+       ],
+       [
+        122,
+        70
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM2",
+      "name": "전초선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        92,
+        118
+       ],
+       [
+        104,
+        124
+       ],
+       [
+        118,
+        132
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T3",
+       "T2"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "주저항선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        72,
+        100
+       ],
+       [
+        95,
+        97
+       ],
+       [
+        120,
+        92
+       ],
+       [
+        150,
+        84
+       ],
+       [
+        178,
+        72
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T4",
+       "T5"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "OBJ 406",
+      "kind": "objective",
+      "xy": [
+       [
+        112,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T2"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "406고지 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        92
+       ],
+       [
+        100,
+        103
+       ],
+       [
+        98,
+        112
+       ],
+       [
+        104,
+        120
+       ],
+       [
+        109,
+        125
+       ],
+       [
+        112,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R2",
+       "T8"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "EA 1(406고지 북쪽)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        98,
+        126
+       ],
+       [
+        104,
+        145
+       ],
+       [
+        128,
+        145
+       ],
+       [
+        128,
+        132
+       ],
+       [
+        116,
+        130
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R3"
+      ]
+     },
+     {
+      "id": "CM7",
+      "name": "연대 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        100,
+        92
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "제8연대 접촉점(거리실)",
+      "kind": "contact_point",
+      "xy": [
+       [
+        72,
+        100
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T4"
+      ]
+     },
+     {
+      "id": "CM9",
+      "name": "제1대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        74,
+        92
+       ],
+       [
+        74,
+        102
+       ],
+       [
+        120,
+        96
+       ],
+       [
+        120,
+        86
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM10",
+      "name": "제3대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        122,
+        82
+       ],
+       [
+        122,
+        95
+       ],
+       [
+        178,
+        76
+       ],
+       [
+        178,
+        64
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM11",
+      "name": "별우-406고지 전초진지",
+      "kind": "outpost",
+      "xy": [
+       [
+        90,
+        108
+       ],
+       [
+        92,
+        120
+       ],
+       [
+        108,
+        136
+       ],
+       [
+        120,
+        132
+       ],
+       [
+        115,
+        120
+       ],
+       [
+        102,
+        108
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "T2",
+       "T3"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 04:00",
+  "start_t": 4,
+  "horizon_h": 65,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제135사단 별우·406고지 정면 연대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 휴전 최종 단계에서 현 진지를 고수하면서 금성천 북안 별우 지역을 확보해 국군 주저항선을 압박하고 금성 방어의 위협을 제거하려 한다. 제135사단은 야간 공격준비사격 뒤 425고지와 별우-406고지 전초를 반복 공격하고, 406고지가 흔들리면 예비를 투입해 별우 지역을 확보한다.",
+   "groups": [
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "D+1일 00:10부터 30분간 별우-406고지 전초와 425고지에 공격준비사격을 실시한다.",
+       "basis": "서술: 적은 공격 전 약 30분간 포격을 집중했다. D+1일 00:40 공격에 맞춘 시각은 추정.",
+       "objective_ref": "CM11",
+       "axis_xy": [
+        [
+         90,
+         190
+        ],
+        [
+         100,
+         150
+        ],
+        [
+         104,
+         120
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24.17,
+        "text": "D+1일 00:10"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "D+3일 02:30부터 30분간 406고지에 공격준비사격을 실시한다.",
+       "basis": "서술: D+3일 03:00 대대 규모 공격 전 포격. 시각은 추정.",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         90,
+         190
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 74.5,
+        "text": "D+3일 02:30"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+1일 00:40 1개 대대로 425고지를 공격한다.",
+       "basis": "서술: D+1일 00:40 제8연대 제1대대 진지 공격.",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         50,
+         150
+        ],
+        [
+         48,
+         140
+        ],
+        [
+         50,
+         133
+        ],
+        [
+         52,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24.67,
+        "text": "D+1일 00:40"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "425고지 돌출고지 공격이 진척되면 증원 병력을 투입한다.",
+       "basis": "서술: 증원 병력과 함께 돌출고지 정상으로 몰려들었다. 문턱은 추정.",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         50,
+         155
+        ],
+        [
+         49,
+         140
+        ],
+        [
+         52,
+         128
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.15,
+        "text": "적 425고지 정면 연대 손실 0.15 초과(추정)"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 425고지 북쪽 진지로 물러난다.",
+       "basis": "추정: 반격과 집중 포격에 격퇴되었다.",
+       "axis_xy": [
+        [
+         52,
+         128
+        ],
+        [
+         50,
+         140
+        ],
+        [
+         50,
+         150
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.3,
+        "text": "적 425고지 정면 연대 손실 0.3 초과(추정)"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+1일 00:40 소규모 부대로 별우-406고지 전초의 강도를 시험한다.",
+       "basis": "서술: D+1일 이른 새벽 강도를 시험하는 듯한 2차례 공격.",
+       "objective_ref": "CM11",
+       "axis_xy": [
+        [
+         98,
+         155
+        ],
+        [
+         96,
+         140
+        ],
+        [
+         97,
+         125
+        ],
+        [
+         98,
+         114
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24.67,
+        "text": "D+1일 00:40"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 1
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+1일 03:30 2개 중대로 별우의 제5중대 진지를 공격한다.",
+       "basis": "서술: D+1일 03:30 2개 중대 규모 공격.",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         98,
+         155
+        ],
+        [
+         96,
+         145
+        ],
+        [
+         95,
+         130
+        ],
+        [
+         97,
+         120
+        ],
+        [
+         98,
+         114
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 27.5,
+        "text": "D+1일 03:30"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "이어서 전열을 정비해 별우-406고지 사이 전초진지를 다시 공격한다.",
+       "basis": "서술: 약 30분 후 공격을 재개해 제7중대 정면을 공격했다.",
+       "objective_ref": "CM11",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         102,
+         135
+        ],
+        [
+         104,
+         121
+        ]
+       ]
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+2일 22:10 1개 소대로 406고지를 공격한다.",
+       "basis": "서술: D+2일 22:10 소대 규모 공격.",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         115,
+         150
+        ],
+        [
+         114,
+         140
+        ],
+        [
+         113,
+         134
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 70.17,
+        "text": "D+2일 22:10"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+3일 03:00 1개 대대로 406고지를 공격하고 병력을 축차 증가시킨다.",
+       "basis": "서술: D+3일 03:00 대대 규모 공격, 시간이 지날수록 늘어남.",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         118,
+         170
+        ],
+        [
+         115,
+         150
+        ],
+        [
+         114,
+         140
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 75.0,
+        "text": "D+3일 03:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "406고지에서 역습과 집중 화력을 받으면 고지를 포기하고 북쪽으로 물러난다.",
+       "basis": "서술: 직사화기와 박격포격이 집중되자 고지를 포기했다. 문턱은 추정.",
+       "axis_xy": [
+        [
+         112,
+         128
+        ],
+        [
+         114,
+         140
+        ],
+        [
+         115,
+         150
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 406고지 안에 있음",
+        "and": [
+         {
+          "type": "losses_exceed",
+          "group": "E2",
+          "fraction": 0.35,
+          "text": "손실 0.35 초과(추정)"
+         }
+        ]
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "406고지를 다시 잃으면 대대 규모 이상으로 406고지를 공격한다.",
+       "basis": "서술: D+3일 정오경 대대 규모 이상 공격. 투입 문턱은 추정.",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         110,
+         165
+        ],
+        [
+         116,
+         150
+        ],
+        [
+         114,
+         140
+        ],
+        [
+         112,
+         128
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 406고지 안에 있음",
+        "and": [
+         {
+          "type": "losses_exceed",
+          "group": "E2",
+          "fraction": 0.35,
+          "text": "별우 정면 연대 손실 0.35 초과(추정)"
+         }
+        ]
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "text": "이어서 별우 지역으로 진출해 금성천 북안을 확보한다.",
+       "basis": "서술: 406고지 상실 뒤 별우 지역을 중공군이 차지했다.",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         112,
+         128
+        ],
+        [
+         104,
+         120
+        ],
+        [
+         98,
+         114
+        ],
+        [
+         100,
+         106
+        ]
+       ]
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "제3대대 정면 금성천 북안 고지군을 고수하며 제3대대를 고착한다.",
+       "basis": "서술: 제538연대가 제3대대와 마주했으나 공격 기록이 없다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         160,
+         110
+        ],
+        [
+         160,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 4,
+        "text": "D일 04:00부터"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [],
+  "exogenous": [
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "night",
+    "duration_h": 1.3,
+    "note": "인수 시점은 야간이며 05:20경 일출."
+   },
+   {
+    "when": "D일 05:20",
+    "t": 5.33,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명."
+   },
+   {
+    "when": "D일 19:50",
+    "t": 19.83,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간(D+1일 05:20까지)."
+   },
+   {
+    "when": "D+1일 19:50",
+    "t": 43.83,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간(D+2일 05:20까지)."
+   },
+   {
+    "when": "D+2일 19:50",
+    "t": 67.83,
+    "kind": "night",
+    "duration_h": 1.2,
+    "note": "야간(구간 끝까지)."
+   },
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "weather",
+    "duration_h": 65,
+    "note": "장마철 한여름. 고온다습하고 금성천 수위가 높을 수 있다(추정)."
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 02:30",
+      "t": 2.5,
+      "mode": "attack",
+      "target_ref": "T6",
+      "axis_xy": [
+       [
+        50,
+        150
+       ],
+       [
+        50,
+        135
+       ],
+       [
+        52,
+        128
+       ]
+      ],
+      "note": "공격준비사격 뒤 2개 중대로 425고지 2차 공격, 일부가 중대 전투지경선으로 침투. 04:00경 격퇴."
+     },
+     {
+      "when": "D+1일 00:40",
+      "t": 24.67,
+      "mode": "attack",
+      "target_ref": "T6",
+      "axis_xy": [
+       [
+        50,
+        150
+       ],
+       [
+        49,
+        138
+       ],
+       [
+        52,
+        128
+       ]
+      ],
+      "note": "1개 대대로 425고지 돌출고지 공격, 증원 병력과 정상 돌입. 집중 포격과 반격에 5시간 만에 격퇴."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D+1일 이른 새벽",
+      "t": 25,
+      "mode": "attack",
+      "target_ref": "CM11",
+      "axis_xy": [
+       [
+        98,
+        155
+       ],
+       [
+        96,
+        140
+       ],
+       [
+        98,
+        114
+       ]
+      ],
+      "note": "제2대대 전초에 강도를 시험하는 2차례 공격."
+     },
+     {
+      "when": "D+1일 03:30",
+      "t": 27.5,
+      "mode": "attack",
+      "target_ref": "T3",
+      "axis_xy": [
+       [
+        98,
+        155
+       ],
+       [
+        95,
+        130
+       ],
+       [
+        98,
+        114
+       ]
+      ],
+      "note": "2개 중대로 제5중대 진지 공격. 중화기 집중에 05:00경 물러남."
+     },
+     {
+      "when": "D+1일 05:30",
+      "t": 29.5,
+      "mode": "attack",
+      "target_ref": "CM11",
+      "axis_xy": [
+       [
+        100,
+        150
+       ],
+       [
+        104,
+        121
+       ]
+      ],
+      "note": "전열 정비 후 재공격, 제7중대에 격퇴."
+     },
+     {
+      "when": "D+2일 22:10",
+      "t": 70.17,
+      "mode": "attack",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        115,
+        150
+       ],
+       [
+        112,
+        128
+       ]
+      ],
+      "note": "소대 규모로 406고지 공격, 30분 만에 격퇴."
+     },
+     {
+      "when": "D+3일 03:00",
+      "t": 75.0,
+      "mode": "attack",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        118,
+        170
+       ],
+       [
+        115,
+        150
+       ],
+       [
+        112,
+        128
+       ]
+      ],
+      "note": "대대 규모로 406고지 공격, 병력 계속 증가. 04:30 406고지 점령."
+     },
+     {
+      "when": "D+3일 05:00",
+      "t": 77.0,
+      "mode": "withdraw",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        112,
+        128
+       ],
+       [
+        115,
+        150
+       ]
+      ],
+      "note": "역습과 직사·박격포 화력 집중에 당황해 406고지를 포기하고 북쪽으로 물러남."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D+3일 12:00경",
+      "t": 84.0,
+      "mode": "counterattack",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        95,
+        180
+       ],
+       [
+        116,
+        150
+       ],
+       [
+        112,
+        128
+       ]
+      ],
+      "note": "대대 규모 이상으로 406고지를 공격, 격전 끝에 제1대대를 밀어내고 고지 점령(투입 부대는 추정)."
+     },
+     {
+      "when": "D+3일 오후",
+      "t": 63,
+      "mode": "pursue",
+      "target_ref": "T3",
+      "axis_xy": [
+       [
+        112,
+        128
+       ],
+       [
+        104,
+        120
+       ],
+       [
+        98,
+        114
+       ]
+      ],
+      "note": "제2대대 축차 철수에 따라 별우 지역 확보."
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "구간 전체",
+      "t": 4,
+      "mode": "hold",
+      "target_ref": "T1",
+      "axis_xy": [
+       [
+        160,
+        110
+       ],
+       [
+        160,
+        100
+       ]
+      ],
+      "note": "제3대대 정면에서 대치, 기록된 공격 없음."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 주간",
+      "t": 10,
+      "verb": "점령",
+      "ref": "CM11",
+      "text": "별우-406고지 간 전초진지를 편성하고 적정을 탐색함."
+     },
+     {
+      "when": "D+1일 00:40~05:30",
+      "t": 24.67,
+      "verb": "방어",
+      "ref": "CM11",
+      "text": "첫 야간에 4차례 공격을 격퇴. 제5중대 중화기 집중, 제7중대가 재공격 격퇴."
+     },
+     {
+      "when": "D+2일 22:10",
+      "t": 70.17,
+      "verb": "방어",
+      "ref": "T2",
+      "text": "제6중대가 소대 규모 공격을 30분 만에 격퇴. 대대장이 경계 강화 지시."
+     },
+     {
+      "when": "D+3일 03:00",
+      "t": 75.0,
+      "verb": "방어",
+      "ref": "T2",
+      "text": "대대 화기를 제6중대 전면으로 전환해 지원했으나 04:30 제6중대가 고지 뒤쪽으로 물러나 406고지 상실."
+     },
+     {
+      "when": "D+3일 05:00",
+      "t": 77.0,
+      "verb": "역습",
+      "ref": "CM4",
+      "text": "연대장 명에 따라 대대장이 제1대대 제2중대를 이끌고 역습, 05:30 406고지 탈취."
+     },
+     {
+      "when": "D+3일 오후",
+      "t": 62,
+      "verb": "철수",
+      "ref": "CM9",
+      "text": "406고지 상실로 후방이 노출되어 별우 지역에서 축차 철수."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D+3일 05:00",
+      "t": 77.0,
+      "verb": "역습",
+      "ref": "CM4",
+      "text": "제2대대장 지휘 아래 406고지 역습, 30분 만에 탈취."
+     }
+    ]
+   },
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D+3일 06:00경",
+      "t": 78.0,
+      "verb": "확보",
+      "ref": "CM4",
+      "text": "연대장이 406고지 방어 지원을 위해 제1대대를 투입."
+     },
+     {
+      "when": "D+3일 12:00경",
+      "t": 84.0,
+      "verb": "방어",
+      "ref": "T2",
+      "text": "대대 규모 이상 공격과 격전."
+     },
+     {
+      "when": "D+3일 오후",
+      "t": 61,
+      "verb": "철수",
+      "ref": "CM9",
+      "text": "406고지에서 철수."
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D+3일 05:00",
+      "t": 77.0,
+      "verb": "화력지원",
+      "ref": "T2",
+      "text": "인접 중대 직사화기로 406고지에 화력 집중(서술의 인접 중대를 제3대대 좌측 중대로 추정)."
+     }
+    ]
+   },
+   {
+    "group": "G5",
+    "actions": [
+     {
+      "when": "D+3일 05:00",
+      "t": 77.0,
+      "verb": "화력지원",
+      "ref": "T2",
+      "text": "각종 박격포격을 406고지에 집중."
+     }
+    ]
+   },
+   {
+    "group": "A1",
+    "actions": [
+     {
+      "when": "D일 02:30~04:00",
+      "t": 2.5,
+      "verb": "방어",
+      "ref": "T6",
+      "text": "425고지 2차 공격 격퇴."
+     },
+     {
+      "when": "D+1일 00:40~05:40",
+      "t": 24.67,
+      "verb": "고수",
+      "ref": "T6",
+      "text": "제1중대 철수 중 포격 집중과 대대 반격으로 425고지 고수."
+     }
+    ]
+   },
+   {
+    "group": "A2",
+    "actions": [
+     {
+      "when": "D+3일 21:00",
+      "t": 93.0,
+      "verb": "방어",
+      "ref": "T9",
+      "text": "사단장 명으로 전력이 소모된 제3연대를 대신해 사단 우측 전선 방어 임무를 맡음."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D+1일 새벽",
+    "t": 25,
+    "kind": "night",
+    "note": "전초 공격은 모두 야간에 이루어짐."
+   },
+   {
+    "when": "D+3일 03:00",
+    "t": 75.0,
+    "kind": "night",
+    "note": "406고지 피탈은 야간, 역습은 여명 무렵."
+   }
+  ],
+  "historical_result": {
+   "friendly": "제3연대",
+   "enemy": "중공군 제135사단(제180사단 제538연대 일부 대치)",
+   "terrain_held": [
+    "CM3",
+    "T9",
+    "T6"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "사단 전체: 적 사살 1,605명, 포로 38명, 박격포·로켓포 7문, 기관총 30정 노획. 아군 전사 114, 부상 433, 실종 83명. 제3연대 단독 손실은 미상.",
+   "enemy_loss_pct": 20,
+   "friendly_loss_pct": 12,
+   "duration_h": 65
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+3일 21:00 주저항선은 유지했으나 406고지와 별우 전초는 적이 점령했고, 전력이 소모된 제3연대는 제5연대에 방어 임무를 넘김.",
+   "terrain_held_at_horizon": [
+    "CM3",
+    "T9",
+    "T6"
+   ],
+   "key_times": [
+    {
+     "t": 27.5,
+     "ref": "T3",
+     "text": "2개 중대 규모 공격 개시, 05:00 격퇴"
+    },
+    {
+     "t": 52.5,
+     "ref": "T2",
+     "text": "406고지 1차 상실"
+    },
+    {
+     "t": 53.5,
+     "ref": "T2",
+     "text": "역습으로 406고지 탈취"
+    },
+    {
+     "t": 60,
+     "ref": "T2",
+     "text": "대대 규모 이상 공격으로 406고지 최종 상실"
+    },
+    {
+     "t": 69,
+     "ref": "T9",
+     "text": "제5연대가 사단 우측 전선 인수"
+    }
+   ],
+   "enemy_loss_pct": 20,
+   "friendly_loss_pct": 12
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb2_040",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

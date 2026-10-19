@@ -1,0 +1,2613 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-07-12",
+   "end_date": "1950-07-14",
+   "d_day": "1950-07-14",
+   "order_time": "D-2일 18:00 (1950-07-12 오후, 사단 배치 명령 직후 연대의 첫 결심)",
+   "text": "공주 전투 전체: 미 제34연대의 공주 금강선 방어 배치(7.12)부터 북한군 제4사단 도하 공격과 연대 철수(7.14)까지",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 사단장이 연대를 공주에 배치한 직후 연대장이 대대 배치를 결심한 때로 잡았다."
+  },
+  "perspective_rationale": "관점 지정에 따라 미 제24사단 제34연대를 쓴다. 제34연대는 구간 시작 때 공주 정면(구곡천~검상리) 작전지역을 맡은 연대이며 대대 배치와 예비 운용 서술이 있다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "적 1개 연대가 검상리 일대로 도하해 제63포병대대를 기습했고, L중대는 임의로 철수했으며 예비 제1대대의 구출은 야간에 중단되었다. 연대는 공격 하루 만에 와해되어 논산으로 철수했다. 제63포병대대는 105mm 10문과 차량 약 70대를 잃었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 이인리 남서쪽 약 3km 지점. 공주 시가를 (115,112)에 두고 금강은 y≈120 부근을 동서로 흐르다 검상리 서쪽에서 남서로 꺾이게 둠. 북쪽 +y.",
+   "source": "text",
+   "atlas_pages": "없음 (서술의 거리: 구곡천은 공주 동쪽 4km, 이인리는 공주 남서 10km, 삼교리는 그 중간, 연대 정면 약 10km, 논산도로~구곡천 1.5km)"
+  },
+  "seed_id": "kb1_070_공주_전투",
+  "title": "공주 전투",
+  "dates": "1950.7.12.〜14.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '공주 전투' (pdf 261쪽)",
+  "pdf_page": 261,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 1,
+    "B6": 3
+   },
+   "sim_value": 9,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "공주 정면에 병력을 집중하고 서측 검상리 일대와 포병 진지 주변은 수색중대와 화력에만 의존",
+    "alternative": "검상리 도하 지점과 삼교리 포병 진지 접근로에 보병 중대 이상을 배치해 측방 도하를 저지",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "미 제34연대는 금강 하천선을 이용한 방어배치는 북한군의 전차를 막는데유리했으나 침투 및 우회부대를 저지하지 못하고 후방이 차단된 상황에서 공주로부터 14일 철수했다."
+   },
+   {
+    "decision": "예비 제1대대를 공주 남서쪽 10km 이인리에 두고 뒤늦게 투입, 일몰로 중단",
+    "alternative": "예비를 삼교리 포병 진지 가까이에 두거나 측방 도하 확인 즉시 역습에 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": "후방에 예비로 집결되어 있던 제1대대는뒤늦게 제63포병대대를 구출하기 위해 전방으로 기동하였으나, 날이 어두워지자 임무를중단하였다."
+   },
+   {
+    "decision": "L중대가 측방 도하를 확인하고도 조치 없이 임의 철수",
+    "alternative": "도하를 대대에 보고하고 포병 화력 유도와 진지 고수",
+    "effect": "degree",
+    "representable": false,
+    "explicit": true,
+    "quote": "제3대대 L중대는 검상리 지역에서 측방으로 보트를 타고 도하하는 북한군을 확인하고도 대대와 통신이 되지 않아 아무런 조치도 취하지 못한 채 후방이 차단될 것을 우려하여 전방 진지에서 임의로 철수하였다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1677,
+   "duration_s": 317.8,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 30359,
+     "cache_read_input_tokens": 46677,
+     "cache_creation_input_tokens": 36765
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6635,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 15164
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 30,
+   "flagged": [],
+   "cost_usd": 0.0540552
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "미 제24사단 제34연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제34연대",
+    "34th Infantry Regiment"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제24사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제24사단",
+    "24th Infantry Division"
+   ],
+   "higher_mission": "제24사단은 공주 서측에서 신탄진 일대 경부철교 동측까지 금강선을 방어하여 대전으로 향하는 적의 남진을 저지한다.",
+   "higher_intent": "정면 48km를 모두 지킬 수 없으므로 적의 도하 공격이 예상되는 1번 국도(대평리 정면)와 23번 국도(공주 정면)에 병력을 집중하고, 1개 연대를 사단 예비로 확보한다. 금강선을 고수한다.",
+   "assigned_task": "제34연대는 공주 동쪽 구곡천에서 공주 서측 검상리까지 금강 남안을 방어하여 23번 국도 축선으로 도하하는 적을 저지한다. 사단 수색중대를 배속하고 제63포병대대가 직접지원한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "미 제24사단 제19연대",
+     "alias": "인접 연대 1",
+     "side": "동측(우측)",
+     "mission": "대평리 정면 1번 국도 축선의 금강선을 방어한다. D-1일 대평리에 도착해 제21연대와 임무를 교대한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "other_names": [
+      "제19연대"
+     ],
+     "xy": [
+      199,
+      140
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "미 제24사단 제21연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "제19연대 도착 후 대전비행장 일대에서 사단 예비가 된다. 조치원 전투 손실로 전투력이 감소했다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "other_names": [
+      "제21연대"
+     ],
+     "xy": [
+      199,
+      60
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제19연대는 D-1일 대평리 정면 금강선 진지를 점령해 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": -12,
+      "text": "D-1일 12:00 대평리 진지 점령"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T12"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "사단 예비 제21연대는 공주 정면 방어가 무너질 위기에 처하면 사단 명령으로 공주-논산 축선에 증원된다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.5,
+      "text": "제3대대 손실 0.5 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T6"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "북쪽은 금강, 동쪽은 구곡천(제19연대와의 경계), 서쪽은 검상리 서측, 남쪽은 이인리 남쪽까지다. 금강 남안 정면은 직선 약 10km다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제34연대-제19연대 전투지경선(구곡천)",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       150,
+       135
+      ],
+      [
+       150,
+       118
+      ],
+      [
+       152,
+       90
+      ],
+      [
+       150,
+       40
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제34연대 서측 경계(검상리 서측)",
+     "between": [
+      "아군 연대",
+      "사단 좌측 개방 측방"
+     ],
+     "xy": [
+      [
+       45,
+       135
+      ],
+      [
+       45,
+       110
+      ],
+      [
+       35,
+       70
+      ],
+      [
+       25,
+       30
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "제34연대 후방 경계(이인리 남측)",
+     "between": [
+      "아군 연대",
+      "사단 후방지역"
+     ],
+     "xy": [
+      [
+       25,
+       30
+      ],
+      [
+       90,
+       30
+      ],
+      [
+       150,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제34연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "relationship": "건제",
+    "equipment": "소총중대 3개(K·I·L중대), 화기중대(M중대)",
+    "location": {
+     "note": "재편성 후 연대 작전지역 내 공주 일대로 이동 중"
+    },
+    "other_names": [
+     "3대대"
+    ]
+   },
+   {
+    "id": "F2",
+    "unit": "제34연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "relationship": "건제",
+    "equipment": "소총중대 3개, 화기중대",
+    "location": {
+     "note": "재편성 후 연대 작전지역 내 후방으로 이동 중"
+    },
+    "other_names": [
+     "1대대"
+    ]
+   },
+   {
+    "id": "F3",
+    "unit": "제24사단 수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "equipment": "경전차·장갑차량 일부(추정)",
+    "location": {
+     "note": "사단에서 배속, 연대 작전지역으로 이동 중"
+    },
+    "other_names": [
+     "사단 수색중대"
+    ]
+   },
+   {
+    "id": "F4",
+    "unit": "제63포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 약 12문(추정), 차량 약 70대 이상",
+    "location": {
+     "note": "연대 작전지역 내 후방으로 이동 중"
+    },
+    "other_names": [
+     "63포병대대",
+     "63rd Field Artillery Battalion"
+    ]
+   }
+  ],
+  "terrain": {
+   "area_text": "금강은 폭 500~1,000m, 수심 2~5m, 유속 매시 5~10km로 도섭이 불가능한 천연 장애물이다. 공주는 금강 남안에 있고 23번 국도가 공주에서 이인리·논산을 거쳐 남으로 이어진다. 남안은 구릉과 고지가 이어지나 정면 10km에 비해 병력이 적어 공백이 생긴다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "금강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      122
+     ],
+     "line": [
+      [
+       200,
+       128
+      ],
+      [
+       160,
+       124
+      ],
+      [
+       115,
+       121
+      ],
+      [
+       80,
+       122
+      ],
+      [
+       55,
+       120
+      ],
+      [
+       40,
+       110
+      ],
+      [
+       10,
+       90
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "강폭 500~1,000m, 수심 2~5m, 유속 매시 5~10km, 도섭 불가"
+    },
+    {
+     "id": "T2",
+     "name": "공주",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      115,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "금강 남안, 23번 국도가 지나는 대전 접근로의 길목"
+    },
+    {
+     "id": "T3",
+     "name": "구곡천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      150,
+      110
+     ],
+     "line": [
+      [
+       150,
+       122
+      ],
+      [
+       151,
+       105
+      ],
+      [
+       153,
+       85
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주 동쪽 4km, 연대 동측 경계"
+    },
+    {
+     "id": "T4",
+     "name": "검상리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      58,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주 서측, 연대 방어지역 서단"
+    },
+    {
+     "id": "T5",
+     "name": "이인리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      50,
+      42
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주 남서쪽 10km, 23번 국도상"
+    },
+    {
+     "id": "T6",
+     "name": "삼교리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      85,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "공주와 이인리 중간"
+    },
+    {
+     "id": "T7",
+     "name": "공주 정면 도하지점",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      115,
+      121
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "23번 국도가 금강을 건너는 곳, 연대가 판단한 적 주 도하지점"
+    },
+    {
+     "id": "T8",
+     "name": "공주 남안 고지군",
+     "alias": "고지 A",
+     "kind": "ridge",
+     "xy": [
+      108,
+      114
+     ],
+     "polygon": [
+      [
+       93,
+       118
+      ],
+      [
+       128,
+       118
+      ],
+      [
+       130,
+       106
+      ],
+      [
+       95,
+       106
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "논산가도 서쪽 강안 진지 지역",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T9",
+     "name": "논산도로-구곡천 사이 지역",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      142,
+      112
+     ],
+     "polygon": [
+      [
+       134,
+       120
+      ],
+      [
+       150,
+       121
+      ],
+      [
+       151,
+       102
+      ],
+      [
+       132,
+       102
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "논산도로에서 구곡천까지 약 1.5km"
+    },
+    {
+     "id": "T10",
+     "name": "논산",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      25,
+      2
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "23번 국도 남쪽 방향, 캔버스 밖 방향점"
+    },
+    {
+     "id": "T11",
+     "name": "대전",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      199,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 후방 주요 거점, 캔버스 밖 동남 방향점"
+    },
+    {
+     "id": "T12",
+     "name": "대평리",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      199,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1번 국도 금강 도하지점, 제19연대 정면, 캔버스 밖 동북 방향점"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "23번 국도(공주-논산 도로)",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       120
+      ],
+      [
+       115,
+       112
+      ],
+      [
+       128,
+       104
+      ],
+      [
+       130,
+       92
+      ],
+      [
+       118,
+       80
+      ],
+      [
+       90,
+       72
+      ],
+      [
+       65,
+       55
+      ],
+      [
+       50,
+       42
+      ],
+      [
+       25,
+       2
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "논산가도",
+      "공주-논산도로",
+      "논산도로"
+     ]
+    },
+    {
+     "id": "R2",
+     "name": "23번 국도(금강 북안 접근로)",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       115,
+       200
+      ],
+      [
+       113,
+       175
+      ],
+      [
+       116,
+       150
+      ],
+      [
+       115,
+       135
+      ],
+      [
+       115,
+       124
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "검상리-삼교리 소로",
+     "alias": "도로 3",
+     "kind": "trail",
+     "xy": [
+      [
+       58,
+       112
+      ],
+      [
+       62,
+       102
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       78,
+       84
+      ],
+      [
+       85,
+       78
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "금강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       200,
+       132
+      ],
+      [
+       160,
+       129
+      ],
+      [
+       115,
+       126
+      ],
+      [
+       80,
+       127
+      ],
+      [
+       55,
+       125
+      ],
+      [
+       37,
+       114
+      ],
+      [
+       8,
+       95
+      ],
+      [
+       0,
+       90
+      ],
+      [
+       0,
+       82
+      ],
+      [
+       12,
+       86
+      ],
+      [
+       43,
+       106
+      ],
+      [
+       57,
+       116
+      ],
+      [
+       80,
+       118
+      ],
+      [
+       115,
+       117
+      ],
+      [
+       160,
+       119
+      ],
+      [
+       200,
+       123
+      ]
+     ],
+     "active": "항상",
+     "other_names": [
+      "금강 수면"
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제4사단 제1제대 연대(공주 정면)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "적 제4사단 주력이 23번 국도로 공주 북안에 접근 중임은 알았으나 연대 번호와 정확한 위치는 미확인",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      115,
+      138
+     ],
+     "polygon": [
+      [
+       98,
+       128
+      ],
+      [
+       135,
+       128
+      ],
+      [
+       135,
+       150
+      ],
+      [
+       98,
+       150
+      ]
+     ],
+     "frontage_m": 3700,
+     "note": "공주 정면 금강 북안, 도하 준비"
+    },
+    "preparation": "hasty",
+    "equipment": "보트·뗏목 등 도하 장비"
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제4사단 후속 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "사단 규모 남하는 추정되나 후속 연대의 위치는 미확인",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      113,
+      170
+     ],
+     "note": "23번 국도 북쪽 축선 후방"
+    },
+    "preparation": "none"
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제4사단 지원 전차부대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "적 제4사단이 전차를 앞세우고 남진 중임을 식별",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      115,
+      145
+     ],
+     "note": "공주 북안 23번 국도상, 도하 지원 사격"
+    },
+    "equipment": "T-34 전차(대수 미상)"
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제4사단 포병연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "사단 포병의 존재는 추정, 진지 미확인",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      112,
+      160
+     ],
+     "note": "공주 북방 금강 북안 후방"
+    },
+    "equipment": "76mm·122mm 포(추정)"
+   }
+  ],
+  "conditions": {
+   "start_time": "D-2일 18:00",
+   "light": "dusk",
+   "notes": "7월 중순 장마철로 금강 수위가 높고 유속이 빠르다. 연대는 앞선 전투 손실 후 재편성 직후이며 통신 장비가 부족하다. 사단 정면이 넓어 좌측(서측) 측방은 개방되어 있다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제3대대, 제1대대(연대 예비), 사단 수색중대(배속) / 지원: 제63포병대대(직접지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "사단 수색중대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제1대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제63포병대대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "금강은 도섭할 수 없는 장애물이며 공주 정면 도하지점과 23번 국도가 대전·논산으로 가는 핵심 축선이다. 공주 남안 고지군은 도하지점과 국도를 감제한다. 적 접근로는 공주 정면 도하와 병력이 얇은 검상리 서측 강안 도하다.",
+    "key_terrain": [
+     {
+      "ref": "T8",
+      "why": "공주 정면 도하지점과 23번 국도를 감제하는 남안 진지"
+     },
+     {
+      "ref": "T6",
+      "why": "포병 진지와 공주-이인리 간 국도 중간 요충, 연대 후방 연결점"
+     },
+     {
+      "ref": "T5",
+      "why": "예비 위치이자 논산 방향 퇴로의 국도 요충"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "공주 정면 23번 국도 축선",
+      "user": "enemy",
+      "refs": [
+       "R2",
+       "T7",
+       "R1"
+      ],
+      "xy": [
+       [
+        115,
+        170
+       ],
+       [
+        115,
+        145
+       ],
+       [
+        115,
+        121
+       ],
+       [
+        115,
+        112
+       ],
+       [
+        128,
+        104
+       ],
+       [
+        118,
+        80
+       ]
+      ]
+     },
+     {
+      "name": "검상리 서측 도하 접근로",
+      "user": "enemy",
+      "refs": [
+       "T4",
+       "R3",
+       "T6"
+      ],
+      "xy": [
+       [
+        55,
+        135
+       ],
+       [
+        57,
+        120
+       ],
+       [
+        58,
+        112
+       ],
+       [
+        70,
+        92
+       ],
+       [
+        85,
+        78
+       ]
+      ]
+     },
+     {
+      "name": "이인리-공주 역습로",
+      "user": "friendly",
+      "refs": [
+       "R1",
+       "T6"
+      ],
+      "xy": [
+       [
+        50,
+        42
+       ],
+       [
+        65,
+        55
+       ],
+       [
+        90,
+        72
+       ],
+       [
+        118,
+        80
+       ],
+       [
+        130,
+        92
+       ],
+       [
+        115,
+        108
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제4사단은 전차와 포병의 엄호 아래 공주 정면 23번 국도 축선으로 금강을 도하해 올 것이다. 1개 연대가 공주 정면으로 도하해 남안 고지군에 교두보를 만들고, 1개 연대가 후속해 논산 방향으로 전과를 확대할 것이다. 일부 병력이 병력이 없는 서측 강안으로 도하할 수 있다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "from_ref": "R2",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         112,
+         160
+        ],
+        [
+         110,
+         135
+        ],
+        [
+         108,
+         114
+        ]
+       ],
+       "when": "도하 공격 개시 전 공격준비사격",
+       "t": 4
+      },
+      {
+       "group": "E3",
+       "mode": "fix",
+       "from_ref": "R2",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         115,
+         145
+        ],
+        [
+         115,
+         130
+        ],
+        [
+         115,
+         122
+        ]
+       ],
+       "when": "도하와 함께 북안에서 직접 사격",
+       "t": 5
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "T1",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         115,
+         135
+        ],
+        [
+         115,
+         124
+        ],
+        [
+         115,
+         118
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "when": "D일 새벽 도하 공격",
+       "t": 5
+      },
+      {
+       "group": "E2",
+       "mode": "reinforce",
+       "from_ref": "R2",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         113,
+         170
+        ],
+        [
+         115,
+         150
+        ],
+        [
+         115,
+         124
+        ],
+        [
+         115,
+         112
+        ]
+       ],
+       "when": "교두보 확보 이후 후속",
+       "t": 12
+      }
+     ],
+     "risk_point": "적 1개 대대 이상이 공주 남안 고지군에 돌입해 제3대대 진지를 돌파하고 23번 국도로 삼교리 포병 진지에 접근하는 순간"
+    },
+    "unknowns": [
+     "적 제4사단 예하 연대의 번호와 북안 집결 위치",
+     "적 도하 장비의 규모와 서측 강안 도하 가능성",
+     "적 전차의 대수와 도하 수단"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적 주력은 공주 정면 23번 국도 축선으로 도하한다.",
+     "why": "전차를 동반한 적은 도로와 도하지점이 연결된 곳을 택할 것이라는 연대의 판단"
+    },
+    {
+     "text": "금강은 도섭할 수 없으므로 적은 보트·뗏목으로만 도하하며 도하 중 화력으로 제압할 수 있다.",
+     "why": "강폭 500~1,000m, 수심 2~5m, 빠른 유속"
+    },
+    {
+     "text": "병력을 배치하지 않은 강안은 제63포병대대의 화력과 수색중대의 경계로 통제한다.",
+     "why": "정면 10km에 가용 대대가 둘뿐이다."
+    },
+    {
+     "text": "대대 세부 보충: 제3대대 중대 위치(동에서 서로 K·I·L중대), 수색중대 소대 배치, 제1대대 중대 위치는 서술과 모순되지 않게 추정했다.",
+     "why": "서술에 중대 좌표가 없다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제34연대는 D-1일 06:00까지 공주 남안 금강선에 진지를 점령하고 공주 정면으로 도하하는 적 제4사단을 방어하여 23번 국도를 통한 대전·논산 방향 남진을 저지한다.",
+   "task_verb": "방어",
+   "objective_ref": "T8",
+   "when": {
+    "type": "time_elapsed",
+    "value": -18,
+    "text": "D-1일 06:00 진지 점령 완료"
+   },
+   "purpose": "23번 국도 축선을 차단해 사단의 금강선 방어를 유지한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "제3대대가 공주 남안 고지군을 확보하고 적의 도하를 금강 수면과 남안에서 격퇴한 상태다. 예비와 포병은 전투력을 보존한다.",
+    "friendly": "제3대대가 공주 남안 진지를 유지하고 제1대대와 제63포병대대는 건재하다.",
+    "enemy": "적 제4사단의 도하부대가 금강 수면과 남안 교두보에서 격퇴된다.",
+    "terrain": "공주 남안 고지군, 삼교리, 이인리를 아군이 확보한다."
+   },
+   "concept": {
+    "text": "연대는 공주 정면에 제3대대를 집중 배치해 적 주 도하를 저지하고, 서측 강안은 사단 수색중대의 경계와 포병 화력으로 통제한다. 제1대대는 이인리에 예비로 두어 공주 정면 역습과 후방 방호에 대비한다.",
+    "maneuver": "제3대대는 논산가도 서쪽 공주 남안 고지군에 동에서 서로 K·I·L중대를 배치해 공주 정면 도하지점을 방어한다. 수색중대는 공주 서측에서 검상리까지 강안을 경계한다. 제1대대는 이인리에서 역습을 준비한다.",
+    "fires": "제63포병대대는 삼교리 진지에서 제3대대를 직접지원하고 공주 정면 도하지점에 우선 화력을 집중한다. 병력이 없는 검상리 일대 강안은 계획 화력으로 제압한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM5",
+     "xy": [
+      50,
+      44
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T8",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 공주 남안 고지군 안에 있음"
+     },
+     "priorities": [
+      "1순위: 23번 국도로 공주 남안 고지군에 역습",
+      "2순위: 서측에서 침투한 적을 삼교리 일대에서 차단"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1"
+     ],
+     "zone_refs": [
+      "CM2",
+      "CM3"
+     ],
+     "restrictions": "수색중대 경계지역 안의 사격은 수색중대와 협조해 실시한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       110,
+       114
+      ],
+      "frontage_m": 3000,
+      "polygon": [
+       [
+        95,
+        118
+       ],
+       [
+        127,
+        118
+       ],
+       [
+        128,
+        107
+       ],
+       [
+        96,
+        107
+       ]
+      ],
+      "preparation": "hasty",
+      "ref": "T8",
+      "note": "논산가도 서쪽 공주 남안 고지군, 동에서 서로 K·I·L중대",
+      "elements": [
+       {
+        "label": "K중대",
+        "xy": [
+         123,
+         116
+        ]
+       },
+       {
+        "label": "I중대",
+        "xy": [
+         110,
+         116
+        ]
+       },
+       {
+        "label": "L중대",
+        "xy": [
+         98,
+         115
+        ]
+       },
+       {
+        "label": "M중대·대대본부",
+        "xy": [
+         112,
+         108
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "공주 남안 고지군에 진지를 점령해 방어한다.",
+       "params": {
+        "area": "T8"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "저지",
+       "text": "공주 정면 도하지점으로 도하하는 적을 금강 수면에서 저지한다.",
+       "params": {
+        "area": "CM2"
+       }
+      }
+     ],
+     "purpose": "적 주 도하를 막아 23번 국도 축선을 차단한다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       73,
+       114
+      ],
+      "frontage_m": 4000,
+      "polygon": [
+       [
+        56,
+        118
+       ],
+       [
+        93,
+        118
+       ],
+       [
+        93,
+        108
+       ],
+       [
+        56,
+        108
+       ]
+      ],
+      "preparation": "hasty",
+      "ref": "CM8",
+      "note": "공주 서측 강안에서 검상리까지 소대 단위 관측",
+      "elements": [
+       {
+        "label": "제1소대",
+        "xy": [
+         88,
+         115
+        ]
+       },
+       {
+        "label": "제2소대",
+        "xy": [
+         73,
+         115
+        ]
+       },
+       {
+        "label": "제3소대",
+        "xy": [
+         60,
+         113
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "공주 서측 강안에서 검상리까지 경계한다.",
+       "params": {
+        "area": "CM8"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "정찰",
+       "text": "검상리 일대 강안의 적 도하 징후를 정찰한다.",
+       "params": {
+        "area": "CM3"
+       }
+      }
+     ],
+     "purpose": "연대 서측 측방의 적 도하를 조기에 경고한다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       50,
+       44
+      ],
+      "frontage_m": 1500,
+      "preparation": "none",
+      "ref": "CM5",
+      "note": "이인리 일대 23번 국도변",
+      "elements": [
+       {
+        "label": "A중대",
+        "xy": [
+         54,
+         48
+        ]
+       },
+       {
+        "label": "B중대",
+        "xy": [
+         46,
+         46
+        ]
+       },
+       {
+        "label": "C중대",
+        "xy": [
+         50,
+         38
+        ]
+       },
+       {
+        "label": "D중대·대대본부",
+        "xy": [
+         50,
+         42
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "이인리 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM5"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 23번 국도로 공주 남안 고지군에 역습한다.",
+       "params": {
+        "objective": "T8",
+        "route": "CM4"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T8",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 공주 남안 고지군 안에 있음"
+       },
+       "basis": "risk_point: 적 대대 이상이 공주 남안 고지군에 돌입"
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "차단",
+       "text": "명에 의해 삼교리 일대에서 서측으로 침투한 적을 차단한다.",
+       "params": {
+        "line": "CM7"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM3",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 검상리 도하지역 안에 있음"
+       },
+       "basis": "적 방책: 일부 병력이 병력이 없는 서측 강안으로 도하할 수 있음"
+      }
+     ],
+     "purpose": "공주 정면 진지를 회복하고 연대 후방과 포병을 보호한다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       85,
+       78
+      ],
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "ref": "T6",
+      "note": "삼교리 부근, 공주와 이인리 중간",
+      "elements": [
+       {
+        "label": "A포대",
+        "xy": [
+         82,
+         80
+        ]
+       },
+       {
+        "label": "B포대",
+        "xy": [
+         86,
+         76
+        ]
+       },
+       {
+        "label": "C포대",
+        "xy": [
+         89,
+         80
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "제3대대 정면 공주 도하지점에 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "화력공격",
+       "text": "검상리 일대 강안 도하지역을 화력공격한다.",
+       "params": {
+        "target_ref": "CM3"
+       }
+      }
+     ],
+     "purpose": "적의 도하를 강 수면에서 저지하고 병력이 없는 강안을 화력으로 통제한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "제3대대·수색중대 진지 점령 완료 D-1일 06:00",
+      "event": {
+       "type": "time_elapsed",
+       "value": -18,
+       "text": "D-1일 06:00"
+      }
+     },
+     {
+      "text": "제63포병대대 삼교리 진지 점령 및 도하지점 사격 준비 완료 D-1일 06:00",
+      "event": {
+       "type": "time_elapsed",
+       "value": -18,
+       "text": "D-1일 06:00"
+      }
+     },
+     {
+      "text": "제1대대 이인리 예비진지 점령 및 역습 준비 완료 D-1일 12:00",
+      "event": {
+       "type": "time_elapsed",
+       "value": -12,
+       "text": "D-1일 12:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "제3대대-수색중대 전투지경선",
+      "kind": "boundary",
+      "xy": [
+       [
+        94,
+        122
+       ],
+       [
+        94,
+        106
+       ],
+       [
+        90,
+        90
+       ]
+      ],
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM2",
+      "name": "EA 1 공주 정면 도하지점",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        100,
+        128
+       ],
+       [
+        130,
+        128
+       ],
+       [
+        130,
+        117
+       ],
+       [
+        100,
+        117
+       ]
+      ],
+      "terrain_refs": [
+       "T7",
+       "T1"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM3",
+      "name": "EA 2 검상리 도하지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        48,
+        126
+       ],
+       [
+        70,
+        126
+       ],
+       [
+        70,
+        108
+       ],
+       [
+        48,
+        106
+       ]
+      ],
+      "terrain_refs": [
+       "T4",
+       "T1"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM4",
+      "name": "역습로 이인리-공주",
+      "kind": "route",
+      "xy": [
+       [
+        50,
+        42
+       ],
+       [
+        65,
+        55
+       ],
+       [
+        90,
+        72
+       ],
+       [
+        118,
+        80
+       ],
+       [
+        130,
+        92
+       ],
+       [
+        115,
+        108
+       ]
+      ],
+      "terrain_refs": [
+       "R1"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM5",
+      "name": "이인리 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        42,
+        50
+       ],
+       [
+        58,
+        50
+       ],
+       [
+        58,
+        36
+       ],
+       [
+        42,
+        36
+       ]
+      ],
+      "terrain_refs": [
+       "T5"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM6",
+      "name": "제19연대와의 접촉점(구곡천 하구)",
+      "kind": "contact_point",
+      "xy": [
+       [
+        150,
+        120
+       ]
+      ],
+      "terrain_refs": [
+       "T3"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "삼교리 차단진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        70,
+        90
+       ],
+       [
+        80,
+        84
+       ],
+       [
+        90,
+        78
+       ]
+      ],
+      "terrain_refs": [
+       "T6",
+       "R3"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "수색중대 경계지역",
+      "kind": "other",
+      "xy": [
+       [
+        56,
+        118
+       ],
+       [
+        94,
+        118
+       ],
+       [
+        94,
+        106
+       ],
+       [
+        56,
+        106
+       ]
+      ],
+      "terrain_refs": [
+       "T4"
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM9",
+      "name": "금강 남안 전투전초선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        150,
+        120
+       ],
+       [
+        115,
+        118
+       ],
+       [
+        80,
+        118
+       ],
+       [
+        57,
+        116
+       ]
+      ],
+      "terrain_refs": [
+       "T1"
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D-2일 18:00",
+  "start_t": -30,
+  "horizon_h": 54,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G3",
+    "fraction": 0.7,
+    "text": "제1대대 누적 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제4사단은 공주 정면에서 포병·전차 사격과 도하 시위로 미군을 고착하고, 1개 연대를 병력이 없는 검상리 일대로 도하시켜 연대 후방의 포병과 23번 국도를 차단한 뒤 정면 연대를 도하시켜 공주를 점령한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         112,
+         160
+        ],
+        [
+         110,
+         135
+        ],
+        [
+         108,
+         114
+        ]
+       ],
+       "text": "D-1일 낮부터 공주 남안 고지군을 포격한다.",
+       "basis": "사단 도하 준비 단계의 공격준비사격(추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": -12,
+        "text": "D-1일 12:00"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "CM2",
+       "axis_xy": [
+        [
+         112,
+         160
+        ],
+        [
+         114,
+         135
+        ],
+        [
+         115,
+         121
+        ]
+       ],
+       "text": "D일 새벽 공주 정면 도하지점 남안을 포격해 도하를 엄호한다.",
+       "basis": "도하 공격 개시와 연계된 지원사격(추정)"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T7",
+       "target_ref": "G1",
+       "axis_xy": [
+        [
+         115,
+         145
+        ],
+        [
+         115,
+         132
+        ],
+        [
+         115,
+         126
+        ]
+       ],
+       "text": "공주 북안 23번 국도상에서 공주 남안 진지를 직접 사격해 제3대대를 고착한다.",
+       "basis": "전차를 앞세운 남진, 금강으로 전차 도하 불가(추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "objective_ref": "CM3",
+       "axis_xy": [
+        [
+         52,
+         132
+        ],
+        [
+         55,
+         126
+        ],
+        [
+         57,
+         120
+        ],
+        [
+         58,
+         112
+        ]
+       ],
+       "text": "검상리 일대로 보트를 이용해 몰래 도하한다.",
+       "basis": "서술: 1개 연대 규모가 서측방으로 몰래 검상리 일대로 도하",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T6",
+       "target_ref": "G4",
+       "axis_xy": [
+        [
+         58,
+         112
+        ],
+        [
+         62,
+         102
+        ],
+        [
+         70,
+         92
+        ],
+        [
+         78,
+         84
+        ],
+        [
+         85,
+         78
+        ]
+       ],
+       "text": "검상리-삼교리 소로로 남동진해 삼교리 제63포병대대 진지를 기습한다.",
+       "basis": "서술: 제63포병대대 진지를 기습해 초토화"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         85,
+         78
+        ],
+        [
+         90,
+         72
+        ],
+        [
+         100,
+         76
+        ]
+       ],
+       "text": "삼교리 일대 23번 국도를 장악해 연대 후방을 차단한다.",
+       "basis": "서술: 후방이 차단된 상황(추정)"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         85,
+         78
+        ],
+        [
+         70,
+         92
+        ],
+        [
+         58,
+         112
+        ]
+       ],
+       "text": "손실이 크면 검상리 교두보로 물러난다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.5,
+        "text": "서측 우회 연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T8",
+       "target_ref": "G1",
+       "axis_xy": [
+        [
+         115,
+         138
+        ],
+        [
+         115,
+         130
+        ],
+        [
+         115,
+         126
+        ]
+       ],
+       "text": "공주 정면 북안에서 도하 시위와 사격으로 제3대대를 고착한다.",
+       "basis": "서술: 정면과 측방에서 공격(추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         115,
+         135
+        ],
+        [
+         113,
+         124
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "text": "공주 정면으로 도하해 공주 남안 고지군을 공격한다.",
+       "basis": "정면 진지가 약화되면 도하(문턱 추정)",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.2,
+        "text": "제3대대 손실 0.2 초과"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         115,
+         135
+        ],
+        [
+         113,
+         124
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "text": "서측 우회 연대가 삼교리 일대에 진출하면 공주 정면으로 도하해 공주 남안 고지군을 공격한다.",
+       "basis": "후방 차단과 연계한 정면 도하(추정)",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "H1",
+        "ref": "T6",
+        "min_echelon": "대대",
+        "text": "서측 우회 연대 대대 이상이 삼교리 안에 있음"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         110,
+         114
+        ],
+        [
+         115,
+         112
+        ],
+        [
+         128,
+         104
+        ],
+        [
+         130,
+         92
+        ]
+       ],
+       "text": "이어서 공주를 점령하고 23번 국도로 추격한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         113,
+         170
+        ],
+        [
+         115,
+         150
+        ],
+        [
+         115,
+         124
+        ],
+        [
+         115,
+         112
+        ]
+       ],
+       "text": "정면 교두보가 형성되면 공주로 도하해 후속한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "E1",
+        "ref": "T8",
+        "min_echelon": "대대",
+        "text": "적 정면 연대 대대 이상이 공주 남안 고지군 안에 있음"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제4사단 서측 우회 연대",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 75,
+    "personnel": 2000,
+    "equipment": "보트·소형 도하장비, 박격포",
+    "position": {
+     "xy": [
+      52,
+      133
+     ],
+     "note": "검상리 북서 금강 북안 은밀 집결, 도하 준비"
+    },
+    "other_names": [
+     "서측방 도하 연대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D-2일 19:30",
+    "t": -28.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D-1일 05:30",
+    "t": -18.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D-1일 19:30",
+    "t": -4.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간, 적 도하 준비 은폐"
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명, 적 도하 개시 시간대"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간, 기동과 협조 제한"
+   },
+   {
+    "when": "D-2일 18:00",
+    "t": -30,
+    "kind": "weather",
+    "duration_h": 54,
+    "note": "장마철 금강 고수위·급류로 도섭 불가 지속"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D-1일 낮",
+      "t": -10,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        112,
+        160
+       ],
+       [
+        108,
+        114
+       ]
+      ],
+      "target_ref": "T8",
+      "note": "공주 북방에서 남안 진지에 포격(추정)."
+     }
+    ]
+   },
+   {
+    "group": "H1",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 6,
+      "mode": "infiltrate",
+      "axis_xy": [
+       [
+        52,
+        133
+       ],
+       [
+        56,
+        124
+       ],
+       [
+        58,
+        112
+       ]
+      ],
+      "target_ref": "CM3",
+      "note": "1개 연대 규모가 보트로 검상리 일대에 몰래 도하. L중대가 관측했으나 보고되지 못함."
+     },
+     {
+      "when": "D일 오후",
+      "t": 13.5,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        58,
+        112
+       ],
+       [
+        70,
+        92
+       ],
+       [
+        78,
+        84
+       ],
+       [
+        85,
+        78
+       ]
+      ],
+      "target_ref": "T6",
+      "note": "삼교리 제63포병대대 진지를 기습해 초토화."
+     },
+     {
+      "when": "D일 오후~야간",
+      "t": 16,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        85,
+        78
+       ],
+       [
+        90,
+        72
+       ]
+      ],
+      "target_ref": "R1",
+      "note": "23번 국도 연대 후방을 차단."
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 주간",
+      "t": 10,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        115,
+        135
+       ],
+       [
+        113,
+        124
+       ],
+       [
+        110,
+        114
+       ]
+      ],
+      "target_ref": "T8",
+      "note": "공주 정면에서 공격해 제3대대를 압박(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 주간",
+      "t": 8,
+      "mode": "fix",
+      "axis_xy": [
+       [
+        115,
+        145
+       ],
+       [
+        115,
+        126
+       ]
+      ],
+      "target_ref": "T7",
+      "note": "북안에서 전차 사격으로 정면 지원(추정)."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D-1일 06:00",
+      "t": -18,
+      "verb": "방어",
+      "text": "논산가도 서쪽에 K·I·L중대 순으로 집중 배치. 논산도로-구곡천 1.5km는 무방비.",
+      "ref": "T8"
+     },
+     {
+      "when": "D일 오전",
+      "t": 8,
+      "verb": "철수",
+      "text": "L중대가 검상리 측방 도하를 확인했으나 통신 두절로 보고하지 못하고 후방 차단을 우려해 임의 철수.",
+      "ref": "T8"
+     },
+     {
+      "when": "D일 야간",
+      "t": 22,
+      "verb": "철수",
+      "text": "연대 와해에 따라 논산 방향으로 철수.",
+      "ref": "T10"
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D-1일 06:00",
+      "t": -18,
+      "verb": "화력지원",
+      "text": "삼교리 진지 점령.",
+      "ref": "T6"
+     },
+     {
+      "when": "D일 오후",
+      "t": 13.5,
+      "verb": "철수",
+      "text": "적 기습으로 진지 붕괴. 105mm 10문, 차량 약 70대 손실, 장교 11명·사병 15명 실종. 이후 화력지원 불가.",
+      "ref": "T6"
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D-1일",
+      "t": -12,
+      "verb": "점령",
+      "text": "이인리 예비진지 점령.",
+      "ref": "CM5"
+     },
+     {
+      "when": "D일 오후 늦게",
+      "t": 16,
+      "verb": "역습",
+      "text": "제63포병대대 구출을 위해 23번 국도로 전방 기동(뒤늦은 투입).",
+      "ref": "CM4"
+     },
+     {
+      "when": "D일 일몰 후",
+      "t": 20,
+      "verb": "철수",
+      "text": "어두워지자 구출 임무 중단.",
+      "ref": "T5"
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D-1일",
+      "t": -18,
+      "verb": "경계",
+      "text": "공주 서측 강안 경계. 적 도하에 대한 경고 기록 없음.",
+      "ref": "CM8"
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D-1일 야간",
+    "t": -4.5,
+    "kind": "night",
+    "note": "적 도하 준비 은폐."
+   },
+   {
+    "when": "D일 야간",
+    "t": 19.5,
+    "kind": "night",
+    "note": "어둠으로 제1대대 구출 기동 중단."
+   },
+   {
+    "when": "D-2일~D일",
+    "t": -30,
+    "kind": "weather",
+    "note": "장마철 금강 고수위, 도섭 불가."
+   },
+   {
+    "when": "D일",
+    "t": 6,
+    "kind": "other",
+    "note": "연대 통신 장비 부족으로 L중대-대대 통신 두절."
+   }
+  ],
+  "historical_result": {
+   "friendly": "미 제34연대: 포병 조기 상실, 정면 중대 임의 철수, 예비 투입 실패 후 논산으로 철수",
+   "enemy": "북한군 제4사단: 서측 우회 도하로 금강선 돌파, 공주 확보",
+   "terrain_held": [
+    "T10"
+   ],
+   "end_state_achieved": "no",
+   "losses": "제63포병대대 장교 11명·사병 15명 실종, 105mm 야포 10문과 탄약 적재 차량 약 70대 상실. 보병 손실 수치와 적 손실은 서술에 없음.",
+   "friendly_loss_pct": 20,
+   "enemy_loss_pct": 5,
+   "duration_h": 54
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "연대는 공격 하루 만에 와해되어 공주 금강선을 포기하고 논산 방향으로 철수 중. 제63포병대대는 전투력 상실, 적은 공주와 삼교리 일대를 장악.",
+   "terrain_held_at_horizon": [
+    "T10"
+   ],
+   "friendly_loss_pct": 20,
+   "enemy_loss_pct": 5,
+   "key_times": [
+    {
+     "t": -18,
+     "text": "연대 진지 점령 완료, 논산도로-구곡천 공백",
+     "ref": "T9"
+    },
+    {
+     "t": 6,
+     "text": "적 1개 연대 검상리 도하",
+     "ref": "CM3"
+    },
+    {
+     "t": 8,
+     "text": "L중대 임의 철수",
+     "ref": "T8"
+    },
+    {
+     "t": 13.5,
+     "text": "제63포병대대 기습당해 붕괴",
+     "ref": "T6"
+    },
+    {
+     "t": 20,
+     "text": "제1대대 구출 기동 야간 중단",
+     "ref": "CM4"
+    },
+    {
+     "t": 22,
+     "text": "연대 논산 방향 철수",
+     "ref": "T10"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_070",
+ "aliases_extra": {
+  "1번 국도": "지점 1'",
+  "23번 국도": "지점 2'"
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

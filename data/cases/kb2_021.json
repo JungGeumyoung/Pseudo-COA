@@ -1,0 +1,3491 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1952-09-28",
+   "end_date": "1952-10-02",
+   "d_day": "1952-09-28",
+   "order_time": "D일 18:00(추정): 중공군 공격 직전 제22연대가 전초진지 방어태세를 강화한 시점",
+   "text": "D일 18:00 제22연대 전초·주저항선 방어 배치에서 D+4일 야간 748고지 탈환·확보까지 전투 전체",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대의 첫 결심인 공격 전 전초진지 방어 강화 시점이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제22연대를 관점으로 쓴다. 제22연대는 구간 시작 때 748고지·572고지 전초와 949고지 일대 주저항선의 작전지역을 맡았고 최종 탈환도 제22연대 제1대대가 했다. 역습 국면의 제18연대 역습은 사단 예비의 조건부 행동으로 higher_rules에 둔다. 임무 유형은 지정에 따라 '역습'으로 두되, 명령 시점 연대 명령은 전초 고수와 피탈 시 역습을 포함한 방어 배치다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "748고지는 D+1일 06:35 피탈 뒤 제18연대 역습이 거듭 실패했으나 D+4일 19:45 제22연대 제1대대가 탈환·확보했다. 572고지는 피탈된 채 회복하지 못했다. 아군 전사 109명·부상 384명, 적 사살 664명·포로 8명."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 작전지역 남서 모서리. 949고지를 (100,80)에 두고 748고지가 1.6km 북쪽이라는 서술과 상대 위치로 나머지를 추정",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_021_피의고지_및_독수리고지_전투",
+  "title": "피의고지 및 독수리고지 전투",
+  "dates": "1952. 9. 28.~10. 2.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '피의고지 및 독수리고지 전투' (pdf 93쪽)",
+  "pdf_page": 93,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 4,
+    "B6": 4
+   },
+   "sim_value": 10,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "10월 1일 사단장이 572고지 역습을 포기하고 역습주력을 748고지에 집중",
+    "alternative": "두 고지에 역습 전력을 계속 분산 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "748고지 탈환 직후 예비인 제18연대 1대대를 즉시 투입해 중공군 역습에 대비",
+    "alternative": "증원 없이 탈환 대대만으로 고지 유지(10월 1일 제18연대 2대대처럼 회복 후 반격에 밀려 이탈)",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "주저항선에서 멀리 떨어진 572고지에 1개 중대만 배치하고 대대 예비 1개 중대로 증원 시도",
+    "alternative": "572고지 접근로상의 유리한 지형을 사전 확보하거나 전초 병력을 증강",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.3352,
+   "duration_s": 364.9,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 32335,
+     "cache_read_input_tokens": 53378,
+     "cache_creation_input_tokens": 34856
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 12758,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17597
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 40,
+   "flagged": [],
+   "cost_usd": 0.096304
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "제22연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제3사단 제22연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제3사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제3사단"
+   ],
+   "higher_mission": "제3사단은 군단 좌익의 석정리-780고지-973고지-949고지-720고지-440고지 주저항선을 방어하고 전방 전초진지를 확보한다.",
+   "higher_intent": "적 제203사단의 949고지 방향 공격을 748고지·572고지 전초진지 선에서 저지한다. 전초가 피탈되면 사단 예비 제18연대로 역습해 회복한다. 사단 포병은 제22연대 정면에 집중한다.",
+   "assigned_task": "제22연대는 사단 좌익 주저항선(석정리-780고지-973고지-949고지)과 전초진지 748고지·572고지를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "제23연대",
+     "alias": "인접 연대 1",
+     "side": "우측",
+     "mission": "720고지-440고지 일대 사단 우익 주저항선을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      145,
+      75
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "제18연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 전초진지 피탈 시 748고지·572고지로 역습한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      95,
+      45
+     ],
+     "other_names": [
+      "사단 예비 연대"
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "수도사단",
+     "alias": "인접 사단 1",
+     "side": "좌측(북한강 좌안)",
+     "mission": "북한강 좌안의 수도고지 일대를 방어한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      12,
+      120
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ2",
+     "text": "제18연대는 748고지가 적 대대 이상에게 점령되면 949-748 능선을 따라 748고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H748",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 748고지 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H748",
+      "axis_xy": [
+       [
+        95,
+        62
+       ],
+       [
+        100,
+        80
+       ],
+       [
+        100,
+        86
+       ],
+       [
+        101,
+        91
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ2",
+     "text": "제18연대는 572고지가 적 대대 이상에게 점령되면 605고지를 거쳐 572고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H572",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 572고지 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H572",
+      "axis_xy": [
+       [
+        75,
+        75
+       ],
+       [
+        70,
+        90
+       ],
+       [
+        65,
+        105
+       ],
+       [
+        62,
+        118
+       ],
+       [
+        55,
+        128
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ1",
+     "text": "제23연대는 720고지 일대 주저항선을 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "H720"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제22연대 작전지역은 좌측 북한강에서 우측 949고지 동쪽 제23연대 경계까지, 주저항선(석정리-780고지-973고지-949고지)과 그 전방 748고지·572고지 전초진지 일대다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 경계(북한강)",
+     "between": [
+      "제22연대",
+      "ADJ3"
+     ],
+     "xy": [
+      [
+       30,
+       0
+      ],
+      [
+       30,
+       80
+      ],
+      [
+       32,
+       112
+      ],
+      [
+       42,
+       122
+      ],
+      [
+       46,
+       132
+      ],
+      [
+       38,
+       140
+      ],
+      [
+       30,
+       160
+      ],
+      [
+       28,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "우측 경계(제23연대)",
+     "between": [
+      "제22연대",
+      "ADJ1"
+     ],
+     "xy": [
+      [
+       115,
+       0
+      ],
+      [
+       115,
+       60
+      ],
+      [
+       116,
+       85
+      ],
+      [
+       125,
+       130
+      ],
+      [
+       130,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "후방 경계",
+     "between": [
+      "제22연대",
+      "제3사단"
+     ],
+     "xy": [
+      [
+       30,
+       40
+      ],
+      [
+       115,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제22연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 우측"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제22연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 좌측"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제22연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제3사단 포병 105mm 대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문",
+    "location": {
+     "note": "949고지 남쪽 사단 포병진지",
+     "xy": [
+      100,
+      40
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제3사단 포병 155mm 대대",
+    "alias": "포병 대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "155mm 곡사포 18문",
+    "location": {
+     "note": "949고지 남쪽 사단 포병진지",
+     "xy": [
+      90,
+      38
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "양구 북방 북한강 상류 만곡부 우측. 949고지에서 북쪽으로 T자형 능선이 1.6km 뻗어 748고지에 이르고, 748고지에서 동북·서북 능선이 적 진지로 이어진다. 572고지는 주저항선에서 멀리 떨어져 북한강 우측 만곡부를 제압한다. 전초진지는 적진에서 감제된다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H748",
+     "name": "748고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 748,
+     "evidence": "949고지에서 북쪽 T자형 능선 1.6km 지점. 적 주공축선을 억제하는 요충지",
+     "other_names": [
+      "피의고지",
+      "피의 고지"
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H572",
+     "name": "572고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      55,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 572,
+     "evidence": "북한강 상류 우측 만곡부를 제압하는 전초거점. 주저항선에서 멀리 떨어짐",
+     "other_names": [
+      "독수리고지"
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H949",
+     "name": "949고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      100,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 949,
+     "evidence": "사단 주저항선 중간의 감제고지. 적의 예상 공격목표",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H973",
+     "name": "973고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      75,
+      75
+     ],
+     "estimated": true,
+     "elevation_m": 973,
+     "evidence": "주저항선상 고지",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H780",
+     "name": "780고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      50,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 780,
+     "evidence": "주저항선 좌측 고지",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H720",
+     "name": "720고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      130,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 720,
+     "evidence": "제23연대 주저항선 고지"
+    },
+    {
+     "id": "H440",
+     "name": "440고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      160,
+      70
+     ],
+     "estimated": true,
+     "elevation_m": 440,
+     "evidence": "주저항선 우단"
+    },
+    {
+     "id": "H741",
+     "name": "741고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      118,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 741,
+     "evidence": "748고지 정면 적 제608연대 진지 동단",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H590",
+     "name": "590고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      95,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 590,
+     "evidence": "748고지 정면 적 제608연대 진지 서단",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H662",
+     "name": "662고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      80,
+      155
+     ],
+     "estimated": true,
+     "elevation_m": 662,
+     "evidence": "적 제609연대 주진지",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H605",
+     "name": "605고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      62,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 605,
+     "evidence": "572고지와 이어진 고지로 572고지 접근로상에 있음"
+    },
+    {
+     "id": "T1",
+     "name": "석정리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      36,
+      65
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주저항선 좌단"
+    },
+    {
+     "id": "T2",
+     "name": "어운리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      72,
+      145
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제609연대 주진지"
+    },
+    {
+     "id": "RV1F",
+     "name": "북한강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      38,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "작전지역 좌측을 흐르며 572고지 서쪽에서 만곡",
+     "line": [
+      [
+       28,
+       200
+      ],
+      [
+       30,
+       160
+      ],
+      [
+       38,
+       140
+      ],
+      [
+       46,
+       132
+      ],
+      [
+       42,
+       122
+      ],
+      [
+       32,
+       112
+      ],
+      [
+       30,
+       80
+      ],
+      [
+       28,
+       40
+      ],
+      [
+       26,
+       0
+      ]
+     ]
+    },
+    {
+     "id": "A1",
+     "name": "북한강 상류 우측 만곡부",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      48,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "572고지가 제압하는 만곡부"
+    },
+    {
+     "id": "A2",
+     "name": "949고지 후사면 집결지",
+     "alias": "지점 3",
+     "kind": "area",
+     "xy": [
+      95,
+      62
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "949고지 뒤편 집결지"
+    }
+   ],
+   "routes": [
+    {
+     "id": "RG1",
+     "name": "949-748 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       80
+      ],
+      [
+       100,
+       84
+      ],
+      [
+       100,
+       88
+      ],
+      [
+       101,
+       91
+      ],
+      [
+       100,
+       96
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "T자형 능선"
+     ]
+    },
+    {
+     "id": "RG2",
+     "name": "748고지 동북능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       96
+      ],
+      [
+       104,
+       103
+      ],
+      [
+       108,
+       109
+      ],
+      [
+       113,
+       115
+      ],
+      [
+       118,
+       120
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG3",
+     "name": "748고지 서북능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       96
+      ],
+      [
+       98,
+       103
+      ],
+      [
+       96,
+       109
+      ],
+      [
+       95,
+       116
+      ],
+      [
+       95,
+       122
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG4",
+     "name": "973-605-572 능선",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       75,
+       75
+      ],
+      [
+       72,
+       85
+      ],
+      [
+       69,
+       95
+      ],
+      [
+       65,
+       105
+      ],
+      [
+       62,
+       118
+      ],
+      [
+       58,
+       124
+      ],
+      [
+       55,
+       128
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "VL1",
+     "name": "어운리-572고지 협곡",
+     "alias": "지점 2",
+     "kind": "valley",
+     "xy": [
+      [
+       72,
+       145
+      ],
+      [
+       68,
+       141
+      ],
+      [
+       64,
+       137
+      ],
+      [
+       59,
+       132
+      ],
+      [
+       55,
+       128
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RD1",
+     "name": "주저항선 후방 횡단도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       36,
+       65
+      ],
+      [
+       50,
+       62
+      ],
+      [
+       65,
+       60
+      ],
+      [
+       85,
+       58
+      ],
+      [
+       95,
+       62
+      ],
+      [
+       115,
+       60
+      ],
+      [
+       135,
+       62
+      ],
+      [
+       160,
+       58
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "RV1",
+     "name": "북한강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       27,
+       200
+      ],
+      [
+       29,
+       160
+      ],
+      [
+       37,
+       140
+      ],
+      [
+       45,
+       132
+      ],
+      [
+       41,
+       122
+      ],
+      [
+       31,
+       112
+      ],
+      [
+       29,
+       80
+      ],
+      [
+       27,
+       40
+      ],
+      [
+       25,
+       0
+      ],
+      [
+       27,
+       0
+      ],
+      [
+       29,
+       40
+      ],
+      [
+       31,
+       80
+      ],
+      [
+       33,
+       112
+      ],
+      [
+       43,
+       122
+      ],
+      [
+       47,
+       132
+      ],
+      [
+       39,
+       140
+      ],
+      [
+       31,
+       160
+      ],
+      [
+       29,
+       200
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제608연대",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제203사단 예하로 748고지 정면 741고지-590고지 간에 배치되어 전초진지에 위력수색과 소규모 야간공격을 반복",
+    "posture": "공격준비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      106,
+      121
+     ],
+     "note": "741고지-590고지 간 진지",
+     "frontage_m": 2500,
+     "polygon": [
+      [
+       92,
+       118
+      ],
+      [
+       120,
+       116
+      ],
+      [
+       122,
+       130
+      ],
+      [
+       90,
+       132
+      ]
+     ]
+    },
+    "other_names": [
+     "중공군 제68군 제203사단 제608연대"
+    ]
+   },
+   {
+    "id": "E2",
+    "unit": "적 제609연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제203사단 예하로 어운리-662고지 주진지에 배치",
+    "posture": "공격준비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      76,
+      150
+     ],
+     "note": "어운리-662고지 주진지",
+     "frontage_m": 2000,
+     "polygon": [
+      [
+       66,
+       142
+      ],
+      [
+       84,
+       140
+      ],
+      [
+       88,
+       160
+      ],
+      [
+       70,
+       162
+      ]
+     ]
+    },
+    "other_names": [
+     "중공군 제68군 제203사단 제609연대"
+    ]
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 18:00",
+   "light": "dusk",
+   "notes": "휴전회담 중 소강 국면이나 좌측 수도고지에서 격전이 진행 중. 전초진지는 적진에서 감제되어 주간 기동이 제한된다. 적은 야간 공격을 선호한다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대, 제3대대(연대 예비) / 지원: 사단 포병(105mm 18문 직접지원, 155mm 18문 일반지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "748고지는 949고지에서 북쪽으로 뻗은 능선 끝에서 적 주공축선을 억제하는 핵심 지형이고, 572고지는 북한강 우측 만곡부를 제압한다. 적 접근로는 748고지 동북·서북 능선과 어운리에서 572고지로 이어지는 협곡이며, 949-748 능선이 양단되면 748고지가 고립된다.",
+    "key_terrain": [
+     {
+      "ref": "H748",
+      "why": "적 주공축선을 억제하고 949고지를 보호하는 전초"
+     },
+     {
+      "ref": "H949",
+      "why": "주저항선의 감제고지이자 적의 최종 목표"
+     },
+     {
+      "ref": "H572",
+      "why": "북한강 상류 우측 만곡부를 제압"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "동북능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "RG2"
+      ],
+      "xy": [
+       [
+        118,
+        120
+       ],
+       [
+        113,
+        115
+       ],
+       [
+        108,
+        109
+       ],
+       [
+        104,
+        103
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "서북능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "RG3"
+      ],
+      "xy": [
+       [
+        95,
+        122
+       ],
+       [
+        95,
+        116
+       ],
+       [
+        96,
+        109
+       ],
+       [
+        98,
+        103
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "어운리 협곡 접근로",
+      "user": "enemy",
+      "refs": [
+       "VL1"
+      ],
+      "xy": [
+       [
+        72,
+        145
+       ],
+       [
+        68,
+        141
+       ],
+       [
+        64,
+        137
+       ],
+       [
+        59,
+        132
+       ],
+       [
+        55,
+        128
+       ]
+      ]
+     },
+     {
+      "name": "949-748 능선 역습로",
+      "user": "friendly",
+      "refs": [
+       "RG1"
+      ],
+      "xy": [
+       [
+        100,
+        80
+       ],
+       [
+        100,
+        84
+       ],
+       [
+        100,
+        88
+       ],
+       [
+        101,
+        91
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "973-605-572 능선 역습로",
+      "user": "friendly",
+      "refs": [
+       "RG4"
+      ],
+      "xy": [
+       [
+        75,
+        75
+       ],
+       [
+        72,
+        85
+       ],
+       [
+        69,
+        95
+       ],
+       [
+        65,
+        105
+       ],
+       [
+        62,
+        118
+       ],
+       [
+        55,
+        128
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제203사단은 D일 야간 강력한 포격에 이어 2개 연대로 공격해 올 것이다. 제608연대는 741고지·590고지에서 동북·서북 능선을 따라 748고지로 공격하고 일부로 949-748 능선을 양단한 뒤 949고지로 공격해 올 것이다. 제609연대는 어운리에서 협곡을 따라 572고지로 공격해 올 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "H741",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         118,
+         120
+        ],
+        [
+         113,
+         115
+        ],
+        [
+         108,
+         109
+        ],
+        [
+         104,
+         103
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "when": "D일 22:00 이후 포격에 이어",
+       "t": 22
+      },
+      {
+       "group": "E1",
+       "mode": "infiltrate",
+       "from_ref": "H590",
+       "objective_ref": "RG1",
+       "axis_xy": [
+        [
+         95,
+         122
+        ],
+        [
+         95,
+         112
+        ],
+        [
+         96,
+         100
+        ],
+        [
+         98,
+         92
+        ],
+        [
+         100,
+         88
+        ]
+       ],
+       "when": "748고지 공격과 동시",
+       "t": 22.5
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "T2",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         72,
+         145
+        ],
+        [
+         68,
+         141
+        ],
+        [
+         64,
+         137
+        ],
+        [
+         59,
+         132
+        ],
+        [
+         55,
+         128
+        ]
+       ],
+       "when": "D일 22:30 무렵",
+       "t": 22.5
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "H748",
+       "objective_ref": "H949",
+       "axis_xy": [
+        [
+         100,
+         96
+        ],
+        [
+         101,
+         91
+        ],
+        [
+         100,
+         88
+        ],
+        [
+         100,
+         84
+        ],
+        [
+         100,
+         80
+        ]
+       ],
+       "when": "748고지 점령에 이어 D+1일 새벽",
+       "t": 28
+      }
+     ],
+     "risk_point": "적 제608연대가 949-748 능선을 양단하고 949고지 주저항선으로 돌입하는 때"
+    },
+    "unknowns": [
+     "적 제203사단 예비 연대의 위치와 투입 시기",
+     "적 포병 규모",
+     "572고지 공격 병력 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 제3대대는 949고지 후사면에 연대 예비로 있고 각 대대는 1개 중대를 대대 예비로 둔다.",
+     "why": "서술에 제3대대와 중대 배치 세부가 없다."
+    },
+    {
+     "text": "전초가 피탈되면 사단은 제18연대로 역습한다.",
+     "why": "사단장의 역습 계획이 서술에 있다."
+    },
+    {
+     "text": "사단 포병 36문이 연대 정면에 화력을 집중한다.",
+     "why": "사단이 포병화력을 이 정면에 집중시키고 있었다."
+    },
+    {
+     "text": "적은 야간에 포격과 함께 공격한다.",
+     "why": "적이 소규모 야간공격을 반복해 왔다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제22연대는 D일 야간부터 748고지·572고지 전초진지와 949고지 일대 주저항선에서 적 제203사단의 공격을 방어하여 949고지 주저항선을 확보한다.",
+   "task_verb": "방어",
+   "objective_ref": "H949",
+   "when": {
+    "type": "time_elapsed",
+    "value": 20,
+    "text": "D일 20:00 진지 점령 완료부터"
+   },
+   "purpose": "적 주공축선을 전초진지 선에서 억제하고 북한강 상류 만곡부를 감제하기 위해"
+  },
+  "execution": {
+   "end_state": {
+    "text": "748고지·572고지 전초와 949고지 주저항선을 유지하고 적 제203사단 공격부대를 전초 전방에서 격퇴한다.",
+    "friendly": "전초 2개 중대와 주저항선 진지 유지, 연대 예비 보존",
+    "enemy": "제608연대·제609연대 공격부대가 큰 손실을 입고 출발진지로 물러남",
+    "terrain": "748고지, 572고지, 949고지 확보"
+   },
+   "concept": {
+    "text": "제1대대를 주력으로 949-748 축선을 방어하고 제2대대로 973고지와 572고지를 방어한다. 전초 중대는 진지를 고수하고 대대 예비 중대가 능선 양단과 전초 위기에 역습한다. 연대 예비 제3대대는 949고지 후사면에서 주저항선 돌파구로의 역습을 준비한다.",
+    "maneuver": "제1대대는 제2중대로 748고지를 고수하고 제1중대로 949-748 능선을 지킨다. 제2대대는 제7중대로 572고지를 고수하고 제6중대로 605고지 축선 역습을 준비한다. 제3대대는 949고지 후사면에 위치한다.",
+    "fires": "사단 포병은 748고지 전방 동북·서북 능선 교전지역을 1순위, 572고지 전방 협곡을 2순위로 차단사격한다. 전초 중대 요청 시 진지 전방 근접 방어사격을 한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM-AA1",
+     "xy": [
+      95,
+      62
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM-BP1",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 949고지 진지 안에 있음"
+     },
+     "priorities": [
+      "949고지 주저항선 돌파구 역습",
+      "949-748 능선 회복",
+      "973고지 지역 역습"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "EA1",
+      "EA2"
+     ],
+     "restrictions": "전초진지 진내 사격은 해당 중대장 요청 시에만 한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       101,
+       86
+      ],
+      "note": "949고지 주저항선과 748고지 전초. 제1중대는 능선 중간에서 대대 예비",
+      "frontage_m": 2500,
+      "preparation": "deliberate",
+      "ref": "CM-BP1",
+      "elements": [
+       {
+        "label": "제2중대(전초)",
+        "xy": [
+         100,
+         96
+        ],
+        "ref": "H748"
+       },
+       {
+        "label": "제1중대(대대 예비)",
+        "xy": [
+         100,
+         85
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         106,
+         80
+        ],
+        "ref": "H949"
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "949고지 일대 주저항선을 방어한다.",
+       "params": {
+        "area": "CM-BP1"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "제2중대로 748고지 전초진지를 고수한다.",
+       "params": {
+        "objective": "H748"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "제1중대로 949-748 능선을 따라 748고지 방향으로 역습한다.",
+       "params": {
+        "objective": "H748",
+        "route": "CM-RT1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "RG1",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 949-748 능선 안에 있음"
+       },
+       "basis": "risk_point: 적이 949-748 능선을 양단해 748고지를 고립시킴"
+      }
+     ],
+     "purpose": "적 주공을 748고지에서 저지하고 949고지를 보호하기 위해"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       62,
+       85
+      ],
+      "note": "780고지-973고지 주저항선과 572고지 전초",
+      "frontage_m": 3500,
+      "preparation": "deliberate",
+      "ref": "CM-BP2",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         50,
+         72
+        ],
+        "ref": "H780"
+       },
+       {
+        "label": "제6중대(대대 예비)",
+        "xy": [
+         72,
+         80
+        ]
+       },
+       {
+        "label": "제7중대(전초)",
+        "xy": [
+         55,
+         128
+        ],
+        "ref": "H572"
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "780고지-973고지 주저항선을 방어한다.",
+       "params": {
+        "area": "CM-BP2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "제7중대로 572고지 전초진지를 고수한다.",
+       "params": {
+        "objective": "H572"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "제6중대로 605고지를 거쳐 572고지로 역습한다.",
+       "params": {
+        "objective": "H572",
+        "route": "CM-RT2"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H572",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 572고지 안에 있음"
+       },
+       "basis": "risk_point: 주저항선에서 먼 572고지 전초가 대대 규모 공격에 고립됨"
+      }
+     ],
+     "purpose": "북한강 상류 만곡부를 제압하고 연대 좌측을 보호하기 위해"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       95,
+       62
+      ],
+      "note": "949고지 후사면 집결지",
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "ref": "CM-AA1",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         98,
+         64
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         92,
+         63
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         95,
+         59
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "949고지 후사면 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM-AA1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "949고지 주저항선의 돌파구로 역습한다.",
+       "params": {
+        "objective": "CM-BP1",
+        "route": "CM-RT3"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM-BP1",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 949고지 진지 안에 있음"
+       },
+       "basis": "risk_point: 적 제608연대가 949고지 주저항선으로 돌입"
+      }
+     ],
+     "purpose": "주저항선 돌파를 막고 연대 방어의 종심을 유지하기 위해"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "전초·주저항선 진지 강화와 경계 배치를 D일 20:00까지 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 20,
+       "text": "D일 20:00"
+      }
+     },
+     {
+      "text": "연대 예비와 대대 예비 중대는 D일 21:00까지 역습 준비를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 21,
+       "text": "D일 21:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM-BL1",
+      "name": "제1·제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        88,
+        40
+       ],
+       [
+        88,
+        80
+       ],
+       [
+        86,
+        105
+       ],
+       [
+        82,
+        135
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM-CP1",
+      "name": "제23연대 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        115,
+        80
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM-OP1",
+      "name": "748고지 전초",
+      "kind": "outpost",
+      "xy": [
+       [
+        100,
+        96
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H748"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM-OP2",
+      "name": "572고지 전초",
+      "kind": "outpost",
+      "xy": [
+       [
+        55,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H572"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM-BP1",
+      "name": "949고지 대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        90,
+        74
+       ],
+       [
+        114,
+        74
+       ],
+       [
+        114,
+        90
+       ],
+       [
+        90,
+        90
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H949"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "CM-BP2",
+      "name": "780-973고지 대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        40,
+        66
+       ],
+       [
+        88,
+        68
+       ],
+       [
+        88,
+        84
+       ],
+       [
+        42,
+        80
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H780",
+       "H973"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "EA1",
+      "name": "748고지 전방 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        90,
+        100
+       ],
+       [
+        110,
+        100
+       ],
+       [
+        121,
+        118
+       ],
+       [
+        90,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG2",
+       "RG3"
+      ]
+     },
+     {
+      "id": "EA2",
+      "name": "572고지 전방 협곡 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        54,
+        132
+       ],
+       [
+        62,
+        132
+       ],
+       [
+        74,
+        144
+       ],
+       [
+        66,
+        148
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "VL1"
+      ]
+     },
+     {
+      "id": "CM-AA1",
+      "name": "연대 예비 집결지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        89,
+        57
+       ],
+       [
+        101,
+        57
+       ],
+       [
+        101,
+        67
+       ],
+       [
+        89,
+        67
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "A2"
+      ]
+     },
+     {
+      "id": "CM-RT1",
+      "name": "748고지 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        80
+       ],
+       [
+        100,
+        84
+       ],
+       [
+        100,
+        88
+       ],
+       [
+        101,
+        91
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG1"
+      ]
+     },
+     {
+      "id": "CM-RT2",
+      "name": "572고지 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        72,
+        80
+       ],
+       [
+        70,
+        90
+       ],
+       [
+        67,
+        100
+       ],
+       [
+        65,
+        108
+       ],
+       [
+        62,
+        118
+       ],
+       [
+        55,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG4",
+       "H605"
+      ]
+     },
+     {
+      "id": "CM-RT3",
+      "name": "949고지 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        95,
+        62
+       ],
+       [
+        97,
+        68
+       ],
+       [
+        99,
+        74
+       ],
+       [
+        100,
+        80
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 18:00",
+  "start_t": 18,
+  "horizon_h": 108,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제22연대 제1대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제608연대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제203사단은 주력을 제22연대 정면에 집중해 야간 포격에 이어 748고지와 572고지 전초를 탈취하고, 이어서 949고지를 비롯한 주저항선 감제고지를 점령해 북한강 상류 유역을 장악한다. 탈취한 전초는 고지 뒤편 보급로로 병력을 보충하며 고수하고 국군의 역습에는 집중포격과 반격으로 대응한다.",
+   "groups": [
+    {
+     "group": "HE2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         110,
+         140
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "D일 22:10 748고지·572고지와 949고지 주저항선 일대에 집중포격을 한다.",
+       "basis": "서술: D일 22:10 전례 없이 강력한 포격 집중",
+       "start": {
+        "type": "time_elapsed",
+        "value": 22.17,
+        "text": "D일 22:10"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         110,
+         140
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "D+1일 01:30 748고지 재공격에 앞서 집중포격을 한다.",
+       "basis": "서술: 새벽 01:30 집중포격에 이어 대대규모 재공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 25.5,
+        "text": "D+1일 01:30"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         110,
+         140
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "국군 중대 이상이 748고지에 접근하거나 돌입하면 748고지 일대에 무차별 집중포격을 한다.",
+       "basis": "서술: 역습부대가 수류탄 투척거리에서 무차별포격에 밀림. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H748",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 748고지 안에 있음"
+       },
+       "repeat": {
+        "max": 8,
+        "interval_h": 3
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         85,
+         165
+        ],
+        [
+         55,
+         128
+        ]
+       ],
+       "text": "국군 중대 이상이 572고지 접근로에 있으면 605고지·572고지 일대에 집중포격을 한다.",
+       "basis": "서술: 572고지 역습부대가 집중포격과 수류탄에 막힘. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H605",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 605고지 안에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         118,
+         120
+        ],
+        [
+         113,
+         115
+        ],
+        [
+         108,
+         109
+        ],
+        [
+         104,
+         103
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "D일 22:25 1개 대대로 동북·서북 능선을 따라 748고지를 공격한다.",
+       "basis": "서술: 포격 약 15분 뒤 대대규모가 동북·서북 능선으로 748고지 접근",
+       "start": {
+        "type": "time_elapsed",
+        "value": 22.42,
+        "text": "D일 22:25"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "objective_ref": "RG1",
+       "axis_xy": [
+        [
+         95,
+         122
+        ],
+        [
+         95,
+         112
+        ],
+        [
+         96,
+         102
+        ],
+        [
+         98,
+         92
+        ],
+        [
+         100,
+         88
+        ]
+       ],
+       "text": "D일 22:30 2개 중대로 침투해 949-748 능선을 양단한다.",
+       "basis": "서술: 748고지와 949고지 간 능선을 양단하려 침투한 2개 중대",
+       "start": {
+        "type": "time_elapsed",
+        "value": 22.5,
+        "text": "D일 22:30"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         106,
+         121
+        ],
+        [
+         104,
+         112
+        ],
+        [
+         102,
+         104
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "D+1일 01:30 대대규모로 748고지를 다시 공격한다.",
+       "basis": "서술: 새벽 01:30 대대규모 재공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 25.5,
+        "text": "D+1일 01:30"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 2.5
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "이어서 748고지를 점령하고 고수한다.",
+       "basis": "서술: 고지를 점령한 중공군이 보급로로 방어 전력을 강화"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         106,
+         121
+        ],
+        [
+         103,
+         110
+        ],
+        [
+         101,
+         102
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "국군이 748고지 주진지에 돌입하면 진내사격과 함께 반격한다.",
+       "basis": "서술: D+3일 고지 회복 뒤 후퇴했던 중공군이 진내사격과 함께 반격. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H748",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 748고지 안에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 4
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "H949",
+       "axis_xy": [
+        [
+         100,
+         96
+        ],
+        [
+         101,
+         91
+        ],
+        [
+         100,
+         88
+        ],
+        [
+         100,
+         84
+        ],
+        [
+         100,
+         80
+        ]
+       ],
+       "text": "제22연대 제1대대가 크게 약화되면 949-748 능선을 따라 949고지를 공격한다.",
+       "basis": "적 기도(949고지 등 주저항선 감제고지 점령)에 따른 다음 단계. 문턱은 추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.5,
+        "text": "제22연대 제1대대 손실 0.5 초과"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "H741",
+       "axis_xy": [
+        [
+         100,
+         96
+        ],
+        [
+         104,
+         103
+        ],
+        [
+         108,
+         109
+        ],
+        [
+         113,
+         115
+        ],
+        [
+         118,
+         120
+        ]
+       ],
+       "text": "손실이 커지면 748고지에서 741고지로 철수한다.",
+       "basis": "추정: 연대 전투력 소진 시 출발진지로 후퇴",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 제608연대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         72,
+         145
+        ],
+        [
+         68,
+         141
+        ],
+        [
+         64,
+         137
+        ],
+        [
+         59,
+         132
+        ],
+        [
+         55,
+         128
+        ]
+       ],
+       "text": "D일 22:30 증강된 1개 대대로 협곡을 따라 572고지를 공격한다.",
+       "basis": "서술: 22:30 증강된 1개 대대의 인해전술",
+       "start": {
+        "type": "time_elapsed",
+        "value": 22.5,
+        "text": "D일 22:30"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H605",
+       "axis_xy": [
+        [
+         72,
+         145
+        ],
+        [
+         68,
+         132
+        ],
+        [
+         64,
+         122
+        ],
+        [
+         62,
+         118
+        ]
+       ],
+       "text": "D일 23:00 1개 중대로 572고지 접근로상의 605고지 일대를 점령해 국군 증원을 차단한다.",
+       "basis": "서술: 접근로상 유리한 지형을 장악한 중공군이 제6중대 진출을 막음",
+       "start": {
+        "type": "time_elapsed",
+        "value": 23,
+        "text": "D일 23:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         55,
+         128
+        ]
+       ],
+       "text": "이어서 572고지를 점령하고 고수한다.",
+       "basis": "서술: 572고지를 끝내 회복당하지 않음"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         72,
+         145
+        ],
+        [
+         64,
+         137
+        ],
+        [
+         55,
+         128
+        ]
+       ],
+       "text": "국군이 572고지 주봉에 돌입하면 증원 병력으로 반격해 포위한다.",
+       "basis": "서술: D+3일 국군이 주봉 일부에서 육박전 중 중공군 증원으로 포위 우려. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H572",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 572고지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         55,
+         128
+        ],
+        [
+         59,
+         132
+        ],
+        [
+         64,
+         137
+        ],
+        [
+         72,
+         145
+        ]
+       ],
+       "text": "손실이 커지면 어운리로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "적 제609연대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         110,
+         140
+        ],
+        [
+         106,
+         128
+        ],
+        [
+         103,
+         115
+        ],
+        [
+         101,
+         105
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "적 제608연대 손실이 커지면 고지 뒤편 보급로로 748고지에 병력을 보충한다.",
+       "basis": "서술: 사단 차단포격에도 고지 뒤편 보급로로 방어 전력 강화. 문턱은 추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.3,
+        "text": "적 제608연대 손실 0.3 초과"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         110,
+         140
+        ],
+        [
+         106,
+         128
+        ],
+        [
+         103,
+         115
+        ],
+        [
+         101,
+         105
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "text": "국군 대대 이상이 748고지를 점령하면 748고지로 반격한다.",
+       "basis": "서술: D+4일 탈환 뒤 중공군의 반격. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H748",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 748고지 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 4
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         88,
+         160
+        ],
+        [
+         80,
+         152
+        ],
+        [
+         72,
+         145
+        ],
+        [
+         64,
+         137
+        ],
+        [
+         55,
+         128
+        ]
+       ],
+       "text": "국군이 572고지 주봉에 돌입하면 1개 대대로 572고지를 증원한다.",
+       "basis": "서술: 572고지 주봉 육박전 중 중공군 증원 병력 출현. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H572",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 572고지 안에 있음"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "적 제203사단 예비 연대",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      100,
+      150
+     ],
+     "note": "741고지-662고지 후방 종심의 사단 예비 위치(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제203사단 예비"
+    ],
+    "equipment": "보병 2개 대대 규모 가용(추정)"
+   },
+   {
+    "id": "HE2",
+    "unit": "적 제203사단 포병",
+    "alias": "적 포병 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "+",
+    "strength_pct": 100,
+    "position": {
+     "xy": [
+      110,
+      160
+     ],
+     "note": "741고지 북방 포병진지(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 지원 포병"
+    ],
+    "equipment": "곡사포·박격포 다수(규모 미상, 추정)"
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 18:30",
+    "t": 18.5,
+    "kind": "night",
+    "note": "야간(일몰~일출)",
+    "duration_h": 11.5
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "dawn",
+    "note": "여명",
+    "duration_h": 0.5
+   },
+   {
+    "when": "D+1일 06:30",
+    "t": 30.5,
+    "kind": "air_window",
+    "note": "주간 항공 가능 시간대",
+    "duration_h": 12
+   },
+   {
+    "when": "D+1일 18:30",
+    "t": 42.5,
+    "kind": "night",
+    "note": "야간",
+    "duration_h": 11.5
+   },
+   {
+    "when": "D+2일 06:30",
+    "t": 54.5,
+    "kind": "air_window",
+    "note": "주간 항공 가능 시간대",
+    "duration_h": 12
+   },
+   {
+    "when": "D+2일 18:30",
+    "t": 66.5,
+    "kind": "night",
+    "note": "야간",
+    "duration_h": 11.5
+   },
+   {
+    "when": "D+3일 06:30",
+    "t": 78.5,
+    "kind": "air_window",
+    "note": "주간 항공 가능 시간대",
+    "duration_h": 12
+   },
+   {
+    "when": "D+3일 18:30",
+    "t": 90.5,
+    "kind": "night",
+    "note": "야간",
+    "duration_h": 11.5
+   },
+   {
+    "when": "D+4일 06:30",
+    "t": 102.5,
+    "kind": "air_window",
+    "note": "주간 항공 가능 시간대",
+    "duration_h": 12
+   },
+   {
+    "when": "D+4일 18:30",
+    "t": 114.5,
+    "kind": "night",
+    "note": "야간",
+    "duration_h": 11.5
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "HE2",
+    "actions": [
+     {
+      "when": "D일 22:10",
+      "t": 22.17,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        110,
+        160
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "748고지·572고지와 연대 주저항선 일대에 전례 없는 집중포격"
+     },
+     {
+      "when": "D+1일 01:30",
+      "t": 25.5,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        110,
+        160
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "748고지 재공격 전 집중포격"
+     },
+     {
+      "when": "D+2일 04:00 이후",
+      "t": 52,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        110,
+        160
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "제18연대 역습부대에 무차별포격, 605고지 방면에도 집중포격"
+     },
+     {
+      "when": "D+4일 04:00~17:20",
+      "t": 100,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        110,
+        160
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "9부 능선까지 진출한 제18연대 제3대대와 제22연대 제1대대에 집중포화"
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 22:25",
+      "t": 22.42,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        118,
+        120
+       ],
+       [
+        113,
+        115
+       ],
+       [
+        108,
+        109
+       ],
+       [
+        104,
+        103
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "from_ref": "H741",
+      "target_ref": "H748",
+      "note": "대대규모가 동북·서북 능선으로 748고지 공격, 진지 전방 30m에서 격퇴됨"
+     },
+     {
+      "when": "D일 22:30",
+      "t": 22.5,
+      "mode": "infiltrate",
+      "axis_xy": [
+       [
+        95,
+        122
+       ],
+       [
+        95,
+        112
+       ],
+       [
+        96,
+        102
+       ],
+       [
+        98,
+        92
+       ],
+       [
+        100,
+        88
+       ]
+      ],
+      "from_ref": "H590",
+      "target_ref": "RG1",
+      "note": "2개 중대가 949-748 능선 양단을 위해 침투, 제1중대 기습으로 피해를 입고 진격 중단"
+     },
+     {
+      "when": "D+1일 01:30",
+      "t": 25.5,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        106,
+        121
+       ],
+       [
+        104,
+        112
+       ],
+       [
+        102,
+        104
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "대대규모 재공격, D+1일 06:35 748고지 점령"
+     },
+     {
+      "when": "D+1일~D+4일",
+      "t": 31,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "748고지를 고수하며 측방화력과 수류탄으로 역습 저지"
+     },
+     {
+      "when": "D+3일 02:30~06:10",
+      "t": 74.5,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        106,
+        121
+       ],
+       [
+        103,
+        110
+       ],
+       [
+        101,
+        102
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "제18연대 제2대대에 회복당한 748고지를 진내사격과 반격으로 다시 점령"
+     },
+     {
+      "when": "D+4일 19:45 이후",
+      "t": 115.75,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        106,
+        121
+       ],
+       [
+        103,
+        110
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "제22연대 제1대대가 탈환한 748고지로 반격, 격퇴됨"
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 22:30",
+      "t": 22.5,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        72,
+        145
+       ],
+       [
+        68,
+        141
+       ],
+       [
+        64,
+        137
+       ],
+       [
+        59,
+        132
+       ],
+       [
+        55,
+        128
+       ]
+      ],
+      "from_ref": "T2",
+      "target_ref": "H572",
+      "note": "증강된 1개 대대가 572고지 공격, 화기소대 사격에 저지됨"
+     },
+     {
+      "when": "D일 23:00 무렵",
+      "t": 23,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        68,
+        132
+       ],
+       [
+        64,
+        122
+       ],
+       [
+        62,
+        118
+       ]
+      ],
+      "target_ref": "H605",
+      "note": "접근로상 유리한 지형을 장악해 제6중대 진출 저지"
+     },
+     {
+      "when": "D+1일 00:00",
+      "t": 24,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        72,
+        145
+       ],
+       [
+        64,
+        137
+       ],
+       [
+        55,
+        128
+       ]
+      ],
+      "target_ref": "H572",
+      "note": "제2차 공격으로 수류탄 투척거리까지 접근, 협곡으로 돌진해 백병전"
+     },
+     {
+      "when": "D+1일 새벽",
+      "t": 29,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        55,
+        128
+       ]
+      ],
+      "target_ref": "H572",
+      "note": "제7중대 철수 뒤 572고지 점령, 이후 고수"
+     },
+     {
+      "when": "D+3일 00:00 이후",
+      "t": 72.0,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        72,
+        145
+       ],
+       [
+        64,
+        137
+       ],
+       [
+        55,
+        128
+       ]
+      ],
+      "target_ref": "H572",
+      "note": "주봉 일부에 돌입한 제18연대 제1대대를 증원 병력으로 포위 위협"
+     }
+    ]
+   },
+   {
+    "group": "HE1",
+    "actions": [
+     {
+      "when": "D+1일~D+3일",
+      "t": 40,
+      "mode": "reinforce",
+      "axis_xy": [
+       [
+        110,
+        140
+       ],
+       [
+        106,
+        128
+       ],
+       [
+        103,
+        115
+       ],
+       [
+        101,
+        105
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "target_ref": "H748",
+      "note": "사단 차단포격에도 고지 뒤편 보급로로 748고지 방어 전력 강화"
+     },
+     {
+      "when": "D+3일 00:00 이후",
+      "t": 72.0,
+      "mode": "reinforce",
+      "axis_xy": [
+       [
+        88,
+        160
+       ],
+       [
+        80,
+        152
+       ],
+       [
+        72,
+        145
+       ],
+       [
+        55,
+        128
+       ]
+      ],
+      "target_ref": "H572",
+      "note": "572고지에 증원 병력 투입"
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "R1",
+    "unit": "제18연대(사단 예비) 3개 대대",
+    "entry_when": "D+1일 05:00",
+    "entry_t": 29,
+    "from_ref": "A2",
+    "note": "사단장 역습 명령. 제1대대는 572고지 방면, 제2·제3대대는 748고지 방면으로 이동"
+   },
+   {
+    "id": "R2",
+    "unit": "제2군단 전차 1개 소대",
+    "entry_when": "D+1일 12:00",
+    "entry_t": 36,
+    "from_ref": "RD1",
+    "note": "군단장이 제22연대 주저항선에 투입"
+   },
+   {
+    "id": "R3",
+    "unit": "제18연대 제1대대(사단 예비)",
+    "entry_when": "D+4일 19:45 직후",
+    "entry_t": 115.75,
+    "from_ref": "H949",
+    "note": "748고지 탈환 뒤 중공군 역습 대비로 투입"
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 22:25",
+      "t": 22.42,
+      "verb": "고수",
+      "ref": "H748",
+      "text": "제2중대가 적을 진지 전방 30m까지 유인해 집중사격으로 격퇴했다."
+     },
+     {
+      "when": "D일 22:40",
+      "t": 22.67,
+      "verb": "역습",
+      "ref": "RG1",
+      "text": "748고지로 출동하던 제1중대가 949-748 능선의 적 2개 중대를 기습해 진격을 멈추게 했다."
+     },
+     {
+      "when": "D+1일 01:30",
+      "t": 25.5,
+      "verb": "고수",
+      "ref": "H748",
+      "text": "제2중대가 고지 정상으로 방어정면을 축소하며 대대규모 재공격에 저항했다."
+     },
+     {
+      "when": "D+1일 06:35",
+      "t": 30.58,
+      "verb": "철수",
+      "ref": "H949",
+      "text": "제2중대가 제1중대 엄호 아래 748고지에서 철수했다."
+     },
+     {
+      "when": "D+4일 04:00",
+      "t": 100,
+      "verb": "공격",
+      "ref": "H748",
+      "text": "제18연대 제3대대와 함께 주공으로 748고지 공격에 투입되었다."
+     },
+     {
+      "when": "D+4일 17:20",
+      "t": 113.33,
+      "verb": "공격",
+      "ref": "H748",
+      "text": "집중포화를 뚫고 수류탄 투척거리까지 진출했고 1개 소대가 진지 전방 50m에서 화력거점을 파괴했다."
+     },
+     {
+      "when": "D+4일 19:45",
+      "t": 115.75,
+      "verb": "탈취",
+      "ref": "H748",
+      "text": "대대가 일제히 돌격해 748고지를 탈환했다."
+     },
+     {
+      "when": "D+4일 야간",
+      "t": 118,
+      "verb": "격퇴",
+      "ref": "H748",
+      "text": "강력한 화력지원 아래 중공군 반격을 격퇴하고 고지를 확보했다."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 22:30",
+      "t": 22.5,
+      "verb": "고수",
+      "ref": "H572",
+      "text": "제7중대가 화기소대로 증강된 1개 대대의 공격을 저지했다."
+     },
+     {
+      "when": "D+1일 00:00",
+      "t": 24,
+      "verb": "역습",
+      "ref": "CM-RT2",
+      "text": "대대장이 예비 제6중대를 572고지로 출동시켰으나 접근로상 적의 저항에 막혔다."
+     },
+     {
+      "when": "D+1일 새벽",
+      "t": 29,
+      "verb": "철수",
+      "ref": "H973",
+      "text": "제7중대가 진내선으로 축소해 백병전을 벌이다 연대장 명령으로 제6중대와 함께 572고지에서 철수했다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ2",
+    "actions": [
+     {
+      "when": "D+1일 05:00",
+      "t": 29,
+      "verb": "역습",
+      "ref": "A2",
+      "text": "사단장 명령으로 제1대대를 572고지 방면, 제2·제3대대를 748고지 방면으로 이동시켰다."
+     },
+     {
+      "when": "D+2일 04:00",
+      "t": 52,
+      "verb": "역습",
+      "ref": "H748",
+      "text": "제2대대가 748고지 수류탄 투척거리까지 접근했으나 무차별포격으로 공격개시선에 복귀했다."
+     },
+     {
+      "when": "D+2일 04:00",
+      "t": 52,
+      "verb": "역습",
+      "ref": "H572",
+      "text": "제1대대가 605고지 7부 능선까지 진출했으나 집중포격과 수류탄에 막혔다."
+     },
+     {
+      "when": "D+3일 00:00",
+      "t": 72,
+      "verb": "역습",
+      "ref": "H572",
+      "text": "제1대대가 572고지 주봉 일부에서 육박전을 벌였으나 포위 우려로 사단장 역습중지명령에 따라 철수해 949고지선으로 이동했다."
+     },
+     {
+      "when": "D+3일 01:00",
+      "t": 73,
+      "verb": "역습",
+      "ref": "H748",
+      "text": "제2대대가 약 1시간 만에 8부 능선을 돌파하고 20분 진내전 끝에 748고지를 회복했다."
+     },
+     {
+      "when": "D+3일 06:10",
+      "t": 78.17,
+      "verb": "철수",
+      "ref": "A2",
+      "text": "제2대대가 적 반격으로 연대장 명령에 따라 949고지 뒤편 집결지로 철수했다."
+     },
+     {
+      "when": "D+3일 04:00",
+      "t": 76,
+      "verb": "역습",
+      "ref": "H748",
+      "text": "제3대대가 7부 능선에서 측방화력에 막혀 특공조 7개로 화력거점 7개를 파괴했으나 연대장 명령으로 철수했다."
+     },
+     {
+      "when": "D+4일 04:00",
+      "t": 100,
+      "verb": "공격",
+      "ref": "H748",
+      "text": "제3대대가 748고지 9부 능선까지 돌파했으나 집중포화에 막혀 후퇴했다."
+     },
+     {
+      "when": "D+4일 19:45 직후",
+      "t": 115.75,
+      "verb": "확보",
+      "ref": "H748",
+      "text": "제1대대를 사단 예비로 투입해 748고지 역습에 대비했다."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 22:10~D+1일 06:35",
+    "t": 22.17,
+    "kind": "night",
+    "note": "적의 첫 공격과 748고지 피탈이 야간에 이루어짐"
+   },
+   {
+    "when": "D+2일~D+4일 새벽",
+    "t": 52,
+    "kind": "night",
+    "note": "제18연대 역습은 주로 야간·새벽(00:00~04:00)에 개시됨"
+   },
+   {
+    "when": "D+4일 17:20~19:45",
+    "t": 113.33,
+    "kind": "other",
+    "note": "최종 탈환 공격은 일몰 전후에 실시됨"
+   }
+  ],
+  "historical_result": {
+   "friendly": "제22연대(제3사단, 제18연대 역습 포함)",
+   "enemy": "적 제203사단(제608연대·제609연대 주력)",
+   "terrain_held": [
+    "H748",
+    "H949",
+    "H973",
+    "H780"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "아군 전사 109명·부상 384명. 적 사살 664명(추정사살 161명 별도)·포로 8명. 572고지는 피탈된 채 회복하지 못함.",
+   "duration_h": 98,
+   "friendly_loss_pct": 8,
+   "enemy_loss_pct": 20
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "748고지는 제22연대 제1대대가 탈환해 중공군 반격을 격퇴하고 확보 중이며 제18연대 제1대대가 예비로 투입됨. 572고지는 적 제609연대가 점령. 949고지 주저항선은 유지.",
+   "terrain_held_at_horizon": [
+    "H748",
+    "H949",
+    "H973",
+    "H780"
+   ],
+   "key_times": [
+    {
+     "t": 22.17,
+     "text": "적 집중포격 개시",
+     "ref": "H748"
+    },
+    {
+     "t": 22.4,
+     "text": "적 대대 748고지 1차 공격, 격퇴",
+     "ref": "H748"
+    },
+    {
+     "t": 25.5,
+     "text": "적 748고지 재공격",
+     "ref": "H748"
+    },
+    {
+     "t": 29,
+     "text": "572고지 제7중대·제6중대 철수(추정), 제18연대 역습 이동",
+     "ref": "H572"
+    },
+    {
+     "t": 30.58,
+     "text": "748고지 제2중대 철수",
+     "ref": "H748"
+    },
+    {
+     "t": 52,
+     "text": "제18연대 1차 역습 실패",
+     "ref": "H748"
+    },
+    {
+     "t": 74.5,
+     "text": "제18연대 제2대대 748고지 일시 회복",
+     "ref": "H748"
+    },
+    {
+     "t": 78.17,
+     "text": "제18연대 제2대대 748고지에서 철수",
+     "ref": "A2"
+    },
+    {
+     "t": 100,
+     "text": "제18연대 제3대대·제22연대 제1대대 공격 재개",
+     "ref": "H748"
+    },
+    {
+     "t": 115.75,
+     "text": "제22연대 제1대대 748고지 탈환",
+     "ref": "H748"
+    }
+   ],
+   "friendly_loss_pct": 8,
+   "enemy_loss_pct": 20
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb2_021",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

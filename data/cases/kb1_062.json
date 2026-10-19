@@ -1,0 +1,2474 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-07-05",
+   "end_date": "1950-07-06",
+   "d_day": "1950-07-05",
+   "order_time": "D일 02:00",
+   "text": "무극리 전투 전체, D일 02:00부터 30시간",
+   "why": "구간 지정. 연대장이 제1대대 투입을 결심한 D일 02:00이 명령 시점이다."
+  },
+  "perspective_rationale": "관점 지정. 제7연대가 3개 대대와 직접지원 포대로 북한군 제15사단 제48연대의 음성 진출을 막은 연대급 전투다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "제1대대는 기름고개에서 적 1개 대대에 막혀 385고지에서 대치했고, D+1일 04:00 반격으로 보현산을 탈취하고 무극리 북쪽 2km까지 진출했다. 이후 적 증원으로 무극리를 포기하고 351고지에서 방어했다. 음성은 지켰다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "무극리와 음성의 중점 = (100,100)",
+   "source": "atlas+text",
+   "atlas_pages": "2권 52쪽"
+  },
+  "seed_id": "kb1_062_무극리_전투",
+  "title": "무극리 전투",
+  "dates": "1950. 7. 5.~6.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '무극리 전투' (pdf 244쪽)",
+  "pdf_page": 244,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "7월 5일 새벽 2시경 공백 상태인 무극리－음성간 도로에 제1대대를 투입",
+    "alternative": "제1대대를 투입하지 않고 제2대대만 장호원 축선에 두었다면 무극리－음성 도로가 열려 적이 음성으로 직행",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "7월 6일 새벽 4시 제1·2대대로 공격을 재개해 보현산을 점령하고 추격",
+    "alternative": "385고지 일대에서 방어만 지속했다면 적 1개 대대에 대한 타격과 무극리 북쪽 진출은 없고, 증원된 연대규모 적을 준비된 진지에서 맞이",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "적 증원 후 무극리 확보를 포기하고 351고지로 물러나 방어 전환",
+    "alternative": "무극리 북쪽 진출선에서 고수했다면 장갑차를 앞세운 1개 연대규모에 1개 대대가 노출되어 손실 증가",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": true,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.7013,
+   "duration_s": 469.6,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 48532,
+     "cache_read_input_tokens": 113604,
+     "cache_creation_input_tokens": 50049
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9465,
+     "cache_read_input_tokens": 14850,
+     "cache_creation_input_tokens": 14402
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 27,
+   "flagged": [],
+   "cost_usd": 0.07969159999999999
+  },
+  "refs_normalized": 0,
+  "conditions_normalized": 0
+ },
+ "input": {
+  "perspective": {
+   "unit": "제7연대",
+   "alias": "아군 연대",
+   "echelon": "연대"
+  },
+  "higher_context": {
+   "higher_unit": "제6사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "제6사단은 장호원 방면에서 남하하는 적을 저지하여 음성을 확보하고 제1사단의 음성 전개를 엄호한다.",
+   "higher_intent": "제1사단이 음성에 전개할 때까지 장호원-음성 축선에서 적의 남하를 막는다.",
+   "assigned_task": "장호원을 탈환·사수하여 적의 음성 진출을 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제1사단",
+     "alias": "인접 사단 1",
+     "side": "후방(남측)",
+     "mission": "음성 일대에 전개한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      145,
+      50
+     ]
+    }
+   ],
+   "higher_rules": []
+  },
+  "area_of_operations": {
+   "text": "북쪽 생극에서 남쪽 음성까지, 서쪽 무극리 서측에서 동쪽 가엽산 동측까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "연대 서측 경계",
+     "between": [
+      "제7연대",
+      "미상"
+     ],
+     "xy": [
+      [
+       30,
+       200
+      ],
+      [
+       30,
+       120
+      ],
+      [
+       70,
+       40
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 동측 경계",
+     "between": [
+      "제7연대",
+      "제6사단 주력"
+     ],
+     "xy": [
+      [
+       165,
+       200
+      ],
+      [
+       170,
+       100
+      ],
+      [
+       175,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "location": {
+     "note": "음성 부근",
+     "ref": "T2",
+     "xy": [
+      140,
+      70
+     ]
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "location": {
+     "note": "모도원 부근에서 적 정찰대와 접촉 중",
+     "ref": "T15",
+     "xy": [
+      90,
+      172
+     ]
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "location": {
+     "note": "음성 부근",
+     "ref": "T2",
+     "xy": [
+      142,
+      72
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "대전차포중대",
+    "alias": "대전차포중대",
+    "echelon": "중대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "57mm 대전차포",
+    "location": {
+     "note": "음성 부근",
+     "ref": "T2",
+     "xy": [
+      143,
+      68
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제16야전포병대대 제2포대",
+    "alias": "포병 포대 1",
+    "echelon": "포대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "other_names": [
+     "제2포병중대"
+    ],
+    "location": {
+     "note": "음성 부근",
+     "ref": "T2",
+     "xy": [
+      138,
+      68
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "차령산맥 중앙부의 음성 분지와 북쪽 무극리·생극 일대. 무극리-음성 도로가 기름고개를 넘는다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "무극리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      54.7,
+      134.6
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스. 생극-음성 도로와 진천 방향 도로의 교차점"
+    },
+    {
+     "id": "T2",
+     "name": "음성",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      145.4,
+      65.3
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스"
+    },
+    {
+     "id": "T3",
+     "name": "생극",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      62.6,
+      181.7
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스"
+    },
+    {
+     "id": "T4",
+     "name": "기름고개",
+     "alias": "지점 1",
+     "kind": "pass",
+     "xy": [
+      86.1,
+      91
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스"
+    },
+    {
+     "id": "T5",
+     "name": "부용산",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      101.1,
+      123.1
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스"
+    },
+    {
+     "id": "T6",
+     "name": "가엽산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      146.9,
+      103.9
+     ],
+     "estimated": false,
+     "elevation_m": 710,
+     "evidence": "아틀라스"
+    },
+    {
+     "id": "T7",
+     "name": "385고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      94,
+      95
+     ],
+     "estimated": true,
+     "elevation_m": 385,
+     "evidence": "서술: 기름고개 동쪽"
+    },
+    {
+     "id": "T8",
+     "name": "보현산",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      73,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 기름고개와 무극리 사이"
+    },
+    {
+     "id": "T9",
+     "name": "346고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      63,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 346,
+     "evidence": "서술: 보현산 서쪽"
+    },
+    {
+     "id": "T10",
+     "name": "351고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      69,
+      131
+     ],
+     "estimated": true,
+     "elevation_m": 351,
+     "evidence": "서술: 무극리 남동 백야리"
+    },
+    {
+     "id": "T11",
+     "name": "병암리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      118,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 제3대대 이동 방면"
+    },
+    {
+     "id": "T15",
+     "name": "모도원",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      90,
+      172
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 동락리 북쪽 장호원 방향"
+    },
+    {
+     "id": "T16",
+     "name": "동락리",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      100,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "아틀라스 본문: 부용산 북쪽 도로변"
+    },
+    {
+     "id": "T17",
+     "name": "용산리",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      100,
+      86
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 기름고개 부근"
+    },
+    {
+     "id": "T18",
+     "name": "장호원",
+     "alias": "마을 8",
+     "kind": "town",
+     "xy": [
+      64,
+      199
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "캔버스 북쪽 밖 약 18km, 방향 표시점"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "무극리-음성 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       54.7,
+       134.6
+      ],
+      [
+       69.7,
+       123.9
+      ],
+      [
+       81.9,
+       109.6
+      ],
+      [
+       86.1,
+       91
+      ],
+      [
+       95.4,
+       78.1
+      ],
+      [
+       112.6,
+       68.1
+      ],
+      [
+       131.1,
+       64.6
+      ],
+      [
+       145.4,
+       65.3
+      ]
+     ],
+     "estimated": false
+    },
+    {
+     "id": "R2",
+     "name": "생극-무극리 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       62.6,
+       181.7
+      ],
+      [
+       59.7,
+       162.4
+      ],
+      [
+       56.9,
+       148.1
+      ],
+      [
+       54.7,
+       134.6
+      ]
+     ],
+     "estimated": false
+    },
+    {
+     "id": "R3",
+     "name": "생극-신덕저수지 도로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       62.6,
+       181.7
+      ],
+      [
+       69.7,
+       176.7
+      ],
+      [
+       82.6,
+       162.4
+      ],
+      [
+       95.4,
+       149.6
+      ],
+      [
+       111.1,
+       142.4
+      ],
+      [
+       124,
+       139.6
+      ],
+      [
+       145.4,
+       133.9
+      ]
+     ],
+     "estimated": false
+    },
+    {
+     "id": "R4",
+     "name": "모도원-음성 통로",
+     "alias": "도로 4",
+     "kind": "trail",
+     "xy": [
+      [
+       90,
+       172
+      ],
+      [
+       98,
+       155
+      ],
+      [
+       100,
+       148
+      ],
+      [
+       104,
+       132
+      ],
+      [
+       118,
+       116
+      ],
+      [
+       132,
+       90
+      ],
+      [
+       145.4,
+       65.3
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "W1",
+     "name": "신덕저수지",
+     "alias": "지점 2",
+     "polygon": [
+      [
+       113,
+       144
+      ],
+      [
+       118,
+       148
+      ],
+      [
+       124,
+       146
+      ],
+      [
+       123,
+       142.5
+      ],
+      [
+       116,
+       143
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제48연대 선두대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "적이 장호원을 점령하고 음성 방향으로 남하 중이나 선두 부대는 미확인",
+    "posture": "이동",
+    "preparation": "none",
+    "equipment": "45mm 대전차포, 중기관총, 박격포",
+    "position": {
+     "xy": [
+      62,
+      178
+     ],
+     "note": "생극 남쪽, 생극-무극리 도로",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제48연대(-)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "장호원 방면 적 주력으로 추정",
+    "posture": "이동",
+    "preparation": "none",
+    "equipment": "장갑차, 곡사포",
+    "position": {
+     "xy": [
+      57.4,
+      191
+     ],
+     "note": "생극 북쪽",
+     "frontage_m": 1500
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제603모터사이클연대 정찰대",
+    "alias": "적 정찰대 1",
+    "nation": "북한",
+    "echelon": "소대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "모도원 부근에서 제2대대 첨병과 교전 중",
+    "posture": "이동",
+    "preparation": "none",
+    "equipment": "장갑차 1대, 사이드카",
+    "position": {
+     "xy": [
+      88,
+      178
+     ],
+     "note": "모도원 북쪽",
+     "ref": "T15"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 02:00",
+   "light": "night",
+   "notes": "야간 명령 하달. 제2대대가 모도원 부근에서 적 정찰대와 교전 중이다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대(+대전차포중대), 제2대대, 제3대대 / 지원: 제16야전포병대대 제2포대(직접지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대(+대전차포중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      },
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "무극리는 생극-무극리 도로와 무극리-음성 도로의 교차점으로 적의 음성 진출 관문이다. 기름고개와 385고지는 무극리-음성 도로를 감제하는 최후 저지선이다. 주접근로는 생극-무극리-기름고개 도로이고, 보조접근로는 모도원-동락리 통로다.",
+    "key_terrain": [
+     {
+      "ref": "T1",
+      "why": "두 도로의 교차점"
+     },
+     {
+      "ref": "T4",
+      "why": "음성으로 가는 도로의 고개"
+     },
+     {
+      "ref": "T8",
+      "why": "기름고개와 무극리 사이 도로 감제"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "생극-무극리-기름고개-음성",
+      "user": "enemy",
+      "refs": [
+       "R2",
+       "R1"
+      ],
+      "xy": [
+       [
+        62.6,
+        181.7
+       ],
+       [
+        56.9,
+        148.1
+       ],
+       [
+        54.7,
+        134.6
+       ],
+       [
+        81.9,
+        109.6
+       ],
+       [
+        86.1,
+        91
+       ],
+       [
+        145.4,
+        65.3
+       ]
+      ]
+     },
+     {
+      "name": "모도원-동락리-음성",
+      "user": "enemy",
+      "refs": [
+       "R4"
+      ],
+      "xy": [
+       [
+        90,
+        172
+       ],
+       [
+        100,
+        148
+       ],
+       [
+        118,
+        116
+       ],
+       [
+        145.4,
+        65.3
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제48연대는 생극에서 생극-무극리 도로를 따라 무극리를 거쳐 기름고개로 공격해 올 것이다. 1개 대대가 선두로 무극리를 지나고 연대 주력이 후속할 것이다. 적 제603모터사이클연대 정찰대는 모도원-동락리 통로로 침투해 올 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "T3",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         62.6,
+         181.7
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ]
+       ],
+       "when": "D일 오전",
+       "t": 8
+      },
+      {
+       "group": "E2",
+       "mode": "reinforce",
+       "from_ref": "T3",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         57.4,
+         191
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ]
+       ],
+       "when": "D일 오후",
+       "t": 14
+      },
+      {
+       "group": "E3",
+       "mode": "infiltrate",
+       "from_ref": "T15",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         88,
+         178
+        ],
+        [
+         90,
+         172
+        ],
+        [
+         98,
+         155
+        ],
+        [
+         100,
+         148
+        ]
+       ],
+       "when": "D일 새벽",
+       "t": 3
+      }
+     ],
+     "risk_point": "적 선두대대가 제1대대보다 먼저 무극리를 지나 기름고개를 넘어 음성 도로를 여는 때"
+    },
+    "unknowns": [
+     "적 선두대대의 현재 위치",
+     "적 제48연대 주력의 후속 시각",
+     "장호원 방면 적 추가 연대"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적 주력은 생극-무극리 도로로 남하한다.",
+     "why": "장호원에서 음성으로 가는 주도로다."
+    },
+    {
+     "text": "제1사단 전개 전 상급 사단의 증원은 없다.",
+     "why": "사단 주력은 충주 방면에 있다."
+    },
+    {
+     "text": "대대 세부 보충: 대전차포중대 배속, 중대 배치와 예비진지는 추정이다.",
+     "why": "서술에 대대 이하 세부가 없다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제7연대는 D일 02:00부터 무극리-음성 도로 일대에서 적 제48연대의 남하를 저지하여 음성을 확보하고 제1사단의 음성 전개를 엄호한다.",
+   "task_verb": "저지",
+   "objective_ref": "R1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 2,
+    "text": "D일 02:00"
+   },
+   "purpose": "음성 확보와 제1사단 전개 엄호"
+  },
+  "execution": {
+   "end_state": {
+    "text": "제1대대가 무극리를 점령해 적을 그 북쪽에서 저지하고 음성 도로를 아군이 통제한다.",
+    "friendly": "제1대대 무극리, 제2대대 용산리 예비, 제3대대 병암리",
+    "enemy": "적 제48연대가 무극리 북쪽에서 저지됨",
+    "terrain": "무극리, 기름고개, 음성 확보"
+   },
+   "concept": {
+    "text": "제1대대를 주력으로 무극리에 투입해 적 남하를 저지한다. 제2대대는 모도원에서 반전해 용산리에서 역습을 준비하고 제3대대는 병암리에서 동락리 방면을 경계한다.",
+    "maneuver": "제1대대는 무극리-음성 도로로 무극리를 점령한다. 적이 먼저 무극리에 이르면 기름고개-385고지에서 방어하고, 적 선두대대가 약화되면 보현산을 거쳐 무극리를 탈취한다.",
+    "fires": "제2포대는 제1대대를 직접지원해 생극-무극리 도로와 기름고개 전방에 화력을 집중한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G2",
+     "position_ref": "T17",
+     "xy": [
+      100,
+      86
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.3,
+      "text": "제1대대 손실 0.3 초과"
+     },
+     "priorities": [
+      "기름고개 방면 역습",
+      "무극리 탈취 지원"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1"
+     ],
+     "zone_refs": [
+      "CM1",
+      "CM2"
+     ],
+     "restrictions": "제2대대 반전 완료 전 모도원 일대 사격 금지"
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "적의 음성 진출 관문을 선점한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       55,
+       137
+      ],
+      "frontage_m": 1500,
+      "ref": "T1",
+      "preparation": "hasty",
+      "note": "음성에서 출발해 무극리 북쪽 진지 점령",
+      "polygon": [
+       [
+        48,
+        134
+       ],
+       [
+        62,
+        134
+       ],
+       [
+        63,
+        143
+       ],
+       [
+        48,
+        143
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         60,
+         141
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         50,
+         141
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         55,
+         131
+        ]
+       },
+       {
+        "label": "대전차포중대",
+        "xy": [
+         56,
+         138
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "무극리-음성 도로로 기동해 무극리를 점령한다.",
+       "params": {
+        "objective": "T1",
+        "route": "R1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "저지",
+       "text": "생극-무극리 도로에서 적 제48연대의 남하를 저지한다.",
+       "params": {
+        "area": "CM1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "방어",
+       "text": "기름고개-385고지 진지를 방어한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T1",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 무극리에 있음"
+       },
+       "basis": "risk_point: 적 선두대대가 먼저 무극리에 이름",
+       "params": {
+        "area": "CM2"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "탈취",
+       "text": "보현산을 거쳐 무극리를 탈취한다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.3,
+        "text": "적 선두대대 손실 0.3 초과"
+       },
+       "basis": "추정: 적 선두대대 약화 시 후속 연대 도착 전 교차점 회복",
+       "params": {
+        "objective": "CM3",
+        "route": "CM4"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "제1대대 지역의 위기에 대비한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       100,
+       86
+      ],
+      "frontage_m": 1000,
+      "ref": "T17",
+      "preparation": "none",
+      "note": "모도원에서 반전 후 용산리 예비진지",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         98,
+         89
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         102,
+         86
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         99,
+         83
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "D일 05:00까지 모도원 일대를 경계한다.",
+       "params": {
+        "area": "T15"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "철수",
+       "text": "모도원-음성 통로로 용산리까지 철수한다.",
+       "params": {
+        "destination": "T17",
+        "route": "R4"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "기름고개를 거쳐 보현산으로 역습한다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.3,
+        "text": "제1대대 손실 0.3 초과"
+       },
+       "basis": "risk_point: 적이 기름고개를 넘음",
+       "params": {
+        "objective": "T8",
+        "route": "CM4"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "연대 동측 접근로를 막는다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       118,
+       116
+      ],
+      "frontage_m": 1500,
+      "ref": "T11",
+      "preparation": "hasty",
+      "note": "병암리 진지",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         114,
+         121
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         122,
+         120
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         118,
+         111
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "병암리를 점령한다.",
+       "params": {
+        "objective": "T11"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "경계",
+       "text": "동락리-부용산 방면을 경계한다.",
+       "params": {
+        "area": "CM5"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 02:00 명령 하달",
+      "event": {
+       "type": "time_elapsed",
+       "value": 2,
+       "text": "D일 02:00"
+      }
+     },
+     {
+      "text": "D일 05:00 제2대대 모도원에서 반전",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     },
+     {
+      "text": "D일 06:00 제1대대 무극리로 출발",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "D일 10:00 제3대대 병암리 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 10,
+       "text": "D일 10:00"
+      }
+     },
+     {
+      "text": "D일 12:00 제1대대 무극리 점령, 제2대대 예비 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 12,
+       "text": "D일 12:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "EA 무극리 북쪽",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        52,
+        140
+       ],
+       [
+        62,
+        140
+       ],
+       [
+        64,
+        160
+       ],
+       [
+        54,
+        160
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R2"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "기름고개-385고지 예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        82,
+        88
+       ],
+       [
+        98,
+        92
+       ],
+       [
+        98,
+        100
+       ],
+       [
+        84,
+        98
+       ]
+      ],
+      "estimated": true,
+      "preparation": "none",
+      "terrain_refs": [
+       "T4",
+       "T7"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "OBJ 무극리",
+      "kind": "objective",
+      "xy": [
+       [
+        54.7,
+        134.6
+       ]
+      ],
+      "estimated": false,
+      "terrain_refs": [
+       "T1"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        86
+       ],
+       [
+        86.1,
+        91
+       ],
+       [
+        81.9,
+        109.6
+       ],
+       [
+        73,
+        112
+       ],
+       [
+        69.7,
+        123.9
+       ],
+       [
+        54.7,
+        134.6
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T4",
+       "T8",
+       "T1"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "동락리 경계지역",
+      "kind": "other",
+      "xy": [
+       [
+        92,
+        140
+       ],
+       [
+        110,
+        150
+       ],
+       [
+        112,
+        128
+       ],
+       [
+        95,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T16",
+       "T5"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G3"
+      ],
+      "xy": [
+       [
+        90,
+        160
+       ],
+       [
+        88,
+        120
+       ],
+       [
+        110,
+        80
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 02:00",
+  "start_t": 2,
+  "horizon_h": 30,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제48연대(-) 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제48연대는 장호원에서 생극-무극리 도로로 남하해 무극리를 거쳐 기름고개를 넘어 음성을 점령한다. 선두대대가 길을 열고 연대 주력과 사단 증원이 후속한다.",
+   "groups": [
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "text": "모도원-동락리 통로로 음성 방면을 정찰한다.",
+       "objective_ref": "T16",
+       "axis_xy": [
+        [
+         88,
+         178
+        ],
+        [
+         90,
+         172
+        ],
+        [
+         98,
+         155
+        ],
+        [
+         100,
+         148
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 2,
+        "text": "D일 02:00"
+       },
+       "basis": "서술: 모도원 부근에서 제2대대 첨병과 교전"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 생극 방면으로 철수한다.",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         90,
+         172
+        ],
+        [
+         82.6,
+         162.4
+        ],
+        [
+         69.7,
+         176.7
+        ],
+        [
+         62.6,
+         181.7
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.3,
+        "text": "정찰대 손실 0.3 초과"
+       },
+       "basis": "추정: 장갑차 1대·사이드카 5대·시체 5구를 남기고 이탈"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "무극리를 지나 무극리-음성 도로로 기름고개 방면을 수색 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         56,
+         150
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00"
+       },
+       "basis": "서술: D일 08:00 1개 중대 규모 적이 기름고개 방면에서 발견됨. 출발 시각 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 보현산 방면 선두대대로 철수한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         82,
+         106
+        ],
+        [
+         78,
+         110
+        ],
+        [
+         73,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.3,
+        "text": "첨병중대 손실 0.3 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "생극-무극리 도로로 남하해 무극리를 지나 기름고개를 공격한다.",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         62,
+         178
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 4,
+        "text": "D일 04:00"
+       },
+       "basis": "서술: D일 11:00 적 본대 1개 대대가 기름고개 서쪽에서 포격하며 공격. 출발 시각 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "385고지를 공격해 음성 도로를 연다.",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         81.9,
+         109.6
+        ],
+        [
+         86.1,
+         91
+        ],
+        [
+         94,
+         95
+        ]
+       ],
+       "repeat": {
+        "max": 2,
+        "interval_h": 5
+       },
+       "basis": "추정: 기름고개 정상에서 대치 지속"
+      },
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "text": "야간에 385고지 측방으로 침투한다.",
+       "objective_ref": "CM2",
+       "axis_xy": [
+        [
+         73,
+         112
+        ],
+        [
+         80,
+         100
+        ],
+        [
+         90,
+         94
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "basis": "추정: 연대가 적의 야간침투에 대비함"
+      },
+      {
+       "timing": "조건",
+       "mode": "hold",
+       "text": "보현산-346고지에서 방어한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         81.9,
+         109.6
+        ],
+        [
+         73,
+         112
+        ],
+        [
+         63,
+         110
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "선두대대 손실 0.25 초과"
+       },
+       "basis": "추정: 기름고개 돌파 실패 후 보현산 일대 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "무극리 북쪽으로 철수한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         73,
+         112
+        ],
+        [
+         69.7,
+         123.9
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         58,
+         155
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.4,
+        "text": "선두대대 손실 0.4 초과"
+       },
+       "basis": "추정: 보현산 피탈 후 도주"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "생극에서 무극리 북쪽으로 후속한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         57.4,
+         191
+        ],
+        [
+         62.6,
+         181.7
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         57,
+         155
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 12,
+        "text": "D일 12:00"
+       },
+       "basis": "추정: 연대 주력의 후속"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "무극리 북쪽 도로 일대를 확보한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         57,
+         155
+        ],
+        [
+         57,
+         150
+        ]
+       ],
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "장갑차를 앞세우고 포격하며 무극리로 역습한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         57,
+         158
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 무극리 북쪽에 있음"
+       },
+       "basis": "서술: 증원받은 1개 연대 규모가 장갑차를 앞세워 압력. 문턱 추정"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "장호원에서 생극을 거쳐 무극리 북쪽으로 증원한다.",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         64,
+         199
+        ],
+        [
+         62.6,
+         181.7
+        ],
+        [
+         59.7,
+         162.4
+        ],
+        [
+         57,
+         156
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24,
+        "text": "D+1일 00:00"
+       },
+       "basis": "서술: 도주한 적이 새 병력을 증원받음. 시각 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "적 제48연대(-)와 함께 무극리로 역습한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         57,
+         156
+        ],
+        [
+         56.9,
+         148.1
+        ],
+        [
+         54.7,
+         134.6
+        ],
+        [
+         69,
+         131
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 무극리 북쪽에 있음"
+       },
+       "basis": "서술: 1개 연대 규모 압력. 문턱 추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 제48연대 선두대대 첨병중대",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 120,
+    "equipment": "경기관총, 박격포",
+    "position": {
+     "xy": [
+      56,
+      150
+     ],
+     "note": "무극리 북쪽 생극-무극리 도로, 선두대대 앞",
+     "ref": "R2"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "적 제15사단 증원대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 100,
+    "equipment": "장갑차, 곡사포 지원",
+    "other_names": [
+     "새로운 증원 병력"
+    ],
+    "position": {
+     "xy": [
+      64,
+      199
+     ],
+     "note": "장호원 방향 생극-무극리 도로 북단",
+     "ref": "T18"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 02:00",
+    "t": 2,
+    "kind": "night",
+    "duration_h": 3.5,
+    "note": "야간. D일 05:30경 박명"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "dawn",
+    "note": "여명"
+   },
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "dawn",
+    "note": "여명"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 02:00",
+      "t": 2,
+      "mode": "infiltrate",
+      "axis_xy": [
+       [
+        88,
+        178
+       ],
+       [
+        90,
+        172
+       ]
+      ],
+      "from_ref": "T3",
+      "target_ref": "T15",
+      "note": "모도원 부근에서 제2대대 첨병소대와 사격전을 벌였다."
+     },
+     {
+      "when": "D일 새벽",
+      "t": 4,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        90,
+        172
+       ],
+       [
+        82.6,
+        162.4
+       ],
+       [
+        69.7,
+        176.7
+       ]
+      ],
+      "target_ref": "T3",
+      "note": "장갑차 1대, 사이드카 5대, 시체 5구를 남기고 이탈했다."
+     }
+    ]
+   },
+   {
+    "group": "H1",
+    "actions": [
+     {
+      "when": "D일 08:00",
+      "t": 8,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        54.7,
+        134.6
+       ],
+       [
+        69.7,
+        123.9
+       ],
+       [
+        81.9,
+        109.6
+       ]
+      ],
+      "from_ref": "T1",
+      "target_ref": "T4",
+      "note": "1개 중대 규모로 남하하다 제1대대 정찰대의 집중사격을 받아 40여 명이 사살되었다."
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 11:00",
+      "t": 11,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        69.7,
+        123.9
+       ],
+       [
+        81.9,
+        109.6
+       ],
+       [
+        86.1,
+        91
+       ]
+      ],
+      "from_ref": "T8",
+      "target_ref": "T4",
+      "note": "적 본대 1개 대대가 기름고개 서쪽에서 포격하며 제1대대를 공격했다."
+     },
+     {
+      "when": "D일 11:00~D+1일 04:00",
+      "t": 11.0,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        81.9,
+        109.6
+       ],
+       [
+        73,
+        112
+       ],
+       [
+        63,
+        110
+       ]
+      ],
+      "target_ref": "T8",
+      "note": "기름고개 서쪽 보현산-346고지 일대에서 제1대대와 대치했다."
+     },
+     {
+      "when": "D+1일 05:00",
+      "t": 29,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        73,
+        112
+       ],
+       [
+        69.7,
+        123.9
+       ],
+       [
+        54.7,
+        134.6
+       ],
+       [
+        56.9,
+        148.1
+       ]
+      ],
+      "target_ref": "CM1",
+      "note": "보현산을 잃고 무극리 북쪽으로 도주했다. 이 전투에서 270명 사살, 6명 포로, 45mm 대전차포 1문 등을 잃었다."
+     }
+    ]
+   },
+   {
+    "group": "H2",
+    "actions": [
+     {
+      "when": "D+1일 오전",
+      "t": 31,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        57,
+        158
+       ],
+       [
+        56.9,
+        148.1
+       ],
+       [
+        54.7,
+        134.6
+       ]
+      ],
+      "from_ref": "CM1",
+      "target_ref": "T1",
+      "note": "도주한 적이 증원을 받아 1개 연대 규모로 장갑차를 앞세우고 포격하며 제1대대를 압박했다."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D+1일 오전",
+      "t": 31,
+      "mode": "counterattack",
+      "axis_xy": [
+       [
+        57,
+        160
+       ],
+       [
+        56.9,
+        148.1
+       ],
+       [
+        54.7,
+        134.6
+       ]
+      ],
+      "from_ref": "CM1",
+      "target_ref": "T1",
+      "note": "증원 병력과 함께 1개 연대 규모 압력에 가담했다. 연대 주력의 정확한 투입 시각은 서술에 없다."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "H2",
+    "unit": "적 제15사단 증원대대",
+    "entry_when": "D+1일 오전",
+    "entry_t": 30,
+    "from_ref": "T18",
+    "note": "적 측 증원. 도주한 적과 합류해 1개 연대 규모가 되었다. 시각 추정"
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 02:00",
+      "t": 2,
+      "verb": "점령",
+      "text": "무극리-음성 도로 방어를 위해 투입 명령을 받았다.",
+      "ref": "R1"
+     },
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "공격",
+      "text": "음성에서 무극리로 출동했다.",
+      "ref": "R1"
+     },
+     {
+      "when": "D일 08:00",
+      "t": 8,
+      "verb": "격멸",
+      "text": "정찰대가 적 1개 중대에 사격을 집중해 40여 명을 사살했다.",
+      "ref": "T4"
+     },
+     {
+      "when": "D일 11:00",
+      "t": 11,
+      "verb": "방어",
+      "text": "기름고개 정상에서 적 1개 대대의 공격을 받고 연대에 지원을 요청한 뒤 385고지 일대에서 대치했다.",
+      "ref": "T7"
+     },
+     {
+      "when": "D일 저녁",
+      "t": 19,
+      "verb": "방어",
+      "text": "용산리의 제2대대와 연계해 적의 야간침투에 대비했다.",
+      "ref": "CM2"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "역습",
+      "text": "105mm 사격을 346고지로 연신시킨 뒤 제2중대 좌일선, 제1중대 우일선으로 반격했다.",
+      "ref": "CM4"
+     },
+     {
+      "when": "D+1일 05:00",
+      "t": 29,
+      "verb": "탈취",
+      "text": "1시간이 못 되어 보현산을 탈취했다.",
+      "ref": "T8"
+     },
+     {
+      "when": "D+1일 06:00",
+      "t": 30,
+      "verb": "추격",
+      "text": "도주하는 적을 추격해 무극리 북쪽 2km까지 진출했다.",
+      "ref": "CM1"
+     },
+     {
+      "when": "D+1일 오전",
+      "t": 31,
+      "verb": "방어",
+      "text": "적 1개 연대 규모의 압력으로 무극리 확보를 포기하고 백야리 351고지에서 방어로 전환했다.",
+      "ref": "T10"
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 05:00",
+      "t": 5,
+      "verb": "철수",
+      "text": "모도원에서 반전했다.",
+      "ref": "T15"
+     },
+     {
+      "when": "D일 저녁",
+      "t": 19,
+      "verb": "방어",
+      "text": "용산리로 이동해 제1대대와 연계했다.",
+      "ref": "T17"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "공격",
+      "text": "제1대대와 함께 무극리 확보를 위한 공격을 재개하고 추격을 지원했다.",
+      "ref": "CM4"
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일 02:00",
+      "t": 2,
+      "verb": "점령",
+      "text": "병암리 방면으로 이동했다.",
+      "ref": "T11"
+     }
+    ]
+   },
+   {
+    "group": "F5",
+    "actions": [
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "화력지원",
+      "text": "제2포대가 105mm 사격으로 반격을 지원하고 346고지로 연신했다.",
+      "ref": "T9"
+     }
+    ]
+   },
+   {
+    "group": "제7연대",
+    "actions": [
+     {
+      "when": "D일 05:00",
+      "t": 5,
+      "verb": "지휘",
+      "text": "연대본부를 음성으로 옮겼다.",
+      "ref": "T2"
+     },
+     {
+      "when": "D+1일 04:00",
+      "t": 28,
+      "verb": "공격",
+      "text": "제1대대와 제2대대에 공격을 재개해 무극리를 확보하라고 지시했다.",
+      "ref": "T1"
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 02:00",
+    "t": 2,
+    "kind": "night",
+    "note": "야간 명령 하달. 제2대대는 날이 밝은 뒤 교전 결과를 확인했다."
+   },
+   {
+    "when": "D일 야간",
+    "t": 20,
+    "kind": "night",
+    "note": "적의 야간침투에 대비해 대대가 연계했다."
+   }
+  ],
+  "historical_result": {
+   "friendly": "제7연대",
+   "enemy": "적 제48연대",
+   "terrain_held": [
+    "T2",
+    "T4",
+    "T7",
+    "T8",
+    "T10"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "적 270명 사살, 6명 포로, 45mm 대전차포 1문·중기관총 9정·경기관총 1정 노획. 아군 손실은 서술에 없다.",
+   "enemy_loss_pct": 15,
+   "duration_h": 30
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+1일 08:00 제1대대는 보현산을 탈취하고 무극리 북쪽까지 추격했다가 증원된 적 1개 연대 규모의 압력을 받기 시작했다. 이후 무극리를 포기하고 351고지에서 방어로 전환했다. 음성과 기름고개는 확보했다.",
+   "terrain_held_at_horizon": [
+    "T2",
+    "T4",
+    "T7",
+    "T8"
+   ],
+   "enemy_loss_pct": 15,
+   "key_times": [
+    {
+     "t": 5,
+     "text": "제2대대 모도원에서 반전",
+     "ref": "T15"
+    },
+    {
+     "t": 8,
+     "text": "제1대대 정찰대가 적 중대 격파",
+     "ref": "T4"
+    },
+    {
+     "t": 11,
+     "text": "적 대대가 기름고개 공격, 385고지 대치 시작",
+     "ref": "T7"
+    },
+    {
+     "t": 28,
+     "text": "제1대대·제2대대 반격 개시",
+     "ref": "CM4"
+    },
+    {
+     "t": 29,
+     "text": "보현산 탈취",
+     "ref": "T8"
+    },
+    {
+     "t": 30,
+     "text": "무극리 북쪽 2km까지 추격",
+     "ref": "CM1"
+    },
+    {
+     "t": 31,
+     "text": "적 증원 압력, 351고지 방어 전환",
+     "ref": "T10"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_062",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "H2[0]: '도주'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

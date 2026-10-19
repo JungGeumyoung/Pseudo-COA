@@ -1,0 +1,1894 @@
+{
+ "input": {
+  "perspective": {
+   "unit": "아군 연대",
+   "alias": "아군 연대",
+   "echelon": "연대"
+  },
+  "higher_context": {
+   "higher_unit": "상급 사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "상급 사단은 군단 좌익의 마을 1-고지 E-고지 D-고지 C-고지 F-고지 G 주저항선을 방어하고 전방 전초진지를 확보한다.",
+   "higher_intent": "적 제203사단의 고지 C 방향 공격을 고지 A·고지 B 전초진지 선에서 저지한다. 전초가 피탈되면 사단 예비 인접 연대 2로 역습해 회복한다. 사단 포병은 아군 연대 정면에 집중한다.",
+   "assigned_task": "아군 연대는 사단 좌익 주저항선(마을 1-고지 E-고지 D-고지 C)과 전초진지 고지 A·고지 B를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "인접 연대 1",
+     "alias": "인접 연대 1",
+     "side": "우측",
+     "mission": "고지 F-고지 G 일대 사단 우익 주저항선을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      145,
+      75
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "인접 연대 2",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 전초진지 피탈 시 고지 A·고지 B로 역습한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      95,
+      45
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "인접 사단 1",
+     "alias": "인접 사단 1",
+     "side": "좌측(하천 1 좌안)",
+     "mission": "하천 1 좌안의 수도고지 일대를 방어한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      12,
+      120
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ2",
+     "text": "인접 연대 2는 고지 A가 적 대대 이상에게 점령되면 능선 1을 따라 고지 A로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H748",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 고지 A 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H748",
+      "axis_xy": [
+       [
+        95,
+        62
+       ],
+       [
+        100,
+        80
+       ],
+       [
+        100,
+        86
+       ],
+       [
+        101,
+        91
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ2",
+     "text": "인접 연대 2는 고지 B가 적 대대 이상에게 점령되면 고지 K를 거쳐 고지 B로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H572",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 고지 B 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H572",
+      "axis_xy": [
+       [
+        75,
+        75
+       ],
+       [
+        70,
+        90
+       ],
+       [
+        65,
+        105
+       ],
+       [
+        62,
+        118
+       ],
+       [
+        55,
+        128
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ1",
+     "text": "인접 연대 1는 고지 F 일대 주저항선을 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "H720"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "아군 연대 작전지역은 좌측 하천 1에서 우측 고지 C 동쪽 인접 연대 1 경계까지, 주저항선(마을 1-고지 E-고지 D-고지 C)과 그 전방 고지 A·고지 B 전초진지 일대다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 경계(하천 1)",
+     "between": [
+      "아군 연대",
+      "ADJ3"
+     ],
+     "xy": [
+      [
+       30,
+       0
+      ],
+      [
+       30,
+       80
+      ],
+      [
+       32,
+       112
+      ],
+      [
+       42,
+       122
+      ],
+      [
+       46,
+       132
+      ],
+      [
+       38,
+       140
+      ],
+      [
+       30,
+       160
+      ],
+      [
+       28,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "우측 경계(인접 연대 1)",
+     "between": [
+      "아군 연대",
+      "ADJ1"
+     ],
+     "xy": [
+      [
+       115,
+       0
+      ],
+      [
+       115,
+       60
+      ],
+      [
+       116,
+       85
+      ],
+      [
+       125,
+       130
+      ],
+      [
+       130,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "후방 경계",
+     "between": [
+      "아군 연대",
+      "상급 사단"
+     ],
+     "xy": [
+      [
+       30,
+       40
+      ],
+      [
+       115,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 우측"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 좌측"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 후방"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "포병 대대 1",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문",
+    "location": {
+     "note": "고지 C 남쪽 사단 포병진지",
+     "xy": [
+      100,
+      40
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "포병 대대 2",
+    "alias": "포병 대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "155mm 곡사포 18문",
+    "location": {
+     "note": "고지 C 남쪽 사단 포병진지",
+     "xy": [
+      90,
+      38
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "양구 북방 하천 1 상류 만곡부 우측. 고지 C에서 북쪽으로 능선 1이 1.6km 뻗어 고지 A에 이르고, 고지 A에서 동북·서북 능선이 적 진지로 이어진다. 고지 B는 주저항선에서 멀리 떨어져 하천 1 우측 만곡부를 제압한다. 전초진지는 적진에서 감제된다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H748",
+     "name": "고지 A",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 748,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H572",
+     "name": "고지 B",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      55,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 572,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H949",
+     "name": "고지 C",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      100,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 949,
+     "preparation": "fortified"
+    },
+    {
+     "id": "H973",
+     "name": "고지 D",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      75,
+      75
+     ],
+     "estimated": true,
+     "elevation_m": 973,
+     "preparation": "fortified"
+    },
+    {
+     "id": "H780",
+     "name": "고지 E",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      50,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 780,
+     "preparation": "fortified"
+    },
+    {
+     "id": "H720",
+     "name": "고지 F",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      130,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 720
+    },
+    {
+     "id": "H440",
+     "name": "고지 G",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      160,
+      70
+     ],
+     "estimated": true,
+     "elevation_m": 440
+    },
+    {
+     "id": "H741",
+     "name": "고지 H",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      118,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 741,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H590",
+     "name": "고지 I",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      95,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 590,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H662",
+     "name": "고지 J",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      80,
+      155
+     ],
+     "estimated": true,
+     "elevation_m": 662,
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H605",
+     "name": "고지 K",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      62,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 605
+    },
+    {
+     "id": "T1",
+     "name": "마을 1",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      36,
+      65
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "T2",
+     "name": "마을 2",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      72,
+      145
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "RV1F",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      38,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "line": [
+      [
+       28,
+       200
+      ],
+      [
+       30,
+       160
+      ],
+      [
+       38,
+       140
+      ],
+      [
+       46,
+       132
+      ],
+      [
+       42,
+       122
+      ],
+      [
+       32,
+       112
+      ],
+      [
+       30,
+       80
+      ],
+      [
+       28,
+       40
+      ],
+      [
+       26,
+       0
+      ]
+     ]
+    },
+    {
+     "id": "A1",
+     "name": "지점 1",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      48,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    },
+    {
+     "id": "A2",
+     "name": "지점 3",
+     "alias": "지점 3",
+     "kind": "area",
+     "xy": [
+      95,
+      62
+     ],
+     "estimated": true,
+     "elevation_m": 0
+    }
+   ],
+   "routes": [
+    {
+     "id": "RG1",
+     "name": "능선 1",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       80
+      ],
+      [
+       100,
+       84
+      ],
+      [
+       100,
+       88
+      ],
+      [
+       101,
+       91
+      ],
+      [
+       100,
+       96
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG2",
+     "name": "능선 2",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       96
+      ],
+      [
+       104,
+       103
+      ],
+      [
+       108,
+       109
+      ],
+      [
+       113,
+       115
+      ],
+      [
+       118,
+       120
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG3",
+     "name": "능선 3",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       96
+      ],
+      [
+       98,
+       103
+      ],
+      [
+       96,
+       109
+      ],
+      [
+       95,
+       116
+      ],
+      [
+       95,
+       122
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG4",
+     "name": "능선 4",
+     "alias": "능선 4",
+     "kind": "ridge",
+     "xy": [
+      [
+       75,
+       75
+      ],
+      [
+       72,
+       85
+      ],
+      [
+       69,
+       95
+      ],
+      [
+       65,
+       105
+      ],
+      [
+       62,
+       118
+      ],
+      [
+       58,
+       124
+      ],
+      [
+       55,
+       128
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "VL1",
+     "name": "지점 2",
+     "alias": "지점 2",
+     "kind": "valley",
+     "xy": [
+      [
+       72,
+       145
+      ],
+      [
+       68,
+       141
+      ],
+      [
+       64,
+       137
+      ],
+      [
+       59,
+       132
+      ],
+      [
+       55,
+       128
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RD1",
+     "name": "도로 1",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       36,
+       65
+      ],
+      [
+       50,
+       62
+      ],
+      [
+       65,
+       60
+      ],
+      [
+       85,
+       58
+      ],
+      [
+       95,
+       62
+      ],
+      [
+       115,
+       60
+      ],
+      [
+       135,
+       62
+      ],
+      [
+       160,
+       58
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "RV1",
+     "name": "하천 1",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       27,
+       200
+      ],
+      [
+       29,
+       160
+      ],
+      [
+       37,
+       140
+      ],
+      [
+       45,
+       132
+      ],
+      [
+       41,
+       122
+      ],
+      [
+       31,
+       112
+      ],
+      [
+       29,
+       80
+      ],
+      [
+       27,
+       40
+      ],
+      [
+       25,
+       0
+      ],
+      [
+       27,
+       0
+      ],
+      [
+       29,
+       40
+      ],
+      [
+       31,
+       80
+      ],
+      [
+       33,
+       112
+      ],
+      [
+       43,
+       122
+      ],
+      [
+       47,
+       132
+      ],
+      [
+       39,
+       140
+      ],
+      [
+       31,
+       160
+      ],
+      [
+       29,
+       200
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 연대 1",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "[부대] 예하로 고지 A 정면 고지 H-고지 I 간에 배치되어 전초진지에 위력수색과 소규모 야간공격을 반복",
+    "posture": "공격준비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      106,
+      121
+     ],
+     "note": "고지 H-고지 I 간 진지",
+     "frontage_m": 2500,
+     "polygon": [
+      [
+       92,
+       118
+      ],
+      [
+       120,
+       116
+      ],
+      [
+       122,
+       130
+      ],
+      [
+       90,
+       132
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 연대 2",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "[부대] 예하로 마을 2-고지 J 주진지에 배치",
+    "posture": "공격준비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      76,
+      150
+     ],
+     "note": "마을 2-고지 J 주진지",
+     "frontage_m": 2000,
+     "polygon": [
+      [
+       66,
+       142
+      ],
+      [
+       84,
+       140
+      ],
+      [
+       88,
+       160
+      ],
+      [
+       70,
+       162
+      ]
+     ]
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 18:00",
+   "light": "dusk",
+   "notes": "휴전회담 중 소강 국면이나 좌측 수도고지에서 격전이 진행 중. 전초진지는 적진에서 감제되어 주간 기동이 제한된다. 적은 야간 공격을 선호한다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대, 제3대대(연대 예비) / 지원: 사단 포병(105mm 18문 직접지원, 155mm 18문 일반지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "고지 A는 고지 C에서 북쪽으로 뻗은 능선 끝에서 적 주공축선을 억제하는 핵심 지형이고, 고지 B는 하천 1 우측 만곡부를 제압한다. 적 접근로는 고지 A 동북·서북 능선과 마을 2에서 고지 B로 이어지는 협곡이며, 능선 1이 양단되면 고지 A가 고립된다.",
+    "key_terrain": [
+     {
+      "ref": "H748",
+      "why": "적 주공축선을 억제하고 고지 C를 보호하는 전초"
+     },
+     {
+      "ref": "H949",
+      "why": "주저항선의 감제고지이자 적의 최종 목표"
+     },
+     {
+      "ref": "H572",
+      "why": "지점 1를 제압"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "동북능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "RG2"
+      ],
+      "xy": [
+       [
+        118,
+        120
+       ],
+       [
+        113,
+        115
+       ],
+       [
+        108,
+        109
+       ],
+       [
+        104,
+        103
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "서북능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "RG3"
+      ],
+      "xy": [
+       [
+        95,
+        122
+       ],
+       [
+        95,
+        116
+       ],
+       [
+        96,
+        109
+       ],
+       [
+        98,
+        103
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "마을 2 협곡 접근로",
+      "user": "enemy",
+      "refs": [
+       "VL1"
+      ],
+      "xy": [
+       [
+        72,
+        145
+       ],
+       [
+        68,
+        141
+       ],
+       [
+        64,
+        137
+       ],
+       [
+        59,
+        132
+       ],
+       [
+        55,
+        128
+       ]
+      ]
+     },
+     {
+      "name": "능선 1 역습로",
+      "user": "friendly",
+      "refs": [
+       "RG1"
+      ],
+      "xy": [
+       [
+        100,
+        80
+       ],
+       [
+        100,
+        84
+       ],
+       [
+        100,
+        88
+       ],
+       [
+        101,
+        91
+       ],
+       [
+        100,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "능선 4 역습로",
+      "user": "friendly",
+      "refs": [
+       "RG4"
+      ],
+      "xy": [
+       [
+        75,
+        75
+       ],
+       [
+        72,
+        85
+       ],
+       [
+        69,
+        95
+       ],
+       [
+        65,
+        105
+       ],
+       [
+        62,
+        118
+       ],
+       [
+        55,
+        128
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제203사단은 D일 야간 강력한 포격에 이어 2개 연대로 공격해 올 것이다. 제608연대는 고지 H·고지 I에서 동북·서북 능선을 따라 고지 A로 공격하고 일부로 능선 1을 양단한 뒤 고지 C로 공격해 올 것이다. 제609연대는 마을 2에서 협곡을 따라 고지 B로 공격해 올 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "H741",
+       "objective_ref": "H748",
+       "axis_xy": [
+        [
+         118,
+         120
+        ],
+        [
+         113,
+         115
+        ],
+        [
+         108,
+         109
+        ],
+        [
+         104,
+         103
+        ],
+        [
+         100,
+         96
+        ]
+       ],
+       "when": "D일 22:00 이후 포격에 이어",
+       "t": 22
+      },
+      {
+       "group": "E1",
+       "mode": "infiltrate",
+       "from_ref": "H590",
+       "objective_ref": "RG1",
+       "axis_xy": [
+        [
+         95,
+         122
+        ],
+        [
+         95,
+         112
+        ],
+        [
+         96,
+         100
+        ],
+        [
+         98,
+         92
+        ],
+        [
+         100,
+         88
+        ]
+       ],
+       "when": "고지 A 공격과 동시",
+       "t": 22.5
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "T2",
+       "objective_ref": "H572",
+       "axis_xy": [
+        [
+         72,
+         145
+        ],
+        [
+         68,
+         141
+        ],
+        [
+         64,
+         137
+        ],
+        [
+         59,
+         132
+        ],
+        [
+         55,
+         128
+        ]
+       ],
+       "when": "D일 22:30 무렵",
+       "t": 22.5
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "H748",
+       "objective_ref": "H949",
+       "axis_xy": [
+        [
+         100,
+         96
+        ],
+        [
+         101,
+         91
+        ],
+        [
+         100,
+         88
+        ],
+        [
+         100,
+         84
+        ],
+        [
+         100,
+         80
+        ]
+       ],
+       "when": "고지 A 점령에 이어 D+1일 새벽",
+       "t": 28
+      }
+     ],
+     "risk_point": "적 연대 1가 능선 1을 양단하고 고지 C 주저항선으로 돌입하는 때"
+    },
+    "unknowns": [
+     "적 제203인접 연대 2의 위치와 투입 시기",
+     "적 포병 규모",
+     "고지 B 공격 병력 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 제3대대는 고지 C 후사면에 연대 예비로 있고 각 대대는 1개 중대를 대대 예비로 둔다.",
+     "why": "서술에 제3대대와 중대 배치 세부가 없다."
+    },
+    {
+     "text": "전초가 피탈되면 사단은 인접 연대 2로 역습한다.",
+     "why": "사단장의 역습 계획이 서술에 있다."
+    },
+    {
+     "text": "사단 포병 36문이 연대 정면에 화력을 집중한다.",
+     "why": "사단이 포병화력을 이 정면에 집중시키고 있었다."
+    },
+    {
+     "text": "적은 야간에 포격과 함께 공격한다.",
+     "why": "적이 소규모 야간공격을 반복해 왔다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 야간부터 고지 A·고지 B 전초진지와 고지 C 일대 주저항선에서 적 제203사단의 공격을 방어하여 고지 C 주저항선을 확보한다.",
+   "task_verb": "방어",
+   "objective_ref": "H949",
+   "when": {
+    "type": "time_elapsed",
+    "value": 20,
+    "text": "D일 20:00 진지 점령 완료부터"
+   },
+   "purpose": "적 주공축선을 전초진지 선에서 억제하고 하천 1 상류 만곡부를 감제하기 위해"
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A·고지 B 전초와 고지 C 주저항선을 유지하고 적 [부대] 공격부대를 전초 전방에서 격퇴한다.",
+    "friendly": "전초 2개 중대와 주저항선 진지 유지, 연대 예비 보존",
+    "enemy": "적 연대 1·적 연대 2 공격부대가 큰 손실을 입고 출발진지로 물러남",
+    "terrain": "고지 A, 고지 B, 고지 C 확보"
+   },
+   "concept": {
+    "text": "제1대대를 주력으로 949-748 축선을 방어하고 제2대대로 고지 D와 고지 B를 방어한다. 전초 중대는 진지를 고수하고 대대 예비 중대가 능선 양단과 전초 위기에 역습한다. 연대 예비 제3대대는 고지 C 후사면에서 주저항선 돌파구로의 역습을 준비한다.",
+    "maneuver": "제1대대는 제2중대로 고지 A를 고수하고 제1중대로 능선 1을 지킨다. 제2대대는 제7중대로 고지 B를 고수하고 제6중대로 고지 K 축선 역습을 준비한다. 제3대대는 고지 C 후사면에 위치한다.",
+    "fires": "사단 포병은 고지 A 전방 동북·서북 능선 교전지역을 1순위, 고지 B 전방 협곡을 2순위로 차단사격한다. 전초 중대 요청 시 진지 전방 근접 방어사격을 한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM-AA1",
+     "xy": [
+      95,
+      62
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM-BP1",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 고지 C 진지 안에 있음"
+     },
+     "priorities": [
+      "고지 C 주저항선 돌파구 역습",
+      "능선 1 회복",
+      "고지 D 지역 역습"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "EA1",
+      "EA2"
+     ],
+     "restrictions": "전초진지 진내 사격은 해당 중대장 요청 시에만 한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       101,
+       86
+      ],
+      "note": "고지 C 주저항선과 고지 A 전초. 제1중대는 능선 중간에서 대대 예비",
+      "frontage_m": 2500,
+      "preparation": "deliberate",
+      "ref": "CM-BP1",
+      "elements": [
+       {
+        "label": "제2중대(전초)",
+        "xy": [
+         100,
+         96
+        ],
+        "ref": "H748"
+       },
+       {
+        "label": "제1중대(대대 예비)",
+        "xy": [
+         100,
+         85
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         106,
+         80
+        ],
+        "ref": "H949"
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 C 일대 주저항선을 방어한다.",
+       "params": {
+        "area": "CM-BP1"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "제2중대로 고지 A 전초진지를 고수한다.",
+       "params": {
+        "objective": "H748"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "제1중대로 능선 1을 따라 고지 A 방향으로 역습한다.",
+       "params": {
+        "objective": "H748",
+        "route": "CM-RT1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "RG1",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 능선 1 안에 있음"
+       },
+       "basis": "risk_point: 적이 능선 1을 양단해 고지 A를 고립시킴"
+      }
+     ],
+     "purpose": "적 주공을 고지 A에서 저지하고 고지 C를 보호하기 위해"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       62,
+       85
+      ],
+      "note": "고지 E-고지 D 주저항선과 고지 B 전초",
+      "frontage_m": 3500,
+      "preparation": "deliberate",
+      "ref": "CM-BP2",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         50,
+         72
+        ],
+        "ref": "H780"
+       },
+       {
+        "label": "제6중대(대대 예비)",
+        "xy": [
+         72,
+         80
+        ]
+       },
+       {
+        "label": "제7중대(전초)",
+        "xy": [
+         55,
+         128
+        ],
+        "ref": "H572"
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 E-고지 D 주저항선을 방어한다.",
+       "params": {
+        "area": "CM-BP2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "제7중대로 고지 B 전초진지를 고수한다.",
+       "params": {
+        "objective": "H572"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "제6중대로 고지 K를 거쳐 고지 B로 역습한다.",
+       "params": {
+        "objective": "H572",
+        "route": "CM-RT2"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H572",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 고지 B 안에 있음"
+       },
+       "basis": "risk_point: 주저항선에서 먼 고지 B 전초가 대대 규모 공격에 고립됨"
+      }
+     ],
+     "purpose": "하천 1 상류 만곡부를 제압하고 연대 좌측을 보호하기 위해"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       95,
+       62
+      ],
+      "note": "지점 3",
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "ref": "CM-AA1",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         98,
+         64
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         92,
+         63
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         95,
+         59
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "고지 C 후사면 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM-AA1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "고지 C 주저항선의 돌파구로 역습한다.",
+       "params": {
+        "objective": "CM-BP1",
+        "route": "CM-RT3"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM-BP1",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 고지 C 진지 안에 있음"
+       },
+       "basis": "risk_point: 적 연대 1가 고지 C 주저항선으로 돌입"
+      }
+     ],
+     "purpose": "주저항선 돌파를 막고 연대 방어의 종심을 유지하기 위해"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "전초·주저항선 진지 강화와 경계 배치를 D일 20:00까지 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 20,
+       "text": "D일 20:00"
+      }
+     },
+     {
+      "text": "연대 예비와 대대 예비 중대는 D일 21:00까지 역습 준비를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 21,
+       "text": "D일 21:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM-BL1",
+      "name": "제1·제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        88,
+        40
+       ],
+       [
+        88,
+        80
+       ],
+       [
+        86,
+        105
+       ],
+       [
+        82,
+        135
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM-CP1",
+      "name": "인접 연대 1 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        115,
+        80
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM-OP1",
+      "name": "고지 A 전초",
+      "kind": "outpost",
+      "xy": [
+       [
+        100,
+        96
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H748"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM-OP2",
+      "name": "고지 B 전초",
+      "kind": "outpost",
+      "xy": [
+       [
+        55,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H572"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM-BP1",
+      "name": "고지 C 대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        90,
+        74
+       ],
+       [
+        114,
+        74
+       ],
+       [
+        114,
+        90
+       ],
+       [
+        90,
+        90
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H949"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "CM-BP2",
+      "name": "780-고지 D 대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        40,
+        66
+       ],
+       [
+        88,
+        68
+       ],
+       [
+        88,
+        84
+       ],
+       [
+        42,
+        80
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H780",
+       "H973"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "EA1",
+      "name": "고지 A 전방 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        90,
+        100
+       ],
+       [
+        110,
+        100
+       ],
+       [
+        121,
+        118
+       ],
+       [
+        90,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG2",
+       "RG3"
+      ]
+     },
+     {
+      "id": "EA2",
+      "name": "고지 B 전방 협곡 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        54,
+        132
+       ],
+       [
+        62,
+        132
+       ],
+       [
+        74,
+        144
+       ],
+       [
+        66,
+        148
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "VL1"
+      ]
+     },
+     {
+      "id": "CM-AA1",
+      "name": "연대 예비 집결지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        89,
+        57
+       ],
+       [
+        101,
+        57
+       ],
+       [
+        101,
+        67
+       ],
+       [
+        89,
+        67
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "A2"
+      ]
+     },
+     {
+      "id": "CM-RT1",
+      "name": "고지 A 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        80
+       ],
+       [
+        100,
+        84
+       ],
+       [
+        100,
+        88
+       ],
+       [
+        101,
+        91
+       ],
+       [
+        100,
+        96
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG1"
+      ]
+     },
+     {
+      "id": "CM-RT2",
+      "name": "고지 B 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        72,
+        80
+       ],
+       [
+        70,
+        90
+       ],
+       [
+        67,
+        100
+       ],
+       [
+        65,
+        108
+       ],
+       [
+        62,
+        118
+       ],
+       [
+        55,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG4",
+       "H605"
+      ]
+     },
+     {
+      "id": "CM-RT3",
+      "name": "고지 C 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        95,
+        62
+       ],
+       [
+        97,
+        68
+       ],
+       [
+        99,
+        74
+       ],
+       [
+        100,
+        80
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "id": "kb2_021",
+ "schema": "reduced-opord/0.6"
+}

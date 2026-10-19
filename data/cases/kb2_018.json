@@ -1,0 +1,2568 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1952-09-06",
+   "end_date": "1952-09-09",
+   "d_day": "1952-09-06",
+   "order_time": "D일 12:00",
+   "text": "수도고지 및 지형능선 전투 제3차전 중 제26연대의 수도고지 방어, 상실, 역습과 탈환(9. 6. 18:50 적 공격부터 9. 9. 23:20 탈환과 반격 격퇴까지)",
+   "why": "사용자 지정 권장 구간 ③. 한 연대가 한 전초고지를 두고 방어와 연속 역습을 수행한 구간이다."
+  },
+  "perspective_rationale": "구간 시작 때 수도고지 전초와 663고지-어운리 주저항선을 맡은 연대는 제26연대다. 제1연대 1·2대대는 구간 중 사단 예비에서 배속되었으므로 상급 규칙의 조건부 배속·역습으로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "D일 18:50 적 1개 대대 공격으로 제5중대가 수도고지를 상실했다. 제10중대 3차, 제3대대 3차, 제1연대 1대대의 역습이 실패했다. D+3일 20:00 배속된 제1연대 2대대가 근접항공지원과 군단포병 지원으로 23:20 탈환하고 반격을 격퇴했다. 최종 확보했으나 약 3일간 상실했고 손실이 컸다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 좌하단은 금성천 남쪽 사단 후방의 임의점. 수도고지는 663고지 북쪽 약 1.1km, 북한강은 연대 동측으로 추정",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_018_수도고지_및_지형능선_전투",
+  "title": "수도고지 및 지형능선 전투",
+  "dates": "1952. 7. 7.~10. 14.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '수도고지 및 지형능선 전투' (pdf 80쪽)",
+  "pdf_page": 80,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 4,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 16
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "9월 6~8일 수도고지에 중대·대대를 축차로 역습 투입(제10중대 3차, 제3대대 3차, 제1연대 1대대)",
+    "alternative": "처음부터 대대 규모 예비를 집중하고 조공(621고지 견제)과 군단포병을 결합해 한 번에 역습",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "9월 9일 제26연대장이 제3대대 일부로 621고지를 공격해 수도고지의 중공군 전투력을 분산시키고, 제1연대 2대대로 주공",
+    "alternative": "견제 공격 없이 수도고지만 정면으로 재공격",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "10월 6일 이후 575고지·지형능선·수도고지·277고지 전초를 동시에 방어",
+    "alternative": "적이 575고지와 지형능선에 전투력을 집중할 때 예비를 그 방면으로 전환해 증강",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "100일간 5차례 공방전이므로 차전별로 분할. ① 7. 7.~7. 9. 제1연대 3대대의 지형능선 A·B·C고지 공격(백쇼트작전, 7월 9일 제1기갑연대로 임무 인계 전까지) ② 8. 5.~8. 10. 제26연대 3대대의 수도고지 방어·역습(제2차전) ③ 9. 6.~9. 9. 제26연대의 수도고지 상실·탈환(제3차전, 권장 구간) ④ 9. 6.~9. 11. 제1기갑연대의 지형능선·575고지 상실과 역습 실패, 이후 9. 14.~9. 18. 제1연대 3대대의 F·H고지 탈환 ⑤ 9. 28.~9. 29. 제4차전 방어 ⑥ 10. 6.~10. 13. 제5차전(10월 8일 575고지 임무의 제6사단 이관이 경계).",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.6103,
+   "duration_s": 494.1,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 52369,
+     "cache_read_input_tokens": 136841,
+     "cache_creation_input_tokens": 29111
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7729,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18133
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 29,
+   "flagged": [
+    {
+     "id": "X[5]",
+     "verdict": "time_copied",
+     "reason": "근접항공지원 가능 시간을 '초저녁까지'로 확장한 근거가 실제 D+3일 20:00 공격(ADJ3) 시각에 맞춰져 있어 외생 사건이 실제 반응 시각을 따라간 것으로 보인다.",
+     "fix": "항공 가능 시간대를 실제 공격 개시 시각과 무관하게 매일 동일한 표준 창(예: 05:30~19:00)으로 정의하고, 야간 추가 지원 여부는 전투력 조건이나 상급 승인 규칙으로 분리한다."
+    }
+   ],
+   "cost_usd": 0.09340599999999999
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "수도사단 제26연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제26연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "수도사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "수도사단은 교암산 동쪽-765고지-690고지-663고지-어운리 선의 주저항선을 방어하고 575고지, 지형능선, 수도고지 전초를 유지한다.",
+   "higher_intent": "전초고지를 확보해 중공군 접근로를 관측·통제하고 사단 측방 위협을 제거하며 보급로를 유지한다. 전초를 잃으면 즉시 역습해 되찾는다.",
+   "assigned_task": "제26연대는 사단 우측에서 663고지-어운리 주저항선을 방어하고 수도고지 전초를 확보한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "제1기갑연대",
+     "alias": "인접 연대 1",
+     "side": "좌측",
+     "mission": "690고지 일대 주저항선을 방어하고 지형능선과 575고지 전초를 확보한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      80,
+      90
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "제1연대 제1대대",
+     "alias": "인접 대대 1",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 역습을 준비한다.",
+     "type": "infantry",
+     "echelon": "대대",
+     "xy": [
+      100,
+      62
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "제1연대 제2대대",
+     "alias": "인접 대대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 역습을 준비한다.",
+     "type": "infantry",
+     "echelon": "대대",
+     "xy": [
+      88,
+      58
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ2",
+     "text": "적 대대가 수도고지를 장악하고 제3대대(-)가 큰 손실을 입으면 사단은 제1연대 제1대대를 제26연대에 배속해 수도고지를 역습하게 한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "text": "적 대대 이상이 수도고지에 있고 제3대대(-) 손실 0.3 초과",
+      "and": [
+       {
+        "type": "strength_in_area",
+        "text": "적 대대 이상이 수도고지에 있음",
+        "side": "enemy",
+        "ref": "F_SUDO",
+        "min_echelon": "대대"
+       },
+       {
+        "type": "losses_exceed",
+        "text": "제3대대(-) 손실 0.3 초과",
+        "group": "G3",
+        "fraction": 0.3
+       }
+      ]
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F_SUDO",
+      "axis_xy": [
+       [
+        100,
+        62
+       ],
+       [
+        106,
+        76
+       ],
+       [
+        108,
+        86
+       ],
+       [
+        106,
+        95
+       ],
+       [
+        110,
+        101
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ3",
+     "text": "제1연대 제1대대 역습 후에도 적 대대가 수도고지에 있으면 사단은 제1연대 제2대대를 배속해 근접항공지원과 군단포병 지원 아래 수도고지를 공격하게 한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "text": "적 대대 이상이 수도고지에 있고 제1연대 제1대대 손실 0.3 초과",
+      "and": [
+       {
+        "type": "strength_in_area",
+        "text": "적 대대 이상이 수도고지에 있음",
+        "side": "enemy",
+        "ref": "F_SUDO",
+        "min_echelon": "대대"
+       },
+       {
+        "type": "losses_exceed",
+        "text": "제1연대 제1대대 손실 0.3 초과",
+        "group": "ADJ2",
+        "fraction": 0.3
+       }
+      ]
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "F_SUDO",
+      "axis_xy": [
+       [
+        88,
+        58
+       ],
+       [
+        100,
+        70
+       ],
+       [
+        108,
+        84
+       ],
+       [
+        106,
+        95
+       ],
+       [
+        110,
+        101
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "ADJ1",
+     "text": "적 중대 이상이 지형능선을 점령하면 제1기갑연대는 지형능선을 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "text": "적 중대 이상이 지형능선에 있음",
+      "side": "enemy",
+      "ref": "F_JH",
+      "min_echelon": "중대"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F_JH"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "좌측 제1기갑연대와의 전투지경선(663고지 서쪽)부터 우측 북한강까지, 후방 금성천부터 전방 수도고지 전초 북쪽까지.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제1기갑연대-제26연대 전투지경선",
+     "between": [
+      "제1기갑연대",
+      "제26연대"
+     ],
+     "xy": [
+      [
+       96,
+       55
+      ],
+      [
+       96,
+       85
+      ],
+      [
+       97,
+       100
+      ],
+      [
+       98,
+       125
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 우측 경계(북한강)",
+     "between": [
+      "제26연대",
+      "북한강"
+     ],
+     "xy": [
+      [
+       155,
+       55
+      ],
+      [
+       155,
+       125
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제26연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 850,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제26연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 850,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제26연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "수도사단 포병 105mm 대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "105mm 곡사포 18문",
+    "relationship": "직접지원",
+    "location": {
+     "note": "금성천 북쪽 연대 후방 포진지",
+     "xy": [
+      115,
+      62
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "미 공군 근접항공지원",
+    "alias": "항공 1",
+    "echelon": "대대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "요청 시 운용"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "강원도 금성군 원덕면·임남면 일대 해발 500~700m 산악지역. 동쪽 북한강, 남쪽 금성천이 흐른다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F_SUDO",
+     "name": "수도고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      110,
+      101
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주저항선 663고지 전방 전초고지. 접근로 통제와 계곡 관측에 유리",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F_663",
+     "name": "663고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      110,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 663,
+     "evidence": "주저항선 연결 고지. 8월 전투에서 전초 철수 지점",
+     "preparation": "fortified"
+    },
+    {
+     "id": "F_690",
+     "name": "690고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      85,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 690,
+     "evidence": "주저항선 연결 고지"
+    },
+    {
+     "id": "F_765",
+     "name": "765고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      60,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 765,
+     "evidence": "주저항선 연결 고지"
+    },
+    {
+     "id": "F_621",
+     "name": "621고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      126,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 621,
+     "evidence": "제26연대 주저항선 전방 중공군 전초",
+     "preparation": "fortified"
+    },
+    {
+     "id": "F_M",
+     "name": "ㅁ고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      100,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제6중대 전초"
+    },
+    {
+     "id": "F_575",
+     "name": "575고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      65,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 575,
+     "evidence": "제1기갑연대 전초"
+    },
+    {
+     "id": "F_JH",
+     "name": "지형능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      80,
+      103
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주저항선 1km 전방 손가락 모양 능선, 제1기갑연대 전초",
+     "other_names": [
+      "지형능선 A·B·C·F·H고지"
+     ]
+    },
+    {
+     "id": "F_472",
+     "name": "472고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      128,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 472,
+     "evidence": "중공군 제35사단 주방어선",
+     "preparation": "fortified"
+    },
+    {
+     "id": "F_748",
+     "name": "748고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      106,
+      138
+     ],
+     "estimated": true,
+     "elevation_m": 748,
+     "evidence": "중공군 주방어선",
+     "preparation": "fortified"
+    },
+    {
+     "id": "F_747",
+     "name": "747고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      88,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 747,
+     "evidence": "중공군 주방어선",
+     "preparation": "fortified"
+    },
+    {
+     "id": "F_594",
+     "name": "594고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      72,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 594,
+     "evidence": "중공군 주방어선"
+    },
+    {
+     "id": "F_GYOAM",
+     "name": "교암산",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      35,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 주저항선 좌단 기준"
+    },
+    {
+     "id": "F_EOUN",
+     "name": "어운리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      142,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 주저항선 우단"
+    },
+    {
+     "id": "F_GS",
+     "name": "금성천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      110,
+      52
+     ],
+     "line": [
+      [
+       20,
+       58
+      ],
+      [
+       80,
+       54
+      ],
+      [
+       120,
+       50
+      ],
+      [
+       155,
+       48
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "작전지역 남쪽을 관통"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "연대 보급로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       118,
+       48
+      ],
+      [
+       117,
+       62
+      ],
+      [
+       114,
+       74
+      ],
+      [
+       111,
+       83
+      ],
+      [
+       110,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "수도고지 서측 계곡",
+     "alias": "지점 1",
+     "kind": "valley",
+     "xy": [
+      [
+       112,
+       128
+      ],
+      [
+       108,
+       118
+      ],
+      [
+       105,
+       110
+      ],
+      [
+       106,
+       104
+      ],
+      [
+       109,
+       101
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "수도고지 동측 계곡",
+     "alias": "지점 2",
+     "kind": "valley",
+     "xy": [
+      [
+       126,
+       112
+      ],
+      [
+       121,
+       108
+      ],
+      [
+       117,
+       105
+      ],
+      [
+       113,
+       102
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "어운리 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       142,
+       84
+      ],
+      [
+       138,
+       74
+      ],
+      [
+       132,
+       62
+      ],
+      [
+       126,
+       50
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I_NH",
+     "name": "북한강",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       156,
+       40
+      ],
+      [
+       162,
+       40
+      ],
+      [
+       162,
+       160
+      ],
+      [
+       156,
+       160
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "중공군 제35사단 제103연대 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 700,
+    "identified": false,
+    "known_at_start": "621고지와 그 북쪽 계곡 일대 전초 병력으로 파악",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      126,
+      114
+     ],
+     "frontage_m": 800,
+     "ref": "F_621",
+     "note": "621고지 동굴 진지와 북쪽 계곡"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "중공군 제35사단 제103연대(-)",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "472고지-748고지 주방어선, 동굴화 진지",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      118,
+      134
+     ],
+     "polygon": [
+      [
+       100,
+       130
+      ],
+      [
+       135,
+       126
+      ],
+      [
+       135,
+       140
+      ],
+      [
+       100,
+       144
+      ]
+     ],
+     "note": "472고지-748고지 주방어선"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "중공군 제35사단 제105연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "594고지-747고지 일대 사단 중앙, 지형능선 정면",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      80,
+      137
+     ],
+     "polygon": [
+      [
+       66,
+       130
+      ],
+      [
+       96,
+       132
+      ],
+      [
+       96,
+       146
+      ],
+      [
+       66,
+       142
+      ]
+     ],
+     "note": "594고지-747고지 주방어선"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "중공군 제12군 지원 포병",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "7개 포병연대가 제35사단 지원",
+    "identified": true,
+    "known_at_start": "주방어선 후방 포진지",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      110,
+      160
+     ],
+     "note": "주방어선 후방"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 12:00",
+   "light": "day",
+   "notes": "9월 초 산악지역. 일몰 약 19:00. 휴전회담 결렬 위기 속 적의 국지 선제공격 가능성 증가."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대, 제10중대, 제3대대(-제10중대) / 지원: 사단 포병 105mm 대대(직접지원), 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제10중대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3",
+       "part": "제10중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대(-)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3",
+       "part": "-제10중대"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "수도고지는 적 접근로와 계곡을 관측하는 핵심 전초이며 663고지 주저항선의 눈이다. 적 접근로는 621고지에서 수도고지 좌우 계곡으로 이어진다. 663고지는 주저항선과 역습의 발판이다.",
+    "key_terrain": [
+     {
+      "ref": "F_SUDO",
+      "why": "적 접근로 관측·통제, 상실 시 663고지가 직접 감제됨"
+     },
+     {
+      "ref": "F_663",
+      "why": "주저항선 핵심이자 역습 출발점"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "서측 계곡 접근로",
+      "user": "enemy",
+      "refs": [
+       "R2"
+      ],
+      "xy": [
+       [
+        112,
+        128
+       ],
+       [
+        108,
+        118
+       ],
+       [
+        105,
+        110
+       ],
+       [
+        106,
+        104
+       ],
+       [
+        109,
+        101
+       ]
+      ]
+     },
+     {
+      "name": "동측 계곡 접근로",
+      "user": "enemy",
+      "refs": [
+       "R3"
+      ],
+      "xy": [
+       [
+        126,
+        112
+       ],
+       [
+        121,
+        108
+       ],
+       [
+        117,
+        105
+       ],
+       [
+        113,
+        102
+       ]
+      ]
+     },
+     {
+      "name": "역습로",
+      "user": "friendly",
+      "refs": [
+       "CM_RT1"
+      ],
+      "xy": [
+       [
+        110,
+        84
+       ],
+       [
+        108,
+        90
+       ],
+       [
+        106,
+        96
+       ],
+       [
+        110,
+        101
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제103연대는 대규모 공격준비사격 후 야간에 1개 대대로 수도고지 좌우 계곡에서 공격해 올 것이다. 일부는 ㅁ고지를 공격해 고착하고, 수도고지 탈취 후 주방어선 병력으로 고지를 강화할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "from_ref": "F_748",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "when": "D일 18:00 공격준비사격",
+       "t": 18
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "F_621",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         126,
+         114
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         113,
+         102
+        ]
+       ],
+       "when": "D일 19:00 야간",
+       "t": 19
+      },
+      {
+       "group": "E2",
+       "mode": "reinforce",
+       "from_ref": "F_472",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         118,
+         134
+        ],
+        [
+         112,
+         128
+        ],
+        [
+         108,
+         118
+        ],
+        [
+         106,
+         104
+        ],
+        [
+         109,
+         101
+        ]
+       ],
+       "when": "수도고지 탈취 직후",
+       "t": 22
+      }
+     ],
+     "risk_point": "적 대대가 수도고지를 장악하고 주방어선 병력으로 강화한 뒤 663고지로 공격을 이어가는 때"
+    },
+    "unknowns": [
+     "공격 개시 시각과 투입 규모",
+     "동굴 진지에 은닉된 후속 병력 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 제2대대는 제5중대를 수도고지, 제6중대를 663고지와 ㅁ고지에 둔다.",
+     "why": "서술은 제5중대 수도고지 방어와 8월의 제6중대 ㅁ고지 전초만 밝힌다."
+    },
+    {
+     "text": "제10중대는 연대장 직접 통제 역습부대로 663고지 후사면에 둔다.",
+     "why": "서술에 '제2대대 10중대'가 연대장 명령으로 역습했다고 되어 있다."
+    },
+    {
+     "text": "정면의 적은 제35사단 제103연대로 본다.",
+     "why": "적 사단 배치상 동측 연대로 추정했다."
+    },
+    {
+     "text": "연대 역습이 실패하면 사단 예비 제1연대 대대가 배속된다.",
+     "why": "사단이 전초 상실 시 즉시 역습 방침을 유지했다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제26연대는 D일부터 663고지-어운리 주저항선과 수도고지 전초를 방어하여 중공군 접근로에 대한 관측·통제를 유지한다.",
+   "task_verb": "방어",
+   "objective_ref": "F_SUDO",
+   "when": {
+    "type": "time_elapsed",
+    "text": "D일 12:00부",
+    "value": 12
+   },
+   "purpose": "중공군 접근로에 대한 관측·통제를 유지하고 사단 우측방을 확보한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "수도고지와 663고지-어운리 주저항선을 확보하고 적 공격 대대를 진지 전방에서 격퇴한다.",
+    "friendly": "전 대대가 주저항선을 유지하고 예비는 역습 능력을 보유한다.",
+    "enemy": "적 제103연대 공격 대대가 격퇴된다.",
+    "terrain": "수도고지, 663고지 확보"
+   },
+   "concept": {
+    "text": "제2대대가 수도고지 전초와 663고지를 고수하고 제1대대가 어운리까지 주저항선을 방어한다. 적이 수도고지에 들어오면 제10중대가 즉시 역습하고, 실패하면 제3대대(-)가 역습한다.",
+    "maneuver": "제2대대 주력, 제1대대 우측 방어, 제10중대 즉각 역습, 제3대대(-) 2차 역습.",
+    "fires": "포병 우선은 제2대대에 둔다. 수도고지 좌우 계곡을 교전지역으로 하여 탄막사격을 준비하고, 역습 시 수도고지 정상과 621고지에 화력을 집중한다.",
+    "main_effort": "G2",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "CM_AA1",
+     "xy": [
+      110,
+      84
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "text": "적 중대 이상이 수도고지에 있음",
+      "side": "enemy",
+      "ref": "F_SUDO",
+      "min_echelon": "중대"
+     },
+     "priorities": [
+      "수도고지 역습",
+      "663고지 돌파 저지"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G2",
+      "G4"
+     ],
+     "zone_refs": [
+      "CM_EA1"
+     ],
+     "restrictions": "역습 부대 돌입 시 수도고지 정상 사격을 연신한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G2",
+     "purpose": "적 접근로를 관측하고 주저항선 핵심을 유지한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       108,
+       94
+      ],
+      "frontage_m": 2000,
+      "preparation": "deliberate",
+      "polygon": [
+       [
+        97,
+        86
+       ],
+       [
+        120,
+        86
+       ],
+       [
+        120,
+        103
+       ],
+       [
+        97,
+        103
+       ]
+      ],
+      "note": "제5중대 수도고지 전초, 제6중대 663고지·ㅁ고지, 제7중대 663고지 동측",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         110,
+         101
+        ],
+        "ref": "F_SUDO"
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         104,
+         90
+        ]
+       },
+       {
+        "label": "제6중대 전초",
+        "xy": [
+         100,
+         99
+        ],
+        "ref": "F_M"
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         117,
+         89
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "제5중대로 수도고지 전초를 고수한다.",
+       "params": {
+        "objective": "F_SUDO"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "663고지와 ㅁ고지를 방어한다.",
+       "params": {
+        "area": "CM_BP2"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G1",
+     "purpose": "연대 우측과 보급로를 보호한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       135,
+       86
+      ],
+      "frontage_m": 2500,
+      "preparation": "deliberate",
+      "polygon": [
+       [
+        120,
+        80
+       ],
+       [
+        155,
+        80
+       ],
+       [
+        155,
+        94
+       ],
+       [
+        120,
+        94
+       ]
+      ],
+      "note": "663고지 동측부터 어운리, 북한강까지",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         127,
+         89
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         142,
+         87
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         134,
+         81
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "663고지 동측에서 어운리까지 주저항선을 방어한다.",
+       "params": {
+        "area": "CM_BP1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "수도고지를 즉시 되찾는다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       110,
+       84
+      ],
+      "frontage_m": 400,
+      "preparation": "hasty",
+      "note": "663고지 후사면",
+      "elements": [
+       {
+        "label": "제10중대",
+        "xy": [
+         110,
+         84
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "663고지 후사면 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM_AA1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "서측 역습로로 수도고지를 역습한다.",
+       "params": {
+        "objective": "F_SUDO",
+        "route": "CM_RT1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "적 중대 이상이 수도고지에 있음",
+        "side": "enemy",
+        "ref": "F_SUDO",
+        "min_echelon": "중대"
+       },
+       "basis": "risk_point: 적이 수도고지를 장악하고 강화하기 전 즉시 역습"
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "1차 역습 실패 시 수도고지를 되찾고 주저항선 종심을 유지한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       119,
+       75
+      ],
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "note": "연대 후방 보급로 일대",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         115,
+         76
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         122,
+         77
+        ]
+       },
+       {
+        "label": "제12중대",
+        "xy": [
+         119,
+         71
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "연대 후방 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM_AA2"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "동측 역습로로 수도고지를 역습한다.",
+       "params": {
+        "objective": "F_SUDO",
+        "route": "CM_RT2"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "적 중대 이상이 수도고지에 있고 제10중대 손실 0.4 초과",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "text": "적 중대 이상이 수도고지에 있음",
+          "side": "enemy",
+          "ref": "F_SUDO",
+          "min_echelon": "중대"
+         },
+         {
+          "type": "losses_exceed",
+          "text": "제10중대 손실 0.4 초과",
+          "group": "G4",
+          "fraction": 0.4
+         }
+        ]
+       },
+       "basis": "가정: 즉각 역습이 실패하면 적이 고지를 강화하므로 대대 규모 역습이 필요"
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "전 진지 점령과 탄막 계획 완료",
+      "event": {
+       "type": "time_elapsed",
+       "text": "D일 12:00",
+       "value": 12
+      }
+     },
+     {
+      "text": "예비 역습 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "text": "D일 18:00",
+       "value": 18
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM_BP2",
+      "name": "제2대대 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        97,
+        86
+       ],
+       [
+        120,
+        86
+       ],
+       [
+        120,
+        103
+       ],
+       [
+        97,
+        103
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "F_663",
+       "F_SUDO",
+       "F_M"
+      ]
+     },
+     {
+      "id": "CM_BP1",
+      "name": "제1대대 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        120,
+        80
+       ],
+       [
+        155,
+        80
+       ],
+       [
+        155,
+        94
+       ],
+       [
+        120,
+        94
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "F_EOUN"
+      ]
+     },
+     {
+      "id": "CM_BND",
+      "name": "제1·2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        120,
+        70
+       ],
+       [
+        120,
+        94
+       ],
+       [
+        122,
+        110
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_OP1",
+      "name": "수도고지 전초",
+      "kind": "outpost",
+      "xy": [
+       [
+        110,
+        101
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F_SUDO"
+      ]
+     },
+     {
+      "id": "CM_EA1",
+      "name": "교전지역 1(수도고지 좌우 계곡)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        103,
+        103
+       ],
+       [
+        124,
+        103
+       ],
+       [
+        128,
+        116
+       ],
+       [
+        106,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R2",
+       "R3"
+      ]
+     },
+     {
+      "id": "CM_AA1",
+      "name": "제10중대 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        107,
+        82
+       ],
+       [
+        113,
+        82
+       ],
+       [
+        113,
+        86
+       ],
+       [
+        107,
+        86
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_AA2",
+      "name": "제3대대 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        113,
+        69
+       ],
+       [
+        125,
+        69
+       ],
+       [
+        125,
+        79
+       ],
+       [
+        113,
+        79
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_RT1",
+      "name": "서측 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        110,
+        84
+       ],
+       [
+        108,
+        90
+       ],
+       [
+        106,
+        96
+       ],
+       [
+        108,
+        99
+       ],
+       [
+        110,
+        101
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_RT2",
+      "name": "동측 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        119,
+        75
+       ],
+       [
+        117,
+        85
+       ],
+       [
+        116,
+        92
+       ],
+       [
+        114,
+        98
+       ],
+       [
+        111,
+        101
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 12:00",
+  "start_t": 12,
+  "horizon_h": 86,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "아군 연대 건제 대대 전투력 30% 미만(제2대대와 제3대대(-) 손실 모두 0.7 초과)",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "제2대대 손실 0.7 초과",
+      "group": "G2",
+      "fraction": 0.7
+     },
+     {
+      "type": "losses_exceed",
+      "text": "제3대대(-) 손실 0.7 초과",
+      "group": "G3",
+      "fraction": 0.7
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "휴전회담 결렬 위기 속 국지 선제공격으로 장차 공세의 발판이 될 수도고지와 지형능선 전초를 동시에 탈취하고, 동굴 진지의 후속 병력으로 교대·강화하며 국군의 역습을 포격과 반격으로 격퇴한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "수도고지, 663고지, 지형능선, 575고지에 공격준비사격을 집중한다.",
+       "basis": "서술: D일 18:50 공격준비사격 완료 후 공격, 지형능선은 18:40부터 전투. 개시 시각 18:00은 추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 18:00",
+        "value": 18
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "수도고지로 역습하는 국군에게 집중 포격한다.",
+       "basis": "서술: 치열한 포격과 역습 직전 제1연대 1대대장 부상. 문턱 추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         108,
+         90
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 제2대대 방어지역(수도고지 남쪽 접근로) 안에 있음",
+        "side": "friendly",
+        "ref": "CM_BP2",
+        "min_echelon": "중대"
+       },
+       "repeat": {
+        "max": 10,
+        "interval_h": 4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "1개 대대로 수도고지 좌우 계곡에서 수도고지를 공격한다.",
+       "basis": "서술: D일 18:50 1개 대대가 좌우측 계곡으로부터 공격",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         126,
+         114
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         113,
+         102
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 18:50",
+        "value": 18.83
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "수도고지를 점령해 진지를 강화한다.",
+       "basis": "서술: 고지 탈취 후 여섯 차례 역습을 격퇴",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         101
+        ]
+       ]
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "수도고지에 들어온 국군을 반격한다.",
+       "basis": "추정: 8월 전투와 같이 고지 쟁탈 반복",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         113,
+         104
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 수도고지에 있음",
+        "side": "friendly",
+        "ref": "F_SUDO",
+        "min_echelon": "중대"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 3
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "621고지로 철수한다.",
+       "basis": "추정: 대대 전투력 소진 시 철수",
+       "objective_ref": "F_621",
+       "axis_xy": [
+        [
+         110,
+         101
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         126,
+         114
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "적 공격 대대 손실 0.6 초과",
+        "group": "E1",
+        "fraction": 0.6
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "621고지 동굴 진지의 후속 대대로 수도고지 병력을 증원·교대한다.",
+       "basis": "추정: 약 3일간 연속 역습을 견딘 것은 후속 병력 투입을 뜻함",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         124,
+         118
+        ],
+        [
+         121,
+         108
+        ],
+        [
+         117,
+         105
+        ],
+        [
+         113,
+         102
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "적 공격 대대 손실 0.3 초과",
+        "group": "E1",
+        "fraction": 0.3
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "수도고지를 고수한다.",
+       "basis": "추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         110,
+         101
+        ]
+       ]
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "수도고지를 탈취한 국군을 반격한다.",
+       "basis": "서술: 탈환 직후 중공군 반격. 문턱 추정",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         121,
+         108
+        ],
+        [
+         113,
+         102
+        ],
+        [
+         110,
+         101
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 대대 이상이 수도고지에 있음",
+        "side": "friendly",
+        "ref": "F_SUDO",
+        "min_echelon": "대대"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 2
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "주방어선에서 1개 중대를 서측 계곡으로 보내 수도고지를 강화한다.",
+       "basis": "추정: 수도고지 장악 대대가 큰 손실을 입으면 주방어선 병력으로 보강",
+       "objective_ref": "F_SUDO",
+       "axis_xy": [
+        [
+         118,
+         134
+        ],
+        [
+         112,
+         128
+        ],
+        [
+         108,
+         118
+        ],
+        [
+         105,
+         110
+        ],
+        [
+         109,
+         101
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "후속 대대 손실 0.4 초과",
+        "group": "H1",
+        "fraction": 0.4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "각 1개 중대로 지형능선과 575고지 전초를 공격한다.",
+       "basis": "서술: D일 18:40 지형능선·575고지에 각각 중대 병력 공격",
+       "objective_ref": "F_JH",
+       "axis_xy": [
+        [
+         80,
+         137
+        ],
+        [
+         80,
+         125
+        ],
+        [
+         80,
+         112
+        ],
+        [
+         80,
+         103
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 18:40",
+        "value": 18.67
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "지형능선과 575고지를 고수한다.",
+       "basis": "서술: 제1기갑연대 6차 역습 격퇴",
+       "objective_ref": "F_JH",
+       "axis_xy": [
+        [
+         80,
+         103
+        ]
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제35사단 제103연대 후속 1개 대대",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 700,
+    "position": {
+     "xy": [
+      124,
+      118
+     ],
+     "ref": "F_621",
+     "note": "621고지 북쪽 동굴 진지에 은닉된 후속 대대(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:00",
+    "t": 19,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "D일 야간, 05:30 여명"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 13.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 19:00",
+    "t": 43,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "D+1일 야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 13.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 19:00",
+    "t": 67,
+    "kind": "night",
+    "duration_h": 10.5,
+    "note": "D+2일 야간"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "air_window",
+    "duration_h": 15.5,
+    "note": "주간 및 초저녁 근접항공지원 가능(서술상 D+3일 20:00 공격 시 근접항공지원)"
+   },
+   {
+    "when": "D+3일 19:00",
+    "t": 91,
+    "kind": "night",
+    "duration_h": 7,
+    "note": "D+3일 야간"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D일 18:00~18:50",
+      "t": 18,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        110,
+        160
+       ],
+       [
+        110,
+        101
+       ]
+      ],
+      "target_ref": "F_SUDO",
+      "note": "수도고지와 지형능선·575고지에 공격준비사격 집중(개시 시각 추정)"
+     },
+     {
+      "when": "D일 20:50~D+3일",
+      "t": 20.83,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        110,
+        160
+       ],
+       [
+        108,
+        90
+       ]
+      ],
+      "target_ref": "F_SUDO",
+      "note": "역습 부대에 대한 치열한 포격, D+1일 오후 제1연대 1대대장 부상"
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 18:50",
+      "t": 18.83,
+      "mode": "attack",
+      "from_ref": "F_621",
+      "target_ref": "F_SUDO",
+      "axis_xy": [
+       [
+        126,
+        114
+       ],
+       [
+        121,
+        108
+       ],
+       [
+        117,
+        105
+       ],
+       [
+        113,
+        102
+       ],
+       [
+        110,
+        101
+       ]
+      ],
+      "note": "1개 대대로 좌우측 계곡에서 수도고지 공격, 제5중대 제1소대 전원 전사"
+     },
+     {
+      "when": "D일 20:00경",
+      "t": 20,
+      "mode": "hold",
+      "target_ref": "F_SUDO",
+      "axis_xy": [
+       [
+        110,
+        101
+       ]
+      ],
+      "note": "수도고지 점령(시각 추정) 후 제10중대 3차, 제3대대 3차 역습 격퇴"
+     }
+    ]
+   },
+   {
+    "group": "H1",
+    "actions": [
+     {
+      "when": "D+1일 중",
+      "t": 36,
+      "mode": "reinforce",
+      "from_ref": "F_621",
+      "target_ref": "F_SUDO",
+      "axis_xy": [
+       [
+        124,
+        118
+       ],
+       [
+        121,
+        108
+       ],
+       [
+        113,
+        102
+       ]
+      ],
+      "note": "후속 병력으로 수도고지 강화, 제1연대 1대대 역습을 D+2일 14:00 이후까지 격퇴(추정)"
+     },
+     {
+      "when": "D+3일 23:20 이후",
+      "t": 95.33,
+      "mode": "counterattack",
+      "target_ref": "F_SUDO",
+      "axis_xy": [
+       [
+        121,
+        108
+       ],
+       [
+        113,
+        102
+       ],
+       [
+        110,
+        101
+       ]
+      ],
+      "note": "탈환 직후 반격, 제1연대 2대대에 격퇴됨"
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 18:40",
+      "t": 18.67,
+      "mode": "attack",
+      "target_ref": "F_JH",
+      "axis_xy": [
+       [
+        80,
+        137
+       ],
+       [
+        80,
+        125
+       ],
+       [
+        80,
+        103
+       ]
+      ],
+      "note": "중대 병력으로 지형능선, 575고지 전초 점령, 이후 6차 역습 격퇴"
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "ADJ2",
+    "unit": "제1연대 제1대대",
+    "entry_when": "D+1일 오후(15:30 역습 개시)",
+    "entry_t": 39.5,
+    "from_ref": "F_GS",
+    "note": "사단 예비에서 배속. 대대장 부상으로 제26연대 제3대대장이 임시 지휘"
+   },
+   {
+    "id": "ADJ3",
+    "unit": "제1연대 제2대대",
+    "entry_when": "D+3일 20:00 공격 개시",
+    "entry_t": 92,
+    "from_ref": "F_GS",
+    "note": "사단 예비에서 배속, 근접항공지원과 군단포병 지원"
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 18:50",
+      "t": 18.83,
+      "verb": "고수",
+      "ref": "F_SUDO",
+      "text": "제5중대가 적 접근을 저지하다 포격과 병력 열세로 수도고지를 상실했다. 제1소대장 이하 소대원 전원 전사."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일 20:50",
+      "t": 20.83,
+      "verb": "역습",
+      "ref": "F_SUDO",
+      "text": "연대장 명령으로 제10중대가 수도고지를 역습했다. D+1일 새벽까지 3차 역습 모두 실패."
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D+1일 새벽~오전",
+      "t": 30,
+      "verb": "역습",
+      "ref": "F_SUDO",
+      "text": "제3대대가 세 차례 역습했으나 실패했다."
+     },
+     {
+      "when": "D+3일 20:00",
+      "t": 92,
+      "verb": "견제",
+      "ref": "F_621",
+      "text": "연대장 결심으로 제3대대 일부가 621고지를 공격해 수도고지의 적 전투력을 분산시켰다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ2",
+    "actions": [
+     {
+      "when": "D+1일 15:30",
+      "t": 39.5,
+      "verb": "역습",
+      "ref": "F_SUDO",
+      "text": "제1연대 제1대대가 제26연대 제3대대장 임시 지휘로 역습했다. D+2일 14:00까지 공격했고 이후에도 탈환에 실패했다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ3",
+    "actions": [
+     {
+      "when": "D+3일 20:00",
+      "t": 92,
+      "verb": "공격",
+      "ref": "F_SUDO",
+      "text": "제1연대 제2대대가 근접항공지원과 군단포병 지원으로 수도고지를 공격했다."
+     },
+     {
+      "when": "D+3일 23:20",
+      "t": 95.33,
+      "verb": "고수",
+      "ref": "F_SUDO",
+      "text": "수도고지를 탈취하고 적 반격을 격퇴했다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ1",
+    "actions": [
+     {
+      "when": "D일 21:30",
+      "t": 21.5,
+      "verb": "역습",
+      "ref": "F_JH",
+      "text": "제1기갑연대가 제5중대 역습을 시작으로 지형능선에 6차 역습했으나 모두 실패했다."
+     },
+     {
+      "when": "D+2일 18:00",
+      "t": 66,
+      "verb": "방어",
+      "ref": "F_690",
+      "text": "사단장 명령으로 지형능선 역습을 중단했다."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 19:00~D+1일 05:30",
+    "t": 19,
+    "kind": "night",
+    "note": "적 공격과 제10중대 역습이 야간에 진행"
+   },
+   {
+    "when": "D+3일 20:00",
+    "t": 92,
+    "kind": "air",
+    "ref": "F_SUDO",
+    "note": "미 공군 근접항공지원이 제1연대 2대대 공격을 지원"
+   }
+  ],
+  "historical_result": {
+   "friendly": "제26연대(+제1연대 제1·2대대 배속)",
+   "enemy": "중공군 제35사단 제103연대 1개 대대 이상(추정)",
+   "terrain_held": [
+    "F_SUDO",
+    "F_663"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "구간 손실 집계 미상. 제5중대 제1소대 전원 전사, 연속 역습으로 제10중대·제3대대·제1연대 1대대 손실 큼. 적도 반복 역습과 포격에 큰 손실(추정).",
+   "friendly_loss_pct": 20,
+   "enemy_loss_pct": 40,
+   "duration_h": 77
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "수도고지를 배속된 제1연대 제2대대가 확보하고 적 반격을 격퇴함. 663고지 주저항선 유지. 인접 지형능선·575고지는 적 수중.",
+   "terrain_held_at_horizon": [
+    "F_SUDO",
+    "F_663",
+    "F_EOUN"
+   ],
+   "key_times": [
+    {
+     "t": 18.83,
+     "text": "적 1개 대대 수도고지 공격 개시",
+     "ref": "F_SUDO"
+    },
+    {
+     "t": 20,
+     "text": "제5중대 수도고지 상실(추정)",
+     "ref": "F_SUDO"
+    },
+    {
+     "t": 20.83,
+     "text": "제10중대 1차 역습",
+     "ref": "F_SUDO"
+    },
+    {
+     "t": 30,
+     "text": "제3대대 역습 실패",
+     "ref": "F_SUDO"
+    },
+    {
+     "t": 39.5,
+     "text": "제1연대 1대대 역습 개시",
+     "ref": "F_SUDO"
+    },
+    {
+     "t": 92,
+     "text": "제1연대 2대대 공격 개시, 제3대대 일부 621고지 견제",
+     "ref": "F_SUDO"
+    },
+    {
+     "t": 95.33,
+     "text": "수도고지 탈환",
+     "ref": "F_SUDO"
+    }
+   ],
+   "friendly_loss_pct": 20,
+   "enemy_loss_pct": 40
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb2_018",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

@@ -1,0 +1,5 @@
+__pycache__/
+*.pyc
+sim_input.json
+eval_target.json
+given.json

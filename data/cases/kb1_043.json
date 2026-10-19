@@ -1,0 +1,2650 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-06-26",
+   "end_date": "1950-06-27",
+   "d_day": "1950-06-26",
+   "order_time": "D-1일 23:00",
+   "text": "소양교 전투 전체: 제7연대가 옥산포 역습 뒤 소양강 남안 주저항선으로 물러나 방어를 시작한 D일 03:00부터 주저항선이 돌파되어 춘천 시가지로 철수를 결심한 D+1일 정오까지",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 연대의 첫 결심으로 둔다. 이 결심은 옥산포 역습 직후 제1대대를 우두산에서 소양강 남안 계획 진지로 물리고 소양교 정면을 방어하기로 한 것이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제6사단 제7연대를 쓴다. 제7연대는 소양교와 봉의산 정면의 작전지역을 맡았고 서술의 대부분이 이 연대의 방어다. 근화동의 제19연대와 가래모기의 사단 근무대대는 인접 부대로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "D일에는 SU-76 자주포 3대를 소양교에서 파괴하고 종일 적의 도하를 저지했다. 그러나 D+1일 10:00 소양강 최후저항선이 돌파되어 정오경 춘천 시가지로 철수했고, 이어 486고지로 이탈했다. 북한군 제2사단의 진출을 지연시켜 서울 우회 포위 계획은 좌절시켰다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "임의 원점. 캔버스 (0,0)을 춘천 시가지 남서쪽 약 10km 지점에 두고 소양교를 (105,107)에 둔다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_043_소양교_전투",
+  "title": "소양교 전투",
+  "dates": "1950. 6. 26.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '소양교 전투' (pdf 202쪽)",
+  "pdf_page": 202,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 21,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 3,
+    "B4": 2,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 7,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "26일 새벽 5시 제7연대 1대대를 소양강 북안 옥산포 능선에서 남안의 계획된 진지로 철수시켜 하천선에서 방어",
+    "alternative": "북안 옥산포·우두산 진지를 계속 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "소양교 남안에 대전차포 진지를 두어 교량을 건너는 자주포를 직접 사격으로 파괴",
+    "alternative": "교량 통로에 대전차 화기를 두지 않거나 다른 곳에 배치",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "27일 정오경 최후저항선 돌파 후 춘천시가지 지연과 486고지 급편방어로 전환",
+    "alternative": "소양강 남안 진지에서 계속 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.0363,
+   "duration_s": 273.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 25470,
+     "cache_read_input_tokens": 46733,
+     "cache_creation_input_tokens": 30722
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7892,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 13861
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [
+    {
+     "id": "E:E1[1]",
+     "verdict": "disguised_result",
+     "reason": "적이 우두동을 거쳐 소양강 북안까지 진출한 범위는 국군 제1대대가 실제로 저지하며 철수·도하한 전투 결과이지 적이 스스로 정한 공격 목표선이 아니다.",
+     "fix": "진출 범위를 특정하지 않고 '우두동 방향 공격 계속'으로 바꾸거나 북안 진출 여부는 history로 옮긴다."
+    }
+   ],
+   "cost_usd": 0.0748996
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "제6사단 제7연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제7연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제6사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제6사단"
+   ],
+   "higher_mission": "제6사단은 춘천 정면에서 북한군 제2사단의 남하를 저지하여 적이 춘천을 거쳐 서울을 우회하는 기동을 거부한다.",
+   "higher_intent": "소양강을 장애물로 이용한다. 남안 주저항선에서 적의 도하를 저지하고 춘천 시가지와 소양교를 가능한 오래 확보한다.",
+   "assigned_task": "제7연대는 소양교와 봉의산 정면의 소양강 남안 주저항선을 방어하여 적의 소양교 도하를 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "제19연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서측)",
+     "mission": "근화동 일대 소양강 남안을 방어한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      82,
+      95
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "제6사단 근무대대",
+     "alias": "인접 대대 1",
+     "side": "좌후방(서측)",
+     "mission": "가래모기 도하점 남안에서 적의 도하를 저지한다.",
+     "echelon": "대대",
+     "type": "other",
+     "xy": [
+      68,
+      96
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ1",
+     "text": "제19연대 제1대대는 D일 10:00까지 근화동 소양강변 진지를 점령한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 10,
+      "text": "D일 10:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F7"
+     }
+    },
+    {
+     "unit": "ADJ2",
+     "text": "사단 근무대대는 가래모기 남안에서 적의 도하를 저지한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 3,
+      "text": "D일 03:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F8"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제7연대 작전지역은 우두산·우두동에서 소양교를 거쳐 봉의산과 춘천 시가지 동부에 이르는 지역이다. 서측은 근화동의 제19연대와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제7연대-제19연대 전투지경선",
+     "between": [
+      "제7연대",
+      "ADJ1"
+     ],
+     "xy": [
+      [
+       92,
+       60
+      ],
+      [
+       90,
+       92
+      ],
+      [
+       88,
+       103
+      ],
+      [
+       82,
+       125
+      ],
+      [
+       72,
+       155
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "AF1",
+    "unit": "제7연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "location": {
+     "note": "옥산포 역습 뒤 옥산포 우측 능선과 우두산 일대에서 적과 접촉 중",
+     "ref": "F12",
+     "xy": [
+      92,
+      136
+     ]
+    }
+   },
+   {
+    "id": "AF2",
+    "unit": "제7연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 소양강 남안"
+    }
+   },
+   {
+    "id": "AF3",
+    "unit": "제7연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 봉의산 후방"
+    }
+   },
+   {
+    "id": "AF4",
+    "unit": "제7연대 대전차포중대",
+    "alias": "대전차포중대",
+    "echelon": "중대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "57mm 대전차포 6문",
+    "location": {
+     "note": "연대 작전지역 내 소양강 남안"
+    }
+   },
+   {
+    "id": "AF5",
+    "unit": "제16포병대대(-) 제1·2포대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 2개 포대",
+    "location": {
+     "note": "춘천 시가지 남쪽 포진지",
+     "xy": [
+      105,
+      72
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "춘천 북부다. 소양강이 동북에서 서남으로 흘러 북안의 우두산·우두동과 남안의 봉의산·춘천 시가지를 가른다. 소양교가 유일한 교량이고 서쪽 가래모기에 도섭점이 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "소양강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      105,
+      107
+     ],
+     "line": [
+      [
+       200,
+       130
+      ],
+      [
+       160,
+       121
+      ],
+      [
+       130,
+       112
+      ],
+      [
+       105,
+       107
+      ],
+      [
+       85,
+       101
+      ],
+      [
+       68,
+       100
+      ],
+      [
+       40,
+       97
+      ],
+      [
+       0,
+       93
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양교로 우두동과 춘천 시내를 연결한다. 제2대대가 도하 공격했다 돌아온 것으로 보아 일부 구간은 도섭이 가능하다."
+    },
+    {
+     "id": "F2",
+     "name": "소양교",
+     "alias": "지점 1",
+     "kind": "bridge",
+     "xy": [
+      105,
+      107
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "우두동과 춘천 시내를 잇는 가교로 춘천 진입의 관문이다."
+    },
+    {
+     "id": "F3",
+     "name": "봉의산",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      118,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 301,
+     "evidence": "다리 남쪽에 연대 전술지휘소와 관측소가 있다. 소양강과 우두산을 감제하며 중턱과 제방에 화기진지가 있다.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F4",
+     "name": "우두산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      95,
+      126
+     ],
+     "estimated": true,
+     "elevation_m": 133,
+     "evidence": "소양강 북안의 제1대대 진지다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F5",
+     "name": "옥산포",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      78,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전날 옥산포 전투 지역이다."
+    },
+    {
+     "id": "F6",
+     "name": "우두동",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      102,
+      117
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양교 북단 마을이다."
+    },
+    {
+     "id": "F7",
+     "name": "근화동",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      82,
+      95
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제19연대 방어지역이자 적 조공 지역이다."
+    },
+    {
+     "id": "F8",
+     "name": "가래모기",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      68,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양강 서쪽 도섭점으로 근화동 남안에 닿는다."
+    },
+    {
+     "id": "F9",
+     "name": "춘천 시가지",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      102,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양교 남쪽 시가지다."
+    },
+    {
+     "id": "F10",
+     "name": "486고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      175,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 486,
+     "evidence": "춘천 동쪽 고지다."
+    },
+    {
+     "id": "F11",
+     "name": "소양강 남안 제방",
+     "alias": "지점 3",
+     "kind": "other",
+     "xy": [
+      108,
+      103
+     ],
+     "line": [
+      [
+       88,
+       99
+      ],
+      [
+       105,
+       104
+      ],
+      [
+       130,
+       109
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제방에 화기진지가 구축되어 있다.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F12",
+     "name": "옥산포 우측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      92,
+      136
+     ],
+     "line": [
+      [
+       86,
+       145
+      ],
+      [
+       92,
+       136
+      ],
+      [
+       95,
+       126
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대가 확보 중이던 능선 진지다.",
+     "preparation": "hasty"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "옥산포-소양교-춘천 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       78,
+       148
+      ],
+      [
+       88,
+       138
+      ],
+      [
+       98,
+       124
+      ],
+      [
+       103,
+       114
+      ],
+      [
+       105,
+       107
+      ],
+      [
+       104,
+       95
+      ],
+      [
+       102,
+       82
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "춘천-486고지 방면 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       102,
+       82
+      ],
+      [
+       120,
+       80
+      ],
+      [
+       145,
+       76
+      ],
+      [
+       175,
+       72
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제2사단 제6연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "identified": true,
+    "known_at_start": "전날 옥산포에서 제1대대의 역습으로 큰 피해를 입고 옥산포 북쪽에서 재편 중이다.",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      82,
+      150
+     ],
+     "frontage_m": 2500,
+     "polygon": [
+      [
+       70,
+       142
+      ],
+      [
+       95,
+       142
+      ],
+      [
+       95,
+       160
+      ],
+      [
+       70,
+       160
+      ]
+     ],
+     "ref": "F5",
+     "note": "옥산포 일대와 그 북쪽"
+    },
+    "preparation": "none"
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제2사단 자주포대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "SU-76 자주포를 앞세워 춘천 돌파를 노리고 있다.",
+    "posture": "공격준비",
+    "equipment": "SU-76 자주포 8대",
+    "position": {
+     "xy": [
+      90,
+      145
+     ],
+     "ref": "R1",
+     "note": "옥산포-우두동 도로 북쪽"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제2사단 포병연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "다수의 화포로 공격준비사격을 할 것으로 예상된다.",
+    "posture": "공격준비",
+    "equipment": "122mm 곡사포, 76mm 포 다수",
+    "position": {
+     "xy": [
+      85,
+      168
+     ],
+     "note": "옥산포 북방 포진지"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 03:00",
+   "light": "night",
+   "notes": "여명은 약 D일 05:00이다. 소양강은 교량 외에 일부 구간에서 도섭이 가능하다. 연대는 전날 옥산포 전투 직후다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대, 제3대대(예비), 대전차포중대 / 지원: 제16포병대대(-) 제1·2포대",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "AF1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "AF2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "AF3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "대전차포중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "AF4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "봉의산은 소양강과 우두산을 감제하는 핵심 지형이다. 소양교는 춘천 시내로 들어가는 유일한 교량이다. 적의 주접근로는 옥산포-우두동-소양교 도로이고, 서쪽 가래모기 도섭점이 보조 접근로다.",
+    "key_terrain": [
+     {
+      "ref": "F3",
+      "why": "소양강과 우두산을 감제하는 연대 관측소이자 지휘소다."
+     },
+     {
+      "ref": "F2",
+      "why": "춘천 진입의 유일한 교량이자 자주포의 도하 지점이다."
+     },
+     {
+      "ref": "F4",
+      "why": "북안의 엄호 진지로 남안 진지를 점령할 시간을 벌어 준다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "옥산포-우두동-소양교 접근로",
+      "user": "enemy",
+      "refs": [
+       "R1",
+       "F2"
+      ],
+      "xy": [
+       [
+        78,
+        148
+       ],
+       [
+        88,
+        138
+       ],
+       [
+        98,
+        124
+       ],
+       [
+        103,
+        114
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        104,
+        95
+       ]
+      ]
+     },
+     {
+      "name": "가래모기-근화동 접근로",
+      "user": "enemy",
+      "refs": [
+       "F8",
+       "F7"
+      ],
+      "xy": [
+       [
+        75,
+        130
+       ],
+       [
+        70,
+        110
+       ],
+       [
+        68,
+        99
+       ],
+       [
+        78,
+        94
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제2사단은 새벽에 우두산을 공격할 것이다. 여명 뒤 포병 공격준비사격과 SU-76 자주포의 직접조준사격으로 남안 화기진지를 제압하고 소양교 정면으로 주공을 지향할 것이다. 제6연대 일부는 가래모기에서 근화동으로 조공해 오고, 자주포는 소양교를 건너 남안으로 돌입을 시도할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "F5",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         80,
+         148
+        ],
+        [
+         88,
+         138
+        ],
+        [
+         95,
+         126
+        ]
+       ],
+       "when": "D일 03:00",
+       "t": 3
+      },
+      {
+       "group": "E3",
+       "mode": "bombard",
+       "from_ref": "F5",
+       "objective_ref": "CM10",
+       "axis_xy": [
+        [
+         85,
+         168
+        ],
+        [
+         110,
+         100
+        ]
+       ],
+       "when": "D일 05:40",
+       "t": 5.7
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "F6",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         98,
+         124
+        ],
+        [
+         103,
+         114
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         105,
+         100
+        ]
+       ],
+       "when": "D일 10:00",
+       "t": 10
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "F6",
+       "objective_ref": "CM12",
+       "axis_xy": [
+        [
+         95,
+         135
+        ],
+        [
+         103,
+         114
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         106,
+         102
+        ]
+       ],
+       "when": "D일 10:00 이후",
+       "t": 10.5
+      }
+     ],
+     "risk_point": "적 자주포와 보병이 소양교를 건너 남단에 교두보를 확보하는 순간"
+    },
+    "unknowns": [
+     "적 제2제대 연대의 존재와 투입 시기",
+     "적 자주포의 수와 운용 방식",
+     "적 조공의 도하 지점과 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "제1대대는 우두산에서 적을 지연한 뒤 여명 전에 남안 진지로 철수할 수 있다.",
+     "why": "서술상 05:00에 남안 계획 진지를 점령했다."
+    },
+    {
+     "text": "제19연대는 D일 오전 중 근화동 일대 남안을 점령해 연대 좌측을 엄호한다.",
+     "why": "서술상 제19연대가 근화동 방어진지를 점령했다."
+    },
+    {
+     "text": "대대 세부 보충: 제3대대는 봉의산 후사면에 예비로, 제2대대는 소양교 동측 남안에 둔다.",
+     "why": "서술에 제3대대와 대대별 진지 위치가 없다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제7연대는 D일 05:00까지 소양강 남안 주저항선을 점령하고 소양교 정면에서 적 제2사단의 도하를 저지하여 춘천 시가지로의 적 진출을 거부한다.",
+   "task_verb": "저지",
+   "objective_ref": "CM10",
+   "when": {
+    "type": "time_elapsed",
+    "value": 5,
+    "text": "D일 05:00 진지 점령 완료"
+   },
+   "purpose": "춘천 시가지로의 적 진출을 거부하여 적의 서울 우회 기동을 지연한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "연대가 봉의산과 소양교 남단을 확보하고, 적은 소양강 북안에서 도하하지 못한다.",
+    "friendly": "3개 대대가 남안 진지와 예비진지를 유지한다.",
+    "enemy": "적 제6연대와 자주포가 소양교 북단에서 저지되어 큰 손실을 입는다.",
+    "terrain": "봉의산, 소양교 남단, 소양강 남안 제방을 확보한다."
+   },
+   "concept": {
+    "text": "제1대대가 우두산에서 적을 지연하는 동안 제2대대가 남안 진지에서 철수를 엄호한다. 이후 제1·2대대는 남안 주저항선에서 소양교 북단 교전지역에 화력을 집중해 도하를 저지하고, 대전차포중대는 교량 남단에서 자주포를 차단한다. 제3대대는 봉의산 후사면에서 교두보 역습을 준비한다.",
+    "maneuver": "제1대대는 우두산에서 지연한 뒤 소양교로 철수해 교량 서측 남안을 방어한다. 제2대대는 교량과 봉의산 북사면을 방어한다. 주력은 소양교 정면의 제2대대다.",
+    "fires": "포병은 제1대대가 철수하는 동안 우두산 전방에 집중사격하고, 이후 소양교 북단 교전지역과 우두동 접근로에 화력을 집중한다. 대전차포는 교량 남단에서 직접조준한다.",
+    "main_effort": "G2",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM3",
+     "xy": [
+      118,
+      86
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM12",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 소양교 남단 지역 안에 있음"
+     },
+     "priorities": [
+      "소양교 남단 교두보 역습",
+      "제1대대 진지 역습"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM4",
+      "F4"
+     ],
+     "restrictions": "제1대대 철수 완료 전에는 소양교 북단 근접 사격을 통제한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       95,
+       128
+      ],
+      "ref": "F4",
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "note": "옥산포 우측 능선과 우두산의 엄호 진지",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         90,
+         134
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         97,
+         128
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         95,
+         123
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "지연",
+       "text": "우두산에서 소양강까지 적의 남하를 지연한다.",
+       "params": {
+        "lines": [
+         "F12",
+         "F4",
+         "CM8"
+        ],
+        "disengage": {
+         "type": "losses_exceed",
+         "group": "G1",
+         "fraction": 0.3,
+         "text": "제1대대 손실 0.3 초과"
+        }
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "철수",
+       "text": "철수로를 따라 소양교 서측 남안 진지로 철수한다.",
+       "params": {
+        "destination": "CM1",
+        "route": "CM6"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "방어",
+       "text": "소양교 서측 남안 진지를 방어한다.",
+       "params": {
+        "area": "CM1"
+       }
+      }
+     ],
+     "purpose": "남안 주저항선을 점령할 시간을 확보하고 연대 좌측을 지킨다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       115,
+       101
+      ],
+      "ref": "CM2",
+      "frontage_m": 2500,
+      "preparation": "deliberate",
+      "note": "소양교 남단과 봉의산 북사면, 제방 화기진지",
+      "polygon": [
+       [
+        101,
+        95
+       ],
+       [
+        126,
+        96
+       ],
+       [
+        128,
+        109
+       ],
+       [
+        106,
+        104
+       ],
+       [
+        101,
+        104
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         104,
+         102
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         115,
+         104
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         124,
+         104
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "엄호",
+       "text": "제1대대의 소양교 철수를 엄호한다.",
+       "params": {
+        "covered_group": "G1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "방어",
+       "text": "소양교 정면 남안 진지를 방어한다.",
+       "params": {
+        "area": "CM2"
+       }
+      }
+     ],
+     "purpose": "소양교 도하를 저지하여 춘천 진입을 거부한다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       118,
+       86
+      ],
+      "ref": "CM3",
+      "frontage_m": 1200,
+      "preparation": "hasty",
+      "note": "봉의산 남사면",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         114,
+         87
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         120,
+         85
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         122,
+         88
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "소양교 남단 교두보로 역습한다.",
+       "params": {
+        "objective": "CM12",
+        "route": "CM7"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM12",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 소양교 남단 지역 안에 있음"
+       },
+       "basis": "risk_point: 적이 소양교를 건너 남단에 교두보 확보"
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "제1대대 진지로 역습한다.",
+       "params": {
+        "objective": "CM1",
+        "route": "CM7"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.5,
+        "text": "제1대대 손실 0.5 초과"
+       },
+       "basis": "가정: 옥산포 전투로 약화된 제1대대가 추가 손실을 입으면 진지 유지가 곤란"
+      }
+     ],
+     "purpose": "주저항선을 회복하여 봉의산과 소양교 남단을 유지한다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       106,
+       101
+      ],
+      "ref": "F11",
+      "frontage_m": 600,
+      "preparation": "deliberate",
+      "note": "소양교 남단 제방의 57mm 대전차포 진지",
+      "elements": [
+       {
+        "label": "제1소대",
+        "xy": [
+         102,
+         101
+        ]
+       },
+       {
+        "label": "제2소대",
+        "xy": [
+         106,
+         101
+        ]
+       },
+       {
+        "label": "제3소대",
+        "xy": [
+         111,
+         102
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "차단",
+       "text": "적 자주포의 소양교 통과를 차단한다.",
+       "params": {
+        "line": "F2"
+       }
+      }
+     ],
+     "purpose": "자주포의 남안 돌입을 막아 보병 진지를 보호한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 05:00 제1대대 남안 진지 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     },
+     {
+      "text": "D일 05:00 제3대대 예비진지 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     },
+     {
+      "text": "D일 05:30 포병 엄호 집중사격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5.5,
+       "text": "D일 05:30"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "제1대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        89,
+        96
+       ],
+       [
+        101,
+        95
+       ],
+       [
+        101,
+        104
+       ],
+       [
+        89,
+        102
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "F11"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "제2대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        101,
+        95
+       ],
+       [
+        126,
+        96
+       ],
+       [
+        128,
+        109
+       ],
+       [
+        106,
+        104
+       ],
+       [
+        101,
+        104
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "F3",
+       "F2",
+       "F11"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        110,
+        82
+       ],
+       [
+        126,
+        82
+       ],
+       [
+        126,
+        90
+       ],
+       [
+        110,
+        90
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F3"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "EA 1 소양교 북단",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        95,
+        108
+       ],
+       [
+        115,
+        110
+       ],
+       [
+        112,
+        122
+       ],
+       [
+        96,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F2",
+       "F6"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "제1·2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        101,
+        90
+       ],
+       [
+        101,
+        106
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM6",
+      "name": "제1대대 철수로",
+      "kind": "route",
+      "xy": [
+       [
+        95,
+        126
+       ],
+       [
+        100,
+        118
+       ],
+       [
+        104,
+        111
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        103,
+        102
+       ],
+       [
+        96,
+        99
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R1",
+       "F2"
+      ]
+     },
+     {
+      "id": "CM7",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        118,
+        86
+       ],
+       [
+        115,
+        92
+       ],
+       [
+        110,
+        97
+       ],
+       [
+        106,
+        102
+       ],
+       [
+        98,
+        99
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "소양강 주저항선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        88,
+        101
+       ],
+       [
+        105,
+        105
+       ],
+       [
+        130,
+        110
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F1",
+       "F11"
+      ]
+     },
+     {
+      "id": "CM9",
+      "name": "우두산 전초",
+      "kind": "outpost",
+      "xy": [
+       [
+        95,
+        126
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F4"
+      ]
+     },
+     {
+      "id": "CM10",
+      "name": "연대 방어지역",
+      "kind": "other",
+      "xy": [
+       [
+        88,
+        90
+       ],
+       [
+        130,
+        90
+       ],
+       [
+        132,
+        112
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        88,
+        103
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM11",
+      "name": "제19연대 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        89,
+        100
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM12",
+      "name": "소양교 남단 지역",
+      "kind": "objective",
+      "xy": [
+       [
+        100,
+        99
+       ],
+       [
+        112,
+        99
+       ],
+       [
+        112,
+        106
+       ],
+       [
+        100,
+        105
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F2"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 03:00",
+  "start_t": 3,
+  "horizon_h": 33,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "side": "friendly",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "side": "enemy",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제6연대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제2사단은 전날 옥산포에서 입은 피해를 제2제대 제17연대와 사단 교도대대로 보강한다. 포병과 SU-76 자주포 직접조준사격으로 소양강 남안 화기진지를 파괴한 뒤 소양교 정면에 주공, 가래모기-근화동에 조공을 지향해 춘천을 점령하고 서울 동측으로 우회한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "옥산포 우측 능선과 우두산의 국군 진지를 공격한다.",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         80,
+         148
+        ],
+        [
+         86,
+         142
+        ],
+        [
+         90,
+         136
+        ],
+        [
+         95,
+         128
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00"
+       },
+       "basis": "서술: 새벽 3시 우두산 진지에 적의 공격이 시작됨"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "우두동을 거쳐 소양강 북안까지 진출한다.",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         95,
+         128
+        ],
+        [
+         98,
+         124
+        ],
+        [
+         100,
+         119
+        ],
+        [
+         102,
+         117
+        ]
+       ],
+       "basis": "서술: 제1대대가 적의 남하를 저지하며 도하함"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "주공 2개 대대로 소양교 정면을 공격한다.",
+       "objective_ref": "CM12",
+       "axis_xy": [
+        [
+         102,
+         117
+        ],
+        [
+         103,
+         114
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         105,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 10,
+        "text": "D일 10:00 총공격"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 2
+       },
+       "basis": "서술: 오전 10시 총공격, 정오부터 포병 지원 아래 재공격. 반복 횟수와 간격은 추정"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "조공 1개 대대로 가래모기를 도하해 근화동을 공격한다.",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         78,
+         140
+        ],
+        [
+         75,
+         125
+        ],
+        [
+         70,
+         110
+        ],
+        [
+         68,
+         99
+        ],
+        [
+         78,
+         95
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 10,
+        "text": "D일 10:00"
+       },
+       "basis": "서술: 제19연대가 점령한 근화동 일대에 조공 투입"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 우두동 북쪽으로 물러나 제17연대에 공격을 넘긴다.",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         103,
+         112
+        ],
+        [
+         100,
+         119
+        ],
+        [
+         95,
+         128
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.55,
+        "text": "적 제6연대 손실 0.55 초과"
+       },
+       "basis": "추정: 전날 손실 위에 추가 손실 시 제2제대로 교대"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "소양강 남안 진지와 봉의산에 20분간 공격준비사격을 실시한다.",
+       "objective_ref": "CM10",
+       "axis_xy": [
+        [
+         85,
+         168
+        ],
+        [
+         110,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 5.67,
+        "text": "D일 05:40"
+       },
+       "basis": "서술: 05:40부터 20분간 포병공격준비사격"
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "text": "봉의산과 남안 제방 화기진지에 지원사격을 계속한다.",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         85,
+         168
+        ],
+        [
+         118,
+         92
+        ]
+       ],
+       "basis": "서술: 적은 방어지역 확보를 목표로 치열하게 포격"
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "D+1일 총공격에 앞서 남안 주저항선에 공격준비사격을 실시한다.",
+       "objective_ref": "CM8",
+       "axis_xy": [
+        [
+         85,
+         168
+        ],
+        [
+         105,
+         105
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 29,
+        "text": "D+1일 05:00"
+       },
+       "basis": "추정: D+1일 총공격 준비. 시각은 추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "SU-76 자주포를 소양강 북안 직접조준 위치에 두고 봉의산 관측소와 제방 화기진지를 파괴한다.",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         90,
+         145
+        ],
+        [
+         98,
+         124
+        ],
+        [
+         103,
+         113
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 10,
+        "text": "D일 10:00"
+       },
+       "basis": "서술: 자주포를 북안에 두고 연대관측소와 제방 화기진지에 직격탄"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "자주포 3대로 소양교를 건너 남안 대전차포 진지를 공격한다.",
+       "objective_ref": "CM12",
+       "axis_xy": [
+        [
+         103,
+         114
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         106,
+         102
+        ]
+       ],
+       "basis": "서술: 자주포 3대가 소양교를 통해 남안 대전차포 진지로 공격"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+1일 총공격 때 남은 자주포로 소양교를 건너 남안을 공격한다.",
+       "objective_ref": "CM12",
+       "axis_xy": [
+        [
+         103,
+         114
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         105,
+         100
+        ],
+        [
+         104,
+         95
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 30,
+        "text": "D+1일 06:00"
+       },
+       "basis": "서술: D+1일 자주포가 교량을 건너 남안 일각 점거. 시각은 추정"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "제2제대로서 제6연대를 후속해 우두동 북쪽으로 전진한다.",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         80,
+         175
+        ],
+        [
+         82,
+         160
+        ],
+        [
+         88,
+         140
+        ],
+        [
+         96,
+         126
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 12,
+        "text": "D일 12:00"
+       },
+       "basis": "서술: 제17연대가 제2제대로 제6연대를 후속지원. 시각은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "text": "제6연대를 초월해 소양교 정면을 공격한다.",
+       "objective_ref": "CM12",
+       "axis_xy": [
+        [
+         96,
+         126
+        ],
+        [
+         102,
+         117
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         105,
+         100
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.55,
+        "text": "적 제6연대 손실 0.55 초과"
+       },
+       "basis": "추정: 제1제대 소모 시 제2제대 투입"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+1일 총공격으로 소양강 남안 주저항선을 공격한다.",
+       "objective_ref": "CM8",
+       "axis_xy": [
+        [
+         96,
+         126
+        ],
+        [
+         102,
+         117
+        ],
+        [
+         105,
+         107
+        ],
+        [
+         104,
+         98
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 30,
+        "text": "D+1일 06:00"
+       },
+       "basis": "서술: D+1일 북한군 제2사단 총공격. 시각은 추정"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D+1일 가래모기를 도하해 근화동을 공격한다.",
+       "objective_ref": "F7",
+       "axis_xy": [
+        [
+         78,
+         140
+        ],
+        [
+         74,
+         120
+        ],
+        [
+         70,
+         108
+        ],
+        [
+         68,
+         99
+        ],
+        [
+         80,
+         95
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 30,
+        "text": "D+1일 06:00"
+       },
+       "basis": "서술: 가래모기로 도하한 적이 근무대대 저지사격을 뚫고 근화동 진출. 부대는 교도대대로 추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제2사단 제17연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "other_names": [
+     "제17연대"
+    ],
+    "position": {
+     "xy": [
+      80,
+      178
+     ],
+     "note": "옥산포 북방 제2제대 집결지(추정)"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "북한군 제2사단 교도대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "other_names": [
+     "사단교도대대"
+    ],
+    "position": {
+     "xy": [
+      72,
+      172
+     ],
+     "note": "옥산포 북서쪽 후속 위치(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 03:00",
+    "t": 3,
+    "kind": "night",
+    "duration_h": 2,
+    "note": "야간. 시야 제한"
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간. D+1일 05:00 여명까지"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 03:00",
+      "t": 3,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        80,
+        148
+       ],
+       [
+        88,
+        138
+       ],
+       [
+        95,
+        128
+       ]
+      ],
+      "from_ref": "F5",
+      "target_ref": "F4",
+      "note": "적 제6연대가 우두산과 옥산포 우측 능선의 제1대대를 공격했다."
+     },
+     {
+      "when": "D일 05:00",
+      "t": 5,
+      "mode": "pursue",
+      "axis_xy": [
+       [
+        95,
+        128
+       ],
+       [
+        100,
+        119
+       ],
+       [
+        102,
+        117
+       ]
+      ],
+      "from_ref": "F4",
+      "target_ref": "F6",
+      "note": "제1대대 도하에 따라 우두동과 소양강 북안으로 진출했다."
+     },
+     {
+      "when": "D일 10:00",
+      "t": 10,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        102,
+        117
+       ],
+       [
+        103,
+        114
+       ],
+       [
+        105,
+        107
+       ]
+      ],
+      "from_ref": "F6",
+      "target_ref": "CM12",
+      "note": "총공격으로 소양교 정면 주공을 지향했다."
+     },
+     {
+      "when": "D일 10:00",
+      "t": 10,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        75,
+        125
+       ],
+       [
+        70,
+        110
+       ],
+       [
+        68,
+        99
+       ],
+       [
+        78,
+        95
+       ]
+      ],
+      "target_ref": "F7",
+      "note": "2개 대대가 근화동의 제19연대 제1대대를 공격했다."
+     },
+     {
+      "when": "D일 12:00",
+      "t": 12,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        102,
+        117
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        100,
+        101
+       ]
+      ],
+      "target_ref": "CM1",
+      "note": "포병 지원 아래 재공격했으나 제1대대에 격퇴되었다."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 05:40",
+      "t": 5.67,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        85,
+        168
+       ],
+       [
+        110,
+        100
+       ]
+      ],
+      "target_ref": "CM10",
+      "note": "20분간 공격준비사격 후 종일 남안 진지를 포격했다."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 10:00",
+      "t": 10,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        90,
+        145
+       ],
+       [
+        103,
+        113
+       ]
+      ],
+      "target_ref": "F3",
+      "note": "SU-76 8대가 북안에서 봉의산 관측소, 산 중턱과 제방 화기진지를 직접조준사격으로 파괴했다."
+     },
+     {
+      "when": "D일 10:30경",
+      "t": 10.5,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        103,
+        114
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        106,
+        102
+       ]
+      ],
+      "target_ref": "CM12",
+      "note": "자주포 3대가 소양교를 건너 대전차포 진지로 돌입하다 3대 모두 파괴되었다."
+     },
+     {
+      "when": "D+1일 10:00",
+      "t": 34,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        103,
+        114
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        105,
+        100
+       ]
+      ],
+      "target_ref": "CM12",
+      "note": "교량 위 시체를 강으로 밀어내고 다리를 건너 남안 일각을 점거했다."
+     }
+    ]
+   },
+   {
+    "group": "H1",
+    "actions": [
+     {
+      "when": "D+1일 새벽",
+      "t": 29,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        96,
+        126
+       ],
+       [
+        102,
+        117
+       ],
+       [
+        105,
+        107
+       ],
+       [
+        104,
+        98
+       ]
+      ],
+      "target_ref": "CM8",
+      "note": "제2제대로 보강되어 사단 총공격에 가담했다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "H2",
+    "actions": [
+     {
+      "when": "D+1일 10:00경",
+      "t": 34,
+      "mode": "attack",
+      "axis_xy": [
+       [
+        74,
+        120
+       ],
+       [
+        68,
+        99
+       ],
+       [
+        80,
+        95
+       ]
+      ],
+      "target_ref": "F7",
+      "note": "가래모기로 도하한 적이 근무대대 최후 저지사격을 뚫고 근화동까지 진출했다(부대 추정)."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "H1",
+    "unit": "북한군 제2사단 제17연대",
+    "entry_when": "D일 주간(후속), D+1일 새벽 공격 가담",
+    "entry_t": 12,
+    "from_ref": "F5",
+    "note": "제2제대로 제6연대를 후속지원했다. 정확한 시각은 서술에 없다."
+   },
+   {
+    "id": "H2",
+    "unit": "북한군 제2사단 교도대대",
+    "entry_when": "D+1일",
+    "entry_t": 30,
+    "from_ref": "F5",
+    "note": "제6연대를 후속지원했다. 시각은 추정."
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 03:00",
+      "t": 3,
+      "verb": "지연",
+      "ref": "F4",
+      "text": "우두산과 옥산포 우측 능선에서 적 공격과 교전했다."
+     },
+     {
+      "when": "D일 05:00",
+      "t": 5,
+      "verb": "철수",
+      "ref": "CM1",
+      "text": "적의 남하를 저지하며 소양강을 건너 남안 계획 진지를 점령했다."
+     },
+     {
+      "when": "D일 12:00",
+      "t": 12,
+      "verb": "방어",
+      "ref": "CM1",
+      "text": "포병 지원 아래 재공격한 적을 격퇴하고 진지를 확보하며 제2대대를 지원했다."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 11:00",
+      "t": 11,
+      "verb": "공격",
+      "ref": "F1",
+      "text": "정면의 적을 공격해 소양강을 도하했으나 곧 남안으로 복귀했다."
+     },
+     {
+      "when": "D일 11:00~D일 일몰",
+      "t": 11.0,
+      "verb": "방어",
+      "ref": "CM2",
+      "text": "종일 전진과 철수를 반복하며 적의 남하를 저지했다."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일 10:30경",
+      "t": 10.5,
+      "verb": "차단",
+      "ref": "F2",
+      "text": "제2소대장 심일 중위가 직접 사격해 소양교를 건너온 자주포 3대를 파괴했다."
+     }
+    ]
+   },
+   {
+    "group": "AF5",
+    "actions": [
+     {
+      "when": "D일 05:30",
+      "t": 5.5,
+      "verb": "화력지원",
+      "ref": "CM4",
+      "text": "제16포병대대 제1·2포대가 종일 보병 이동과 남안 철수를 엄호하는 집중사격으로 적 공격을 차단했다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ1",
+    "actions": [
+     {
+      "when": "D일 10:00",
+      "t": 10,
+      "verb": "방어",
+      "ref": "F7",
+      "text": "제19연대 제1대대가 근화동 소양강변에 배치 중 적 2개 대대와 교전했다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ2",
+    "actions": [
+     {
+      "when": "D+1일 10:00경",
+      "t": 34,
+      "verb": "저지",
+      "ref": "F8",
+      "text": "가래모기 도하 적에게 최후 저지사격을 했으나 근화동 진출을 허용했다."
+     }
+    ]
+   },
+   {
+    "group": "아군 연대",
+    "actions": [
+     {
+      "when": "D+1일 10:00",
+      "t": 34,
+      "verb": "방어",
+      "ref": "CM8",
+      "text": "소양강 최후저항선 진지가 돌파되었다."
+     },
+     {
+      "when": "D+1일 12:00경",
+      "t": 36,
+      "verb": "철수",
+      "ref": "F9",
+      "text": "병력을 철수시켜 춘천 시가지에서 적의 남하를 지연하기로 결심했다. 이후 486고지로 이탈해 급편방어진지를 편성했다."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 03:00",
+    "t": 3,
+    "kind": "night",
+    "note": "야간에 우두산 교전이 시작되었다."
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "other",
+    "note": "여명 무렵 제1대대 도하와 남안 진지 점령."
+   }
+  ],
+  "historical_result": {
+   "friendly": "제6사단 제7연대",
+   "enemy": "북한군 제2사단(제6연대, 제17연대, 교도대대, 포병, SU-76 자주포)",
+   "terrain_held": [
+    "F3",
+    "F9"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "아군 손실은 서술에 없다(봉의산 관측소와 제방 화기진지 다수 파괴). 적은 SU-76 3대를 잃고 소양교에 시체가 산적할 정도로 큰 인명 손실을 입었다. 손실률은 추정.",
+   "duration_h": 33,
+   "friendly_loss_pct": 20,
+   "enemy_loss_pct": 35
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+1일 12:00 소양강 최후저항선이 돌파되어 적이 소양교 남단 일각과 근화동을 점거했다. 연대는 춘천 시가지로 철수해 지연하기로 했다. D일에는 종일 도하를 저지했다.",
+   "terrain_held_at_horizon": [
+    "F3",
+    "F9"
+   ],
+   "key_times": [
+    {
+     "t": 3,
+     "text": "적 우두산 공격 개시",
+     "ref": "F4"
+    },
+    {
+     "t": 5,
+     "text": "제1대대 남안 진지 점령",
+     "ref": "CM1"
+    },
+    {
+     "t": 5.67,
+     "text": "적 공격준비사격 개시",
+     "ref": "CM10"
+    },
+    {
+     "t": 10,
+     "text": "적 총공격 개시, 근화동 조공",
+     "ref": "CM12"
+    },
+    {
+     "t": 10.5,
+     "text": "소양교 남단에서 SU-76 3대 파괴",
+     "ref": "F2"
+    },
+    {
+     "t": 12,
+     "text": "제1대대 적 재공격 격퇴",
+     "ref": "CM1"
+    },
+    {
+     "t": 34,
+     "text": "소양강 최후저항선 돌파, 적 남안 일각 점거",
+     "ref": "CM8"
+    },
+    {
+     "t": 36,
+     "text": "연대 춘천 시가지로 철수 결심",
+     "ref": "F9"
+    }
+   ],
+   "friendly_loss_pct": 20,
+   "enemy_loss_pct": 35
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_043",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [
+   "friendly_actual: 아군 연대"
+  ],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

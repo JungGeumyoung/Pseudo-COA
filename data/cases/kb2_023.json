@@ -1,0 +1,2804 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1952-10-06",
+   "end_date": "1952-10-08",
+   "d_day": "1952-10-06",
+   "order_time": "D일 06:00 (1952-10-06 06:00, 적 공격준비사격 직전)",
+   "text": "백마고지 전투의 첫 48시간이다. 적 공격준비사격 직전 제30연대의 초기 배치에서 시작해 D+2일 06:00에 끝난다.",
+   "why": "사용자가 구간을 지정했다. 이 구간에는 귀순자 진술 뒤 증강한 2개 대대 방어, 적 제340연대의 1~4차 공격, 사단 예비의 역습 태세가 모두 들어 있다."
+  },
+  "perspective_rationale": "사용자가 관점을 지정했다. 제30연대는 사단 주저항선 좌일선 연대로서 395고지를 직접 방어했고, 첫 48시간의 방어 결심은 연대장이 내렸다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "D일 19:15 이후 적의 1~3차 공격은 격퇴했다. 그러나 D+1일에 화랑고지 전초를 잃었고 제1대대도 주봉에서 물러났다. 주봉은 제28연대가 역습해 되찾았고, 이후 고지는 제28연대가 맡았다. 구간 끝에 주봉은 아군이, 화랑고지는 적이 차지하고 있었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "395고지 정상 = (100,100). 북쪽 +y, 동쪽 +x",
+   "source": "atlas+text",
+   "atlas_pages": "4권 184쪽 상황도, 185쪽 본문"
+  },
+  "seed_id": "kb2_023_백마고지_전투",
+  "title": "백마고지 전투",
+  "dates": "1952. 10. 6.~15.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '백마고지 전투' (pdf 100쪽)",
+  "pdf_page": 100,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "예비연대(제28연대)를 즉시 역습 태세로 두고, 주봉 상실 약 2시간 만에 역습시켜 탈환",
+    "alternative": "예비연대를 역습 태세로 두지 않거나 역습을 늦춰 중공군이 주봉에 진지를 굳히도록 허용",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "3개 연대를 교대로 투입해 고지 상실 때마다 새 연대로 역습",
+    "alternative": "한 연대로 고지를 계속 고수하게 하고 교대·역습 투입을 하지 않음",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "전초진지인 화랑고지를 1개 중대(제11중대)로 방어",
+    "alternative": "화랑고지와 무명고지 방향에 병력을 증강해 주봉과 전초의 분리를 차단",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "이처럼 전초진지인 화랑고지가피탈됨에 따라 제1대대의 주봉 방어가 위기상황에 처하게 되었다."
+   }
+  ],
+  "segment_suggestion": "① 10월 6~8일: 제30연대의 주봉 방어 → 화랑고지·주봉 상실 → 제28연대 역습·재탈환(제1~5차 공방, 서술이 가장 상세해 연대급 참조 구간으로 적합). ② 10월 9~11일: 3개 연대 교대 투입기, 제29연대 투입과 고지 탈환(제9차 공방). ③ 10월 12~15일: 제30연대 1대대의 화랑고지 1~3봉·장송고지 공격, 제12차 공세, 제28연대 교대 탈환과 제29연대의 전초진지 확보.",
+  "spec_used": true,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.471,
+   "duration_s": 321.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 28602,
+     "cache_read_input_tokens": 35398,
+     "cache_creation_input_tokens": 46952
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9776,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 40090
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 29,
+   "flagged": [
+    {
+     "id": "E:HE1[2]",
+     "verdict": "time_copied",
+     "reason": "D+2일 05:30 2개 대대 공격은 실제 5차 공격이 시작된 시각을 그대로 계획 시각으로 옮긴 것이며 적의 '새벽 공격 선호'는 사전에 정해진 시각이 아니라 추정에 불과하다.",
+     "fix": "이 공격을 특정 계획 시각 대신 앞선 조건부 투입(예: 제334연대 손실 또는 화랑고지 확보 후 '이어서')에 따른 후속 행동으로 바꾸거나, 시각 지정 없이 '화랑고지 확보 후 이어서 주봉을 공격한다'로 수정한다."
+    }
+   ],
+   "cost_usd": 0.052844
+  },
+  "refs_normalized": 0,
+  "conditions_normalized": 0
+ },
+ "input": {
+  "perspective": {
+   "unit": "제30연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제9사단 제30연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제9사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제9사단"
+   ],
+   "higher_mission": "제9사단은 철원평야를 가로지르는 주저항선을 방어하여 395고지와 3번 도로를 확보한다.",
+   "higher_intent": "395고지를 끝까지 확보해 철원평야와 3번 도로를 감제한다. 고지를 잃으면 사단 예비로 즉시 역습해 되찾는다.",
+   "assigned_task": "주저항선 좌일선을 맡는다. 2개 대대 규모로 395고지를 방어해 주저항선 좌단을 유지한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "제29연대",
+     "alias": "인접 연대 1",
+     "echelon": "연대",
+     "type": "infantry",
+     "side": "우측",
+     "mission": "철원평야 주저항선 우일선을 방어한다.",
+     "xy": [
+      165,
+      90
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "제28연대",
+     "alias": "인접 연대 2",
+     "echelon": "연대",
+     "type": "infantry",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 395고지로 즉시 역습할 태세를 갖춘다.",
+     "xy": [
+      141.7,
+      5
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "미 제2사단",
+     "alias": "인접 사단 1",
+     "echelon": "사단",
+     "type": "infantry",
+     "side": "좌측",
+     "mission": "제9사단 좌측 주저항선을 방어한다.",
+     "xy": [
+      75,
+      85
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ2",
+     "text": "적 대대 이상이 395고지 주봉에 있으면 제28연대가 남쪽에서 역곡천을 건너 주봉으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H395",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 395고지 주봉 지역 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H395",
+      "axis_xy": [
+       [
+        141.7,
+        5
+       ],
+       [
+        135,
+        30
+       ],
+       [
+        126.6,
+        55
+       ],
+       [
+        111,
+        74
+       ],
+       [
+        104,
+        88
+       ],
+       [
+        100,
+        100
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제30연대 작전지역은 395고지와 남동 능선 일대, 그리고 역곡천 남쪽 철원평야 서부다. 좌측은 미 제2사단, 우측은 제29연대, 후방은 사단 예비 제28연대와 닿는다.",
+   "boundaries": [
+    {
+     "id": "B_L",
+     "name": "제30연대-미 제2사단 경계",
+     "between": [
+      "제30연대",
+      "미 제2사단"
+     ],
+     "xy": [
+      [
+       69,
+       118.5
+      ],
+      [
+       79,
+       102
+      ],
+      [
+       90,
+       86.5
+      ],
+      [
+       99.5,
+       72
+      ],
+      [
+       108.5,
+       53.5
+      ],
+      [
+       117.8,
+       31.5
+      ]
+     ],
+     "estimated": false
+    },
+    {
+     "id": "B_R",
+     "name": "제30연대-제29연대 경계",
+     "between": [
+      "제30연대",
+      "제29연대"
+     ],
+     "xy": [
+      [
+       137.5,
+       120.5
+      ],
+      [
+       143.8,
+       103
+      ],
+      [
+       145,
+       89
+      ],
+      [
+       148.5,
+       68
+      ],
+      [
+       153.5,
+       45
+      ],
+      [
+       155.5,
+       36
+      ]
+     ],
+     "estimated": false
+    },
+    {
+     "id": "B_REAR",
+     "name": "제30연대-제28연대 후방 경계",
+     "between": [
+      "제30연대",
+      "제28연대"
+     ],
+     "xy": [
+      [
+       117.8,
+       31.5
+      ],
+      [
+       128,
+       32.7
+      ],
+      [
+       140,
+       33.8
+      ],
+      [
+       155,
+       36.5
+      ]
+     ],
+     "estimated": false
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제30연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제30연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제30연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내. 제11중대 포함"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제53전차중대",
+    "alias": "전차중대 1",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "395고지 남쪽 측방"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제9사단 포병",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "역곡천 남쪽 철원평야",
+     "xy": [
+      135,
+      50
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "철원 서북방 395고지 일대. 주봉에서 남동으로 약 2km 능선이 뻗고, 북쪽은 효성산·500고지·고암산이 감제한다. 남쪽은 역곡천과 철원평야 개활지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H395",
+     "name": "395고지",
+     "alias": "고지 A",
+     "other_names": [
+      "백마고지",
+      "주봉"
+     ],
+     "kind": "hill",
+     "xy": [
+      100,
+      100
+     ],
+     "estimated": false,
+     "elevation_m": 395,
+     "preparation": "deliberate",
+     "evidence": "아틀라스 등고선 최고점. 1951년 10월부터 사단이 방어진지를 갖추었다."
+    },
+    {
+     "id": "H_HR",
+     "name": "화랑고지",
+     "alias": "고지 B",
+     "other_names": [
+      "낙타능선 전초진지"
+     ],
+     "kind": "hill",
+     "xy": [
+      112,
+      109.5
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "preparation": "hasty",
+     "evidence": "아틀라스 측정. 주봉 북동 약 1.5km 낙타능선 위 전초."
+    },
+    {
+     "id": "R_CAMEL",
+     "name": "낙타능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      106,
+      105
+     ],
+     "line": [
+      [
+       100,
+       100
+      ],
+      [
+       106,
+       105
+      ],
+      [
+       112,
+       109.5
+      ],
+      [
+       116,
+       114
+      ]
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스 측정. 주봉에서 화랑고지로 이어진다."
+    },
+    {
+     "id": "H_NM",
+     "name": "395고지 정면 무명고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      106,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "본문: 주봉과 화랑고지 사이 정면. 상황도 표기 없음."
+    },
+    {
+     "id": "H_HS",
+     "name": "효성산",
+     "alias": "고지 D",
+     "other_names": [
+      "619고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      94,
+      133
+     ],
+     "estimated": false,
+     "elevation_m": 619,
+     "evidence": "아틀라스 측정. 주봉 북쪽 약 3.4km."
+    },
+    {
+     "id": "H500",
+     "name": "500고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      119,
+      122
+     ],
+     "estimated": false,
+     "elevation_m": 500,
+     "preparation": "fortified",
+     "evidence": "아틀라스 측정. 적 제340연대의 주봉이며 적 중대 진지가 있다."
+    },
+    {
+     "id": "H_GA",
+     "name": "고암산",
+     "alias": "고지 F",
+     "other_names": [
+      "780고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      105,
+      193
+     ],
+     "estimated": false,
+     "elevation_m": 780,
+     "evidence": "아틀라스 측정. 주봉 북쪽 약 9.3km."
+    },
+    {
+     "id": "L_BR",
+     "name": "봉래호",
+     "alias": "지점 1",
+     "kind": "lake",
+     "xy": [
+      130,
+      195
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스 측정. 호수 남단 수문 부근. 수문이 터지면 역곡천이 범람한다."
+    },
+    {
+     "id": "RV_YG",
+     "name": "역곡천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      111,
+      75
+     ],
+     "line": [
+      [
+       70,
+       68
+      ],
+      [
+       90,
+       71
+      ],
+      [
+       111,
+       75
+      ],
+      [
+       130,
+       79
+      ],
+      [
+       155,
+       83
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "상황도 하천 표기 위치 기준 추정. 주봉 남쪽 약 2.5km를 동서로 흐른다."
+    },
+    {
+     "id": "X_YG",
+     "name": "역곡천 도하점",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      111,
+      74
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "추정. 고지와 후방을 잇는 보급·역습 통로."
+    },
+    {
+     "id": "T_CW",
+     "name": "철원",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      152,
+      39
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스 측정. 주봉 남동 약 8km."
+    },
+    {
+     "id": "A_PLAIN",
+     "name": "철원평야",
+     "alias": "지점 3",
+     "kind": "area",
+     "xy": [
+      135,
+      65
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "아틀라스 표기. 사단 주저항선 대부분이 지나는 개활지."
+    },
+    {
+     "id": "R_SE",
+     "name": "395고지 남동 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      107,
+      87
+     ],
+     "line": [
+      [
+       100,
+       100
+      ],
+      [
+       105,
+       88
+      ],
+      [
+       109,
+       86
+      ],
+      [
+       113.5,
+       82
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "deliberate",
+     "evidence": "상황도 중대 진지 표시를 이은 추정."
+    },
+    {
+     "id": "R_E",
+     "name": "395고지 동측 구릉",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      127,
+      88
+     ],
+     "line": [
+      [
+       117.5,
+       94
+      ],
+      [
+       124,
+       89
+      ],
+      [
+       130,
+       86
+      ],
+      [
+       137,
+       86
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "deliberate",
+     "evidence": "상황도 대대 진지 타원 위치 기준 추정."
+    }
+   ],
+   "routes": [
+    {
+     "id": "RD3",
+     "name": "3번 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       152,
+       39
+      ],
+      [
+       156,
+       60
+      ],
+      [
+       160,
+       81
+      ],
+      [
+       172,
+       96
+      ],
+      [
+       185,
+       111
+      ],
+      [
+       200,
+       150
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT_SUP",
+     "name": "역곡천 도하 보급로",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       126.6,
+       62.2
+      ],
+      [
+       119,
+       68
+      ],
+      [
+       111,
+       74
+      ],
+      [
+       108,
+       80
+      ],
+      [
+       104,
+       88
+      ],
+      [
+       100,
+       99
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "IMP_FLOOD",
+     "name": "역곡천 범람 구역",
+     "alias": "지점 4",
+     "other_names": [
+      "역곡천 범람지"
+     ],
+     "active": "구간 중 발생",
+     "gap_at": [
+      111,
+      74
+     ],
+     "polygon": [
+      [
+       70,
+       66
+      ],
+      [
+       90,
+       69
+      ],
+      [
+       111,
+       73
+      ],
+      [
+       130,
+       77
+      ],
+      [
+       155,
+       81
+      ],
+      [
+       155,
+       85
+      ],
+      [
+       130,
+       81
+      ],
+      [
+       111,
+       77
+      ],
+      [
+       90,
+       73
+      ],
+      [
+       70,
+       70
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제340연대 1개 대대(화랑고지 축)",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "D-3일 귀순한 제340연대 정치지도원 진술로 전면공격 계획을 파악했다.",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      121,
+      124
+     ],
+     "polygon": [
+      [
+       115,
+       118
+      ],
+      [
+       124,
+       118
+      ],
+      [
+       128,
+       129
+      ],
+      [
+       118,
+       131
+      ]
+     ],
+     "frontage_m": 900,
+     "ref": "H500",
+     "note": "500고지 일대 갱도화 진지"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제340연대 1개 대대(주봉 축)",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "귀순자 진술과 상황도 적 중대 진지 표시로 파악했다.",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      105,
+      125
+     ],
+     "polygon": [
+      [
+       100,
+       120
+      ],
+      [
+       112,
+       120
+      ],
+      [
+       112,
+       130
+      ],
+      [
+       100,
+       130
+      ]
+     ],
+     "frontage_m": 1000,
+     "note": "효성산 남쪽 도로변에서 500고지 서쪽 사이"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제340연대 1개 대대(연대 예비)",
+    "alias": "적 대대 3",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "상황도 500고지 북쪽 종심 진지로 파악했다.",
+    "posture": "예비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      131,
+      134
+     ],
+     "polygon": [
+      [
+       126,
+       128
+      ],
+      [
+       137,
+       127
+      ],
+      [
+       136,
+       138
+      ],
+      [
+       128,
+       139
+      ]
+     ],
+     "frontage_m": 800,
+     "note": "500고지 북동·북쪽 종심"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 제341연대",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제114사단 우일선으로 효성산 서쪽을 방어한다고 파악했다.",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      88,
+      130
+     ],
+     "frontage_m": 2500,
+     "ref": "H_HS",
+     "note": "효성산 중심 서쪽"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "적 제342연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제114사단 예비로 효성산 후방에 집결해 있다고 파악했다.",
+    "posture": "예비",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      104.8,
+      168.4
+     ],
+     "frontage_m": 2000,
+     "note": "효성산 후방"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "적 제114사단 포병",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "효성산 후사면 포진지로 추정했다.",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      110,
+      150
+     ],
+     "note": "효성산·500고지 후사면 (추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 06:00",
+   "light": "dawn",
+   "notes": "귀순자 진술로 적 공격이 임박한 것을 안다. 봉래호 수문 폭파에 대비해 고지에 10일분 식량을 비축했다. 적은 야간 공격을 선호한다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대(+제11중대), 제2대대, 제3대대(-) / 지원: 사단 포병, 제53전차중대, 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대(+제11중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      },
+      {
+       "force": "F3",
+       "part": "제11중대"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대(-)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3",
+       "part": "-제11중대"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제53전차중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "395고지가 철원평야와 3번 도로를 감제한다. 주봉 북동쪽 화랑고지가 전초다.",
+    "key_terrain": [
+     {
+      "ref": "H395",
+      "why": "철원평야와 3번 도로를 감제한다. 잃으면 주저항선 좌단이 무너진다."
+     },
+     {
+      "ref": "H_HR",
+      "why": "낙타능선 위 전초로 적 접근을 조기에 경고한다. 잃으면 주봉이 측방에서 노출된다."
+     },
+     {
+      "ref": "H_NM",
+      "why": "주봉과 화랑고지 사이 정면으로, 적이 잡으면 전초와 주봉이 분리된다."
+     },
+     {
+      "ref": "X_YG",
+      "why": "고지와 후방을 잇는 유일한 보급·역습 통로다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "500고지-낙타능선-화랑고지-주봉 접근로",
+      "user": "enemy",
+      "refs": [
+       "H500",
+       "R_CAMEL",
+       "H_HR",
+       "H395"
+      ],
+      "xy": [
+       [
+        119,
+        122
+       ],
+       [
+        117,
+        116
+       ],
+       [
+        114,
+        112
+       ],
+       [
+        112,
+        109.5
+       ],
+       [
+        106,
+        105
+       ],
+       [
+        100,
+        100
+       ]
+      ]
+     },
+     {
+      "name": "효성산 남쪽-주봉 정면 접근로",
+      "user": "enemy",
+      "refs": [
+       "H_HS",
+       "H395"
+      ],
+      "xy": [
+       [
+        102.3,
+        125.5
+       ],
+       [
+        103,
+        118
+       ],
+       [
+        102,
+        110
+       ],
+       [
+        100,
+        100
+       ]
+      ]
+     },
+     {
+      "name": "역곡천 도하점-남동 능선 역습로",
+      "user": "friendly",
+      "refs": [
+       "X_YG",
+       "R_SE",
+       "H395"
+      ],
+      "xy": [
+       [
+        126.6,
+        62.2
+       ],
+       [
+        119,
+        68
+       ],
+       [
+        111,
+        74
+       ],
+       [
+        108,
+        80
+       ],
+       [
+        104,
+        88
+       ],
+       [
+        100,
+        99
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제114사단 제340연대는 D일 야간 공격준비사격 후 500고지 일대에서 2개 대대로 공격해 올 것이다. 1개 대대는 화랑고지로, 1개 대대는 주봉으로 공격해 올 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E6",
+       "mode": "bombard",
+       "from_ref": "H_HS",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         110,
+         150
+        ],
+        [
+         105,
+         125
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "when": "D일 06:00부터 공격준비사격",
+       "t": 6
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "H500",
+       "objective_ref": "H_HR",
+       "axis_xy": [
+        [
+         119,
+         122
+        ],
+        [
+         117,
+         116
+        ],
+        [
+         114,
+         112
+        ],
+        [
+         112,
+         109.5
+        ]
+       ],
+       "when": "D일 야간 공격준비사격 후",
+       "t": 19
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "H_HS",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         105,
+         125
+        ],
+        [
+         103,
+         118
+        ],
+        [
+         102,
+         110
+        ],
+        [
+         101,
+         105
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "when": "D일 야간 공격준비사격 후",
+       "t": 19
+      },
+      {
+       "group": "E3",
+       "mode": "reinforce",
+       "from_ref": "H500",
+       "objective_ref": "H_NM",
+       "axis_xy": [
+        [
+         131,
+         134
+        ],
+        [
+         124,
+         124
+        ],
+        [
+         116,
+         114
+        ],
+        [
+         110,
+         107
+        ],
+        [
+         106,
+         104
+        ]
+       ],
+       "when": "D+1일 새벽, 선두 대대 공격이 막히면",
+       "t": 25
+      }
+     ],
+     "risk_point": "적 1개 대대가 무명고지를 잡아 화랑고지 전초를 주봉과 분리한 뒤 주봉에 돌입하는 순간"
+    },
+    "unknowns": [
+     "적 제114사단 예비 제342연대와 적 상급부대 예비의 투입 시기",
+     "봉래호 수문 폭파 여부와 역곡천 범람 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적이 봉래호 수문을 폭파해도 도하점은 쓸 수 있다.",
+     "why": "역곡천 남쪽 연대 예비와 사단 예비의 역습로가 도하점에 달려 있다."
+    },
+    {
+     "text": "대대 세부 보충: 중대 배치와 번호는 상황도 중대 진지 표시에 맞춰 서술과 모순되지 않게 보충했다.",
+     "why": "서술에는 제11중대의 화랑고지 전초 외에 중대 배치가 없다."
+    },
+    {
+     "text": "사단 포병과 근접항공지원은 주간에 395고지 정면에 집중된다.",
+     "why": "사단은 포병단과 미 제5공군 지원을 받고 있었다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제30연대는 395고지 일대에서 방어하여 적의 공격을 격퇴하고 395고지를 고수함으로써 사단 주저항선 좌단을 유지한다.",
+   "task_verb": "고수",
+   "objective_ref": "H395",
+   "when": {
+    "type": "time_elapsed",
+    "value": 6,
+    "text": "D일 06:00"
+   },
+   "purpose": "사단 주저항선 좌단을 유지하고 철원평야와 3번 도로에 대한 감제를 지킨다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "395고지를 고수하고, 적 공격부대는 고지 북쪽에서 격퇴된다.",
+    "friendly": "제1대대와 제2대대가 주봉과 남동 능선 진지를 유지한다.",
+    "enemy": "적 제340연대 공격 대대들이 낙타능선과 주봉 북쪽에서 격퇴된다.",
+    "terrain": "395고지 주봉과 화랑고지 전초를 아군이 차지한다."
+   },
+   "concept": {
+    "text": "2개 대대를 나란히 배치해 395고지를 고수하고, 화랑고지 전초로 적 접근을 조기에 경고한다. 제3대대(-)는 연대 예비로 둔다.",
+    "maneuver": "연대 예비는 명에 의해 제1대대 지역으로 역습한다.",
+    "fires": "우선 지원은 제1대대다. 화랑고지와 주봉 사이 교전지역에 화력을 집중한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM_AA",
+     "xy": [
+      126.6,
+      62.2
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H395",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 395고지 주봉 지역 안에 있음"
+     },
+     "priorities": [
+      "1순위: 주봉 역습",
+      "2순위: 남동 능선 제1대대 진지 회복"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1"
+     ],
+     "zone_refs": [
+      "CM_EA1"
+     ],
+     "restrictions": "화랑고지 전초 위 사격은 제11중대 위치를 확인한 뒤 한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       104,
+       93
+      ],
+      "frontage_m": 1500,
+      "preparation": "deliberate",
+      "polygon": [
+       [
+        97,
+        102
+       ],
+       [
+        103,
+        103
+       ],
+       [
+        114,
+        95
+       ],
+       [
+        116,
+        82
+       ],
+       [
+        110,
+        79
+       ],
+       [
+        98,
+        79
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제11중대(전초)",
+        "xy": [
+         112,
+         109.5
+        ],
+        "ref": "H_HR"
+       },
+       {
+        "label": "제1중대",
+        "xy": [
+         100,
+         99
+        ],
+        "ref": "H395"
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         105,
+         88
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         109,
+         86
+        ]
+       },
+       {
+        "label": "제4중대(화기)",
+        "xy": [
+         100.5,
+         81
+        ]
+       }
+      ],
+      "note": "주봉과 남동 능선, 화랑고지 전초. 대대 전투지경선 서쪽"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "주봉 일대를 점령한다.",
+       "params": {
+        "objective": "H395"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "제11중대로 화랑고지 전초를 점령하여 경계한다.",
+       "params": {
+        "area": "H_HR"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "고수",
+       "text": "395고지 주봉을 고수한다.",
+       "params": {
+        "objective": "H395"
+       }
+      }
+     ],
+     "purpose": "주봉을 지켜 주저항선 좌단을 유지하고 적 접근을 조기에 경고한다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       127,
+       88
+      ],
+      "frontage_m": 1800,
+      "preparation": "deliberate",
+      "polygon": [
+       [
+        117,
+        96
+       ],
+       [
+        122,
+        95
+       ],
+       [
+        138,
+        89
+       ],
+       [
+        138,
+        83
+       ],
+       [
+        122,
+        82
+       ],
+       [
+        116,
+        86
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         117.5,
+         94
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         124,
+         88
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         136,
+         86
+        ]
+       },
+       {
+        "label": "제8중대(화기)",
+        "xy": [
+         130,
+         84
+        ]
+       }
+      ],
+      "note": "제1대대 동쪽 구릉. 대대 전투지경선 동쪽"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "제1대대 동쪽 능선을 점령한다.",
+       "params": {
+        "objective": "R_E"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "방어",
+       "text": "제1대대 동쪽 능선 일대를 방어한다.",
+       "params": {
+        "area": "R_E"
+       }
+      }
+     ],
+     "purpose": "제1대대 우측방을 지키고 낙타능선 동쪽 접근을 막는다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       126.6,
+       62.2
+      ],
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         123.5,
+         62.5
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         129.5,
+         62.5
+        ]
+       },
+       {
+        "label": "제12중대(화기)",
+        "xy": [
+         126.6,
+         60
+        ]
+       }
+      ],
+      "note": "역곡천 남쪽 예비진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "역곡천 남쪽 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM_AA"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 역습로를 따라 제1대대 지역으로 역습한다.",
+       "params": {
+        "objective": "H395",
+        "route": "CM_RT"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H395",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 395고지 주봉 지역 안에 있음"
+       },
+       "basis": "risk_point: 적이 무명고지를 잡고 주봉에 돌입"
+      }
+     ],
+     "purpose": "주봉에 돌입한 적을 즉시 몰아내 고지를 고수한다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       106,
+       84
+      ],
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "전차 1개 소대(좌)",
+        "xy": [
+         94,
+         88
+        ]
+       },
+       {
+        "label": "전차 1개 소대(우)",
+        "xy": [
+         116,
+         88
+        ]
+       }
+      ],
+      "note": "395고지 좌우 측방 (추정)"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "주봉과 화랑고지 사이 교전지역에 화력을 집중하여 제1대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM_EA1"
+       }
+      }
+     ],
+     "purpose": "무명고지 일대로 접근하는 적을 직사화력으로 격파한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "진지 점령은 D일 06:00까지 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "연대 예비는 D일 06:00까지 역습 준비를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM_BL12",
+      "name": "대대 전투지경선(제1대대-제2대대)",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        120,
+        95
+       ],
+       [
+        117,
+        91
+       ],
+       [
+        116,
+        85
+       ],
+       [
+        116,
+        77
+       ]
+      ],
+      "estimated": false
+     },
+     {
+      "id": "CM_CP12",
+      "name": "대대 접촉점(제1대대-제2대대)",
+      "kind": "contact_point",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        116,
+        85.5
+       ]
+      ],
+      "estimated": false
+     },
+     {
+      "id": "CM_EA1",
+      "name": "주봉-화랑고지 교전지역",
+      "kind": "engagement_area",
+      "terrain_refs": [
+       "H_NM",
+       "R_CAMEL"
+      ],
+      "xy": [
+       [
+        101,
+        103
+       ],
+       [
+        106,
+        100.5
+       ],
+       [
+        111,
+        104
+       ],
+       [
+        114,
+        108
+       ],
+       [
+        109,
+        112
+       ],
+       [
+        103,
+        108
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_OP",
+      "name": "화랑고지 전초",
+      "kind": "outpost",
+      "terrain_refs": [
+       "H_HR"
+      ],
+      "preparation": "hasty",
+      "xy": [
+       [
+        112,
+        109.5
+       ]
+      ],
+      "estimated": false
+     },
+     {
+      "id": "CM_AA",
+      "name": "연대 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        122,
+        60
+       ],
+       [
+        131,
+        60
+       ],
+       [
+        131,
+        64.5
+       ],
+       [
+        122,
+        64.5
+       ]
+      ],
+      "estimated": false
+     },
+     {
+      "id": "CM_LD",
+      "name": "역습 공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        103,
+        80
+       ],
+       [
+        109,
+        79.5
+       ],
+       [
+        114,
+        79
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_PP",
+      "name": "역습 통과지점",
+      "kind": "passage_point",
+      "xy": [
+       [
+        104,
+        85
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_RT",
+      "name": "연대 예비 역습로",
+      "kind": "route",
+      "terrain_refs": [
+       "X_YG",
+       "R_SE",
+       "H395"
+      ],
+      "xy": [
+       [
+        126.6,
+        62.2
+       ],
+       [
+        119,
+        68
+       ],
+       [
+        111,
+        74
+       ],
+       [
+        108,
+        79
+       ],
+       [
+        104,
+        85
+       ],
+       [
+        102,
+        92
+       ],
+       [
+        100,
+        99
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 48,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대(+제11중대) 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제340연대 주봉 축 대대와 화랑고지 축 대대가 모두 전투력 30% 미만",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E1",
+      "fraction": 0.7,
+      "text": "적 제340연대 화랑고지 축 대대 누적 손실 0.7 초과"
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 봉래호 수문을 폭파해 역곡천을 범람시켜 395고지의 증원과 보급을 끊고, 적 제114사단 제340연대 2개 대대로 야간에 화랑고지와 주봉을 동시에 공격해 395고지를 탈취한다. 제340연대가 소모되면 적 상급부대 예비인 적 제334연대가 넘겨받아 공격을 이어 간다.",
+   "groups": [
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         110,
+         150
+        ],
+        [
+         105,
+         125
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       },
+       "text": "D일 06:00부터 사단 전 지역과 395고지에 공격준비사격을 한다.",
+       "basis": "서술: 06:00 공격준비사격 시작"
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "H_HR",
+       "axis_xy": [
+        [
+         110,
+         150
+        ],
+        [
+         116,
+         125
+        ],
+        [
+         112,
+         109.5
+        ]
+       ],
+       "text": "이어서 화랑고지와 낙타능선에 화력을 집중해 공격 대대를 지원한다.",
+       "basis": "서술: 적이 화력과 병력을 집중해 고지를 공격했다"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H_HR",
+       "axis_xy": [
+        [
+         121,
+         124
+        ],
+        [
+         119,
+         122
+        ],
+        [
+         117,
+         116
+        ],
+        [
+         114,
+         112
+        ],
+        [
+         112,
+         109.5
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 19.25,
+        "text": "D일 19:15"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 2.7
+       },
+       "text": "D일 19:15 500고지에서 낙타능선을 따라 화랑고지를 공격한다.",
+       "basis": "아틀라스 본문: 19:15 1개 대대가 능선으로 진격해 제11중대를 공격. 같은 밤 3차례 공방(간격은 00:40 3차 공격 기준 추정)"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "H_NM",
+       "axis_xy": [
+        [
+         112,
+         109.5
+        ],
+        [
+         109,
+         107
+        ],
+        [
+         106,
+         104
+        ]
+       ],
+       "text": "이어서 무명고지를 공격해 화랑고지와 주봉을 분리한다.",
+       "basis": "서술: 주봉과 화랑고지를 분리하고 북쪽 능선에 공격거점을 확보하려 했다"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         105,
+         125
+        ],
+        [
+         103,
+         118
+        ],
+        [
+         102,
+         110
+        ],
+        [
+         101,
+         105
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 19.25,
+        "text": "D일 19:15"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 2.7
+       },
+       "text": "D일 19:15 효성산 남쪽에서 주봉을 정면 공격한다.",
+       "basis": "아틀라스 본문: 19:15 다른 1개 대대가 주봉으로 진격. 같은 밤 3차례 공방"
+      },
+      {
+       "timing": "조건",
+       "mode": "hold",
+       "objective_ref": "H_NM",
+       "axis_xy": [
+        [
+         102,
+         110
+        ],
+        [
+         106,
+         104
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H_NM",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 무명고지 안에 있음"
+       },
+       "text": "무명고지를 잡으면 2개 중대로 강화해 고수하고 주봉 공격 거점으로 삼는다.",
+       "basis": "서술: 3차 공격에서 무명고지를 확보한 뒤 2개 중대로 증강"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H500",
+       "axis_xy": [
+        [
+         131,
+         134
+        ],
+        [
+         124,
+         124
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       },
+       "text": "500고지 북쪽 종심에서 연대 예비로 대기한다.",
+       "basis": "상황도 500고지 북쪽 종심 진지(추정)"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H_NM",
+       "axis_xy": [
+        [
+         131,
+         134
+        ],
+        [
+         124,
+         124
+        ],
+        [
+         116,
+         114
+        ],
+        [
+         110,
+         107
+        ],
+        [
+         106,
+         104
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.3,
+        "text": "적 화랑고지 축 대대 누적 손실 0.3 초과"
+       },
+       "text": "선두 대대가 소모되면 무명고지 방향으로 투입해 공격을 잇는다.",
+       "basis": "추정: 00:40 3차 공격에 다시 2개 대대 규모가 투입됨"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         88,
+         130
+        ],
+        [
+         92,
+         115
+        ],
+        [
+         96,
+         105
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       },
+       "text": "효성산 서쪽에서 진지를 지키며 화력으로 주봉 서측방을 견제한다.",
+       "basis": "추정: 제341연대는 서술상 공격에 참가하지 않음"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H_HS",
+       "axis_xy": [
+        [
+         104.8,
+         168.4
+        ],
+        [
+         100,
+         150
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       },
+       "text": "효성산 후방에서 사단 예비로 대기한다.",
+       "basis": "서술: 구간 중 제342연대 투입 기록 없음"
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "H_HR",
+       "axis_xy": [
+        [
+         120,
+         175
+        ],
+        [
+         124,
+         150
+        ],
+        [
+         124,
+         130
+        ],
+        [
+         117,
+         116
+        ],
+        [
+         112,
+         109.5
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 주봉 축 대대 누적 손실 0.5 초과"
+       },
+       "text": "제340연대가 소모되면 이를 넘겨받아 화랑고지를 공격한다.",
+       "basis": "서술: 제340연대를 대체한 적 제334연대가 화랑고지 공격. 문턱값 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         112,
+         109.5
+        ],
+        [
+         106,
+         105
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "text": "이어서 화력과 병력을 집중해 주봉을 공격한다.",
+       "basis": "서술: 화랑고지를 탈취한 적이 395고지를 공격"
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         120,
+         175
+        ],
+        [
+         118,
+         130
+        ],
+        [
+         112,
+         109.5
+        ],
+        [
+         106,
+         105
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 53.5,
+        "text": "D+2일 05:30"
+       },
+       "text": "D+2일 05:30 2개 대대로 주봉을 다시 공격한다.",
+       "basis": "아틀라스 본문: 제334연대 2개 대대로 5차 공격. 적의 새벽 공격 선호를 계획 시각으로 씀"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "적 제334연대",
+    "alias": "적 연대 3",
+    "other_names": [
+     "적 제112사단 제334연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "position": {
+     "xy": [
+      120,
+      175
+     ],
+     "note": "적 상급부대 예비 제112사단 예하. 효성산 북동 종심 집결지(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. 공격준비사격 시작 시각"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "flood",
+    "ref": "IMP_FLOOD",
+    "duration_h": 48,
+    "note": "적이 봉래호 수문을 폭파해 역곡천이 범람한다. 도하점 외 역곡천 통과 불가"
+   },
+   {
+    "when": "D일 06:30",
+    "t": 6.5,
+    "kind": "air_window",
+    "duration_h": 11.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D일 18:30",
+    "t": 18.5,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:30",
+    "t": 30.5,
+    "kind": "air_window",
+    "duration_h": 11.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 18:30",
+    "t": 42.5,
+    "kind": "night",
+    "duration_h": 11.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "fog",
+    "ref": "H395",
+    "duration_h": 3,
+    "note": "395고지 전역에 짙은 안개. 포병 관측과 항공지원 곤란"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E6",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "mode": "bombard",
+      "target_ref": "H395",
+      "axis_xy": [
+       [
+        110,
+        150
+       ],
+       [
+        105,
+        125
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "note": "사단 전 지역에 공격준비사격을 집중했다."
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 19:15",
+      "t": 19.25,
+      "mode": "attack",
+      "from_ref": "H500",
+      "target_ref": "H_HR",
+      "axis_xy": [
+       [
+        119,
+        122
+       ],
+       [
+        117,
+        116
+       ],
+       [
+        114,
+        112
+       ],
+       [
+        112,
+        109.5
+       ]
+      ],
+      "note": "낙타능선을 따라 제11중대를 공격했으나 격퇴되었다."
+     },
+     {
+      "when": "D+1일 00:40",
+      "t": 24.67,
+      "mode": "attack",
+      "target_ref": "H_NM",
+      "axis_xy": [
+       [
+        112,
+        109.5
+       ],
+       [
+        109,
+        107
+       ],
+       [
+        106,
+        104
+       ]
+      ],
+      "note": "3차 공격. 주봉과 화랑고지를 분리하려 했다."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 19:15",
+      "t": 19.25,
+      "mode": "attack",
+      "from_ref": "H_HS",
+      "target_ref": "H395",
+      "axis_xy": [
+       [
+        105,
+        125
+       ],
+       [
+        103,
+        118
+       ],
+       [
+        102,
+        110
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "note": "주봉 정면 공격. 그 밤 2차례 공방 끝에 고지 점령에 실패했다."
+     },
+     {
+      "when": "D+1일 00:40",
+      "t": 24.67,
+      "mode": "attack",
+      "target_ref": "H395",
+      "axis_xy": [
+       [
+        105,
+        125
+       ],
+       [
+        102,
+        110
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "note": "2개 대대 규모 3차 공격을 제1대대에 집중했으나 격퇴되었다."
+     },
+     {
+      "when": "D+1일 새벽",
+      "t": 27,
+      "mode": "hold",
+      "target_ref": "H_NM",
+      "axis_xy": [
+       [
+        102,
+        110
+       ],
+       [
+        106,
+        104
+       ]
+      ],
+      "note": "3차 공격에서 잡은 무명고지를 2개 중대로 강화했다."
+     }
+    ]
+   },
+   {
+    "group": "HE1",
+    "actions": [
+     {
+      "when": "D+1일 야간",
+      "t": 43,
+      "mode": "attack",
+      "target_ref": "H_HR",
+      "axis_xy": [
+       [
+        124,
+        130
+       ],
+       [
+        117,
+        116
+       ],
+       [
+        112,
+        109.5
+       ]
+      ],
+      "note": "제340연대를 대체해 화랑고지를 공격했다. 제11중대가 물러났다(시각 추정)."
+     },
+     {
+      "when": "D+1일 야간",
+      "t": 44,
+      "mode": "attack",
+      "target_ref": "H395",
+      "axis_xy": [
+       [
+        112,
+        109.5
+       ],
+       [
+        106,
+        105
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "note": "4차 공격. 화력과 병력을 집중해 약 2시간 교전 끝에 주봉을 차지했다(시각 추정)."
+     },
+     {
+      "when": "D+2일 05:30",
+      "t": 53.5,
+      "mode": "attack",
+      "target_ref": "H395",
+      "axis_xy": [
+       [
+        118,
+        130
+       ],
+       [
+        112,
+        109.5
+       ],
+       [
+        106,
+        105
+       ],
+       [
+        100,
+        100
+       ]
+      ],
+      "note": "안개를 이용해 2개 대대로 5차 공격을 시작했다. 주봉 피탈은 구간 뒤(D+2일 08:10)다."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "RF1",
+    "unit": "제28연대 제1대대",
+    "entry_when": "D+1일 새벽",
+    "entry_t": 25,
+    "from_ref": "X_YG",
+    "note": "3차 공격 때 제30연대 제1대대와 함께 싸워 적을 격퇴했다(투입 시각 추정)."
+   },
+   {
+    "id": "RF2",
+    "unit": "제28연대 2개 대대",
+    "entry_when": "D+1일 야간",
+    "entry_t": 46,
+    "from_ref": "X_YG",
+    "note": "사단장 명령으로 주봉 역습. 이후 제28연대가 고지를 맡았다(시각 추정)."
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 19:15",
+      "t": 19.25,
+      "verb": "방어",
+      "text": "주봉과 화랑고지 전초에서 1·2차 공격을 격퇴했다.",
+      "ref": "H395"
+     },
+     {
+      "when": "D+1일 00:40",
+      "t": 24.67,
+      "verb": "격퇴",
+      "text": "제28연대 제1대대와 함께 3차 공격을 격퇴했다. 무명고지는 적에게 넘어갔다.",
+      "ref": "H395"
+     },
+     {
+      "when": "D+1일 주간",
+      "t": 34,
+      "verb": "역습",
+      "text": "항공 2개 편대 폭격과 전차포 사격 아래 무명고지로 역습했으나 실패하고 물러났다(시각 추정).",
+      "ref": "H_NM"
+     },
+     {
+      "when": "D+1일 야간",
+      "t": 43,
+      "verb": "철수",
+      "text": "제11중대가 적 제334연대의 공격을 받고 화랑고지에서 물러났다.",
+      "ref": "H_HR"
+     },
+     {
+      "when": "D+1일 야간",
+      "t": 46,
+      "verb": "철수",
+      "text": "약 2시간 교전 끝에 주봉에서 물러났다.",
+      "ref": "H395"
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D+1일 주간",
+      "t": 34,
+      "verb": "화력지원",
+      "text": "전차소대가 무명고지를 전차포로 사격해 제1대대 역습을 지원했다.",
+      "ref": "H_NM"
+     }
+    ]
+   },
+   {
+    "group": "ADJ2",
+    "actions": [
+     {
+      "when": "D+1일 새벽",
+      "t": 25,
+      "verb": "격퇴",
+      "text": "제1대대가 3차 공격 격퇴에 가담했다.",
+      "ref": "H395"
+     },
+     {
+      "when": "D+1일 야간",
+      "t": 48,
+      "verb": "역습",
+      "text": "주봉 피탈 약 2시간 뒤 2개 대대로 역습해 주봉을 되찾고 고지를 넘겨받았다(시각 추정).",
+      "ref": "H395"
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "flood",
+    "ref": "IMP_FLOOD",
+    "note": "봉래호 수문 폭파로 역곡천이 범람했다. 고지에는 10일분 식량을 미리 비축했다."
+   },
+   {
+    "when": "D+1일 주간",
+    "t": 34,
+    "kind": "air",
+    "note": "항공 2개 편대가 적 포진지를 폭격했다."
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "fog",
+    "ref": "H395",
+    "note": "고지 전역에 짙은 안개가 깔렸다."
+   }
+  ],
+  "historical_result": {
+   "friendly": "제30연대(제1대대 주봉 방어), 사단 예비 제28연대 역습",
+   "enemy": "적 제340연대, 적 제334연대",
+   "terrain_held": [
+    "H395"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "구간 손실 기록 없음. 전투 전체에서 제9사단 전사 505·부상 2,526·실종 391, 적 사살 8,234·포로 57. 제30연대 제1대대는 D+1일 주봉에서 물러날 만큼 큰 손실을 입었다.",
+   "duration_h": 48
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "주봉은 제28연대가 차지했고 화랑고지와 무명고지는 적이 차지했다. 적 제334연대 2개 대대의 안개 속 5차 공격이 진행 중이다. 제30연대 제1대대는 고지에서 물러났다.",
+   "terrain_held_at_horizon": [
+    "H395"
+   ],
+   "key_times": [
+    {
+     "t": 6,
+     "text": "공격준비사격과 수문 폭파",
+     "ref": "IMP_FLOOD"
+    },
+    {
+     "t": 19.25,
+     "text": "적 제340연대 2개 대대 1차 공격",
+     "ref": "H395"
+    },
+    {
+     "t": 24.67,
+     "text": "3차 공격 격퇴, 무명고지 피탈",
+     "ref": "H_NM"
+    },
+    {
+     "t": 43,
+     "text": "화랑고지 피탈(추정)",
+     "ref": "H_HR"
+    },
+    {
+     "t": 46,
+     "text": "제1대대 주봉에서 철수(추정)",
+     "ref": "H395"
+    },
+    {
+     "t": 48,
+     "text": "제28연대 역습으로 주봉 회복(추정)",
+     "ref": "H395"
+    },
+    {
+     "t": 53.5,
+     "text": "안개 속 적 제334연대 5차 공격 개시",
+     "ref": "H395"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb2_023",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

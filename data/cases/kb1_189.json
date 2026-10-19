@@ -1,0 +1,3454 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1951-10-10",
+   "end_date": "1951-10-13",
+   "d_day": "1951-10-10 (터치다운 작전 6일째)",
+   "order_time": "1951-10-10 공격 개시 직전(H시 06:00 추정)",
+   "text": "단장의 능선 전투 구간 4: 894·931·850고지를 확보한 미 제2사단 제23연대(프랑스대대 배속)가 능선 북단 851고지를 공격한다. H시부터 72시간.",
+   "why": "구간 지정에 따름. 마지막 목표 851고지 공격의 초기 배치 단계이며 선도 대대 소모에 대비한 프랑스대대 초월 계획이 핵심 결심이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 사단 주공인 미 제23연대(프랑스대대 배속)를 관점으로 한다. 연대가 3개 대대, 배속 대대, 전차중대 특수임무부대를 직접 운용해 851고지를 탈취했다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "10월 11일 야간 제1대대를 초월한 프랑스대대가 10월 13일 동틀 무렵 851고지 정상을 점령했다. 제2대대는 문등리 남쪽 고지를 점령해 적 증원을 차단했고 양 계곡의 전차 특수임무부대가 851고지를 측방에서 차단했다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "931고지 정상 = (110,100), 1단위 100m, 북쪽 +y. 상황도를 시계 방향 90도 돌려 측정, 오차 약 ±200m",
+   "source": "atlas+text",
+   "atlas_pages": "아틀라스 4권 178쪽 상황도, 179쪽 본문"
+  },
+  "seed_id": "kb1_189_단장의_능선_전투",
+  "title": "단장의 능선 전투",
+  "dates": "1951. 9. 13.∼10. 15.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '단장의 능선 전투' (pdf 566쪽)",
+  "pdf_page": 566,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 2,
+    "B6": 3
+   },
+   "sim_value": 10,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제1차 공격에서 1개 연대(미 제23연대)만으로 단장의 능선을 공격",
+    "alternative": "처음부터 3개 연대 협조 공격으로 문등리 계곡 증원로를 함께 차단",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "이와 같은 상황을 고려해 볼 때 단장의 능선 전투는 연대의 작전능력을 넘어서는 것이었다."
+   },
+   {
+    "decision": "931고지를 남쪽(제2·제3대대)과 북쪽(프랑스대대)에서 협공하고 인접 연대가 문등리 축선을 동시 공격",
+    "alternative": "제1차와 같이 능선상 정면 공격을 반복하고 문등리 계곡 증원을 방치",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "9월 23일 새벽 931고지 점령 후 역습에 피탈",
+    "alternative": "점령 직후 예비대를 증원해 고지를 고수하고 문등리 방면 증원을 화력으로 차단",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 9월 13일~9월 18일: 미 제23연대의 제1차 공격, 850고지 점령과 미 제9연대 제2대대의 894고지 점령(6일). ② 9월 23일~9월 27일: 미 제9연대 주력 투입, 931고지 점령·피탈, 프랑스대대 투입 후 작전 중지(5일). ③ 10월 5일~10월 9일: 터치다운 작전의 931고지 남북 협공과 문등리 축선 통제(5일). ④ 10월 10일~10월 13일: 851고지 공격, 프랑스대대의 초월 공격과 정상 점령(4일). 연대 관점 참조 사례로는 ③ 또는 ④가 가장 적합하고, ①은 실패 대조 사례로 쓸 수 있다.",
+  "spec_used": true,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.5894,
+   "duration_s": 476.1,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 50561,
+     "cache_read_input_tokens": 117234,
+     "cache_creation_input_tokens": 17449
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9293,
+     "cache_read_input_tokens": 14850,
+     "cache_creation_input_tokens": 28285
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 44,
+   "flagged": [],
+   "cost_usd": 0.08697359999999998
+  },
+  "refs_normalized": 0,
+  "conditions_normalized": 0
+ },
+ "input": {
+  "perspective": {
+   "unit": "미 제2사단 제23연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제23연대",
+    "미 제23연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제2사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제2사단"
+   ],
+   "higher_mission": "미 제2사단은 3개 연대의 협조된 공격으로 단장의 능선을 확보하고 전선을 1220고지-문등리-가칠봉 선으로 추진한다.",
+   "higher_intent": "사단·군단 포병과 전차를 집중해 3개 연대가 전 정면에서 동시에 공격한다. 전차 특수임무부대를 문등리·사태리 계곡으로 투입해 851고지를 양 측방에서 차단하고 적 증원을 끊는다. 좁은 능선에 축차 투입을 피하고 적 박격포를 제압한다.",
+   "assigned_task": "제23연대(프랑스대대 배속)는 D일 851고지를 탈취하여 단장의 능선 전체를 확보한다. 제23전차중대 중심의 특수임무부대로 사태리 계곡을 차단한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "미 제38연대(네덜란드대대 배속)",
+     "alias": "인접 연대 1",
+     "echelon": "연대",
+     "type": "infantry",
+     "side": "좌측(서쪽)",
+     "mission": "문등리 도로 축선을 통제하고 1220고지 방향으로 공격한다.",
+     "xy": [
+      75,
+      80
+     ],
+     "other_names": [
+      "제38연대"
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제72전차대대 특수임무부대",
+     "alias": "인접 대대 1",
+     "echelon": "대대",
+     "type": "armor",
+     "side": "좌측 문등리 계곡",
+     "mission": "제72전차대대, 제38연대 1개 보병중대, 사단 공병소대로 문등리까지 진출해 851고지 서측방을 차단한다.",
+     "xy": [
+      80.5,
+      53
+     ],
+     "other_names": [
+      "제72전차대대 TF"
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "국군 제5사단",
+     "alias": "인접 사단 1",
+     "echelon": "사단",
+     "type": "infantry",
+     "side": "우측(동쪽)",
+     "mission": "가칠봉 일대 고지를 탈취해 미 제2사단 우측방을 엄호한다.",
+     "xy": [
+      175,
+      110
+     ]
+    },
+    {
+     "id": "A4",
+     "unit": "미 제2사단 포병",
+     "alias": "사단 포병",
+     "echelon": "여단",
+     "type": "artillery",
+     "side": "후방",
+     "mission": "사단 정면 전체를 일반지원하고 적 박격포와 851고지 진지에 화력을 집중한다.",
+     "xy": [
+      135,
+      45
+     ],
+     "other_names": [
+      "사단 및 군단 포병"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A2",
+     "text": "제72전차대대 특수임무부대는 H시에 문등리 계곡 도로를 따라 문등리로 공격한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00 H시(추정)"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "T_MD",
+      "axis_xy": [
+       [
+        80.5,
+        53
+       ],
+       [
+        83,
+        65
+       ],
+       [
+        86,
+        78
+       ],
+       [
+        83,
+        95
+       ],
+       [
+        81,
+        115
+       ],
+       [
+        84,
+        135
+       ],
+       [
+        85.5,
+        142
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "제38연대는 H시에 문등리 도로 좌우측 고지군을 따라 1220고지 방향으로 공격한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00 H시(추정)"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "H1220",
+      "axis_xy": [
+       [
+        75,
+        80
+       ],
+       [
+        60,
+        95
+       ],
+       [
+        40,
+        105
+       ],
+       [
+        20,
+        113
+       ],
+       [
+        7.5,
+        118.5
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A3",
+     "text": "국군 제5사단은 H시에 가칠봉 방향으로 공격한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00 H시(추정)"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "H_GCB"
+     }
+    },
+    {
+     "unit": "A4",
+     "text": "사단 포병은 적 연대 이상이 851고지 일대에 있으면 화력을 집중한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H851",
+      "min_echelon": "연대",
+      "text": "적 연대 이상이 851고지 일대에 있음"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "H851"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "좌측은 제38연대와의 경계(문등리 계곡 동쪽), 우측은 국군 제5사단과의 경계(가칠봉 서쪽)이다. 단장의 능선 전체와 사태리 계곡을 포함한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제23연대|제38연대 경계",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       93,
+       55
+      ],
+      [
+       91,
+       80
+      ],
+      [
+       90,
+       105
+      ],
+      [
+       89,
+       130
+      ],
+      [
+       88,
+       150
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제23연대|국군 제5사단 경계",
+     "between": [
+      "아군 연대",
+      "A3"
+     ],
+     "xy": [
+      [
+       162,
+       40
+      ],
+      [
+       162,
+       100
+      ],
+      [
+       166,
+       150
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제23연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "relationship": "건제",
+    "location": {
+     "note": "931고지-850고지 일대",
+     "xy": [
+      114,
+      108
+     ]
+    },
+    "other_names": [
+     "1/23"
+    ]
+   },
+   {
+    "id": "F2",
+    "unit": "제23연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "931고지 서남쪽",
+     "xy": [
+      104,
+      100
+     ]
+    },
+    "other_names": [
+     "2/23"
+    ]
+   },
+   {
+    "id": "F3",
+    "unit": "제23연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "931고지",
+     "ref": "H931",
+     "xy": [
+      110,
+      100
+     ]
+    },
+    "other_names": [
+     "3/23"
+    ]
+   },
+   {
+    "id": "F4",
+    "unit": "프랑스대대",
+    "alias": "제4대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "relationship": "배속",
+    "location": {
+     "note": "850고지 남쪽",
+     "xy": [
+      114,
+      106
+     ]
+    },
+    "other_names": [
+     "프랑스 대대"
+    ]
+   },
+   {
+    "id": "F5",
+    "unit": "제23전차중대",
+    "alias": "전차중대 1",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "equipment": "전차 약 20대",
+    "location": {
+     "note": "사태리 계곡 도로 남쪽",
+     "xy": [
+      139,
+      70
+     ]
+    },
+    "other_names": [
+     "제23연대 전차중대"
+    ]
+   },
+   {
+    "id": "F6",
+    "unit": "제2공병대대 1개 소대",
+    "alias": "공병소대 1",
+    "echelon": "소대",
+    "type": "engineer",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "location": {
+     "note": "사태리 계곡 도로 남쪽",
+     "xy": [
+      139,
+      66
+     ]
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "제37야전포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 18문",
+    "location": {
+     "note": "박달고개",
+     "ref": "PS_BD",
+     "xy": [
+      138,
+      51
+     ]
+    }
+   },
+   {
+    "id": "F8",
+    "unit": "제23연대 중박격포중대",
+    "alias": "박격포중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "equipment": "4.2인치 박격포 12문",
+    "location": {
+     "note": "894고지-931고지 사이",
+     "xy": [
+      111,
+      93
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "남북 약 3.5km의 종격실 능선(894-931-850-851고지)과 서쪽 문등리 계곡, 동쪽 사태리 계곡. 정상부는 급경사이고 숲이 무성해 관측이 제한된다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H931",
+     "name": "931고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      110,
+      100
+     ],
+     "estimated": false,
+     "elevation_m": 931,
+     "evidence": "상황도 측정. 능선 주봉",
+     "other_names": [
+      "주봉",
+      "932고지",
+      "929고지"
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H894",
+     "name": "894고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      110.5,
+      86
+     ],
+     "estimated": false,
+     "elevation_m": 894,
+     "evidence": "상황도 측정. 능선 남단"
+    },
+    {
+     "id": "H850",
+     "name": "850고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      116,
+      113
+     ],
+     "estimated": false,
+     "elevation_m": 850,
+     "evidence": "상황도 위치 추정 측정. 931과 851 사이",
+     "other_names": [
+      "855고지"
+     ]
+    },
+    {
+     "id": "H851",
+     "name": "851고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      112.5,
+      120.5
+     ],
+     "estimated": false,
+     "elevation_m": 851,
+     "evidence": "상황도 측정. 적 대대 진지, 벙커 다수",
+     "preparation": "fortified"
+    },
+    {
+     "id": "RIDGE",
+     "name": "단장의 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      111,
+      105
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정. 남북 종격실 능선",
+     "line": [
+      [
+       110.5,
+       84
+      ],
+      [
+       110.5,
+       86
+      ],
+      [
+       110,
+       100
+      ],
+      [
+       116,
+       113
+      ],
+      [
+       112.5,
+       120.5
+      ],
+      [
+       110,
+       128
+      ]
+     ]
+    },
+    {
+     "id": "H750",
+     "name": "750고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      118.7,
+      113
+     ],
+     "estimated": false,
+     "elevation_m": 750,
+     "evidence": "상황도 측정. 850고지 동쪽 지능선"
+    },
+    {
+     "id": "H840",
+     "name": "840고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      94.8,
+      98.5
+     ],
+     "estimated": false,
+     "elevation_m": 840,
+     "evidence": "상황도 측정. 931고지 서쪽"
+    },
+    {
+     "id": "H520",
+     "name": "520고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      85.5,
+      110
+     ],
+     "estimated": false,
+     "elevation_m": 520,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "H961",
+     "name": "961고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      106.5,
+      155
+     ],
+     "estimated": false,
+     "elevation_m": 961,
+     "evidence": "상황도 측정. 851고지 북쪽 약 3.5km"
+    },
+    {
+     "id": "H702",
+     "name": "702고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      140.5,
+      88
+     ],
+     "estimated": false,
+     "elevation_m": 702,
+     "evidence": "상황도 측정. 사태리 계곡 동쪽"
+    },
+    {
+     "id": "H680",
+     "name": "680고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      131,
+      80
+     ],
+     "estimated": false,
+     "elevation_m": 680,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "H_MDS",
+     "name": "문등리 남쪽 고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      94,
+      133
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 제2대대가 점령해 적 증원을 차단한 고지. 상황도 표기 없음"
+    },
+    {
+     "id": "H983",
+     "name": "983고지",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      115,
+      38
+     ],
+     "estimated": true,
+     "elevation_m": 983,
+     "evidence": "서술: 931고지 남쪽 약 6km",
+     "other_names": [
+      "피의 능선 주봉"
+     ]
+    },
+    {
+     "id": "H_GCB",
+     "name": "가칠봉",
+     "alias": "고지 M",
+     "kind": "hill",
+     "xy": [
+      188.6,
+      120.5
+     ],
+     "estimated": false,
+     "elevation_m": 1242,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "H_BS",
+     "name": "백석산",
+     "alias": "고지 N",
+     "kind": "hill",
+     "xy": [
+      14.6,
+      64
+     ],
+     "estimated": false,
+     "elevation_m": 1142,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "H1220",
+     "name": "1220고지",
+     "alias": "고지 O",
+     "kind": "hill",
+     "xy": [
+      7.5,
+      118.5
+     ],
+     "estimated": true,
+     "elevation_m": 1220,
+     "evidence": "서술: 백석산과 어은산 중간"
+    },
+    {
+     "id": "T_MD",
+     "name": "문등리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      85.5,
+      142
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정. 적 작전의 중심지"
+    },
+    {
+     "id": "T_ST",
+     "name": "사태리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      144.5,
+      117
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "T_SS",
+     "name": "석사리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      97.5,
+      129.5
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "T_GS",
+     "name": "건솔리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      89,
+      78
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "T_IMJ",
+     "name": "이목정",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      69,
+      48
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "T_DB",
+     "name": "뒷복이",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      147,
+      86
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "T_DR",
+     "name": "드렛골",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      131,
+      75
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "P_DTY",
+     "name": "두타연",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      87.5,
+      69.5
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정"
+    },
+    {
+     "id": "PS_BD",
+     "name": "박달고개",
+     "alias": "지점 2",
+     "kind": "pass",
+     "xy": [
+      129.5,
+      46
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도 측정. 사태리 계곡 남쪽 입구, 포병 진지"
+    },
+    {
+     "id": "F_851N",
+     "name": "851고지 북쪽 진지",
+     "alias": "지점 3",
+     "kind": "other",
+     "xy": [
+      107,
+      133
+     ],
+     "estimated": false,
+     "elevation_m": 0,
+     "evidence": "상황도의 적 진지 표시",
+     "preparation": "deliberate"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "문등리 계곡 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       80.5,
+       53
+      ],
+      [
+       83,
+       65
+      ],
+      [
+       86,
+       78
+      ],
+      [
+       83,
+       95
+      ],
+      [
+       81,
+       115
+      ],
+      [
+       84,
+       135
+      ],
+      [
+       85.5,
+       142
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "사태리 계곡 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       139,
+       41
+      ],
+      [
+       141,
+       69
+      ],
+      [
+       137,
+       89
+      ],
+      [
+       135.5,
+       104
+      ],
+      [
+       140.5,
+       109
+      ],
+      [
+       144.5,
+       117
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "931-850 사이 횡단로",
+     "alias": "도로 3",
+     "kind": "trail",
+     "xy": [
+      [
+       95.5,
+       112
+      ],
+      [
+       110,
+       107
+      ],
+      [
+       119.5,
+       103
+      ],
+      [
+       133.5,
+       105
+      ]
+     ],
+     "estimated": false
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제12사단 1개 대대(851고지)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "상황도에 851고지 적 대대 진지로 표시. 유개 벙커에 의지한 종심 진지",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      112.5,
+      120.5
+     ],
+     "ref": "H851",
+     "frontage_m": 800,
+     "note": "851고지 정상과 남쪽 능선의 벙커 진지",
+     "polygon": [
+      [
+       109,
+       117
+      ],
+      [
+       116,
+       116
+      ],
+      [
+       116,
+       124
+      ],
+      [
+       109,
+       125
+      ]
+     ]
+    },
+    "equipment": "82mm 박격포, 기관총"
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제12사단 1개 대대(851고지 북쪽)",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "identified": true,
+    "known_at_start": "상황도에 851고지 북쪽 적 진지 표시",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      107,
+      133
+     ],
+     "ref": "F_851N",
+     "frontage_m": 800,
+     "note": "851고지 북쪽 종심 진지"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제12사단 1개 연대(-)(사태리 북쪽·동쪽)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 60,
+    "identified": true,
+    "known_at_start": "상황도에 사태리 북동·북쪽·동쪽 적 진지 표시",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      143,
+      140
+     ],
+     "ref": "T_ST",
+     "frontage_m": 2000,
+     "note": "사태리 북쪽 종심과 동쪽 고지",
+     "polygon": [
+      [
+       136,
+       127
+      ],
+      [
+       152,
+       134
+      ],
+      [
+       146,
+       152
+      ],
+      [
+       137,
+       147
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제6사단 잔존 부대(문등리 일대)",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 40,
+    "identified": true,
+    "known_at_start": "931고지를 잃고 문등리 방면으로 물러난 부대. 문등리 계곡을 통한 증원 통로를 쓴다",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      87,
+      145
+     ],
+     "ref": "T_MD",
+     "frontage_m": 1500,
+     "note": "문등리 일대와 석사리 서쪽"
+    }
+   },
+   {
+    "id": "E5",
+    "unit": "북한군 제12사단 포병·박격포 부대",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "제1차 공격 손실의 85%를 낸 박격포. 일일 약 1,000발 사격",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      106,
+      150
+     ],
+     "ref": "H961",
+     "note": "961고지 남쪽 반사면"
+    },
+    "equipment": "82mm·120mm 박격포, 야포"
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 06:00",
+   "light": "dawn",
+   "notes": "가을 산악. 능선 정상부 급경사, 숲이 무성해 항공 관측 제한. 좁은 능선이라 1개 대대 정면 이상 전개가 어렵다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 프랑스대대(-), 제3대대, 제2대대, 스트루먼 특수임무부대(제23전차중대, 프랑스대대 1개 중대, 공병 1개 소대) / 지원: 제37야전포병대대(직접지원), 중박격포중대, 사단·군단 포병, 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "프랑스대대(-)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F4",
+       "part": "-1개 중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "스트루먼 특수임무부대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F5"
+      },
+      {
+       "force": "F4",
+       "part": "1개 중대"
+      },
+      {
+       "force": "F6"
+      }
+     ]
+    },
+    {
+     "id": "G6",
+     "label": "화력지원부대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F7"
+      },
+      {
+       "force": "F8"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "851고지는 단장의 능선 북단으로 이를 확보해야 능선 전체와 문등리·사태리 계곡을 통제한다. 850고지에서 851고지까지 능선은 좁아 1개 대대 정면만 허용한다. 적 증원은 문등리 계곡에서 석사리를 거쳐, 역습은 961고지 방면에서 북쪽으로 접근한다.",
+    "key_terrain": [
+     {
+      "ref": "H851",
+      "why": "능선 북단. 확보하면 단장의 능선 전체와 양 계곡을 감제한다"
+     },
+     {
+      "ref": "H_MDS",
+      "why": "문등리에서 석사리로 이어지는 적 증원로를 감제한다"
+     },
+     {
+      "ref": "H850",
+      "why": "851고지 공격의 발판이자 초월지점"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "850-851 능선 축선",
+      "user": "friendly",
+      "refs": [
+       "RIDGE",
+       "H850",
+       "H851"
+      ],
+      "xy": [
+       [
+        116,
+        113
+       ],
+       [
+        115,
+        116
+       ],
+       [
+        114,
+        118
+       ],
+       [
+        112.5,
+        120.5
+       ]
+      ]
+     },
+     {
+      "name": "문등리-석사리 증원로",
+      "user": "enemy",
+      "refs": [
+       "T_MD",
+       "T_SS"
+      ],
+      "xy": [
+       [
+        85.5,
+        142
+       ],
+       [
+        90,
+        137
+       ],
+       [
+        94,
+        133
+       ],
+       [
+        97.5,
+        129.5
+       ],
+       [
+        104,
+        125
+       ],
+       [
+        110,
+        121
+       ]
+      ]
+     },
+     {
+      "name": "961고지-851고지 역습로",
+      "user": "enemy",
+      "refs": [
+       "H961",
+       "F_851N",
+       "H851"
+      ],
+      "xy": [
+       [
+        106.5,
+        155
+       ],
+       [
+        107,
+        145
+       ],
+       [
+        107,
+        133
+       ],
+       [
+        110,
+        126
+       ],
+       [
+        112.5,
+        120.5
+       ]
+      ]
+     },
+     {
+      "name": "사태리 계곡",
+      "user": "friendly",
+      "refs": [
+       "R2",
+       "T_ST"
+      ],
+      "xy": [
+       [
+        137,
+        89
+       ],
+       [
+        135.5,
+        104
+       ],
+       [
+        140.5,
+        109
+       ],
+       [
+        144.5,
+        117
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제12사단은 2개 대대로 851고지와 그 북쪽 종심의 벙커 진지에서 박격포 화력으로 방어하다가 851고지 북쪽 진지의 대대로 851고지로 역습해 올 것이다. 적 제6사단 잔존 부대는 문등리 계곡에서 석사리를 거쳐 851고지 서측으로 증원해 올 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "from_ref": "H851",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         112.5,
+         120.5
+        ],
+        [
+         114,
+         118
+        ]
+       ],
+       "when": "H시부터",
+       "t": 6
+      },
+      {
+       "group": "E5",
+       "mode": "bombard",
+       "from_ref": "H961",
+       "objective_ref": "H850",
+       "axis_xy": [
+        [
+         106,
+         150
+        ],
+        [
+         116,
+         113
+        ]
+       ],
+       "when": "H시부터 계속",
+       "t": 6
+      },
+      {
+       "group": "E4",
+       "mode": "reinforce",
+       "from_ref": "T_MD",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         85.5,
+         142
+        ],
+        [
+         90,
+         137
+        ],
+        [
+         94,
+         133
+        ],
+        [
+         97.5,
+         129.5
+        ],
+        [
+         104,
+         125
+        ],
+        [
+         110,
+         121
+        ]
+       ],
+       "when": "D일 야간",
+       "t": 20
+      },
+      {
+       "group": "E2",
+       "mode": "counterattack",
+       "from_ref": "F_851N",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         109,
+         128
+        ],
+        [
+         111,
+         124
+        ],
+        [
+         112.5,
+         120.5
+        ]
+       ],
+       "when": "D+1일 새벽",
+       "t": 28
+      }
+     ],
+     "risk_point": "선도 대대가 851고지 남쪽 좁은 능선에서 벙커와 박격포에 전투력을 소모한 순간 적 북쪽 대대가 851고지로 역습하는 때"
+    },
+    "unknowns": [
+     "적 상급부대의 증원 부대 투입 여부와 시기",
+     "851고지 북쪽 종심 진지의 정확한 규모",
+     "적 박격포 진지 위치"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "H시는 D일 06:00으로 한다.",
+     "why": "서술에 공격 개시 시각이 없어 추정"
+    },
+    {
+     "text": "프랑스대대 1개 중대를 스트루먼 특수임무부대에 배속한다.",
+     "why": "서술: 특수임무부대가 프랑스대대 보병과 공병으로 편성"
+    },
+    {
+     "text": "대대 세부 보충: 각 대대의 중대 배치와 공격대기지점은 서술과 모순되지 않게 추정했다.",
+     "why": "서술에 중대 수준 배치가 없음"
+    },
+    {
+     "text": "사단·군단 포병과 근접항공지원을 연대 정면에 우선 할당받는다.",
+     "why": "연대가 사단 주공"
+    }
+   ]
+  },
+  "mission": {
+   "text": "제23연대는 D일 06:00 850고지에서 능선을 따라 공격하여 851고지를 탈취해 단장의 능선 전체를 확보하고 사단의 전선 추진을 가능하게 한다.",
+   "task_verb": "탈취",
+   "objective_ref": "OBJ1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 6,
+    "text": "D일 06:00 H시"
+   },
+   "purpose": "단장의 능선 전체를 확보하고 문등리·사태리 계곡을 통제해 사단이 전선을 1220고지-문등리-가칠봉 선으로 추진하도록 한다"
+  },
+  "execution": {
+   "end_state": {
+    "text": "연대가 851고지를 확보하고 문등리 남쪽 고지와 사태리에서 적 증원을 차단한 상태다.",
+    "friendly": "851고지에 1개 대대 이상, 문등리 남쪽 고지에 제2대대, 사태리에 특수임무부대",
+    "enemy": "851고지 일대 적 제12사단 대대들이 격멸되거나 북쪽으로 격퇴됨",
+    "terrain": "894-931-850-851고지 능선 전체와 문등리 남쪽 고지 확보"
+   },
+   "concept": {
+    "text": "제1대대가 능선을 따라 851고지를 공격하고 제3대대가 그 서측에서 851고지 서측 지능선을 공격해 적을 분산시킨다. 제2대대는 문등리 남쪽 고지를, 특수임무부대는 사태리를 차단해 851고지를 고립시킨다. 선도 대대가 소모되면 프랑스대대가 초월해 851고지를 탈취한다.",
+    "maneuver": "제1대대가 주력으로 850고지에서 능선을 따라 851고지를 공격한다. 프랑스대대(-)는 후속지원하다가 명에 의해 제1대대를 초월한다. 제3대대는 서측 지능선으로, 제2대대는 석사리 방면으로, 특수임무부대는 사태리 계곡으로 공격한다.",
+    "fires": "H-30분 공격준비사격을 851고지에 집중한다. 이후 우선은 제1대대, 초월 후 프랑스대대다. 적 박격포를 대포병 사격으로 제압하고 851고지 북쪽 역습로를 차단사격한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G2",
+     "position_ref": "H850",
+     "xy": [
+      114,
+      108
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.4,
+      "text": "제1대대 손실 0.4 초과"
+     },
+     "priorities": [
+      "1. 제1대대를 초월해 851고지 탈취",
+      "2. 적 역습 시 850고지 방향 역습"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "OBJ1",
+      "EA1"
+     ],
+     "restrictions": "제2대대와 제3대대 공격 지역은 대대 요청 시에만 사격한다. 문등리 일대 사격은 제72전차대대 특수임무부대와 협조한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       116,
+       114
+      ],
+      "note": "850고지 북쪽 능선에 종대 배치",
+      "frontage_m": 400,
+      "preparation": "hasty",
+      "ref": "H850",
+      "elements": [
+       {
+        "label": "A중대",
+        "xy": [
+         115.5,
+         115
+        ]
+       },
+       {
+        "label": "B중대",
+        "xy": [
+         116.5,
+         114
+        ]
+       },
+       {
+        "label": "C중대",
+        "xy": [
+         116,
+         112.5
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "850고지에서 능선을 따라 851고지를 공격한다.",
+       "params": {
+        "objective": "OBJ1",
+        "axis_xy": [
+         [
+          116,
+          113
+         ],
+         [
+          115,
+          116
+         ],
+         [
+          114,
+          118
+         ],
+         [
+          112.5,
+          120.5
+         ]
+        ]
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "확보",
+       "text": "프랑스대대 초월 후 850고지를 확보한다.",
+       "params": {
+        "objective": "H850"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "제1대대 손실 0.4 초과"
+       },
+       "basis": "risk_point: 좁은 능선에서 선도 대대 소모"
+      }
+     ],
+     "purpose": "851고지 적 진지를 파괴하고 주력 공격을 연다"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       114,
+       108
+      ],
+      "note": "850고지 남쪽 반사면",
+      "frontage_m": 500,
+      "preparation": "hasty",
+      "ref": "H850",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         113,
+         108
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         115,
+         109
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "후속지원",
+       "text": "제1대대를 후속지원한다.",
+       "params": {
+        "followed_group": "G1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "초월",
+       "text": "850고지 북쪽 초월지점에서 제1대대를 초월한다.",
+       "params": {
+        "passed_group": "G1",
+        "passage_point": "PP1"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "제1대대 손실 0.4 초과"
+       },
+       "basis": "risk_point: 선도 대대가 851고지 남쪽 능선에서 전투력을 소모한 순간 적 역습"
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "이어서 851고지를 탈취한다.",
+       "params": {
+        "objective": "OBJ1"
+       }
+      }
+     ],
+     "purpose": "좁은 능선에서 공격 기세를 유지해 851고지를 탈취한다"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       108,
+       104
+      ],
+      "note": "931고지와 북서쪽 사면",
+      "frontage_m": 800,
+      "preparation": "deliberate",
+      "ref": "H931",
+      "elements": [
+       {
+        "label": "I중대",
+        "xy": [
+         110,
+         100
+        ]
+       },
+       {
+        "label": "K중대",
+        "xy": [
+         108,
+         104
+        ]
+       },
+       {
+        "label": "L중대",
+        "xy": [
+         106.5,
+         106
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "확보",
+       "text": "1개 중대로 931고지를 확보한다.",
+       "params": {
+        "objective": "H931"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "제1대대 서측에서 851고지 서측 지능선을 공격한다.",
+       "params": {
+        "objective": "OBJ2",
+        "axis_xy": [
+         [
+          108,
+          104
+         ],
+         [
+          106,
+          110
+         ],
+         [
+          105,
+          115
+         ],
+         [
+          105,
+          120
+         ],
+         [
+          106,
+          123
+         ]
+        ]
+       }
+      }
+     ],
+     "purpose": "851고지 서측을 압박해 적 화력을 분산시키고 제1대대 좌측방을 엄호한다"
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       103,
+       106
+      ],
+      "note": "931고지 북서쪽 횡단로 서쪽 끝 부근",
+      "frontage_m": 600,
+      "preparation": "none",
+      "elements": [
+       {
+        "label": "E중대",
+        "xy": [
+         102,
+         108
+        ]
+       },
+       {
+        "label": "F중대",
+        "xy": [
+         104,
+         107
+        ]
+       },
+       {
+        "label": "G중대",
+        "xy": [
+         103,
+         104.5
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "공격로를 따라 문등리 남쪽 고지를 탈취한다.",
+       "params": {
+        "objective": "OBJ3",
+        "route": "RT1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "차단",
+       "text": "이어서 문등리-석사리 선에서 적의 증원을 차단한다.",
+       "params": {
+        "line": "BL1"
+       }
+      }
+     ],
+     "purpose": "문등리 계곡에서 851고지로 오는 적 증원을 끊는다"
+    },
+    {
+     "group": "G5",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       136.5,
+       96
+      ],
+      "note": "사태리 계곡 도로 931-850 횡단로 동쪽 끝 남쪽",
+      "frontage_m": 300,
+      "preparation": "none",
+      "ref": "R2",
+      "elements": [
+       {
+        "label": "제23전차중대",
+        "xy": [
+         136.5,
+         97
+        ]
+       },
+       {
+        "label": "프랑스대대 1개 중대",
+        "xy": [
+         136.5,
+         95
+        ]
+       },
+       {
+        "label": "공병소대",
+        "xy": [
+         137,
+         93
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "차단",
+       "text": "사태리 계곡 도로로 사태리에 진입해 851고지 동측방을 차단한다.",
+       "params": {
+        "area": "BA1",
+        "route": "R2"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력지원",
+       "text": "이어서 851고지 동사면에 직사화력을 지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "H851"
+       }
+      }
+     ],
+     "purpose": "사태리 계곡의 적 증원과 퇴로를 끊어 851고지를 고립시킨다"
+    },
+    {
+     "group": "G6",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       138,
+       51
+      ],
+      "note": "105mm는 박달고개, 중박격포는 894-931고지 사이",
+      "ref": "PS_BD",
+      "elements": [
+       {
+        "label": "제37야전포병대대",
+        "xy": [
+         138,
+         51
+        ]
+       },
+       {
+        "label": "중박격포중대",
+        "xy": [
+         111,
+         93
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "851고지에 공격준비사격을 실시하고 제1대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "OBJ1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력공격",
+       "text": "851고지 북쪽 역습로에 화력공격한다.",
+       "params": {
+        "target_ref": "EA1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "EA1",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 851고지 북쪽 교전지역 안에 있음"
+       },
+       "basis": "적 방책: 851고지 북쪽 대대의 역습"
+      }
+     ],
+     "purpose": "적 벙커와 박격포를 제압하고 역습을 저지한다"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 05:00 공격대기지점 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     },
+     {
+      "text": "D일 05:30 공격준비사격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5.5,
+       "text": "D일 05:30"
+      }
+     },
+     {
+      "text": "D일 06:00 H시. 전 부대 공격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "프랑스대대 초월 준비 완료",
+      "event": {
+       "type": "losses_exceed",
+       "group": "G1",
+       "fraction": 0.4,
+       "text": "제1대대 손실 0.4 초과 시 초월"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "LD1",
+      "name": "공격개시선(850고지 북쪽)",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        111,
+        114.5
+       ],
+       [
+        120,
+        114.5
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H850"
+      ]
+     },
+     {
+      "id": "OBJ1",
+      "name": "목표 1(851고지)",
+      "kind": "objective",
+      "xy": [
+       [
+        109,
+        117
+       ],
+       [
+        116,
+        116
+       ],
+       [
+        116,
+        124
+       ],
+       [
+        109,
+        125
+       ]
+      ],
+      "estimated": false,
+      "terrain_refs": [
+       "H851"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "OBJ2",
+      "name": "목표 2(851고지 서측 지능선)",
+      "kind": "objective",
+      "xy": [
+       [
+        103,
+        119
+       ],
+       [
+        108,
+        118
+       ],
+       [
+        108,
+        125
+       ],
+       [
+        103,
+        126
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H851"
+      ]
+     },
+     {
+      "id": "OBJ3",
+      "name": "목표 3(문등리 남쪽 고지)",
+      "kind": "objective",
+      "xy": [
+       [
+        91,
+        131
+       ],
+       [
+        97,
+        131
+       ],
+       [
+        97,
+        136
+       ],
+       [
+        91,
+        136
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H_MDS"
+      ]
+     },
+     {
+      "id": "PP1",
+      "name": "초월지점(850고지 북쪽)",
+      "kind": "passage_point",
+      "xy": [
+       [
+        115,
+        115
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H850"
+      ]
+     },
+     {
+      "id": "BL1",
+      "name": "차단선(문등리-석사리)",
+      "kind": "phase_line",
+      "xy": [
+       [
+        89,
+        137
+       ],
+       [
+        94,
+        133
+       ],
+       [
+        97.5,
+        129.5
+       ],
+       [
+        103,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "H_MDS",
+       "T_SS"
+      ]
+     },
+     {
+      "id": "BA1",
+      "name": "차단지역(사태리)",
+      "kind": "battle_position",
+      "xy": [
+       [
+        139,
+        110
+       ],
+       [
+        149,
+        111
+       ],
+       [
+        149,
+        121
+       ],
+       [
+        139,
+        121
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T_ST"
+      ]
+     },
+     {
+      "id": "EA1",
+      "name": "교전지역 1(851고지 북쪽)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        104,
+        125
+       ],
+       [
+        115,
+        125
+       ],
+       [
+        115,
+        136
+       ],
+       [
+        104,
+        136
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F_851N"
+      ]
+     },
+     {
+      "id": "BD1",
+      "name": "제1대대|제3대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G3"
+      ],
+      "xy": [
+       [
+        109,
+        102
+       ],
+       [
+        111,
+        112
+       ],
+       [
+        109.5,
+        118
+       ],
+       [
+        108,
+        127
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BD2",
+      "name": "제3대대|제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G3",
+       "G4"
+      ],
+      "xy": [
+       [
+        100,
+        100
+       ],
+       [
+        101,
+        115
+       ],
+       [
+        100,
+        126
+       ],
+       [
+        99,
+        135
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "RT1",
+      "name": "제2대대 공격로",
+      "kind": "route",
+      "xy": [
+       [
+        103,
+        106
+       ],
+       [
+        101,
+        112
+       ],
+       [
+        99,
+        118
+       ],
+       [
+        97,
+        124
+       ],
+       [
+        95,
+        129
+       ],
+       [
+        94,
+        133
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "LOA1",
+      "name": "공격한계선(851고지 북쪽)",
+      "kind": "limit_of_advance",
+      "xy": [
+       [
+        100,
+        128
+       ],
+       [
+        118,
+        128
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 06:00 (H시)",
+  "start_t": 6,
+  "horizon_h": 72,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제1대대와 프랑스대대(-) 손실이 모두 0.7 초과(아군 공격 전투력 30% 미만)",
+    "group": "G1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "프랑스대대(-) 손실 0.7 초과",
+      "group": "G2",
+      "fraction": 0.7
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "text": "851고지 적 대대와 북쪽 대대 손실이 모두 0.7 초과(적 방어 전투력 30% 미만)",
+    "group": "E1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "851고지 북쪽 적 대대 손실 0.7 초과",
+      "group": "E2",
+      "fraction": 0.7
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제12사단은 851고지와 그 북쪽 종심의 유개 벙커 진지를 고수하고 박격포 화력으로 능선상의 공격 부대를 소모시킨다. 야간에 북쪽 대대로 851고지 일대에 역습하고, 적 상급부대는 중공군 제204사단을 문등리 방면으로 투입해 북한군 제5군단을 교대하고 단장의 능선 북단을 증원한다. 진지 유지가 불가능하면 961고지 방면으로 철수한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "851고지 정상과 남쪽 능선의 벙커 진지를 고수한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         112.5,
+         120.5
+        ],
+        [
+         114,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "H시부터"
+       },
+       "basis": "서술: 벙커 속에서 완강히 저항하는 적"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 851고지 북쪽 진지를 거쳐 961고지 방면으로 철수한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         112.5,
+         120.5
+        ],
+        [
+         110,
+         126
+        ],
+        [
+         107,
+         133
+        ],
+        [
+         107,
+         145
+        ],
+        [
+         106.5,
+         155
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.65,
+        "text": "851고지 적 대대 손실 0.65 초과"
+       },
+       "basis": "추정. 아틀라스: 북한군이 분산도주, 지혜산 방면으로 물러남"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "text": "야간에 851고지 북쪽 진지에서 851고지 남쪽 능선으로 역습한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         109,
+         128
+        ],
+        [
+         111,
+         124
+        ],
+        [
+         112.5,
+         120.5
+        ],
+        [
+         114,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       },
+       "basis": "추정. 북한군의 야간 역습 관행(제1차 공격 때 931고지 역습)"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 851고지 목표에 들어오면 즉시 역습한다.",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         110,
+         126
+        ],
+        [
+         112.5,
+         120.5
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 851고지 목표 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 6
+       },
+       "basis": "추정. 종심 진지의 역습 대기 부대"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 961고지 방면으로 철수한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         107,
+         145
+        ],
+        [
+         106.5,
+         155
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "851고지 북쪽 적 대대 손실 0.6 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "850고지와 851고지 남쪽 능선의 공격 부대에 박격포 사격을 집중한다.",
+       "objective_ref": "H850",
+       "axis_xy": [
+        [
+         106,
+         150
+        ],
+        [
+         116,
+         113
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "H시부터"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 12
+       },
+       "basis": "서술: 일일 평균 1,000여 발의 박격포 사격, 손실의 85%"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 961고지 북쪽으로 진지를 물린다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         106,
+         150
+        ],
+        [
+         106,
+         160
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E5",
+        "fraction": 0.5,
+        "text": "적 포병·박격포 부대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "야간에 문등리에서 석사리를 거쳐 851고지 서측으로 증원한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         85.5,
+         142
+        ],
+        [
+         90,
+         137
+        ],
+        [
+         94,
+         133
+        ],
+        [
+         97.5,
+         129.5
+        ],
+        [
+         104,
+         125
+        ],
+        [
+         110,
+         121
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 20,
+        "text": "D일 20:00"
+       },
+       "basis": "서술: 북한군이 문등리 계곡을 통해 병력을 계속 증원"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 문등리 북쪽으로 철수한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         94,
+         133
+        ],
+        [
+         85.5,
+         142
+        ],
+        [
+         85,
+         160
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.5,
+        "text": "적 제6사단 잔존 부대 손실 0.5 초과"
+       },
+       "basis": "추정. 아틀라스: 전차 진출 후 북한군 분산도주"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "사태리 북쪽과 동쪽 진지를 고수한다.",
+       "objective_ref": "T_ST",
+       "axis_xy": [
+        [
+         143,
+         140
+        ],
+        [
+         144.5,
+         117
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "H시부터"
+       },
+       "basis": "상황도: 사태리 북동·북쪽·동쪽 적 진지"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 사태리에 들어오면 사태리로 역습한다.",
+       "objective_ref": "BA1",
+       "axis_xy": [
+        [
+         143,
+         140
+        ],
+        [
+         144,
+         130
+        ],
+        [
+         144.5,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "BA1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 사태리 차단지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 12
+       },
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 사태리 북쪽 종심으로 철수한다.",
+       "objective_ref": "T_ST",
+       "axis_xy": [
+        [
+         143,
+         140
+        ],
+        [
+         141.5,
+         149
+        ],
+        [
+         141,
+         165
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "사태리 일대 적 연대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "적 상급부대 명령으로 문등리 북쪽에서 문등리 계곡을 따라 남하해 북한군 제5군단을 교대한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         90,
+         180
+        ],
+        [
+         86,
+         170
+        ],
+        [
+         85,
+         160
+        ],
+        [
+         85.5,
+         142
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 12,
+        "text": "D일 12:00"
+       },
+       "basis": "아틀라스: D일 중공군 제68군이 북한군 제5군단을 교대해 제204사단 투입. 시각은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "이어서 석사리를 거쳐 851고지 서측으로 공격한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         85.5,
+         142
+        ],
+        [
+         94,
+         133
+        ],
+        [
+         97.5,
+         129.5
+        ],
+        [
+         104,
+         125
+        ],
+        [
+         110,
+         121
+        ]
+       ],
+       "basis": "추정. 증원 목적이 단장의 능선 북단 유지"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 문등리 북쪽으로 철수한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         94,
+         133
+        ],
+        [
+         85.5,
+         142
+        ],
+        [
+         86,
+         170
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.4,
+        "text": "중공군 제204사단 선두 연대 손실 0.4 초과"
+       },
+       "basis": "추정. 아틀라스: 전차대대가 하심포에서 중공군 증원을 차단"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "중공군 제204사단 후속 연대는 선두 연대를 따라 문등리 북쪽 하심포 일대로 남하한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         88,
+         195
+        ],
+        [
+         87,
+         185
+        ],
+        [
+         86,
+         175
+        ],
+        [
+         85,
+         165
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24,
+        "text": "D+1일 00:00"
+       },
+       "basis": "추정. 사단 단위 교대 투입"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 문등리 남쪽 고지에 있으면 그 고지로 역습한다.",
+       "objective_ref": "H_MDS",
+       "axis_xy": [
+        [
+         85,
+         165
+        ],
+        [
+         85.5,
+         142
+        ],
+        [
+         94,
+         133
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H_MDS",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 문등리 남쪽 고지에 있음"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "H3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "중공군 제202사단 1개 연대는 961고지 북쪽으로 남하해 851고지 종심을 증원한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         118,
+         190
+        ],
+        [
+         114,
+         175
+        ],
+        [
+         108,
+         162
+        ],
+        [
+         106.5,
+         155
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 30,
+        "text": "D+1일 06:00"
+       },
+       "basis": "아틀라스: 제202사단 1개 연대 투입. 시각과 축선은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "이어서 961고지 일대를 고수한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         106.5,
+         155
+        ]
+       ],
+       "basis": "추정. 북한군 철수 엄호"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제204사단 1개 연대(선두)",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      90,
+      180
+     ],
+     "note": "문등리 북쪽 약 4km 하심포 북쪽 접근로(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제204사단"
+    ]
+   },
+   {
+    "id": "H2",
+    "unit": "중공군 제204사단 1개 연대(후속)",
+    "alias": "적 연대 4",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      88,
+      195
+     ],
+     "note": "문등리 계곡 북쪽 종심(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제204사단"
+    ]
+   },
+   {
+    "id": "H3",
+    "unit": "중공군 제202사단 1개 연대",
+    "alias": "적 연대 5",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      118,
+      190
+     ],
+     "note": "961고지 북쪽 종심(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제202사단 1개 연대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. H시 직후 시야 제한"
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능. 능선 숲으로 지상 관측 제한"
+   },
+   {
+    "when": "D일 18:00",
+    "t": 18,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 18:00",
+    "t": 42,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 07:00",
+    "t": 55,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 18:00",
+    "t": 66,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 06:00부터",
+      "t": 6,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        112.5,
+        120.5
+       ],
+       [
+        114,
+        118
+       ]
+      ],
+      "from_ref": "H851",
+      "target_ref": "H851",
+      "note": "851고지 벙커 속에서 완강히 저항하며 제1대대와 프랑스대대의 진격을 지연시켰다."
+     },
+     {
+      "when": "D+3일 동틀 무렵",
+      "t": 77,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        112.5,
+        120.5
+       ],
+       [
+        110,
+        126
+       ],
+       [
+        107,
+        133
+       ],
+       [
+        106.5,
+        155
+       ]
+      ],
+      "from_ref": "H851",
+      "target_ref": "H961",
+      "note": "프랑스대대의 공격으로 851고지 정상을 잃고 북쪽으로 물러났다(철수 경로는 추정)."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일~D+2일",
+      "t": 20,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        107,
+        133
+       ],
+       [
+        110,
+        126
+       ]
+      ],
+      "from_ref": "F_851N",
+      "target_ref": "H851",
+      "note": "851고지 북쪽 종심 진지에서 저항했다. 역습의 시각과 규모는 서술에 없다."
+     }
+    ]
+   },
+   {
+    "group": "E5",
+    "actions": [
+     {
+      "when": "D일 06:00부터 계속",
+      "t": 6,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        106,
+        150
+       ],
+       [
+        116,
+        113
+       ]
+      ],
+      "from_ref": "H961",
+      "target_ref": "H850",
+      "note": "능선상의 공격 부대에 박격포 사격을 계속했다(서술에 구간 세부 없음, 제1차 작전 경향에서 추정)."
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D일 이후",
+      "t": 18,
+      "mode": "withdraw",
+      "axis_xy": [
+       [
+        87,
+        145
+       ],
+       [
+        85.5,
+        160
+       ],
+       [
+        85,
+        175
+       ]
+      ],
+      "from_ref": "T_MD",
+      "target_ref": "T_MD",
+      "note": "제72전차대대 특수임무부대가 문등리 북쪽 하심포까지 진격해 후방을 유린하자 단장의 능선 일대 북한군이 분산 도주하기 시작했다."
+     }
+    ]
+   },
+   {
+    "group": "H1",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 12,
+      "mode": "reinforce",
+      "axis_xy": [
+       [
+        90,
+        180
+       ],
+       [
+        86,
+        170
+       ],
+       [
+        85,
+        160
+       ]
+      ],
+      "from_ref": "T_MD",
+      "target_ref": "T_MD",
+      "note": "중공군 제204사단이 북한군 제5군단을 교대해 이 전선에 투입되었으나 하심포에서 제72전차대대 특수임무부대에 증원이 차단되었다."
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 10,
+      "mode": "hold",
+      "axis_xy": [
+       [
+        143,
+        140
+       ],
+       [
+        144.5,
+        117
+       ]
+      ],
+      "from_ref": "T_ST",
+      "target_ref": "T_ST",
+      "note": "사태리 북쪽 진지에서 방어했으나 스트루먼 특수임무부대가 사태리로 진입해 851고지 동측방이 차단되었다."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "H1",
+    "unit": "중공군 제204사단",
+    "entry_when": "D일",
+    "entry_t": 12,
+    "from_ref": "T_MD",
+    "note": "적 상급부대가 북한군 제5군단 교대를 위해 투입. 시각은 D일 중(추정)"
+   },
+   {
+    "id": "H3",
+    "unit": "중공군 제202사단 1개 연대",
+    "entry_when": "D일 이후",
+    "entry_t": 30,
+    "from_ref": "H961",
+    "note": "아틀라스: 제204사단과 함께 투입. 정확한 시각과 위치 불명(추정)"
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "공격",
+      "ref": "OBJ1",
+      "text": "프랑스대대의 지원 아래 850고지에서 능선을 따라 851고지 공격을 선도하며 벙커의 적을 제압했다."
+     },
+     {
+      "when": "D+1일 야간",
+      "t": 44,
+      "verb": "확보",
+      "ref": "H850",
+      "text": "프랑스대대에 초월된 뒤 후방 능선을 확보했다(세부 추정)."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "후속지원",
+      "text": "제1대대 공격을 지원했다."
+     },
+     {
+      "when": "D+1일 야간",
+      "t": 44,
+      "verb": "초월",
+      "ref": "PP1",
+      "text": "제1대대를 초월해 공격을 이어받았다(시각 20:00 추정)."
+     },
+     {
+      "when": "D+3일 동틀 무렵",
+      "t": 78,
+      "verb": "탈취",
+      "ref": "H851",
+      "text": "851고지 정상을 점령했다."
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일 06:00",
+      "t": 6,
+      "verb": "공격",
+      "ref": "OBJ2",
+      "text": "931고지에서 제1대대 서측으로 기동해 851고지 서측을 압박했다."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 12,
+      "verb": "탈취",
+      "ref": "H_MDS",
+      "text": "문등리 남쪽 고지를 점령했다(시각 추정)."
+     },
+     {
+      "when": "D일 이후",
+      "t": 18,
+      "verb": "차단",
+      "ref": "BL1",
+      "text": "문등리 계곡에서 851고지로 오는 적 증원을 차단했다."
+     }
+    ]
+   },
+   {
+    "group": "G5",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 10,
+      "verb": "차단",
+      "ref": "BA1",
+      "text": "제23전차중대와 프랑스대대 보병·공병으로 사태리에 진입해 851고지 동측방을 차단했다."
+     }
+    ]
+   },
+   {
+    "group": "A2",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 12,
+      "verb": "차단",
+      "ref": "T_MD",
+      "text": "문등리까지 진출하고 북쪽 4km 하심포까지 진격해 중공군 증원을 차단하고 적 후방을 유린했다."
+     }
+    ]
+   },
+   {
+    "group": "A1",
+    "actions": [
+     {
+      "when": "D일 이후",
+      "t": 6,
+      "verb": "공격",
+      "ref": "H1220",
+      "text": "네덜란드대대의 지원을 받으며 1220고지 방향으로 공격을 계속했다(D+5일 1220고지 진출, 구간 밖)."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일~D+3일 주간",
+    "t": 7,
+    "kind": "air",
+    "note": "근접항공지원과 대규모 포병 지원(전투 전체 30만 발)이 계속되었다."
+   },
+   {
+    "when": "D일~D+2일 야간",
+    "t": 18,
+    "kind": "night",
+    "note": "프랑스대대의 초월은 D+1일 야간에 이루어졌다."
+   }
+  ],
+  "historical_result": {
+   "friendly": "미 제23연대(프랑스대대 배속)",
+   "enemy": "북한군 제12사단 851고지 방어 부대, 북한군 제6사단 잔존 부대, 중공군 제204사단 증원 부대",
+   "terrain_held": [
+    "H894",
+    "H931",
+    "H850",
+    "H851",
+    "H_MDS",
+    "T_ST"
+   ],
+   "end_state_achieved": "yes",
+   "losses": "구간 손실은 서술에 없다. 전투 전체 미 제2사단 3,745명(전사 597, 실종 84, 부상 3,064), 공산군 2만 4,679명 추정. 구간 비율은 추정치다.",
+   "duration_h": 72,
+   "friendly_loss_pct": 15,
+   "enemy_loss_pct": 45
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "D+3일 06:00 동틀 무렵 프랑스대대가 851고지 정상을 점령해 단장의 능선 전체를 확보했다. 제2대대는 문등리 남쪽 고지, 특수임무부대는 사태리를 차단 중이고 적은 북쪽으로 분산 철수했다.",
+   "terrain_held_at_horizon": [
+    "H894",
+    "H931",
+    "H850",
+    "H851",
+    "H_MDS",
+    "T_ST"
+   ],
+   "key_times": [
+    {
+     "t": 6,
+     "text": "H시. 제1대대가 프랑스대대 지원 아래 851고지 공격 개시",
+     "ref": "OBJ1"
+    },
+    {
+     "t": 10,
+     "text": "스트루먼 특수임무부대 사태리 진입(추정)",
+     "ref": "BA1"
+    },
+    {
+     "t": 12,
+     "text": "제72전차대대 특수임무부대 문등리 진출, 중공군 제204사단 증원 차단(추정)",
+     "ref": "T_MD"
+    },
+    {
+     "t": 44,
+     "text": "프랑스대대가 제1대대 초월(D+1일 야간, 시각 추정)",
+     "ref": "PP1"
+    },
+    {
+     "t": 78,
+     "text": "프랑스대대 851고지 정상 점령(D+3일 동틀 무렵)",
+     "ref": "H851"
+    }
+   ],
+   "friendly_loss_pct": 15,
+   "enemy_loss_pct": 45
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_189",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [
+   "G5[1]: …지원한다"
+  ],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "E2[0]: counterattack"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

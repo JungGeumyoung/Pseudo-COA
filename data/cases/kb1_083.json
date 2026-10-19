@@ -1,0 +1,2860 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-07-30",
+   "end_date": "1950-08-01",
+   "d_day": "1950-07-30",
+   "order_time": "D일 06:00 (1950-07-30 06:00 추정)",
+   "text": "제17연대가 551고지-망일산선을 점령한 때부터 북한군 제5연대의 공격을 저지하고 역습으로 주저항선을 회복한 8월 1일까지",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 연대의 첫 결심인 주저항선 점령으로 둔다."
+  },
+  "perspective_rationale": "관점 지정이 국군 제17연대이며 이 연대가 권빈리 서쪽 551고지-망일산선의 작전지역을 맡았다. 미 제34연대는 전방 가천-명당산선의 엄호 부대로서 인접 부대로 둔다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "8월 1일 주저항선이 한때 돌파되어 숙성산-상현리선으로 철수했으나 역습으로 551고지와 망일산을 탈환했고, 북한군 제5연대는 명당산·대야리 일대로 퇴각하여 동진이 돈좌되었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)=남서 모서리. 권빈리를 (150,100)에 두고 서술의 거리(551고지 권빈리 서쪽 3km, 가천리 서쪽 6km, 317고지 가천리 서쪽 1km, 감토봉 거창 동남쪽 6km, 명당산 감토봉 남쪽 3km)로 추정 배치",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_083_권빈리_전투",
+  "title": "권빈리 전투",
+  "dates": "1950. 7. 30. ~ 8. 1.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '권빈리 전투' (pdf 292쪽)",
+  "pdf_page": 292,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 3,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "예비 제3대대를 망일산으로 전진시켜 북한군을 제압하도록 함",
+    "alternative": "예비대를 공격축선 전진이 아니라 주저항선(551고지·망일산) 증원 또는 돌파구 역습에 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "그러나 북한군은제3대대의 공격축선을 피하여 계속 연대 주저항선인 망일산과 551고지에 공격을 시도하였다. 이에 전력의 열세로 점차 위기에 처하게 되어 주저항선이 돌파되었고"
+   },
+   {
+    "decision": "주저항선 돌파 후 숙성산∼상현리선으로 철수해 정비한 뒤 역습",
+    "alternative": "철수선에서 방어만 지속하고 역습하지 않음",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제1대대가 551고지 동쪽 사면에서 전방의 미 제34연대를 지원",
+    "alternative": "명당산·317고지 전방 진지에 대대를 증원해 전방에서 저지",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.7525,
+   "duration_s": 546.4,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 10,
+     "output_tokens": 59749,
+     "cache_read_input_tokens": 172473,
+     "cache_creation_input_tokens": 29401
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 8181,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 15143
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 35,
+   "flagged": [
+    {
+     "id": "E:E1[1]",
+     "verdict": "hidden_condition",
+     "reason": "'격퇴되면 정비 후 되풀이한다'는 전투 결과(격퇴)를 조건으로 쓴 것이어서 전투력 조건이 아니다.",
+     "fix": "격퇴라는 서술을 빼고 'E1 손실 X% 초과 시 정비 후 재공격'처럼 전투력 손실 문턱값 조건으로 바꾼다."
+    },
+    {
+     "id": "E:E2[1]",
+     "verdict": "hidden_condition",
+     "reason": "'격퇴되면 정비 후 되풀이한다'가 전투 결과를 트리거로 삼고 있어 전투력 조건이 아니다.",
+     "fix": "격퇴 서술을 빼고 'E2 손실 X% 초과 시 정비 후 재공격'과 같이 손실 비율 조건으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.0489092
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "국군 제17연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제17연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제24사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "미 제24보병사단"
+   ],
+   "higher_mission": "미 제24사단은 거창-합천-권빈리 방면에서 북한군 제4사단의 동진을 저지하여 낙동강방어선 점령에 필요한 시간을 확보한다.",
+   "higher_intent": "미 제34연대가 가천-명당산선에서 적을 지연하고, 그 후방 권빈리 일대의 주저항선에서 적의 동진을 막는다.",
+   "assigned_task": "국군 제17연대는 미 제34연대 후방의 551고지-망일산선을 점령하고 권빈리 서쪽에서 적의 동진을 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "미 제34연대",
+     "alias": "인접 연대 1",
+     "side": "전방(서측)",
+     "mission": "가천-명당산선에서 주력은 명당산 서북능선, 1개 대대는 317고지, 1개 대대는 월현산을 점령하여 적을 지연한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      82,
+      75
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "미 제21연대 제1대대",
+     "alias": "인접 대대 1",
+     "side": "남측(합천 방면)",
+     "mission": "합천 일대를 방어하여 북한군 제18연대의 진출을 저지한다.",
+     "type": "infantry",
+     "echelon": "대대",
+     "xy": [
+      172,
+      18
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "미 제34연대는 가천-명당산선에서 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T6"
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "미 제34연대는 손실이 커지면 합천 방향으로 철수한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "A1",
+      "fraction": 0.4,
+      "text": "미 제34연대 손실 0.4 초과(추정)"
+     },
+     "action": {
+      "mode": "withdraw",
+      "objective_ref": "T14"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "미 제21연대 제1대대는 합천 일대를 방어한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T14"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 미 제34연대 후방 전투지경선(가천리 동쪽)부터 권빈리 동쪽까지, 북으로 551고지 북측, 남으로 망일산 남측까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "전방 전투지경선(제17연대-미 제34연대)",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       100,
+       140
+      ],
+      [
+       100,
+       100
+      ],
+      [
+       102,
+       70
+      ],
+      [
+       105,
+       45
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "남측 전투지경선(제17연대-미 제21연대 제1대대)",
+     "between": [
+      "아군 연대",
+      "A2"
+     ],
+     "xy": [
+      [
+       105,
+       45
+      ],
+      [
+       150,
+       48
+      ],
+      [
+       200,
+       50
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "북측 한계선",
+     "between": [
+      "아군 연대",
+      "없음"
+     ],
+     "xy": [
+      [
+       100,
+       140
+      ],
+      [
+       150,
+       140
+      ],
+      [
+       200,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제17연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 650,
+    "equipment": "소총, 기관총, 81mm 박격포",
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(권빈리 서쪽)",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제17연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 650,
+    "equipment": "소총, 기관총, 81mm 박격포",
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(권빈리 서쪽)",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제17연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 650,
+    "equipment": "소총, 기관총, 81mm 박격포",
+    "relationship": "건제",
+    "location": {
+     "note": "권빈리 일대",
+     "ref": "T3"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제17연대 중화기중대",
+    "alias": "중화기중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 75,
+    "equipment": "박격포 수 문(추정)",
+    "relationship": "건제",
+    "location": {
+     "note": "권빈리 일대",
+     "ref": "T3"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "합천 서북부 권빈리 일대. 거창-합천-고령 방면 도로가 만나는 교통 요지로 황강이 서에서 동으로 흐르고 가천이 가천리에서 합류한다. 북쪽과 서쪽은 험준한 산지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "551고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      120,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 551,
+     "evidence": "권빈리 서쪽 3km",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T2",
+     "name": "망일산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      124,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "551고지와 함께 연대 주저항선을 이룸",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T3",
+     "name": "권빈리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      150,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "거창-고령-합천 중간 교통 요지"
+    },
+    {
+     "id": "T4",
+     "name": "가천리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      90,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "권빈리 서쪽 6km, 가천과 황강 합류점"
+    },
+    {
+     "id": "T5",
+     "name": "317고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      80,
+      102
+     ],
+     "estimated": true,
+     "elevation_m": 317,
+     "evidence": "가천리 서쪽 1km"
+    },
+    {
+     "id": "T6",
+     "name": "명당산",
+     "alias": "고지 D",
+     "other_names": [
+      "383고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      80,
+      62
+     ],
+     "estimated": true,
+     "elevation_m": 383,
+     "evidence": "감토봉 남쪽 3km, 거창 동남쪽 8km"
+    },
+    {
+     "id": "T7",
+     "name": "감토봉",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      68,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "거창 동남쪽 6km"
+    },
+    {
+     "id": "T8",
+     "name": "월현산",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      100,
+      50
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "미 제34연대 1개 대대 배치"
+    },
+    {
+     "id": "T9",
+     "name": "숙성산",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      165,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 후방"
+    },
+    {
+     "id": "T10",
+     "name": "상현리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      165,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 후방"
+    },
+    {
+     "id": "T11",
+     "name": "대야리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      62,
+      50
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "명당산 서남쪽"
+    },
+    {
+     "id": "T12",
+     "name": "덕암리",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      196,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "고령 서쪽, 연대의 이전 위치"
+    },
+    {
+     "id": "T13",
+     "name": "거창",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      25,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 출발지"
+    },
+    {
+     "id": "T14",
+     "name": "합천",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      175,
+      10
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "권빈리 남쪽"
+    },
+    {
+     "id": "T15",
+     "name": "황강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      120,
+      96
+     ],
+     "line": [
+      [
+       25,
+       125
+      ],
+      [
+       60,
+       110
+      ],
+      [
+       90,
+       99
+      ],
+      [
+       120,
+       96
+      ],
+      [
+       150,
+       95
+      ],
+      [
+       163,
+       70
+      ],
+      [
+       172,
+       15
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "거창에서 합천으로 흐르는 낙동강 지류, 하계 도섭 가능 추정"
+    },
+    {
+     "id": "T16",
+     "name": "가천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      90,
+      120
+     ],
+     "line": [
+      [
+       88,
+       145
+      ],
+      [
+       90,
+       120
+      ],
+      [
+       90,
+       100
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "북쪽에서 흘러 가천리에서 황강에 합류"
+    },
+    {
+     "id": "T17",
+     "name": "551고지 서측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      112,
+      106
+     ],
+     "line": [
+      [
+       106,
+       104
+      ],
+      [
+       112,
+       106
+      ],
+      [
+       120,
+       108
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 배치 지역"
+    },
+    {
+     "id": "T18",
+     "name": "망일산 서쪽 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      115,
+      72
+     ],
+     "line": [
+      [
+       106,
+       70
+      ],
+      [
+       115,
+       72
+      ],
+      [
+       124,
+       72
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제2대대 배치 지역"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "거창-가천리-권빈리 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       25,
+       126
+      ],
+      [
+       60,
+       112
+      ],
+      [
+       90,
+       101
+      ],
+      [
+       110,
+       99
+      ],
+      [
+       130,
+       99
+      ],
+      [
+       150,
+       100
+      ],
+      [
+       175,
+       118
+      ],
+      [
+       196,
+       130
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "권빈리-합천 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       150,
+       100
+      ],
+      [
+       160,
+       80
+      ],
+      [
+       165,
+       55
+      ],
+      [
+       170,
+       30
+      ],
+      [
+       175,
+       10
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "감토봉-명당산-망일산 능선길",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       68,
+       84
+      ],
+      [
+       75,
+       72
+      ],
+      [
+       80,
+       62
+      ],
+      [
+       95,
+       62
+      ],
+      [
+       110,
+       68
+      ],
+      [
+       124,
+       72
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제4사단 제5연대 1개 대대(명당산 방면)",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "personnel": 450,
+    "identified": true,
+    "known_at_start": "거창에서 황강을 따라 감토봉 방면으로 진출 중",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      66,
+      88
+     ],
+     "note": "감토봉 일대",
+     "ref": "T7",
+     "frontage_m": 1000
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제4사단 제5연대 1개 대대(317고지 방면)",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "personnel": 450,
+    "identified": true,
+    "known_at_start": "거창에서 황강을 따라 동진 중",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      60,
+      106
+     ],
+     "note": "거창 동남쪽 황강 연안",
+     "ref": "R1",
+     "frontage_m": 1000
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제4사단 제5연대 1개 대대(예비)",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "personnel": 450,
+    "identified": true,
+    "known_at_start": "제5연대 후속 제대로 판단",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      55,
+      95
+     ],
+     "note": "감토봉 서쪽",
+     "ref": "T7"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제4사단 제18연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "identified": true,
+    "known_at_start": "합천 방향으로 진출하여 미 제21연대 제1대대를 공격 중",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      90,
+      25
+     ],
+     "note": "합천 서쪽 접근로",
+     "frontage_m": 2000
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 06:00",
+   "light": "day",
+   "notes": "7월 말 혹서기. 산악 지형으로 차량 기동은 도로에 국한된다. 전방에 미 제34연대가 지연 중이다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대, 제3대대(예비), 중화기중대 / 지원: 미 제24사단 포병(가용 시)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "중화기중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "551고지는 거창-권빈리 도로와 황강 계곡을 감제하고, 망일산은 명당산에서 동진하는 능선 접근로를 감제한다. 두 고지가 무너지면 권빈리 교차로가 노출된다. 적의 접근로는 가천리를 거치는 도로축과 명당산-망일산 능선축이며, 망일산 남측으로 권빈리 후방을 우회하는 길이 있다.",
+    "key_terrain": [
+     {
+      "ref": "T1",
+      "why": "도로와 황강 계곡을 감제하는 주저항선 북측 축"
+     },
+     {
+      "ref": "T2",
+      "why": "명당산 방면 능선 접근로를 감제하는 주저항선 남측 축"
+     },
+     {
+      "ref": "T3",
+      "why": "거창-고령-합천 도로 교차점이자 예비 위치"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "거창-가천리-권빈리 도로축",
+      "user": "enemy",
+      "refs": [
+       "R1",
+       "T4",
+       "T1"
+      ],
+      "xy": [
+       [
+        60,
+        112
+       ],
+       [
+        90,
+        101
+       ],
+       [
+        110,
+        99
+       ],
+       [
+        120,
+        104
+       ],
+       [
+        150,
+        100
+       ]
+      ]
+     },
+     {
+      "name": "감토봉-명당산-망일산 능선축",
+      "user": "enemy",
+      "refs": [
+       "R3",
+       "T6",
+       "T2"
+      ],
+      "xy": [
+       [
+        68,
+        84
+       ],
+       [
+        80,
+        62
+       ],
+       [
+        95,
+        62
+       ],
+       [
+        110,
+        68
+       ],
+       [
+        124,
+        72
+       ]
+      ]
+     },
+     {
+      "name": "망일산 남측 우회로",
+      "user": "enemy",
+      "refs": [
+       "T8",
+       "T10",
+       "T3"
+      ],
+      "xy": [
+       [
+        100,
+        50
+       ],
+       [
+        120,
+        55
+       ],
+       [
+        140,
+        70
+       ],
+       [
+        148,
+        90
+       ]
+      ]
+     },
+     {
+      "name": "권빈리-망일산 역습로",
+      "user": "friendly",
+      "refs": [
+       "CM6",
+       "T2"
+      ],
+      "xy": [
+       [
+        150,
+        98
+       ],
+       [
+        145,
+        88
+       ],
+       [
+        135,
+        78
+       ],
+       [
+        124,
+        72
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제5연대는 감토봉을 점령한 뒤 1개 대대씩으로 명당산과 317고지의 미 제34연대를 공격할 것이다. 이어서 2개 대대로 주저항선을 공격해 올 것이다. 1개 대대는 가천리를 거쳐 551고지로, 1개 대대는 명당산에서 망일산으로 공격하고, 예비 1개 대대는 망일산 남측으로 권빈리 후방을 위협할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "R1",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         60,
+         106
+        ],
+        [
+         70,
+         104
+        ],
+        [
+         80,
+         102
+        ]
+       ],
+       "when": "D+1일 새벽",
+       "t": 28
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "T7",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         72,
+         76
+        ],
+        [
+         80,
+         62
+        ]
+       ],
+       "when": "D+1일 새벽",
+       "t": 28
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "T5",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         80,
+         102
+        ],
+        [
+         90,
+         101
+        ],
+        [
+         105,
+         102
+        ],
+        [
+         120,
+         108
+        ]
+       ],
+       "when": "D+2일 새벽",
+       "t": 52
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "T6",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         80,
+         62
+        ],
+        [
+         95,
+         62
+        ],
+        [
+         110,
+         68
+        ],
+        [
+         124,
+         72
+        ]
+       ],
+       "when": "D+2일 새벽",
+       "t": 52
+      },
+      {
+       "group": "E3",
+       "mode": "infiltrate",
+       "from_ref": "T7",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         80,
+         62
+        ],
+        [
+         100,
+         50
+        ],
+        [
+         120,
+         55
+        ],
+        [
+         140,
+         70
+        ],
+        [
+         148,
+         90
+        ]
+       ],
+       "when": "D+2일 오전",
+       "t": 56
+      }
+     ],
+     "risk_point": "적 예비대대가 망일산 남측으로 우회하여 권빈리 후방을 위협하면서 주저항선 정면을 동시에 공격하는 때"
+    },
+    "unknowns": [
+     "적 제5연대의 실제 병력과 화기",
+     "미 제34연대의 철수 시기",
+     "적 제18연대의 권빈리 방향 전환 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "미 제34연대는 가천-명당산선에서 적을 최소 하루 지연한다.",
+     "why": "상급 사단 계획에 따른 전방 엄호"
+    },
+    {
+     "text": "대대 세부 보충: 중대 배치와 중화기중대 편성은 서술에 없어 서술과 모순되지 않게 보충한다.",
+     "why": "서술은 대대 단위 배치만 전한다"
+    },
+    {
+     "text": "포병 지원은 제한적이며 연대 화력은 박격포가 주가 된다.",
+     "why": "상급 사단 주력이 진주·합천 방면에 분산"
+    },
+    {
+     "text": "적 제18연대는 합천 방향으로 기동하며 연대 정면에 들지 않는다.",
+     "why": "적 제18연대가 미 제21연대 제1대대를 공격 중"
+    }
+   ]
+  },
+  "mission": {
+   "text": "제17연대는 D일 12:00까지 551고지-망일산선을 점령하고 권빈리 서쪽에서 북한군 제4사단 제5연대의 동진을 저지하여 상급 사단의 낙동강방어선 점령 시간을 확보한다.",
+   "task_verb": "저지",
+   "objective_ref": "CM1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 12,
+    "text": "D일 12:00 진지 점령 완료"
+   },
+   "purpose": "상급 사단의 낙동강방어선 점령 시간 확보"
+  },
+  "execution": {
+   "end_state": {
+    "text": "551고지와 망일산을 확보하고 적 제5연대가 주저항선 서쪽에서 돈좌되며 권빈리 교차로가 아군 통제 아래 있다.",
+    "friendly": "주저항선 유지, 예비 전투력 보존",
+    "enemy": "적 제5연대가 주저항선 서쪽에서 손실을 입고 공격력 상실",
+    "terrain": "551고지, 망일산, 권빈리 확보"
+   },
+   "concept": {
+    "text": "2개 대대로 551고지-망일산선을 점령하여 도로축과 능선축을 동시에 막고, 제3대대를 권빈리에 예비로 두어 돌파와 후방 우회에 역습한다. 화력은 가천리 동쪽과 망일산 서쪽 교전지역에 집중한다.",
+    "maneuver": "제1대대는 551고지 일대를 점령해 도로축을 저지하고 미 제34연대의 317고지 방어를 화력으로 돕는다. 제2대대는 망일산 서쪽 능선을 점령해 능선축을 저지한다. 제3대대는 권빈리에서 망일산 또는 551고지로 역습을 준비한다.",
+    "fires": "중화기중대는 가천리 동쪽 교전지역을 우선 사격하고, 이어서 망일산 서쪽 교전지역을 사격한다. 미 제34연대 철수 전에는 교전지역 사격을 협조 후 실시한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM5",
+     "xy": [
+      148,
+      98
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM9",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 망일산 동남측 후방 지역 안에 있음"
+     },
+     "priorities": [
+      "망일산 남측 우회 적 격멸",
+      "망일산 역습",
+      "551고지 역습"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM3",
+      "CM4"
+     ],
+     "restrictions": "미 제34연대가 가천-명당산선에 있는 동안 교전지역 사격은 협조 후 실시한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       118,
+       105
+      ],
+      "ref": "T1",
+      "frontage_m": 2000,
+      "polygon": [
+       [
+        106,
+        96
+       ],
+       [
+        128,
+        96
+       ],
+       [
+        128,
+        118
+       ],
+       [
+        106,
+        118
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         110,
+         106
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         120,
+         110
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         122,
+         100
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "551고지와 서측 능선, 동쪽 사면에 급편 진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "551고지 일대를 점령한다.",
+       "params": {
+        "objective": "T1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "저지",
+       "text": "가천리 동쪽 교전지역에서 도로축으로 공격하는 적을 저지한다.",
+       "params": {
+        "area": "CM3"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력지원",
+       "text": "551고지 동쪽 사면에서 317고지의 미 제34연대를 화력지원한다.",
+       "params": {
+        "supported_group": "A1",
+        "target_ref": "T5"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T5",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 317고지 지역 안에 있음"
+       },
+       "basis": "적 방책 1단계: 적 1개 대대가 317고지의 미 제34연대를 공격"
+      }
+     ],
+     "purpose": "도로축을 막아 권빈리 교차로를 보호"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       118,
+       72
+      ],
+      "ref": "T18",
+      "frontage_m": 2000,
+      "polygon": [
+       [
+        106,
+        62
+       ],
+       [
+        128,
+        62
+       ],
+       [
+        128,
+        82
+       ],
+       [
+        106,
+        82
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         110,
+         74
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         122,
+         74
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         118,
+         64
+        ]
+       }
+      ],
+      "preparation": "hasty",
+      "note": "망일산 서쪽 능선에 급편 진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "망일산 서쪽 능선을 점령한다.",
+       "params": {
+        "objective": "T2"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "저지",
+       "text": "망일산 서쪽 교전지역에서 명당산 방면의 적을 저지한다.",
+       "params": {
+        "area": "CM4"
+       }
+      }
+     ],
+     "purpose": "능선축을 막아 연대 남측과 후방을 보호"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       148,
+       98
+      ],
+      "ref": "CM5",
+      "frontage_m": 1000,
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         145,
+         100
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         150,
+         96
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         152,
+         102
+        ]
+       }
+      ],
+      "preparation": "none",
+      "note": "권빈리 일대 예비진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "권빈리 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM5"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "역습로 1을 따라 망일산 방향으로 역습한다.",
+       "params": {
+        "objective": "T2",
+        "route": "CM6"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM9",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 망일산 동남측 후방 지역 안에 있음"
+       },
+       "basis": "risk_point: 적 예비대대가 망일산 남측으로 권빈리 후방을 위협"
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "역습로 2를 따라 551고지로 역습한다.",
+       "params": {
+        "objective": "T1",
+        "route": "CM7"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "제1대대 손실 0.4 초과"
+       },
+       "basis": "적 방책 3단계: 적 1개 대대가 551고지를 공격"
+      }
+     ],
+     "purpose": "주저항선 돌파와 후방 우회에 대비"
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       138,
+       98
+      ],
+      "frontage_m": 500,
+      "preparation": "hasty",
+      "note": "권빈리 서쪽 도로 부근"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "가천리 동쪽 교전지역에 제1대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM3"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력지원",
+       "text": "망일산 서쪽 교전지역에 제2대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "CM4"
+       }
+      }
+     ],
+     "purpose": "주저항선 전방에서 적 공격 제대를 약화"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 12:00 주저항선 진지 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 12,
+       "text": "D일 12:00"
+      }
+     },
+     {
+      "text": "D일 18:00 예비 역습 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 18,
+       "text": "D일 18:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "주저항선(551고지-망일산선)",
+      "kind": "battle_position",
+      "xy": [
+       [
+        116,
+        118
+       ],
+       [
+        118,
+        104
+       ],
+       [
+        116,
+        88
+       ],
+       [
+        118,
+        70
+       ],
+       [
+        120,
+        58
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T1",
+       "T2"
+      ],
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM2",
+      "name": "대대 전투지경선(제1-제2대대)",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        100,
+        88
+       ],
+       [
+        125,
+        88
+       ],
+       [
+        150,
+        92
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM3",
+      "name": "EA 1 (가천리 동쪽)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        96,
+        92
+       ],
+       [
+        112,
+        92
+       ],
+       [
+        112,
+        112
+       ],
+       [
+        96,
+        112
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R1",
+       "T4"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "EA 2 (망일산 서쪽)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        94,
+        58
+       ],
+       [
+        108,
+        58
+       ],
+       [
+        108,
+        80
+       ],
+       [
+        94,
+        80
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R3"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "예비진지(권빈리)",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        142,
+        94
+       ],
+       [
+        155,
+        94
+       ],
+       [
+        155,
+        105
+       ],
+       [
+        142,
+        105
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T3"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "역습로 1(권빈리-망일산)",
+      "kind": "route",
+      "xy": [
+       [
+        150,
+        98
+       ],
+       [
+        145,
+        88
+       ],
+       [
+        135,
+        78
+       ],
+       [
+        124,
+        72
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "역습로 2(권빈리-551고지)",
+      "kind": "route",
+      "xy": [
+       [
+        150,
+        100
+       ],
+       [
+        138,
+        103
+       ],
+       [
+        128,
+        106
+       ],
+       [
+        120,
+        108
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "접촉점(미 제34연대)",
+      "kind": "contact_point",
+      "xy": [
+       [
+        100,
+        100
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T4"
+      ]
+     },
+     {
+      "id": "CM9",
+      "name": "후방 위협 지역(망일산 동남측)",
+      "kind": "other",
+      "xy": [
+       [
+        126,
+        52
+       ],
+       [
+        155,
+        52
+       ],
+       [
+        155,
+        88
+       ],
+       [
+        126,
+        88
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T10"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 66,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "side": "friendly",
+    "fraction": 0.7,
+    "text": "아군 연대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "side": "enemy",
+    "fraction": 0.7,
+    "text": "적 제5연대 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제5연대는 감토봉을 거점으로 명당산과 317고지의 미 제34연대를 1개 대대씩으로 공격해 탈취하고, 이어서 551고지-망일산선을 돌파하여 권빈리 교차로를 장악하고 대구 방향 동진로를 연다. 적 제18연대는 합천 방향으로 진출한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         70,
+         80
+        ],
+        [
+         75,
+         72
+        ],
+        [
+         80,
+         62
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 28,
+        "text": "D+1일 04:00 공격 개시(추정)"
+       },
+       "text": "감토봉에서 명당산의 미 제34연대를 공격한다.",
+       "basis": "서술: 31일 명당산을 1개 대대 규모로 공격. 개시 시각은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         80,
+         62
+        ],
+        [
+         88,
+         62
+        ],
+        [
+         95,
+         62
+        ],
+        [
+         103,
+         65
+        ],
+        [
+         110,
+         68
+        ],
+        [
+         124,
+         72
+        ]
+       ],
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       },
+       "text": "명당산에서 능선을 따라 망일산을 공격한다. 격퇴되면 정비 후 되풀이한다.",
+       "basis": "서술: D+2일 주저항선 공격, 패주 후 전열을 가다듬고 재공격. 횟수와 간격은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         110,
+         68
+        ],
+        [
+         95,
+         62
+        ],
+        [
+         80,
+         62
+        ],
+        [
+         70,
+         55
+        ],
+        [
+         62,
+         50
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "E1 손실 0.5 초과(추정)"
+       },
+       "text": "손실이 크면 명당산을 거쳐 대야리로 철수한다.",
+       "basis": "서술: 명당산·대야리 일대로 퇴각. 문턱값 추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         60,
+         106
+        ],
+        [
+         66,
+         105
+        ],
+        [
+         72,
+         104
+        ],
+        [
+         80,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 28,
+        "text": "D+1일 04:00 공격 개시(추정)"
+       },
+       "text": "황강 연안에서 317고지를 공격한다.",
+       "basis": "서술: 31일 317고지를 1개 대대 규모로 공격. 개시 시각은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         80,
+         102
+        ],
+        [
+         90,
+         101
+        ],
+        [
+         98,
+         100
+        ],
+        [
+         106,
+         103
+        ],
+        [
+         112,
+         106
+        ],
+        [
+         120,
+         108
+        ]
+       ],
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       },
+       "text": "317고지에서 가천리를 거쳐 551고지를 공격한다. 격퇴되면 정비 후 되풀이한다.",
+       "basis": "서술: 가천리 방면에서 551고지 공격 후 패주, 재공격. 횟수와 간격은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         106,
+         103
+        ],
+        [
+         90,
+         101
+        ],
+        [
+         85,
+         85
+        ],
+        [
+         80,
+         62
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "E2 손실 0.5 초과(추정)"
+       },
+       "text": "손실이 크면 명당산 방향으로 철수한다.",
+       "basis": "서술: 317고지와 명당산 쪽으로 패주. 문턱값 추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         55,
+         95
+        ],
+        [
+         66,
+         88
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       },
+       "text": "감토봉 일대에서 연대 예비로 대기한다.",
+       "basis": "추정: 3개 대대 편성 연대의 예비 대대"
+      },
+      {
+       "timing": "조건",
+       "mode": "infiltrate",
+       "objective_ref": "CM9",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         80,
+         62
+        ],
+        [
+         100,
+         50
+        ],
+        [
+         120,
+         55
+        ],
+        [
+         135,
+         65
+        ],
+        [
+         140,
+         72
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "E1 손실 0.25 초과(추정)"
+       },
+       "text": "망일산 정면 공격이 막히면 망일산 남측으로 우회하여 권빈리 후방을 위협한다.",
+       "basis": "서술: 연대 후방지역이 위협받음. 투입 조건 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         140,
+         72
+        ],
+        [
+         132,
+         72
+        ],
+        [
+         124,
+         72
+        ]
+       ],
+       "text": "후방에서 망일산을 공격한다.",
+       "basis": "서술: 제3대대 공격축선을 피해 망일산 공격 지속"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         124,
+         72
+        ],
+        [
+         110,
+         60
+        ],
+        [
+         100,
+         50
+        ],
+        [
+         80,
+         50
+        ],
+        [
+         62,
+         50
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "E3 손실 0.5 초과(추정)"
+       },
+       "text": "손실이 크면 대야리로 철수한다.",
+       "basis": "서술: 대야리 일대로 퇴각. 문턱값 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T14",
+       "axis_xy": [
+        [
+         90,
+         25
+        ],
+        [
+         120,
+         18
+        ],
+        [
+         150,
+         14
+        ],
+        [
+         175,
+         10
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       },
+       "text": "합천 방향으로 진출하여 미 제21연대 제1대대를 공격한다.",
+       "basis": "서술: 제18연대를 합천 쪽으로 진출시켜 미 제21연대 제1대대 공격"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         50,
+         100
+        ],
+        [
+         80,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 27,
+        "text": "D+1일 03:00(추정)"
+       },
+       "text": "317고지와 명당산의 미 제34연대 진지를 포격한다.",
+       "basis": "추정: 사단 포병의 공격 지원"
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         60,
+         90
+        ],
+        [
+         118,
+         90
+        ]
+       ],
+       "text": "551고지-망일산 주저항선을 포격한다.",
+       "basis": "추정: 주저항선 공격 지원"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제4사단 포병 1개 대대(추정)",
+    "alias": "적 포병 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 60,
+    "equipment": "76mm 야포·122mm 곡사포 수 문(추정)",
+    "position": {
+     "xy": [
+      50,
+      100
+     ],
+     "note": "감토봉 서쪽 황강 연안(추정)",
+     "ref": "R1"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:00",
+    "t": 29,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 20:00",
+    "t": 44,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:00",
+    "t": 53,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+2일 20:00",
+    "t": 68,
+    "kind": "night",
+    "duration_h": 4,
+    "note": "야간(구간 끝까지)"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "weather",
+    "duration_h": 66,
+    "note": "7월 말 혹서. 산악 기동 시 피로 누적"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 중",
+      "t": 14,
+      "mode": "attack",
+      "from_ref": "T13",
+      "target_ref": "T7",
+      "axis_xy": [
+       [
+        25,
+        128
+       ],
+       [
+        45,
+        110
+       ],
+       [
+        60,
+        95
+       ],
+       [
+        68,
+        84
+       ]
+      ],
+      "note": "거창에서 황강을 따라 남진하여 감토봉을 점령"
+     },
+     {
+      "when": "D+1일",
+      "t": 30,
+      "mode": "attack",
+      "from_ref": "T7",
+      "target_ref": "T6",
+      "axis_xy": [
+       [
+        66,
+        88
+       ],
+       [
+        72,
+        76
+       ],
+       [
+        80,
+        62
+       ]
+      ],
+      "note": "1개 대대로 명당산을 공격하여 탈취"
+     },
+     {
+      "when": "D+2일 새벽",
+      "t": 52,
+      "mode": "attack",
+      "from_ref": "T6",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        80,
+        62
+       ],
+       [
+        95,
+        62
+       ],
+       [
+        110,
+        68
+       ],
+       [
+        124,
+        72
+       ]
+      ],
+      "note": "망일산 주저항선 공격. 집중 사격과 기습 공격으로 격퇴되어 명당산 쪽으로 분산 도주"
+     },
+     {
+      "when": "D+2일 오후",
+      "t": 62,
+      "mode": "attack",
+      "from_ref": "T6",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        80,
+        62
+       ],
+       [
+        95,
+        62
+       ],
+       [
+        110,
+        68
+       ],
+       [
+        124,
+        72
+       ]
+      ],
+      "note": "전열을 정비해 재공격. 제3대대 공격축선을 피해 망일산 공격을 지속하여 주저항선을 돌파"
+     },
+     {
+      "when": "D+2일 야간",
+      "t": 71,
+      "mode": "withdraw",
+      "from_ref": "T2",
+      "target_ref": "T11",
+      "axis_xy": [
+       [
+        124,
+        72
+       ],
+       [
+        110,
+        68
+       ],
+       [
+        95,
+        62
+       ],
+       [
+        80,
+        62
+       ],
+       [
+        62,
+        50
+       ]
+      ],
+      "note": "제17연대 역습으로 명당산·대야리 일대로 퇴각"
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D+1일",
+      "t": 30,
+      "mode": "attack",
+      "from_ref": "R1",
+      "target_ref": "T5",
+      "axis_xy": [
+       [
+        60,
+        106
+       ],
+       [
+        70,
+        104
+       ],
+       [
+        80,
+        102
+       ]
+      ],
+      "note": "1개 대대로 317고지를 공격하여 탈취. 제1대대 화력지원으로도 저지되지 않음"
+     },
+     {
+      "when": "D+2일 새벽",
+      "t": 52,
+      "mode": "attack",
+      "from_ref": "T5",
+      "target_ref": "T1",
+      "axis_xy": [
+       [
+        80,
+        102
+       ],
+       [
+        90,
+        101
+       ],
+       [
+        105,
+        102
+       ],
+       [
+        120,
+        108
+       ]
+      ],
+      "note": "가천리를 거쳐 551고지 공격. 격퇴되어 317고지 쪽으로 패주"
+     },
+     {
+      "when": "D+2일 오후",
+      "t": 62,
+      "mode": "attack",
+      "from_ref": "T5",
+      "target_ref": "T1",
+      "axis_xy": [
+       [
+        80,
+        102
+       ],
+       [
+        90,
+        101
+       ],
+       [
+        105,
+        102
+       ],
+       [
+        120,
+        108
+       ]
+      ],
+      "note": "재공격하여 551고지 일대 주저항선 돌파"
+     },
+     {
+      "when": "D+2일 야간",
+      "t": 71,
+      "mode": "withdraw",
+      "from_ref": "T1",
+      "target_ref": "T6",
+      "axis_xy": [
+       [
+        120,
+        108
+       ],
+       [
+        100,
+        100
+       ],
+       [
+        85,
+        85
+       ],
+       [
+        80,
+        62
+       ]
+      ],
+      "note": "역습에 밀려 명당산 방향으로 퇴각"
+     }
+    ]
+   },
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D+2일 오후",
+      "t": 60,
+      "mode": "infiltrate",
+      "from_ref": "T6",
+      "target_ref": "CM9",
+      "axis_xy": [
+       [
+        80,
+        62
+       ],
+       [
+        100,
+        50
+       ],
+       [
+        120,
+        55
+       ],
+       [
+        135,
+        65
+       ]
+      ],
+      "note": "재공격 시 연대 후방지역 위협(투입 제대와 축선은 추정)"
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D일~D+2일",
+      "t": 6,
+      "mode": "attack",
+      "from_ref": "T14",
+      "target_ref": "T14",
+      "axis_xy": [
+       [
+        90,
+        25
+       ],
+       [
+        130,
+        15
+       ],
+       [
+        175,
+        10
+       ]
+      ],
+      "note": "합천 방향에서 미 제21연대 제1대대 공격. 연대 정면에 들지 않음"
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 10,
+      "verb": "점령",
+      "ref": "T1",
+      "text": "551고지 서측 능선에 배치"
+     },
+     {
+      "when": "D+1일",
+      "t": 32,
+      "verb": "화력지원",
+      "ref": "T5",
+      "text": "551고지 동쪽 사면에서 미 제34연대를 지원했으나 적을 저지하지 못함"
+     },
+     {
+      "when": "D+2일 새벽",
+      "t": 52,
+      "verb": "저지",
+      "ref": "CM3",
+      "text": "접근하는 적에 사격을 집중하고 기습 공격으로 격퇴"
+     },
+     {
+      "when": "D+2일 오후",
+      "t": 66,
+      "verb": "철수",
+      "ref": "T9",
+      "text": "주저항선 돌파로 숙성산-상현리선으로 철수"
+     },
+     {
+      "when": "D+2일 야간",
+      "t": 70,
+      "verb": "역습",
+      "ref": "T1",
+      "text": "부대 정비 후 역습하여 551고지 탈환"
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 10,
+      "verb": "점령",
+      "ref": "T18",
+      "text": "망일산 서쪽 능선에 배치"
+     },
+     {
+      "when": "D+2일 새벽",
+      "t": 52,
+      "verb": "저지",
+      "ref": "CM4",
+      "text": "명당산 방면의 적을 사격과 기습 공격으로 격퇴"
+     },
+     {
+      "when": "D+2일 오후",
+      "t": 66,
+      "verb": "철수",
+      "ref": "T10",
+      "text": "주저항선 돌파로 숙성산-상현리선으로 철수"
+     },
+     {
+      "when": "D+2일 야간",
+      "t": 70,
+      "verb": "역습",
+      "ref": "T2",
+      "text": "역습하여 망일산 탈환"
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 10,
+      "verb": "점령",
+      "ref": "CM5",
+      "text": "권빈리에 예비로 위치"
+     },
+     {
+      "when": "D+2일 오후",
+      "t": 60,
+      "verb": "역습",
+      "ref": "T2",
+      "text": "후방 위협에 연대장 명으로 망일산으로 전진하여 적 제압 시도. 적이 공격축선을 피해 효과 제한"
+     },
+     {
+      "when": "D+2일 야간",
+      "t": 70,
+      "verb": "역습",
+      "ref": "T2",
+      "text": "연대 역습에 참가"
+     }
+    ]
+   },
+   {
+    "group": "A1",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 14,
+      "verb": "철수",
+      "ref": "T14",
+      "text": "제2대대 투입 후 월현산 서쪽 능선의 1개 대대를 정상으로 옮기고 317고지의 1개 대대와 연대지휘소는 합천으로 철수"
+     },
+     {
+      "when": "D+1일",
+      "t": 30,
+      "verb": "방어",
+      "ref": "T6",
+      "text": "명당산·317고지에서 적 공격을 받아 진지 상실"
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일~D+2일",
+    "t": 6,
+    "kind": "weather",
+    "note": "혹서기 산악 전투"
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제17연대",
+   "enemy": "북한군 제4사단 제5연대",
+   "terrain_held": [
+    "T1",
+    "T2",
+    "T3"
+   ],
+   "end_state_achieved": "yes",
+   "losses": "서술에 손실 수치 없음. 주저항선 일시 돌파 후 역습으로 회복, 적 제5연대 퇴각",
+   "duration_h": 66
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "제17연대가 역습으로 551고지와 망일산을 회복하고 적 제5연대는 명당산·대야리 일대로 퇴각하여 동진이 돈좌됨",
+   "terrain_held_at_horizon": [
+    "T1",
+    "T2",
+    "T3"
+   ],
+   "key_times": [
+    {
+     "t": 14,
+     "ref": "T5",
+     "text": "미 제34연대 317고지 대대와 지휘소 합천 철수"
+    },
+    {
+     "t": 30,
+     "ref": "T6",
+     "text": "적 명당산·317고지 공격 개시"
+    },
+    {
+     "t": 52,
+     "ref": "CM1",
+     "text": "적 주저항선 1차 공격, 격퇴"
+    },
+    {
+     "t": 60,
+     "ref": "CM6",
+     "text": "제3대대 망일산 방향 투입"
+    },
+    {
+     "t": 66,
+     "ref": "T9",
+     "text": "주저항선 돌파, 숙성산-상현리선 철수"
+    },
+    {
+     "t": 70,
+     "ref": "T1",
+     "text": "역습으로 551고지·망일산 탈환"
+    },
+    {
+     "t": 71,
+     "ref": "T11",
+     "text": "적 명당산·대야리로 퇴각"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_083",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [
+   "E1[1](이어서): '격퇴'",
+   "E2[1](이어서): '격퇴'"
+  ],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

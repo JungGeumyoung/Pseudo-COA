@@ -1,0 +1,2744 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-08-04",
+   "end_date": "1950-08-05",
+   "d_day": "1950-08-04",
+   "order_time": "1950-08-03 저녁(D-1일 20:00 추정)",
+   "text": "의성 전투 중 8월 4~5일: 제21연대의 향로봉-366고지 주저항선 방어와 붕괴, 제10연대 제1대대의 261고지 후퇴와 세촌-262고지 재편성",
+   "why": "지정된 구간 ①(권장)을 따랐다. 연대 주저항선 방어가 한 번의 결정적 교전으로 끝나므로 연대급 지역방어 명령을 평가하는 단위로 알맞다."
+  },
+  "perspective_rationale": "관점은 국군 제8사단 제21연대로 지정되었다. 이 연대는 구간 시작 때 의성 북방 향로봉-366고지 주저항선을 맡았고 북한군 제83연대의 주공을 정면으로 받았다. 제10연대(인접)와 제16연대(사단 예비로 추정)의 행동은 higher_context에 두었다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "북한군 제83연대가 366고지의 제3대대를 측면에서 기습해 고지를 점령했고, 이어 제2대대 진지도 점령했다. 좌측이 노출된 향로봉의 제1대대도 진지를 지키지 못해 연대 주저항선이 완전히 붕괴되었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 의성에서 서쪽 약 11km, 남쪽 약 2.5km 지점(추정). 의성은 (110,25), 의성 북방 약 10km의 향로봉은 (120,128), 낙동강은 y≈190에 둔다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_086_의성_전투",
+  "title": "의성 전투",
+  "dates": "1950. 8. 3.~13.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '의성 전투' (pdf 300쪽)",
+  "pdf_page": 300,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 3,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제21연대가 366고지(제3대대)의 측면을 엄호 없이 둔 채 3개 대대를 주저항선에 배치",
+    "alternative": "366고지 측방에 경계·예비 병력을 두거나 예비대로 즉각 역습해 366고지를 회복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": "북한군제83연대는 366고지의 제3대대를 측면에서 기습하여 고지를 점령함과 동시에 제2대대 방어진지를 공격하여 점령하였다. 좌측 방어지역이 노출된 향로봉의 제1대대는 더 이상 진지를유지할 수 없게 되어 연대의 주저항선이 완전 붕괴되었다."
+   },
+   {
+    "decision": "주저항선 돌파 시 318고지-396고지 예비진지를 이용한 역습을 계획",
+    "alternative": "8월 4일 돌파 직후 예비진지에서 향로봉 방향으로 역습을 실시해 감제고지를 회복",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": "주저항선이 돌파될 경우의 역습에 대비해 미천 남쪽 318고지-396고지간 횡격실 능선에 제2선인 예비진지를 구축하였다."
+   },
+   {
+    "decision": "좌우 인접사단과 연결되지 않은 채 향로봉 일대에 방어선 편성",
+    "alternative": "우측 수도사단과의 약 5km 간격을 메우도록 정면을 조정",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": "우측의 수도사단과도 약 5km 에 달하는 병력배치 간격이 형성되는 등 좌우 인접사단과 연결된방어선을 형성할 수 없었다."
+   }
+  ],
+  "segment_suggestion": "11일 전체는 길다. ① 8월 4~5일: 제21연대 향로봉·366고지 주저항선 방어와 붕괴, 제10연대 제1대대의 261고지→세촌-262고지 재편성(권장 구간). ② 8월 7일: 안동-의성 도로 하화터널 부근 격퇴. ③ 8월 10~12일: 사단 역습(장림동·매봉산) 후 구산동 경유 벌전 이동.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 2.0577,
+   "duration_s": 629.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 68860,
+     "cache_read_input_tokens": 130069,
+     "cache_creation_input_tokens": 47890
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6979,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 16094
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [
+    {
+     "id": "E:EN2[3]",
+     "verdict": "disguised_result",
+     "reason": "추격 방향(후평동 명성마을)이 적의 사전 계획이 아니라 실제 아군 제1대대가 감제당해 철수한 결과 지점을 그대로 적 행동으로 옮긴 것이다.",
+     "fix": "이 항목을 시나리오에서 빼고 history에만 남기거나, 261고지 지역 내 적 전투력 규모를 조건으로 하는 '조건' 항목으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.053997199999999995
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "국군 제8사단 제21연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제21연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제8사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제8사단"
+   ],
+   "higher_mission": "국군 제8사단은 의성 북방 향로봉 일대 주저항선에서 방어하여 안동-의성-신녕-대구 축선으로 남진하는 북한군 제8사단을 저지하고 의성을 확보한다.",
+   "higher_intent": "의성 방어의 핵심인 향로봉 일대를 지켜 적이 의성을 조기에 점령하지 못하게 한다. 주저항선이 돌파되면 미천 남쪽 318고지-396고지 횡격실 능선의 제2선 예비진지를 발판으로 역습한다.",
+   "assigned_task": "제21연대는 향로봉-366고지 선에서 사단 좌측 주저항선을 방어하여 무릉동 교두보에서 남하하는 적을 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "국군 제10연대",
+     "alias": "인접 연대 1",
+     "side": "우측(동)",
+     "mission": "향로봉 우측과 5번 도로 축선을 방어한다. 제1대대가 제21연대 우측에 붙어 있다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      155,
+      132
+     ],
+     "other_names": [
+      "제10연대"
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "국군 제16연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비, 추정)",
+     "mission": "미천 남쪽 318고지-396고지 제2선 예비진지에서 역습을 준비한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      110,
+      78
+     ],
+     "other_names": [
+      "제16연대"
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "국군 제6사단",
+     "alias": "인접 사단 1",
+     "side": "좌측(서)",
+     "mission": "의성에서 서쪽 20여 km 떨어진 안계 부근에 주력을 집결하고 있다. 제21연대 좌측과 이어진 방어선은 없다.",
+     "echelon": "사단",
+     "type": "infantry",
+     "xy": [
+      2,
+      50
+     ],
+     "other_names": [
+      "제6사단"
+     ]
+    },
+    {
+     "id": "ADJ4",
+     "unit": "국군 수도사단",
+     "alias": "인접 사단 2",
+     "side": "우측 원방(동)",
+     "mission": "길안-청송 지구를 방어한다. 제8사단 우측과 약 5km 간격이 있다.",
+     "echelon": "사단",
+     "type": "infantry",
+     "xy": [
+      198,
+      120
+     ],
+     "other_names": [
+      "수도사단"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "국군 제16연대",
+     "text": "적 대대 이상이 향로봉에 들어오면 제16연대는 제2선 예비진지에서 향로봉으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 향로봉 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F1",
+      "axis_xy": [
+       [
+        110,
+        80
+       ],
+       [
+        114,
+        92
+       ],
+       [
+        117,
+        105
+       ],
+       [
+        119,
+        116
+       ],
+       [
+        120,
+        126
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "국군 제16연대",
+     "text": "적 대대 이상이 366고지에 들어오면 제16연대는 제2선 예비진지에서 366고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F2",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 366고지 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F2",
+      "axis_xy": [
+       [
+        92,
+        80
+       ],
+       [
+        86,
+        93
+       ],
+       [
+        80,
+        105
+       ],
+       [
+        75,
+        116
+       ],
+       [
+        71,
+        126
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제21연대 작전지역은 좌측 개방 측방에서 우측 제10연대 경계까지, 전방 무릉동 남쪽에서 후방 미천까지이다. 좌측은 국군 제6사단과 20여 km 떨어져 있어 연결되지 않는다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 경계(개방 측방)",
+     "between": [
+      "국군 제8사단 제21연대",
+      "국군 제6사단"
+     ],
+     "xy": [
+      [
+       40,
+       185
+      ],
+      [
+       40,
+       140
+      ],
+      [
+       40,
+       90
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제21연대-제10연대 전투지경선",
+     "between": [
+      "국군 제8사단 제21연대",
+      "국군 제10연대"
+     ],
+     "xy": [
+      [
+       140,
+       185
+      ],
+      [
+       137,
+       140
+      ],
+      [
+       132,
+       110
+      ],
+      [
+       128,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 후방 경계(미천)",
+     "between": [
+      "국군 제8사단 제21연대",
+      "국군 제16연대"
+     ],
+     "xy": [
+      [
+       40,
+       93
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       110,
+       90
+      ],
+      [
+       128,
+       89
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "AF1",
+    "unit": "제21연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "AF2",
+    "unit": "제21연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "AF3",
+    "unit": "제21연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "AF4",
+    "unit": "제8사단 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "105mm 곡사포(문수 미상)",
+    "relationship": "일반지원",
+    "location": {
+     "note": "미천 남쪽 사단 포병 진지",
+     "xy": [
+      112,
+      72
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "의성 북방 약 10km의 향로봉 일대. 표고 300~600m 미만의 고지군이 이어지고, 5번 도로와 중앙선 철로가 작전지역 동쪽을 남북으로 지난다. 북쪽에 낙동강과 적 교두보(무릉동·수상동), 남쪽에 미천과 제2선 예비진지가 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "향로봉",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      120,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty",
+     "evidence": "의성 북방 10km 지점. 의성 방어에 가장 중요한 고지이며, 점령하면 261고지를 감제한다."
+    },
+    {
+     "id": "F2",
+     "name": "366고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      70,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 366,
+     "preparation": "hasty",
+     "evidence": "제3대대 진지. 적 제83연대가 측면에서 기습한 연대 좌익 고지."
+    },
+    {
+     "id": "F3",
+     "name": "향로봉 서측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      96,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty",
+     "evidence": "366고지와 향로봉 사이 제2대대 진지 능선(추정)."
+    },
+    {
+     "id": "F4",
+     "name": "261고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      148,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 261,
+     "evidence": "향로봉 남동쪽. 향로봉에서 감제된다."
+    },
+    {
+     "id": "F5",
+     "name": "후평동 명성마을",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      150,
+      97
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "261고지 남쪽 마을.",
+     "other_names": [
+      "명성마을",
+      "후평동"
+     ]
+    },
+    {
+     "id": "F6",
+     "name": "세촌",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      140,
+      93
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제10연대 새 방어진지 서단(추정)."
+    },
+    {
+     "id": "F7",
+     "name": "262고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      165,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 262,
+     "evidence": "제10연대 새 방어진지 동단(추정)."
+    },
+    {
+     "id": "F8",
+     "name": "318고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      90,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 318,
+     "preparation": "hasty",
+     "evidence": "미천 남쪽 횡격실 능선. 제2선 예비진지 서단."
+    },
+    {
+     "id": "F9",
+     "name": "396고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      128,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 396,
+     "preparation": "hasty",
+     "evidence": "미천 남쪽 횡격실 능선. 제2선 예비진지 동단."
+    },
+    {
+     "id": "F10",
+     "name": "의성",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      110,
+      25
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "5번·28번·912번·914번 도로가 모이는 요충지."
+    },
+    {
+     "id": "F11",
+     "name": "무릉동",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      95,
+      180
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제8사단 도하 후 집결지이자 교두보."
+    },
+    {
+     "id": "F12",
+     "name": "수상동",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      128,
+      181
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 교두보."
+    },
+    {
+     "id": "F13",
+     "name": "마애동",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      70,
+      198
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "안동 서쪽 적 도하 지점(낙동강 북안)."
+    },
+    {
+     "id": "F14",
+     "name": "계평동",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      100,
+      198
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "안동 서쪽 적 도하 지점(낙동강 북안)."
+    },
+    {
+     "id": "F15",
+     "name": "안계",
+     "alias": "마을 8",
+     "kind": "town",
+     "xy": [
+      2,
+      50
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "의성 서쪽 20여 km. 실제로는 캔버스 밖이다. 국군 제6사단 주력 집결지."
+    },
+    {
+     "id": "F16",
+     "name": "하화터널",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      130,
+      55
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "안동-의성 도로상의 터널."
+    },
+    {
+     "id": "F17",
+     "name": "미천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      110,
+      90
+     ],
+     "line": [
+      [
+       30,
+       95
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       110,
+       90
+      ],
+      [
+       150,
+       88
+      ],
+      [
+       190,
+       86
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "향로봉과 제2선 예비진지 사이 하천. 도섭 가능으로 추정."
+    },
+    {
+     "id": "F18",
+     "name": "낙동강",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      100,
+      191
+     ],
+     "line": [
+      [
+       0,
+       190
+      ],
+      [
+       100,
+       191
+      ],
+      [
+       200,
+       192
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적이 이미 도하해 남안에 교두보를 확보했다."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "5번 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       175,
+       200
+      ],
+      [
+       162,
+       160
+      ],
+      [
+       150,
+       128
+      ],
+      [
+       143,
+       105
+      ],
+      [
+       135,
+       75
+      ],
+      [
+       130,
+       55
+      ],
+      [
+       112,
+       25
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "안동-의성 도로"
+     ]
+    },
+    {
+     "id": "R2",
+     "name": "중앙선 철로",
+     "alias": "도로 2",
+     "kind": "rail",
+     "xy": [
+      [
+       168,
+       200
+      ],
+      [
+       154,
+       160
+      ],
+      [
+       143,
+       128
+      ],
+      [
+       137,
+       105
+      ],
+      [
+       129,
+       75
+      ],
+      [
+       124,
+       55
+      ],
+      [
+       108,
+       25
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "914번 도로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       112,
+       25
+      ],
+      [
+       140,
+       35
+      ],
+      [
+       170,
+       48
+      ],
+      [
+       198,
+       60
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "의성-길안-청송 도로"
+     ]
+    },
+    {
+     "id": "R4",
+     "name": "무릉동-366고지 계곡로",
+     "alias": "도로 4",
+     "kind": "valley",
+     "xy": [
+      [
+       95,
+       180
+      ],
+      [
+       90,
+       166
+      ],
+      [
+       82,
+       152
+      ],
+      [
+       75,
+       140
+      ],
+      [
+       71,
+       130
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R5",
+     "name": "수상동-향로봉 능선로",
+     "alias": "도로 5",
+     "kind": "ridge",
+     "xy": [
+      [
+       128,
+       181
+      ],
+      [
+       125,
+       166
+      ],
+      [
+       122,
+       152
+      ],
+      [
+       121,
+       140
+      ],
+      [
+       120,
+       130
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "낙동강",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       0,
+       188
+      ],
+      [
+       200,
+       189
+      ],
+      [
+       200,
+       195
+      ],
+      [
+       0,
+       194
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "EN1",
+    "unit": "북한군 제8사단 제83연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 2200,
+    "identified": false,
+    "known_at_start": "무릉동 일대 교두보에 연대 규모가 집결한 것으로 파악했다. 부대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      95,
+      178
+     ],
+     "ref": "F11",
+     "frontage_m": 3000,
+     "note": "무릉동 교두보"
+    }
+   },
+   {
+    "id": "EN2",
+    "unit": "북한군 제8사단 제81연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 2200,
+    "identified": false,
+    "known_at_start": "수상동 일대 교두보에 연대 규모가 있는 것으로 판단했다. 부대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      128,
+      179
+     ],
+     "ref": "F12",
+     "frontage_m": 3000,
+     "note": "수상동 교두보"
+    }
+   },
+   {
+    "id": "EN3",
+    "unit": "북한군 제8사단 포병연대",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 70,
+    "equipment": "76mm·122mm 곡사포(문수 미상)",
+    "identified": false,
+    "known_at_start": "낙동강 북안의 사단 포병으로 추정했다.",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      100,
+      197
+     ],
+     "note": "낙동강 북안 계평동 일대(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 04:00",
+   "light": "night",
+   "notes": "8월 한여름. 주저항선은 낙동강 남안에서 옮겨 온 직후라 급편 진지다. 좌측은 국군 제6사단과 20여 km 떨어져 개방되어 있고, 사단 우측은 수도사단과 약 5km 벌어져 있다. 여명은 D일 05:30경이다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대(-제7중대), 제3대대, 연대 예비: 제7중대 / 지원: 제8사단 포병대대(일반지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "AF1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대(-제7중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "AF2",
+       "part": "-제7중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "AF3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제7중대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "AF2",
+       "part": "제7중대"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "향로봉은 의성 방어의 핵심 지형이다. 남동쪽 261고지와 5번 도로를 감제하고, 366고지는 연대 좌익의 지탱점이다. 적의 접근로는 무릉동에서 366고지로 이어지는 계곡, 수상동에서 향로봉으로 이어지는 능선, 그리고 개방된 좌측방의 우회로다.",
+    "key_terrain": [
+     {
+      "ref": "F1",
+      "why": "의성 북방에서 가장 중요한 감제 고지다. 잃으면 261고지와 5번 도로가 감제된다."
+     },
+     {
+      "ref": "F2",
+      "why": "좌측이 개방된 연대 좌익의 지탱점이다. 잃으면 연대 주저항선이 서쪽에서 말린다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "무릉동-366고지 계곡 접근로",
+      "user": "enemy",
+      "refs": [
+       "R4",
+       "F11",
+       "F2"
+      ],
+      "xy": [
+       [
+        95,
+        180
+       ],
+       [
+        90,
+        166
+       ],
+       [
+        82,
+        152
+       ],
+       [
+        75,
+        140
+       ],
+       [
+        71,
+        130
+       ]
+      ]
+     },
+     {
+      "name": "수상동-향로봉 능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "R5",
+       "F12",
+       "F1"
+      ],
+      "xy": [
+       [
+        128,
+        181
+       ],
+       [
+        125,
+        166
+       ],
+       [
+        122,
+        152
+       ],
+       [
+        121,
+        140
+       ],
+       [
+        120,
+        130
+       ]
+      ]
+     },
+     {
+      "name": "좌측방 우회 접근로",
+      "user": "enemy",
+      "refs": [
+       "F11",
+       "F2"
+      ],
+      "xy": [
+       [
+        92,
+        178
+       ],
+       [
+        70,
+        168
+       ],
+       [
+        52,
+        155
+       ],
+       [
+        46,
+        140
+       ],
+       [
+        55,
+        128
+       ],
+       [
+        66,
+        126
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제8사단은 무릉동·수상동 교두보에서 D일 새벽 2개 연대로 공격해 올 것이다. 1개 연대는 무릉동에서 366고지와 향로봉 서측 능선으로, 1개 연대는 수상동에서 향로봉으로 공격해 올 것이다. 적은 개방된 좌측방으로 366고지를 우회해 올 수 있다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "EN3",
+       "mode": "bombard",
+       "from_ref": "F14",
+       "objective_ref": "CM0",
+       "axis_xy": [
+        [
+         100,
+         197
+        ],
+        [
+         100,
+         165
+        ],
+        [
+         100,
+         135
+        ]
+       ],
+       "when": "D일 04:30",
+       "t": 4.5
+      },
+      {
+       "group": "EN1",
+       "mode": "attack",
+       "from_ref": "F11",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         80,
+         168
+        ],
+        [
+         60,
+         155
+        ],
+        [
+         50,
+         140
+        ],
+        [
+         58,
+         129
+        ],
+        [
+         68,
+         128
+        ]
+       ],
+       "when": "D일 05:00",
+       "t": 5
+      },
+      {
+       "group": "EN2",
+       "mode": "attack",
+       "from_ref": "F12",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         128,
+         181
+        ],
+        [
+         125,
+         166
+        ],
+        [
+         122,
+         152
+        ],
+        [
+         121,
+         140
+        ],
+        [
+         120,
+         130
+        ]
+       ],
+       "when": "D일 05:00",
+       "t": 5
+      },
+      {
+       "group": "EN1",
+       "mode": "attack",
+       "from_ref": "F2",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         70,
+         128
+        ],
+        [
+         80,
+         131
+        ],
+        [
+         90,
+         132
+        ],
+        [
+         97,
+         132
+        ]
+       ],
+       "when": "366고지 공격에 이어서",
+       "t": 9
+      }
+     ],
+     "risk_point": "적 제83연대가 개방된 좌측방으로 366고지를 측면 공격해 제3대대 진지를 뚫고 향로봉 서측 능선을 말아 올라가는 순간"
+    },
+    "unknowns": [
+     "적 연대의 부대 번호와 실제 병력",
+     "적 전차·자주포 보유 여부",
+     "적 예비 연대의 위치",
+     "좌측방 우회 병력의 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "대대 세부 보충: 중대 배치와 제2대대 제7중대의 연대 예비 운용은 서술에 없어 보충했다.",
+     "why": "서술에는 대대별 진지(366고지 제3대대, 중앙 제2대대, 향로봉 제1대대)만 있다."
+    },
+    {
+     "text": "좌측 국군 제6사단과는 연결되지 않으며 좌측방은 제3대대가 자체 경계한다.",
+     "why": "제6사단 주력이 20여 km 떨어진 안계에 있다."
+    },
+    {
+     "text": "진지는 급편 진지 수준이다.",
+     "why": "낙동강 남안 진지에서 향로봉 일대로 옮긴 직후다."
+    },
+    {
+     "text": "제16연대는 제2선 예비진지에서 사단 역습을 준비한다.",
+     "why": "사단이 주저항선 돌파에 대비해 318고지-396고지에 예비진지를 구축했다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제21연대는 D일 04:00부터 향로봉-366고지 선에서 방어하여 적 제8사단의 의성 방향 남진을 저지한다.",
+   "task_verb": "방어",
+   "objective_ref": "CM0",
+   "when": {
+    "type": "time_elapsed",
+    "value": 4,
+    "text": "D일 04:00 진지 점령 완료"
+   },
+   "purpose": "적의 의성 조기 점령을 막고 사단 제2선 예비진지와 역습에 필요한 시간을 얻는다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "연대가 향로봉과 366고지를 확보하고 적 선두 연대의 공격력이 주저항선 전방에서 소모된다.",
+    "friendly": "3개 대대가 주저항선 진지를 유지하고 예비 1개 중대의 전투력이 남아 있다.",
+    "enemy": "적 제8사단 선두 2개 연대가 주저항선 전방에서 저지되어 공격을 재정비해야 한다.",
+    "terrain": "향로봉, 366고지, 향로봉 서측 능선을 확보한다."
+   },
+   "concept": {
+    "text": "3개 대대를 주저항선에 나란히 배치하고 향로봉의 제1대대를 주력으로 한다. 좌측 개방 측방은 제3대대가 경계하고, 연대 예비 제7중대는 중앙 후방에서 366고지와 향로봉으로 역습을 준비한다. 사단 포병 화력은 무릉동 계곡 접근로에 우선 집중한다.",
+    "maneuver": "제3대대는 366고지를 방어하고 좌측방을 경계한다. 제2대대(-)는 향로봉 서측 능선을 방어한다. 제1대대는 향로봉을 고수하고 제10연대와 접촉을 유지한다. 제7중대는 예비진지에서 돌파된 지역으로 역습한다.",
+    "fires": "사단 포병대대는 교전지역 1(무릉동 계곡)과 교전지역 2(향로봉 전방)에 사전 화력을 계획하고 제3대대 정면을 우선 지원한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "CM7",
+     "xy": [
+      100,
+      115
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F2",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 366고지 안에 있음"
+     },
+     "priorities": [
+      "1순위: 366고지로 역습",
+      "2순위: 향로봉으로 역습"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G3",
+      "G1"
+     ],
+     "zone_refs": [
+      "CM4",
+      "CM5"
+     ],
+     "restrictions": "우측 제10연대 지역의 5번 도로 일대 사격은 제10연대와 협조한 뒤 실시한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "ref": "CM1",
+      "xy": [
+       120,
+       127
+      ],
+      "frontage_m": 2000,
+      "preparation": "hasty",
+      "polygon": [
+       [
+        108,
+        138
+       ],
+       [
+        134,
+        138
+       ],
+       [
+        134,
+        118
+       ],
+       [
+        108,
+        118
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         112,
+         133
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         128,
+         132
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         120,
+         121
+        ]
+       }
+      ],
+      "note": "향로봉 정상과 북사면에 2개 중대, 남사면에 1개 중대를 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "향로봉을 고수한다.",
+       "params": {
+        "objective": "F1"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "우측 접촉점에서 제10연대 제1대대와 접촉하며 연대 우측방을 경계한다.",
+       "params": {
+        "area": "CM8"
+       }
+      }
+     ],
+     "purpose": "의성 방어의 핵심 감제 고지를 지켜 연대 주저항선의 축을 유지한다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "ref": "CM2",
+      "xy": [
+       96,
+       132
+      ],
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "polygon": [
+       [
+        84,
+        139
+       ],
+       [
+        107,
+        139
+       ],
+       [
+        107,
+        124
+       ],
+       [
+        84,
+        124
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         89,
+         134
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         102,
+         134
+        ]
+       }
+      ],
+      "note": "향로봉 서측 능선에 2개 중대를 나란히 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "향로봉 서측 능선을 방어한다.",
+       "params": {
+        "area": "CM2"
+       }
+      }
+     ],
+     "purpose": "366고지와 향로봉 사이를 이어 주저항선이 끊기지 않게 한다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "진지",
+      "ref": "CM3",
+      "xy": [
+       70,
+       128
+      ],
+      "frontage_m": 2000,
+      "preparation": "hasty",
+      "polygon": [
+       [
+        58,
+        138
+       ],
+       [
+        83,
+        138
+       ],
+       [
+        83,
+        118
+       ],
+       [
+        58,
+        118
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         64,
+         132
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         76,
+         133
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         66,
+         122
+        ]
+       }
+      ],
+      "note": "366고지 북사면에 2개 중대, 서사면에 좌측방을 향해 1개 중대를 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "366고지를 방어한다.",
+       "params": {
+        "area": "CM3"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "좌측방 관측소를 운용해 개방된 좌측방을 경계한다.",
+       "params": {
+        "area": "CM9"
+       }
+      }
+     ],
+     "purpose": "개방된 좌측방에서 연대 주저항선이 우회되지 않게 한다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "예비진지",
+      "ref": "CM7",
+      "xy": [
+       100,
+       115
+      ],
+      "frontage_m": 400,
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제7중대",
+        "xy": [
+         100,
+         115
+        ]
+       }
+      ],
+      "note": "향로봉 서측 능선 남쪽 중앙 후방."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "연대 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM7"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 역습로 1을 따라 366고지로 역습한다.",
+       "params": {
+        "objective": "F2",
+        "route": "CM10"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "F2",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 366고지 안에 있음"
+       },
+       "basis": "risk_point: 적이 좌측방으로 366고지를 측면 공격해 진지를 뚫는다."
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 역습로 2를 따라 향로봉으로 역습한다.",
+       "params": {
+        "objective": "F1",
+        "route": "CM11"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "F1",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 향로봉 안에 있음"
+       },
+       "basis": "적 방책: 1개 연대가 수상동에서 향로봉으로 공격해 온다."
+      }
+     ],
+     "purpose": "돌파된 주저항선 진지를 회복해 연대 방어를 유지한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 04:00까지 각 대대는 진지 점령과 보강을 끝낸다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4,
+       "text": "D일 04:00"
+      }
+     },
+     {
+      "text": "D일 04:00까지 제7중대는 예비진지 점령과 역습 준비를 끝낸다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4,
+       "text": "D일 04:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM0",
+      "name": "연대 주저항선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        58,
+        136
+       ],
+       [
+        84,
+        138
+       ],
+       [
+        107,
+        138
+       ],
+       [
+        120,
+        137
+       ],
+       [
+        136,
+        136
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F1",
+       "F2",
+       "F3"
+      ]
+     },
+     {
+      "id": "CM1",
+      "name": "제1대대 전투진지(향로봉)",
+      "kind": "battle_position",
+      "xy": [
+       [
+        108,
+        138
+       ],
+       [
+        134,
+        138
+       ],
+       [
+        134,
+        118
+       ],
+       [
+        108,
+        118
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F1"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "제2대대 전투진지(향로봉 서측 능선)",
+      "kind": "battle_position",
+      "xy": [
+       [
+        84,
+        139
+       ],
+       [
+        107,
+        139
+       ],
+       [
+        107,
+        124
+       ],
+       [
+        84,
+        124
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F3"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "제3대대 전투진지(366고지)",
+      "kind": "battle_position",
+      "xy": [
+       [
+        58,
+        138
+       ],
+       [
+        83,
+        138
+       ],
+       [
+        83,
+        118
+       ],
+       [
+        58,
+        118
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "F2"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "교전지역 1(무릉동 계곡)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        62,
+        142
+       ],
+       [
+        100,
+        142
+       ],
+       [
+        100,
+        165
+       ],
+       [
+        62,
+        165
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R4"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "교전지역 2(향로봉 전방)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        108,
+        142
+       ],
+       [
+        136,
+        142
+       ],
+       [
+        136,
+        165
+       ],
+       [
+        108,
+        165
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R5"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "대대 전투지경선(제1·제2대대)",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        107,
+        150
+       ],
+       [
+        107,
+        125
+       ],
+       [
+        106,
+        95
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM12",
+      "name": "대대 전투지경선(제2·제3대대)",
+      "kind": "boundary",
+      "between": [
+       "G2",
+       "G3"
+      ],
+      "xy": [
+       [
+        83,
+        150
+       ],
+       [
+        83,
+        125
+       ],
+       [
+        82,
+        95
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "연대 예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        96,
+        119
+       ],
+       [
+        104,
+        119
+       ],
+       [
+        104,
+        111
+       ],
+       [
+        96,
+        111
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM8",
+      "name": "제10연대 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        137,
+        132
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM9",
+      "name": "좌측방 관측소",
+      "kind": "outpost",
+      "xy": [
+       [
+        48,
+        132
+       ],
+       [
+        52,
+        138
+       ],
+       [
+        52,
+        124
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM10",
+      "name": "역습로 1(366고지)",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        115
+       ],
+       [
+        93,
+        117
+       ],
+       [
+        86,
+        119
+       ],
+       [
+        79,
+        122
+       ],
+       [
+        73,
+        126
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM11",
+      "name": "역습로 2(향로봉)",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        115
+       ],
+       [
+        106,
+        117
+       ],
+       [
+        111,
+        120
+       ],
+       [
+        116,
+        124
+       ],
+       [
+        120,
+        127
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 04:00",
+  "start_t": 4,
+  "horizon_h": 44,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제21연대 3개 대대의 손실이 모두 0.7 초과",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.7,
+      "text": "제1대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제2대대(-) 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G3",
+      "fraction": 0.7,
+      "text": "제3대대 손실 0.7 초과"
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "group": "EN1",
+    "fraction": 0.7,
+    "text": "북한군 제83연대 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제8사단은 무릉동·수상동 교두보에서 D일 새벽에 공격한다. 제83연대가 개방된 좌측방으로 366고지를 측면 기습해 국군 주저항선을 서쪽에서 말아 올리고, 제81연대가 향로봉을 압박해 탈취한 뒤 5번 도로 축선으로 남진해 의성을 조기에 점령한다.",
+   "groups": [
+    {
+     "group": "EN3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM0",
+       "axis_xy": [
+        [
+         100,
+         197
+        ],
+        [
+         95,
+         160
+        ],
+        [
+         90,
+         132
+        ]
+       ],
+       "text": "D일 04:30부터 연대 주저항선에 공격준비사격을 한다.",
+       "basis": "서술: 공격준비와 함께 제21연대 정면으로 공격 개시. 시각은 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 4.5,
+        "text": "D일 04:30"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         197
+        ],
+        [
+         115,
+         160
+        ],
+        [
+         120,
+         128
+        ]
+       ],
+       "text": "이어서 향로봉에 지원사격을 한다.",
+       "basis": "추정: 366고지 돌파 뒤 향로봉 공격을 지원."
+      }
+     ]
+    },
+    {
+     "group": "EN1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         95,
+         178
+        ],
+        [
+         80,
+         168
+        ],
+        [
+         62,
+         156
+        ],
+        [
+         50,
+         142
+        ],
+        [
+         56,
+         130
+        ],
+        [
+         66,
+         127
+        ]
+       ],
+       "text": "D일 05:00 무릉동에서 개방된 좌측방으로 우회해 366고지를 측면에서 기습한다.",
+       "basis": "서술: 제83연대가 366고지의 제3대대를 측면에서 기습. 개시 05:00은 서술.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         70,
+         128
+        ],
+        [
+         80,
+         131
+        ],
+        [
+         90,
+         132
+        ],
+        [
+         97,
+         132
+        ]
+       ],
+       "text": "이어서 향로봉 서측 능선의 제2대대 진지를 공격한다.",
+       "basis": "서술: 366고지 점령과 동시에 제2대대 진지를 공격해 점령."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         97,
+         132
+        ],
+        [
+         105,
+         130
+        ],
+        [
+         112,
+         129
+        ],
+        [
+         119,
+         128
+        ]
+       ],
+       "text": "이어서 향로봉을 서쪽에서 공격한다.",
+       "basis": "추정: 좌측이 노출된 향로봉을 측후방에서 압박."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F11",
+       "axis_xy": [
+        [
+         70,
+         130
+        ],
+        [
+         80,
+         150
+        ],
+        [
+         90,
+         166
+        ],
+        [
+         95,
+         178
+        ]
+       ],
+       "text": "손실이 크면 무릉동 교두보로 철수해 재정비한다.",
+       "basis": "추정: 연대 손실 0.5 초과 시 재정비.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "EN1",
+        "fraction": 0.5,
+        "text": "제83연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "EN2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         128,
+         179
+        ],
+        [
+         125,
+         166
+        ],
+        [
+         122,
+         152
+        ],
+        [
+         121,
+         140
+        ]
+       ],
+       "text": "D일 05:00 수상동에서 향로봉 정면을 공격해 제1대대를 고착한다.",
+       "basis": "추정: 제83연대 주공과 동시에 향로봉을 고착.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         121,
+         140
+        ],
+        [
+         121,
+         135
+        ],
+        [
+         120,
+         130
+        ],
+        [
+         120,
+         128
+        ]
+       ],
+       "text": "이어서 향로봉을 공격한다.",
+       "basis": "서술: 향로봉을 점령한 북한군. 반복 공격은 추정.",
+       "repeat": {
+        "max": 3,
+        "interval_h": 3
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         120,
+         128
+        ],
+        [
+         130,
+         122
+        ],
+        [
+         140,
+         116
+        ],
+        [
+         148,
+         112
+        ]
+       ],
+       "text": "이어서 261고지와 5번 도로 축선으로 공격한다.",
+       "basis": "서술: D+1일 제10연대 제1대대가 공격받고 261고지로 후퇴."
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         148,
+         112
+        ],
+        [
+         149,
+         105
+        ],
+        [
+         150,
+         97
+        ]
+       ],
+       "text": "이어서 후평동 명성마을 방향으로 추격한다.",
+       "basis": "추정: 5번 도로 축선 남진."
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         95,
+         192
+        ],
+        [
+         92,
+         178
+        ],
+        [
+         82,
+         160
+        ],
+        [
+         72,
+         140
+        ],
+        [
+         70,
+         130
+        ]
+       ],
+       "text": "제83연대 손실이 커지면 낙동강을 건너 366고지 방향으로 증원한다.",
+       "basis": "추정: 적 사단 예비 연대의 투입 문턱.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "EN1",
+        "fraction": 0.3,
+        "text": "제83연대 손실 0.3 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제8사단 제82연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "personnel": 1800,
+    "position": {
+     "xy": [
+      92,
+      194
+     ],
+     "ref": "F18",
+     "note": "낙동강 도하 지점 일대 사단 예비(추정)"
+    },
+    "other_names": [
+     "제82연대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "night",
+    "duration_h": 1.5,
+    "note": "구간 시작 시 야간. 여명 D일 05:30경."
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명."
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 항공 가능 시간대(추정)."
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간."
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명."
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 항공 가능 시간대(추정)."
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 4.5,
+    "note": "야간."
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "EN3",
+    "actions": [
+     {
+      "when": "D일 04:30",
+      "t": 4.5,
+      "mode": "bombard",
+      "axis_xy": [
+       [
+        100,
+        197
+       ],
+       [
+        95,
+        160
+       ],
+       [
+        90,
+        132
+       ]
+      ],
+      "target_ref": "CM0",
+      "note": "공격준비사격과 함께 제21연대 정면 공격을 지원했다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "EN1",
+    "actions": [
+     {
+      "when": "D일 05:00",
+      "t": 5,
+      "mode": "attack",
+      "from_ref": "F11",
+      "target_ref": "F2",
+      "axis_xy": [
+       [
+        95,
+        178
+       ],
+       [
+        80,
+        168
+       ],
+       [
+        62,
+        156
+       ],
+       [
+        50,
+        142
+       ],
+       [
+        56,
+        130
+       ],
+       [
+        66,
+        127
+       ]
+      ],
+      "note": "무릉동에서 남하해 366고지의 제3대대를 측면에서 기습하고 고지를 점령했다."
+     },
+     {
+      "when": "D일 오전",
+      "t": 9,
+      "mode": "attack",
+      "from_ref": "F2",
+      "target_ref": "F3",
+      "axis_xy": [
+       [
+        70,
+        128
+       ],
+       [
+        80,
+        131
+       ],
+       [
+        90,
+        132
+       ],
+       [
+        97,
+        132
+       ]
+      ],
+      "note": "366고지 점령과 동시에 제2대대 진지를 공격해 점령했다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "EN2",
+    "actions": [
+     {
+      "when": "D일 오후",
+      "t": 14,
+      "mode": "attack",
+      "from_ref": "F12",
+      "target_ref": "F1",
+      "axis_xy": [
+       [
+        128,
+        179
+       ],
+       [
+        125,
+        166
+       ],
+       [
+        122,
+        152
+       ],
+       [
+        120,
+        130
+       ]
+      ],
+      "note": "좌측이 노출된 향로봉의 제1대대가 진지를 유지하지 못하자 향로봉을 점령했다(부대·시각 추정)."
+     },
+     {
+      "when": "D+1일 오전",
+      "t": 30,
+      "mode": "attack",
+      "from_ref": "F1",
+      "target_ref": "F4",
+      "axis_xy": [
+       [
+        120,
+        128
+       ],
+       [
+        130,
+        122
+       ],
+       [
+        140,
+        116
+       ],
+       [
+        148,
+        112
+       ]
+      ],
+      "note": "제21연대 주저항선 붕괴 직후 제10연대 제1대대를 공격했다. 향로봉에서 261고지를 감제했다(시각 추정)."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [],
+  "friendly_actual": [
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D일 05:00",
+      "t": 5,
+      "verb": "방어",
+      "ref": "F2",
+      "text": "366고지를 방어하다가 측면 기습을 받고 고지를 잃었다."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 9,
+      "verb": "방어",
+      "ref": "F3",
+      "text": "향로봉 서측 능선 진지를 방어하다가 적 제83연대에 진지를 잃었다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 오후",
+      "t": 14,
+      "verb": "철수",
+      "ref": "F1",
+      "text": "좌측 방어지역이 노출되어 향로봉 진지를 유지하지 못하고 철수했다. 연대 주저항선이 완전히 붕괴되었다(시각 추정)."
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일 오전",
+      "t": 8,
+      "verb": "엄호",
+      "ref": "CM7",
+      "text": "예비 운용 기록은 없다. 대대 철수를 엄호한 것으로 추정한다."
+     }
+    ]
+   },
+   {
+    "group": "ADJ1",
+    "actions": [
+     {
+      "when": "D+1일 오전",
+      "t": 30,
+      "verb": "철수",
+      "ref": "F4",
+      "text": "제10연대 제1대대가 적 공격을 받고 261고지로 후퇴했다."
+     },
+     {
+      "when": "D+1일 오후",
+      "t": 36,
+      "verb": "철수",
+      "ref": "F5",
+      "text": "261고지가 향로봉의 적에게 감제되자 제1대대가 후평동 명성마을로 철수했다(시각 추정)."
+     },
+     {
+      "when": "D+1일 저녁",
+      "t": 42,
+      "verb": "방어",
+      "ref": "F6",
+      "text": "제10연대가 제1대대를 세촌-262고지 사이에 배치해 제16연대와 연결된 새 방어진지를 편성했다(시각 추정)."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "night",
+    "note": "공격은 여명 전 새벽 05:00경 시작되었다."
+   },
+   {
+    "when": "D일 주간",
+    "t": 6,
+    "kind": "weather",
+    "note": "8월 한여름 맑은 날씨로 추정. 항공 지원 기록은 없다."
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제8사단 제21연대",
+   "enemy": "북한군 제8사단 제83연대",
+   "terrain_held": [
+    "F6",
+    "F7"
+   ],
+   "end_state_achieved": "no",
+   "losses": "손실 수치는 서술에 없다. 3개 대대가 모두 진지를 잃고 주저항선이 붕괴했다. 사단은 세촌-262고지 선으로 물러나 새 진지를 편성했다(인접 제10연대).",
+   "duration_h": 44
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "제21연대 주저항선(향로봉-향로봉 서측 능선-366고지)은 적에게 점령되었다. 아군은 미천 남쪽으로 물러났고, 제10연대 제1대대가 제16연대와 이어진 세촌-262고지 선에 새 진지를 편성했다.",
+   "terrain_held_at_horizon": [
+    "F6",
+    "F7"
+   ],
+   "key_times": [
+    {
+     "t": 5,
+     "ref": "F2",
+     "text": "적 제83연대가 366고지 제3대대를 측면 기습해 고지를 점령"
+    },
+    {
+     "t": 9,
+     "ref": "F3",
+     "text": "제2대대 진지 피탈(추정 시각)"
+    },
+    {
+     "t": 14,
+     "ref": "F1",
+     "text": "제1대대 향로봉 진지 상실, 주저항선 완전 붕괴(추정 시각)"
+    },
+    {
+     "t": 30,
+     "ref": "F4",
+     "text": "제10연대 제1대대 261고지로 후퇴"
+    },
+    {
+     "t": 36,
+     "ref": "F5",
+     "text": "제10연대 제1대대 후평동 명성마을로 철수"
+    },
+    {
+     "t": 42,
+     "ref": "F6",
+     "text": "세촌-262고지 새 방어진지 편성"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_086",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

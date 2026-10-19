@@ -1,0 +1,3296 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1952-10-06",
+   "end_date": "1952-10-09",
+   "d_day": "1952-10-06 (D일 00:00 기준, 중공군 10월 공세 개시일)",
+   "order_time": "D+1일 07:00 (1952-10-07 07:00)",
+   "text": "중공군 제116사단 제348연대 1개 대대가 고양대의 니키·테시고지를 탈취한 뒤 제15연대가 역습을 거듭하다가 미 제1군단장 지시로 공격을 중지하고 현 진출선에 전진진지를 편성하기까지(10.6~10.9).",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 10.6 야간 피탈은 연대 결심 이전의 사건이므로 연대의 첫 결심(10.7 07:00 사단 수색중대 배속과 고지 탈환 명령)을 명령 시점으로 한다."
+  },
+  "perspective_rationale": "관점 지정(국군 제1사단 제15연대)을 따른다. 제15연대는 고양대 전진진지와 임진강 양안 주저항선을 맡은 작전지역 연대이며 역습의 결심 주체다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "니키·테시고지 탈환은 실패했으나 니키고지 6부 능선-베티고지-무명고지-105고지 선에 전진진지를 확보했다. 아군 전사 8, 부상 141, 실종 64. 적 사살 173(추정), 포로 2."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "서술 추정. 캔버스 (100,105) 부근이 고작동(제3대대 주진지)이고 북쪽이 적 방향이다. 임진강이 S자로 연대 지역을 양단한다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_022_고양대_부근_전투",
+  "title": "고양대 부근 전투",
+  "dates": "1952. 10. 6.~9.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '고양대 부근 전투' (pdf 96쪽)",
+  "pdf_page": 96,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "니키·테시고지에 각 1개 소대씩 연대 수색중대 2개 소대만 배치",
+    "alternative": "전초에 중대급 이상을 배치하거나 주진지에 즉각 증원할 역습 예비대를 지정해 두었다면 1개 대대의 3면 포위 공격을 초기에 저지했을 수 있다",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "10월 7일~8일 수색중대, 소대, 제10중대 순으로 중대급 이하를 축차 투입해 역습",
+    "alternative": "피탈 직후 적 증원 이전에 대대급 전력을 포병·전차와 함께 일거에 집중 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "포위된 전초의 진내사격 요청이 실행되지 않음",
+    "alternative": "진내사격이 실행되어 지상진지를 장악한 중공군을 제압하고 동굴호의 수비대가 진지를 회복",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.7525,
+   "duration_s": 474.3,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 50003,
+     "cache_read_input_tokens": 92092,
+     "cache_creation_input_tokens": 49469
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9362,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18501
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 1,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 33,
+   "flagged": [
+    {
+     "id": "E:E5[1]",
+     "verdict": "disguised_result",
+     "reason": "적이 105고지를 재점령했다는 실제 결과를 역산해 아군 진입이라는 위치 조건으로 재포장한 추정 조건부 공격이다.",
+     "fix": "이 항목을 시나리오에서 빼고 실제 경과(history)로만 남기거나, 적 전투력 규모(예: 적 중대 이상이 고양대 방향에 집결)를 트리거로 하는 조건으로 재정의한다."
+    }
+   ],
+   "cost_usd": 0.0532792
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "제15연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제1사단 제15연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "제1사단은 제임스타운선의 역곡천-임진강 선에서 주저항선을 방어하고 임진강 서안 고양대 일대에 전진진지를 확보한다.",
+   "higher_intent": "주저항선을 감제하는 고양대 전진진지를 적에게 내주지 않고, 임진강 서안의 배수진 형세에서도 주저항선을 온전히 유지한다.",
+   "assigned_task": "제15연대는 주저항선을 방어하고 피탈된 고양대 니키·테시고지를 탈취하여 전진진지를 회복한다. 사단 수색중대와 제1중박격포중대를 배속한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제12연대",
+     "alias": "인접 연대 1",
+     "side": "우측",
+     "mission": "역곡천 남안 일대 주저항선을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      165,
+      110
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제11연대 제3대대",
+     "alias": "인접 연대 2 예하 대대",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 대기하며 명에 의해 제15연대에 배속되어 역습한다.",
+     "type": "infantry",
+     "echelon": "대대",
+     "other_names": [
+      "제11연대"
+     ],
+     "xy": [
+      130,
+      35
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "제1사단 포병",
+     "text": "사단 포병과 미 공군 근접항공지원은 H시부터 니키·테시고지에 대한 제15연대 역습을 지원한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 32.33,
+      "text": "D+1일 08:20 역습 개시"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "T18"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "사단은 제15연대 역습이 저지되고 적 대대 이상이 고양대에 남아 있으면 사단 예비 제11연대 제3대대를 제15연대에 배속한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "text": "제3대대(+사단 수색중대) 손실 0.2 초과이고 적 대대 이상이 고양대에 있음",
+      "and": [
+       {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.2,
+        "text": "제3대대(+사단 수색중대) 손실 0.2 초과"
+       },
+       {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T18",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 고양대에 있음"
+       }
+      ]
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T18",
+      "axis_xy": [
+       [
+        130,
+        35
+       ],
+       [
+        126,
+        70
+       ],
+       [
+        120,
+        92
+       ],
+       [
+        113,
+        98
+       ],
+       [
+        100,
+        106
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제15연대 작전지역은 임진강 서안 고양대 전진진지와 제3대대 주진지, 임진강 동안 주저항선이다. 좌측은 사단 좌측 경계, 우측은 제12연대와의 경계다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제15연대-제12연대 전투지경선",
+     "between": [
+      "제15연대",
+      "제12연대"
+     ],
+     "xy": [
+      [
+       160,
+       0
+      ],
+      [
+       148,
+       60
+      ],
+      [
+       140,
+       110
+      ],
+      [
+       132,
+       135
+      ],
+      [
+       135,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "사단 좌측 전투지경선",
+     "between": [
+      "제15연대",
+      "좌측 인접부대"
+     ],
+     "xy": [
+      [
+       60,
+       0
+      ],
+      [
+       62,
+       100
+      ],
+      [
+       58,
+       200
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(임진강 동안)"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(임진강 동안 주저항선)"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 좌측 전방, 임진강 서안 주진지 지역"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "연대 수색중대",
+    "alias": "수색중대 1",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "-",
+    "strength_pct": 35,
+    "relationship": "건제",
+    "location": {
+     "note": "2개 소대 잔여 인원은 니키·테시고지 동굴호에 고립, 제2소대 등 일부만 가용",
+     "ref": "T18"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "사단 수색중대",
+    "alias": "수색중대 2",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "location": {
+     "note": "사단 지역에서 배속되어 제3대대 지역으로 이동 중"
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "제1중박격포중대",
+    "alias": "박격포중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "equipment": "4.2인치 박격포",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "제1사단 포병",
+    "alias": "포병 1",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "임진강 동안 후방"
+    }
+   },
+   {
+    "id": "F8",
+    "unit": "지원 전차부대",
+    "alias": "전차부대 1",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "전차 16대",
+    "location": {
+     "note": "임진강 동안 후방"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "연천 북방 임진강 서안 고양대 일대. 평균 200~300m 구릉지이며 임진강이 역곡천과 합류해 S자로 흐르며 연대 지역을 양단한다. 니키·테시고지와 주저항선 일부는 적이 점령한 마량산(315)보다 낮아 감제된다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "니키고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      92,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "고작동 북쪽 약 1km 전진진지, 베티고지 북서 0.7km, 무명고지 북쪽 0.5km",
+     "preparation": "hasty",
+     "other_names": [
+      "Nikki"
+     ]
+    },
+    {
+     "id": "T2",
+     "name": "테시고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      106,
+      123
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "105고지 북쪽 300m, 니키고지 동쪽 전진진지",
+     "preparation": "hasty",
+     "other_names": [
+      "테리고지",
+      "Tessie"
+     ]
+    },
+    {
+     "id": "T3",
+     "name": "105고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      106,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 105,
+     "evidence": "테시고지 남쪽 300m"
+    },
+    {
+     "id": "T4",
+     "name": "베티고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      97,
+      115
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "니키고지 동남쪽 0.7km",
+     "other_names": [
+      "Betty"
+     ]
+    },
+    {
+     "id": "T5",
+     "name": "무명고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      92,
+      115
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "니키고지 남쪽 0.5km"
+    },
+    {
+     "id": "T6",
+     "name": "소노리고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      84,
+      116
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "199고지와 니키고지 사이 전진진지"
+    },
+    {
+     "id": "T7",
+     "name": "199고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      92,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 199,
+     "evidence": "제3대대 주진지",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T8",
+     "name": "209고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      78,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 209,
+     "evidence": "제3대대 주진지 좌단 북쪽 능선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T9",
+     "name": "신촌",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      108,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제3대대 주진지 우단"
+    },
+    {
+     "id": "T10",
+     "name": "고작동",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      100,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전진진지 남쪽 1km 주저항선"
+    },
+    {
+     "id": "T11",
+     "name": "242고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      130,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 242,
+     "evidence": "주저항선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T12",
+     "name": "202고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      126,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 202,
+     "evidence": "주저항선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T13",
+     "name": "264고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      130,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 264,
+     "evidence": "주저항선",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T14",
+     "name": "마량산",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      76,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 315,
+     "evidence": "적 주거점, 연대 지역 감제",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T15",
+     "name": "백석동",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      64,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 주거점 서단",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T16",
+     "name": "회산동",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      92,
+      142
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 주거점",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T17",
+     "name": "하후동",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      112,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 주거점 동단",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T18",
+     "name": "고양대",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      98,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "니키·테시고지 일대 전진진지 지역",
+     "polygon": [
+      [
+       86,
+       114
+      ],
+      [
+       110,
+       114
+      ],
+      [
+       110,
+       127
+      ],
+      [
+       86,
+       127
+      ]
+     ]
+    },
+    {
+     "id": "T19",
+     "name": "임진강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      114,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "역곡천과 합류해 S자로 흐르며 연대 지역 양단",
+     "line": [
+      [
+       150,
+       200
+      ],
+      [
+       135,
+       160
+      ],
+      [
+       125,
+       135
+      ],
+      [
+       120,
+       112
+      ],
+      [
+       114,
+       99
+      ],
+      [
+       100,
+       96
+      ],
+      [
+       85,
+       94
+      ],
+      [
+       75,
+       80
+      ],
+      [
+       80,
+       50
+      ],
+      [
+       100,
+       30
+      ],
+      [
+       110,
+       0
+      ]
+     ]
+    },
+    {
+     "id": "T20",
+     "name": "역곡천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      160,
+      139
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "동쪽에서 임진강에 합류, 남안에 제12연대 배치",
+     "line": [
+      [
+       200,
+       145
+      ],
+      [
+       170,
+       140
+      ],
+      [
+       145,
+       138
+      ],
+      [
+       125,
+       135
+      ]
+     ]
+    },
+    {
+     "id": "T21",
+     "name": "임진강 도하점",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      113,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서안 제3대대의 후방 연결로로 추정(배수진 형세)"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "동안 보급로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       132,
+       0
+      ],
+      [
+       128,
+       40
+      ],
+      [
+       126,
+       70
+      ],
+      [
+       120,
+       90
+      ],
+      [
+       113,
+       98
+      ],
+      [
+       104,
+       103
+      ],
+      [
+       100,
+       106
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "마량산-니키 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       76,
+       140
+      ],
+      [
+       80,
+       134
+      ],
+      [
+       84,
+       128
+      ],
+      [
+       88,
+       124
+      ],
+      [
+       92,
+       120
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "회산동-테시 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       92,
+       142
+      ],
+      [
+       96,
+       136
+      ],
+      [
+       100,
+       131
+      ],
+      [
+       104,
+       127
+      ],
+      [
+       106,
+       123
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "니키-테시 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       84,
+       116
+      ],
+      [
+       88,
+       118
+      ],
+      [
+       92,
+       120
+      ],
+      [
+       99,
+       122
+      ],
+      [
+       106,
+       123
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "임진강",
+     "alias": "하천 1",
+     "active": "항상",
+     "gap_at": [
+      113,
+      98
+     ],
+     "polygon": [
+      [
+       149,
+       200
+      ],
+      [
+       134,
+       160
+      ],
+      [
+       124,
+       135
+      ],
+      [
+       119,
+       113
+      ],
+      [
+       113,
+       100.5
+      ],
+      [
+       100,
+       97.2
+      ],
+      [
+       84.5,
+       95.2
+      ],
+      [
+       73.8,
+       80
+      ],
+      [
+       79,
+       49
+      ],
+      [
+       99,
+       29
+      ],
+      [
+       109,
+       0
+      ],
+      [
+       111,
+       0
+      ],
+      [
+       101,
+       31
+      ],
+      [
+       81,
+       51
+      ],
+      [
+       76.2,
+       80
+      ],
+      [
+       85.5,
+       92.8
+      ],
+      [
+       100,
+       94.8
+      ],
+      [
+       115,
+       97.5
+      ],
+      [
+       121,
+       111
+      ],
+      [
+       126,
+       135
+      ],
+      [
+       136,
+       160
+      ],
+      [
+       151,
+       200
+      ]
+     ]
+    },
+    {
+     "id": "I2",
+     "name": "역곡천",
+     "alias": "하천 2",
+     "active": "항상",
+     "polygon": [
+      [
+       200,
+       146
+      ],
+      [
+       170,
+       141
+      ],
+      [
+       145,
+       139
+      ],
+      [
+       125,
+       136
+      ],
+      [
+       125,
+       134
+      ],
+      [
+       145,
+       137
+      ],
+      [
+       170,
+       139
+      ],
+      [
+       200,
+       144
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제348연대 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": true,
+    "known_at_start": "D+1일 07:00 니키고지 탈출 대원 보고로 니키·테시고지 점령 확인",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      98,
+      121
+     ],
+     "note": "니키·테시고지 지상진지와 교통호를 점령, 아군 동굴호를 포위",
+     "ref": "T18",
+     "frontage_m": 1500,
+     "polygon": [
+      [
+       88,
+       118
+      ],
+      [
+       109,
+       119
+      ],
+      [
+       109,
+       126
+      ],
+      [
+       88,
+       124
+      ]
+     ]
+    },
+    "other_names": [
+     "적 제116사단 제348연대"
+    ]
+   },
+   {
+    "id": "E2",
+    "unit": "적 제348연대(-)",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 95,
+    "identified": true,
+    "known_at_start": "마량산-회산동-하후동 일대 주거점 점령",
+    "posture": "방어",
+    "preparation": "fortified",
+    "equipment": "국부군 출신 고참병 위주",
+    "position": {
+     "xy": [
+      90,
+      140
+     ],
+     "note": "마량산-회산동-하후동 주거점, 고양대 증원 가능",
+     "frontage_m": 4000,
+     "polygon": [
+      [
+       70,
+       136
+      ],
+      [
+       114,
+       137
+      ],
+      [
+       114,
+       146
+      ],
+      [
+       70,
+       146
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 포병 제2사단",
+    "alias": "적 사단 1",
+    "nation": "중국",
+    "echelon": "사단",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제116사단 지원 포병, D일 종일 포격과 임진강 서안 차단사격 실시",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      75,
+      160
+     ],
+     "note": "마량산 후방 포병진지(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 지원 전차부대",
+    "alias": "적 전차부대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "제116사단이 전차 지원을 받는다는 첩보",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      80,
+      150
+     ],
+     "note": "마량산 후방(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D+1일 07:00",
+   "light": "day",
+   "notes": "적이 D일 19:00 포격 후 2개 중대로 니키·테시고지를 공격해 지상진지를 장악했다. 연대 수색중대 2개 소대 잔여 인원이 동굴호에 고립되어 있다. 임진강 서안 진지는 배후가 강으로 막혀 있다."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제3대대(+사단 수색중대), 연대 수색중대(-), 제2대대, 제1대대(연대 예비), 제1중박격포중대 / 지원: 제1사단 포병, 지원 전차부대, 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제3대대(+사단 수색중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      },
+      {
+       "force": "F5"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "연대 수색중대(-)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제1대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "제1중박격포중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F6"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "니키고지와 테시고지는 주저항선을 감제하는 전진진지이며 베티고지와 105고지가 각각의 남쪽 발판이다. 적은 마량산과 회산동에서 능선을 따라 고양대로 증원할 수 있다. 임진강 도하점이 서안 제3대대의 유일한 후방 연결로다.",
+    "key_terrain": [
+     {
+      "ref": "T1",
+      "why": "주저항선과 제3대대 주진지를 감제한다"
+     },
+     {
+      "ref": "T2",
+      "why": "니키고지 동측과 임진강 서안을 감제한다"
+     },
+     {
+      "ref": "T4",
+      "why": "니키고지 공격의 발판이다"
+     },
+     {
+      "ref": "T3",
+      "why": "테시고지 공격의 발판이다"
+     },
+     {
+      "ref": "T21",
+      "why": "서안 부대의 보급·증원로다"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "적 증원로(마량산-니키)",
+      "user": "enemy",
+      "refs": [
+       "R2"
+      ],
+      "xy": [
+       [
+        76,
+        140
+       ],
+       [
+        80,
+        134
+       ],
+       [
+        84,
+        128
+       ],
+       [
+        88,
+        124
+       ],
+       [
+        92,
+        120
+       ]
+      ]
+     },
+     {
+      "name": "적 증원로(회산동-테시)",
+      "user": "enemy",
+      "refs": [
+       "R3"
+      ],
+      "xy": [
+       [
+        92,
+        142
+       ],
+       [
+        96,
+        136
+       ],
+       [
+        100,
+        131
+       ],
+       [
+        104,
+        127
+       ],
+       [
+        106,
+        123
+       ]
+      ]
+     },
+     {
+      "name": "아군 공격로(베티-니키)",
+      "user": "friendly",
+      "refs": [
+       "CM5"
+      ],
+      "xy": [
+       [
+        95,
+        110
+       ],
+       [
+        96,
+        112
+       ],
+       [
+        97,
+        115
+       ],
+       [
+        95,
+        117
+       ],
+       [
+        92,
+        120
+       ]
+      ]
+     },
+     {
+      "name": "아군 공격로(105-테시)",
+      "user": "friendly",
+      "refs": [
+       "CM6"
+      ],
+      "xy": [
+       [
+        103,
+        110
+       ],
+       [
+        104,
+        113
+       ],
+       [
+        105,
+        116
+       ],
+       [
+        106,
+        120
+       ],
+       [
+        106,
+        123
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제348연대는 1개 대대로 니키고지와 테시고지에서 방어하다가 마량산-회산동의 증원 병력으로 105고지와 베티고지의 역습부대 배후로 역습해 올 것이다. 적 포병 제2사단은 제3대대 주진지와 임진강 도하점에 차단사격을 할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "from_ref": "T18",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         88,
+         118
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         99,
+         122
+        ],
+        [
+         106,
+         123
+        ]
+       ],
+       "when": "아군 역습 개시 시",
+       "t": 32.33
+      },
+      {
+       "group": "E3",
+       "mode": "bombard",
+       "from_ref": "T14",
+       "objective_ref": "CM8",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         85,
+         130
+        ],
+        [
+         95,
+         108
+        ],
+        [
+         113,
+         98
+        ]
+       ],
+       "when": "D+1일 주간 계속",
+       "t": 31
+      },
+      {
+       "group": "E2",
+       "mode": "counterattack",
+       "from_ref": "T16",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         92,
+         142
+        ],
+        [
+         96,
+         136
+        ],
+        [
+         100,
+         131
+        ],
+        [
+         104,
+         127
+        ],
+        [
+         107,
+         122
+        ],
+        [
+         106,
+         120
+        ]
+       ],
+       "when": "아군 역습부대가 고지 8부 능선에 이를 때",
+       "t": 34
+      }
+     ],
+     "risk_point": "적 증원 병력이 회산동과 마량산에서 능선을 따라 내려와 테시고지와 니키고지 사면의 역습부대 배후를 쳐 고립시키는 때."
+    },
+    "unknowns": [
+     "동굴호 고립 인원의 생존 여부와 위치",
+     "고양대 적의 실제 병력과 증원 규모",
+     "적 전차의 투입 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "동굴호에 연대 수색중대 고립 인원이 생존해 있다.",
+     "why": "탈출 대원 보고로 동굴호 대피를 확인했으므로 고지 정상 진내사격을 제한해야 한다."
+    },
+    {
+     "text": "대대 세부 보충: 제3대대는 제9·10·11중대로 209고지 북쪽 능선-199고지-신촌을, 제2대대는 임진강 동안 242-202-264고지를 점령하고 제1대대는 연대 예비로 둔다.",
+     "why": "서술에는 제3대대 주진지와 주저항선 지명만 있어 서술과 모순되지 않게 보충했다."
+    },
+    {
+     "text": "임진강 도하점은 적 차단사격에도 주간에 사용할 수 있다.",
+     "why": "서안 부대의 증원과 후송이 이 도하점에 달려 있다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "제15연대는 D+1일 08:20 고양대에서 니키고지와 테시고지로 역습하여 적 제348연대 1개 대대를 격퇴하고 전진진지를 회복한다.",
+   "task_verb": "역습",
+   "objective_ref": "T18",
+   "when": {
+    "type": "time_elapsed",
+    "value": 32.33,
+    "text": "D+1일 08:20 H시"
+   },
+   "purpose": "주저항선을 감제하는 전진진지를 되찾고 고립된 수색중대원을 구출한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "니키고지와 테시고지를 탈취해 전진진지를 회복하고 임진강 양안 주저항선을 유지한다.",
+    "friendly": "제3대대가 니키·테시고지와 주진지를 점령하고 고립 인원을 구출한다.",
+    "enemy": "적 제348연대 1개 대대가 고양대에서 격퇴되고 증원이 차단된다.",
+    "terrain": "니키고지, 테시고지, 베티고지, 105고지, 임진강 도하점을 아군이 확보한다."
+   },
+   "concept": {
+    "text": "사단 수색중대가 베티고지를 거쳐 니키고지를, 연대 수색중대(-)가 105고지를 거쳐 테시고지를 동시에 역습한다. 포병·박격포·항공은 고지 북사면과 적 증원로를 차단한다. 제1대대는 예비로 도하점 동안에서 제3대대 주진지 역습을 준비한다.",
+    "maneuver": "제3대대(+사단 수색중대)가 주공으로 니키고지를 탈취하고, 연대 수색중대(-)가 조공으로 테시고지를 탈취한다. 제3대대 주력과 제2대대는 주진지를 방어한다.",
+    "fires": "제1사단 포병과 근접항공지원은 니키·테시고지 북방과 마량산-회산동 증원로를 차단하고, 제1중박격포중대는 공격 중대를 근접 지원한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "CM11",
+     "xy": [
+      125,
+      79
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM8",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 제3대대 주진지 안에 있음"
+     },
+     "priorities": [
+      "제3대대 주진지 역습",
+      "임진강 도하점 유지"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM1",
+      "CM2",
+      "CM9"
+     ],
+     "restrictions": "고립 인원이 동굴호에 있으므로 니키·테시고지 정상 진내사격은 연대장 승인 후 실시한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       94,
+       107
+      ],
+      "note": "제3대대 주력은 주진지, 사단 수색중대는 199고지 북쪽 공격대기지점",
+      "frontage_m": 3000,
+      "preparation": "deliberate",
+      "ref": "CM8",
+      "polygon": [
+       [
+        74,
+        104
+       ],
+       [
+        112,
+        101
+       ],
+       [
+        114,
+        110
+       ],
+       [
+        76,
+        112
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         78,
+         107
+        ],
+        "ref": "T8"
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         92,
+         106
+        ],
+        "ref": "T7"
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         107,
+         104
+        ],
+        "ref": "T9"
+       },
+       {
+        "label": "사단 수색중대",
+        "xy": [
+         95,
+         110
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "사단 수색중대로 베티고지를 거쳐 니키고지를 탈취한다.",
+       "params": {
+        "objective": "CM1",
+        "route": "CM5"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "니키고지를 확보한다.",
+       "params": {
+        "objective": "CM1"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "제9·10·11중대로 주진지를 방어한다.",
+       "params": {
+        "area": "CM8"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "공격",
+       "text": "제10중대로 니키고지를 공격한다.",
+       "params": {
+        "objective": "CM1",
+        "route": "CM5"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "제3대대(+사단 수색중대) 손실 0.1 초과이고 적 중대 이상이 니키고지에 있음",
+        "and": [
+         {
+          "type": "losses_exceed",
+          "group": "G1",
+          "fraction": 0.1,
+          "text": "제3대대(+사단 수색중대) 손실 0.1 초과"
+         },
+         {
+          "type": "strength_in_area",
+          "side": "enemy",
+          "ref": "CM1",
+          "min_echelon": "중대",
+          "text": "적 중대 이상이 니키고지에 있음"
+         }
+        ]
+       },
+       "basis": "risk_point: 사단 수색중대 역습이 적 증원으로 저지됨. 문턱은 추정."
+      }
+     ],
+     "purpose": "주공으로 주저항선을 감제하는 니키고지를 되찾는다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       103,
+       110
+      ],
+      "note": "신촌 북쪽, 제2소대 중심",
+      "frontage_m": 300,
+      "elements": [
+       {
+        "label": "제2소대",
+        "xy": [
+         103,
+         110
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "105고지를 탈취한다.",
+       "params": {
+        "objective": "T3",
+        "route": "CM6"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "북쪽 능선을 따라 테시고지를 탈취한다.",
+       "params": {
+        "objective": "CM2",
+        "route": "CM6"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "테시고지를 확보한다.",
+       "params": {
+        "objective": "CM2"
+       }
+      }
+     ],
+     "purpose": "조공으로 테시고지를 되찾아 주공의 동측을 보호하고 고립 인원을 구출한다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       129,
+       101
+      ],
+      "note": "임진강 동안 주저항선",
+      "frontage_m": 2500,
+      "preparation": "deliberate",
+      "ref": "CM10",
+      "polygon": [
+       [
+        118,
+        86
+       ],
+       [
+        140,
+        86
+       ],
+       [
+        140,
+        116
+       ],
+       [
+        124,
+        116
+       ],
+       [
+        118,
+        100
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         130,
+         112
+        ],
+        "ref": "T11"
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         126,
+         100
+        ],
+        "ref": "T12"
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         130,
+         90
+        ],
+        "ref": "T13"
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "임진강 동안 주저항선을 방어한다.",
+       "params": {
+        "area": "CM10"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "임진강 도하점을 경계한다.",
+       "params": {
+        "area": "T21"
+       }
+      }
+     ],
+     "purpose": "주저항선과 서안 부대의 후방 연결로를 유지한다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       125,
+       79
+      ],
+      "note": "도하점 남동쪽 동안 예비진지",
+      "frontage_m": 1000,
+      "preparation": "hasty",
+      "ref": "CM11",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         122,
+         82
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         128,
+         82
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         125,
+         76
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "예비진지를 점령한다.",
+       "params": {
+        "objective": "CM11"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "도하점을 건너 제3대대 주진지로 역습한다.",
+       "params": {
+        "objective": "CM8",
+        "route": "CM7"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM8",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 제3대대 주진지 안에 있음"
+       },
+       "basis": "risk_point: 적이 역습부대를 고립시킨 뒤 제3대대 주진지로 전과를 확대함."
+      }
+     ],
+     "purpose": "서안 주진지의 붕괴를 막는다."
+    },
+    {
+     "group": "G5",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       100,
+       101
+      ],
+      "note": "고작동 남쪽 임진강 서안",
+      "frontage_m": 300
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "니키고지 공격을 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM1"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "테시고지 공격을 화력지원한다.",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "CM2"
+       }
+      }
+     ],
+     "purpose": "공격 중대의 돌입을 근접 지원한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D+1일 08:00 사단 수색중대 공격대기지점 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 32,
+       "text": "D+1일 08:00"
+      }
+     },
+     {
+      "text": "D+1일 08:20 H시 니키·테시고지 역습 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 32.33,
+       "text": "D+1일 08:20"
+      }
+     },
+     {
+      "text": "D+1일 10:00 제1대대 예비진지 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 34,
+       "text": "D+1일 10:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "OBJ 니키",
+      "kind": "objective",
+      "xy": [
+       [
+        89,
+        118
+       ],
+       [
+        95,
+        118
+       ],
+       [
+        95,
+        122.5
+       ],
+       [
+        89,
+        122.5
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T1"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "OBJ 테시",
+      "kind": "objective",
+      "xy": [
+       [
+        103,
+        121.5
+       ],
+       [
+        109,
+        121.5
+       ],
+       [
+        109,
+        125
+       ],
+       [
+        103,
+        125
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T2"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        86,
+        111
+       ],
+       [
+        110,
+        111
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM4",
+      "name": "제3대대-제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G3"
+      ],
+      "xy": [
+       [
+        122,
+        135
+       ],
+       [
+        118,
+        112
+       ],
+       [
+        113,
+        100
+       ],
+       [
+        100,
+        96
+       ],
+       [
+        80,
+        92
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM5",
+      "name": "공격로 1(베티-니키)",
+      "kind": "route",
+      "xy": [
+       [
+        95,
+        110
+       ],
+       [
+        96,
+        112
+       ],
+       [
+        97,
+        115
+       ],
+       [
+        95,
+        117
+       ],
+       [
+        92,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T4"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "공격로 2(105-테시)",
+      "kind": "route",
+      "xy": [
+       [
+        103,
+        110
+       ],
+       [
+        104,
+        113
+       ],
+       [
+        105,
+        116
+       ],
+       [
+        106,
+        120
+       ],
+       [
+        106,
+        123
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T3"
+      ]
+     },
+     {
+      "id": "CM7",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        125,
+        79
+       ],
+       [
+        121,
+        90
+       ],
+       [
+        113,
+        98
+       ],
+       [
+        105,
+        103
+       ],
+       [
+        98,
+        107
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T21"
+      ]
+     },
+     {
+      "id": "CM8",
+      "name": "제3대대 주진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        74,
+        104
+       ],
+       [
+        112,
+        101
+       ],
+       [
+        114,
+        110
+       ],
+       [
+        76,
+        112
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "T7",
+       "T8",
+       "T9",
+       "T10"
+      ]
+     },
+     {
+      "id": "CM9",
+      "name": "EA 고양대 북방",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        84,
+        126
+       ],
+       [
+        112,
+        126
+       ],
+       [
+        112,
+        134
+       ],
+       [
+        84,
+        134
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R2",
+       "R3"
+      ]
+     },
+     {
+      "id": "CM10",
+      "name": "제2대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        118,
+        86
+       ],
+       [
+        140,
+        86
+       ],
+       [
+        140,
+        116
+       ],
+       [
+        124,
+        116
+       ],
+       [
+        118,
+        100
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "T11",
+       "T12",
+       "T13"
+      ]
+     },
+     {
+      "id": "CM11",
+      "name": "연대 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        120,
+        74
+       ],
+       [
+        130,
+        74
+       ],
+       [
+        130,
+        84
+       ],
+       [
+        120,
+        84
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM12",
+      "name": "제12연대 접촉점",
+      "kind": "contact_point",
+      "between": [
+       "G3",
+       "A1"
+      ],
+      "xy": [
+       [
+        140,
+        112
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D+1일 07:00",
+  "start_t": 31,
+  "horizon_h": 56,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대(+사단 수색중대) 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제348연대 1개 대대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제116사단은 10월 공세로 탈취한 니키고지와 테시고지를 고수해 제15연대 주저항선을 감제하고, 마량산-회산동 주거점의 증원과 포병 차단사격으로 아군 역습부대를 고지 사면에서 격퇴한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         88,
+         118
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         99,
+         122
+        ],
+        [
+         106,
+         123
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00 탈취한 지상진지와 교통호 고수"
+       },
+       "text": "적 제348연대 1개 대대는 니키고지와 테시고지 지상진지와 교통호를 고수한다.",
+       "basis": "서술: 고지 피탈 뒤 지상진지를 완전히 장악하고 아군 역습에 완강히 저항함."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         92,
+         122
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         94,
+         118
+        ],
+        [
+         96,
+         116
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 니키고지 안에 있음"
+       },
+       "repeat": {
+        "max": 8,
+        "interval_h": 2
+       },
+       "text": "적 제348연대 1개 대대는 니키고지 사면에 돌입한 아군을 교통호에서 역습해 격퇴한다.",
+       "basis": "서술: 사단 수색중대가 7부 능선까지 진격했으나 완강한 저항에 밀려 후퇴, 이후 재공격도 모두 격퇴. 반복 횟수와 간격은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T14",
+       "axis_xy": [
+        [
+         92,
+         120
+        ],
+        [
+         88,
+         124
+        ],
+        [
+         84,
+         128
+        ],
+        [
+         80,
+         134
+        ],
+        [
+         76,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 제348연대 1개 대대 손실 0.6 초과"
+       },
+       "text": "적 제348연대 1개 대대는 고양대를 포기하고 마량산으로 철수한다.",
+       "basis": "추정: 서술에 철수는 없으나 전투력 고갈 시의 반응 규칙으로 둠."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T14",
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00 주거점 방어 계속"
+       },
+       "axis_xy": [
+        [
+         70,
+         140
+        ],
+        [
+         90,
+         140
+        ],
+        [
+         112,
+         140
+        ]
+       ],
+       "text": "적 제348연대(-)는 마량산-회산동-하후동 주거점을 고수한다.",
+       "basis": "서술: 백석동-마량산-회산동-하후동을 연결하는 주 거점 형성."
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         76,
+         140
+        ],
+        [
+         80,
+         134
+        ],
+        [
+         84,
+         128
+        ],
+        [
+         88,
+         124
+        ],
+        [
+         92,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "적 제348연대 1개 대대 손실 0.25 초과"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       },
+       "text": "적 제348연대(-)는 마량산-니키 능선으로 1개 중대씩 고양대를 증원한다.",
+       "basis": "서술: 수차례 역습을 받고도 고지를 유지했고 전투 후 니키·테시고지 일대에 병력을 증원함. 문턱과 규모는 추정."
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         131
+        ],
+        [
+         104,
+         127
+        ],
+        [
+         108,
+         124
+        ],
+        [
+         108,
+         121
+        ],
+        [
+         106,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM2",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 테시고지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       },
+       "text": "적 제348연대 증원 중대는 회산동-테시 능선으로 내려와 테시고지 사면의 아군 배후로 역습한다.",
+       "basis": "서술: 연대 수색중대 제2소대가 테시고지 8부 능선에서 백병전 중 적 증원 병력이 배후에서 공격함. 반복은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         106,
+         123
+        ],
+        [
+         106,
+         121
+        ],
+        [
+         106,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T3",
+        "min_echelon": "소대",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "side": "friendly",
+          "ref": "T3",
+          "min_echelon": "소대",
+          "text": "아군 소대 이상이 105고지에 있음"
+         }
+        ],
+        "text": "아군 소대 이상이 105고지에 있음"
+       },
+       "text": "적 제348연대 증원 중대는 105고지를 공격한다.",
+       "basis": "추정: D+1일 탈취한 105고지를 D+3일 아군이 다시 탈환한 기록으로 보아 그 사이 적이 105고지를 되찾았음."
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM8",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         85,
+         130
+        ],
+        [
+         94,
+         107
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00부터 계속"
+       },
+       "text": "적 포병 제2사단은 제3대대 주진지에 차단사격을 한다.",
+       "basis": "서술: D일 아침부터 제15연대 정면 포격, 19:00부터 제3대대 주진지 차단사격."
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T21",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         95,
+         120
+        ],
+        [
+         113,
+         98
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00부터 계속"
+       },
+       "text": "적 포병 제2사단은 임진강 도하점과 임진강 서안에 차단사격을 한다.",
+       "basis": "서술: 임진강 서안에 대한 차단사격."
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         85,
+         135
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T18",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 고양대 안에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 3
+       },
+       "text": "적 포병 제2사단은 고양대 남사면의 아군 공격부대에 집중사격을 한다.",
+       "basis": "서술: D+3일 대대 공격이 치열한 포격에 막힘. 반복은 추정."
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T14",
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00"
+       },
+       "axis_xy": [
+        [
+         80,
+         150
+        ],
+        [
+         78,
+         145
+        ]
+       ],
+       "text": "적 지원 전차부대는 마량산 후방에서 대기한다.",
+       "basis": "서술: 전차 지원을 받는다고 했으나 구간 중 투입 기록 없음."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E5",
+    "unit": "적 제348연대 증원 중대",
+    "alias": "적 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 150,
+    "position": {
+     "xy": [
+      100,
+      131
+     ],
+     "ref": "R3",
+     "note": "회산동-테시 능선 중턱 은폐 대기(추정)"
+    },
+    "other_names": [
+     "중공군 증원 병력",
+     "적 제116사단 제348연대 후속부대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+1일 18:00",
+    "t": 42,
+    "kind": "night",
+    "duration_h": 12.5,
+    "note": "야간, 시계 제한"
+   },
+   {
+    "when": "D+2일 06:30",
+    "t": 54.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+2일 07:00",
+    "t": 55,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+2일 18:00",
+    "t": 66,
+    "kind": "night",
+    "duration_h": 12.5,
+    "note": "야간, 시계 제한"
+   },
+   {
+    "when": "D+3일 06:30",
+    "t": 78.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+3일 07:00",
+    "t": 79,
+    "kind": "air_window",
+    "duration_h": 8,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 아침",
+      "t": 7,
+      "mode": "bombard",
+      "target_ref": "CM8",
+      "axis_xy": [
+       [
+        75,
+        160
+       ],
+       [
+        85,
+        130
+       ],
+       [
+        94,
+        107
+       ]
+      ],
+      "note": "제15연대 정면에 종일 포격."
+     },
+     {
+      "when": "D일 19:00",
+      "t": 19,
+      "mode": "bombard",
+      "target_ref": "T18",
+      "axis_xy": [
+       [
+        75,
+        160
+       ],
+       [
+        85,
+        135
+       ],
+       [
+        98,
+        120
+       ]
+      ],
+      "note": "제3대대 주진지와 임진강 서안 차단사격, 니키·테시고지 집중포격으로 철조망·지뢰지대 파괴, 수색중대 통신 두절."
+     },
+     {
+      "when": "D+3일 01:00~10:40",
+      "t": 73,
+      "mode": "bombard",
+      "target_ref": "T18",
+      "axis_xy": [
+       [
+        75,
+        160
+       ],
+       [
+        85,
+        135
+       ],
+       [
+        95,
+        118
+       ]
+      ],
+      "note": "제11연대 제3대대 공격에 치열한 포격."
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 20:00",
+      "t": 20,
+      "mode": "attack",
+      "from_ref": "T14",
+      "target_ref": "T18",
+      "axis_xy": [
+       [
+        76,
+        140
+       ],
+       [
+        84,
+        128
+       ],
+       [
+        92,
+        122
+       ],
+       [
+        98,
+        121
+       ]
+      ],
+      "note": "박격포 사격 아래 2개 중대가 니키·테시고지에 접근해 백병전, 약 20분 뒤 후속부대가 동서로 우회해 퇴로 차단. 3면 포위 공격."
+     },
+     {
+      "when": "D일 21:00",
+      "t": 21,
+      "mode": "hold",
+      "target_ref": "T18",
+      "axis_xy": [
+       [
+        88,
+        118
+       ],
+       [
+        92,
+        120
+       ],
+       [
+        106,
+        123
+       ]
+      ],
+      "note": "지상진지 완전 장악, 수색중대 2개 소대를 동굴호에 고립."
+     },
+     {
+      "when": "D+1일 09:00",
+      "t": 33,
+      "mode": "counterattack",
+      "target_ref": "CM1",
+      "axis_xy": [
+       [
+        92,
+        122
+       ],
+       [
+        94,
+        118
+       ],
+       [
+        92,
+        115
+       ]
+      ],
+      "note": "니키고지 7부 능선의 사단 수색중대를 밀어내 무명고지로 후퇴시킴. 이후 6차 재공격 모두 격퇴."
+     },
+     {
+      "when": "D+2일 03:00",
+      "t": 51,
+      "mode": "hold",
+      "target_ref": "CM1",
+      "axis_xy": [
+       [
+        92,
+        120
+       ],
+       [
+        93,
+        118
+       ]
+      ],
+      "note": "제10중대 공격 저지."
+     },
+     {
+      "when": "D+3일 01:00~15:00",
+      "t": 73,
+      "mode": "hold",
+      "target_ref": "T18",
+      "axis_xy": [
+       [
+        92,
+        120
+       ],
+       [
+        99,
+        122
+       ],
+       [
+        106,
+        123
+       ]
+      ],
+      "note": "제11연대 제3대대 4차례 공격과 정오 재공격 저지, 니키·테시고지 유지."
+     }
+    ]
+   },
+   {
+    "group": "E5",
+    "actions": [
+     {
+      "when": "D+1일 09:00",
+      "t": 33,
+      "mode": "counterattack",
+      "target_ref": "T2",
+      "axis_xy": [
+       [
+        100,
+        131
+       ],
+       [
+        104,
+        127
+       ],
+       [
+        108,
+        124
+       ],
+       [
+        106,
+        121
+       ]
+      ],
+      "note": "테시고지 8부 능선에서 백병전 중인 연대 수색중대 제2소대 배후 공격, 소대 105고지로 후퇴."
+     },
+     {
+      "when": "D+1일 주간~D+2일(추정)",
+      "t": 40,
+      "mode": "attack",
+      "target_ref": "T3",
+      "axis_xy": [
+       [
+        106,
+        123
+       ],
+       [
+        106,
+        120
+       ]
+      ],
+      "note": "105고지를 다시 점령한 것으로 추정(D+3일 아군이 탈환)."
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D+3일 이후",
+      "t": 87,
+      "mode": "reinforce",
+      "target_ref": "T18",
+      "axis_xy": [
+       [
+        76,
+        140
+       ],
+       [
+        84,
+        128
+       ],
+       [
+        92,
+        120
+       ]
+      ],
+      "note": "아군 대규모 반격을 예상하고 니키·테시고지 일대에 병력 증원."
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "RF1",
+    "unit": "사단 수색중대",
+    "entry_when": "D+1일 07:00",
+    "entry_t": 31,
+    "note": "제3대대에 배속되어 니키고지 역습."
+   },
+   {
+    "id": "RF2",
+    "unit": "지원 전차부대(전차 16대)",
+    "entry_when": "D+2일 03:00",
+    "entry_t": 51,
+    "note": "제10중대 니키고지 공격 집중지원."
+   },
+   {
+    "id": "RF3",
+    "unit": "제11연대 제3대대",
+    "entry_when": "D+2일 주간(추정)",
+    "entry_t": 60,
+    "from_ref": "T21",
+    "note": "사단장이 제15연대에 배속, D+3일 역습."
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D+1일 07:00",
+      "t": 31,
+      "verb": "화력지원",
+      "ref": "T18",
+      "text": "제3대대장이 탈출 대원 보고 후 니키·테시고지에 포격과 미 공군 근접지원 요청."
+     },
+     {
+      "when": "D+1일 08:20",
+      "t": 32.33,
+      "verb": "역습",
+      "ref": "CM1",
+      "text": "사단 수색중대가 니키고지로 역습 개시."
+     },
+     {
+      "when": "D+1일 08:50",
+      "t": 32.83,
+      "verb": "탈취",
+      "ref": "T4",
+      "text": "베티고지 점령 후 니키고지 7부 능선까지 진격."
+     },
+     {
+      "when": "D+1일 09:30",
+      "t": 33.5,
+      "verb": "철수",
+      "ref": "T5",
+      "text": "완강한 저항에 밀려 무명고지로 후퇴."
+     },
+     {
+      "when": "D+1일 주간",
+      "t": 36,
+      "verb": "공격",
+      "ref": "CM1",
+      "text": "대대가 6차례 재공격했으나 진전 없이 무명고지로 철수."
+     },
+     {
+      "when": "D+2일 03:00",
+      "t": 51,
+      "verb": "공격",
+      "ref": "CM1",
+      "text": "제10중대 주력이 포병 제압사격, 근접항공지원, 전차 16대 지원 아래 니키고지 공격, 진전 없음."
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D+1일 08:20",
+      "t": 32.33,
+      "verb": "탈취",
+      "ref": "T3",
+      "text": "제2소대가 105고지 탈취."
+     },
+     {
+      "when": "D+1일 08:50",
+      "t": 32.83,
+      "verb": "공격",
+      "ref": "CM2",
+      "text": "북쪽 능선을 따라 테시고지 8부 능선 돌진, 교통호에서 백병전."
+     },
+     {
+      "when": "D+1일 09:10",
+      "t": 33.17,
+      "verb": "철수",
+      "ref": "T3",
+      "text": "배후 증원 적의 공격으로 포위를 우려해 105고지로 후퇴."
+     }
+    ]
+   },
+   {
+    "group": "A2",
+    "actions": [
+     {
+      "when": "D+2일 주간",
+      "t": 60,
+      "verb": "역습",
+      "ref": "T18",
+      "text": "사단장이 제15연대에 배속해 역습 명령."
+     },
+     {
+      "when": "D+3일 01:00",
+      "t": 73,
+      "verb": "탈취",
+      "ref": "T3",
+      "text": "1개 중대가 105고지 탈환 후 테시고지로, 대대 주력은 니키고지로 공격."
+     },
+     {
+      "when": "D+3일 01:00~10:40",
+      "t": 73,
+      "verb": "공격",
+      "ref": "CM1",
+      "text": "치열한 포격과 저항으로 4차례 공격 모두 실패."
+     },
+     {
+      "when": "D+3일 10:40",
+      "t": 82.67,
+      "verb": "철수",
+      "ref": "CM8",
+      "text": "원진지로 복귀."
+     },
+     {
+      "when": "D+3일 12:00",
+      "t": 84,
+      "verb": "공격",
+      "ref": "CM1",
+      "text": "사단장 엄명으로 포병 제압사격과 전차 근접지원 아래 니키고지 공격 재개, 일진일퇴."
+     },
+     {
+      "when": "D+3일 오후(추정)",
+      "t": 87,
+      "verb": "방어",
+      "ref": "T4",
+      "text": "미 제1군단장 지시로 공격 중지, 니키고지 6부 능선-베티고지-무명고지-105고지 선에 전진진지 편성."
+     }
+    ]
+   },
+   {
+    "group": "G3",
+    "actions": [
+     {
+      "when": "D+1일~D+3일",
+      "t": 31,
+      "verb": "방어",
+      "ref": "CM10",
+      "text": "임진강 동안 주저항선 유지."
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일 19:00",
+    "t": 19,
+    "kind": "night",
+    "note": "야간 포격 후 적 기습, 고립 중대 진내사격 요청 미실시."
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air",
+    "ref": "T18",
+    "note": "미 공군 전투기 니키·테시고지 근접지원."
+   },
+   {
+    "when": "D+2일 03:00",
+    "t": 51,
+    "kind": "air",
+    "ref": "CM1",
+    "note": "제10중대 야간 공격에 공군 근접지원."
+   },
+   {
+    "when": "D+3일 01:00",
+    "t": 73,
+    "kind": "night",
+    "note": "제11연대 제3대대 야간 공격 개시."
+   }
+  ],
+  "historical_result": {
+   "friendly": "국군 제1사단 제15연대(+사단 수색중대, 제11연대 제3대대)",
+   "enemy": "적 제116사단 제348연대",
+   "terrain_held": [
+    "T4",
+    "T5",
+    "T3",
+    "CM8",
+    "CM10",
+    "T21"
+   ],
+   "end_state_achieved": "partial",
+   "losses": "아군 전사 8, 부상 141, 실종 64. 적 사살 173(추정), 포로 2.",
+   "friendly_loss_pct": 6,
+   "enemy_loss_pct": 20,
+   "duration_h": 56
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "니키·테시고지는 적이 고수. 아군은 공격을 중지하고 니키고지 6부 능선-베티고지-무명고지-105고지 선에 전진진지를 편성했으며 임진강 양안 주저항선은 유지했다.",
+   "terrain_held_at_horizon": [
+    "T4",
+    "T5",
+    "T3",
+    "CM8",
+    "CM10",
+    "T21"
+   ],
+   "friendly_loss_pct": 6,
+   "enemy_loss_pct": 20,
+   "key_times": [
+    {
+     "t": 32.83,
+     "ref": "T4",
+     "text": "사단 수색중대 베티고지 점령"
+    },
+    {
+     "t": 33.17,
+     "ref": "T3",
+     "text": "연대 수색중대 제2소대 105고지로 후퇴"
+    },
+    {
+     "t": 33.5,
+     "ref": "T5",
+     "text": "사단 수색중대 무명고지로 후퇴"
+    },
+    {
+     "t": 51,
+     "ref": "CM1",
+     "text": "제10중대 니키고지 공격 실패"
+    },
+    {
+     "t": 73,
+     "ref": "T3",
+     "text": "제11연대 제3대대 105고지 탈환"
+    },
+    {
+     "t": 82.67,
+     "ref": "CM8",
+     "text": "4차 공격 실패 후 원진지 복귀"
+    },
+    {
+     "t": 84,
+     "ref": "CM1",
+     "text": "니키고지 공격 재개"
+    },
+    {
+     "t": 87,
+     "ref": "T4",
+     "text": "군단장 지시로 공격 중지, 현 진출선에 전진진지 편성"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb2_022",
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E1[0]: '피탈'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

@@ -1,0 +1,2487 @@
+{
+ "meta": {
+  "segment": {
+   "start_date": "1950-08-08",
+   "end_date": "1950-08-10",
+   "d_day": "1950-08-08",
+   "order_time": "1950-08-07 20:00 (D-1일 20:00)",
+   "text": "본격 도하공격 개시부터 제12연대(-) 투입, 154고지 탈환, 낙동강 서쪽 격퇴까지",
+   "why": "구간 지정에 따름. 8.2~7 전 단계와 8.11~12 Y선 철수 제외"
+  },
+  "perspective_rationale": "관점 지정에 따라 154고지 일대 작전지역을 맡은 제15연대를 쓰고, 사단 예비 제12연대(-)의 역습은 higher_rules로 둔다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "제12연대(-) 지원과 유엔 공군 지원으로 8.9 154고지 탈환, 전차 4대 파괴·1대 노획, 8.10 역습으로 북한군을 낙동강 서쪽으로 격퇴"
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "(0,0)은 왜관 북방 낙동강 서안의 남서단 추정점. 낙동강을 x≈60 남북선으로 단순화",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_085_낙정리_전투",
+  "title": "낙정리 전투",
+  "dates": "1950. 8. 2.~12.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '낙정리 전투' (pdf 297쪽)",
+  "pdf_page": 297,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 23,
+   "score": {
+    "B1": 3,
+    "B2": 2,
+    "B3": 4,
+    "B4": 4,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 10,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "3개 연대를 모두 일선에 배치한 상태에서 제12연대를 예비로 전환",
+    "alternative": "42km 정면에 3개 연대를 계속 병렬 배치하고 예비를 두지 않음",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "넓은 정면의 방어지역에 3개 연대를 투입하여 방어하다가 1개 연대를 예비로 활용하여 융통성 있게 부대를 운용하여 방어를 효과적으로 수행하였다."
+   },
+   {
+    "decision": "돌파 위기의 제15연대 정면에 예비 제12연대(-)를 투입하고 154고지 역습",
+    "alternative": "예비를 제11연대 정면에 투입하거나 투입을 늦춤",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제11연대가 해평천으로 물러나 화력 집중과 대전차특공대로 방어",
+    "alternative": "낙동강 연안 진지를 계속 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "8월 8일~10일(3일): 본격 도하공격부터 제12연대(-) 예비 투입, 154고지 탈환, 낙동강 서쪽 격퇴까지를 제15연대 관점으로 쓴다. 8월 2일~7일은 정면 확장과 제12연대의 예비 전환, 낙산동 고지 역습을 다루는 전 단계로 분리하고, 8월 11일~12일의 Y선 철수는 제외한다.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.4739,
+   "duration_s": 419.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 45163,
+     "cache_read_input_tokens": 127285,
+     "cache_creation_input_tokens": 38584
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6273,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 13498
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [],
+   "cost_usd": 0.0509092
+  }
+ },
+ "input": {
+  "perspective": {
+   "unit": "국군 제1사단 제15연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제15연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "제1사단은 위천 하구에서 왜관 북방까지 42km 정면의 낙동강 동안을 방어하여 적 제13사단과 적 제15사단의 도하를 저지한다.",
+   "higher_intent": "2개 연대로 강안을 방어하고 제12연대(-)를 예비로 두어 도하한 적을 역습으로 강 서쪽으로 격퇴한다. 낙동강 장애물과 유엔 항공 지원을 최대로 활용한다.",
+   "assigned_task": "제15연대는 해평천 남측에서 왜관 북방까지 낙동강 동안을 방어하여 154고지 일대로 도하하는 적을 격퇴한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제11연대",
+     "alias": "인접 연대 1",
+     "side": "북측",
+     "mission": "해평천 이북 낙동강 동안을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      90,
+      185
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제12연대(-)",
+     "alias": "인접 연대 2",
+     "other_names": [
+      "제12연대"
+     ],
+     "side": "사단 예비(후방)",
+     "mission": "사단 예비로서 위기 지역에 역습한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      160,
+      110
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "미 제1기병사단",
+     "alias": "인접 사단 1",
+     "side": "남측",
+     "mission": "왜관 일대 낙동강 동안을 방어한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      90,
+      5
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A2",
+     "text": "적 대대 이상이 154고지 일대에 있으면 사단 예비 제12연대(-)가 154고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H154",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 154고지에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H154",
+      "axis_xy": [
+       [
+        160,
+        110
+       ],
+       [
+        140,
+        98
+       ],
+       [
+        120,
+        96
+       ],
+       [
+        100,
+        100
+       ],
+       [
+        80,
+        105
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "북쪽 해평천 남측(제11연대와 경계)에서 남쪽 왜관 북방(미 제1기병사단과 경계)까지 약 14km의 낙동강 동안, 종심 약 9km.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "북측 전투지경선",
+     "between": [
+      "제15연대",
+      "제11연대"
+     ],
+     "xy": [
+      [
+       60,
+       165
+      ],
+      [
+       150,
+       160
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "남측 전투지경선",
+     "between": [
+      "제15연대",
+      "미 제1기병사단"
+     ],
+     "xy": [
+      [
+       58,
+       22
+      ],
+      [
+       150,
+       25
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "후방 전투지경선",
+     "between": [
+      "제15연대",
+      "제12연대(-)"
+     ],
+     "xy": [
+      [
+       150,
+       160
+      ],
+      [
+       150,
+       25
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제15연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제15연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제15연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제15연대 대전차특공조",
+    "alias": "대전차특공조",
+    "echelon": "소대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "2.36인치 로켓포, 수류탄·폭약",
+    "location": {
+     "note": "연대 지휘소 부근"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "사단 포병대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 80,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "연대 후방",
+     "xy": [
+      125,
+      90
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "낙동강 동안의 기복이 심한 암석 고지대. 강폭 500~1000m이나 가뭄으로 수심 1~1.5m라 대부분 도섭 가능하다. 154고지가 강안 도로와 도섭장을 감제한다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H154",
+     "name": "154고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      80,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 154,
+     "evidence": "서술: 8.9 탈환한 154고지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "RV1",
+     "name": "낙동강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      60,
+      100
+     ],
+     "line": [
+      [
+       62,
+       200
+      ],
+      [
+       60,
+       170
+      ],
+      [
+       63,
+       140
+      ],
+      [
+       58,
+       110
+      ],
+      [
+       62,
+       80
+      ],
+      [
+       58,
+       50
+      ],
+      [
+       60,
+       20
+      ],
+      [
+       55,
+       0
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 강폭 500~1000m, 수심 1~1.5m 도섭 가능"
+    },
+    {
+     "id": "RV2",
+     "name": "해평천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      95,
+      178
+     ],
+     "line": [
+      [
+       140,
+       190
+      ],
+      [
+       110,
+       182
+      ],
+      [
+       80,
+       176
+      ],
+      [
+       61,
+       174
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 제11연대 철수선"
+    },
+    {
+     "id": "X1",
+     "name": "154고지 정면 도섭장",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      60,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "추정: 154고지 정면 도하 지점"
+    },
+    {
+     "id": "RG1",
+     "name": "154고지 동측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      100,
+      100
+     ],
+     "line": [
+      [
+       85,
+       104
+      ],
+      [
+       100,
+       100
+      ],
+      [
+       115,
+       96
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "추정: 154고지 후사면 능선"
+    },
+    {
+     "id": "T1",
+     "name": "선산",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      25,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 적 제15사단 집결지"
+    },
+    {
+     "id": "T2",
+     "name": "왜관",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      66,
+      5
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 사단 지역 남단"
+    },
+    {
+     "id": "T3",
+     "name": "다부동",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      190,
+      40
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 후방 방어선"
+    }
+   ],
+   "routes": [
+    {
+     "id": "RD1",
+     "name": "강안 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       72,
+       200
+      ],
+      [
+       72,
+       165
+      ],
+      [
+       75,
+       130
+      ],
+      [
+       78,
+       100
+      ],
+      [
+       75,
+       70
+      ],
+      [
+       72,
+       40
+      ],
+      [
+       68,
+       5
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RD2",
+     "name": "다부동 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       78,
+       100
+      ],
+      [
+       100,
+       93
+      ],
+      [
+       130,
+       80
+      ],
+      [
+       160,
+       60
+      ],
+      [
+       190,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제15사단 예하 1개 연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 45,
+    "personnel": 1700,
+    "identified": false,
+    "known_at_start": "선산 일대 집결·도하 준비 중인 적 제15사단 일부로 파악",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      38,
+      110
+     ],
+     "frontage_m": 3000,
+     "note": "154고지 정면 낙동강 서안"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제15사단 배속 전차중대",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "T-34 약 6대",
+    "identified": false,
+    "known_at_start": "적 전차 보유는 알려졌으나 도하 수단은 미상",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      30,
+      105
+     ],
+     "note": "낙동강 서안 후방"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제15사단 포병",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 60,
+    "equipment": "76.2mm·122mm 곡사포",
+    "identified": false,
+    "known_at_start": "서안 포병 사격 관측",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      15,
+      120
+     ],
+     "note": "서안 포진지"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 제13사단 예하 1개 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "제11연대 정면 서안 집결",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      35,
+      185
+     ],
+     "frontage_m": 3000,
+     "note": "제11연대 정면 서안"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 04:00",
+   "light": "dawn",
+   "notes": "8월 혹서, 가뭄으로 낙동강 대부분 도섭 가능. 주간 유엔 근접항공지원 가능."
+  }
+ },
+ "order": {
+  "task_organization": {
+   "text": "제2대대, 제1대대, 제3대대(-제11중대), 제11중대(+대전차특공조) / 지원: 사단 포병대대, 유엔 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제3대대(-제11중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3",
+       "part": "-제11중대"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제11중대(+대전차특공조)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3",
+       "part": "제11중대"
+      },
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "154고지는 도섭장과 강안 도로, 다부동 도로 분기점을 감제하는 핵심 지형이다. 주 접근로는 도섭장에서 154고지를 거쳐 다부동 도로로 이어진다. 낙동강은 도섭 가능하여 장애 효과가 제한된다.",
+    "key_terrain": [
+     {
+      "ref": "H154",
+      "why": "도섭장과 다부동 도로 분기점 감제"
+     },
+     {
+      "ref": "RG1",
+      "why": "154고지 역습 출발과 종심 방어 거점"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "도섭장-154고지-다부동 접근로",
+      "user": "enemy",
+      "refs": [
+       "X1",
+       "H154",
+       "RD2"
+      ],
+      "xy": [
+       [
+        38,
+        108
+       ],
+       [
+        60,
+        105
+       ],
+       [
+        80,
+        105
+       ],
+       [
+        100,
+        93
+       ],
+       [
+        130,
+        80
+       ],
+       [
+        160,
+        60
+       ]
+      ]
+     },
+     {
+      "name": "북측 강안 접근로",
+      "user": "enemy",
+      "refs": [
+       "RV1",
+       "RD1"
+      ],
+      "xy": [
+       [
+        35,
+        148
+       ],
+       [
+        62,
+        145
+       ],
+       [
+        75,
+        140
+       ],
+       [
+        78,
+        120
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제15사단 1개 연대는 전차와 포병 지원 아래 D일 새벽 154고지 정면 도섭장으로 도하해 154고지를 공격해 올 것이다. 이어서 다부동 도로를 따라 종심으로 공격해 올 것이다. 적 제13사단 1개 연대는 동시에 제11연대 정면으로 도하할 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E3",
+       "mode": "bombard",
+       "from_ref": "T1",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         15,
+         120
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "when": "D일 04:00",
+       "t": 4
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "X1",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         38,
+         110
+        ],
+        [
+         50,
+         107
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         70,
+         105
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "when": "D일 05:00",
+       "t": 5
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "X1",
+       "objective_ref": "RD2",
+       "axis_xy": [
+        [
+         30,
+         105
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         78,
+         100
+        ],
+        [
+         100,
+         93
+        ],
+        [
+         130,
+         80
+        ]
+       ],
+       "when": "D일 06:00 이후",
+       "t": 6
+      },
+      {
+       "group": "E4",
+       "mode": "attack",
+       "from_ref": "RV1",
+       "objective_ref": "RV2",
+       "axis_xy": [
+        [
+         35,
+         185
+        ],
+        [
+         62,
+         185
+        ],
+        [
+         85,
+         180
+        ]
+       ],
+       "when": "D일 05:00",
+       "t": 5
+      }
+     ],
+     "risk_point": "적 대대 이상이 전차와 함께 154고지에 돌입해 다부동 도로로 진출하는 순간"
+    },
+    "unknowns": [
+     "적의 도하 수단과 전차 도하 지점",
+     "적 연대 번호와 정확한 병력",
+     "적 예비 투입 시기"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적 주공은 154고지 정면 도섭장으로 온다.",
+     "why": "도섭 가능 수심과 다부동 도로 연결"
+    },
+    {
+     "text": "주간에는 유엔 근접항공지원을 받을 수 있다.",
+     "why": "사단 지원 계획"
+    },
+    {
+     "text": "사단 예비 제12연대(-)는 154고지 위기 시 역습한다.",
+     "why": "사단 의도"
+    },
+    {
+     "text": "대대 세부 보충: 대대 진지와 중대 배치는 서술에 없어 지형으로 추정했다.",
+     "why": "서술은 연대 수준만 기술"
+    }
+   ]
+  },
+  "mission": {
+   "text": "제15연대는 D일부터 해평천 남측-왜관 북방 낙동강 동안에서 방어하여 154고지 일대로 도하하는 적을 격퇴하고 다부동 접근로를 차단한다.",
+   "task_verb": "방어",
+   "objective_ref": "H154",
+   "when": {
+    "type": "time_elapsed",
+    "value": 0,
+    "text": "D일 00:00부터"
+   },
+   "purpose": "사단 방어선 유지와 다부동 접근로 차단"
+  },
+  "execution": {
+   "end_state": {
+    "text": "154고지와 강안 진지를 확보하고 도하한 적을 낙동강 서쪽으로 격퇴한다.",
+    "friendly": "연대가 154고지와 강안 진지를 유지",
+    "enemy": "도하한 적 연대와 전차가 격퇴되거나 격멸됨",
+    "terrain": "154고지와 다부동 도로 분기점 확보"
+   },
+   "concept": {
+    "text": "2개 대대를 강안에 두고 제2대대가 154고지에서 주 접근로를 막는다. 제3대대(-)는 남측 강안을 방어하고, 제11중대와 대전차특공조가 154고지 후방에서 역습과 대전차 매복을 준비한다. 위기 시 사단 예비와 협조해 154고지를 탈취한다.",
+    "maneuver": "제2대대 154고지 방어, 제1대대 북측 강안 방어, 제3대대(-) 남측 강안 방어, 예비 154고지 동측 능선 대기 후 역습",
+    "fires": "사단 포병은 도섭장과 EA1에 집중하고 주간 근접항공은 적 전차와 도하 부대를 공격한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "CM9",
+     "xy": [
+      100,
+      100
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H154",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 154고지에 있음"
+     },
+     "priorities": [
+      "154고지 역습",
+      "다부동 도로 적 전차 차단"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM1",
+      "X1"
+     ],
+     "restrictions": "아군 진지 300m 이내 사격은 연대 승인. 근접항공은 주간에 한함."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       75,
+       107
+      ],
+      "frontage_m": 4500,
+      "preparation": "hasty",
+      "ref": "CM2",
+      "polygon": [
+       [
+        63,
+        85
+       ],
+       [
+        63,
+        130
+       ],
+       [
+        100,
+        130
+       ],
+       [
+        100,
+        85
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         67,
+         120
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         67,
+         95
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         80,
+         105
+        ],
+        "ref": "H154"
+       }
+      ],
+      "note": "154고지와 도섭장 정면 강안 진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "154고지 일대를 방어한다.",
+       "params": {
+        "area": "CM2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "도섭장 정면에서 적의 도하를 저지한다.",
+       "params": {
+        "area": "CM1"
+       }
+      }
+     ],
+     "purpose": "주 접근로 차단과 154고지 유지"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       72,
+       148
+      ],
+      "frontage_m": 3500,
+      "preparation": "hasty",
+      "ref": "CM3",
+      "polygon": [
+       [
+        63,
+        130
+       ],
+       [
+        63,
+        165
+       ],
+       [
+        100,
+        163
+       ],
+       [
+        100,
+        130
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         67,
+         157
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         67,
+         138
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         85,
+         148
+        ]
+       }
+      ],
+      "note": "해평천 남측 강안 진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "북측 강안을 방어한다.",
+       "params": {
+        "area": "CM3"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력지원",
+       "text": "명에 의해 EA1의 적에게 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM1",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 EA1에 있음"
+       },
+       "basis": "risk_point: 적 주력이 154고지 정면으로 도하"
+      }
+     ],
+     "purpose": "북측 측방 방호와 154고지 지원"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       70,
+       55
+      ],
+      "frontage_m": 6000,
+      "preparation": "hasty",
+      "ref": "CM4",
+      "polygon": [
+       [
+        60,
+        25
+       ],
+       [
+        60,
+        85
+       ],
+       [
+        100,
+        85
+       ],
+       [
+        100,
+        25
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         66,
+         70
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         66,
+         40
+        ]
+       }
+      ],
+      "note": "왜관 북방 남측 강안 진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "남측 강안을 방어한다.",
+       "params": {
+        "area": "CM4"
+       }
+      }
+     ],
+     "purpose": "남측 측방과 미군 접촉점 유지"
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       100,
+       100
+      ],
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "ref": "CM9",
+      "elements": [
+       {
+        "label": "제11중대",
+        "xy": [
+         102,
+         100
+        ]
+       },
+       {
+        "label": "대전차특공조",
+        "xy": [
+         95,
+         97
+        ]
+       }
+      ],
+      "note": "154고지 동측 능선 예비진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "154고지 동측 능선 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM9"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 154고지로 역습한다.",
+       "params": {
+        "objective": "H154",
+        "route": "CM7"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H154",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 154고지에 있음"
+       },
+       "basis": "risk_point: 적이 154고지에 돌입"
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "차단",
+       "text": "명에 의해 대전차특공조로 다부동 도로의 적 전차를 차단한다.",
+       "params": {
+        "area": "CM8"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "E2",
+        "ref": "CM1",
+        "min_echelon": "소대",
+        "text": "적 전차 소대 이상이 EA1에 있음"
+       },
+       "basis": "risk_point: 적 전차가 다부동 도로로 진출"
+      }
+     ],
+     "purpose": "154고지 회복과 적 전차 종심 진출 차단"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 00:00 전 대대 진지 점령과 강안 경계 강화 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 0,
+       "text": "D일 00:00"
+      }
+     },
+     {
+      "text": "D일 04:00 예비 역습 준비와 대전차 매복 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4,
+       "text": "D일 04:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "EA1(도섭장 교전지역)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        50,
+        95
+       ],
+       [
+        50,
+        115
+       ],
+       [
+        72,
+        115
+       ],
+       [
+        72,
+        95
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "X1",
+       "RV1"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "BP 154",
+      "kind": "battle_position",
+      "xy": [
+       [
+        63,
+        85
+       ],
+       [
+        63,
+        130
+       ],
+       [
+        100,
+        130
+       ],
+       [
+        100,
+        85
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "H154"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "BP 북측",
+      "kind": "battle_position",
+      "xy": [
+       [
+        63,
+        130
+       ],
+       [
+        63,
+        165
+       ],
+       [
+        100,
+        163
+       ],
+       [
+        100,
+        130
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM4",
+      "name": "BP 남측",
+      "kind": "battle_position",
+      "xy": [
+       [
+        60,
+        25
+       ],
+       [
+        60,
+        85
+       ],
+       [
+        100,
+        85
+       ],
+       [
+        100,
+        25
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM5",
+      "name": "제1·제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G2",
+       "G1"
+      ],
+      "xy": [
+       [
+        63,
+        130
+       ],
+       [
+        150,
+        128
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM6",
+      "name": "제2·제3대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G3"
+      ],
+      "xy": [
+       [
+        62,
+        85
+       ],
+       [
+        150,
+        85
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "154고지 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        100
+       ],
+       [
+        95,
+        101
+       ],
+       [
+        90,
+        103
+       ],
+       [
+        85,
+        104
+       ],
+       [
+        80,
+        105
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG1",
+       "H154"
+      ]
+     },
+     {
+      "id": "CM8",
+      "name": "다부동 도로 대전차 매복지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        85,
+        92
+       ],
+       [
+        85,
+        102
+       ],
+       [
+        100,
+        98
+       ],
+       [
+        100,
+        88
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RD2"
+      ]
+     },
+     {
+      "id": "CM9",
+      "name": "예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        100,
+        100
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RG1"
+      ]
+     },
+     {
+      "id": "CM10",
+      "name": "북측 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        65,
+        165
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM11",
+      "name": "남측 접촉점",
+      "kind": "contact_point",
+      "xy": [
+       [
+        62,
+        22
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "scenario": {
+  "start": "D일 04:00",
+  "start_t": 4,
+  "horizon_h": 68,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제15사단 예하 1개 연대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 적 제13사단과 적 제15사단으로 D일 새벽 낙동강을 동시에 도하해 국군 제1사단 방어선을 돌파하고 다부동 도로를 따라 대구 방향으로 진출한다. 적 제15사단은 미리 가설한 수중교로 전차를 도하시켜 154고지를 탈취한다.",
+   "groups": [
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         15,
+         120
+        ],
+        [
+         50,
+         110
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "text": "D일 04:00 154고지와 강안 진지에 공격준비사격을 한다.",
+       "basis": "서술: 적 포병 화력 우세. 시각은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 4,
+        "text": "D일 04:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "RG1",
+       "axis_xy": [
+        [
+         15,
+         120
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "text": "이어서 154고지 동측 능선과 종심에 지원사격을 한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         38,
+         110
+        ],
+        [
+         50,
+         107
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         70,
+         105
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "text": "D일 05:00 154고지 정면 도섭장으로 도하해 154고지를 공격한다.",
+       "basis": "서술: 1개 연대로 제15연대 정면 도하공격. 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "RD2",
+       "axis_xy": [
+        [
+         80,
+         105
+        ],
+        [
+         90,
+         100
+        ],
+        [
+         100,
+         93
+        ],
+        [
+         115,
+         87
+        ],
+        [
+         130,
+         80
+        ]
+       ],
+       "text": "이어서 다부동 도로를 따라 종심으로 공격한다.",
+       "basis": "서술: 방어선 돌파 위기"
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         60,
+         105
+        ],
+        [
+         70,
+         105
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "text": "154고지를 잃으면 154고지를 재공격한다.",
+       "basis": "추정: 교두보 유지 시도",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H154",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 154고지에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 8
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         80,
+         105
+        ],
+        [
+         70,
+         105
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         45,
+         108
+        ],
+        [
+         38,
+         110
+        ]
+       ],
+       "text": "손실이 커지면 낙동강 서안으로 철수한다.",
+       "basis": "추정 문턱 0.5",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "적 제15사단 예하 1개 연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "RD2",
+       "axis_xy": [
+        [
+         30,
+         105
+        ],
+        [
+         45,
+         106
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         78,
+         100
+        ],
+        [
+         100,
+         93
+        ],
+        [
+         130,
+         80
+        ]
+       ],
+       "text": "D일 06:00 수중교로 도하해 보병을 따라 다부동 도로로 공격한다.",
+       "basis": "서술: 비밀 수중교로 전차 도하. 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "X1",
+       "axis_xy": [
+        [
+         100,
+         93
+        ],
+        [
+         78,
+         100
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         30,
+         105
+        ]
+       ],
+       "text": "전차 손실이 크면 도섭장으로 철수한다.",
+       "basis": "추정 문턱 0.6",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "적 전차중대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         25,
+         140
+        ],
+        [
+         40,
+         115
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "text": "선두 연대가 154고지에 돌입하면 후속 대대를 도하시켜 교두보를 확대한다.",
+       "basis": "추정: 적 제15사단 후속 부대 투입",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "E1",
+        "ref": "H154",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 154고지에 있음"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         80,
+         105
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         40,
+         115
+        ],
+        [
+         25,
+         140
+        ]
+       ],
+       "text": "손실이 커지면 서안으로 철수한다.",
+       "basis": "추정 문턱 0.5",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E5",
+        "fraction": 0.5,
+        "text": "후속 대대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "RV2",
+       "axis_xy": [
+        [
+         35,
+         185
+        ],
+        [
+         50,
+         185
+        ],
+        [
+         62,
+         185
+        ],
+        [
+         75,
+         182
+        ],
+        [
+         85,
+         180
+        ]
+       ],
+       "text": "D일 05:00 제11연대 정면으로 도하해 해평천 방향으로 공격한다.",
+       "basis": "서술: 다른 1개 연대가 제11연대 정면 도하. 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "RV2",
+       "axis_xy": [
+        [
+         85,
+         180
+        ],
+        [
+         95,
+         178
+        ],
+        [
+         105,
+         180
+        ]
+       ],
+       "text": "이어서 전차와 함께 해평천 선을 공격한다.",
+       "basis": "서술: 다음날 해평천 접근",
+       "repeat": {
+        "max": 2,
+        "interval_h": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E5",
+    "unit": "적 제15사단 후속 1개 대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 45,
+    "personnel": 400,
+    "position": {
+     "xy": [
+      25,
+      140
+     ],
+     "ref": "T1",
+     "note": "선산 남쪽 서안 후속 집결지(추정)"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "적 제15사단 수중교 가설 공병",
+    "alias": "적 중대 2",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "engineer",
+    "modifier": "",
+    "strength_pct": 80,
+    "position": {
+     "xy": [
+      58,
+      105
+     ],
+     "ref": "X1",
+     "note": "154고지 정면 도섭장 수중교(사전 가설, 아군 미식별)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "dawn",
+    "duration_h": 1.5,
+    "note": "여명 전 박명, 시야 제한"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 유엔 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 유엔 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 유엔 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "other",
+    "duration_h": 68,
+    "ref": "X1",
+    "note": "적이 사전 가설한 수중교가 도섭장에 있어 전차 도하 가능. 혹서와 가뭄으로 낙동강 수심 1~1.5m"
+   }
+  ]
+ },
+ "history": {
+  "enemy_actual": [
+   {
+    "group": "E3",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 4,
+      "mode": "bombard",
+      "target_ref": "H154",
+      "axis_xy": [
+       [
+        15,
+        120
+       ],
+       [
+        80,
+        105
+       ]
+      ],
+      "note": "도하 지원 사격"
+     }
+    ]
+   },
+   {
+    "group": "E1",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "mode": "attack",
+      "from_ref": "X1",
+      "target_ref": "H154",
+      "axis_xy": [
+       [
+        38,
+        110
+       ],
+       [
+        60,
+        105
+       ],
+       [
+        80,
+        105
+       ]
+      ],
+      "note": "1개 연대로 제15연대 정면 도하공격, 154고지 점령"
+     },
+     {
+      "when": "D일 주간",
+      "t": 12,
+      "mode": "attack",
+      "from_ref": "H154",
+      "target_ref": "RD2",
+      "axis_xy": [
+       [
+        80,
+        105
+       ],
+       [
+        90,
+        100
+       ],
+       [
+        100,
+        93
+       ]
+      ],
+      "note": "방어선 돌파 위기 조성"
+     },
+     {
+      "when": "D+1일",
+      "t": 36,
+      "mode": "withdraw",
+      "from_ref": "H154",
+      "axis_xy": [
+       [
+        80,
+        105
+       ],
+       [
+        70,
+        105
+       ],
+       [
+        60,
+        105
+       ]
+      ],
+      "note": "제12연대(-) 역습과 항공 공격으로 154고지 상실"
+     },
+     {
+      "when": "D+2일",
+      "t": 62,
+      "mode": "withdraw",
+      "from_ref": "RV1",
+      "target_ref": "T1",
+      "axis_xy": [
+       [
+        70,
+        105
+       ],
+       [
+        60,
+        105
+       ],
+       [
+        40,
+        110
+       ]
+      ],
+      "note": "제15연대 역습으로 낙동강 서쪽으로 격퇴"
+     }
+    ]
+   },
+   {
+    "group": "E2",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 6,
+      "mode": "attack",
+      "from_ref": "X1",
+      "target_ref": "RD2",
+      "axis_xy": [
+       [
+        30,
+        105
+       ],
+       [
+        60,
+        105
+       ],
+       [
+        78,
+        100
+       ],
+       [
+        95,
+        95
+       ]
+      ],
+      "note": "수중교로 도하한 전차가 보병 지원"
+     },
+     {
+      "when": "D+1일",
+      "t": 40,
+      "mode": "withdraw",
+      "from_ref": "RD2",
+      "axis_xy": [
+       [
+        95,
+        95
+       ],
+       [
+        78,
+        100
+       ],
+       [
+        60,
+        105
+       ]
+      ],
+      "note": "제12연대 대전차특공조에 전차 4대 파괴·1대 노획"
+     }
+    ]
+   },
+   {
+    "group": "E4",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "mode": "attack",
+      "from_ref": "RV1",
+      "target_ref": "RV2",
+      "axis_xy": [
+       [
+        35,
+        185
+       ],
+       [
+        62,
+        185
+       ],
+       [
+        85,
+        180
+       ]
+      ],
+      "note": "전차와 함께 제11연대 정면 도하, 전차 4대 피격"
+     },
+     {
+      "when": "D+1일",
+      "t": 30,
+      "mode": "attack",
+      "target_ref": "RV2",
+      "axis_xy": [
+       [
+        85,
+        180
+       ],
+       [
+        95,
+        178
+       ]
+      ],
+      "note": "해평천 접근 중 화력과 대전차특공대에 전차 5대 피격, 저지됨"
+     }
+    ]
+   }
+  ],
+  "reinforcements_actual": [
+   {
+    "id": "R1",
+    "unit": "제12연대(-)",
+    "entry_when": "D+1일 새벽",
+    "entry_t": 28,
+    "from_ref": "B3",
+    "note": "사단 예비로 제15연대 지역에 투입(시각 추정)"
+   }
+  ],
+  "friendly_actual": [
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D일 새벽",
+      "t": 5,
+      "verb": "방어",
+      "ref": "H154",
+      "text": "도섭장과 154고지에서 도하를 저지했으나 154고지를 상실"
+     }
+    ]
+   },
+   {
+    "group": "G4",
+    "actions": [
+     {
+      "when": "D일 주간",
+      "t": 12,
+      "verb": "차단",
+      "ref": "CM8",
+      "text": "154고지 동측에서 다부동 도로의 적을 차단"
+     }
+    ]
+   },
+   {
+    "group": "A2",
+    "actions": [
+     {
+      "when": "D+1일",
+      "t": 32,
+      "verb": "역습",
+      "ref": "H154",
+      "text": "유엔 공군 지원 아래 154고지로 역습해 탈환"
+     },
+     {
+      "when": "D+1일",
+      "t": 40,
+      "verb": "격멸",
+      "ref": "CM8",
+      "text": "대전차특공조가 적 전차 4대 파괴, 1대 노획"
+     }
+    ]
+   },
+   {
+    "group": "A1",
+    "actions": [
+     {
+      "when": "D일",
+      "t": 10,
+      "verb": "철수",
+      "ref": "RV2",
+      "text": "항공 지원으로 전차 4대 파괴 후 해평천으로 철수"
+     },
+     {
+      "when": "D+1일",
+      "t": 30,
+      "verb": "방어",
+      "ref": "RV2",
+      "text": "화력 집중과 대전차특공대로 전차 5대 파괴, 진지 유지"
+     }
+    ]
+   },
+   {
+    "group": "G2",
+    "actions": [
+     {
+      "when": "D+2일",
+      "t": 56,
+      "verb": "역습",
+      "ref": "X1",
+      "text": "연대 역습에 가담해 적을 강 서쪽으로 격퇴"
+     }
+    ]
+   },
+   {
+    "group": "G1",
+    "actions": [
+     {
+      "when": "D+2일",
+      "t": 56,
+      "verb": "역습",
+      "ref": "X1",
+      "text": "154고지에서 도섭장 방향 역습, 적을 낙동강 서쪽으로 격퇴"
+     }
+    ]
+   }
+  ],
+  "environment_actual": [
+   {
+    "when": "D일~D+2일 주간",
+    "t": 6,
+    "kind": "air",
+    "note": "유엔 공군 근접지원, 전차 파괴와 154고지 역습 지원"
+   },
+   {
+    "when": "D일~D+2일",
+    "t": 4,
+    "kind": "weather",
+    "note": "혹서와 가뭄으로 낙동강 대부분 도섭 가능"
+   }
+  ],
+  "historical_result": {
+   "friendly": "제15연대(제12연대(-) 증원)",
+   "enemy": "적 제15사단 예하 1개 연대와 전차",
+   "terrain_held": [
+    "H154",
+    "CM3",
+    "CM4"
+   ],
+   "end_state_achieved": "yes",
+   "losses": "양측 인원 손실 미상. 제15연대 지역에서 적 전차 4대 파괴·1대 노획, 제11연대 지역에서 전차 9대 파괴",
+   "duration_h": 68
+  },
+  "outcome_metrics": {
+   "status_at_horizon": "154고지 확보, 도하한 적은 낙동강 서쪽으로 격퇴, 강안 방어선 회복",
+   "terrain_held_at_horizon": [
+    "H154",
+    "CM2",
+    "CM3",
+    "CM4"
+   ],
+   "key_times": [
+    {
+     "t": 5,
+     "text": "적 154고지 정면 도하공격 개시",
+     "ref": "X1"
+    },
+    {
+     "t": 10,
+     "text": "154고지 상실, 방어선 돌파 위기(추정)",
+     "ref": "H154"
+    },
+    {
+     "t": 28,
+     "text": "제12연대(-) 투입(추정)"
+    },
+    {
+     "t": 36,
+     "text": "154고지 탈환",
+     "ref": "H154"
+    },
+    {
+     "t": 40,
+     "text": "적 전차 4대 파괴·1대 노획",
+     "ref": "CM8"
+    },
+    {
+     "t": 62,
+     "text": "적을 낙동강 서쪽으로 격퇴",
+     "ref": "RV1"
+    }
+   ]
+  }
+ },
+ "schema": "reduced-opord/0.6",
+ "id": "kb1_085",
+ "aliases_extra": {
+  "위천 하구": "지점 1'"
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}
