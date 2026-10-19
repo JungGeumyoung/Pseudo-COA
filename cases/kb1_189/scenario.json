@@ -1,0 +1,740 @@
+{
+ "id": "kb1_189",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 06:00 (H시)",
+  "start_t": 6,
+  "horizon_h": 72,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제1대대와 프랑스대대(-) 손실이 모두 0.7 초과(아군 공격 전투력 30% 미만)",
+    "group": "G1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "프랑스대대(-) 손실 0.7 초과",
+      "group": "G2",
+      "fraction": 0.7
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "text": "851고지 적 대대와 북쪽 대대 손실이 모두 0.7 초과(적 방어 전투력 30% 미만)",
+    "group": "E1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "851고지 북쪽 적 대대 손실 0.7 초과",
+      "group": "E2",
+      "fraction": 0.7
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제12사단은 851고지와 그 북쪽 종심의 유개 벙커 진지를 고수하고 박격포 화력으로 능선상의 공격 부대를 소모시킨다. 야간에 북쪽 대대로 851고지 일대에 역습하고, 적 상급부대는 중공군 제204사단을 문등리 방면으로 투입해 북한군 제5군단을 교대하고 단장의 능선 북단을 증원한다. 진지 유지가 불가능하면 961고지 방면으로 철수한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "851고지 정상과 남쪽 능선의 벙커 진지를 고수한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         112.5,
+         120.5
+        ],
+        [
+         114,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "H시부터"
+       },
+       "basis": "서술: 벙커 속에서 완강히 저항하는 적"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 851고지 북쪽 진지를 거쳐 961고지 방면으로 철수한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         112.5,
+         120.5
+        ],
+        [
+         110,
+         126
+        ],
+        [
+         107,
+         133
+        ],
+        [
+         107,
+         145
+        ],
+        [
+         106.5,
+         155
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.65,
+        "text": "851고지 적 대대 손실 0.65 초과"
+       },
+       "basis": "추정. 아틀라스: 북한군이 분산도주, 지혜산 방면으로 물러남"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "text": "야간에 851고지 북쪽 진지에서 851고지 남쪽 능선으로 역습한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         109,
+         128
+        ],
+        [
+         111,
+         124
+        ],
+        [
+         112.5,
+         120.5
+        ],
+        [
+         114,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       },
+       "basis": "추정. 북한군의 야간 역습 관행(제1차 공격 때 931고지 역습)"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 851고지 목표에 들어오면 즉시 역습한다.",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         110,
+         126
+        ],
+        [
+         112.5,
+         120.5
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 851고지 목표 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 6
+       },
+       "basis": "추정. 종심 진지의 역습 대기 부대"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 961고지 방면으로 철수한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         107,
+         133
+        ],
+        [
+         107,
+         145
+        ],
+        [
+         106.5,
+         155
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "851고지 북쪽 적 대대 손실 0.6 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "850고지와 851고지 남쪽 능선의 공격 부대에 박격포 사격을 집중한다.",
+       "objective_ref": "H850",
+       "axis_xy": [
+        [
+         106,
+         150
+        ],
+        [
+         116,
+         113
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "H시부터"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 12
+       },
+       "basis": "서술: 일일 평균 1,000여 발의 박격포 사격, 손실의 85%"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 961고지 북쪽으로 진지를 물린다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         106,
+         150
+        ],
+        [
+         106,
+         160
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E5",
+        "fraction": 0.5,
+        "text": "적 포병·박격포 부대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "야간에 문등리에서 석사리를 거쳐 851고지 서측으로 증원한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         85.5,
+         142
+        ],
+        [
+         90,
+         137
+        ],
+        [
+         94,
+         133
+        ],
+        [
+         97.5,
+         129.5
+        ],
+        [
+         104,
+         125
+        ],
+        [
+         110,
+         121
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 20,
+        "text": "D일 20:00"
+       },
+       "basis": "서술: 북한군이 문등리 계곡을 통해 병력을 계속 증원"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 문등리 북쪽으로 철수한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         94,
+         133
+        ],
+        [
+         85.5,
+         142
+        ],
+        [
+         85,
+         160
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.5,
+        "text": "적 제6사단 잔존 부대 손실 0.5 초과"
+       },
+       "basis": "추정. 아틀라스: 전차 진출 후 북한군 분산도주"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "사태리 북쪽과 동쪽 진지를 고수한다.",
+       "objective_ref": "T_ST",
+       "axis_xy": [
+        [
+         143,
+         140
+        ],
+        [
+         144.5,
+         117
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "H시부터"
+       },
+       "basis": "상황도: 사태리 북동·북쪽·동쪽 적 진지"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 사태리에 들어오면 사태리로 역습한다.",
+       "objective_ref": "BA1",
+       "axis_xy": [
+        [
+         143,
+         140
+        ],
+        [
+         144,
+         130
+        ],
+        [
+         144.5,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "BA1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 사태리 차단지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 12
+       },
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 사태리 북쪽 종심으로 철수한다.",
+       "objective_ref": "T_ST",
+       "axis_xy": [
+        [
+         143,
+         140
+        ],
+        [
+         141.5,
+         149
+        ],
+        [
+         141,
+         165
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "사태리 일대 적 연대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "적 상급부대 명령으로 문등리 북쪽에서 문등리 계곡을 따라 남하해 북한군 제5군단을 교대한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         90,
+         180
+        ],
+        [
+         86,
+         170
+        ],
+        [
+         85,
+         160
+        ],
+        [
+         85.5,
+         142
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 12,
+        "text": "D일 12:00"
+       },
+       "basis": "아틀라스: D일 중공군 제68군이 북한군 제5군단을 교대해 제204사단 투입. 시각은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "이어서 석사리를 거쳐 851고지 서측으로 공격한다.",
+       "objective_ref": "H851",
+       "axis_xy": [
+        [
+         85.5,
+         142
+        ],
+        [
+         94,
+         133
+        ],
+        [
+         97.5,
+         129.5
+        ],
+        [
+         104,
+         125
+        ],
+        [
+         110,
+         121
+        ]
+       ],
+       "basis": "추정. 증원 목적이 단장의 능선 북단 유지"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 문등리 북쪽으로 철수한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         94,
+         133
+        ],
+        [
+         85.5,
+         142
+        ],
+        [
+         86,
+         170
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.4,
+        "text": "중공군 제204사단 선두 연대 손실 0.4 초과"
+       },
+       "basis": "추정. 아틀라스: 전차대대가 하심포에서 중공군 증원을 차단"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "중공군 제204사단 후속 연대는 선두 연대를 따라 문등리 북쪽 하심포 일대로 남하한다.",
+       "objective_ref": "T_MD",
+       "axis_xy": [
+        [
+         88,
+         195
+        ],
+        [
+         87,
+         185
+        ],
+        [
+         86,
+         175
+        ],
+        [
+         85,
+         165
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 24,
+        "text": "D+1일 00:00"
+       },
+       "basis": "추정. 사단 단위 교대 투입"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 문등리 남쪽 고지에 있으면 그 고지로 역습한다.",
+       "objective_ref": "H_MDS",
+       "axis_xy": [
+        [
+         85,
+         165
+        ],
+        [
+         85.5,
+         142
+        ],
+        [
+         94,
+         133
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H_MDS",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 문등리 남쪽 고지에 있음"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "H3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "text": "중공군 제202사단 1개 연대는 961고지 북쪽으로 남하해 851고지 종심을 증원한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         118,
+         190
+        ],
+        [
+         114,
+         175
+        ],
+        [
+         108,
+         162
+        ],
+        [
+         106.5,
+         155
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 30,
+        "text": "D+1일 06:00"
+       },
+       "basis": "아틀라스: 제202사단 1개 연대 투입. 시각과 축선은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "이어서 961고지 일대를 고수한다.",
+       "objective_ref": "H961",
+       "axis_xy": [
+        [
+         106.5,
+         155
+        ]
+       ],
+       "basis": "추정. 북한군 철수 엄호"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제204사단 1개 연대(선두)",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      90,
+      180
+     ],
+     "note": "문등리 북쪽 약 4km 하심포 북쪽 접근로(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제204사단"
+    ]
+   },
+   {
+    "id": "H2",
+    "unit": "중공군 제204사단 1개 연대(후속)",
+    "alias": "적 연대 4",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      88,
+      195
+     ],
+     "note": "문등리 계곡 북쪽 종심(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제204사단"
+    ]
+   },
+   {
+    "id": "H3",
+    "unit": "중공군 제202사단 1개 연대",
+    "alias": "적 연대 5",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "position": {
+     "xy": [
+      118,
+      190
+     ],
+     "note": "961고지 북쪽 종심(추정)"
+    },
+    "other_names": [
+     "중공군 제68군 제202사단 1개 연대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. H시 직후 시야 제한"
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능. 능선 숲으로 지상 관측 제한"
+   },
+   {
+    "when": "D일 18:00",
+    "t": 18,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 18:00",
+    "t": 42,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 07:00",
+    "t": 55,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 18:00",
+    "t": 66,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   }
+  ]
+ }
+}

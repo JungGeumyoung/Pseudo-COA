@@ -1,0 +1,158 @@
+{
+ "id": "kb2_026",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-04-07",
+   "end_date": "1953-04-09",
+   "d_day": "1953-04-07",
+   "order_time": "1953-04-06 22:00 (D-1일 22:00)",
+   "text": "구간 2: 689고지를 잃은 뒤 제18연대가 역습부대(제2중대+수색중대)로 1차 역습을 하고 제3대대가 이어서 2~5차 역습으로 고지를 확보해 제2대대 제5중대에 방어를 넘긴 국면",
+   "why": "구간 지정 2를 따랐다. 연대가 역습을 계획하고 실시해 고지 확보와 인계까지 마친 국면이라 참조 사례로 알맞다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제18연대로 했다. 제18연대는 689고지를 포함한 사단 우측 작전지역을 맡았고 역습과 인계를 연대장이 지휘했다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "4월 7~8일 고지를 네 차례 탈환했다가 적 역습으로 잃었으나 제3대대 3개 중대 병진공격으로 고지를 차지하고 적 약 160명을 살상했다. 4월 9일 저녁 적 기습을 격퇴하고 제2대대 제5중대에 인계를 마쳤다. 축차 공격으로 손실이 컸다."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 작전지역 남서단이다. 689고지를 (95,118), 973고지를 그 남쪽 약 3km에 두고 서술의 상대 위치로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_026_텍사스고지_689고지_전투",
+  "title": "텍사스고지(689고지) 전투",
+  "dates": "1953. 4. 2.~12.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '텍사스고지(689고지) 전투' (pdf 111쪽)",
+  "pdf_page": 111,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 10,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "중대·소대 단위로 축차 투입해 탈환과 상실을 반복한 뒤, 사단장이 1개 대대를 배속해 대대 규모 최종공격으로 전환",
+    "alternative": "첫 상실 직후부터 대대 이상 규모를 집중 투입하고, 탈환 후 역습에 대비한 병력을 고지에 유지",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "사단장은 병력을 축차 투입해서는 목표를 완전히 탈환할수 없고 병력손실만 초래한다는 판단에 따라 급기야 최종공격을 결정하였다."
+   },
+   {
+    "decision": "제3대대가 서쪽·남쪽 2개 중대로 공격(4차)해 탈환 후 반격에 후퇴, 이후 3개 중대 병진공격(5차)으로 확보",
+    "alternative": "4차 공격부터 3개 중대를 병진 투입",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "탈환 직후 고지 방어를 제5중대에서 제6중대로 인계, 제6중대가 중공군 2개 중대 공격에 고지를 상실",
+    "alternative": "인계 시점을 늦추거나 고지에 중대 이상을 증강 배치해 2개 중대 규모 역습에 대비",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 4월 2일~5일: 제2대대 7중대 1소대의 전초 방어와 동굴거점 파괴, 고지 상실(방어 국면). ② 4월 7일~9일: 제3대대 주도의 2~5차 역습과 고지 확보, 제2대대 5중대로 인계(역습 국면, 참조 사례로 가장 적합). ③ 4월 10일~12일: 제5·6중대 방어와 상실, 수색중대 투입, 제23연대 1개 대대 배속 후 제1대대 주공의 최종공격.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 2.0624,
+   "duration_s": 623.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 10,
+     "output_tokens": 65836,
+     "cache_read_input_tokens": 182016,
+     "cache_creation_input_tokens": 52293
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7292,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17755
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [
+    {
+     "id": "E:H1[2]",
+     "verdict": "time_copied",
+     "reason": "D+2일 19:00은 실제 경과의 '인계 중 저녁 기습' 시각을 그대로 베낀 것이며 야간선호라는 추정만으로는 고정 계획 시각으로 정당화되지 않는다",
+     "fix": "고정 시각 대신 제5중대의 후속인수(O:G3[1]) 직후라는 '이어서' 관계나 인수 시점의 전투력 조건으로 바꾼다"
+    },
+    {
+     "id": "O:G2[1]",
+     "verdict": "hidden_condition",
+     "reason": "basis는 적 2개 중대 이상의 역습이 역습부대를 밀어내는 위험을 말하는데 when은 아직 투입되지 않은 역습부대 자신의 손실비율을 조건으로 걸어 트리거 논리가 맞지 않는다",
+     "fix": "조건을 '적 중대 이상이 OBJ1 안에 있음' 같은 적 전투력(지역 내 규모) 조건으로 바꾼다"
+    }
+   ],
+   "cost_usd": 0.055663199999999996
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [
+   "friendly_actual: 사단 포병·항공"
+  ],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

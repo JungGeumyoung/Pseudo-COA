@@ -1,0 +1,559 @@
+{
+ "id": "kb2_035",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 18:00",
+  "start_t": 18,
+  "horizon_h": 90,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "중공군 제19연대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대의 '작은 승리를 모은다'는 방침에 따라 적 제7사단은 D일 야간 전초선 전역에 공격준비사격 후 제20연대 1개 대대로 마이크고지·퀸고지를 견제하고 제19연대로 제1고지·제3고지·박고지를 탈취한다. 이어 박고지를 반복 반격으로 확보하고, 2제대 대대로 아군 역습을 격퇴한 뒤 D+2일 야간 예비 2개 대대로 퀸고지를 탈취한다. 임진강 서안에서는 적 제1사단이 양공으로 제11연대를 고착한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         110,
+         165
+        ],
+        [
+         105,
+         135
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "text": "D일 20:00 마이크고지·퀸고지·제3고지·박고지·제1고지에 공격준비사격을 한다.",
+       "basis": "서술: D일 오후 8시 강력한 포격 후 전면 공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 20,
+        "text": "D일 20:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         110,
+         165
+        ],
+        [
+         105,
+         135
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "text": "아군이 박고지에 돌입하면 박고지 정상에 포격을 집중한다.",
+       "basis": "서술: 탈환 직후 박고지 정상 포격 집중",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 박고지 안에 있음"
+       },
+       "repeat": {
+        "max": 8,
+        "interval_h": 4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         122,
+         134
+        ],
+        [
+         118,
+         128
+        ],
+        [
+         115,
+         123
+        ],
+        [
+         112,
+         120
+        ]
+       ],
+       "text": "D일 20:30 마이크고지와 퀸고지를 견제한다.",
+       "basis": "서술: 1개 대대로 마이크고지·퀸고지 견제",
+       "start": {
+        "type": "time_elapsed",
+        "value": 20.5,
+        "text": "D일 20:30"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T19",
+       "axis_xy": [
+        [
+         115,
+         123
+        ],
+        [
+         118,
+         130
+        ],
+        [
+         122,
+         136
+        ],
+        [
+         115,
+         145
+        ]
+       ],
+       "text": "손실이 커지면 역곡천 북쪽 주진지로 철수한다.",
+       "basis": "추정: 제7중대 저항과 사단 포격에 격퇴",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.3,
+        "text": "견제 대대 손실 0.3 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         104,
+         126
+        ],
+        [
+         106,
+         120
+        ],
+        [
+         107,
+         113
+        ]
+       ],
+       "text": "D일 20:30 제3고지와 제1고지를 동시에 공격한다.",
+       "basis": "서술: 1개 연대로 제3고지·박고지·제1고지 공격",
+       "start": {
+        "type": "time_elapsed",
+        "value": 20.5,
+        "text": "D일 20:30"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         94,
+         104
+        ],
+        [
+         97,
+         107
+        ],
+        [
+         100,
+         108
+        ],
+        [
+         107,
+         113
+        ],
+        [
+         103,
+         110
+        ]
+       ],
+       "text": "이어서 박고지를 세 방향에서 공격한다.",
+       "basis": "서술: 박고지 세 방향 공격"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         98,
+         118
+        ],
+        [
+         99,
+         113
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "text": "아군이 박고지에 돌입하면 대대 규모로 반격한다.",
+       "basis": "서술: 탈환 때마다 대대 규모 반격, 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 박고지 안에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 4
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         105,
+         146
+        ],
+        [
+         103,
+         135
+        ],
+        [
+         100,
+         124
+        ],
+        [
+         99,
+         115
+        ],
+        [
+         100,
+         108
+        ]
+       ],
+       "text": "제19연대 손실이 커지면 박고지·제3고지 확보를 인수한다.",
+       "basis": "추정: 2제대로 제1제대 교대·증원",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.4,
+        "text": "제19연대 손실 0.4 초과"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         106,
+         128
+        ],
+        [
+         107,
+         120
+        ],
+        [
+         107,
+         113
+        ]
+       ],
+       "text": "아군이 제3고지에 돌입하면 반격한다.",
+       "basis": "추정: 제12연대 제2대대 탈환 후 반격",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T3",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 제3고지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T19",
+       "axis_xy": [
+        [
+         100,
+         108
+        ],
+        [
+         100,
+         120
+        ],
+        [
+         103,
+         135
+        ],
+        [
+         105,
+         146
+        ]
+       ],
+       "text": "손실이 커지면 주진지로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.6,
+        "text": "제20연대(-) 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         118,
+         150
+        ],
+        [
+         120,
+         140
+        ],
+        [
+         118,
+         130
+        ],
+        [
+         115,
+         124
+        ],
+        [
+         112,
+         120
+        ]
+       ],
+       "text": "D+2일 22:00 2개 대대로 퀸고지를 공격한다.",
+       "basis": "서술: D+3일 01:00 이전 2개 대대 퀸고지 공격, 개시 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 70,
+        "text": "D+2일 22:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         112,
+         120
+        ]
+       ],
+       "text": "이어서 퀸고지를 확보한다.",
+       "basis": "서술: 퀸고지 억류·점령"
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         60,
+         140
+        ],
+        [
+         61,
+         128
+        ],
+        [
+         62,
+         118
+        ]
+       ],
+       "text": "D일 20:00 리틀 노리고지와 버블고지를 양공으로 견제한다.",
+       "basis": "서술: 제11연대 정면 양공",
+       "start": {
+        "type": "time_elapsed",
+        "value": 20,
+        "text": "D일 20:00"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E5",
+    "unit": "중공군 제7사단 예비 2개 대대",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 100,
+    "personnel": 1600,
+    "position": {
+     "xy": [
+      118,
+      152
+     ],
+     "ref": "T19",
+     "note": "임진강 만곡부 적 주진지 후방, 퀸고지 공격용 2개 대대"
+    },
+    "other_names": [
+     "퀸고지 공격 2개 대대"
+    ]
+   },
+   {
+    "id": "E6",
+    "unit": "중공군 제1군 제1사단",
+    "alias": "적 사단 1",
+    "nation": "중국",
+    "echelon": "사단",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 10000,
+    "position": {
+     "xy": [
+      50,
+      140
+     ],
+     "note": "임진강 서안 제11연대 정면"
+    },
+    "other_names": [
+     "중공군 제1사단"
+    ]
+   },
+   {
+    "id": "E7",
+    "unit": "중공군 제1군 제2사단",
+    "alias": "적 사단 2",
+    "nation": "중국",
+    "echelon": "사단",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 10000,
+    "position": {
+     "xy": [
+      100,
+      185
+     ],
+     "note": "적 상급부대 예비, 역곡천 북방 후방"
+    },
+    "other_names": [
+     "중공군 제2사단"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "D일 야간(일몰 약 19:55~일출 약 05:10)"
+   },
+   {
+    "when": "D+1일 20:00",
+    "t": 44,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "D+1일 야간"
+   },
+   {
+    "when": "D+2일 20:00",
+    "t": 68,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "D+2일 야간"
+   },
+   {
+    "when": "D+3일 20:00",
+    "t": 92,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "D+3일 야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+4일 06:00",
+    "t": 102,
+    "kind": "air_window",
+    "duration_h": 6,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ }
+}

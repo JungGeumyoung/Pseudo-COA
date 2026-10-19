@@ -1,0 +1,143 @@
+{
+ "id": "kb1_136",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-11-04",
+   "end_date": "1950-11-07",
+   "d_day": "1950-11-05",
+   "order_time": "D-1일 08:00 (1950-11-04 08:00)",
+   "text": "제8연대가 제3연대와 교대해 비호산 주봉 방어를 맡은 때부터 11월 5일 새벽 중공군 공격과 주봉 상실, 11월 6일 주봉 탈취까지",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 명령 시점은 제8연대가 비호산 작전지역을 처음 맡아 결심한 11월 4일 오전 교대 때다. 11월 2~3일에는 제8연대가 사단 예비였다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제8연대를 쓴다. 구간 시작 때 제8연대는 제3연대와 교대해 비호산 주봉 작전지역을 맡았다. 주봉 상실과 탈취의 주체도 제8연대다. 제3연대의 역습과 제5연대의 535고지 방어는 상급·인접 부대 행동으로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "11월 5일 새벽 535고지가 돌파되고 제8연대 제2대대가 주봉을 잃었다. 11월 6일 08:00 제8연대가 북쪽에서 주봉을 공격해 3시간 만에 탈취했다. 사단은 진지를 회복해 방어에 성공했으나 연대는 한때 주봉을 잃었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 150,
+   "origin": "(0,0)은 비호산 주봉 서쪽 16.5km·남쪽 16.5km 지점이며 주봉은 (110,110)이다. 서술의 상대 위치(개천 동쪽, 군우리 북쪽, 535고지는 남동쪽 2km)로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_136_개천_비호산_전투",
+  "title": "개천-비호산 전투",
+  "dates": "1950. 11. 1.〜7.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '개천-비호산 전투' (pdf 408쪽)",
+  "pdf_page": 408,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "6일 오전 8시 제5연대(남)·제8연대(북)가 고지 남북에서 동시 역습",
+    "alternative": "역습을 하지 않고 후방 진지에서 방어만 지속하거나, 5일처럼 단일 방향으로만 역습",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "2일 제8연대를 용현리에 사단 예비로 보유하고 이후 일선 연대와 교대 운용(교대된 제3연대는 개천에 배치)",
+    "alternative": "3개 연대를 모두 일선에 배치하여 예비 없이 방어",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "5일 제3연대가 포병 화력 지원 하에 미 제9연대와 즉각 합동 역습",
+    "alternative": "즉각 역습을 생략하고 전력을 보존하여 6일 계획 역습에 집중",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1477,
+   "duration_s": 374.0,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 37223,
+     "cache_read_input_tokens": 89274,
+     "cache_creation_input_tokens": 17591
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6407,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 14187
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 25,
+   "flagged": [],
+   "cost_usd": 0.0910992
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

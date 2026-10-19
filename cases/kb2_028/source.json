@@ -1,0 +1,146 @@
+{
+ "id": "kb2_028",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-06-01",
+   "end_date": "1953-06-03",
+   "d_day": "1953-06-01",
+   "order_time": "D일 16:00",
+   "text": "854고지 및 812고지 전투 제1차 전투 초기. 제37연대의 812고지·무명고지 방어, 812고지 피탈, 제1대대 1·2차 역습, 제2대대 3차 역습까지.",
+   "why": "구간 지정 ①(권장). 적 공격 직전 연대 방어 배치에서 시작하며, 812고지 공방과 역습 전체가 연대장 결심 하나로 묶인다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제37연대를 쓴다. 이 연대는 812고지를 중심으로 성내천 북안 작전지역을 맡았다. 구간 시작 때 812고지와 무명고지를 직접 방어했고, 예비 제1대대의 역습도 연대장이 결심했다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "무명고지와 인접 854고지는 지켰다. 812고지는 D일 자정 무렵 잃었고, 제1대대 1차 역습으로 잠시 되찾았다가 다시 잃었다. 2차·3차 역습은 모두 실패했고 사단 역습은 군단 지시로 보류되었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 원점(0,0)은 임의로 정했다. 812고지를 (90,111)에 두고 서술의 상대 위치로 나머지를 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_028_854고지_및_812고지_전투",
+  "title": "854고지 및 812고지 전투",
+  "dates": "1953. 6. 1.~7. 17.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '854고지 및 812고지 전투' (pdf 117쪽)",
+  "pdf_page": 117,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "6월 2일 새벽 1시 812고지를 탈환한 제1대대가 고지를 제3대대 11중대(1개 중대)에 인계",
+    "alternative": "제1대대 주력이 고지에 잔류해 방어를 굳히거나 대대 규모로 인계했다면 2개 중대의 후방차단·반격을 막아 812고지를 유지할 수 있었다",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "6월 3일 제3차 역습을 제7중대와 사단 수색중대의 중대 단위 축차 투입으로 실시",
+    "alternative": "북한군 증원 이전에 대대 규모 이상을 집중해 동시 공격",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "사단장의 제52연대 2대대 배속 및 812고지 역습계획이 군단장 지시로 보류",
+    "alternative": "역습을 실행했다면 812고지 탈환 가능성이 있었다",
+    "effect": "direction",
+    "representable": false,
+    "explicit": true,
+    "quote": "이 역습은 휴전협정 체결이 임박한 시점에서 더이상 피를 흘리거나 공산군을 자극할 필요가 없다는 군단장 화이트(Isac D. White) 중장의 지시로 보류되었다."
+   }
+  ],
+  "segment_suggestion": "① 6. 1.~6. 3. 제37연대의 812고지 방어·피탈·3차 역습(권장 구간) ② 6. 5.~6. 9. 무명고지(쌍룡고지) 피탈과 제52연대의 쌍룡고지·A고지 탈환(6. 7. 연대 재배치가 경계) ③ 7. 16.~7. 17. 제52연대의 쌍룡고지-812고지 능선 방어(제2차 전투)",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1266,
+   "duration_s": 289.1,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 27092,
+     "cache_read_input_tokens": 48856,
+     "cache_creation_input_tokens": 34699
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 8045,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 16677
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 24,
+   "flagged": [],
+   "cost_usd": 0.0580352
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "펀치볼": "지점 1'"
+ }
+}

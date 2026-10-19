@@ -1,0 +1,772 @@
+{
+ "id": "kb2_009",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제11사단 제9연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제9연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제11사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제11사단"
+   ],
+   "higher_mission": "국군 제11사단은 국군 수도사단의 전선을 인수하여 월비산 일대와 주저항선을 방어한다.",
+   "higher_intent": "월비산을 유지해 남강 일대와 고성-통천-원산간 도로를 감제한다. 전초로 적의 공격을 일찍 경고하고 약화시켜 주저항선을 보전한다.",
+   "assigned_task": "제9연대는 국군 수도사단의 주저항선을 인수해 방어한다. 배속된 대전차공격대대와 사단 수색중대로 월비산과 남강 이남에서 전초임무를 수행한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "국군 수도사단",
+     "alias": "인접 사단 1",
+     "side": "후방(전선 인계 후 철수)",
+     "mission": "제9연대에 전선을 인계하고 후방으로 물러난다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      90,
+      30
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "국군 제1군단 좌측 인접 사단",
+     "alias": "인접 사단 2",
+     "side": "좌측(서쪽)",
+     "mission": "제9연대 좌측 지역을 방어한다(추정).",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      25,
+      90
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "국군 제11사단",
+     "text": "D일 18:00부로 수도사단 전선 인수를 마치고 주저항선 일대를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 18,
+      "text": "D일 18:00 전선 인수 완료"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F10"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제11사단 방어지역 전체가 연대 작전지역이다. 서쪽은 좌측 인접 사단과의 전투지경선, 동쪽은 동해 해안이다. 북쪽 전초지역은 남강 이남의 월비산과 구선봉까지이고, 남쪽은 간성 북방 사단 후방지역 경계까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "연대 좌측 전투지경선",
+     "between": [
+      "국군 제11사단 제9연대",
+      "국군 제1군단 좌측 인접 사단"
+     ],
+     "xy": [
+      [
+       40,
+       40
+      ],
+      [
+       40,
+       100
+      ],
+      [
+       45,
+       135
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 후방 경계",
+     "between": [
+      "국군 제11사단 제9연대",
+      "국군 제11사단"
+     ],
+     "xy": [
+      [
+       40,
+       40
+      ],
+      [
+       90,
+       40
+      ],
+      [
+       143,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "U1",
+    "unit": "제9연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(수도사단 진지 인수 중)"
+    }
+   },
+   {
+    "id": "U2",
+    "unit": "제9연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(수도사단 진지 인수 중)"
+    }
+   },
+   {
+    "id": "U3",
+    "unit": "제9연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(수도사단 진지 인수 중)"
+    }
+   },
+   {
+    "id": "U4",
+    "unit": "제11사단 대전차공격대대",
+    "alias": "제4대대",
+    "other_names": [
+     "대전차공격대"
+    ],
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "equipment": "소화기·수류탄 위주, 제3중대는 군단지휘소 경계로 분리",
+    "location": {
+     "note": "전초지역 내"
+    }
+   },
+   {
+    "id": "U5",
+    "unit": "제11사단 수색중대",
+    "alias": "수색중대 1",
+    "other_names": [
+     "사단 수색대"
+    ],
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "location": {
+     "note": "전초지역 내"
+    }
+   },
+   {
+    "id": "U6",
+    "unit": "제11사단 포병",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포(추정)",
+    "location": {
+     "note": "주저항선 후방 포진지",
+     "xy": [
+      95,
+      55
+     ]
+    }
+   },
+   {
+    "id": "U7",
+    "unit": "유엔 함재기",
+    "alias": "항공 1",
+    "echelon": "중대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "동해 해상 항공모함"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "간성 북방 동해안 최북단 산악지대다. 표고 459m의 월비산이 최고봉으로 남강 일대와 고성-통천-원산간 도로를 감제한다. 월비산 남쪽으로 351고지와 339고지가 능선으로 이어지고, 동쪽에 261고지, 북동쪽 감호 북안에 구선봉이 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "월비산",
+     "alias": "고지 A",
+     "other_names": [
+      "459고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      90,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 459,
+     "evidence": "동해안 최북단 표고 459m의 최고봉. 수도사단이 탈취한 진지가 있다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F2",
+     "name": "351고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      88,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 351,
+     "evidence": "월비산에서 물러난 대대가 처음 점령한 고지. 339고지 북쪽 1km.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F3",
+     "name": "339고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      88,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 339,
+     "evidence": "351고지 남쪽 1km.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F4",
+     "name": "261고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      100,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 261,
+     "evidence": "월비산 동쪽 1km.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F5",
+     "name": "208고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      106,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 208,
+     "evidence": "208고지-339고지 선을 이루는 고지.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F6",
+     "name": "37고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      122,
+      126
+     ],
+     "estimated": true,
+     "elevation_m": 37,
+     "evidence": "감호 남쪽 해안 저지. 37고지-208고지 선.",
+     "preparation": "none"
+    },
+    {
+     "id": "F7",
+     "name": "구선봉",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      116,
+      146
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "월비산 북동쪽 3.5km, 감호 북안.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F8",
+     "name": "감호",
+     "alias": "호수 1",
+     "kind": "lake",
+     "xy": [
+      118,
+      137
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "구선봉 남쪽 석호. 수색중대가 남안을 방어한다.",
+     "polygon": [
+      [
+       108,
+       135
+      ],
+      [
+       112,
+       141
+      ],
+      [
+       122,
+       143
+      ],
+      [
+       128,
+       139
+      ],
+      [
+       127,
+       133
+      ],
+      [
+       118,
+       131
+      ],
+      [
+       110,
+       132
+      ]
+     ]
+    },
+    {
+     "id": "F9",
+     "name": "남강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      95,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "월비산 북방을 흘러 동해로 드는 하천. 적 제9사단이 북방에 진출해 있다.",
+     "line": [
+      [
+       20,
+       135
+      ],
+      [
+       60,
+       132
+      ],
+      [
+       90,
+       137
+      ],
+      [
+       110,
+       152
+      ],
+      [
+       125,
+       160
+      ],
+      [
+       136,
+       168
+      ]
+     ]
+    },
+    {
+     "id": "F10",
+     "name": "주저항선 일대",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      92,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "수도사단에서 인수한 주저항선. 위치는 전초 남쪽으로 추정.",
+     "polygon": [
+      [
+       45,
+       76
+      ],
+      [
+       138,
+       80
+      ],
+      [
+       138,
+       94
+      ],
+      [
+       45,
+       90
+      ]
+     ],
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F11",
+     "name": "간성",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      110,
+      8
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "작전지역 남쪽 후방."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "고성-통천-원산간 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       112,
+       8
+      ],
+      [
+       125,
+       40
+      ],
+      [
+       130,
+       80
+      ],
+      [
+       131,
+       110
+      ],
+      [
+       132,
+       130
+      ],
+      [
+       130,
+       150
+      ],
+      [
+       128,
+       165
+      ],
+      [
+       125,
+       190
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "월비산 남쪽 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       92,
+       70
+      ],
+      [
+       90,
+       85
+      ],
+      [
+       88,
+       100
+      ],
+      [
+       88,
+       110
+      ],
+      [
+       90,
+       120
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "남강-월비산 북사면 접근로",
+     "alias": "능선 2",
+     "kind": "trail",
+     "xy": [
+      [
+       85,
+       155
+      ],
+      [
+       86,
+       145
+      ],
+      [
+       87,
+       135
+      ],
+      [
+       88,
+       128
+      ],
+      [
+       90,
+       121
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "감호",
+     "alias": "호수 1",
+     "active": "항상",
+     "polygon": [
+      [
+       108,
+       135
+      ],
+      [
+       112,
+       141
+      ],
+      [
+       122,
+       143
+      ],
+      [
+       128,
+       139
+      ],
+      [
+       127,
+       133
+      ],
+      [
+       118,
+       131
+      ],
+      [
+       110,
+       132
+      ]
+     ]
+    },
+    {
+     "id": "I2",
+     "name": "동해",
+     "alias": "해역 1",
+     "active": "항상",
+     "polygon": [
+      [
+       137,
+       200
+      ],
+      [
+       200,
+       200
+      ],
+      [
+       200,
+       0
+      ],
+      [
+       145,
+       0
+      ],
+      [
+       142,
+       60
+      ],
+      [
+       139,
+       120
+      ],
+      [
+       137,
+       170
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제9사단 월비산 정면 연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 1100,
+    "identified": true,
+    "known_at_start": "제19사단과 교대해 남강 북방에 진출. 월비산 탈취 기도로 판단.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      85,
+      152
+     ],
+     "frontage_m": 2500,
+     "note": "남강 북안 월비산 정면",
+     "polygon": [
+      [
+       70,
+       145
+      ],
+      [
+       100,
+       148
+      ],
+      [
+       100,
+       160
+      ],
+      [
+       70,
+       158
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제9사단 감호 정면 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 1100,
+    "identified": true,
+    "known_at_start": "남강 북방 해안 축에 진출.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      118,
+      168
+     ],
+     "frontage_m": 2000,
+     "note": "남강 북안 해안 도로 일대",
+     "polygon": [
+      [
+       108,
+       162
+      ],
+      [
+       130,
+       166
+      ],
+      [
+       128,
+       176
+      ],
+      [
+       106,
+       174
+      ]
+     ]
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제9사단 예비 연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 1100,
+    "identified": true,
+    "known_at_start": "사단 후방 위치 미상, 남강 북방 종심으로 추정.",
+    "posture": "예비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      100,
+      182
+     ],
+     "frontage_m": 2000,
+     "note": "남강 북방 종심(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제9사단 포병",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 320,
+    "equipment": "76mm 직사포 등 각종 포",
+    "identified": true,
+    "known_at_start": "각종 포 보유, 보급 양호.",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      92,
+      178
+     ],
+     "note": "남강 북방 포진지(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 18:00",
+   "light": "dusk",
+   "notes": "초겨울, 전선 소강 상태. 적은 월동준비와 보급을 마쳐 사기가 양호하다. 아군은 대부분 신병이고, 1개 연대가 사단 정면을, 1개 대대가 연대 전초를 맡아 전력이 엷다."
+  }
+ }
+}

@@ -1,0 +1,909 @@
+{
+ "id": "kb1_102",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "미 제35연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제35연대",
+    "미 제35보병연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제25사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제25사단"
+   ],
+   "higher_mission": "미 제25사단은 남지교에서 십이당산, 전투산, 필봉을 거쳐 진동리 해안에 이르는 48km 방어선을 방어하여 북한군의 마산 점령과 부산 방면 진출을 저지한다.",
+   "higher_intent": "방어선을 유지하면서 사단 포병과 공중지원으로 북한군에게 소모를 강요하고, 돌파되는 곳은 사단 예비 미 제27연대로 즉시 역습해 회복한다.",
+   "assigned_task": "남강변과 검암리 일대에서 방어하여 북한군 제7사단의 남강 도하와 북한군 제6사단의 진주-검암리-마산 도로 돌파를 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "미 제24연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(남측)",
+     "mission": "함안 정면과 전투산·필봉 일대 산악지대를 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      95,
+      95
+     ],
+     "other_names": [
+      "제24연대"
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "미 제5연대전투단",
+     "alias": "인접 연대 2",
+     "side": "좌측 후방(남측)",
+     "mission": "서북산 남쪽에서 진동리 해안까지 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      100,
+      45
+     ],
+     "other_names": [
+      "제5연대전투단"
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "미 제27연대(-)",
+     "alias": "인접 연대 3",
+     "side": "후방(사단 예비)",
+     "mission": "마산에서 사단 예비로 있다가 돌파 지역에 역습한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      170,
+      40
+     ],
+     "other_names": [
+      "제27연대"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A3",
+     "text": "적 대대 이상이 함안 지역에 있으면 미 제27연대(-)는 함안으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T10",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 함안 지역에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "T10",
+      "axis_xy": [
+       [
+        170,
+        40
+       ],
+       [
+        155,
+        60
+       ],
+       [
+        135,
+        85
+       ],
+       [
+        120,
+        100
+       ],
+       [
+        110,
+        110
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "미 제24연대는 전투산과 필봉 일대를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 18,
+      "text": "D일 18:00 현재 진지 유지"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T5"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "미 제5연대전투단은 서북산 남쪽에서 진동리 해안까지를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 18,
+      "text": "D일 18:00 현재 진지 유지"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T7"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "미 제35연대 작전지역은 동북쪽 남지교와 남강·낙동강 합류점에서 남강 남안을 따라 서쪽 십이당산까지, 그리고 십이당산에서 검암리 일대 진주-마산 도로 정면까지다. 남쪽 경계는 함안 북쪽을 지나 미 제24연대와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "미 제35연대-미 제24연대 전투지경선",
+     "between": [
+      "미 제35연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       30,
+       112
+      ],
+      [
+       80,
+       110
+      ],
+      [
+       105,
+       116
+      ],
+      [
+       150,
+       116
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "사단 우측 경계(낙동강)",
+     "between": [
+      "미 제35연대",
+      "사단 작전지역 밖"
+     ],
+     "xy": [
+      [
+       178,
+       200
+      ],
+      [
+       182,
+       178
+      ],
+      [
+       195,
+       160
+      ],
+      [
+       200,
+       150
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 전방 경계(남강)",
+     "between": [
+      "미 제35연대",
+      "적 지역"
+     ],
+     "xy": [
+      [
+       20,
+       172
+      ],
+      [
+       60,
+       164
+      ],
+      [
+       100,
+       160
+      ],
+      [
+       140,
+       166
+      ],
+      [
+       170,
+       174
+      ],
+      [
+       182,
+       178
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "미 제35연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(검암리 방면)"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "미 제35연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내(남강변 방면)"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "미 제27연대 제2대대",
+    "alias": "제3대대",
+    "other_names": [
+     "제27연대 제2대대"
+    ],
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "배속",
+    "location": {
+     "note": "마산 사단 예비 지역",
+     "ref": "T11",
+     "xy": [
+      170,
+      40
+     ]
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "사단 전차 1개 중대",
+    "alias": "전차중대",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "location": {
+     "note": "마산 사단 예비 지역",
+     "ref": "T11",
+     "xy": [
+      168,
+      42
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "미 제159포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문(3개 포대)",
+    "location": {
+     "note": "연대 작전지역 후방 포병진지"
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "미 제6포병대대",
+    "alias": "포병대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "105mm 곡사포 12문(2개 포대)",
+    "location": {
+     "note": "연대 작전지역 후방 포병진지"
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "미 제90포병대대 1개 포대",
+    "alias": "포병 포대 1",
+    "echelon": "포대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "155mm 곡사포 6문",
+    "location": {
+     "note": "연대 작전지역 후방 포병진지"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "마산 서북방. 북쪽은 남강이 서에서 동으로 흘러 남지 남쪽에서 낙동강과 합류하고, 그 남쪽은 검암리·함안 일대의 구릉과 진주-마산 도로·철도 회랑이며, 남쪽은 전투산·필봉·서북산의 험준한 산악지대가 진동리 해안까지 이어진다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 200,
+   "features": [
+    {
+     "id": "T1",
+     "name": "남강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      160
+     ],
+     "line": [
+      [
+       20,
+       172
+      ],
+      [
+       60,
+       164
+      ],
+      [
+       100,
+       160
+      ],
+      [
+       140,
+       166
+      ],
+      [
+       170,
+       174
+      ],
+      [
+       182,
+       178
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "낙동강의 지류로 미 제35연대 진지 정면을 흐름"
+    },
+    {
+     "id": "T2",
+     "name": "낙동강",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      188,
+      170
+     ],
+     "line": [
+      [
+       178,
+       200
+      ],
+      [
+       182,
+       178
+      ],
+      [
+       195,
+       160
+      ],
+      [
+       200,
+       150
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 방어선 동북단이 남지교에서 시작"
+    },
+    {
+     "id": "T3",
+     "name": "남지교",
+     "alias": "지점 1",
+     "kind": "bridge",
+     "xy": [
+      180,
+      190
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 방어선의 북단"
+    },
+    {
+     "id": "T4",
+     "name": "십이당산",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      66,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 271,
+     "evidence": "△271, 사단 방어선이 남지교에서 십이당산을 거쳐 남하",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T5",
+     "name": "전투산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      82,
+      93
+     ],
+     "estimated": true,
+     "elevation_m": 665,
+     "evidence": "△665, 미 제24연대 산악 진지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T6",
+     "name": "필봉",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      90,
+      85
+     ],
+     "estimated": true,
+     "elevation_m": 743,
+     "evidence": "△743, 미 제24연대 산악 진지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T7",
+     "name": "서북산",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      92,
+      60
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "미 제5연대전투단 지역 북단"
+    },
+    {
+     "id": "T8",
+     "name": "말굽 고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      90,
+      113
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "검암리 동쪽, 미 제24연대 후방을 내려다보는 고지",
+     "other_names": [
+      "말굽"
+     ]
+    },
+    {
+     "id": "T9",
+     "name": "검암리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      75,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "진주-검암리-마산 도로의 요충, 제1대대 정면"
+    },
+    {
+     "id": "T10",
+     "name": "함안",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      110,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "미 제24연대 제2대대 정면, 마산 접근로 상 요충"
+    },
+    {
+     "id": "T11",
+     "name": "마산",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      170,
+      40
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 예비 위치, 북한군의 최종 목표"
+    },
+    {
+     "id": "T12",
+     "name": "진동리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      120,
+      12
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 방어선 남단 해안"
+    },
+    {
+     "id": "T13",
+     "name": "의령",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      95,
+      192
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "북한군 제7사단 집결지(의령 동북 일대)"
+    },
+    {
+     "id": "T14",
+     "name": "남강 도하지점",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      93,
+      161
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대와 제2대대 간격 정면의 도섭 가능 지점(추정)"
+    },
+    {
+     "id": "T15",
+     "name": "남강 동부 도하지점",
+     "alias": "지점 3",
+     "kind": "crossing",
+     "xy": [
+      145,
+      167
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제2대대 강변진지 정면의 도섭 가능 지점(추정)"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "진주-검암리-마산 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       0,
+       122
+      ],
+      [
+       40,
+       120
+      ],
+      [
+       75,
+       118
+      ],
+      [
+       95,
+       114
+      ],
+      [
+       110,
+       108
+      ],
+      [
+       135,
+       85
+      ],
+      [
+       155,
+       60
+      ],
+      [
+       170,
+       40
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "함안-남지 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       110,
+       108
+      ],
+      [
+       118,
+       122
+      ],
+      [
+       128,
+       138
+      ],
+      [
+       150,
+       158
+      ],
+      [
+       170,
+       178
+      ],
+      [
+       180,
+       190
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "진주-마산 철도",
+     "alias": "도로 3",
+     "kind": "rail",
+     "xy": [
+      [
+       0,
+       116
+      ],
+      [
+       40,
+       115
+      ],
+      [
+       75,
+       113
+      ],
+      [
+       110,
+       104
+      ],
+      [
+       140,
+       78
+      ],
+      [
+       170,
+       38
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "남강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       20,
+       175
+      ],
+      [
+       60,
+       167
+      ],
+      [
+       100,
+       163
+      ],
+      [
+       140,
+       169
+      ],
+      [
+       170,
+       177
+      ],
+      [
+       182,
+       181
+      ],
+      [
+       184,
+       175
+      ],
+      [
+       170,
+       171
+      ],
+      [
+       140,
+       163
+      ],
+      [
+       100,
+       157
+      ],
+      [
+       60,
+       161
+      ],
+      [
+       20,
+       169
+      ]
+     ],
+     "gap_at": [
+      93,
+      161
+     ],
+     "active": "항상"
+    },
+    {
+     "id": "I2",
+     "name": "낙동강",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       176,
+       200
+      ],
+      [
+       180,
+       178
+      ],
+      [
+       193,
+       158
+      ],
+      [
+       200,
+       148
+      ],
+      [
+       200,
+       153
+      ],
+      [
+       197,
+       162
+      ],
+      [
+       185,
+       180
+      ],
+      [
+       181,
+       200
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제7사단 좌측 연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "북한군 제7사단이 의령 동북 일대에 집결해 공격준비 중임을 알고 있었다. 연대 단위 배치는 추정이다.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      90,
+      180
+     ],
+     "frontage_m": 4000,
+     "note": "남강 북안, 제1대대와 제2대대 간격 정면",
+     "ref": "T13"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제7사단 우측 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "북한군 제7사단 집결 사실만 알려졌다. 연대 단위 배치는 추정이다.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      145,
+      180
+     ],
+     "frontage_m": 5000,
+     "note": "남강 북안, 제2대대 강변진지 정면"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제6사단 검암리 축선 연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "identified": false,
+    "known_at_start": "북한군 제6사단이 진주에서 정비와 공격준비를 마쳤음을 알고 있었다.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      35,
+      122
+     ],
+     "frontage_m": 3000,
+     "note": "진주-검암리-마산 도로 서쪽, 제1대대 정면",
+     "ref": "R1"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제6사단 주력",
+    "alias": "적 사단 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 70,
+    "identified": false,
+    "known_at_start": "북한군 제6사단 주력이 진주 방면에서 함안 정면으로 공격할 것으로 판단했다.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      55,
+      100
+     ],
+     "frontage_m": 5000,
+     "note": "미 제24연대 정면, 함안 서측"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 18:00",
+   "light": "dusk",
+   "notes": "8월 하순까지 정면은 소강상태였다. 낮에는 미 제5공군의 근접항공지원이 가능하다. 남강은 일부 지점에서 도섭이 가능하다."
+  }
+ }
+}

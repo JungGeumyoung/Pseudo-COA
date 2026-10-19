@@ -1,0 +1,447 @@
+{
+ "id": "kb1_086",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 04:00",
+  "start_t": 4,
+  "horizon_h": 44,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제21연대 3개 대대의 손실이 모두 0.7 초과",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.7,
+      "text": "제1대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제2대대(-) 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G3",
+      "fraction": 0.7,
+      "text": "제3대대 손실 0.7 초과"
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "group": "EN1",
+    "fraction": 0.7,
+    "text": "북한군 제83연대 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제8사단은 무릉동·수상동 교두보에서 D일 새벽에 공격한다. 제83연대가 개방된 좌측방으로 366고지를 측면 기습해 국군 주저항선을 서쪽에서 말아 올리고, 제81연대가 향로봉을 압박해 탈취한 뒤 5번 도로 축선으로 남진해 의성을 조기에 점령한다.",
+   "groups": [
+    {
+     "group": "EN3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM0",
+       "axis_xy": [
+        [
+         100,
+         197
+        ],
+        [
+         95,
+         160
+        ],
+        [
+         90,
+         132
+        ]
+       ],
+       "text": "D일 04:30부터 연대 주저항선에 공격준비사격을 한다.",
+       "basis": "서술: 공격준비와 함께 제21연대 정면으로 공격 개시. 시각은 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 4.5,
+        "text": "D일 04:30"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         197
+        ],
+        [
+         115,
+         160
+        ],
+        [
+         120,
+         128
+        ]
+       ],
+       "text": "이어서 향로봉에 지원사격을 한다.",
+       "basis": "추정: 366고지 돌파 뒤 향로봉 공격을 지원."
+      }
+     ]
+    },
+    {
+     "group": "EN1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         95,
+         178
+        ],
+        [
+         80,
+         168
+        ],
+        [
+         62,
+         156
+        ],
+        [
+         50,
+         142
+        ],
+        [
+         56,
+         130
+        ],
+        [
+         66,
+         127
+        ]
+       ],
+       "text": "D일 05:00 무릉동에서 개방된 좌측방으로 우회해 366고지를 측면에서 기습한다.",
+       "basis": "서술: 제83연대가 366고지의 제3대대를 측면에서 기습. 개시 05:00은 서술.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         70,
+         128
+        ],
+        [
+         80,
+         131
+        ],
+        [
+         90,
+         132
+        ],
+        [
+         97,
+         132
+        ]
+       ],
+       "text": "이어서 향로봉 서측 능선의 제2대대 진지를 공격한다.",
+       "basis": "서술: 366고지 점령과 동시에 제2대대 진지를 공격해 점령."
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         97,
+         132
+        ],
+        [
+         105,
+         130
+        ],
+        [
+         112,
+         129
+        ],
+        [
+         119,
+         128
+        ]
+       ],
+       "text": "이어서 향로봉을 서쪽에서 공격한다.",
+       "basis": "추정: 좌측이 노출된 향로봉을 측후방에서 압박."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F11",
+       "axis_xy": [
+        [
+         70,
+         130
+        ],
+        [
+         80,
+         150
+        ],
+        [
+         90,
+         166
+        ],
+        [
+         95,
+         178
+        ]
+       ],
+       "text": "손실이 크면 무릉동 교두보로 철수해 재정비한다.",
+       "basis": "추정: 연대 손실 0.5 초과 시 재정비.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "EN1",
+        "fraction": 0.5,
+        "text": "제83연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "EN2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         128,
+         179
+        ],
+        [
+         125,
+         166
+        ],
+        [
+         122,
+         152
+        ],
+        [
+         121,
+         140
+        ]
+       ],
+       "text": "D일 05:00 수상동에서 향로봉 정면을 공격해 제1대대를 고착한다.",
+       "basis": "추정: 제83연대 주공과 동시에 향로봉을 고착.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         121,
+         140
+        ],
+        [
+         121,
+         135
+        ],
+        [
+         120,
+         130
+        ],
+        [
+         120,
+         128
+        ]
+       ],
+       "text": "이어서 향로봉을 공격한다.",
+       "basis": "서술: 향로봉을 점령한 북한군. 반복 공격은 추정.",
+       "repeat": {
+        "max": 3,
+        "interval_h": 3
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F4",
+       "axis_xy": [
+        [
+         120,
+         128
+        ],
+        [
+         130,
+         122
+        ],
+        [
+         140,
+         116
+        ],
+        [
+         148,
+         112
+        ]
+       ],
+       "text": "이어서 261고지와 5번 도로 축선으로 공격한다.",
+       "basis": "서술: D+1일 제10연대 제1대대가 공격받고 261고지로 후퇴."
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         148,
+         112
+        ],
+        [
+         149,
+         105
+        ],
+        [
+         150,
+         97
+        ]
+       ],
+       "text": "이어서 후평동 명성마을 방향으로 추격한다.",
+       "basis": "추정: 5번 도로 축선 남진."
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         95,
+         192
+        ],
+        [
+         92,
+         178
+        ],
+        [
+         82,
+         160
+        ],
+        [
+         72,
+         140
+        ],
+        [
+         70,
+         130
+        ]
+       ],
+       "text": "제83연대 손실이 커지면 낙동강을 건너 366고지 방향으로 증원한다.",
+       "basis": "추정: 적 사단 예비 연대의 투입 문턱.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "EN1",
+        "fraction": 0.3,
+        "text": "제83연대 손실 0.3 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제8사단 제82연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "personnel": 1800,
+    "position": {
+     "xy": [
+      92,
+      194
+     ],
+     "ref": "F18",
+     "note": "낙동강 도하 지점 일대 사단 예비(추정)"
+    },
+    "other_names": [
+     "제82연대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 04:00",
+    "t": 4,
+    "kind": "night",
+    "duration_h": 1.5,
+    "note": "구간 시작 시 야간. 여명 D일 05:30경."
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명."
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 항공 가능 시간대(추정)."
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간."
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명."
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 항공 가능 시간대(추정)."
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 4.5,
+    "note": "야간."
+   }
+  ]
+ }
+}

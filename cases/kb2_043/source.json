@@ -1,0 +1,159 @@
+{
+ "id": "kb2_043",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-07-23",
+   "end_date": "1950-07-25",
+   "d_day": "1950-07-23",
+   "order_time": "1950-07-23 10:00경(추정, 조봉 상실 직후 사단장 지시)",
+   "text": "유곡리 전투 ① 구간: 제6사단 단독 방어. 조봉 상실 뒤 제7연대가 함창에서 점촌 북방으로 들어가 358고지·267고지를 점령하고 3번 도로 축선을 저지한 때부터 유곡리 상실(7월 25일 밤)까지.",
+   "why": "구간 지정 ①을 따랐다. 제7연대가 작전지역을 처음 맡은 시점의 초기 배치 명령을 재구성한다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제6사단 제7연대를 관점으로 했다. 조봉 상실 뒤 3번 도로 축선(358고지-267고지)의 작전지역을 맡아 북한군 제1사단 보전협동부대와 정면으로 맞선 연대이고, 대대 배치(제2대대 358고지, 제1대대 267고지, 제3대대 공평리 예비)가 서술에 남아 있다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "제7연대는 358고지·267고지를 점령해 제2연대의 철수를 엄호했다. 7월 24일 불정산 공격은 우측 제19연대가 밀리면서 중단하고 원위치로 돌아왔다. 7월 25일 수도사단 제1연대가 267고지 방면 공격을 막지 못해 유곡리를 잃었고, 사단은 제7연대·제19연대를 487고지·227고지로 옮겨 3번 도로 차단선을 다시 만들었다. 사단 방어선 자체는 유지되었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 150,
+   "origin": "캔버스 (0,0)은 함창 남서쪽 추정점. 점촌 (110,48), 진남교 (112,135), 문경 (115,178)에 두고 서술의 거리로 추정했다. 20km 넘는 지역을 담으려고 1단위 150m로 바꿨다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_043_유곡리_전투",
+  "title": "유곡리 전투",
+  "dates": "1950. 7. 23.~30.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '유곡리 전투' (pdf 180쪽)",
+  "pdf_page": 180,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "7월 23일 조봉 상실 직후 제2연대를 철수시키고 제7연대를 358고지·267고지에 투입해 3번 도로 축선을 차단",
+    "alternative": "제2연대를 현 진지에 고수시키거나 제7연대를 함창에 계속 예비로 보유",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "7월 25일 조봉 기습 상실 후 예비 제2대대로 즉시 역습",
+    "alternative": "예비를 투입하지 않고 651고지 선에서 방어",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "7월 26일 제1사단을 영강 동측방으로 우회시켜 북한군 제1사단 배후를 공격하고 제6사단이 정면에서 반격",
+    "alternative": "제1사단을 제6사단 방어선 보강에만 사용하는 정면 방어",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 7월 23~25일: 제6사단 단독 방어(조봉 상실·탈환, 제7연대 투입, 유곡리 상실) — 제7연대 또는 제2연대 관점에 적합. ② 7월 26~27일: 제1사단 증원 후 군단 규모 반격. ③ 7월 28~30일: 함창 서북방 제1사단 제13연대 방어. 참조 사례로는 ① 구간 권장.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.5206,
+   "duration_s": 473.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 46920,
+     "cache_read_input_tokens": 93896,
+     "cache_creation_input_tokens": 27084
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 10037,
+     "cache_read_input_tokens": 12750,
+     "cache_creation_input_tokens": 17927
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 38,
+   "flagged": [
+    {
+     "id": "E:E1[0]",
+     "verdict": "disguised_result",
+     "reason": "추격(pursue)은 적이 조봉을 함락시켰다는 전투 결과가 선행되어야 하는데, 그 함락 행동 자체는 입력에 없이 결과만 전제한 채 고정 시각 계획으로 처리했다.",
+     "fix": "조봉 공격·점령 행동을 먼저 계획 항목으로 넣고, 추격은 그 행동에 '이어서'로 연결한다."
+    },
+    {
+     "id": "E:H2[0]",
+     "verdict": "time_copied",
+     "reason": "02:00이라는 정확한 시각이 근거 없이 '추정'으로만 제시되어 있는데 이는 동시간대의 다른 실제 사건(조봉 02:00 기습)과 겹치는 시각으로 실제 기록에서 그대로 옮겨온 것으로 보인다.",
+     "fix": "제13사단 후속 제대의 가은 진입 시각을 전투 전 계획된 이동 속도나 선두 연대 이동에 종속한 '이어서'로 바꾸거나 더 넓은 추정 구간으로 완화한다."
+    }
+   ],
+   "cost_usd": 0.0930392
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "higher_rules[0]: withdraw",
+   "E1[0]: pursue"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

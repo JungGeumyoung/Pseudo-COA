@@ -1,0 +1,829 @@
+{
+ "id": "kb2_017",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제2연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "국군 제6사단 제2연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제6사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제6사단"
+   ],
+   "higher_mission": "제6사단은 미주리선 주저항선을 방어하고 주저항선 북쪽 약 2km에 전초진지를 확보하며 위력수색과 야간잠복으로 적의 공격을 견제한다.",
+   "higher_intent": "적 제91연대의 공격 거점인 A고지와 B고지를 선제 제한공격으로 탈취해 적의 공격 위협을 없앤다. 금성 동남쪽 고지군과 개활지, 고직목리-오리동 일대를 감제해 이후 작전 여건을 만든다.",
+   "assigned_task": "제2연대는 A고지와 B고지를 탈취하고 그곳에 전초진지를 설치한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제19연대",
+     "alias": "인접 연대 1",
+     "side": "우측",
+     "mission": "교암산 동북쪽 575고지 전초진지를 유지하며 적 제103연대와 대치한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      170,
+      85
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제7연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로 사단 후방에 위치한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      110,
+      30
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제19연대는 575고지 전초진지를 계속 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "T17"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "적 대대 이상이 A고지에 있으면 사단은 제7연대 일부를 제2연대 지역에 지원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 A고지 안에 있음"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T1"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제2연대는 사단 좌측 지역을 맡는다. 765고지 일대 주저항선에서 북쪽 금성-373고지-B고지-A고지-고직목리 전초선까지이며, 우측은 교암산 서쪽에서 제19연대와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제2연대-제19연대 전투지경선",
+     "between": [
+      "제2연대",
+      "제19연대"
+     ],
+     "xy": [
+      [
+       148,
+       40
+      ],
+      [
+       148,
+       100
+      ],
+      [
+       150,
+       160
+      ],
+      [
+       152,
+       195
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제2연대 좌측 전투지경선",
+     "between": [
+      "제2연대",
+      "좌측 인접 부대"
+     ],
+     "xy": [
+      [
+       40,
+       40
+      ],
+      [
+       40,
+       120
+      ],
+      [
+       38,
+       195
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선"
+    },
+    "other_names": [
+     "제2연대 제1대대"
+    ]
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "연대 수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "국군 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문(추정)",
+    "location": {
+     "note": "주저항선 후방 포진지",
+     "xy": [
+      100,
+      55
+     ]
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "미 전차소대",
+    "alias": "전차소대 1",
+    "echelon": "소대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "전차 5대(추정)",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "미 자주포병대대",
+    "alias": "포병대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "자주포 18문(추정)",
+    "location": {
+     "note": "사단 지역 후방",
+     "xy": [
+      120,
+      45
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "중부전선 금성천 남쪽, 금성 동남쪽 고지군. 아군 주저항선(미주리선)과 적 주저항선(533고지-옥녀봉-562고지) 사이 약 9km의 전초지대이다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "A고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      115,
+      118
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 전초선 금성-373고지-B고지-A고지-고직목리 순서와 고직목리-오리동 감제 서술로 B고지 동쪽에 두었다.",
+     "preparation": "fortified",
+     "polygon": [
+      [
+       109,
+       113
+      ],
+      [
+       121,
+       113
+      ],
+      [
+       123,
+       120
+      ],
+      [
+       117,
+       125
+      ],
+      [
+       109,
+       123
+      ]
+     ]
+    },
+    {
+     "id": "T2",
+     "name": "B고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      95,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 전초선 순서와 수색중대의 서남쪽 우회, 적의 345고지 방면 도주 서술로 추정했다.",
+     "preparation": "deliberate",
+     "polygon": [
+      [
+       90,
+       116
+      ],
+      [
+       100,
+       116
+      ],
+      [
+       101,
+       123
+      ],
+      [
+       94,
+       125
+      ],
+      [
+       89,
+       122
+      ]
+     ]
+    },
+    {
+     "id": "T3",
+     "name": "373고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      72,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 373,
+     "evidence": "금성과 B고지 사이 적 거점. 남쪽·서남쪽 능선으로 공격했다.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T4",
+     "name": "345고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      90,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 345,
+     "evidence": "B고지에서 쫓긴 적이 도주한 방향으로 B고지 북쪽에 두었다."
+    },
+    {
+     "id": "T5",
+     "name": "364고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      130,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 364,
+     "evidence": "A고지 측방 침투 지점으로 A고지 동남쪽에 두었다."
+    },
+    {
+     "id": "T6",
+     "name": "결사봉",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      100,
+      104
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "B고지와 묶여 아군 전초진지로 쓰인 봉우리. 아군 전초선상에 두었다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T7",
+     "name": "금성",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      55,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 전초선 서단, 수색중대가 금성 동남쪽으로 우회했다."
+    },
+    {
+     "id": "T8",
+     "name": "고직목리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      135,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 전초선상 A고지 동쪽."
+    },
+    {
+     "id": "T9",
+     "name": "경파리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      158,
+      136
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 전초선 동단."
+    },
+    {
+     "id": "T10",
+     "name": "오리동",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      120,
+      145
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "A고지에서 감제되는 고직목리-오리동 일대."
+    },
+    {
+     "id": "T11",
+     "name": "상유리",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      55,
+      175
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제91연대 주저항선 서단."
+    },
+    {
+     "id": "T12",
+     "name": "533고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      85,
+      168
+     ],
+     "estimated": true,
+     "elevation_m": 533,
+     "evidence": "적 제91연대 주저항선.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T13",
+     "name": "옥녀봉",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      112,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제91연대 주저항선.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T14",
+     "name": "562고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      140,
+      166
+     ],
+     "estimated": true,
+     "elevation_m": 562,
+     "evidence": "적 제91연대 주저항선 동단.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T15",
+     "name": "765고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      80,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 765,
+     "evidence": "미주리선 서단, 제2연대 주저항선.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T16",
+     "name": "교암산",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      150,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "미주리선상, 제19연대와의 접합부 부근.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "T17",
+     "name": "575고지",
+     "alias": "고지 L",
+     "kind": "hill",
+     "xy": [
+      165,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 575,
+     "evidence": "교암산 동북쪽 약 2km 제19연대 전초진지.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T18",
+     "name": "금성천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      100,
+      152
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "금성 부근을 흐르는 하천. 하계 도섭 가능으로 보아 장애물로 두지 않았다.",
+     "line": [
+      [
+       20,
+       158
+      ],
+      [
+       55,
+       152
+      ],
+      [
+       90,
+       152
+      ],
+      [
+       130,
+       154
+      ],
+      [
+       180,
+       158
+      ]
+     ]
+    },
+    {
+     "id": "T19",
+     "name": "미주리선",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      110,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "765고지-교암산을 잇는 사단 주저항선.",
+     "line": [
+      [
+       40,
+       82
+      ],
+      [
+       80,
+       82
+      ],
+      [
+       110,
+       80
+      ],
+      [
+       148,
+       80
+      ]
+     ],
+     "preparation": "fortified"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "금성-경파리 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       55,
+       148
+      ],
+      [
+       80,
+       146
+      ],
+      [
+       100,
+       146
+      ],
+      [
+       120,
+       145
+      ],
+      [
+       135,
+       132
+      ],
+      [
+       158,
+       136
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "탄감리-용암리-경파리-금성 도로"
+     ]
+    },
+    {
+     "id": "R2",
+     "name": "연대 보급로",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       100,
+       50
+      ],
+      [
+       98,
+       65
+      ],
+      [
+       97,
+       80
+      ],
+      [
+       98,
+       92
+      ],
+      [
+       100,
+       104
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제91연대 A고지 수비중대",
+    "alias": "적 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 120,
+    "equipment": "기관총, 암벽 화력거점",
+    "identified": true,
+    "known_at_start": "A고지 전초진지 점령 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      115,
+      119
+     ],
+     "ref": "T1",
+     "note": "A고지 정상과 암벽 화력거점"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제91연대 B고지 수비중대",
+    "alias": "적 중대 2",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 100,
+    "personnel": 80,
+    "identified": true,
+    "known_at_start": "B고지 전초진지 점령 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      95,
+      121
+     ],
+     "ref": "T2",
+     "note": "B고지 정상"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제91연대 373고지 수비중대",
+    "alias": "적 중대 3",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 120,
+    "identified": true,
+    "known_at_start": "373고지 거점 점령 확인",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      72,
+      133
+     ],
+     "ref": "T3",
+     "note": "373고지 정상과 남쪽 능선"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 제91연대 주력",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "personnel": 1800,
+    "identified": true,
+    "known_at_start": "상유리-533고지-옥녀봉-562고지 주저항선 점령 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      105,
+      170
+     ],
+     "frontage_m": 9000,
+     "polygon": [
+      [
+       50,
+       165
+      ],
+      [
+       140,
+       160
+      ],
+      [
+       145,
+       175
+      ],
+      [
+       50,
+       182
+      ]
+     ],
+     "note": "상유리-533고지-옥녀봉-562고지 주저항선"
+    },
+    "other_names": [
+     "중공군 제31사단 제91연대"
+    ]
+   },
+   {
+    "id": "E5",
+    "unit": "적 제32포병사단 일부",
+    "alias": "적 포병 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 100,
+    "equipment": "야포·박격포",
+    "identified": true,
+    "known_at_start": "사단 정면 지원 확인",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      110,
+      188
+     ],
+     "note": "적 주저항선 후방 포진지(추정)"
+    }
+   },
+   {
+    "id": "E6",
+    "unit": "적 전차중대",
+    "alias": "적 전차 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "전차 10대",
+    "identified": true,
+    "known_at_start": "사단 정면 전차 10대 확인",
+    "posture": "예비",
+    "position": {
+     "xy": [
+      115,
+      158
+     ],
+     "note": "오리동 북쪽 도로변(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 03:30",
+   "light": "night",
+   "notes": "6월 초여름. 여명 약 05:00. 휴전회담 교착으로 공격은 제한공격이다. 미 공군 근접항공지원은 주간 요청으로 가능하다."
+  }
+ }
+}

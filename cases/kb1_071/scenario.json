@@ -1,0 +1,594 @@
+{
+ "id": "kb1_071",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 09:30",
+  "start_t": 9.5,
+  "horizon_h": 84.5,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.75,
+    "text": "제1대대 누적 손실 0.75 초과"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.8,
+    "text": "북한군 제3사단 제9연대 누적 손실 0.8 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제3사단은 금강 북안에서 도하를 준비한 뒤 야간에 포병과 전차포 엄호 아래 정면·측방으로 동시에 도하하여 제19연대 진지를 우회하고 후방 주보급로를 차단해 연대를 붕괴시킨다. 서측에서는 북한군 제4사단이 공주를 돌파해 금강선 서측방을 위협한다.",
+   "groups": [
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         8,
+         104
+        ],
+        [
+         6,
+         98
+        ],
+        [
+         5,
+         92
+        ],
+        [
+         4,
+         86
+        ]
+       ],
+       "text": "D+1일 주간 공주 정면에서 금강을 도하해 제34연대를 공격한다.",
+       "basis": "서술: 14일 제34연대가 공주에서 북한군 제4사단에게 공격받음. 개시 시각 D+1일 08:00은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 32,
+        "text": "D+1일 08:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         4,
+         86
+        ],
+        [
+         12,
+         86
+        ],
+        [
+         20,
+         88
+        ],
+        [
+         30,
+         89
+        ]
+       ],
+       "text": "이어서 공주 동쪽 강남안 도로를 따라 동쪽으로 전과를 확대한다.",
+       "basis": "추정: 공주 돌파 후 제19연대 서측방 위협"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "CM9",
+       "axis_xy": [
+        [
+         76,
+         121
+        ],
+        [
+         70,
+         110
+        ],
+        [
+         66,
+         100
+        ],
+        [
+         64,
+         94
+        ]
+       ],
+       "text": "D+2일 07:00 일부 병력으로 대평리 서측 강안 도하를 시도한다.",
+       "basis": "서술: 15일 07:00경 제3사단 일부가 서측으로 도하 시도",
+       "start": {
+        "type": "time_elapsed",
+        "value": 55,
+        "text": "D+2일 07:00"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         76,
+         121
+        ],
+        [
+         76,
+         110
+        ],
+        [
+         78,
+         102
+        ],
+        [
+         82,
+         96
+        ],
+        [
+         86,
+         92
+        ]
+       ],
+       "text": "D+2일 야간 주력으로 제1대대 서측방에서 도하해 B중대 지역을 공격한다.",
+       "basis": "서술: 제1대대 서측방에서도 도하. 시각은 정면 도하와 동시로 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 67,
+        "text": "D+2일 19:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "infiltrate",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         86,
+         92
+        ],
+        [
+         88,
+         86
+        ],
+        [
+         92,
+         82
+        ],
+        [
+         96,
+         76
+        ],
+        [
+         100,
+         68
+        ]
+       ],
+       "text": "이어서 연대 후방으로 침투해 대평리-대전 도로를 차단한다.",
+       "basis": "서술: 도하한 적이 후방 깊숙이 침투해 주보급로 차단"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         98,
+         138
+        ],
+        [
+         95,
+         110
+        ],
+        [
+         93,
+         97
+        ]
+       ],
+       "text": "D+2일 저녁 제1대대 진지에 도하 준비사격을 실시한다.",
+       "basis": "서술: 저녁 무렵 제1대대 진지 정면 포격과 함께 야간 도하 개시",
+       "start": {
+        "type": "time_elapsed",
+        "value": 66,
+        "text": "D+2일 18:00"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 2
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "CM2",
+       "axis_xy": [
+        [
+         94,
+         112
+        ],
+        [
+         94,
+         106
+        ]
+       ],
+       "text": "D+2일 저녁부터 금성교 북단에서 직접사격으로 도하를 엄호한다.",
+       "basis": "서술: 전차가 전방 배치, 전차포 엄호 아래 도하",
+       "start": {
+        "type": "time_elapsed",
+        "value": 66,
+        "text": "D+2일 18:00"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         98,
+         150
+        ],
+        [
+         95,
+         110
+        ],
+        [
+         93,
+         97
+        ]
+       ],
+       "text": "D+2일 야간 도하를 공중에서 엄호한다.",
+       "basis": "서술: 야크기 1대의 엄호. 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 68,
+        "text": "D+2일 20:00"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         96,
+         120
+        ],
+        [
+         96,
+         112
+        ],
+        [
+         93,
+         103
+        ],
+        [
+         92,
+         97
+        ]
+       ],
+       "text": "D+2일 19:00 금성교 정면에서 도하해 대평리를 공격한다.",
+       "basis": "서술: 저녁 무렵 본격적 야간 도하공격, 두 차례 격퇴 후에도 계속 도하",
+       "start": {
+        "type": "time_elapsed",
+        "value": 67,
+        "text": "D+2일 19:00"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 2.5
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "CM2",
+       "axis_xy": [
+        [
+         96,
+         116
+        ],
+        [
+         94,
+         110
+        ],
+        [
+         93,
+         103
+        ],
+        [
+         92,
+         99
+        ]
+       ],
+       "text": "D+3일 06:00 파괴된 금성교 교각을 엄폐물로 정면 도하를 재개한다.",
+       "basis": "서술: 16일 06:00 이후 중앙 정면에서 교각을 엄폐로 도하",
+       "start": {
+        "type": "time_elapsed",
+        "value": 78,
+        "text": "D+3일 06:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         92,
+         99
+        ],
+        [
+         91,
+         95
+        ],
+        [
+         90,
+         90
+        ]
+       ],
+       "text": "이어서 A·B중대 진지를 지나 가동의 대대지휘소를 공격한다.",
+       "basis": "서술: 08:00경 A·B중대 진지 일부 점령 후 가동 대대지휘소 습격"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         92,
+         99
+        ],
+        [
+         94,
+         108
+        ],
+        [
+         96,
+         115
+        ]
+       ],
+       "text": "손실이 크면 북안으로 철수한다.",
+       "basis": "추정: 실제로는 많은 손실에도 도하 강행, 문턱 0.6 추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "제9연대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         116,
+         122
+        ],
+        [
+         124,
+         114
+        ],
+        [
+         120,
+         104
+        ],
+        [
+         114,
+         98
+        ],
+        [
+         109,
+         96
+        ]
+       ],
+       "text": "D+2일 야간 합강리 부근에서 도하해 C중대와 E중대 사이 간격으로 C중대 진지를 공격한다.",
+       "basis": "서술: 합강리 부근 도하, C중대 진지 먼저 공격, 네 차례 기습. 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 70,
+        "text": "D+2일 22:00"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 1.5
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "infiltrate",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         120,
+         104
+        ],
+        [
+         116,
+         94
+        ],
+        [
+         110,
+         86
+        ],
+        [
+         104,
+         76
+        ],
+        [
+         100,
+         68
+        ]
+       ],
+       "text": "C중대 공격이 막히면 괴화산 주력을 우회해 배후와 대평리-대전 도로로 침투한다.",
+       "basis": "서술: C중대가 네 차례 격퇴하자 괴화산 주력을 우회해 배후 공격 기도. 문턱 0.25 추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.25,
+        "text": "제7연대 손실 0.25 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제4사단",
+    "alias": "적 사단 1",
+    "nation": "북한",
+    "echelon": "사단",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 65,
+    "position": {
+     "xy": [
+      8,
+      104
+     ],
+     "note": "공주 북방 금강 북안. 제34연대 정면이며 제19연대는 직접 대치하지 않음",
+     "ref": "T11"
+    },
+    "other_names": [
+     "제4사단"
+    ]
+   },
+   {
+    "id": "H2",
+    "unit": "북한군 야크기",
+    "alias": "적 분대 1",
+    "nation": "북한",
+    "echelon": "분대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "YAK 전투기 1대",
+    "position": {
+     "xy": [
+      98,
+      180
+     ],
+     "note": "북방 비행장(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 09:30",
+    "t": 9.5,
+    "kind": "weather",
+    "duration_h": 84.5,
+    "note": "많은 비로 금강 수위가 높아 도섭 불가. 금강 교량은 모두 파괴된 상태"
+   },
+   {
+    "when": "D일 09:30",
+    "t": 9.5,
+    "kind": "air_window",
+    "duration_h": 10.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 14.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 20:00",
+    "t": 44,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 14.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 20:00",
+    "t": 68,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간. 조명탄 없이는 수면 관측 불가"
+   },
+   {
+    "when": "D+3일 03:00경",
+    "t": 75,
+    "kind": "other",
+    "duration_h": 0.35,
+    "note": "조명탄 사격이 약 20분간 중단됨(시각 추정)"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "air_window",
+    "duration_h": 14.5,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+3일 20:00",
+    "t": 92,
+    "kind": "night",
+    "duration_h": 2.5,
+    "note": "야간"
+   }
+  ]
+ }
+}

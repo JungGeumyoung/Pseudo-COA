@@ -1,0 +1,152 @@
+{
+ "id": "kb2_009",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-11-18",
+   "end_date": "1951-11-24",
+   "d_day": "1951-11-18",
+   "order_time": "D일 12:00",
+   "text": "제9연대가 수도사단 전선을 인수하고 월비산·구선봉 전초를 운용한 시점부터 261고지를 잃고 되찾지 못한 D+6일까지의 전투 전체",
+   "why": "구간 지정이 없으므로 전투 전체를 쓴다. 명령 시점은 연대가 주저항선 인수와 전초 배치를 결심한 첫 결심이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 대전차공격대대와 사단 수색중대를 배속받아 사단 방어지역 전체를 홀로 맡은 제9연대를 관점으로 쓴다. 월비산 전초 전투, 제3대대의 351고지 진출, 261고지 공방이 모두 이 연대의 작전지역 안에서 벌어졌다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "월비산(D+1일)과 261고지(D+6일)를 북한군에게 빼앗겼고 다시 확보하지 못했다. 351고지·339고지·208고지·37고지 선은 지켰으나 인수 8일 만에 월비산을 잃어 남강 일대를 감제할 수 없게 되었다. 아군 전사 49, 실종 28, 부상 167명, 적 사살 1,064명이다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 간성 북방 연대 작전지역 남서단 추정점이다. 월비산을 (90,120)에 두고 서술의 거리(351고지 남쪽 1km에 339고지, 월비산 동쪽 1km에 261고지, 월비산 북동쪽 3.5km에 구선봉)로 배치했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_009_제2차_월비산_전투",
+  "title": "제2차 월비산 전투",
+  "dates": "1951. 11. 18.~24.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '제2차 월비산 전투' (pdf 45쪽)",
+  "pdf_page": 45,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 27,
+   "score": {
+    "B1": 4,
+    "B2": 4,
+    "B3": 4,
+    "B4": 4,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 11,
+   "richness": 16
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "1개 연대에 사단 방어지역을, 1개 대대(대전차공격대대)에 연대급 전초진지인 월비산을 맡김",
+    "alternative": "월비산 전초에 연대급 전력을 배치하거나 초기부터 제3대대를 월비산 인근에 증강 배치",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "더구나 사단장의 조치는 1개 연대가 1개 사단의 방어지역을, 1개 대대가 1개 연대의 전초진지를 담당하는 것이어서 전력이 약화될 수밖에 없었다."
+   },
+   {
+    "decision": "제3대대를 월비산 상실 후인 11월 20일에야 351고지로 진출시킴",
+    "alternative": "11월 18일 야간 탐색공격 직후 제3대대를 월비산·351고지로 조기 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "앞선 전투로 손실을 입은 1개 중대(11중대)만으로 돌출된 261고지를 고수",
+    "alternative": "261고지를 대대 주력으로 보강하거나 포기하고 351고지-339고지 선에 전력을 집중",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": "앞선 전투에서 입은 전력의 손실로 더 이상 진지를 지탱하지 못하고 351고지로 철수하였다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.6904,
+   "duration_s": 445.5,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 43045,
+     "cache_read_input_tokens": 67363,
+     "cache_creation_input_tokens": 45800
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9738,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 31849
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 43,
+   "flagged": [
+    {
+     "id": "E:E3[2]",
+     "verdict": "hidden_condition",
+     "reason": "261고지 공격 목표 전환은 208고지 공격 실패라는 실제 전투 경과에 따른 반응인데 고정 시각의 '계획'으로 적혀 있다.",
+     "fix": "고정 시각 대신 '아군 중대 이상이 208고지 안에 있음'(또는 적 208고지 공격부대 손실 비율) 같은 전투력 조건으로 바꿔 '조건' 항목으로 전환한다."
+    }
+   ],
+   "cost_usd": 0.10255
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E3[2]: '탈환'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

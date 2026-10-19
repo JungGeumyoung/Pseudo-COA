@@ -1,0 +1,491 @@
+{
+ "id": "kb1_187",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 06:30",
+  "start_t": 6.5,
+  "horizon_h": 101,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "제2대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제12사단 제1연대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제12사단과 제27사단은 피의 능선 유개호 진지와 지뢰지대를 고수해 남사면 공격을 화력으로 저지하고, 진지 일부를 잃으면 사단 예비로 야간 역습해 되찾는다. 손실이 한계를 넘으면 주봉을 버리고 북서쪽으로 물러난다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H983",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         90,
+         118
+        ],
+        [
+         75,
+         115
+        ],
+        [
+         62,
+         112
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       },
+       "text": "731고지-983고지 유개호 진지와 지뢰지대를 고수한다.",
+       "basis": "서술: 유개호·후사면 교통호·지뢰 5천여 발로 요새화"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F_RIDGE",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         95,
+         128
+        ],
+        [
+         88,
+         136
+        ],
+        [
+         80,
+         145
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 제1연대 손실 0.6 초과"
+       },
+       "text": "983고지를 버리고 북서쪽으로 철수한다.",
+       "basis": "서술: 퇴로차단 우려로 북서쪽 도주. 문턱값은 추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H940",
+       "axis_xy": [
+        [
+         115,
+         121
+        ],
+        [
+         120,
+         122
+        ],
+        [
+         125,
+         123
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 아군 공격 개시"
+       },
+       "text": "940고지-773고지 진지를 고수하고 983고지 정면 공격부대의 측방을 사격한다.",
+       "basis": "서술: 동측 제27사단 제14연대 배치"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F_RIDGE",
+       "axis_xy": [
+        [
+         115,
+         121
+        ],
+        [
+         118,
+         130
+        ],
+        [
+         122,
+         140
+        ],
+        [
+         128,
+         148
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "적 제14연대 손실 0.6 초과"
+       },
+       "text": "940고지를 버리고 북쪽으로 철수한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F_RIDGE",
+       "axis_xy": [
+        [
+         85,
+         145
+        ],
+        [
+         85,
+         145
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "983고지 북쪽 후방에서 사단 예비로 대기한다.",
+       "basis": "추정: 2개 사단 지원체제"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H983",
+       "axis_xy": [
+        [
+         85,
+         145
+        ],
+        [
+         90,
+         138
+        ],
+        [
+         95,
+         130
+        ],
+        [
+         98,
+         125
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 983고지 목표지역 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       },
+       "text": "후사면 교통호를 따라 983고지로 야간 역습한다.",
+       "basis": "추정: 북한군 야간 역습 관행"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "H983",
+       "axis_xy": [
+        [
+         85,
+         145
+        ],
+        [
+         92,
+         135
+        ],
+        [
+         98,
+         126
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.4,
+        "text": "적 제1연대 손실 0.4 초과"
+       },
+       "text": "1개 대대로 983고지 진지를 보강한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F_RIDGE",
+       "axis_xy": [
+        [
+         128,
+         148
+        ],
+        [
+         128,
+         148
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "940고지 북쪽 후방에서 사단 예비로 대기한다.",
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H773",
+       "axis_xy": [
+        [
+         128,
+         148
+        ],
+        [
+         128,
+         138
+        ],
+        [
+         126,
+         130
+        ],
+        [
+         125,
+         123
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ3",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 773고지 목표지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       },
+       "text": "773고지로 야간 역습한다.",
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H940",
+       "axis_xy": [
+        [
+         128,
+         148
+        ],
+        [
+         122,
+         138
+        ],
+        [
+         117,
+         128
+        ],
+        [
+         115,
+         121
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ2",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 940고지 목표지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       },
+       "text": "940고지로 야간 역습한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "OBJ1",
+       "axis_xy": [
+        [
+         90,
+         150
+        ],
+        [
+         98,
+         110
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "983고지 남사면 접근로와 공격대기지점에 포격한다.",
+       "basis": "서술: 적은 캔자스선과 후방의 모든 활동을 포격으로 제한"
+      }
+     ]
+    },
+    {
+     "group": "HE2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "OBJ2",
+       "axis_xy": [
+        [
+         132,
+         155
+        ],
+        [
+         115,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "940고지·773고지 남사면 접근로에 포격한다.",
+       "basis": "서술 기반 추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제12사단 포병",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 90,
+    "equipment": "76mm·122mm 포와 120mm 박격포(추정)",
+    "position": {
+     "xy": [
+      90,
+      150
+     ],
+     "note": "983고지 북쪽 후방 포진지(추정)"
+    }
+   },
+   {
+    "id": "HE2",
+    "unit": "북한군 제27사단 포병",
+    "alias": "적 포병 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 90,
+    "equipment": "76mm 포와 120mm 박격포(추정)",
+    "position": {
+     "xy": [
+      132,
+      155
+     ],
+     "note": "940고지 북동쪽 문등리 계곡 상류 포진지(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:30",
+    "t": 6.5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. 공격준비사격 개시 시점."
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 19:30",
+    "t": 91.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "weather",
+    "duration_h": 100,
+    "note": "장마 직후. 산악 경사면이 미끄럽고 계곡 도로 기동이 제한된다."
+   }
+  ]
+ }
+}

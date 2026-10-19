@@ -1,0 +1,779 @@
+{
+ "id": "kb2_028",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제12사단 제37연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제37연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제12사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제12사단"
+   ],
+   "higher_mission": "제12사단은 미네소타선 상 군단 우측전선의 854고지-812고지 일대 주저항선을 방어하여 서화리계곡에서 인제로 이어지는 접근로를 차단한다.",
+   "higher_intent": "휴전회담 타결을 앞두고 서화리계곡을 감제하는 854고지와 812고지를 확보한다. 동굴호와 장애물로 강화한 진지를 고수하고 손실을 최소화한다.",
+   "assigned_task": "사단 좌측 연대로서 812고지를 중심으로 성내천 북안 주저항선을 방어하고 812고지와 무명고지를 확보한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "국군 제12사단 제51연대",
+     "alias": "인접 연대 1",
+     "side": "우측(소양강 동안)",
+     "mission": "854고지를 중심으로 삼재령 일대를 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "other_names": [
+      "제51연대"
+     ],
+     "xy": [
+      135,
+      112
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "국군 제12사단 제52연대",
+     "alias": "인접 연대 2",
+     "side": "사단 우측",
+     "mission": "591고지-829고지 일대를 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "other_names": [
+      "제52연대"
+     ],
+     "xy": [
+      168,
+      110
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "국군 제12사단 수색중대",
+     "alias": "인접 부대 1",
+     "side": "사단 후방",
+     "mission": "사단 직할로 수색과 위력수색을 실시한다.",
+     "type": "recon",
+     "echelon": "중대",
+     "other_names": [
+      "사단 수색중대"
+     ],
+     "xy": [
+      110,
+      70
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "국군 제12사단 포병",
+     "text": "사단 포병은 적 포격 개시와 동시에 대포병사격과 주저항선 전방 방어사격을 실시한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 16,
+      "text": "D일 16:00 적 포격 개시"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "GANMU"
+     }
+    },
+    {
+     "unit": "ADJ3",
+     "text": "적 대대 이상이 812고지 지역에 있으면 사단은 사단 수색중대로 제37연대를 증원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H812",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 812고지 지역 안에 있음"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "H812"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "서측 연대 경계에서 소양강 서안까지, 성내천 북안에서 812고지-무명고지 주저항선까지다. 소양강이 제51연대와의 경계다.",
+   "boundaries": [
+    {
+     "id": "B_LEFT",
+     "name": "연대 좌측 경계",
+     "between": [
+      "제37연대",
+      "사단 좌측 인접부대"
+     ],
+     "xy": [
+      [
+       45,
+       128
+      ],
+      [
+       45,
+       100
+      ],
+      [
+       44,
+       84
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B_RIGHT",
+     "name": "제37연대-제51연대 전투지경선",
+     "between": [
+      "제37연대",
+      "제51연대"
+     ],
+     "xy": [
+      [
+       122,
+       150
+      ],
+      [
+       116,
+       120
+      ],
+      [
+       119,
+       108
+      ],
+      [
+       118,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B_FEBA",
+     "name": "주저항선 전단",
+     "between": [
+      "제37연대",
+      "북한군"
+     ],
+     "xy": [
+      [
+       45,
+       112
+      ],
+      [
+       62,
+       110
+      ],
+      [
+       75,
+       110
+      ],
+      [
+       90,
+       114
+      ],
+      [
+       100,
+       115
+      ],
+      [
+       110,
+       115
+      ],
+      [
+       116,
+       117
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B_REAR",
+     "name": "연대 후방 경계",
+     "between": [
+      "제37연대",
+      "제12사단 후방지역"
+     ],
+     "xy": [
+      [
+       44,
+       84
+      ],
+      [
+       80,
+       86
+      ],
+      [
+       118,
+       88
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제37연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 예비. 812고지 남쪽 연대 작전지역 후방."
+    },
+    "other_names": [
+     "연대 예비대대"
+    ]
+   },
+   {
+    "id": "F2",
+    "unit": "제37연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선."
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제37연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 800,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 주저항선."
+    },
+    "equipment": "제9·제10·제11중대"
+   },
+   {
+    "id": "F4",
+    "unit": "제37연대 중박격포중대",
+    "alias": "박격포 중대 1",
+    "echelon": "중대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "4.2인치 박격포",
+    "location": {
+     "note": "연대 작전지역 내 후방."
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제12사단 포병",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "연대 후방 포진지."
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "유엔 공군 근접항공지원",
+    "alias": "항공 1",
+    "echelon": "대대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "요청하면 주간에 근접항공지원을 한다."
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "펀치볼 동북방 서화리계곡 일대다. 표고 700~1,000m의 고봉이 이어지고, 소양강이 남북으로 흐르며 성내천이 동서로 흘러 소양강에 합류한다. 812고지는 간무봉 동남쪽 능선의 연봉으로 횡격실을 이뤄 방어에 유리하다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H812",
+     "name": "812고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      90,
+      111
+     ],
+     "estimated": true,
+     "elevation_m": 812,
+     "evidence": "간무봉 동남쪽 능선의 연봉으로, 소양강 서안에서 서화리계곡을 감제한다.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H_NN",
+     "name": "무명고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      100,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "812고지 동쪽 1km.",
+     "other_names": [
+      "쌍룡고지"
+     ],
+     "preparation": "fortified"
+    },
+    {
+     "id": "H854",
+     "name": "854고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      134,
+      114
+     ],
+     "estimated": true,
+     "elevation_m": 854,
+     "evidence": "소양강 동안, 남강과 소양강의 분수령.",
+     "preparation": "fortified"
+    },
+    {
+     "id": "H758",
+     "name": "758고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      74,
+      107
+     ],
+     "estimated": true,
+     "elevation_m": 758,
+     "evidence": "812고지 서쪽 연대 좌측 지역, 성내천 북안 쪽.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H_A",
+     "name": "A고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      111,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "무명고지 동남쪽, 소양강 곁."
+    },
+    {
+     "id": "GANMU",
+     "name": "간무봉",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      74,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "812고지는 간무봉 동남쪽 능선에 있다. 적 지역."
+    },
+    {
+     "id": "SAMJAE",
+     "name": "삼재령",
+     "alias": "지점 1",
+     "kind": "pass",
+     "xy": [
+      140,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "854고지를 중심으로 한 제51연대 지역."
+    },
+    {
+     "id": "H591",
+     "name": "591고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      176,
+      106
+     ],
+     "estimated": true,
+     "elevation_m": 591,
+     "evidence": "제52연대 지역."
+    },
+    {
+     "id": "H829",
+     "name": "829고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      160,
+      114
+     ],
+     "estimated": true,
+     "elevation_m": 829,
+     "evidence": "제52연대 지역."
+    },
+    {
+     "id": "R_SOYANG",
+     "name": "소양강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      118,
+      110
+     ],
+     "line": [
+      [
+       124,
+       200
+      ],
+      [
+       122,
+       150
+      ],
+      [
+       116,
+       122
+      ],
+      [
+       119,
+       108
+      ],
+      [
+       117,
+       80
+      ],
+      [
+       113,
+       40
+      ],
+      [
+       110,
+       0
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "남북으로 흐른다. 812고지는 서안, 854고지는 동안에 있다."
+    },
+    {
+     "id": "R_SEONGNAE",
+     "name": "성내천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      80,
+      90
+     ],
+     "line": [
+      [
+       30,
+       82
+      ],
+      [
+       55,
+       86
+      ],
+      [
+       80,
+       90
+      ],
+      [
+       100,
+       91
+      ],
+      [
+       117,
+       92
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "동서로 흘러 소양강에 합류한다. 연대는 그 북안에 배치되었다."
+    },
+    {
+     "id": "V_SEOHWA",
+     "name": "서화리계곡",
+     "alias": "지점 2",
+     "kind": "valley",
+     "xy": [
+      120,
+      140
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양강을 따라 발달한, 인제로 이어지는 주요 접근로."
+    },
+    {
+     "id": "T_SEOHWA",
+     "name": "서화리",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      123,
+      165
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서화리계곡 북쪽 적 지역."
+    },
+    {
+     "id": "T_INJE",
+     "name": "인제",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      110,
+      5
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서화리계곡 접근로의 남쪽 끝."
+    }
+   ],
+   "routes": [
+    {
+     "id": "RD1",
+     "name": "서화리계곡 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       123,
+       165
+      ],
+      [
+       121,
+       140
+      ],
+      [
+       117,
+       122
+      ],
+      [
+       118,
+       108
+      ],
+      [
+       117,
+       90
+      ],
+      [
+       115,
+       60
+      ],
+      [
+       112,
+       30
+      ],
+      [
+       110,
+       5
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG1",
+     "name": "간무봉-812고지-무명고지 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       74,
+       132
+      ],
+      [
+       79,
+       126
+      ],
+      [
+       84,
+       119
+      ],
+      [
+       90,
+       111
+      ],
+      [
+       95,
+       112
+      ],
+      [
+       100,
+       112
+      ],
+      [
+       106,
+       110
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제1사단 제2연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 2400,
+    "identified": true,
+    "known_at_start": "제37연대 정면에 배치. 일선 2개 대대, 예비 1개 대대로 판단한다.",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      88,
+      132
+     ],
+     "polygon": [
+      [
+       55,
+       122
+      ],
+      [
+       115,
+       124
+      ],
+      [
+       118,
+       145
+      ],
+      [
+       60,
+       145
+      ]
+     ],
+     "frontage_m": 5500,
+     "note": "간무봉에서 소양강 서안까지 연대 정면의 적 진지. 동굴화된 화력거점."
+    },
+    "other_names": [
+     "북한군 제2연대"
+    ]
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제1사단 제3연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 2400,
+    "identified": true,
+    "known_at_start": "제51연대 정면 854고지 북쪽에 배치.",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      138,
+      132
+     ],
+     "polygon": [
+      [
+       120,
+       124
+      ],
+      [
+       155,
+       124
+      ],
+      [
+       155,
+       145
+      ],
+      [
+       122,
+       145
+      ]
+     ],
+     "frontage_m": 3500,
+     "note": "소양강 동안 854고지 정면."
+    },
+    "other_names": [
+     "북한군 제3연대"
+    ]
+   },
+   {
+    "id": "E3",
+    "unit": "적 상급부대 포병",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "포병진지를 동굴화했다. D일 16:00부터 사단 정면에 포격을 시작했다.",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "equipment": "각종 포 약 200문",
+    "position": {
+     "xy": [
+      110,
+      165
+     ],
+     "polygon": [
+      [
+       80,
+       152
+      ],
+      [
+       140,
+       152
+      ],
+      [
+       140,
+       180
+      ],
+      [
+       80,
+       180
+      ]
+     ],
+     "note": "서화리 일대와 그 서쪽의 동굴 포진지."
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 16:00",
+   "light": "day",
+   "notes": "적의 각종 포 약 200문이 사단 정면에 포격을 시작했다. 일몰은 D일 19:50 무렵이다. 연대 진지는 동굴호와 장애물로 강화되어 있다."
+  }
+ }
+}

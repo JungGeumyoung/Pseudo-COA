@@ -1,0 +1,427 @@
+{
+ "id": "kb1_175",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 07:00",
+  "start_t": 7,
+  "horizon_h": 84,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E3",
+    "fraction": 0.7,
+    "text": "적 한석산 방어연대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제6사단은 소양강을 등진 910고지-매봉-한석산 거점진지를 고수하여 국군 제9사단의 인제 진출을 지연시키고, 예비 대대로 공격부대의 측후방을 쳐서 반격 여건을 조성한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         99,
+         110
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00 국군 공격 개시"
+       },
+       "text": "910고지 전진진지를 고수한다.",
+       "basis": "910고지에 북한군 전진진지가 있었고 격전 끝에 점령되었다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         99,
+         110
+        ],
+        [
+         100,
+         115
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.4,
+        "text": "910고지 대대 손실 0.4 초과"
+       },
+       "text": "910고지에서 매봉 주진지로 철수한다.",
+       "basis": "추정: 전진진지 부대는 큰 손실을 입으면 주진지로 물러난다."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         115,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "매봉과 856고지 거점진지를 고수한다.",
+       "basis": "북한군이 매봉 사수를 결의하고 유리한 지형에서 3일간 저항했다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         120
+        ],
+        [
+         101,
+         126
+        ],
+        [
+         102,
+         133
+        ],
+        [
+         100,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "매봉 방어연대 손실 0.6 초과"
+       },
+       "text": "매봉에서 한석산으로 철수한다.",
+       "basis": "추정: 배수진으로 고수 의지가 강해 문턱을 높게 잡았다."
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         85,
+         128
+        ],
+        [
+         88,
+         120
+        ],
+        [
+         87,
+         112
+        ],
+        [
+         88,
+         106
+        ],
+        [
+         93,
+         104
+        ],
+        [
+         99,
+         110
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "group": "G1",
+        "ref": "OBJ0",
+        "min_echelon": "중대",
+        "text": "제3대대 중대 이상이 910고지 지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 5
+       },
+       "text": "고사리에서 910고지 좌측 계곡으로 우회하여 910고지를 역습한다.",
+       "basis": "1개 대대 규모가 910고지 좌측으로 우회해 두 차례 기습했다. 반복 간격은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         88,
+         106
+        ],
+        [
+         87,
+         112
+        ],
+        [
+         88,
+         120
+        ],
+        [
+         92,
+         130
+        ],
+        [
+         100,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H2",
+        "fraction": 0.5,
+        "text": "예비대대 손실 0.5 초과"
+       },
+       "text": "역습을 중지하고 한석산으로 철수한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         140
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "한석산 거점진지를 고수한다.",
+       "basis": "한석산에 연대 규모 거점진지와 소양강 배수진이 있었다."
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         100,
+         140
+        ],
+        [
+         102,
+         133
+        ],
+        [
+         101,
+         126
+        ],
+        [
+         100,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.4,
+        "text": "매봉 방어연대 손실 0.4 초과"
+       },
+       "text": "1개 중대 규모로 매봉을 증원한다.",
+       "basis": "추정: 매봉이 3일간 버틴 점으로 보아 후방 연대의 보충이 있었을 것이다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         100,
+         140
+        ],
+        [
+         98,
+         150
+        ],
+        [
+         96,
+         160
+        ],
+        [
+         95,
+         166
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "한석산 방어연대 손실 0.5 초과"
+       },
+       "text": "한석산을 버리고 소양강 북안으로 철수한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         99,
+         110
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 7,
+        "text": "D일 07:00"
+       },
+       "text": "910고지와 매봉 남사면의 공격부대를 포격한다.",
+       "basis": "제3대대가 포 6문을 노획했다. 사격 목표는 추정."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제6사단 포병대대(-)",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 70,
+    "equipment": "야포·박격포 6문 내외",
+    "position": {
+     "xy": [
+      100,
+      150
+     ],
+     "ref": "F1",
+     "note": "한석산 북사면 포진지(추정)"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "북한군 제6사단 예비대대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 500,
+    "position": {
+     "xy": [
+      85,
+      128
+     ],
+     "ref": "F8",
+     "note": "고사리 일대 은닉 대기(추정)"
+    },
+    "other_names": [
+     "910고지 우회 대대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "D일 야간"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "D+1일 야간"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "D+2일 야간"
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 12.5,
+    "note": "D일 주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "D+1일 주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "D+2일 주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+3일 05:30",
+    "t": 77.5,
+    "kind": "air_window",
+    "duration_h": 13.5,
+    "note": "D+3일 주간 근접항공지원 가능"
+   }
+  ]
+ }
+}

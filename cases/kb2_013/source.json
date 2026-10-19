@@ -1,0 +1,148 @@
+{
+ "id": "kb2_013",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-12-29",
+   "end_date": "1951-12-30",
+   "d_day": "1951-12-29",
+   "order_time": "1951-12-29 05:00 (D일 05:00)",
+   "text": "제1차전: 중공군이 제5중대 전초를 탈취한 뒤 제12연대가 제2대대로 두매리 고지와 무명고지 탈환을 시도한 2일간",
+   "why": "구간 지정 ①. 12. 28. 피습은 명령 이전 상황이고 12. 29. 연대장의 탈환 명령이 연대급 공격명령 시점이다."
+  },
+  "perspective_rationale": "구간 시작 때 두매리 지역 작전지역을 맡은 연대는 제12연대이며 연대장이 직접 제2대대에 탈환을 명령했다. 제15연대는 이 구간에서 사단 예비이므로 상급 규칙으로 둔다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "D일 제7중대가 10:10 두매리 고지를, 제6중대가 무명고지를 탈환했으나 적 역습으로 모두 상실했다. D+1일 제5중대가 14:00 두매리 고지를 다시 탈환했으나 전차포 100여 발을 동반한 역습으로 상실하고 104고지 뒤로 물러났다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 임진강 남쪽 문산 정면 서남단(추정). 두매리 고지를 (110,112)에 두고 서술의 거리(철모고지 북서 1.5km, 무명고지 철모고지 남 300m)로 배치",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_013_두매리_전투",
+  "title": "두매리 전투",
+  "dates": "1951. 12. 28.~1952. 1. 8.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '두매리 전투' (pdf 61쪽)",
+  "pdf_page": 61,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 3,
+    "B6": 3
+   },
+   "sim_value": 11,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "고지를 탈환한 중대(12월 30일 제5중대 등)를 증원 없이 단독으로 고지에 두고 진지 재편성에 들어감",
+    "alternative": "탈환 직후 예비 중대·대대를 즉시 초월 투입해 고지를 증강하고 역습 접근로에 포병 화력을 계획했다면 역습을 견뎌 고지를 유지했을 가능성",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "그러나 중대는 요청한 증원 병력을 받기도 전에 전차포 100여 발을 집중하며 역습을 가한 중공군에게 다시 고지를 넘겨주고 104고지 뒤편으로 물러나면서 3일에 걸친 제1차전은 종료되었다."
+   },
+   {
+    "decision": "두매리 고지와 무명고지를 중대 단위로 따로 공격하고 무명고지 확보를 뒤로 미룸",
+    "alternative": "처음부터 무명고지를 먼저 또는 대대급으로 확보해 철모고지·대덕산 방면 역습로를 차단한 뒤 두매리 고지를 유지",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "이에 사단장은 두매리 고지를 유지하기 위해서는 무명고지를 탈취하는 것이 급선무라판단하고, 제12연대 3대대에 탈취명령을 내렸다."
+   },
+   {
+    "decision": "제15연대 3대대가 두매리 고지 탈환 후 중군고개(△122)와 148고지까지 점령하며 전력을 분산",
+    "alternative": "중군고개·148고지로 확장하지 않고 두매리 고지에 대대 전력을 집중해 고수",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 1951. 12. 28.~12. 30. 제1차전: 제12연대 제2대대의 전초 상실과 3일간의 탈환 시도(연대 관점으로 가장 적합). ② 1952. 1. 3. 제12연대 제3대대의 재공격. ③ 1952. 1. 5.~1. 8. 제15연대 투입 이후의 공격과 무명고지 우선 결심, 전투 종료.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.4753,
+   "duration_s": 473.4,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 49547,
+     "cache_read_input_tokens": 137681,
+     "cache_creation_input_tokens": 19941
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7748,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17406
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 30,
+   "flagged": [],
+   "cost_usd": 0.079776
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "망해산": "지점 1'",
+  "반룡산": "지점 2'",
+  "용호산": "지점 3'"
+ }
+}

@@ -1,0 +1,578 @@
+{
+ "id": "kb2_005",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 108,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "side": "friendly",
+    "fraction": 0.7,
+    "text": "아군 연대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "side": "enemy",
+    "fraction": 0.7,
+    "text": "적 전체 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "중공군 제67군은 예비인 제201사단을 D-1일 밤 투입해 585고지-무명고지-교암산에 새 저지선을 만든다. 거점마다 축차적으로 고수하며 야간 역습과 포병 화력으로 국군의 북진을 늦추고 교암산을 지킨다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         95,
+         110
+        ],
+        [
+         95,
+         108
+        ]
+       ],
+       "text": "585고지 주진지를 고수한다.",
+       "basis": "서술: 제199사단이 585고지-여문리-529고지에 주진지를 형성했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         95,
+         110
+        ],
+        [
+         97,
+         118
+        ],
+        [
+         99,
+         126
+        ],
+        [
+         100,
+         135
+        ]
+       ],
+       "text": "585고지에서 무명고지로 철수한다.",
+       "basis": "서술: 양측에서 협공을 받자 동요했다. 문턱 0.5는 추정.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "중공군 제199사단 전방연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         97,
+         118
+        ],
+        [
+         95,
+         112
+        ]
+       ],
+       "text": "585고지 후사면에서 저지선을 고수한다.",
+       "basis": "서술: 전날 밤 예비사단이 증원 투입되어 새 저지선을 형성했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         97,
+         118
+        ],
+        [
+         96,
+         112
+        ],
+        [
+         95,
+         106
+        ],
+        [
+         94,
+         100
+        ]
+       ],
+       "text": "야간에 585고지 남사면의 국군 진출 부대를 역습한다.",
+       "basis": "추정: 중공군의 야간 역습 관행. 시각과 횟수는 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 20,
+        "text": "D일 20:00"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         97,
+         118
+        ],
+        [
+         99,
+         126
+        ],
+        [
+         100,
+         135
+        ]
+       ],
+       "text": "585고지에서 무명고지로 철수한다.",
+       "basis": "추정: 585고지 피탈 위기 시 후속 거점으로 물러난다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.5,
+        "text": "중공군 제201사단 전방연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         100,
+         135
+        ],
+        [
+         100,
+         133
+        ]
+       ],
+       "text": "무명고지를 고수한다.",
+       "basis": "서술: 무명고지에서 강력히 저항했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         135
+        ],
+        [
+         100,
+         142
+        ],
+        [
+         100,
+         150
+        ]
+       ],
+       "text": "무명고지에서 교암산으로 철수한다.",
+       "basis": "추정 문턱.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "중공군 제597연대(-) 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         100,
+         140
+        ],
+        [
+         100,
+         135
+        ]
+       ],
+       "text": "무명고지와 교암산 남사면 사이 저지진지를 고수한다.",
+       "basis": "서술: 예비사단이 새로운 저지선을 형성했다. 위치는 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         140
+        ],
+        [
+         99,
+         128
+        ],
+        [
+         97,
+         118
+        ],
+        [
+         95,
+         110
+        ]
+       ],
+       "text": "585고지를 역습한다.",
+       "basis": "추정: 585고지 피탈 시 탈환 시도. 문턱 추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T1",
+        "min_echelon": "대대",
+        "text": "국군 대대 이상이 585고지 안에 있음"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "withdraw",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         99,
+         128
+        ],
+        [
+         100,
+         140
+        ],
+        [
+         100,
+         150
+        ]
+       ],
+       "text": "교암산으로 철수한다.",
+       "basis": "추정."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         100,
+         148
+        ]
+       ],
+       "text": "교암산 진지를 고수한다.",
+       "basis": "서술: 견고한 진지에서 기관총과 포병 지원으로 저항했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         100,
+         165
+        ],
+        [
+         100,
+         185
+        ]
+       ],
+       "text": "교암산 북쪽으로 철수한다.",
+       "basis": "서술: 배후 기습으로 동요했다. 문턱 추정.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "중공군 제199사단 교암산 대대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         170
+        ],
+        [
+         100,
+         165
+        ]
+       ],
+       "text": "교암산 북쪽에서 예비로 대기하며 진지를 고수한다.",
+       "basis": "추정: 제201사단 1개 연대를 종심 예비로 둔다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         170
+        ],
+        [
+         100,
+         160
+        ],
+        [
+         100,
+         152
+        ]
+       ],
+       "text": "교암산을 증원한다.",
+       "basis": "추정: 무명고지 피탈 시 교암산 방어를 보강한다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "대대",
+        "text": "국군 대대 이상이 무명고지 안에 있음"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         165
+        ],
+        [
+         97,
+         130
+        ],
+        [
+         95,
+         100
+        ]
+       ],
+       "text": "585고지 남사면 접근로에 지원사격한다.",
+       "basis": "서술: 포병의 지원 아래 고지마다 저항했다.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         165
+        ],
+        [
+         100,
+         145
+        ],
+        [
+         100,
+         135
+        ]
+       ],
+       "text": "무명고지와 교암산 남사면에 지원사격한다.",
+       "basis": "서술: 교암산 공격 시 포병 지원 포격. 조건 추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T1",
+        "min_echelon": "대대",
+        "text": "국군 대대 이상이 585고지 안에 있음"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제201사단 전방연대",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 2500,
+    "position": {
+     "xy": [
+      97,
+      118
+     ],
+     "ref": "T1",
+     "note": "D-1일 밤 투입. 585고지 후사면과 북쪽 능선의 새 저지선(추정)"
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "중공군 제201사단 제2제대 연대",
+    "alias": "적 연대 4",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 95,
+    "personnel": 2000,
+    "position": {
+     "xy": [
+      100,
+      140
+     ],
+     "ref": "T2",
+     "note": "무명고지-교암산 남사면 저지진지(추정)"
+    }
+   },
+   {
+    "id": "H3",
+    "unit": "중공군 제201사단 예비연대",
+    "alias": "적 연대 5",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 95,
+    "personnel": 2000,
+    "position": {
+     "xy": [
+      100,
+      170
+     ],
+     "note": "교암산 북쪽 종심 예비(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 18:00",
+    "t": 18,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간. 관측과 포병 관측사격이 제한된다."
+   },
+   {
+    "when": "D+1일 18:00",
+    "t": 42,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간."
+   },
+   {
+    "when": "D+2일 18:00",
+    "t": 66,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간."
+   },
+   {
+    "when": "D+3일 18:00",
+    "t": 90,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간. D+4일 05:00 공격은 여명 전 개시된다."
+   },
+   {
+    "when": "D+4일 06:00",
+    "t": 102,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명."
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 10,
+    "note": "주간 근접항공지원 가능 시간대. D+1일~D+4일 같은 시간대 반복(추정)."
+   }
+  ]
+ }
+}

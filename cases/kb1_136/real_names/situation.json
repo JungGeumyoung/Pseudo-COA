@@ -1,0 +1,770 @@
+{
+ "id": "kb1_136",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제8연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제7사단 제8연대",
+    "제8연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제7사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제7사단"
+   ],
+   "higher_mission": "상급 사단은 비호산-760고지 선을 방어해 군우리와 개천 일대 도로·철로를 확보하고 미 제8군 우측방과 후방 통로를 보호한다.",
+   "higher_intent": "평야를 감제하는 비호산을 끝까지 확보한다. 적 상급부대가 개천으로 나와 청천강 이북 아군의 후방을 차단하지 못하게 한다. 제3연대는 개천에서 재정비하며 위기 때 역습에 쓴다.",
+   "assigned_task": "제8연대는 D-1일 주간에 제3연대와 교대해 사단 좌일선 비호산 주봉 일대를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "N1",
+     "unit": "국군 제5연대",
+     "alias": "인접 연대 1",
+     "other_names": [
+      "제5연대"
+     ],
+     "side": "우측(동쪽)",
+     "echelon": "연대",
+     "type": "infantry",
+     "mission": "사단 우일선으로 760고지와 535고지 일대를 방어한다.",
+     "xy": [
+      128,
+      106
+     ]
+    },
+    {
+     "id": "N2",
+     "unit": "국군 제3연대",
+     "alias": "인접 연대 2",
+     "other_names": [
+      "제3연대"
+     ],
+     "side": "후방(개천)",
+     "echelon": "연대",
+     "type": "infantry",
+     "mission": "개천에서 사단 예비로 재정비하며 역습을 준비한다.",
+     "xy": [
+      78,
+      108
+     ]
+    },
+    {
+     "id": "N3",
+     "unit": "미 제5연대전투단",
+     "alias": "인접 연대 3",
+     "other_names": [
+      "미 제5연대"
+     ],
+     "side": "우측 외곽(제5연대 동쪽)",
+     "echelon": "연대",
+     "type": "infantry",
+     "mission": "제5연대 동쪽 신성리 북방에서 방어한다.",
+     "xy": [
+      150,
+      96
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "N2",
+     "text": "적 대대 이상이 비호산 주봉 지역에 있으면 제3연대가 개천에서 비호산 방향으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 비호산 주봉 지역 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F1",
+      "axis_xy": [
+       [
+        78,
+        108
+       ],
+       [
+        88,
+        104
+       ],
+       [
+        98,
+        104
+       ],
+       [
+        106,
+        108
+       ],
+       [
+        110,
+        110
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "N2",
+     "text": "제5연대 손실이 0.4를 넘으면 제3연대가 535고지 방면으로 나가 제5연대를 엄호한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "N1",
+      "fraction": 0.4,
+      "text": "제5연대 누적 손실 0.4 초과"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "F3",
+      "axis_xy": [
+       [
+        78,
+        108
+       ],
+       [
+        90,
+        96
+       ],
+       [
+        100,
+        86
+       ],
+       [
+        112,
+        90
+       ],
+       [
+        120,
+        98
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 좌측 청천강 동안에서 우측 비호산-535고지 사이 안부까지, 전방 비호산 북쪽 계곡과 원리 북방에서 후방 용현리-개천 남쪽 선까지다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제8연대-제5연대 전투지경선",
+     "between": [
+      "국군 제8연대",
+      "국군 제5연대"
+     ],
+     "xy": [
+      [
+       118,
+       175
+      ],
+      [
+       118,
+       122
+      ],
+      [
+       116,
+       106
+      ],
+      [
+       112,
+       95
+      ],
+      [
+       110,
+       75
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 좌측 경계(청천강 동안)",
+     "between": [
+      "국군 제8연대",
+      "국군 제7사단 좌측 외곽"
+     ],
+     "xy": [
+      [
+       65,
+       175
+      ],
+      [
+       60,
+       140
+      ],
+      [
+       50,
+       110
+      ],
+      [
+       45,
+       95
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 후방 경계",
+     "between": [
+      "국군 제8연대",
+      "국군 제7사단 후방지역"
+     ],
+     "xy": [
+      [
+       45,
+       95
+      ],
+      [
+       70,
+       95
+      ],
+      [
+       95,
+       82
+      ],
+      [
+       110,
+       75
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "A1",
+    "unit": "제8연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "용현리 일대 사단 예비 집결지",
+     "ref": "F6"
+    }
+   },
+   {
+    "id": "A2",
+    "unit": "제8연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "용현리 일대 사단 예비 집결지",
+     "ref": "F6"
+    }
+   },
+   {
+    "id": "A3",
+    "unit": "제8연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "용현리 일대 사단 예비 집결지",
+     "ref": "F6"
+    }
+   },
+   {
+    "id": "A4",
+    "unit": "제7사단 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "개천 남동쪽 진지",
+     "xy": [
+      86,
+      96
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "묘향산맥 남쪽 끝, 청천강 하류 평야 동쪽 가장자리의 개천-군우리 일대다. 비호산은 평야에서 가장 높은 감제고지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 150,
+   "features": [
+    {
+     "id": "F1",
+     "name": "비호산",
+     "alias": "고지 A",
+     "other_names": [
+      "비호산 주봉",
+      "622고지"
+     ],
+     "kind": "hill",
+     "xy": [
+      110,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 622,
+     "evidence": "개천 동쪽, 군우리 북쪽의 평야지 최고 감제고지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F2",
+     "name": "760고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      132,
+      114
+     ],
+     "estimated": true,
+     "elevation_m": 760,
+     "evidence": "비호산 동쪽 제5연대 진지"
+    },
+    {
+     "id": "F3",
+     "name": "535고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      120,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 535,
+     "evidence": "비호산 남동쪽 2km 제5연대 제2대대 진지"
+    },
+    {
+     "id": "F4",
+     "name": "개천",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      77,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "비호산 서쪽 교통 요지"
+    },
+    {
+     "id": "F5",
+     "name": "군우리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      45,
+      70
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "비호산 남서쪽 도로·철로 결절점"
+    },
+    {
+     "id": "F6",
+     "name": "용현리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      98,
+      85
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 예비 제8연대 집결지"
+    },
+    {
+     "id": "F7",
+     "name": "신성리",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      122,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "535고지 남쪽, 미 제5연대전투단 지역"
+    },
+    {
+     "id": "F8",
+     "name": "원리",
+     "alias": "마을 5",
+     "other_names": [
+      "院里"
+     ],
+     "kind": "town",
+     "xy": [
+      75,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "개천 북방 마을"
+    },
+    {
+     "id": "F9",
+     "name": "비호산 서북능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      94,
+      120
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주봉에서 원리 방면 도로로 뻗은 능선(추정)",
+     "line": [
+      [
+       108,
+       112
+      ],
+      [
+       100,
+       117
+      ],
+      [
+       92,
+       121
+      ],
+      [
+       85,
+       124
+      ]
+     ]
+    },
+    {
+     "id": "F10",
+     "name": "비호산 북쪽 계곡",
+     "alias": "지점 1",
+     "kind": "valley",
+     "xy": [
+      110,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적이 주봉으로 접근할 수 있는 북쪽 계곡(추정)"
+    },
+    {
+     "id": "F11",
+     "name": "청천강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      45,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서해안에서 동북쪽 희천으로 이어지는 강",
+     "line": [
+      [
+       70,
+       200
+      ],
+      [
+       55,
+       140
+      ],
+      [
+       40,
+       100
+      ],
+      [
+       25,
+       60
+      ],
+      [
+       10,
+       0
+      ]
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "개천-군우리 도로·철로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       77,
+       112
+      ],
+      [
+       70,
+       102
+      ],
+      [
+       62,
+       92
+      ],
+      [
+       55,
+       82
+      ],
+      [
+       45,
+       70
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "개천-원리 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       77,
+       112
+      ],
+      [
+       76,
+       124
+      ],
+      [
+       75,
+       135
+      ],
+      [
+       78,
+       155
+      ],
+      [
+       84,
+       175
+      ],
+      [
+       90,
+       195
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "개천-용현리-신성리 도로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       77,
+       112
+      ],
+      [
+       85,
+       102
+      ],
+      [
+       92,
+       92
+      ],
+      [
+       98,
+       85
+      ],
+      [
+       110,
+       84
+      ],
+      [
+       122,
+       84
+      ],
+      [
+       145,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R4",
+     "name": "비호산 북쪽 계곡길",
+     "alias": "도로 4",
+     "kind": "trail",
+     "xy": [
+      [
+       118,
+       180
+      ],
+      [
+       115,
+       160
+      ],
+      [
+       112,
+       145
+      ],
+      [
+       110,
+       135
+      ],
+      [
+       110,
+       122
+      ],
+      [
+       110,
+       112
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "청천강",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       68,
+       200
+      ],
+      [
+       72,
+       200
+      ],
+      [
+       57,
+       140
+      ],
+      [
+       42,
+       100
+      ],
+      [
+       27,
+       60
+      ],
+      [
+       12,
+       0
+      ],
+      [
+       8,
+       0
+      ],
+      [
+       23,
+       60
+      ],
+      [
+       38,
+       100
+      ],
+      [
+       53,
+       140
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제334연대",
+    "alias": "적 연대 1",
+    "other_names": [
+     "적 제112사단 제334연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 75,
+    "identified": false,
+    "known_at_start": "D-2일 새벽 비호산의 제3연대를 공격한 적 제112사단 주력. D-1일 오전 북방으로 물러났다. 연대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      106,
+      148
+     ],
+     "frontage_m": 2500,
+     "note": "비호산 북쪽 계곡 북단, 주봉 북방 약 5km"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제335연대",
+    "alias": "적 연대 2",
+    "other_names": [
+     "적 제112사단 제335연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "identified": false,
+    "known_at_start": "D-2일 새벽 760고지의 제5연대를 공격하다 격퇴된 적. 연대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      134,
+      146
+     ],
+     "frontage_m": 2500,
+     "note": "760고지 북방 약 5km"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제336연대",
+    "alias": "적 연대 3",
+    "other_names": [
+     "적 제112사단 제336연대"
+    ],
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "적 제112사단의 예비로 추정. 위치는 정확하지 않다.",
+    "posture": "예비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      120,
+      172
+     ],
+     "note": "비호산 북방 약 9km 산악지대(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D-1일 08:00",
+   "light": "day",
+   "notes": "초겨울로 야간 기온이 영하다. D-1일 오전부터 소강 상태다. 적은 경무장 보병으로 야간 근접전과 침투를 선호하고 주간에는 아군 항공·포병을 피한다."
+  }
+ }
+}

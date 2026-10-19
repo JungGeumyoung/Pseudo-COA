@@ -1,0 +1,584 @@
+{
+ "id": "kb1_043",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제6사단 제7연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제7연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제6사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제6사단"
+   ],
+   "higher_mission": "제6사단은 춘천 정면에서 북한군 제2사단의 남하를 저지하여 적이 춘천을 거쳐 서울을 우회하는 기동을 거부한다.",
+   "higher_intent": "소양강을 장애물로 이용한다. 남안 주저항선에서 적의 도하를 저지하고 춘천 시가지와 소양교를 가능한 오래 확보한다.",
+   "assigned_task": "제7연대는 소양교와 봉의산 정면의 소양강 남안 주저항선을 방어하여 적의 소양교 도하를 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "제19연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(서측)",
+     "mission": "근화동 일대 소양강 남안을 방어한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      82,
+      95
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "제6사단 근무대대",
+     "alias": "인접 대대 1",
+     "side": "좌후방(서측)",
+     "mission": "가래모기 도하점 남안에서 적의 도하를 저지한다.",
+     "echelon": "대대",
+     "type": "other",
+     "xy": [
+      68,
+      96
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "ADJ1",
+     "text": "제19연대 제1대대는 D일 10:00까지 근화동 소양강변 진지를 점령한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 10,
+      "text": "D일 10:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F7"
+     }
+    },
+    {
+     "unit": "ADJ2",
+     "text": "사단 근무대대는 가래모기 남안에서 적의 도하를 저지한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 3,
+      "text": "D일 03:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F8"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제7연대 작전지역은 우두산·우두동에서 소양교를 거쳐 봉의산과 춘천 시가지 동부에 이르는 지역이다. 서측은 근화동의 제19연대와 접한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제7연대-제19연대 전투지경선",
+     "between": [
+      "제7연대",
+      "ADJ1"
+     ],
+     "xy": [
+      [
+       92,
+       60
+      ],
+      [
+       90,
+       92
+      ],
+      [
+       88,
+       103
+      ],
+      [
+       82,
+       125
+      ],
+      [
+       72,
+       155
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "AF1",
+    "unit": "제7연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "relationship": "건제",
+    "location": {
+     "note": "옥산포 역습 뒤 옥산포 우측 능선과 우두산 일대에서 적과 접촉 중",
+     "ref": "F12",
+     "xy": [
+      92,
+      136
+     ]
+    }
+   },
+   {
+    "id": "AF2",
+    "unit": "제7연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 소양강 남안"
+    }
+   },
+   {
+    "id": "AF3",
+    "unit": "제7연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내 봉의산 후방"
+    }
+   },
+   {
+    "id": "AF4",
+    "unit": "제7연대 대전차포중대",
+    "alias": "대전차포중대",
+    "echelon": "중대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "57mm 대전차포 6문",
+    "location": {
+     "note": "연대 작전지역 내 소양강 남안"
+    }
+   },
+   {
+    "id": "AF5",
+    "unit": "제16포병대대(-) 제1·2포대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 2개 포대",
+    "location": {
+     "note": "춘천 시가지 남쪽 포진지",
+     "xy": [
+      105,
+      72
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "춘천 북부다. 소양강이 동북에서 서남으로 흘러 북안의 우두산·우두동과 남안의 봉의산·춘천 시가지를 가른다. 소양교가 유일한 교량이고 서쪽 가래모기에 도섭점이 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "소양강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      105,
+      107
+     ],
+     "line": [
+      [
+       200,
+       130
+      ],
+      [
+       160,
+       121
+      ],
+      [
+       130,
+       112
+      ],
+      [
+       105,
+       107
+      ],
+      [
+       85,
+       101
+      ],
+      [
+       68,
+       100
+      ],
+      [
+       40,
+       97
+      ],
+      [
+       0,
+       93
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양교로 우두동과 춘천 시내를 연결한다. 제2대대가 도하 공격했다 돌아온 것으로 보아 일부 구간은 도섭이 가능하다."
+    },
+    {
+     "id": "F2",
+     "name": "소양교",
+     "alias": "지점 1",
+     "kind": "bridge",
+     "xy": [
+      105,
+      107
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "우두동과 춘천 시내를 잇는 가교로 춘천 진입의 관문이다."
+    },
+    {
+     "id": "F3",
+     "name": "봉의산",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      118,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 301,
+     "evidence": "다리 남쪽에 연대 전술지휘소와 관측소가 있다. 소양강과 우두산을 감제하며 중턱과 제방에 화기진지가 있다.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F4",
+     "name": "우두산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      95,
+      126
+     ],
+     "estimated": true,
+     "elevation_m": 133,
+     "evidence": "소양강 북안의 제1대대 진지다.",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F5",
+     "name": "옥산포",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      78,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전날 옥산포 전투 지역이다."
+    },
+    {
+     "id": "F6",
+     "name": "우두동",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      102,
+      117
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양교 북단 마을이다."
+    },
+    {
+     "id": "F7",
+     "name": "근화동",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      82,
+      95
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제19연대 방어지역이자 적 조공 지역이다."
+    },
+    {
+     "id": "F8",
+     "name": "가래모기",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      68,
+      99
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양강 서쪽 도섭점으로 근화동 남안에 닿는다."
+    },
+    {
+     "id": "F9",
+     "name": "춘천 시가지",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      102,
+      82
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "소양교 남쪽 시가지다."
+    },
+    {
+     "id": "F10",
+     "name": "486고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      175,
+      72
+     ],
+     "estimated": true,
+     "elevation_m": 486,
+     "evidence": "춘천 동쪽 고지다."
+    },
+    {
+     "id": "F11",
+     "name": "소양강 남안 제방",
+     "alias": "지점 3",
+     "kind": "other",
+     "xy": [
+      108,
+      103
+     ],
+     "line": [
+      [
+       88,
+       99
+      ],
+      [
+       105,
+       104
+      ],
+      [
+       130,
+       109
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제방에 화기진지가 구축되어 있다.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "F12",
+     "name": "옥산포 우측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      92,
+      136
+     ],
+     "line": [
+      [
+       86,
+       145
+      ],
+      [
+       92,
+       136
+      ],
+      [
+       95,
+       126
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대가 확보 중이던 능선 진지다.",
+     "preparation": "hasty"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "옥산포-소양교-춘천 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       78,
+       148
+      ],
+      [
+       88,
+       138
+      ],
+      [
+       98,
+       124
+      ],
+      [
+       103,
+       114
+      ],
+      [
+       105,
+       107
+      ],
+      [
+       104,
+       95
+      ],
+      [
+       102,
+       82
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "춘천-486고지 방면 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       102,
+       82
+      ],
+      [
+       120,
+       80
+      ],
+      [
+       145,
+       76
+      ],
+      [
+       175,
+       72
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제2사단 제6연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 65,
+    "identified": true,
+    "known_at_start": "전날 옥산포에서 제1대대의 역습으로 큰 피해를 입고 옥산포 북쪽에서 재편 중이다.",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      82,
+      150
+     ],
+     "frontage_m": 2500,
+     "polygon": [
+      [
+       70,
+       142
+      ],
+      [
+       95,
+       142
+      ],
+      [
+       95,
+       160
+      ],
+      [
+       70,
+       160
+      ]
+     ],
+     "ref": "F5",
+     "note": "옥산포 일대와 그 북쪽"
+    },
+    "preparation": "none"
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제2사단 자주포대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "SU-76 자주포를 앞세워 춘천 돌파를 노리고 있다.",
+    "posture": "공격준비",
+    "equipment": "SU-76 자주포 8대",
+    "position": {
+     "xy": [
+      90,
+      145
+     ],
+     "ref": "R1",
+     "note": "옥산포-우두동 도로 북쪽"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제2사단 포병연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "다수의 화포로 공격준비사격을 할 것으로 예상된다.",
+    "posture": "공격준비",
+    "equipment": "122mm 곡사포, 76mm 포 다수",
+    "position": {
+     "xy": [
+      85,
+      168
+     ],
+     "note": "옥산포 북방 포진지"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 03:00",
+   "light": "night",
+   "notes": "여명은 약 D일 05:00이다. 소양강은 교량 외에 일부 구간에서 도섭이 가능하다. 연대는 전날 옥산포 전투 직후다."
+  }
+ }
+}

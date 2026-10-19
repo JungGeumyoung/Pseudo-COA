@@ -1,0 +1,150 @@
+{
+ "id": "kb1_175",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-05-07",
+   "end_date": "1951-05-10",
+   "d_day": "1951-05-07",
+   "order_time": "1951-05-06 저녁(D-1일 저녁)",
+   "text": "제30연대가 D일 07:00 공격을 시작해 910고지·매봉을 거쳐 D+3일 저녁 한석산을 점령하기까지의 전투 전체",
+   "why": "구간 지정이 없으므로 전투 전체를 쓰고, 명령 시점은 제3대대를 공격부대로, 제1대대를 예비로 정한 연대의 첫 결심으로 둔다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제9사단 제30연대를 쓴다. 제30연대는 사단으로부터 매봉-한석산 점령 임무를 받아 그 작전지역을 맡았고, 제3대대 공격과 제1대대 예비 투입이 모두 연대 결심이다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "제3대대가 D+2일 856고지 우회와 근접항공지원 아래 매봉을 점령했고, 예비 제1대대가 D+3일 저녁 한석산을 점령했다. 제3대대는 약 390명(대대원의 절반)의 손실을 입었다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 작전지역 남서쪽 임의점. 한석산을 (100,140)에 두고 서술의 거리(매봉은 한석산 남쪽 2km, 910고지는 매봉 남쪽 1km, 인제는 한석산 북서쪽 약 8km)로 배치했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_175_매봉_한석산_전투",
+  "title": "매봉-한석산 전투",
+  "dates": "1951. 5. 7.∼10.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '매봉-한석산 전투' (pdf 518쪽)",
+  "pdf_page": 518,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 23,
+   "score": {
+    "B1": 3,
+    "B2": 2,
+    "B3": 4,
+    "B4": 4,
+    "B5": 3,
+    "B6": 3
+   },
+   "sim_value": 11,
+   "richness": 12
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "5월 9일 새벽 1개 중대를 856고지로 우회기동시켜 측방 공격",
+    "alternative": "5월 7~8일처럼 910고지에서 정면공격만 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "정면공격만으로는 매봉 점령이 불가능하다고 판단한 국군 제30연대 제3대대장 김진동(金鎭東) 중령은 5월 9일 새벽에 1개 중대를 매봉 우측의 856고지로 우회기동시켜 적의 측방을 공격하게 하였다. 이 공격이 주효하여 정면에서의 북한군 저항이 현저히 감소되었다."
+   },
+   {
+    "decision": "매봉 점령 후 예비 제1대대를 투입해 한석산 공격",
+    "alternative": "대대원 절반가량을 잃은 제3대대로 한석산 공격을 계속",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "연대가 제3대대 1개 대대만으로 매봉을 공격",
+    "alternative": "초기부터 제1대대를 병행 투입하거나 측방 우회를 5월 7일부터 실시",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.0788,
+   "duration_s": 337.7,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 33068,
+     "cache_read_input_tokens": 82670,
+     "cache_creation_input_tokens": 18406
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7066,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 13660
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 26,
+   "flagged": [
+    {
+     "id": "O:G2[1]",
+     "verdict": "hidden_condition",
+     "reason": "basis에 명시된 실제 결심 근거는 매봉 점령 후 제3대대의 전투력 소모(손실)인데 조건은 '제3대대 중대 이상이 매봉 안에 있음'이라는 위치 조건으로만 적혀 있어 매봉 점령 즉시 초월이 발동되는 등 실제 결심 시점과 괴리가 생긴다.",
+     "fix": "조건을 '제3대대 손실 비율이 일정 수준(예: 30~40%) 초과'와 같은 전투력 손실률 조건으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.0490352
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

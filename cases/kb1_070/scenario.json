@@ -1,0 +1,463 @@
+{
+ "id": "kb1_070",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D-2일 18:00",
+  "start_t": -30,
+  "horizon_h": 54,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대 누적 손실 0.7 초과"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G3",
+    "fraction": 0.7,
+    "text": "제1대대 누적 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제4사단은 공주 정면에서 포병·전차 사격과 도하 시위로 미군을 고착하고, 1개 연대를 병력이 없는 검상리 일대로 도하시켜 연대 후방의 포병과 23번 국도를 차단한 뒤 정면 연대를 도하시켜 공주를 점령한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         112,
+         160
+        ],
+        [
+         110,
+         135
+        ],
+        [
+         108,
+         114
+        ]
+       ],
+       "text": "D-1일 낮부터 공주 남안 고지군을 포격한다.",
+       "basis": "사단 도하 준비 단계의 공격준비사격(추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": -12,
+        "text": "D-1일 12:00"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "CM2",
+       "axis_xy": [
+        [
+         112,
+         160
+        ],
+        [
+         114,
+         135
+        ],
+        [
+         115,
+         121
+        ]
+       ],
+       "text": "D일 새벽 공주 정면 도하지점 남안을 포격해 도하를 엄호한다.",
+       "basis": "도하 공격 개시와 연계된 지원사격(추정)"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T7",
+       "target_ref": "G1",
+       "axis_xy": [
+        [
+         115,
+         145
+        ],
+        [
+         115,
+         132
+        ],
+        [
+         115,
+         126
+        ]
+       ],
+       "text": "공주 북안 23번 국도상에서 공주 남안 진지를 직접 사격해 제3대대를 고착한다.",
+       "basis": "전차를 앞세운 남진, 금강으로 전차 도하 불가(추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "objective_ref": "CM3",
+       "axis_xy": [
+        [
+         52,
+         132
+        ],
+        [
+         55,
+         126
+        ],
+        [
+         57,
+         120
+        ],
+        [
+         58,
+         112
+        ]
+       ],
+       "text": "검상리 일대로 보트를 이용해 몰래 도하한다.",
+       "basis": "서술: 1개 연대 규모가 서측방으로 몰래 검상리 일대로 도하",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T6",
+       "target_ref": "G4",
+       "axis_xy": [
+        [
+         58,
+         112
+        ],
+        [
+         62,
+         102
+        ],
+        [
+         70,
+         92
+        ],
+        [
+         78,
+         84
+        ],
+        [
+         85,
+         78
+        ]
+       ],
+       "text": "검상리-삼교리 소로로 남동진해 삼교리 제63포병대대 진지를 기습한다.",
+       "basis": "서술: 제63포병대대 진지를 기습해 초토화"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         85,
+         78
+        ],
+        [
+         90,
+         72
+        ],
+        [
+         100,
+         76
+        ]
+       ],
+       "text": "삼교리 일대 23번 국도를 장악해 연대 후방을 차단한다.",
+       "basis": "서술: 후방이 차단된 상황(추정)"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         85,
+         78
+        ],
+        [
+         70,
+         92
+        ],
+        [
+         58,
+         112
+        ]
+       ],
+       "text": "손실이 크면 검상리 교두보로 물러난다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.5,
+        "text": "서측 우회 연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "T8",
+       "target_ref": "G1",
+       "axis_xy": [
+        [
+         115,
+         138
+        ],
+        [
+         115,
+         130
+        ],
+        [
+         115,
+         126
+        ]
+       ],
+       "text": "공주 정면 북안에서 도하 시위와 사격으로 제3대대를 고착한다.",
+       "basis": "서술: 정면과 측방에서 공격(추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         115,
+         135
+        ],
+        [
+         113,
+         124
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "text": "공주 정면으로 도하해 공주 남안 고지군을 공격한다.",
+       "basis": "정면 진지가 약화되면 도하(문턱 추정)",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.2,
+        "text": "제3대대 손실 0.2 초과"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         115,
+         135
+        ],
+        [
+         113,
+         124
+        ],
+        [
+         110,
+         118
+        ],
+        [
+         110,
+         114
+        ]
+       ],
+       "text": "서측 우회 연대가 삼교리 일대에 진출하면 공주 정면으로 도하해 공주 남안 고지군을 공격한다.",
+       "basis": "후방 차단과 연계한 정면 도하(추정)",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "H1",
+        "ref": "T6",
+        "min_echelon": "대대",
+        "text": "서측 우회 연대 대대 이상이 삼교리 안에 있음"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         110,
+         114
+        ],
+        [
+         115,
+         112
+        ],
+        [
+         128,
+         104
+        ],
+        [
+         130,
+         92
+        ]
+       ],
+       "text": "이어서 공주를 점령하고 23번 국도로 추격한다.",
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         113,
+         170
+        ],
+        [
+         115,
+         150
+        ],
+        [
+         115,
+         124
+        ],
+        [
+         115,
+         112
+        ]
+       ],
+       "text": "정면 교두보가 형성되면 공주로 도하해 후속한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "E1",
+        "ref": "T8",
+        "min_echelon": "대대",
+        "text": "적 정면 연대 대대 이상이 공주 남안 고지군 안에 있음"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제4사단 서측 우회 연대",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 75,
+    "personnel": 2000,
+    "equipment": "보트·소형 도하장비, 박격포",
+    "position": {
+     "xy": [
+      52,
+      133
+     ],
+     "note": "검상리 북서 금강 북안 은밀 집결, 도하 준비"
+    },
+    "other_names": [
+     "서측방 도하 연대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D-2일 19:30",
+    "t": -28.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D-1일 05:30",
+    "t": -18.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D-1일 19:30",
+    "t": -4.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간, 적 도하 준비 은폐"
+   },
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명, 적 도하 개시 시간대"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간, 기동과 협조 제한"
+   },
+   {
+    "when": "D-2일 18:00",
+    "t": -30,
+    "kind": "weather",
+    "duration_h": 54,
+    "note": "장마철 금강 고수위·급류로 도섭 불가 지속"
+   }
+  ]
+ }
+}

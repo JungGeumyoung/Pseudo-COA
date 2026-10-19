@@ -1,0 +1,678 @@
+{
+ "id": "kb1_149",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제23연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "미 제23연대",
+    "제23보병연대",
+    "제23연대(프랑스대대 배속)"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제2사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "미 제2사단"
+   ],
+   "higher_mission": "제2사단은 원주 남쪽 고지군에 4개 대대 이상을 배치하여 원주 시가지와 원주-충주 도로를 감제하고 원주 탈환을 준비한다.",
+   "higher_intent": "원주는 중동부전선을 장악하는 관건이다. 원주 남쪽 고지군을 확보해 원주-충주 도로와 원주-제천 도로를 통제하고 원주 공격의 발판을 만든다.",
+   "assigned_task": "제23연대(프랑스대대 배속)는 247고지를 비롯한 원주 남쪽 고지군을 탈취한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제38연대",
+     "alias": "인접 연대 1",
+     "other_names": [
+      "미 제38연대",
+      "제38연대(네덜란드대대 배속)"
+     ],
+     "side": "남쪽(후방) 및 우측",
+     "type": "infantry",
+     "mission": "미천 부근에서 방어하며 사단 후방과 우측방을 엄호한다.",
+     "xy": [
+      110,
+      40
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제9연대",
+     "alias": "인접 연대 2",
+     "other_names": [
+      "미 제9연대",
+      "사단 예비"
+     ],
+     "side": "남동쪽 원거리",
+     "type": "infantry",
+     "mission": "사단 예비로서 원주-제천 도로를 확보한다.",
+     "xy": [
+      195,
+      30
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제38연대는 미천 부근 진지를 고수한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 0,
+      "text": "D일 00:00부터 현 진지 고수"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "F9"
+     }
+    },
+    {
+     "unit": "A2",
+     "text": "적 연대 이상이 원주-제천 도로에 진출하면 제9연대가 그 도로를 확보하도록 증원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "R3",
+      "min_echelon": "연대",
+      "text": "적 연대 이상이 원주-제천 도로 일대에 있음"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "R3"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 원주 남쪽 7km 집결지에서 원주 시가지 남단까지이며, 원주-충주 도로를 중심으로 동서 약 6km 폭이다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "연대 좌측 경계",
+     "between": [
+      "제23연대",
+      "미상 인접부대"
+     ],
+     "xy": [
+      [
+       65,
+       70
+      ],
+      [
+       65,
+       140
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 우측 경계",
+     "between": [
+      "제23연대",
+      "제38연대"
+     ],
+     "xy": [
+      [
+       125,
+       70
+      ],
+      [
+       125,
+       140
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 후방 경계",
+     "between": [
+      "제23연대",
+      "제38연대"
+     ],
+     "xy": [
+      [
+       65,
+       70
+      ],
+      [
+       125,
+       70
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "U1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 700,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 집결지(원주 남쪽 7km)",
+     "ref": "F10",
+     "xy": [
+      95,
+      82
+     ]
+    }
+   },
+   {
+    "id": "U2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 700,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 집결지(원주 남쪽 7km)",
+     "ref": "F10",
+     "xy": [
+      95,
+      82
+     ]
+    }
+   },
+   {
+    "id": "U3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 700,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 집결지(원주 남쪽 7km)",
+     "ref": "F10",
+     "xy": [
+      95,
+      82
+     ]
+    }
+   },
+   {
+    "id": "U4",
+    "unit": "프랑스대대",
+    "alias": "제4대대",
+    "other_names": [
+     "프랑스 대대",
+     "유엔 프랑스대대"
+    ],
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 900,
+    "relationship": "배속",
+    "location": {
+     "note": "연대 집결지(원주 남쪽 7km)",
+     "ref": "F10",
+     "xy": [
+      95,
+      82
+     ]
+    }
+   },
+   {
+    "id": "U5",
+    "unit": "제37야전포병대대",
+    "alias": "포병 대대 1",
+    "other_names": [
+     "미 제37야전포병대대"
+    ],
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 85,
+    "equipment": "105mm 곡사포 18문",
+    "relationship": "직접지원",
+    "location": {
+     "note": "연대 집결지 남쪽 포진지",
+     "xy": [
+      93,
+      74
+     ]
+    }
+   },
+   {
+    "id": "U6",
+    "unit": "근접항공지원",
+    "alias": "항공 1",
+    "other_names": [
+     "유엔 공군"
+    ],
+    "echelon": "대대",
+    "type": "aviation",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "작전지역 밖 기지에서 요청 시 주간 지원"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "원주 시가지 남쪽 2~3km에 247고지를 중심으로 한 고지군이 있어 시가지와 원주-충주 도로를 감제한다. 원주-충주 도로는 남서쪽에서 고지군 사이를 지나 시가지로 들어간다. 5번 도로는 시가지에서 북쪽 횡성 방면과 남동쪽 제천 방면으로 갈라진다. 눈보라와 적설로 기동이 느리다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "원주 시가지",
+     "alias": "마을 1",
+     "other_names": [
+      "원주"
+     ],
+     "kind": "town",
+     "xy": [
+      100,
+      150
+     ],
+     "polygon": [
+      [
+       90,
+       140
+      ],
+      [
+       112,
+       140
+      ],
+      [
+       112,
+       162
+      ],
+      [
+       90,
+       162
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단이 탈환을 노린 중동부전선 요충지"
+    },
+    {
+     "id": "F2",
+     "name": "247고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      126
+     ],
+     "estimated": true,
+     "elevation_m": 247,
+     "evidence": "원주 남쪽에서 시가지를 감제하고 원주-충주 도로를 통제하는 중요 지형",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F3",
+     "name": "247고지 서측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      84,
+      124
+     ],
+     "line": [
+      [
+       78,
+       118
+      ],
+      [
+       84,
+       124
+      ],
+      [
+       88,
+       132
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "원주 남쪽 고지군 가운데 원주-충주 도로 서쪽 부분(추정)",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F4",
+     "name": "원주 남동쪽 무명고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      114,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "원주 남쪽 고지군 가운데 동쪽 부분(추정)",
+     "preparation": "hasty"
+    },
+    {
+     "id": "F5",
+     "name": "원주 남쪽 고지군",
+     "alias": "지점 1",
+     "kind": "area",
+     "xy": [
+      100,
+      126
+     ],
+     "polygon": [
+      [
+       74,
+       114
+      ],
+      [
+       122,
+       114
+      ],
+      [
+       122,
+       138
+      ],
+      [
+       74,
+       138
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "군단장이 4개 대대 이상 배치를 명한 고지군"
+    },
+    {
+     "id": "F6",
+     "name": "학성리",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      96,
+      163
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1/6 연대 진지 지역"
+    },
+    {
+     "id": "F7",
+     "name": "만경리",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      84,
+      168
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1/6 연대 진지 지역"
+    },
+    {
+     "id": "F8",
+     "name": "흥양리-청암리-장양리 일대",
+     "alias": "마을 4",
+     "other_names": [
+      "흥양리",
+      "청암리",
+      "장양리"
+     ],
+     "kind": "town",
+     "xy": [
+      118,
+      165
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1/6 제38연대 진지 지역"
+    },
+    {
+     "id": "F9",
+     "name": "미천",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      110,
+      40
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제38연대 철수 위치"
+    },
+    {
+     "id": "F10",
+     "name": "원주 남쪽 7km 집결지",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      95,
+      82
+     ],
+     "polygon": [
+      [
+       88,
+       76
+      ],
+      [
+       104,
+       76
+      ],
+      [
+       104,
+       88
+      ],
+      [
+       88,
+       88
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "1/7 밤 연대 철수 위치"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "원주-충주 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       100,
+       150
+      ],
+      [
+       97,
+       140
+      ],
+      [
+       93,
+       128
+      ],
+      [
+       91,
+       112
+      ],
+      [
+       90,
+       100
+      ],
+      [
+       88,
+       82
+      ],
+      [
+       80,
+       60
+      ],
+      [
+       65,
+       30
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "5번 도로(원주-횡성)",
+     "alias": "도로 2",
+     "other_names": [
+      "5번 도로"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       100,
+       150
+      ],
+      [
+       101,
+       162
+      ],
+      [
+       102,
+       175
+      ],
+      [
+       103,
+       188
+      ],
+      [
+       104,
+       200
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "원주-제천 도로",
+     "alias": "도로 3",
+     "other_names": [
+      "5번 도로(원주-제천)"
+     ],
+     "kind": "road",
+     "xy": [
+      [
+       100,
+       150
+      ],
+      [
+       115,
+       138
+      ],
+      [
+       130,
+       120
+      ],
+      [
+       150,
+       95
+      ],
+      [
+       170,
+       70
+      ],
+      [
+       195,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 247고지 연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 1800,
+    "equipment": "소화기, 박격포",
+    "identified": false,
+    "known_at_start": "원주 남쪽 고지군을 점령한 북한군. 규모는 미상이며 연대로 추정한다.",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      100,
+      126
+     ],
+     "ref": "F5",
+     "frontage_m": 4000,
+     "polygon": [
+      [
+       78,
+       118
+      ],
+      [
+       118,
+       118
+      ],
+      [
+       118,
+       134
+      ],
+      [
+       78,
+       134
+      ]
+     ],
+     "note": "247고지와 서측 능선, 남동쪽 무명고지에 급편 진지를 둠"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 원주 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 1800,
+    "identified": false,
+    "known_at_start": "D-1일 밤 원주 시가지에 들어온 북한군 부대",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      100,
+      150
+     ],
+     "ref": "F1",
+     "frontage_m": 2000,
+     "note": "원주 시가지 점령"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 08:00",
+   "light": "day",
+   "notes": "혹한 속에 눈보라가 연일 이어지고, 쌓인 눈 때문에 도보 기동과 관측이 제한된다. 근접항공지원은 주간에 기상이 허락할 때만 가능하다. 연대는 D-1일 밤 외곽진지에서 철수해 재정비가 덜 되었다."
+  }
+ }
+}

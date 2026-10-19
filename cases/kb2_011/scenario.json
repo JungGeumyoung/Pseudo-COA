@@ -1,0 +1,527 @@
+{
+ "id": "kb2_011",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 13:00",
+  "start_t": 13,
+  "horizon_h": 52,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제2대대와 제3대대 손실이 모두 0.7 초과",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.7,
+      "text": "제2대대 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.7,
+      "text": "제3대대 손실 0.7 초과"
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "text": "리틀 노리·빅 노리 일대 적 3개 부대 손실이 모두 0.7 초과",
+    "and": [
+     {
+      "type": "losses_exceed",
+      "group": "E1",
+      "fraction": 0.7,
+      "text": "E1 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "E2",
+      "fraction": 0.7,
+      "text": "E2 손실 0.7 초과"
+     },
+     {
+      "type": "losses_exceed",
+      "group": "H1",
+      "fraction": 0.7,
+      "text": "H1 손실 0.7 초과"
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제140사단은 다음 작전에 유리한 아군 전초진지(리틀 노리고지·베티고지)를 탈취·유지한다. 빼앗긴 고지는 야간과 파상 역습으로 되찾고, 빅 노리고지와 마량산-222고지 주진지는 고수한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "리틀 노리고지와 무명고지를 급편방어로 고수한다.",
+       "objective_ref": "F_LN",
+       "axis_xy": [
+        [
+         117,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 13,
+        "text": "D일 13:00 현재 방어 중"
+       },
+       "basis": "서술: 11:50 수색중대를 밀어내고 고지를 다시 차지했다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 빅 노리고지로 물러난다.",
+       "objective_ref": "F_BN",
+       "axis_xy": [
+        [
+         117,
+         108
+        ],
+        [
+         116,
+         110
+        ],
+        [
+         115,
+         113
+        ],
+        [
+         114,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "E1 손실 0.5 초과"
+       },
+       "basis": "추정: D일 13:30 공격 뒤 30분 만에 고지를 내주었다."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "빅 노리고지를 고수하며 리틀 노리고지에 측방 사격을 한다.",
+       "objective_ref": "F_BN",
+       "axis_xy": [
+        [
+         114,
+         117
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 13,
+        "text": "D일 13:00 현재 배치"
+       },
+       "basis": "서술: D+2일 빅 노리고지 7부 능선에서 강력한 사격으로 공격을 멈추게 했다."
+      },
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "text": "일몰 후 병력을 나누어 빅 노리고지 정면, 고장리 계곡, 임진강 서안 제방의 삼면에서 리틀 노리고지를 역습한다.",
+       "objective_ref": "F_LN",
+       "axis_xy": [
+        [
+         114,
+         117
+        ],
+        [
+         115,
+         113
+        ],
+        [
+         116,
+         109.5
+        ],
+        [
+         117,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 18,
+        "text": "D일 18:00 일몰 후 야간 공격"
+       },
+       "basis": "서술: 일몰 후 대대규모가 삼면에서 동시에 공격했다. 시각은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군이 리틀 노리고지에 있으면 대대 규모로 파상 역습을 되풀이한다.",
+       "objective_ref": "F_LN",
+       "axis_xy": [
+        [
+         114,
+         117
+        ],
+        [
+         115,
+         113
+        ],
+        [
+         116,
+         109.5
+        ],
+        [
+         117,
+         108
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F_LN",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 리틀 노리고지 안에 있음"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 3
+       },
+       "basis": "서술: 리틀 노리고지는 다섯 차례 주인이 바뀌었다. D+1일 13:30 파상 공격. 간격과 횟수는 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군이 빅 노리고지에 있으면 대대 규모로 역습한다.",
+       "objective_ref": "F_BN",
+       "axis_xy": [
+        [
+         112,
+         124
+        ],
+        [
+         113,
+         120
+        ],
+        [
+         114,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F_BN",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 빅 노리고지 안에 있음"
+       },
+       "basis": "서술: D+1일 20:30 대대규모가 빅 노리고지를 반격했다."
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "빅 노리고지 대대의 손실이 커지면 빅 노리고지로 증원한다.",
+       "objective_ref": "F_BN",
+       "axis_xy": [
+        [
+         112,
+         124
+        ],
+        [
+         113,
+         120
+        ],
+        [
+         114,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.35,
+        "text": "E2 손실 0.35 초과"
+       },
+       "basis": "추정: 연대 화력집중으로 큰 사상자가 났는데도 대대규모 파상공격과 D+1일 야간 역습이 이어졌다."
+      },
+      {
+       "timing": "이어서",
+       "mode": "counterattack",
+       "text": "이어서 리틀 노리고지를 역습한다.",
+       "objective_ref": "F_LN",
+       "axis_xy": [
+        [
+         114,
+         117
+        ],
+        [
+         115,
+         113
+        ],
+        [
+         116,
+         109.5
+        ],
+        [
+         117,
+         108
+        ]
+       ],
+       "basis": "추정: 반복 역습에 새 대대가 필요했다."
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "리틀 노리고지 서측 사면 화력거점에서 남쪽능선 접근로에 측방 사격을 한다.",
+       "objective_ref": "F_LN",
+       "axis_xy": [
+        [
+         114.5,
+         107.5
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 13,
+        "text": "D일 13:00 현재 배치"
+       },
+       "basis": "서술: D+2일 제11중대가 측방화력에 막혔다."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 빅 노리고지로 물러난다.",
+       "objective_ref": "F_BN",
+       "axis_xy": [
+        [
+         114.5,
+         107.5
+        ],
+        [
+         113,
+         112
+        ],
+        [
+         114,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H2",
+        "fraction": 0.6,
+        "text": "H2 손실 0.6 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "아군이 리틀 노리고지에 들어오면 집중사격한다.",
+       "objective_ref": "F_LN",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         117,
+         108
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F_LN",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 리틀 노리고지 안에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 3
+       },
+       "basis": "서술: 제1·제8포병사단의 직접 지원, D일 새벽 5,300여 발."
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "아군이 빅 노리고지에 들어오면 집중사격한다.",
+       "objective_ref": "F_BN",
+       "axis_xy": [
+        [
+         110,
+         160
+        ],
+        [
+         114,
+         117
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F_BN",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 빅 노리고지 안에 있음"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "니키·테시고지를 고수하고 베티고지를 견제한다.",
+       "objective_ref": "F_NICKIE",
+       "axis_xy": [
+        [
+         92,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 13,
+        "text": "D일 13:00 현재 배치"
+       },
+       "basis": "서술: 07:20 105고지에서 물러난 뒤 추가 공격 기록이 없다."
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "마량산-222고지 주진지를 고수한다.",
+       "objective_ref": "F_MARYANG",
+       "axis_xy": [
+        [
+         110,
+         135
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 13,
+        "text": "D일 13:00 현재 배치"
+       },
+       "basis": "서술: 주력은 마량산-222고지 선에 배치되었다."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 제420연대 예비 1개 대대",
+    "alias": "적 대대 4",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 600,
+    "other_names": [
+     "적 제140사단 제420연대"
+    ],
+    "position": {
+     "xy": [
+      112,
+      124
+     ],
+     "ref": "F_BN",
+     "note": "빅 노리고지 북쪽 후사면(추정). 반복 역습의 증원 부대다."
+    }
+   },
+   {
+    "id": "H2",
+    "unit": "적 제420연대 화력거점 1개 중대",
+    "alias": "적 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "personnel": 120,
+    "equipment": "기관총·자동화기",
+    "position": {
+     "xy": [
+      114.5,
+      107.5
+     ],
+     "ref": "F_LN",
+     "note": "리틀 노리고지 서측 사면 화력거점(추정). 남쪽능선에 측방 사격을 한다."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 13:00",
+    "t": 13,
+    "kind": "air_window",
+    "duration_h": 4.3,
+    "note": "주간 근접항공지원 가능 시간대."
+   },
+   {
+    "when": "D일 17:20",
+    "t": 17.33,
+    "kind": "night",
+    "duration_h": 14.2,
+    "note": "일몰부터 D+1일 07:30 여명까지 야간."
+   },
+   {
+    "when": "D+1일 07:30",
+    "t": 31.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명."
+   },
+   {
+    "when": "D+1일 07:30",
+    "t": 31.5,
+    "kind": "air_window",
+    "duration_h": 9.8,
+    "note": "주간 근접항공지원 가능 시간대."
+   },
+   {
+    "when": "D+1일 17:20",
+    "t": 41.33,
+    "kind": "night",
+    "duration_h": 14.2,
+    "note": "일몰부터 D+2일 07:30까지 야간."
+   },
+   {
+    "when": "D+2일 07:30",
+    "t": 55.5,
+    "kind": "air_window",
+    "duration_h": 9.8,
+    "note": "주간 근접항공지원 가능 시간대."
+   }
+  ]
+ }
+}

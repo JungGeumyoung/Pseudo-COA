@@ -1,0 +1,478 @@
+{
+ "id": "kb2_022",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D+1일 07:00",
+  "start_t": 31,
+  "horizon_h": 56,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제3대대(+사단 수색중대) 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제348연대 1개 대대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제116사단은 10월 공세로 탈취한 니키고지와 테시고지를 고수해 제15연대 주저항선을 감제하고, 마량산-회산동 주거점의 증원과 포병 차단사격으로 아군 역습부대를 고지 사면에서 격퇴한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         88,
+         118
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         99,
+         122
+        ],
+        [
+         106,
+         123
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00 탈취한 지상진지와 교통호 고수"
+       },
+       "text": "적 제348연대 1개 대대는 니키고지와 테시고지 지상진지와 교통호를 고수한다.",
+       "basis": "서술: 고지 피탈 뒤 지상진지를 완전히 장악하고 아군 역습에 완강히 저항함."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         92,
+         122
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         94,
+         118
+        ],
+        [
+         96,
+         116
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM1",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 니키고지 안에 있음"
+       },
+       "repeat": {
+        "max": 8,
+        "interval_h": 2
+       },
+       "text": "적 제348연대 1개 대대는 니키고지 사면에 돌입한 아군을 교통호에서 역습해 격퇴한다.",
+       "basis": "서술: 사단 수색중대가 7부 능선까지 진격했으나 완강한 저항에 밀려 후퇴, 이후 재공격도 모두 격퇴. 반복 횟수와 간격은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T14",
+       "axis_xy": [
+        [
+         92,
+         120
+        ],
+        [
+         88,
+         124
+        ],
+        [
+         84,
+         128
+        ],
+        [
+         80,
+         134
+        ],
+        [
+         76,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 제348연대 1개 대대 손실 0.6 초과"
+       },
+       "text": "적 제348연대 1개 대대는 고양대를 포기하고 마량산으로 철수한다.",
+       "basis": "추정: 서술에 철수는 없으나 전투력 고갈 시의 반응 규칙으로 둠."
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T14",
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00 주거점 방어 계속"
+       },
+       "axis_xy": [
+        [
+         70,
+         140
+        ],
+        [
+         90,
+         140
+        ],
+        [
+         112,
+         140
+        ]
+       ],
+       "text": "적 제348연대(-)는 마량산-회산동-하후동 주거점을 고수한다.",
+       "basis": "서술: 백석동-마량산-회산동-하후동을 연결하는 주 거점 형성."
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         76,
+         140
+        ],
+        [
+         80,
+         134
+        ],
+        [
+         84,
+         128
+        ],
+        [
+         88,
+         124
+        ],
+        [
+         92,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "적 제348연대 1개 대대 손실 0.25 초과"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       },
+       "text": "적 제348연대(-)는 마량산-니키 능선으로 1개 중대씩 고양대를 증원한다.",
+       "basis": "서술: 수차례 역습을 받고도 고지를 유지했고 전투 후 니키·테시고지 일대에 병력을 증원함. 문턱과 규모는 추정."
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         100,
+         131
+        ],
+        [
+         104,
+         127
+        ],
+        [
+         108,
+         124
+        ],
+        [
+         108,
+         121
+        ],
+        [
+         106,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM2",
+        "min_echelon": "소대",
+        "text": "아군 소대 이상이 테시고지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       },
+       "text": "적 제348연대 증원 중대는 회산동-테시 능선으로 내려와 테시고지 사면의 아군 배후로 역습한다.",
+       "basis": "서술: 연대 수색중대 제2소대가 테시고지 8부 능선에서 백병전 중 적 증원 병력이 배후에서 공격함. 반복은 추정."
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         106,
+         123
+        ],
+        [
+         106,
+         121
+        ],
+        [
+         106,
+         120
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T3",
+        "min_echelon": "소대",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "side": "friendly",
+          "ref": "T3",
+          "min_echelon": "소대",
+          "text": "아군 소대 이상이 105고지에 있음"
+         }
+        ],
+        "text": "아군 소대 이상이 105고지에 있음"
+       },
+       "text": "적 제348연대 증원 중대는 105고지를 공격한다.",
+       "basis": "추정: D+1일 탈취한 105고지를 D+3일 아군이 다시 탈환한 기록으로 보아 그 사이 적이 105고지를 되찾았음."
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM8",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         85,
+         130
+        ],
+        [
+         94,
+         107
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00부터 계속"
+       },
+       "text": "적 포병 제2사단은 제3대대 주진지에 차단사격을 한다.",
+       "basis": "서술: D일 아침부터 제15연대 정면 포격, 19:00부터 제3대대 주진지 차단사격."
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T21",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         95,
+         120
+        ],
+        [
+         113,
+         98
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00부터 계속"
+       },
+       "text": "적 포병 제2사단은 임진강 도하점과 임진강 서안에 차단사격을 한다.",
+       "basis": "서술: 임진강 서안에 대한 차단사격."
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "T18",
+       "axis_xy": [
+        [
+         75,
+         160
+        ],
+        [
+         85,
+         135
+        ],
+        [
+         95,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T18",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 고양대 안에 있음"
+       },
+       "repeat": {
+        "max": 6,
+        "interval_h": 3
+       },
+       "text": "적 포병 제2사단은 고양대 남사면의 아군 공격부대에 집중사격을 한다.",
+       "basis": "서술: D+3일 대대 공격이 치열한 포격에 막힘. 반복은 추정."
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T14",
+       "start": {
+        "type": "time_elapsed",
+        "value": 31,
+        "text": "D+1일 07:00"
+       },
+       "axis_xy": [
+        [
+         80,
+         150
+        ],
+        [
+         78,
+         145
+        ]
+       ],
+       "text": "적 지원 전차부대는 마량산 후방에서 대기한다.",
+       "basis": "서술: 전차 지원을 받는다고 했으나 구간 중 투입 기록 없음."
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E5",
+    "unit": "적 제348연대 증원 중대",
+    "alias": "적 중대 1",
+    "nation": "중국",
+    "echelon": "중대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 150,
+    "position": {
+     "xy": [
+      100,
+      131
+     ],
+     "ref": "R3",
+     "note": "회산동-테시 능선 중턱 은폐 대기(추정)"
+    },
+    "other_names": [
+     "중공군 증원 병력",
+     "적 제116사단 제348연대 후속부대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+1일 18:00",
+    "t": 42,
+    "kind": "night",
+    "duration_h": 12.5,
+    "note": "야간, 시계 제한"
+   },
+   {
+    "when": "D+2일 06:30",
+    "t": 54.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+2일 07:00",
+    "t": 55,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+2일 18:00",
+    "t": 66,
+    "kind": "night",
+    "duration_h": 12.5,
+    "note": "야간, 시계 제한"
+   },
+   {
+    "when": "D+3일 06:30",
+    "t": 78.5,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+3일 07:00",
+    "t": 79,
+    "kind": "air_window",
+    "duration_h": 8,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ }
+}

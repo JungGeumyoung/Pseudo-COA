@@ -1,0 +1,681 @@
+{
+ "id": "kb1_102",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 18:00",
+  "start_t": 18,
+  "horizon_h": 150,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "북한군 제7사단 양 연대 손실 0.7 초과(적 전투력 30% 미만)",
+    "group": "E1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "북한군 제7사단 우측 연대 손실 0.7 초과",
+      "group": "E2",
+      "fraction": 0.7
+     }
+    ]
+   },
+   {
+    "type": "losses_exceed",
+    "text": "제1대대·제2대대 손실 0.7 초과(아군 전투력 30% 미만)",
+    "group": "G1",
+    "fraction": 0.7,
+    "and": [
+     {
+      "type": "losses_exceed",
+      "text": "제2대대 손실 0.7 초과",
+      "group": "G2",
+      "fraction": 0.7
+     }
+    ]
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제6사단은 진주-검암리-마산 도로를 따라 돌파하고 북한군 제7사단은 남강을 도하해 남강 남쪽 도로를 차단하여 미 제35연대를 각개 격파하고 마산을 점령한 뒤 부산 방면으로 진출해 삼랑진·구포 선의 주보급로를 차단한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D일 23:00 제1·제2대대 간격 정면에서 남강을 도하해 공격한다.",
+       "objective_ref": "T14",
+       "axis_xy": [
+        [
+         90,
+         180
+        ],
+        [
+         93,
+         170
+        ],
+        [
+         93,
+         161
+        ],
+        [
+         94,
+         152
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 23,
+        "text": "D일 23:00 사단 총공격 개시"
+       },
+       "basis": "서술: D일 야간 총공격, D+1일 남강 도하해 대대 간격 돌파"
+      },
+      {
+       "timing": "이어서",
+       "mode": "infiltrate",
+       "text": "간격을 돌파해 연대 후방의 말굽 고지로 침투한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         94,
+         152
+        ],
+        [
+         95,
+         145
+        ],
+        [
+         95,
+         135
+        ],
+        [
+         95,
+         128
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         90,
+         113
+        ]
+       ],
+       "basis": "서술: 검암리 동쪽 미 제24연대 후방을 위협하는 고지(말굽)상의 북한군"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "text": "말굽 고지를 확보하고 미 제24연대와 제1대대 후방을 위협한다.",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         90,
+         113
+        ]
+       ],
+       "basis": "서술: D+4일 아침까지 고지 점유"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 남강 북안으로 철수한다.",
+       "objective_ref": "T13",
+       "axis_xy": [
+        [
+         90,
+         113
+        ],
+        [
+         95,
+         130
+        ],
+        [
+         93,
+         161
+        ],
+        [
+         90,
+         180
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "북한군 제7사단 좌측 연대 손실 0.6 초과",
+        "group": "E1",
+        "fraction": 0.6
+       },
+       "basis": "추정: 공격력 한계 도달 후 수세 전환"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D일 23:00 남강 동부 도하지점에서 도하해 제2대대 강변진지를 공격한다.",
+       "objective_ref": "CM9",
+       "axis_xy": [
+        [
+         145,
+         180
+        ],
+        [
+         145,
+         172
+        ],
+        [
+         145,
+         167
+        ],
+        [
+         142,
+         160
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 23,
+        "text": "D일 23:00 사단 총공격 개시"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       },
+       "basis": "서술: D+1일 미 제35연대 진지 공격, D+4일 이후 강변진지 재돌파. 야간 반복 공격 횟수는 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "함안-남지 도로를 따라 연대 후방으로 공격한다.",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         142,
+         160
+        ],
+        [
+         138,
+         150
+        ],
+        [
+         128,
+         138
+        ],
+        [
+         118,
+         122
+        ],
+        [
+         110,
+         108
+        ]
+       ],
+       "basis": "서술: 강변진지 돌파 후 후방지역 진출"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 남강 북안으로 철수한다.",
+       "objective_ref": "T15",
+       "axis_xy": [
+        [
+         128,
+         138
+        ],
+        [
+         138,
+         150
+        ],
+        [
+         145,
+         167
+        ],
+        [
+         145,
+         180
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "북한군 제7사단 우측 연대 손실 0.6 초과",
+        "group": "E2",
+        "fraction": 0.6
+       },
+       "basis": "추정: 공격력 한계 도달 후 수세 전환"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D일 23:00 진주-검암리 도로를 따라 제1대대 정면을 공격한다.",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         20,
+         121
+        ],
+        [
+         35,
+         122
+        ],
+        [
+         45,
+         120
+        ],
+        [
+         55,
+         119
+        ],
+        [
+         65,
+         118
+        ],
+        [
+         75,
+         118
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 23,
+        "text": "D일 23:00 사단 총공격 개시"
+       },
+       "basis": "서술: 제6사단의 진주-검암리-마산 도로 돌파 계획"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "검암리를 지나 마산 방향으로 공격한다.",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         75,
+         118
+        ],
+        [
+         95,
+         114
+        ],
+        [
+         110,
+         108
+        ],
+        [
+         135,
+         85
+        ]
+       ],
+       "basis": "서술: 작전계획상 마산 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "hold",
+       "text": "손실이 커지면 검암리 서쪽에서 방어로 전환한다.",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         35,
+         122
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "북한군 제6사단 검암리 축선 연대 손실 0.5 초과",
+        "group": "E3",
+        "fraction": 0.5
+       },
+       "basis": "추정: 제1대대에 격퇴된 뒤 검암리 일대 집결"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "text": "D일 23:00 미 제24연대 정면을 돌파해 함안을 공격한다.",
+       "objective_ref": "T10",
+       "axis_xy": [
+        [
+         55,
+         100
+        ],
+        [
+         65,
+         101
+        ],
+        [
+         75,
+         102
+        ],
+        [
+         85,
+         104
+        ],
+        [
+         95,
+         106
+        ],
+        [
+         110,
+         108
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 23,
+        "text": "D일 23:00 사단 총공격 개시"
+       },
+       "basis": "서술: D일 야간 제6사단 주력이 미 제24연대 제2대대를 돌파, 함안 피탈"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "해안선 고지대 확보를 위해 전투산을 공격한다.",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         110,
+         108
+        ],
+        [
+         100,
+         100
+        ],
+        [
+         90,
+         96
+        ],
+        [
+         82,
+         93
+        ]
+       ],
+       "basis": "서술: 북한군이 다시 전투산을 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 함안 서측으로 철수해 방어로 전환한다.",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         110,
+         108
+        ],
+        [
+         95,
+         106
+        ],
+        [
+         75,
+         102
+        ],
+        [
+         55,
+         100
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "북한군 제6사단 주력 손실 0.6 초과",
+        "group": "E4",
+        "fraction": 0.6
+       },
+       "basis": "추정: 공격력 한계 후 수세 전환"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "제7사단 공격 연대의 손실이 커지면 남강을 도하해 제2대대 강변진지 정면에 증원한다.",
+       "objective_ref": "CM9",
+       "axis_xy": [
+        [
+         120,
+         190
+        ],
+        [
+         130,
+         180
+        ],
+        [
+         140,
+         170
+        ],
+        [
+         142,
+         160
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "북한군 제7사단 우측 연대 손실 0.3 초과",
+        "group": "E2",
+        "fraction": 0.3
+       },
+       "basis": "추정: D+4일 이후 강변진지 재돌파와 검암리 일대 병력·보급품 집결"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "text": "제2대대 강변진지를 돌파해 연대 후방으로 공격한다.",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         142,
+         160
+        ],
+        [
+         135,
+         150
+        ],
+        [
+         128,
+         138
+        ],
+        [
+         118,
+         122
+        ]
+       ],
+       "basis": "서술: 강변진지 돌파 후 후방지역 북한군"
+      }
+     ]
+    },
+    {
+     "group": "H2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "D일 23:00부터 연대 진지와 남강 남안에 공격준비사격을 한다.",
+       "objective_ref": "CM9",
+       "axis_xy": [
+        [
+         25,
+         110
+        ],
+        [
+         100,
+         155
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 23,
+        "text": "D일 23:00 사단 총공격 개시"
+       },
+       "basis": "추정: 총공격 지원 포병"
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "text": "해안선 고지대 확보를 위해 전투산·필봉 일대를 포격한다.",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         25,
+         110
+        ],
+        [
+         82,
+         93
+        ]
+       ],
+       "repeat": {
+        "max": 3,
+        "interval_h": 24
+       },
+       "basis": "서술: 전투산, 필봉, 서북산 일대 포병사격"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제7사단 예비 연대",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 70,
+    "position": {
+     "xy": [
+      120,
+      190
+     ],
+     "note": "의령 동북 일대 남강 북안 후방, 제7사단 2제대(추정)",
+     "ref": "T13"
+    },
+    "other_names": [
+     "제7사단 후속 연대"
+    ]
+   },
+   {
+    "id": "H2",
+    "unit": "북한군 제6사단 포병연대",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "+",
+    "strength_pct": 70,
+    "equipment": "76mm·122mm 곡사포 혼성(추정)",
+    "position": {
+     "xy": [
+      25,
+      110
+     ],
+     "note": "진주-검암리 도로 서쪽 후방 포진지(추정)",
+     "ref": "R1"
+    },
+    "other_names": [
+     "제6사단 포병"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간, 항공지원 불가와 관측 제한"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 미 제5공군 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+3일 19:30",
+    "t": 91.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+4일 06:00",
+    "t": 102,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+4일 19:30",
+    "t": 115.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+5일 06:00",
+    "t": 126,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+5일 19:30",
+    "t": 139.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+6일 06:00",
+    "t": 150,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "주간 근접항공지원 가능"
+   }
+  ]
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "id": "kb2_035",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-06-25",
+   "end_date": "1953-06-29",
+   "d_day": "1953-06-25",
+   "order_time": "D일 12:00(추정)",
+   "text": "중공군 공격 직전 제15연대 방어 배치부터 사단이 전초에서 물러나 주저항선 방어로 들어갈 때까지의 전투 전체",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 연대의 첫 결심인 주저항선 2개 대대·아이슬란드선 1개 대대 배치와 전초 편성으로 잡았다."
+  },
+  "perspective_rationale": "관점 지정이 제15연대이고, 제15연대가 구간 시작 때 퀸고지·박고지를 포함한 사단 우측 작전지역을 맡아 배치·역습 결심 서술이 가장 많다. 사단 예비 제12연대의 대대 배속과 역습은 상급 규칙으로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "주저항선은 지켰으나 제3고지·제1고지·박고지를 D일 밤 상실했고 제1대대와 배속된 제12연대 제1대대의 역습으로 일시 탈환했을 뿐 유지하지 못했다. 퀸고지는 D+3일 새벽 중공군 2개 대대에 피탈되었다. D+4일 제11연대가 제3고지·박고지를 되찾았으나 군단장 지시로 물러나 주저항선 방어로 전환했다. 아군 전사 245·부상 1,167·실종 14, 중공군 사살 1,472·포로 106."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 작전지역 남서 모서리. 임진강-역곡천 합류점을 (80,130)에 두고 전초선(제1고지-박고지-제3고지-퀸고지-마이크고지)을 북동 방향으로, 주저항선을 그 남동 약 1km에 두었다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_035_퀸고지_250고지_박고지_199고지_전투",
+  "title": "퀸고지(250고지)-박고지(199고지) 전투",
+  "dates": "1953. 6. 25.~29.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '퀸고지(250고지)-박고지(199고지) 전투' (pdf 144쪽)",
+  "pdf_page": 144,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 23,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "6월 25일 밤~26일 박고지 역습에 제1대대의 중대를 하나씩 축차 투입(제2중대는 퀸고지→제3고지, 제3중대는 박고지, 제1중대는 뒤이어 지원)",
+    "alternative": "처음부터 대대 전 병력을 박고지에 집중해 탈환 직후 대대규모 반격을 받아낼 병력을 정상에 확보",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "이날 오후에 제1대대는 연대장의 중대별 축차투입 대신 대대의 모든 병력으로 박고지를 회복하라는 명령에 따라 공격을 감행하였으나, 고지 8부 능선에서 더 이상의 진전을보지 못하고 주저항선으로 철수하였다."
+   },
+   {
+    "decision": "6월 28일 제12연대 수색중대 단독으로 박고지 탈환 시도",
+    "alternative": "충분한 포병 화력지원을 계획하고 대대급 이상으로 공격(29일 제11연대 공격처럼)",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "박고지를공격한 수색중대는 충분한 화력지원을 받지 못한 채 고지탈환에 실패하고 복귀하였다."
+   },
+   {
+    "decision": "박고지 등 3개 전초 진지(제3고지·박고지·제1고지) 방어를 제10중대 1개 중대에 전담",
+    "alternative": "전초에 병력을 증강하거나 예비대대를 아이슬란드선보다 전방에 두어 제3고지·제1고지 상실 전에 투입",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.5227,
+   "duration_s": 489.3,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 48389,
+     "cache_read_input_tokens": 99004,
+     "cache_creation_input_tokens": 22681
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 10534,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17490
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [
+    {
+     "id": "E:E5[0]",
+     "verdict": "time_copied",
+     "reason": "D+2일 22:00이라는 공격 개시 시각은 사전에 정해진 적 계획이 아니라 D+3일 새벽 퀸고지 상실이라는 실제 결과에서 역산된 추정 시각이다.",
+     "fix": "정확한 개시 시각 대신 '제15연대 예비 소모 등 조건 충족 시' 같은 전투력 조건부 공격으로 바꾸거나 시각을 범위로 완화한다."
+    },
+    {
+     "id": "E:E5[1]",
+     "verdict": "disguised_result",
+     "reason": "퀸고지 '확보'는 공격이 성공했는지 여부에 달린 전투 결과인데 이를 '이어서' 수행되는 즉시 과업처럼 기술했다.",
+     "fix": "확보 여부는 시뮬레이터가 전투력으로 판정하게 하고, 계획에는 공격 실시까지만 넣는다."
+    }
+   ],
+   "cost_usd": 0.0510152
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

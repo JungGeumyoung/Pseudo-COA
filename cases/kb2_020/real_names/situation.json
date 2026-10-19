@@ -1,0 +1,831 @@
+{
+ "id": "kb2_020",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "미 제1해병연대",
+   "alias": "아군 연대",
+   "echelon": "해병연대",
+   "other_names": [
+    "제1해병연대",
+    "제1연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "미 제1해병사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1해병사단"
+   ],
+   "higher_mission": "미 제1해병사단은 사미천-판문점-김포의 제임스타운선 주저항선을 고수하고 위력수색과 파괴사격으로 전초지대를 통제한다.",
+   "higher_intent": "판문점 일대를 통제하고 백학산 주저항선의 안전을 보장한다. 이를 위해 주저항선 전방에 견고한 전초를 유지한다.",
+   "assigned_task": "판문점 동쪽 주저항선과 벙커고지 전초를 방어한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "한국해병 제1연대",
+     "alias": "인접 연대 1",
+     "side": "서측",
+     "mission": "판문점 서쪽 주저항선을 방어한다.",
+     "type": "marine",
+     "echelon": "연대",
+     "xy": [
+      20,
+      95
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "미 제5해병연대",
+     "alias": "인접 연대 2",
+     "side": "동측",
+     "mission": "사미천 서쪽 주저항선을 방어한다.",
+     "type": "marine",
+     "echelon": "연대",
+     "xy": [
+      150,
+      100
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "미 제7해병연대(-)",
+     "alias": "인접 연대 3",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 역습을 준비한다.",
+     "type": "marine",
+     "echelon": "연대",
+     "xy": [
+      85,
+      60
+     ],
+     "other_names": [
+      "제7연대"
+     ]
+    },
+    {
+     "id": "A4",
+     "unit": "제7해병연대 G중대",
+     "alias": "인접 중대 1",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비로서 벙커고지 증원을 준비한다.",
+     "type": "marine",
+     "echelon": "중대",
+     "xy": [
+      82,
+      85
+     ],
+     "other_names": [
+      "사단예비 G중대"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A4",
+     "text": "적 대대 이상이 벙커고지에 있으면 사단은 사단 예비 G중대를 벙커고지로 보낸다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "text": "적 대대 이상이 벙커고지 안에 있음",
+      "side": "enemy",
+      "ref": "T1",
+      "min_echelon": "대대"
+     },
+     "action": {
+      "mode": "reinforce",
+      "objective_ref": "T1",
+      "axis_xy": [
+       [
+        82,
+        85
+       ],
+       [
+        80,
+        95
+       ],
+       [
+        79,
+        105
+       ],
+       [
+        78,
+        114
+       ],
+       [
+        80,
+        128
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A3",
+     "text": "제1대대 손실이 0.5를 넘으면 사단은 제7해병연대(-)로 연대 지역에 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "text": "연대 예비 제1대대 손실 0.5 초과",
+      "group": "G4",
+      "fraction": 0.5
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "T1",
+      "axis_xy": [
+       [
+        85,
+        60
+       ],
+       [
+        82,
+        80
+       ],
+       [
+        80,
+        95
+       ],
+       [
+        79,
+        110
+       ],
+       [
+        80,
+        128
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 서쪽 판문점 동측에서 동쪽 제5해병연대 경계까지 약 8km 정면이다. 주저항선 전방 벙커고지·48A·GOP 2 전초를 포함한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "서측 연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       43,
+       60
+      ],
+      [
+       43,
+       100
+      ],
+      [
+       46,
+       140
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "동측 연대 전투지경선",
+     "between": [
+      "아군 연대",
+      "A2"
+     ],
+     "xy": [
+      [
+       125,
+       60
+      ],
+      [
+       125,
+       105
+      ],
+      [
+       127,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1해병연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    },
+    "other_names": [
+     "제1연대 1대대"
+    ]
+   },
+   {
+    "id": "F2",
+    "unit": "제1해병연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    },
+    "other_names": [
+     "제2대대"
+    ]
+   },
+   {
+    "id": "F3",
+    "unit": "제1해병연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 90,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제7해병연대 제3대대 H중대",
+    "alias": "배속 중대 1",
+    "echelon": "중대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "location": {
+     "note": "연대 작전지역 후방"
+    },
+    "other_names": [
+     "제7연대 H중대"
+    ]
+   },
+   {
+    "id": "F5",
+    "unit": "제7해병연대 제3대대 I중대",
+    "alias": "배속 중대 2",
+    "echelon": "중대",
+    "type": "marine",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "배속",
+    "location": {
+     "note": "연대 작전지역 내 벙커고지 후방"
+    },
+    "other_names": [
+     "제7연대 I중대"
+    ]
+   },
+   {
+    "id": "F6",
+    "unit": "제11해병연대 1개 대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포 18문",
+    "location": {
+     "note": "주저항선 후방 포진지"
+    },
+    "other_names": [
+     "포병연대"
+    ]
+   },
+   {
+    "id": "F7",
+    "unit": "제1전차대대 1개 중대",
+    "alias": "전차 중대 1",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "작전통제",
+    "equipment": "M-46 전차, 화염방사전차",
+    "location": {
+     "note": "주저항선 후방"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "판문점 북동쪽의 표고 150m 미만 구릉과 협곡 지대다. 북쪽 대덕산·망해산의 중공군 고지군이 아군 지역 대부분을 감제한다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T1",
+     "name": "벙커고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      80,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 122,
+     "evidence": "58A 서남쪽 1km, 판문점 북동쪽 5km. 노무대와 참호 구축 중",
+     "other_names": [
+      "122고지",
+      "Bunker Hill"
+     ],
+     "preparation": "hasty"
+    },
+    {
+     "id": "T2",
+     "name": "58A 진지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      87,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "중공군 고지에서 감제되어 전초 유지 곤란",
+     "other_names": [
+      "Siberia",
+      "58A 고지"
+     ],
+     "preparation": "hasty"
+    },
+    {
+     "id": "T3",
+     "name": "56A 진지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      94,
+      129
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "D중대가 점령 후 58A로 돌진",
+     "preparation": "hasty"
+    },
+    {
+     "id": "T4",
+     "name": "48A 전초진지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      112,
+      121
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제2대대 F중대 정면 전초",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T5",
+     "name": "GOP 2",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      47,
+      101
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "판문점 동쪽 700~800m 전초",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "T6",
+     "name": "판문점",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      40,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "휴전회담 장소, 사격제한구역",
+     "polygon": [
+      [
+       35,
+       95
+      ],
+      [
+       45,
+       95
+      ],
+      [
+       45,
+       105
+      ],
+      [
+       35,
+       105
+      ]
+     ]
+    },
+    {
+     "id": "T7",
+     "name": "백학산",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      75,
+      65
+     ],
+     "estimated": true,
+     "elevation_m": 229,
+     "evidence": "판문점 동남쪽 5km, 주진지 요충"
+    },
+    {
+     "id": "T8",
+     "name": "대덕산",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      95,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 236,
+     "evidence": "중공군 고지군 중심"
+    },
+    {
+     "id": "T9",
+     "name": "망해산",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      55,
+      178
+     ],
+     "estimated": true,
+     "elevation_m": 272,
+     "evidence": "중공군 진지"
+    },
+    {
+     "id": "T10",
+     "name": "207고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      150,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 207,
+     "evidence": "사미천 서쪽 중공군 진지"
+    },
+    {
+     "id": "T11",
+     "name": "사미천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      175,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 동측 경계 하천",
+     "line": [
+      [
+       172,
+       200
+      ],
+      [
+       175,
+       100
+      ],
+      [
+       180,
+       0
+      ]
+     ]
+    },
+    {
+     "id": "T12",
+     "name": "중공군 전진 고지군",
+     "alias": "지점 2",
+     "kind": "area",
+     "xy": [
+      80,
+      148
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "58A와 벙커고지를 감제하는 중공군 토굴 진지",
+     "polygon": [
+      [
+       60,
+       140
+      ],
+      [
+       105,
+       142
+      ],
+      [
+       105,
+       158
+      ],
+      [
+       60,
+       156
+      ]
+     ],
+     "preparation": "fortified"
+    },
+    {
+     "id": "T13",
+     "name": "제임스타운선 주저항선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      80,
+      115
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 주저항선",
+     "other_names": [
+      "Jamestown Line"
+     ],
+     "line": [
+      [
+       43,
+       95
+      ],
+      [
+       60,
+       104
+      ],
+      [
+       75,
+       117
+      ],
+      [
+       88,
+       121
+      ],
+      [
+       105,
+       113
+      ],
+      [
+       125,
+       108
+      ]
+     ],
+     "preparation": "fortified"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "판문점 회랑도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       40,
+       40
+      ],
+      [
+       41,
+       60
+      ],
+      [
+       40,
+       80
+      ],
+      [
+       40,
+       100
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R2",
+     "name": "벙커고지 보급로",
+     "alias": "도로 2",
+     "kind": "trail",
+     "xy": [
+      [
+       80,
+       95
+      ],
+      [
+       79,
+       105
+      ],
+      [
+       78,
+       114
+      ],
+      [
+       79,
+       121
+      ],
+      [
+       80,
+       128
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "주저항선 후방 횡단로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       45,
+       90
+      ],
+      [
+       62,
+       96
+      ],
+      [
+       80,
+       100
+      ],
+      [
+       100,
+       102
+      ],
+      [
+       123,
+       100
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "사미천",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       170,
+       200
+      ],
+      [
+       174,
+       200
+      ],
+      [
+       177,
+       100
+      ],
+      [
+       182,
+       0
+      ],
+      [
+       178,
+       0
+      ],
+      [
+       173,
+       100
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "중공군 제118사단 제352연대",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "연대 정면 대덕산 일대 토굴 진지 점령 확인. 58A 쟁탈과 벙커고지 전투의 상대",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      85,
+      152
+     ],
+     "note": "벙커고지·58A 북쪽 전진 고지군과 대덕산",
+     "polygon": [
+      [
+       60,
+       140
+      ],
+      [
+       110,
+       142
+      ],
+      [
+       110,
+       175
+      ],
+      [
+       60,
+       172
+      ]
+     ],
+     "frontage_m": 5000,
+     "ref": "T12"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "중공군 제118사단 제354연대",
+    "alias": "적 연대 2",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "연대 동부 정면 207고지 방향 진지 점령 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      135,
+      160
+     ],
+     "note": "48A 북쪽에서 207고지",
+     "frontage_m": 4000,
+     "ref": "T10"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "중공군 제65군 제194사단 제180연대",
+    "alias": "적 연대 3",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "판문점 북쪽 망해산 일대 진지 점령 확인",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      50,
+      165
+     ],
+     "note": "망해산과 판문점 북쪽",
+     "frontage_m": 4000,
+     "ref": "T9"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "중공군 제118사단 포병",
+    "alias": "적 포병 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "58A 쟁탈전에서 집중 포격 확인. 규모와 위치 미상",
+    "posture": "방어",
+    "preparation": "fortified",
+    "position": {
+     "xy": [
+      95,
+      180
+     ],
+     "note": "대덕산 후방 추정",
+     "ref": "T8"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 00:00",
+   "light": "night",
+   "notes": "여름. 중공군 고지에서 아군 지역 대부분이 감제된다. 판문점 주변은 휴전회담으로 사격제한구역이다. 벙커고지 진지는 노무대와 함께 구축 중이다."
+  }
+ }
+}

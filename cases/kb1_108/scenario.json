@@ -1,0 +1,528 @@
+{
+ "id": "kb1_108",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D-1일 20:00",
+  "start_t": -4,
+  "horizon_h": 34,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제15사단 1개 연대(-) 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제1대대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제15사단은 영천 읍내를 거점으로 확보하고 주력을 영천-입암 도로로 남하시켜 영천을 지나 경주 방면과 대구 방면으로 진출한다. 금호강 남쪽 선두 대대는 영천교 남쪽 교두보를 넓힌다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T1",
+       "text": "영천 읍내와 마현산 남사면의 급편 진지를 고수한다.",
+       "basis": "서술: 적이 영천을 장악했다. 읍내를 거점으로 후속 주력의 남하를 보장하려 했을 것으로 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": -4,
+        "text": "D-1일 20:00부터 방어 중"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         102,
+         104
+        ],
+        [
+         102,
+         112
+        ],
+        [
+         102,
+         120
+        ],
+        [
+         104,
+         132
+        ],
+        [
+         106,
+         142
+        ]
+       ],
+       "text": "손실이 커지면 영천-입암 도로로 북쪽으로 철수한다.",
+       "basis": "추정: 손실 0.5 초과 시 철수. 서술: 제19연대가 영천을 장악한 적을 격멸.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "적 제15사단 1개 연대(-) 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         103,
+         103
+        ],
+        [
+         110,
+         99
+        ],
+        [
+         118,
+         97
+        ],
+        [
+         125,
+         96
+        ]
+       ],
+       "text": "아군 대대 이상이 읍내에 들어오면 경주 도로 축선으로 역습한다.",
+       "basis": "추정: 전차를 읍내 교차점에 두고 동쪽 접근로를 막으려 했을 것.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 영천 읍내 안에 있음"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         103,
+         103
+        ],
+        [
+         102,
+         112
+        ],
+        [
+         102,
+         120
+        ],
+        [
+         104,
+         132
+        ]
+       ],
+       "text": "손실이 커지면 입암 도로로 북쪽으로 철수한다.",
+       "basis": "추정: 손실 0.5 초과.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 전차부대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         105,
+         145
+        ],
+        [
+         106,
+         138
+        ],
+        [
+         104,
+         132
+        ],
+        [
+         102,
+         122
+        ],
+        [
+         102,
+         112
+        ]
+       ],
+       "text": "영천-입암 도로로 남하해 영천 읍내의 선두 연대를 증원한다.",
+       "basis": "서술: 적 제15사단 주력이 입암-영천 도로를 따라 남진. 남하 시각은 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 8,
+        "text": "D일 08:00 남하 개시(추정)"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         102,
+         112
+        ],
+        [
+         110,
+         104
+        ],
+        [
+         120,
+         98
+        ],
+        [
+         135,
+         93
+        ],
+        [
+         150,
+         90
+        ]
+       ],
+       "text": "이어서 영천에서 경주 도로로 동쪽으로 공격한다.",
+       "basis": "서술: 경주 방면 진출로 제12사단과 합류하려는 적 상급부대의 의도."
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         104,
+         132
+        ],
+        [
+         102,
+         124
+        ],
+        [
+         100,
+         118
+        ],
+        [
+         100,
+         113
+        ]
+       ],
+       "text": "아군 대대 이상이 마현산에 있으면 1개 대대 이상으로 마현산에 역습한다.",
+       "basis": "추정: 감제고지 상실 시 즉각 역습하는 적 전술 관행.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "OBJ2",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 마현산 지역 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 6
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         104,
+         132
+        ],
+        [
+         108,
+         145
+        ],
+        [
+         118,
+         150
+        ],
+        [
+         125,
+         152
+        ]
+       ],
+       "text": "손실이 커지면 상리동 방면으로 북쪽으로 철수한다.",
+       "basis": "추정: 손실 0.4 초과.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.4,
+        "text": "적 제15사단 주력 손실 0.4 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         103,
+         86
+        ],
+        [
+         96,
+         82
+        ],
+        [
+         88,
+         80
+        ],
+        [
+         80,
+         78
+        ]
+       ],
+       "text": "금호강 남쪽에서 영천 남쪽 방어지역으로 공격한다.",
+       "basis": "서술: 영천을 통과해 남진하던 선두부대. 공격 시각은 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00 공격(추정)"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 8
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         96,
+         82
+        ],
+        [
+         101,
+         88
+        ],
+        [
+         101,
+         92
+        ],
+        [
+         102,
+         100
+        ]
+       ],
+       "text": "손실이 커지면 영천교로 북쪽으로 철수한다.",
+       "basis": "추정: 손실 0.5 초과.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.5,
+        "text": "적 선두 대대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         104,
+         132
+        ],
+        [
+         102,
+         104
+        ]
+       ],
+       "text": "영천 읍내 동쪽 접근로와 마현산 일대를 사격한다.",
+       "basis": "서술: 각종 포의 지원 하에 공격.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 이후"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R1",
+       "axis_xy": [
+        [
+         104,
+         132
+        ],
+        [
+         106,
+         142
+        ],
+        [
+         108,
+         150
+        ]
+       ],
+       "text": "아군 대대 이상이 입암 도로 차단선에 들어오면 북쪽으로 진지를 옮긴다.",
+       "basis": "추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "BL1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 입암 도로 차단선에 있음"
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "infiltrate",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         150,
+         125
+        ],
+        [
+         148,
+         115
+        ],
+        [
+         146,
+         105
+        ],
+        [
+         145,
+         96
+        ],
+        [
+         145,
+         91
+        ]
+       ],
+       "text": "영천 동북쪽 산지에서 경주 도로로 침투해 아군 후방 도로를 차단한다.",
+       "basis": "추정: 적 제15사단이 3개 방면으로 공격했고 후방 깊숙이 침투했다는 서술.",
+       "start": {
+        "type": "time_elapsed",
+        "value": 4,
+        "text": "D일 04:00 침투 개시(추정)"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         146,
+         105
+        ],
+        [
+         148,
+         120
+        ],
+        [
+         140,
+         140
+        ],
+        [
+         125,
+         152
+        ]
+       ],
+       "text": "손실이 커지면 상리동 방면으로 철수한다.",
+       "basis": "추정: 손실 0.4 초과.",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "H1",
+        "fraction": 0.4,
+        "text": "침투 대대 손실 0.4 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "적 제15사단 1개 대대(침투)",
+    "alias": "적 대대 3",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 55,
+    "personnel": 350,
+    "position": {
+     "xy": [
+      150,
+      125
+     ],
+     "note": "영천 동북쪽 능선 1 북쪽 산지. 상리동 돌파 후 동남쪽으로 침투한 부대(추정)."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D-1일 20:00",
+    "t": -4,
+    "kind": "night",
+    "duration_h": 9.75,
+    "note": "야간. 공격 준비와 공격대기지점 점령이 야간에 이뤄진다."
+   },
+   {
+    "when": "D일 05:45",
+    "t": 5.75,
+    "kind": "dawn",
+    "duration_h": 0.75,
+    "note": "여명."
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "air_window",
+    "duration_h": 11,
+    "note": "유엔 공군 근접항공지원 가능 시간대(주간)."
+   },
+   {
+    "when": "D일 19:00",
+    "t": 19,
+    "kind": "night",
+    "duration_h": 11,
+    "note": "야간."
+   }
+  ]
+ }
+}

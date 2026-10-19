@@ -1,0 +1,463 @@
+{
+ "id": "kb1_149",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 08:00",
+  "start_t": 8,
+  "horizon_h": 102,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G2",
+    "fraction": 0.7,
+    "text": "주력 제2대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 247고지 연대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 상급부대는 원주를 확보해 제천·충주 방면 남진의 발판으로 삼는다. 원주 남쪽 고지군에서 아군 공격을 흡수하고 야간 역습으로 고지군을 지키며, 후속 연대로 원주 시가지를 강화한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F5",
+       "text": "247고지와 원주 남쪽 고지군의 급편 진지를 고수한다.",
+       "basis": "서술: 연대가 D일 오전부터 D+3일 오후까지 여러 차례 공격해야 했음",
+       "start": {
+        "type": "time_elapsed",
+        "value": 8,
+        "text": "D일 08:00 현 진지"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         100,
+         136
+        ],
+        [
+         100,
+         131
+        ],
+        [
+         100,
+         126
+        ]
+       ],
+       "text": "아군 대대 이상이 247고지에 들어오면 예비 중대로 역습한다.",
+       "basis": "서술: 수차례의 혈전. 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "CM_OBJ1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 247고지 목표 지역에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         126
+        ],
+        [
+         98,
+         133
+        ],
+        [
+         97,
+         140
+        ],
+        [
+         100,
+         150
+        ]
+       ],
+       "text": "손실이 커지면 원주 시가지로 철수한다.",
+       "basis": "추정: 연대급 손실 0.6이면 고지군 유지 불가",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 247고지 연대 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "F1",
+       "text": "원주 시가지를 고수한다.",
+       "basis": "서술: 적이 D-1일 밤 원주를 점령",
+       "start": {
+        "type": "time_elapsed",
+        "value": 8,
+        "text": "D일 08:00"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "counterattack",
+       "objective_ref": "F5",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         97,
+         140
+        ],
+        [
+         98,
+         133
+        ],
+        [
+         100,
+         126
+        ]
+       ],
+       "text": "야간에 원주-충주 도로를 따라 원주 남쪽 고지군으로 역습한다.",
+       "basis": "북한군의 야간 공격 선호(D-1일 일몰 후 3면 공격). 시각 추정",
+       "start": {
+        "type": "time_elapsed",
+        "value": 22,
+        "text": "D일 22:00"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 24
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         97,
+         140
+        ],
+        [
+         98,
+         133
+        ],
+        [
+         100,
+         126
+        ]
+       ],
+       "text": "247고지 연대의 손실이 커지면 1개 대대로 247고지를 증원한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.3,
+        "text": "적 247고지 연대 손실 0.3 초과"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         101,
+         162
+        ],
+        [
+         102,
+         175
+        ],
+        [
+         104,
+         195
+        ]
+       ],
+       "text": "손실이 커지면 5번 도로를 따라 횡성 방면으로 철수한다.",
+       "basis": "추정: 서술상 D+4일 원주 피탈 후 적 주력 북쪽 철수",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 원주 연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         103,
+         188
+        ],
+        [
+         102,
+         175
+        ],
+        [
+         101,
+         162
+        ],
+        [
+         100,
+         150
+        ]
+       ],
+       "text": "5번 도로를 따라 남하해 원주 시가지를 증원한다.",
+       "basis": "적 제5군단이 3개 사단 이상으로 원주를 공격한 사실에서 추정한 후속 투입",
+       "start": {
+        "type": "time_elapsed",
+        "value": 30,
+        "text": "D+1일 06:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "F1",
+       "text": "원주 시가지와 시가지 남단을 고수한다.",
+       "basis": "추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         97,
+         140
+        ],
+        [
+         98,
+         133
+        ],
+        [
+         100,
+         126
+        ]
+       ],
+       "text": "아군 연대 주력이 247고지 일대에 있으면 247고지로 역습한다.",
+       "basis": "서술: 원주 탈환 뒤에도 적이 역습을 계속 시도. 문턱 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "F5",
+        "min_echelon": "연대",
+        "text": "아군 연대 이상이 원주 남쪽 고지군에 있음"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "R2",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         101,
+         162
+        ],
+        [
+         102,
+         175
+        ],
+        [
+         104,
+         195
+        ]
+       ],
+       "text": "손실이 커지면 횡성 방면으로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "적 후속 연대 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "CM_LD",
+       "text": "원주-충주 도로 북진 축선과 공격개시선 일대를 박격포로 사격한다.",
+       "basis": "추정: 북한군 사단 박격포 지원",
+       "start": {
+        "type": "time_elapsed",
+        "value": 10,
+        "text": "D일 10:00"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E3",
+    "unit": "적 원주 북쪽 후속 연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "personnel": 1800,
+    "equipment": "소화기, 박격포",
+    "position": {
+     "xy": [
+      103,
+      188
+     ],
+     "ref": "R2",
+     "note": "원주 북쪽 5번 도로 연변. 북한군 제5군단 후속 부대(추정)"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 사단 박격포대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "mortar",
+    "modifier": "-",
+    "strength_pct": 70,
+    "equipment": "120mm·82mm 박격포 12문(추정)",
+    "position": {
+     "xy": [
+      100,
+      145
+     ],
+     "ref": "F1",
+     "note": "원주 시가지 남단(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 08:00",
+    "t": 8,
+    "kind": "weather",
+    "duration_h": 80,
+    "note": "혹한과 눈보라가 D+3일까지 이어져 도보 기동과 관측이 제한된다."
+   },
+   {
+    "when": "D일 08:00",
+    "t": 8,
+    "kind": "air_window",
+    "duration_h": 9,
+    "note": "주간 근접항공지원 가능 시간대(기상 허락 시)"
+   },
+   {
+    "when": "D일 17:30",
+    "t": 17.5,
+    "kind": "night",
+    "duration_h": 14,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 08:00",
+    "t": 32,
+    "kind": "air_window",
+    "duration_h": 9,
+    "note": "주간 근접항공지원 가능 시간대(기상 허락 시)"
+   },
+   {
+    "when": "D+1일 17:30",
+    "t": 41.5,
+    "kind": "night",
+    "duration_h": 14,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 08:00",
+    "t": 56,
+    "kind": "air_window",
+    "duration_h": 9,
+    "note": "주간 근접항공지원 가능 시간대(기상 허락 시)"
+   },
+   {
+    "when": "D+2일 17:30",
+    "t": 65.5,
+    "kind": "night",
+    "duration_h": 14,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 08:00",
+    "t": 80,
+    "kind": "air_window",
+    "duration_h": 9,
+    "note": "주간 근접항공지원 가능 시간대(기상 허락 시)"
+   },
+   {
+    "when": "D+3일 17:30",
+    "t": 89.5,
+    "kind": "night",
+    "duration_h": 14,
+    "note": "야간"
+   },
+   {
+    "when": "D+4일 06:30",
+    "t": 102.5,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+4일 08:00",
+    "t": 104,
+    "kind": "air_window",
+    "duration_h": 6,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ }
+}

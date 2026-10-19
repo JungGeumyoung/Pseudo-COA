@@ -1,0 +1,110 @@
+{
+ "$schema": "https://json-schema.org/draft/2020-12/schema",
+ "title": "reduced-opord/0.6 meta block",
+ "description": "출처 블록 (cases/<id>/source.json의 \"meta\")",
+ "type": "object",
+ "required": [
+  "segment",
+  "perspective_rationale",
+  "outcome",
+  "mission_type",
+  "geo"
+ ],
+ "properties": {
+  "segment": {
+   "type": "object",
+   "required": [
+    "start_date",
+    "end_date",
+    "d_day",
+    "order_time",
+    "text",
+    "why"
+   ],
+   "properties": {
+    "start_date": {
+     "type": "string"
+    },
+    "end_date": {
+     "type": "string"
+    },
+    "d_day": {
+     "type": "string"
+    },
+    "order_time": {
+     "type": "string"
+    },
+    "text": {
+     "type": "string"
+    },
+    "why": {
+     "type": "string"
+    }
+   }
+  },
+  "perspective_rationale": {
+   "type": "string"
+  },
+  "outcome": {
+   "type": "object",
+   "required": [
+    "label",
+    "evidence"
+   ],
+   "properties": {
+    "label": {
+     "type": "string",
+     "enum": [
+      "success",
+      "partial",
+      "failure"
+     ]
+    },
+    "evidence": {
+     "type": "string"
+    }
+   }
+  },
+  "mission_type": {
+   "type": "string",
+   "enum": [
+    "지역방어",
+    "기동방어",
+    "공격",
+    "역습",
+    "지연",
+    "철수",
+    "추격",
+    "경계"
+   ]
+  },
+  "geo": {
+   "type": "object",
+   "required": [
+    "scale_m_per_unit",
+    "origin",
+    "source",
+    "atlas_pages"
+   ],
+   "properties": {
+    "scale_m_per_unit": {
+     "type": "number"
+    },
+    "origin": {
+     "type": "string"
+    },
+    "source": {
+     "type": "string",
+     "enum": [
+      "atlas",
+      "text",
+      "atlas+text"
+     ]
+    },
+    "atlas_pages": {
+     "type": "string"
+    }
+   }
+  }
+ }
+}

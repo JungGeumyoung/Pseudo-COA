@@ -1,0 +1,143 @@
+{
+ "id": "kb2_037",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1953-07-06",
+   "end_date": "1953-07-11",
+   "d_day": "1953-07-06",
+   "order_time": "D+1일 05:00 (1953-07-07 05:00)",
+   "text": "화살머리고지(281고지) 전투 제2차전. 중공군이 ⓐ·ⓑ진지를 점령한 직후, 사단이 제17연대 3대대를 제32연대에 배속해 두 진지 탈환을 명한 때부터 7월 11일 양 연대 동시 공격까지다.",
+   "why": "구간 지정 ②를 따랐다. 제32연대가 작전지역을 맡은 채 배속 대대로 역습을 지휘해 연대급 결심이 뚜렷하다. 7월 2일 배속 해제 뒤 제32연대가 전초를 전담했고, 7월 7일 다시 배속을 받아 역습 연대 관점이 성립한다."
+  },
+  "perspective_rationale": "제32연대는 281고지와 백마고지를 포함한 사단 좌측 작전지역과 ⓐ·ⓑ 전초진지를 맡았다. 사단 예비인 제17연대 3대대가 이 연대에 배속되어 역습했으므로 작전지역 연대를 관점으로 삼았다. 이후 제31연대 대대의 투입은 사단의 조건부 행동으로 보아 상급 규칙에 두었다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "D+1일 정오 무렵 제17연대 3대대 제11중대가 ⓑ진지를 탈환했다. 제9중대는 ⓐ진지 8부 능선에서 공격이 멈췄다. 제31연대 2대대가 ⓐ진지를 탈환했다가 다시 잃었고, D+5일 04:40 제31연대 3대대가 확보했다. 제32연대는 ⓚ고지를 탈취한 뒤 복귀했다. 결국 281고지 방어에는 성공했으나, 연대의 최초 명령만으로는 ⓐ진지를 탈취하지 못했다."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "281고지를 (90,80)에 두고 서술의 거리(백마고지 남서 3km, ⓚ고지 북쪽 1.5km, 방송고지 800m 등)로 배치했다. 북쪽이 +y다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_037_화살머리고지_281고지_전투",
+  "title": "화살머리고지(281고지) 전투",
+  "dates": "1953. 6. 29.~7. 11.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '화살머리고지(281고지) 전투' (pdf 152쪽)",
+  "pdf_page": 152,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 23,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "7월 11일 제31연대·제32연대를 동시에 투입해 ⓐ진지와 후방 중간거점(ⓚ고지)을 함께 공격",
+    "alternative": "이전처럼 1개 대대로 ⓐ진지만 정면 공격을 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "7월 2일 배속 대대를 원대 복귀시키고 ⓐ-ⓑ진지에 1개 소대씩만 배치",
+    "alternative": "전초진지에 중대급 이상을 배치하거나 예비 대대를 근접 유지",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "6월 29일 밤 ⓚ고지로 향하는 중공군 증원을 포격으로 저지",
+    "alternative": "증원 차단 화력을 운용하지 않음",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 6월 29일~7월 1일(제1차전: 제32연대 전초 방어와 제17연대 3대대의 ⓑ진지 역습, 3일) ② 7월 6일~7월 11일(제2차전: ⓐ-ⓑ진지 상실 후 제17연대 3대대·제31연대 축차 투입과 양 연대 동시 공격, 6일). 7월 2일 배속 해제·제32연대 전담 전환이 경계. 연대 관점으로는 ②가 더 적합.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.3124,
+   "duration_s": 343.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 32708,
+     "cache_read_input_tokens": 48180,
+     "cache_creation_input_tokens": 39869
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9076,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18141
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [],
+   "cost_usd": 0.0917652
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

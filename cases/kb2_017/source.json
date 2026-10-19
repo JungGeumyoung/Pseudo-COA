@@ -1,0 +1,158 @@
+{
+ "id": "kb2_017",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1952-06-12",
+   "end_date": "1952-06-12",
+   "d_day": "1952-06-12",
+   "order_time": "D-1일 18:00(추정)",
+   "text": "1952년 6월 12일 03:30~24:00, 국군 제6사단 제2연대의 A고지·B고지 제한공격(373고지 양공 포함). 두 고지를 점령하고 전초진지를 설치하는 시점까지.",
+   "why": "구간 지정 ①을 따랐다. 공격 임무가 방어로 바뀌는 고지 점령·전초 설치 시점을 경계로 삼았다. 13~17일 적 역습은 서술이 빈약해 제외했고 18~19일 방어는 별도 구간이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제6사단 좌측 주저항선과 그 전방 전초지역을 맡아 A·B고지 제한공격을 계획하고 지휘한 제2연대를 관점으로 삼았다. 사단은 공격을 명령·승인했고 편성과 지휘는 연대장이 했다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "B고지는 09:05에 수색중대 측방공격과 제7중대 1개 소대 정면돌격으로 탈취했다. A고지는 항공폭격, 포병사격, 제9중대 특공대의 동북측 우회공격을 거쳐 12:25에 점령했다. 373고지 양공은 6부 능선에서 돈좌한 뒤 철수했지만 기만 목적은 이루었다. 연대는 두 고지에 전초진지를 설치했다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 제2연대 주저항선 남서쪽 후방의 임의점이다(추정). 주저항선 y≈80, 전초선 y≈100~105, A·B고지 y≈120.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_017_A고지_및_B고지_전투",
+  "title": "A고지 및 B고지 전투",
+  "dates": "1952. 6. 11.~19.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), 'A고지 및 B고지 전투' (pdf 76쪽)",
+  "pdf_page": 76,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "A고지 정면공격이 7부 능선에서 정체되자 제9중대 2개 분대 특공대를 동북쪽으로 우회 투입하고 화력을 집중",
+    "alternative": "특공대 우회 없이 제2중대 정면공격만 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "고지 점령 후 제2중대·제7중대를 연대 예비로 편성해 두었다가 6월 18일 적 공격 시 각 고지 대대에 통합 지휘시킴",
+    "alternative": "예비 없이 전 중대를 전초에 고정 배치",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "373고지에 공격준비사격과 혼성중대 양공을 실시해 적 포격을 그쪽으로 유인",
+    "alternative": "양공 없이 A고지·B고지만 직접 공격",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 6월 12일(1일): 제2연대의 A·B고지 제한공격(373고지 양공 포함). ② 6월 18일 19시 50분~19일(2일): 제3대대(A고지)·제1대대(B고지)의 전초 방어와 정상 회복 역습. 임무가 공격에서 방어로 바뀌는 고지 점령·전초 설치 시점이 경계. 13~17일의 3일간 역습은 서술이 빈약해 제외.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.4052,
+   "duration_s": 445.6,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 47263,
+     "cache_read_input_tokens": 95716,
+     "cache_creation_input_tokens": 17536
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7681,
+     "cache_read_input_tokens": 12750,
+     "cache_creation_input_tokens": 18040
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [
+    {
+     "id": "E:E4[1]",
+     "verdict": "time_copied",
+     "reason": "적 역습은 A·B고지 상실이라는 전투 결과에 대한 반응인데도 실제 경과에서 추정한 역습 시각을 계획 시각으로 그대로 넣었다.",
+     "fix": "고정 시각 대신 '아군이 A고지와 B고지를 확보함(점령 전투력 조건)'을 trigger로 하는 조건부 역습으로 바꾼다."
+    },
+    {
+     "id": "E:E2[1]",
+     "verdict": "hidden_condition",
+     "reason": "조건 when은 손실 0.3 초과로 되어 있지만 text에 '정면과 측방에서 협공받으면'이라는 전투력 규모가 아닌 전술적·위치적 조건이 섞여 들어가 있다.",
+     "fix": "text에서 '협공받으면' 문구를 빼고 손실 비율(또는 지역 내 아군 전투력 규모) 조건만 남긴다."
+    }
+   ],
+   "cost_usd": 0.0557672
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "E4[1]: counterattack"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

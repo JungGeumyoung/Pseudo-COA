@@ -1,0 +1,868 @@
+{
+ "id": "kb1_086",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제8사단 제21연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제21연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제8사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제8사단"
+   ],
+   "higher_mission": "국군 제8사단은 의성 북방 향로봉 일대 주저항선에서 방어하여 안동-의성-신녕-대구 축선으로 남진하는 북한군 제8사단을 저지하고 의성을 확보한다.",
+   "higher_intent": "의성 방어의 핵심인 향로봉 일대를 지켜 적이 의성을 조기에 점령하지 못하게 한다. 주저항선이 돌파되면 미천 남쪽 318고지-396고지 횡격실 능선의 제2선 예비진지를 발판으로 역습한다.",
+   "assigned_task": "제21연대는 향로봉-366고지 선에서 사단 좌측 주저항선을 방어하여 무릉동 교두보에서 남하하는 적을 저지한다.",
+   "adjacent_units": [
+    {
+     "id": "ADJ1",
+     "unit": "국군 제10연대",
+     "alias": "인접 연대 1",
+     "side": "우측(동)",
+     "mission": "향로봉 우측과 5번 도로 축선을 방어한다. 제1대대가 제21연대 우측에 붙어 있다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      155,
+      132
+     ],
+     "other_names": [
+      "제10연대"
+     ]
+    },
+    {
+     "id": "ADJ2",
+     "unit": "국군 제16연대",
+     "alias": "인접 연대 2",
+     "side": "후방(사단 예비, 추정)",
+     "mission": "미천 남쪽 318고지-396고지 제2선 예비진지에서 역습을 준비한다.",
+     "echelon": "연대",
+     "type": "infantry",
+     "xy": [
+      110,
+      78
+     ],
+     "other_names": [
+      "제16연대"
+     ]
+    },
+    {
+     "id": "ADJ3",
+     "unit": "국군 제6사단",
+     "alias": "인접 사단 1",
+     "side": "좌측(서)",
+     "mission": "의성에서 서쪽 20여 km 떨어진 안계 부근에 주력을 집결하고 있다. 제21연대 좌측과 이어진 방어선은 없다.",
+     "echelon": "사단",
+     "type": "infantry",
+     "xy": [
+      2,
+      50
+     ],
+     "other_names": [
+      "제6사단"
+     ]
+    },
+    {
+     "id": "ADJ4",
+     "unit": "국군 수도사단",
+     "alias": "인접 사단 2",
+     "side": "우측 원방(동)",
+     "mission": "길안-청송 지구를 방어한다. 제8사단 우측과 약 5km 간격이 있다.",
+     "echelon": "사단",
+     "type": "infantry",
+     "xy": [
+      198,
+      120
+     ],
+     "other_names": [
+      "수도사단"
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "국군 제16연대",
+     "text": "적 대대 이상이 향로봉에 들어오면 제16연대는 제2선 예비진지에서 향로봉으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 향로봉 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F1",
+      "axis_xy": [
+       [
+        110,
+        80
+       ],
+       [
+        114,
+        92
+       ],
+       [
+        117,
+        105
+       ],
+       [
+        119,
+        116
+       ],
+       [
+        120,
+        126
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "국군 제16연대",
+     "text": "적 대대 이상이 366고지에 들어오면 제16연대는 제2선 예비진지에서 366고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "F2",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 366고지 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "F2",
+      "axis_xy": [
+       [
+        92,
+        80
+       ],
+       [
+        86,
+        93
+       ],
+       [
+        80,
+        105
+       ],
+       [
+        75,
+        116
+       ],
+       [
+        71,
+        126
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "제21연대 작전지역은 좌측 개방 측방에서 우측 제10연대 경계까지, 전방 무릉동 남쪽에서 후방 미천까지이다. 좌측은 국군 제6사단과 20여 km 떨어져 있어 연결되지 않는다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "좌측 경계(개방 측방)",
+     "between": [
+      "국군 제8사단 제21연대",
+      "국군 제6사단"
+     ],
+     "xy": [
+      [
+       40,
+       185
+      ],
+      [
+       40,
+       140
+      ],
+      [
+       40,
+       90
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제21연대-제10연대 전투지경선",
+     "between": [
+      "국군 제8사단 제21연대",
+      "국군 제10연대"
+     ],
+     "xy": [
+      [
+       140,
+       185
+      ],
+      [
+       137,
+       140
+      ],
+      [
+       132,
+       110
+      ],
+      [
+       128,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "연대 후방 경계(미천)",
+     "between": [
+      "국군 제8사단 제21연대",
+      "국군 제16연대"
+     ],
+     "xy": [
+      [
+       40,
+       93
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       110,
+       90
+      ],
+      [
+       128,
+       89
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "AF1",
+    "unit": "제21연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "AF2",
+    "unit": "제21연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "AF3",
+    "unit": "제21연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "AF4",
+    "unit": "제8사단 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "105mm 곡사포(문수 미상)",
+    "relationship": "일반지원",
+    "location": {
+     "note": "미천 남쪽 사단 포병 진지",
+     "xy": [
+      112,
+      72
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "의성 북방 약 10km의 향로봉 일대. 표고 300~600m 미만의 고지군이 이어지고, 5번 도로와 중앙선 철로가 작전지역 동쪽을 남북으로 지난다. 북쪽에 낙동강과 적 교두보(무릉동·수상동), 남쪽에 미천과 제2선 예비진지가 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "F1",
+     "name": "향로봉",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      120,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty",
+     "evidence": "의성 북방 10km 지점. 의성 방어에 가장 중요한 고지이며, 점령하면 261고지를 감제한다."
+    },
+    {
+     "id": "F2",
+     "name": "366고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      70,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 366,
+     "preparation": "hasty",
+     "evidence": "제3대대 진지. 적 제83연대가 측면에서 기습한 연대 좌익 고지."
+    },
+    {
+     "id": "F3",
+     "name": "향로봉 서측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      96,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "preparation": "hasty",
+     "evidence": "366고지와 향로봉 사이 제2대대 진지 능선(추정)."
+    },
+    {
+     "id": "F4",
+     "name": "261고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      148,
+      112
+     ],
+     "estimated": true,
+     "elevation_m": 261,
+     "evidence": "향로봉 남동쪽. 향로봉에서 감제된다."
+    },
+    {
+     "id": "F5",
+     "name": "후평동 명성마을",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      150,
+      97
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "261고지 남쪽 마을.",
+     "other_names": [
+      "명성마을",
+      "후평동"
+     ]
+    },
+    {
+     "id": "F6",
+     "name": "세촌",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      140,
+      93
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제10연대 새 방어진지 서단(추정)."
+    },
+    {
+     "id": "F7",
+     "name": "262고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      165,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 262,
+     "evidence": "제10연대 새 방어진지 동단(추정)."
+    },
+    {
+     "id": "F8",
+     "name": "318고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      90,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 318,
+     "preparation": "hasty",
+     "evidence": "미천 남쪽 횡격실 능선. 제2선 예비진지 서단."
+    },
+    {
+     "id": "F9",
+     "name": "396고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      128,
+      78
+     ],
+     "estimated": true,
+     "elevation_m": 396,
+     "preparation": "hasty",
+     "evidence": "미천 남쪽 횡격실 능선. 제2선 예비진지 동단."
+    },
+    {
+     "id": "F10",
+     "name": "의성",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      110,
+      25
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "5번·28번·912번·914번 도로가 모이는 요충지."
+    },
+    {
+     "id": "F11",
+     "name": "무릉동",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      95,
+      180
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 제8사단 도하 후 집결지이자 교두보."
+    },
+    {
+     "id": "F12",
+     "name": "수상동",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      128,
+      181
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적 교두보."
+    },
+    {
+     "id": "F13",
+     "name": "마애동",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      70,
+      198
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "안동 서쪽 적 도하 지점(낙동강 북안)."
+    },
+    {
+     "id": "F14",
+     "name": "계평동",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      100,
+      198
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "안동 서쪽 적 도하 지점(낙동강 북안)."
+    },
+    {
+     "id": "F15",
+     "name": "안계",
+     "alias": "마을 8",
+     "kind": "town",
+     "xy": [
+      2,
+      50
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "의성 서쪽 20여 km. 실제로는 캔버스 밖이다. 국군 제6사단 주력 집결지."
+    },
+    {
+     "id": "F16",
+     "name": "하화터널",
+     "alias": "지점 1",
+     "kind": "other",
+     "xy": [
+      130,
+      55
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "안동-의성 도로상의 터널."
+    },
+    {
+     "id": "F17",
+     "name": "미천",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      110,
+      90
+     ],
+     "line": [
+      [
+       30,
+       95
+      ],
+      [
+       70,
+       92
+      ],
+      [
+       110,
+       90
+      ],
+      [
+       150,
+       88
+      ],
+      [
+       190,
+       86
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "향로봉과 제2선 예비진지 사이 하천. 도섭 가능으로 추정."
+    },
+    {
+     "id": "F18",
+     "name": "낙동강",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      100,
+      191
+     ],
+     "line": [
+      [
+       0,
+       190
+      ],
+      [
+       100,
+       191
+      ],
+      [
+       200,
+       192
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "적이 이미 도하해 남안에 교두보를 확보했다."
+    }
+   ],
+   "routes": [
+    {
+     "id": "R1",
+     "name": "5번 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       175,
+       200
+      ],
+      [
+       162,
+       160
+      ],
+      [
+       150,
+       128
+      ],
+      [
+       143,
+       105
+      ],
+      [
+       135,
+       75
+      ],
+      [
+       130,
+       55
+      ],
+      [
+       112,
+       25
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "안동-의성 도로"
+     ]
+    },
+    {
+     "id": "R2",
+     "name": "중앙선 철로",
+     "alias": "도로 2",
+     "kind": "rail",
+     "xy": [
+      [
+       168,
+       200
+      ],
+      [
+       154,
+       160
+      ],
+      [
+       143,
+       128
+      ],
+      [
+       137,
+       105
+      ],
+      [
+       129,
+       75
+      ],
+      [
+       124,
+       55
+      ],
+      [
+       108,
+       25
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "914번 도로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       112,
+       25
+      ],
+      [
+       140,
+       35
+      ],
+      [
+       170,
+       48
+      ],
+      [
+       198,
+       60
+      ]
+     ],
+     "estimated": true,
+     "other_names": [
+      "의성-길안-청송 도로"
+     ]
+    },
+    {
+     "id": "R4",
+     "name": "무릉동-366고지 계곡로",
+     "alias": "도로 4",
+     "kind": "valley",
+     "xy": [
+      [
+       95,
+       180
+      ],
+      [
+       90,
+       166
+      ],
+      [
+       82,
+       152
+      ],
+      [
+       75,
+       140
+      ],
+      [
+       71,
+       130
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R5",
+     "name": "수상동-향로봉 능선로",
+     "alias": "도로 5",
+     "kind": "ridge",
+     "xy": [
+      [
+       128,
+       181
+      ],
+      [
+       125,
+       166
+      ],
+      [
+       122,
+       152
+      ],
+      [
+       121,
+       140
+      ],
+      [
+       120,
+       130
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "I1",
+     "name": "낙동강",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       0,
+       188
+      ],
+      [
+       200,
+       189
+      ],
+      [
+       200,
+       195
+      ],
+      [
+       0,
+       194
+      ]
+     ],
+     "active": "항상"
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "EN1",
+    "unit": "북한군 제8사단 제83연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 2200,
+    "identified": false,
+    "known_at_start": "무릉동 일대 교두보에 연대 규모가 집결한 것으로 파악했다. 부대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      95,
+      178
+     ],
+     "ref": "F11",
+     "frontage_m": 3000,
+     "note": "무릉동 교두보"
+    }
+   },
+   {
+    "id": "EN2",
+    "unit": "북한군 제8사단 제81연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 2200,
+    "identified": false,
+    "known_at_start": "수상동 일대 교두보에 연대 규모가 있는 것으로 판단했다. 부대 번호는 미확인.",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      128,
+      179
+     ],
+     "ref": "F12",
+     "frontage_m": 3000,
+     "note": "수상동 교두보"
+    }
+   },
+   {
+    "id": "EN3",
+    "unit": "북한군 제8사단 포병연대",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 70,
+    "equipment": "76mm·122mm 곡사포(문수 미상)",
+    "identified": false,
+    "known_at_start": "낙동강 북안의 사단 포병으로 추정했다.",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      100,
+      197
+     ],
+     "note": "낙동강 북안 계평동 일대(추정)"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 04:00",
+   "light": "night",
+   "notes": "8월 한여름. 주저항선은 낙동강 남안에서 옮겨 온 직후라 급편 진지다. 좌측은 국군 제6사단과 20여 km 떨어져 개방되어 있고, 사단 우측은 수도사단과 약 5km 벌어져 있다. 여명은 D일 05:30경이다."
+  }
+ }
+}

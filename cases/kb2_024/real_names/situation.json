@@ -1,0 +1,721 @@
+{
+ "id": "kb2_024",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제7사단 제3연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제3연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "제7사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "국군 제7사단"
+   ],
+   "higher_mission": "제7사단은 군단 좌측 전방에서 미네소타선의 주저항선을 방어한다.",
+   "higher_intent": "주저항선을 굳게 지키고, 일대를 감제하는 1090고지 능선의 전초를 유지해 적의 국부 공격을 거부한다.",
+   "assigned_task": "제3연대는 1090고지-1220고지-봉선골 선의 주저항선을 방어하고 크리스마스고지 전초진지를 확보한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제8연대",
+     "alias": "인접 연대 1",
+     "side": "후방(사단 예비)",
+     "mission": "사단 예비. 주저항선이 위협받으면 1220고지 부근에서 역습한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      125,
+      60
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A1",
+     "text": "제3대대 손실이 40%를 넘으면 사단은 제8연대 1개 대대를 1220고지 부근으로 보내 1090고지 주봉으로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G3",
+      "fraction": 0.4,
+      "text": "제3대대 손실 0.4 초과"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H1",
+      "axis_xy": [
+       [
+        125,
+        60
+       ],
+       [
+        128,
+        75
+       ],
+       [
+        130,
+        88
+       ],
+       [
+        115,
+        90
+       ],
+       [
+        100,
+        90
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "적 대대 이상이 1090고지 주봉에 들어오면 사단 예비가 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H1",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 1090고지 주봉에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H1",
+      "axis_xy": [
+       [
+        125,
+        60
+       ],
+       [
+        128,
+        75
+       ],
+       [
+        130,
+        88
+       ],
+       [
+        115,
+        90
+       ],
+       [
+        100,
+        90
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 서쪽 도피막-널우골 전면 무명고지부터 동쪽 봉선골까지다. 정면은 약 9km이고, 북쪽으로 크리스마스고지 전초까지 포함한다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "연대 좌측 경계(군단 좌측 경계)",
+     "between": [
+      "아군 연대",
+      "좌측 인접 군단"
+     ],
+     "xy": [
+      [
+       50,
+       60
+      ],
+      [
+       50,
+       100
+      ],
+      [
+       52,
+       125
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "연대 우측 경계",
+     "between": [
+      "아군 연대",
+      "사단 우측 지역"
+     ],
+     "xy": [
+      [
+       160,
+       60
+      ],
+      [
+       160,
+       100
+      ],
+      [
+       158,
+       125
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제3연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 좌측"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제3연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 우측"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "other_names": [
+     "제9·제10·제11·제12중대"
+    ],
+    "location": {
+     "note": "연대 작전지역 중앙"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제16포병대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "연대 후방 포진지",
+     "xy": [
+      105,
+      45
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "미 포병대대",
+    "alias": "포병 대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "location": {
+     "note": "사단 후방 포진지",
+     "xy": [
+      120,
+      35
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "양구 북방 문등리계곡 서쪽에 있는 산악 지대다. 어은산과 백석산 사이에 남북으로 능선이 뻗어 있고, 그 위에 1090고지 두 개가 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H1",
+     "name": "1090고지 주봉",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 1090,
+     "evidence": "남북 두 개의 1090고지 가운데 남쪽 고지로, 제3대대 주진지다.",
+     "preparation": "deliberate",
+     "other_names": [
+      "남쪽 1090고지"
+     ]
+    },
+    {
+     "id": "H2",
+     "name": "크리스마스고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      100,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 1090,
+     "evidence": "북쪽 1090고지다. 일대를 감제하는 전초진지이며 제9중대가 배치되어 있다.",
+     "preparation": "deliberate",
+     "other_names": [
+      "북쪽 1090고지",
+      "1090고지 전초진지"
+     ]
+    },
+    {
+     "id": "H3",
+     "name": "어은산",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      97,
+      138
+     ],
+     "estimated": true,
+     "elevation_m": 1250,
+     "evidence": "적 제202사단 주저항선의 중심이다."
+    },
+    {
+     "id": "H4",
+     "name": "백석산",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      102,
+      55
+     ],
+     "estimated": true,
+     "elevation_m": 1142,
+     "evidence": "1090고지 능선의 남쪽 끝이다."
+    },
+    {
+     "id": "H5",
+     "name": "1220고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      130,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 1220,
+     "evidence": "연대 방어정면 우측이며 제2대대 지역이다."
+    },
+    {
+     "id": "H6",
+     "name": "890고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      55,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 890,
+     "evidence": "적 주저항선의 서단이다."
+    },
+    {
+     "id": "H7",
+     "name": "918고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      75,
+      128
+     ],
+     "estimated": true,
+     "elevation_m": 918,
+     "evidence": "적 주저항선이다."
+    },
+    {
+     "id": "H8",
+     "name": "1218고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      122,
+      130
+     ],
+     "estimated": true,
+     "elevation_m": 1218,
+     "evidence": "적 주저항선이다."
+    },
+    {
+     "id": "H9",
+     "name": "984고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      145,
+      124
+     ],
+     "estimated": true,
+     "elevation_m": 984,
+     "evidence": "적 주저항선의 동단이다."
+    },
+    {
+     "id": "H10",
+     "name": "도피막-널우골 전면 무명고지",
+     "alias": "고지 J",
+     "kind": "hill",
+     "xy": [
+      65,
+      92
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 좌측이며 제1대대 진지다.",
+     "preparation": "deliberate"
+    },
+    {
+     "id": "H11",
+     "name": "1090고지 북방 500m 무명고지",
+     "alias": "고지 K",
+     "kind": "hill",
+     "xy": [
+      100,
+      95
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "주봉과 크리스마스고지 사이의 능선 돌출부다."
+    },
+    {
+     "id": "T1",
+     "name": "도피막",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      58,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대 후방 마을이다."
+    },
+    {
+     "id": "T2",
+     "name": "널우골",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      72,
+      80
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제1대대 후방 골짜기 마을이다."
+    },
+    {
+     "id": "T3",
+     "name": "봉선골",
+     "alias": "마을 3",
+     "kind": "valley",
+     "xy": [
+      150,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 주저항선의 동단이다."
+    },
+    {
+     "id": "V1",
+     "name": "문등리계곡",
+     "alias": "지점 1",
+     "kind": "valley",
+     "xy": [
+      168,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "어은산과 백석산 능선의 동쪽 계곡이다.",
+     "line": [
+      [
+       165,
+       60
+      ],
+      [
+       168,
+       100
+      ],
+      [
+       170,
+       140
+      ]
+     ]
+    },
+    {
+     "id": "RG1",
+     "name": "어은산-백석산 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      100,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 1090,
+     "evidence": "1090고지 두 개가 있는 남북 능선이다. 양측 주진지를 잇는다.",
+     "line": [
+      [
+       97,
+       138
+      ],
+      [
+       99,
+       120
+      ],
+      [
+       100,
+       108
+      ],
+      [
+       100,
+       90
+      ],
+      [
+       101,
+       70
+      ],
+      [
+       102,
+       55
+      ]
+     ]
+    }
+   ],
+   "routes": [
+    {
+     "id": "RT1",
+     "name": "어은산-크리스마스고지 능선 접근로",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       97,
+       138
+      ],
+      [
+       98,
+       130
+      ],
+      [
+       99,
+       122
+      ],
+      [
+       99,
+       115
+      ],
+      [
+       100,
+       108
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT2",
+     "name": "크리스마스고지-1090고지 주봉 능선",
+     "alias": "능선 3",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       108
+      ],
+      [
+       100,
+       102
+      ],
+      [
+       100,
+       95
+      ],
+      [
+       100,
+       90
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT3",
+     "name": "1090고지 주봉-백석산 능선 보급로",
+     "alias": "도로 1",
+     "kind": "trail",
+     "xy": [
+      [
+       100,
+       90
+      ],
+      [
+       101,
+       82
+      ],
+      [
+       101,
+       72
+      ],
+      [
+       102,
+       62
+      ],
+      [
+       102,
+       55
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RT4",
+     "name": "문등리계곡 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       165,
+       50
+      ],
+      [
+       165,
+       70
+      ],
+      [
+       167,
+       90
+      ],
+      [
+       168,
+       110
+      ],
+      [
+       170,
+       140
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "중공군 제604연대",
+    "alias": "적 연대 1",
+    "nation": "중국",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "제3대대와 대치하는 부대다. 어은산 일대에서 정찰과 진지 보강을 하고 있다.",
+    "posture": "공격준비",
+    "preparation": "fortified",
+    "equipment": "다발총, 기관총, 박격포, 연대 지원 포병",
+    "position": {
+     "xy": [
+      98,
+      132
+     ],
+     "note": "어은산 주봉과 그 남쪽 능선",
+     "frontage_m": 4000,
+     "polygon": [
+      [
+       80,
+       125
+      ],
+      [
+       118,
+       125
+      ],
+      [
+       118,
+       142
+      ],
+      [
+       80,
+       142
+      ]
+     ],
+     "ref": "H3"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "중공군 제202사단(-)",
+    "alias": "적 사단 1",
+    "nation": "중국",
+    "echelon": "사단",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 100,
+    "identified": true,
+    "known_at_start": "890고지-918고지-1218고지-984고지 선에 주저항선을 편성하고 있다. 사단 포병의 지원을 받는다.",
+    "posture": "방어",
+    "preparation": "fortified",
+    "other_names": [
+     "중공군 제68군 예하 제202사단"
+    ],
+    "position": {
+     "xy": [
+      100,
+      126
+     ],
+     "note": "890고지-918고지-1218고지-984고지 선의 주저항선(제604연대 지역 제외)",
+     "frontage_m": 9000,
+     "polygon": [
+      [
+       50,
+       118
+      ],
+      [
+       150,
+       118
+      ],
+      [
+       150,
+       135
+      ],
+      [
+       50,
+       135
+      ]
+     ]
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 17:00",
+   "light": "dusk",
+   "notes": "10월 초 산악 지대이며 곧 일몰이다. 휴전회담이 교착된 뒤 적이 전 전선에서 국부 제한공격을 하고 있다. 산간 계곡과 능선에는 새벽 안개가 잦다."
+  }
+ }
+}

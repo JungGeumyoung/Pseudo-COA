@@ -1,0 +1,152 @@
+{
+ "id": "kb2_022",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1952-10-06",
+   "end_date": "1952-10-09",
+   "d_day": "1952-10-06 (D일 00:00 기준, 중공군 10월 공세 개시일)",
+   "order_time": "D+1일 07:00 (1952-10-07 07:00)",
+   "text": "중공군 제116사단 제348연대 1개 대대가 고양대의 니키·테시고지를 탈취한 뒤 제15연대가 역습을 거듭하다가 미 제1군단장 지시로 공격을 중지하고 현 진출선에 전진진지를 편성하기까지(10.6~10.9).",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 10.6 야간 피탈은 연대 결심 이전의 사건이므로 연대의 첫 결심(10.7 07:00 사단 수색중대 배속과 고지 탈환 명령)을 명령 시점으로 한다."
+  },
+  "perspective_rationale": "관점 지정(국군 제1사단 제15연대)을 따른다. 제15연대는 고양대 전진진지와 임진강 양안 주저항선을 맡은 작전지역 연대이며 역습의 결심 주체다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "니키·테시고지 탈환은 실패했으나 니키고지 6부 능선-베티고지-무명고지-105고지 선에 전진진지를 확보했다. 아군 전사 8, 부상 141, 실종 64. 적 사살 173(추정), 포로 2."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "서술 추정. 캔버스 (100,105) 부근이 고작동(제3대대 주진지)이고 북쪽이 적 방향이다. 임진강이 S자로 연대 지역을 양단한다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_022_고양대_부근_전투",
+  "title": "고양대 부근 전투",
+  "dates": "1952. 10. 6.~9.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '고양대 부근 전투' (pdf 96쪽)",
+  "pdf_page": 96,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 4
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "니키·테시고지에 각 1개 소대씩 연대 수색중대 2개 소대만 배치",
+    "alternative": "전초에 중대급 이상을 배치하거나 주진지에 즉각 증원할 역습 예비대를 지정해 두었다면 1개 대대의 3면 포위 공격을 초기에 저지했을 수 있다",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "10월 7일~8일 수색중대, 소대, 제10중대 순으로 중대급 이하를 축차 투입해 역습",
+    "alternative": "피탈 직후 적 증원 이전에 대대급 전력을 포병·전차와 함께 일거에 집중 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "포위된 전초의 진내사격 요청이 실행되지 않음",
+    "alternative": "진내사격이 실행되어 지상진지를 장악한 중공군을 제압하고 동굴호의 수비대가 진지를 회복",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.7525,
+   "duration_s": 474.3,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 50003,
+     "cache_read_input_tokens": 92092,
+     "cache_creation_input_tokens": 49469
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9362,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18501
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 1,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 33,
+   "flagged": [
+    {
+     "id": "E:E5[1]",
+     "verdict": "disguised_result",
+     "reason": "적이 105고지를 재점령했다는 실제 결과를 역산해 아군 진입이라는 위치 조건으로 재포장한 추정 조건부 공격이다.",
+     "fix": "이 항목을 시나리오에서 빼고 실제 경과(history)로만 남기거나, 적 전투력 규모(예: 적 중대 이상이 고양대 방향에 집결)를 트리거로 하는 조건으로 재정의한다."
+    }
+   ],
+   "cost_usd": 0.0532792
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E1[0]: '피탈'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

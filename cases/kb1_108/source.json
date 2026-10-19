@@ -1,0 +1,146 @@
+{
+ "id": "kb1_108",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-09-06",
+   "end_date": "1950-09-08",
+   "d_day": "1950-09-08",
+   "order_time": "D-1일 20:00",
+   "text": "영천 전투 1구간: 국군 제8사단 중앙 돌파와 영천 함락(9월 6~7일) 뒤, 증원된 제6사단 제19연대가 제8사단 우측방으로 진출해 9월 8일 영천을 탈환하기까지.",
+   "why": "관점 지정이 제19연대의 영천 탈환이므로 증원 연대가 공격 명령을 하달한 9월 7일 저녁을 명령 시점으로, 탈환일 9월 8일을 D일로 둔다."
+  },
+  "perspective_rationale": "관점 지정에 따라 제6사단 제19연대를 관점으로 한다. 9월 7일 영천 읍내는 적에게 함락되어 작전지역을 가진 방어 연대(제16연대)가 이미 남쪽으로 철수한 상태였고, 영천 탈환이라는 역습 과업과 작전지역을 실제로 받은 연대가 제19연대였다. 제16연대 중심의 방어 국면은 이 구간에서 결정이 끝난 상태이므로 쓰지 않는다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "서술: '9월 8일에는 국군 제19연대가 영천을 장악한 북한군을 격멸하고 영천을 탈환하는 데 성공하였으며, 9일에는 북한군의 돌파구를 봉쇄하기 위한 연결된 방어선이 형성되었다.'"
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (100,100)을 영천 읍내 중심으로 둔 서술 기반 추정. 북쪽 +y, 동쪽 +x. 캔버스 20km×20km.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_108_영천_전투",
+  "title": "영천 전투",
+  "dates": "1950. 9. 6.~13.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '영천 전투' (pdf 350쪽)",
+  "pdf_page": 350,
+  "bucket": "지연·철수·사주방어",
+  "triage": {
+   "total": 20,
+   "score": {
+    "B1": 3,
+    "B2": 2,
+    "B3": 3,
+    "B4": 3,
+    "B5": 3,
+    "B6": 3
+   },
+   "sim_value": 9,
+   "richness": 11
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "증원된 제19연대를 제8사단 오른쪽 측방으로 진출시켜 침투한 적을 포위하는 형태로 운용",
+    "alternative": "증원 연대를 측방 진출 없이 영천 남쪽 정면 방어에만 추가 배치",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제10연대를 영천 읍내 남쪽에 배치하고 제11연대가 영천 남쪽에서 방어준비를 갖추어 적 선두의 진격을 저지",
+    "alternative": "영천 남쪽에 저지 부대를 두지 않고 전 병력을 영천 북방 방어선에 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "포위망 완성 후 9월 10일 반격 개시",
+    "alternative": "돌파구 봉쇄(9일) 이전에 조기 반격",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 9월 6일~8일: 제8사단 중앙 돌파 → 영천 함락 → 증원 연대 투입과 제19연대의 영천 탈환(연대 관점 주 구간). ② 9월 9일~13일: 돌파구 봉쇄 후 제2군단의 반격으로 주저항선 회복.",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.0707,
+   "duration_s": 293.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 28411,
+     "cache_read_input_tokens": 50220,
+     "cache_creation_input_tokens": 30196
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6262,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 15319
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 29,
+   "flagged": [],
+   "cost_usd": 0.062244400000000005
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "영천": "하천 1'"
+ }
+}

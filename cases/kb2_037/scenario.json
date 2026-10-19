@@ -1,0 +1,462 @@
+{
+ "id": "kb2_037",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D+1일 06:00",
+  "start_t": 30,
+  "horizon_h": 72,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제17연대 제3대대 손실 0.7 초과(전투력 30% 미만)",
+    "group": "G1",
+    "fraction": 0.7
+   },
+   {
+    "type": "losses_exceed",
+    "text": "적 제218연대(-) 손실 0.7 초과(전투력 30% 미만)",
+    "group": "E2",
+    "fraction": 0.7
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제73사단은 ⓐ·ⓑ진지를 발판으로 굳혀 281고지를 탈취하고, 이어 백마고지를 측방에서 위협해 두 고지를 함께 차지하려 한다. ⓚ고지 중간거점의 예비로 야간 역습을 되풀이해 ⓐ진지를 지키고, 손실 부대는 제208연대 병력으로 교대·보충한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T2",
+       "text": "중공군 제218연대 1개 대대는 ⓐ진지와 ⓑ진지를 고수한다. 주력은 ⓐ진지에 둔다.",
+       "basis": "서술: D일 밤 두 진지를 점령했고 이후 ⓐ진지에서 자정을 넘겨 저항했다. 주력 배분은 추정.",
+       "start": {
+        "type": "time_elapsed",
+        "text": "구간 시작부터",
+        "value": 30
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         87,
+         87
+        ],
+        [
+         89,
+         91
+        ],
+        [
+         90,
+         95
+        ]
+       ],
+       "text": "손실이 크면 ⓚ고지로 철수한다.",
+       "basis": "추정: 소모된 전초 대대는 중간거점으로 물러난다.",
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "적 대대 손실 0.6 초과",
+        "group": "E1",
+        "fraction": 0.6
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T4",
+       "text": "중공군 제218연대(-)는 ⓚ고지와 279고지 중간거점을 고수한다.",
+       "basis": "서술: ⓚ고지는 ⓐ진지 후방의 적 중간거점이다.",
+       "start": {
+        "type": "time_elapsed",
+        "text": "구간 시작부터",
+        "value": 30
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         90,
+         95
+        ],
+        [
+         91,
+         93
+        ],
+        [
+         92,
+         91
+        ],
+        [
+         92,
+         88
+        ]
+       ],
+       "text": "아군이 ⓐ진지를 점령하면 ⓚ고지에서 ⓐ진지로 역습한다.",
+       "basis": "서술: 제31연대 2대대가 ⓐ진지를 탈환한 날 밤 적이 반격해 되찾았다. 문턱은 추정.",
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 ⓐ진지에 있음",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         72,
+         99
+        ],
+        [
+         75,
+         95
+        ],
+        [
+         78,
+         90
+        ],
+        [
+         82,
+         86
+        ]
+       ],
+       "text": "아군이 ⓑ진지를 점령하면 279고지에서 ⓑ진지로 역습한다.",
+       "basis": "추정: 제1차전 양상과 같은 조공 역습. 실제로는 강하게 하지 않았다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 ⓑ진지에 있음",
+        "side": "friendly",
+        "ref": "T3",
+        "min_echelon": "중대",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "text": "아군 중대 이상이 ⓑ진지에 있음",
+          "side": "friendly",
+          "ref": "T3",
+          "min_echelon": "중대"
+         },
+         {
+          "type": "losses_exceed",
+          "text": "적 제218연대(-) 손실 0.2 초과 전까지만 실시하도록 문턱을 낮게 둠",
+          "group": "E2",
+          "fraction": 0.05
+         }
+        ]
+       },
+       "repeat": {
+        "max": 1,
+        "interval_h": 12
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "reinforce",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         86,
+         114
+        ],
+        [
+         88,
+         108
+        ],
+        [
+         89,
+         101
+        ],
+        [
+         90,
+         95
+        ]
+       ],
+       "text": "중공군 제208연대 제3대대는 ⓚ고지로 들어가 제218연대를 증강한다.",
+       "basis": "서술: 손실이 큰 제208연대 1대대 대신 제3대대를 투입했다. 시각은 추정(D+1일 야간).",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D+1일 21:00",
+        "value": 45
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         90,
+         95
+        ],
+        [
+         91,
+         93
+        ],
+        [
+         92,
+         91
+        ],
+        [
+         92,
+         88
+        ]
+       ],
+       "text": "아군이 ⓐ진지를 점령하고 제218연대가 소모되면 ⓚ고지에서 ⓐ진지로 역습한다.",
+       "basis": "추정: D+2일 밤 반격 규모로 보아 교대 대대가 가담했다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 ⓐ진지에 있고 적 제218연대(-) 손실 0.3 초과",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대",
+        "and": [
+         {
+          "type": "strength_in_area",
+          "text": "아군 중대 이상이 ⓐ진지에 있음",
+          "side": "friendly",
+          "ref": "T2",
+          "min_echelon": "중대"
+         },
+         {
+          "type": "losses_exceed",
+          "text": "적 제218연대(-) 손실 0.3 초과",
+          "group": "E2",
+          "fraction": 0.3
+         }
+        ]
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T6",
+       "text": "중공군 제208연대(-)는 384고지 일대 종심진지를 고수한다.",
+       "basis": "서술: 적이 384고지를 점령하고 있다.",
+       "start": {
+        "type": "time_elapsed",
+        "text": "구간 시작부터",
+        "value": 30
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         86,
+         116
+        ],
+        [
+         88,
+         108
+        ],
+        [
+         89,
+         101
+        ],
+        [
+         90,
+         95
+        ]
+       ],
+       "text": "제218연대 손실이 크면 1개 대대로 ⓚ고지를 증원한다.",
+       "basis": "추정: 손실 부대를 교대하며 증강한 행태.",
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "적 제218연대(-) 손실 0.5 초과",
+        "group": "E2",
+        "fraction": 0.5
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         90,
+         125
+        ],
+        [
+         95,
+         100
+        ],
+        [
+         97,
+         85
+        ]
+       ],
+       "text": "적 포병은 역곡천 도하지점과 ⓐ진지 동남쪽 능선, 281고지에 하루 7,000~8,000발 수준으로 사격한다.",
+       "basis": "서술: 일일 평균 7,000~8,000발 포격 능력.",
+       "start": {
+        "type": "time_elapsed",
+        "text": "구간 시작부터",
+        "value": 30
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         90,
+         125
+        ],
+        [
+         92,
+         100
+        ],
+        [
+         92,
+         88
+        ]
+       ],
+       "text": "아군이 ⓐ진지나 ⓑ진지를 점령하면 그 진지에 집중사격한다.",
+       "basis": "서술: 제1차전에서 진지 공격 때 1천여 발을 집중했다.",
+       "trigger": {
+        "type": "strength_in_area",
+        "text": "아군 중대 이상이 ⓐ진지에 있음",
+        "side": "friendly",
+        "ref": "T2",
+        "min_echelon": "중대"
+       },
+       "repeat": {
+        "max": 4,
+        "interval_h": 12
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제73사단 제208연대 제3대대",
+    "alias": "적 대대 2",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "personnel": 700,
+    "other_names": [
+     "제208연대 3대대"
+    ],
+    "position": {
+     "xy": [
+      87,
+      110
+     ],
+     "ref": "T6",
+     "note": "384고지 남사면 집결지. 제208연대 1대대와 교대해 ⓚ고지로 들어갈 준비 중(추정)."
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D+1일 19:40",
+    "t": 43.67,
+    "kind": "night",
+    "duration_h": 9.6,
+    "note": "일몰부터 D+2일 여명까지 야간"
+   },
+   {
+    "when": "D+2일 05:20",
+    "t": 53.33,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+2일 19:40",
+    "t": 67.67,
+    "kind": "night",
+    "duration_h": 9.6,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 05:20",
+    "t": 77.33,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+3일 19:40",
+    "t": 91.67,
+    "kind": "night",
+    "duration_h": 9.6,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13.6,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+2일 05:50",
+    "t": 53.83,
+    "kind": "air_window",
+    "duration_h": 13.9,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+3일 05:50",
+    "t": 77.83,
+    "kind": "air_window",
+    "duration_h": 13.9,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+4일 05:50",
+    "t": 101.83,
+    "kind": "air_window",
+    "duration_h": 0.2,
+    "note": "구간 끝 무렵 주간 시작"
+   }
+  ]
+ }
+}

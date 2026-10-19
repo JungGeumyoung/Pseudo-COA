@@ -1,0 +1,571 @@
+{
+ "id": "kb1_054",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 09:00",
+  "start_t": 9,
+  "horizon_h": 51,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "side": "friendly",
+    "fraction": 0.7,
+    "text": "아군 연대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "side": "enemy",
+    "fraction": 0.7,
+    "text": "적 제6사단 투입 부대 누적 손실 0.7 초과"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제6사단(-)은 김포비행장 남쪽 고지군을 거점으로 아군을 고착하고, 한강 하류에서 도하한 연대와 함께 오류동 정면으로 경인국도에 진출한다. 적 상급부대는 같은 시기 적 제4사단과 제105전차여단으로 영등포 정면의 한강을 도하해 영등포를 석권한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H2",
+       "text": "138고지-여명리 진지를 방어한다.",
+       "basis": "D-1일 장악한 진지를 유지하며 후속 부대를 기다림",
+       "start": {
+        "type": "time_elapsed",
+        "value": 9,
+        "text": "D일 09:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "H5",
+       "axis_xy": [
+        [
+         64,
+         90
+        ],
+        [
+         65,
+         96
+        ],
+        [
+         66,
+         104
+        ]
+       ],
+       "text": "손실이 커지면 126고지로 물러난다.",
+       "basis": "추정: D일 아군 공격에 138고지를 내주고 126고지로 물러남",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.35,
+        "text": "적 선두 연대 손실 0.35 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "H5",
+       "text": "126고지-김포비행장 남단에서 방어한다.",
+       "basis": "비행장 일대 사단 주력의 후속 진지",
+       "start": {
+        "type": "time_elapsed",
+        "value": 9,
+        "text": "D일 09:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H5",
+       "axis_xy": [
+        [
+         66,
+         110
+        ],
+        [
+         66,
+         104
+        ],
+        [
+         65,
+         96
+        ]
+       ],
+       "text": "아군이 126고지로 들어오면 역습한다.",
+       "basis": "추정: D+1일 126고지 역습을 반격으로 물리침",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H5",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 126고지 일대에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 4
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "H6",
+       "axis_xy": [
+        [
+         66,
+         104
+        ],
+        [
+         78,
+         94
+        ],
+        [
+         90,
+         82
+        ],
+        [
+         98,
+         72
+        ]
+       ],
+       "text": "아군이 오류동 북쪽 76고지에 들어오면 역습한다.",
+       "basis": "추정: D+1일 76고지·63고지를 점령한 아군을 138고지선으로 밀어냄",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H6",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 76고지 일대에 있음"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         66,
+         104
+        ],
+        [
+         78,
+         94
+        ],
+        [
+         90,
+         82
+        ],
+        [
+         98,
+         70
+        ],
+        [
+         101,
+         60
+        ]
+       ],
+       "text": "D+2일 03:00 도하 연대와 함께 오류동으로 공격한다.",
+       "basis": "도하 연대의 가세 시기에 맞춘 공격(시각 추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 51,
+        "text": "D+2일 03:00"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "fix",
+       "objective_ref": "RD2",
+       "axis_xy": [
+        [
+         62,
+         104
+        ],
+        [
+         66,
+         96
+        ],
+        [
+         68,
+         88
+        ]
+       ],
+       "text": "비행장-소사 도로에서 보병을 화력으로 지원한다.",
+       "basis": "D-1일부터 보병 공격을 엄호함",
+       "start": {
+        "type": "time_elapsed",
+        "value": 9,
+        "text": "D일 09:00"
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "RD1",
+       "axis_xy": [
+        [
+         62,
+         104
+        ],
+        [
+         66,
+         96
+        ],
+        [
+         72,
+         86
+        ],
+        [
+         84,
+         74
+        ],
+        [
+         96,
+         64
+        ],
+        [
+         101,
+         60
+        ]
+       ],
+       "text": "D+2일 04:00 경인국도로 진출한다.",
+       "basis": "3일 새벽 전차 2대가 경인가도에 진출(시각 추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 52,
+        "text": "D+2일 04:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         101,
+         60
+        ],
+        [
+         125,
+         70
+        ],
+        [
+         154,
+         86
+        ]
+       ],
+       "text": "이어서 경인국도를 따라 영등포 방향으로 공격한다.",
+       "basis": "영등포지구 위협"
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         132,
+         150
+        ],
+        [
+         124,
+         138
+        ],
+        [
+         116,
+         120
+        ],
+        [
+         112,
+         100
+        ],
+        [
+         108,
+         80
+        ],
+        [
+         101,
+         60
+        ]
+       ],
+       "text": "D+1일 22:00부터 난지도에서 한강을 건너 오류동 정면으로 공격한다.",
+       "basis": "전날 밤과 3일 새벽 난지도에서 도하한 연대 규모 적",
+       "start": {
+        "type": "time_elapsed",
+        "value": 46,
+        "text": "D+1일 22:00"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "attack",
+       "objective_ref": "RD1",
+       "axis_xy": [
+        [
+         108,
+         72
+        ],
+        [
+         110,
+         64
+        ],
+        [
+         118,
+         66
+        ]
+       ],
+       "text": "오류동 북쪽 아군이 약해지면 경인국도를 차단한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "HE1",
+        "fraction": 0.1,
+        "text": "도하 연대가 교전에 들어감(손실 0.1 초과)"
+       }
+      }
+     ]
+    },
+    {
+     "group": "HE2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         178,
+         130
+        ],
+        [
+         172,
+         112
+        ],
+        [
+         162,
+         98
+        ],
+        [
+         154,
+         86
+        ]
+       ],
+       "text": "D+2일 04:00 영등포 북동쪽에서 한강을 건너 영등포를 공격한다.",
+       "basis": "노량진 일대 도하 후 영등포 석권(시각 추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 52,
+        "text": "D+2일 04:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "pursue",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         154,
+         86
+        ],
+        [
+         152,
+         60
+        ],
+        [
+         150,
+         35
+        ],
+        [
+         150,
+         12
+        ]
+       ],
+       "text": "이어서 시흥 방향으로 추격한다.",
+       "basis": "한강방어선 붕괴 후 남진"
+      }
+     ]
+    },
+    {
+     "group": "HE3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         180,
+         128
+        ],
+        [
+         172,
+         112
+        ],
+        [
+         160,
+         96
+        ],
+        [
+         154,
+         86
+        ]
+       ],
+       "text": "D+2일 05:00 도하한 전차로 영등포를 공격한다.",
+       "basis": "제105전차여단 부대의 영등포 진출(시각 추정)",
+       "start": {
+        "type": "time_elapsed",
+        "value": 53,
+        "text": "D+2일 05:00"
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         154,
+         86
+        ],
+        [
+         125,
+         70
+        ],
+        [
+         101,
+         60
+        ]
+       ],
+       "text": "이어서 경인국도를 따라 오류동 방향으로 공격한다.",
+       "basis": "추정: 영등포 석권 후 서쪽 잔적 소탕"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "적 난지도 도하 연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "personnel": 2000,
+    "position": {
+     "xy": [
+      132,
+      156
+     ],
+     "ref": "P1",
+     "note": "난지도·한강 북안, D+1일 밤 도하"
+    }
+   },
+   {
+    "id": "HE2",
+    "unit": "적 제4사단 선두 연대",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "position": {
+     "xy": [
+      178,
+      130
+     ],
+     "note": "영등포 북동쪽 한강 북안"
+    }
+   },
+   {
+    "id": "HE3",
+    "unit": "적 제105전차여단 전차대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "armor",
+    "modifier": "-",
+    "strength_pct": 80,
+    "equipment": "T-34 전차 15대(추정)",
+    "position": {
+     "xy": [
+      182,
+      132
+     ],
+     "note": "영등포 북동쪽 한강 북안"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:00",
+    "t": 29,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 9.5,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:00",
+    "t": 53,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D일 09:00",
+    "t": 9,
+    "kind": "weather",
+    "duration_h": 51,
+    "note": "장마철 흐림·간헐적 비. 도로 외 기동 제한"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 13,
+    "note": "아군 항공 가능 시간대(주간)"
+   },
+   {
+    "when": "D+1일 14:00",
+    "t": 38,
+    "kind": "other",
+    "ref": "T1",
+    "duration_h": 0.5,
+    "note": "아군기 오인 공습. 소사에서 급유·재보급 중인 장갑차 3대 손실(시각 추정)"
+   }
+  ]
+ }
+}

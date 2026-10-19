@@ -1,0 +1,161 @@
+{
+ "id": "kb1_039",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-06-26",
+   "end_date": "1950-06-27",
+   "d_day": "1950-06-26",
+   "order_time": "D일 11:00",
+   "text": "장림-운유산 전투 전체. 후보생대대가 장림선에서 제12연대 제2대대와 합류해 장림선을 편성한 D일 11:00부터 운유산선 지연을 거쳐 김포읍으로 철수할 때까지(D+1일).",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 장림사거리에서 두 대대가 합세해 진지를 편성한 것이 사령부의 첫 결심이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 김포지구전투사령부를 쓴다. 이 사령부는 김포반도 작전지역을 맡은 연대급 급편부대이며 후보생대대, 제12연대 제2대대, 기갑연대 장갑중대·도보중대를 지휘했다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "장림선은 D일 13:00 무렵 무너지고 김포평야를 내주었다. 그러나 운유산선에서 적 기마대의 돌파를 장갑중대·도보중대의 출격으로 막았고, 적 제6사단이 계획한 시간 안에 영등포로 진출하지 못하도록 지연했다."
+  },
+  "mission_type": "지연",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)을 북위 37.58° 동경 126.50° 부근으로 잡았다. 서술의 상대 위치와 거리(장림-양곡 4km, 58고지-운유산 2km)로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_039_장림_운유산_전투",
+  "title": "장림-운유산 전투",
+  "dates": "1950. 6. 26.~27.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '장림-운유산 전투' (pdf 193쪽)",
+  "pdf_page": 193,
+  "bucket": "지연·철수·사주방어",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 11,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "기갑연대 장갑중대·도보중대를 김포읍에서 출격시켜 김포 가도의 적 기마대를 역습",
+    "alternative": "장갑중대·도보중대를 김포읍에 그대로 두거나 출격을 늦춤",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "기갑연대의 장갑중대와 도보중대가김포읍으로부터 출격하여 북한군의 기마대를 격퇴함으로써 운유산선의 돌파를 가까스로 막아 내었다."
+   },
+   {
+    "decision": "장림에서 두 대대가 두 갈래 도로(김포읍 방면·양곡 방면)를 나누어 막고, 붕괴 후 서로 다른 방향으로 철수",
+    "alternative": "장림을 경계부대로만 지연하고 주력을 처음부터 운유산에 집중하여 진지 준비 시간을 확보",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "운유산 북쪽에서 급편진지 편성 중 경계가 갖춰지지 않은 상태로 적을 맞음",
+    "alternative": "전방에 경계부대를 내보내 적 접근을 조기 경고",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1453,
+   "duration_s": 355.4,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 36421,
+     "cache_read_input_tokens": 83237,
+     "cache_creation_input_tokens": 19875
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6545,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 13414
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 25,
+   "flagged": [
+    {
+     "id": "E:E1[0]",
+     "verdict": "time_copied",
+     "reason": "공격 개시 계획 시각(12:00)을 실제 장림선 붕괴 시각(13:00 전후)이라는 결과로부터 역산해 정했다.",
+     "fix": "개시 시각은 독립적인 계획 근거(예: H시 기준 공격 개시 명령)로 정하거나, 구체 시각 없이 '장림선 돌파 시까지' 같은 순서(이어서)로 표현한다."
+    },
+    {
+     "id": "E:E2[0]",
+     "verdict": "time_copied",
+     "reason": "운유산 북쪽 기습 공격의 계획 시각(16:00)을 실제 기습이 발생한 시각(15:00 이후, 전열 붕괴라는 결과)에서 그대로 끌어왔다.",
+     "fix": "실제 교전 시각을 참고하지 말고 포병·기갑 지원 부대의 이동·전개에 필요한 시간 등 계획 요소로 시각을 추정하거나, 전투력 조건(예: 선두 부대 도착)에 따른 '이어서'로 전환한다."
+    }
+   ],
+   "cost_usd": 0.0508632
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "김포": "지점 1'",
+  "서울": "지점 2'",
+  "인천": "하천 1'"
+ }
+}

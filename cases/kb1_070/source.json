@@ -1,0 +1,147 @@
+{
+ "id": "kb1_070",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-07-12",
+   "end_date": "1950-07-14",
+   "d_day": "1950-07-14",
+   "order_time": "D-2일 18:00 (1950-07-12 오후, 사단 배치 명령 직후 연대의 첫 결심)",
+   "text": "공주 전투 전체: 미 제34연대의 공주 금강선 방어 배치(7.12)부터 북한군 제4사단 도하 공격과 연대 철수(7.14)까지",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 사단장이 연대를 공주에 배치한 직후 연대장이 대대 배치를 결심한 때로 잡았다."
+  },
+  "perspective_rationale": "관점 지정에 따라 미 제24사단 제34연대를 쓴다. 제34연대는 구간 시작 때 공주 정면(구곡천~검상리) 작전지역을 맡은 연대이며 대대 배치와 예비 운용 서술이 있다.",
+  "outcome": {
+   "label": "failure",
+   "evidence": "적 1개 연대가 검상리 일대로 도하해 제63포병대대를 기습했고, L중대는 임의로 철수했으며 예비 제1대대의 구출은 야간에 중단되었다. 연대는 공격 하루 만에 와해되어 논산으로 철수했다. 제63포병대대는 105mm 10문과 차량 약 70대를 잃었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 이인리 남서쪽 약 3km 지점. 공주 시가를 (115,112)에 두고 금강은 y≈120 부근을 동서로 흐르다 검상리 서쪽에서 남서로 꺾이게 둠. 북쪽 +y.",
+   "source": "text",
+   "atlas_pages": "없음 (서술의 거리: 구곡천은 공주 동쪽 4km, 이인리는 공주 남서 10km, 삼교리는 그 중간, 연대 정면 약 10km, 논산도로~구곡천 1.5km)"
+  },
+  "seed_id": "kb1_070_공주_전투",
+  "title": "공주 전투",
+  "dates": "1950.7.12.〜14.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '공주 전투' (pdf 261쪽)",
+  "pdf_page": 261,
+  "bucket": "하천선 방어·방어 후 역습",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 1,
+    "B6": 3
+   },
+   "sim_value": 9,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "공주 정면에 병력을 집중하고 서측 검상리 일대와 포병 진지 주변은 수색중대와 화력에만 의존",
+    "alternative": "검상리 도하 지점과 삼교리 포병 진지 접근로에 보병 중대 이상을 배치해 측방 도하를 저지",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "미 제34연대는 금강 하천선을 이용한 방어배치는 북한군의 전차를 막는데유리했으나 침투 및 우회부대를 저지하지 못하고 후방이 차단된 상황에서 공주로부터 14일 철수했다."
+   },
+   {
+    "decision": "예비 제1대대를 공주 남서쪽 10km 이인리에 두고 뒤늦게 투입, 일몰로 중단",
+    "alternative": "예비를 삼교리 포병 진지 가까이에 두거나 측방 도하 확인 즉시 역습에 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": "후방에 예비로 집결되어 있던 제1대대는뒤늦게 제63포병대대를 구출하기 위해 전방으로 기동하였으나, 날이 어두워지자 임무를중단하였다."
+   },
+   {
+    "decision": "L중대가 측방 도하를 확인하고도 조치 없이 임의 철수",
+    "alternative": "도하를 대대에 보고하고 포병 화력 유도와 진지 고수",
+    "effect": "degree",
+    "representable": false,
+    "explicit": true,
+    "quote": "제3대대 L중대는 검상리 지역에서 측방으로 보트를 타고 도하하는 북한군을 확인하고도 대대와 통신이 되지 않아 아무런 조치도 취하지 못한 채 후방이 차단될 것을 우려하여 전방 진지에서 임의로 철수하였다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.1677,
+   "duration_s": 317.8,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 30359,
+     "cache_read_input_tokens": 46677,
+     "cache_creation_input_tokens": 36765
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 6635,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 15164
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 30,
+   "flagged": [],
+   "cost_usd": 0.0540552
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "1번 국도": "지점 1'",
+  "23번 국도": "지점 2'"
+ }
+}

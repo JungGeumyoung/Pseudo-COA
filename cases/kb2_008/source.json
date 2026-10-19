@@ -1,0 +1,158 @@
+{
+ "id": "kb2_008",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-11-03",
+   "end_date": "1951-11-06",
+   "d_day": "1951-11-03",
+   "order_time": "D일 22:30",
+   "text": "281고지 및 395고지 전투 전체(중공군의 281고지 공격 개시부터 제28연대의 395고지 탈환까지)",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 표제의 날짜(11.17~18)는 본문(11.3~6)과 맞지 않아 본문 날짜를 따른다. 명령 시점은 적 공격준비포격 시작과 함께 연대장이 전투태세 돌입과 281고지 고수를 지시한 첫 결심이다."
+  },
+  "perspective_rationale": "지정에 따라 281·395고지를 포함한 작전지역을 맡은 제29연대를 관점으로 쓴다. 395고지 역습은 사단 예비 제28연대가 맡았으므로 상급 규칙으로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "제29연대는 281고지를 한때 잃었으나 예비 제3대대 역습으로 D+1일 11:50에 탈환했다. 395고지는 D+2일 야간 제1대대가 사단장 지시로 철수했고 사단 예비 제28연대가 D+3일 11:00에 탈환했다. 사단 전체로는 적의 전초 탈취 기도를 좌절시켰다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 남서단(0,0). 281고지를 (60,110)에 두고 서술의 상대 위치(395고지는 281고지 북동 약 3km, 철원은 고지군 남동 10~13km, 역곡천은 고지군 남쪽)로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_008_281고지_및_395고지_전투",
+  "title": "281고지 및 395고지 전투",
+  "dates": "1951. 11. 17.~18.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '281고지 및 395고지 전투' (pdf 41쪽)",
+  "pdf_page": 41,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 23,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제29연대장이 예비 제3대대에서 제11중대를 급파한 뒤 대대 주력을 서쪽 능선으로 투입해 281고지를 당일 오전에 역습",
+    "alternative": "예비를 투입하지 않거나 축차 투입에 그쳐 중공군 1개 대대가 281고지를 거점화하도록 허용",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "사단장이 395고지의 제1대대를 철수시키고 제28연대 3대대로 차단진지를 점령한 뒤 익일 오전 7시 2개 대대로 역습",
+    "alternative": "제1대대에 현 진지 고수를 강요하고 야간에 예비를 축차 증원",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제28연대장이 대기 중인 제2중대를 395고지 북사면으로 보내 배후 공격",
+    "alternative": "제2중대를 정면 증원에 사용하거나 계속 대기",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.2153,
+   "duration_s": 369.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 36185,
+     "cache_read_input_tokens": 85878,
+     "cache_creation_input_tokens": 19791
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 8925,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 16815
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 28,
+   "flagged": [
+    {
+     "id": "E:E1[1]",
+     "verdict": "disguised_result",
+     "reason": "281고지를 확보하고 진지를 편성한다는 것은 공격이 성공했다는 전투 결과를 이어서 과업으로 위장한 것이다.",
+     "fix": "이 항목은 시뮬레이터 입력에서 빼고 history(실제 경과)에만 남겨 시뮬레이터가 전투 논리로 점령 여부를 판정하게 한다."
+    },
+    {
+     "id": "E:E2[2]",
+     "verdict": "disguised_result",
+     "reason": "395고지와 동·서 능선 화력거점을 확보한다는 것은 공격 성공이라는 전투 결과이며 실제 경과(D+3일 새벽 점령)를 그대로 이어서 과업으로 옮긴 것이다.",
+     "fix": "이 항목을 삭제하고 history에만 두어 시뮬레이터가 공격 결과로서 점령 여부를 계산하게 한다."
+    }
+   ],
+   "cost_usd": 0.0554532
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E1[0]: '격퇴'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

@@ -1,0 +1,372 @@
+{
+ "id": "kb1_136",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D-1일 08:00",
+  "start_t": -16,
+  "horizon_h": 52,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "주봉 방어 제2대대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 제334연대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "E2",
+    "fraction": 0.7,
+    "text": "적 제335연대 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제112사단은 D일 새벽 야간에 주력을 비호산 동쪽 제5연대 정면에 두어 535고지를 돌파하고, 동시에 북쪽에서 비호산 주봉을 친다. 주봉과 535고지를 잡은 뒤 개천으로 나와 청천강 이북 아군의 후방을 차단한다.",
+   "groups": [
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         134,
+         146
+        ],
+        [
+         134,
+         132
+        ],
+        [
+         130,
+         120
+        ],
+        [
+         124,
+         108
+        ],
+        [
+         120,
+         99
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00 공격 개시"
+       },
+       "text": "760고지 서측 안부를 따라 535고지를 공격한다.",
+       "basis": "서술: D일 새벽 3시 사단 규모로 비호산 동쪽 제5연대를 공격, 535고지 제2대대 진지 돌파"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         120,
+         99
+        ],
+        [
+         116,
+         103
+        ],
+        [
+         113,
+         106
+        ],
+        [
+         110,
+         110
+        ]
+       ],
+       "text": "535고지에서 비호산 주봉 남동측을 공격한다.",
+       "basis": "추정: 535고지 돌파 직후 주봉 상실, 남측 협공으로 판단"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         120,
+         99
+        ]
+       ],
+       "text": "535고지에서 진지를 편성해 방어한다.",
+       "basis": "서술: 제3연대가 포병으로 적의 진지 편성을 방해"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         120,
+         99
+        ],
+        [
+         126,
+         112
+        ],
+        [
+         132,
+         128
+        ],
+        [
+         134,
+         146
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 제335연대 누적 손실 0.5 초과"
+       },
+       "text": "손실이 크면 760고지 북방으로 철수한다.",
+       "basis": "추정: D+1일 제5연대 공격에 535고지를 내주고 물러남"
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         106,
+         148
+        ],
+        [
+         110,
+         140
+        ],
+        [
+         110,
+         132
+        ],
+        [
+         110,
+         122
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 3,
+        "text": "D일 03:00 공격 개시"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       },
+       "text": "북쪽 계곡을 따라 비호산 주봉을 공격한다.",
+       "basis": "서술: 주봉의 제8연대 제2대대가 비호산 상실. 반복 횟수는 D-2일 3차례 쟁탈전에서 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "hold",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         110,
+         110
+        ]
+       ],
+       "text": "비호산 주봉에서 진지를 편성해 방어한다.",
+       "basis": "서술: D+1일 3시간 격전 끝에 탈취됨"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F10",
+       "axis_xy": [
+        [
+         110,
+         110
+        ],
+        [
+         110,
+         122
+        ],
+        [
+         110,
+         135
+        ],
+        [
+         106,
+         148
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.55,
+        "text": "적 제334연대 누적 손실 0.55 초과"
+       },
+       "text": "손실이 크면 북쪽 계곡으로 철수한다.",
+       "basis": "추정 문턱값"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "F3",
+       "axis_xy": [
+        [
+         120,
+         172
+        ],
+        [
+         126,
+         158
+        ],
+        [
+         132,
+         140
+        ],
+        [
+         128,
+         120
+        ],
+        [
+         122,
+         104
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "group": "E2",
+        "ref": "F3",
+        "min_echelon": "대대",
+        "text": "적 제335연대 대대 이상이 535고지 지역 안에 있음"
+       },
+       "text": "535고지 돌파구로 전과를 확대한다.",
+       "basis": "추정: 주력이 동쪽 정면에 집중됨"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         120,
+         99
+        ],
+        [
+         114,
+         92
+        ],
+        [
+         106,
+         88
+        ],
+        [
+         98,
+         85
+        ]
+       ],
+       "text": "용현리 방향으로 공격해 개천 남쪽 도로를 위협한다.",
+       "basis": "서술: 개천이 위기에 몰림. 축선은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         106,
+         88
+        ],
+        [
+         118,
+         100
+        ],
+        [
+         128,
+         120
+        ],
+        [
+         132,
+         140
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.4,
+        "text": "적 제336연대 누적 손실 0.4 초과"
+       },
+       "text": "손실이 크면 760고지 북방으로 철수한다.",
+       "basis": "추정 문턱값"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [],
+  "exogenous": [
+   {
+    "when": "D-1일 17:30",
+    "t": -6.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간. 초겨울로 기온 영하."
+   },
+   {
+    "when": "D일 07:00",
+    "t": 7,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D일 07:30",
+    "t": 7.5,
+    "kind": "air_window",
+    "duration_h": 9.5,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D일 17:30",
+    "t": 17.5,
+    "kind": "night",
+    "duration_h": 13.5,
+    "note": "야간. 기온 영하."
+   },
+   {
+    "when": "D+1일 07:00",
+    "t": 31,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 07:30",
+    "t": 31.5,
+    "kind": "air_window",
+    "duration_h": 9.5,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ }
+}

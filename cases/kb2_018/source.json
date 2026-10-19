@@ -1,0 +1,150 @@
+{
+ "id": "kb2_018",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1952-09-06",
+   "end_date": "1952-09-09",
+   "d_day": "1952-09-06",
+   "order_time": "D일 12:00",
+   "text": "수도고지 및 지형능선 전투 제3차전 중 제26연대의 수도고지 방어, 상실, 역습과 탈환(9. 6. 18:50 적 공격부터 9. 9. 23:20 탈환과 반격 격퇴까지)",
+   "why": "사용자 지정 권장 구간 ③. 한 연대가 한 전초고지를 두고 방어와 연속 역습을 수행한 구간이다."
+  },
+  "perspective_rationale": "구간 시작 때 수도고지 전초와 663고지-어운리 주저항선을 맡은 연대는 제26연대다. 제1연대 1·2대대는 구간 중 사단 예비에서 배속되었으므로 상급 규칙의 조건부 배속·역습으로 둔다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "D일 18:50 적 1개 대대 공격으로 제5중대가 수도고지를 상실했다. 제10중대 3차, 제3대대 3차, 제1연대 1대대의 역습이 실패했다. D+3일 20:00 배속된 제1연대 2대대가 근접항공지원과 군단포병 지원으로 23:20 탈환하고 반격을 격퇴했다. 최종 확보했으나 약 3일간 상실했고 손실이 컸다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 좌하단은 금성천 남쪽 사단 후방의 임의점. 수도고지는 663고지 북쪽 약 1.1km, 북한강은 연대 동측으로 추정",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_018_수도고지_및_지형능선_전투",
+  "title": "수도고지 및 지형능선 전투",
+  "dates": "1952. 7. 7.~10. 14.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '수도고지 및 지형능선 전투' (pdf 80쪽)",
+  "pdf_page": 80,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 25,
+   "score": {
+    "B1": 4,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 16
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "9월 6~8일 수도고지에 중대·대대를 축차로 역습 투입(제10중대 3차, 제3대대 3차, 제1연대 1대대)",
+    "alternative": "처음부터 대대 규모 예비를 집중하고 조공(621고지 견제)과 군단포병을 결합해 한 번에 역습",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "9월 9일 제26연대장이 제3대대 일부로 621고지를 공격해 수도고지의 중공군 전투력을 분산시키고, 제1연대 2대대로 주공",
+    "alternative": "견제 공격 없이 수도고지만 정면으로 재공격",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "10월 6일 이후 575고지·지형능선·수도고지·277고지 전초를 동시에 방어",
+    "alternative": "적이 575고지와 지형능선에 전투력을 집중할 때 예비를 그 방면으로 전환해 증강",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "100일간 5차례 공방전이므로 차전별로 분할. ① 7. 7.~7. 9. 제1연대 3대대의 지형능선 A·B·C고지 공격(백쇼트작전, 7월 9일 제1기갑연대로 임무 인계 전까지) ② 8. 5.~8. 10. 제26연대 3대대의 수도고지 방어·역습(제2차전) ③ 9. 6.~9. 9. 제26연대의 수도고지 상실·탈환(제3차전, 권장 구간) ④ 9. 6.~9. 11. 제1기갑연대의 지형능선·575고지 상실과 역습 실패, 이후 9. 14.~9. 18. 제1연대 3대대의 F·H고지 탈환 ⑤ 9. 28.~9. 29. 제4차전 방어 ⑥ 10. 6.~10. 13. 제5차전(10월 8일 575고지 임무의 제6사단 이관이 경계).",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.6103,
+   "duration_s": 494.1,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 8,
+     "output_tokens": 52369,
+     "cache_read_input_tokens": 136841,
+     "cache_creation_input_tokens": 29111
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 7729,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 18133
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 29,
+   "flagged": [
+    {
+     "id": "X[5]",
+     "verdict": "time_copied",
+     "reason": "근접항공지원 가능 시간을 '초저녁까지'로 확장한 근거가 실제 D+3일 20:00 공격(ADJ3) 시각에 맞춰져 있어 외생 사건이 실제 반응 시각을 따라간 것으로 보인다.",
+     "fix": "항공 가능 시간대를 실제 공격 개시 시각과 무관하게 매일 동일한 표준 창(예: 05:30~19:00)으로 정의하고, 야간 추가 지원 여부는 전투력 조건이나 상급 승인 규칙으로 분리한다."
+    }
+   ],
+   "cost_usd": 0.09340599999999999
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": true,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

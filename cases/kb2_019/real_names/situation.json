@@ -1,0 +1,626 @@
+{
+ "id": "kb2_019",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "제35연대",
+   "alias": "아군 연대",
+   "echelon": "연대"
+  },
+  "higher_context": {
+   "higher_unit": "제5사단",
+   "higher_alias": "상급 사단",
+   "higher_mission": "제5사단은 554고지-감호 정면을 방어한다.",
+   "higher_intent": "351고지를 조기에 되찾아 동해안 저지대 감제와 월비산 접근로 통제를 회복한다.",
+   "assigned_task": "사단 수색중대와 제27연대 제2대대를 통합 지휘하여 351고지를 탈환한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제36연대",
+     "alias": "인접 연대 1",
+     "side": "좌측",
+     "mission": "사단 좌측 정면을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      40,
+      95
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제27연대(-)",
+     "alias": "인접 연대 2",
+     "side": "후방 사단 예비",
+     "mission": "사단 예비로 역습을 준비한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      100,
+      40
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A2",
+     "text": "제35연대 공격부대 손실이 50%를 넘으면 사단 예비 제27연대가 351고지 공격을 인수한다(추정).",
+     "timing": "조건",
+     "trigger": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.5,
+      "text": "제3대대(+) 손실 0.5 초과"
+     },
+     "action": {
+      "mode": "attack",
+      "objective_ref": "T351"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "좌측 제36연대와의 전투지경선에서 동해안·감호까지다. 전초선은 263고지-339고지-351고지-감호다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제35연대-제36연대 전투지경선",
+     "between": [
+      "제35연대",
+      "제36연대"
+     ],
+     "xy": [
+      [
+       70,
+       50
+      ],
+      [
+       72,
+       100
+      ],
+      [
+       75,
+       150
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 우측 전초지역"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 주저항선"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 80,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 좌측 전초지역. 제9중대는 351고지 남쪽 기슭"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "사단 수색중대",
+    "alias": "수색중대",
+    "echelon": "중대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "작전통제",
+    "location": {
+     "note": "사단 후방",
+     "xy": [
+      100,
+      50
+     ]
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "제27연대 제2대대",
+    "alias": "제4대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "작전통제",
+    "location": {
+     "note": "사단 예비 지역",
+     "xy": [
+      100,
+      45
+     ]
+    }
+   },
+   {
+    "id": "F6",
+    "unit": "사단 포병대대",
+    "alias": "포병대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "105mm",
+    "location": {
+     "note": "연대 후방",
+     "xy": [
+      100,
+      55
+     ]
+    }
+   },
+   {
+    "id": "F7",
+    "unit": "군단 포병대대",
+    "alias": "포병대대 2",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "일반지원",
+    "equipment": "155mm",
+    "location": {
+     "note": "사단 후방",
+     "xy": [
+      110,
+      35
+     ]
+    }
+   },
+   {
+    "id": "F8",
+    "unit": "박격포중대 1개 소대",
+    "alias": "박격포소대",
+    "echelon": "소대",
+    "type": "mortar",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "equipment": "4.2인치 박격포",
+    "location": {
+     "note": "주저항선 후방",
+     "xy": [
+      105,
+      75
+     ]
+    }
+   },
+   {
+    "id": "F9",
+    "unit": "전차중대",
+    "alias": "전차중대",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "직접지원",
+    "location": {
+     "note": "해안도로 일대",
+     "xy": [
+      140,
+      65
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "동부전선 고성 북방. 서쪽은 표고 700~1,000m 산악, 동쪽은 300~500m 야산과 개활지가 동해안으로 이어진다. 351고지는 월비산에서 이어진 능선 위의 닻 모양 고지다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "T351",
+     "name": "351고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      100,
+      110
+     ],
+     "estimated": true,
+     "elevation_m": 351,
+     "evidence": "동해안 저지대 감제, 월비산 접근로 통제",
+     "other_names": [
+      "앵커힐",
+      "Anchor Hill"
+     ],
+     "polygon": [
+      [
+       94,
+       104
+      ],
+      [
+       107,
+       104
+      ],
+      [
+       109,
+       115
+      ],
+      [
+       97,
+       118
+      ]
+     ],
+     "preparation": "hasty"
+    },
+    {
+     "id": "T459",
+     "name": "월비산",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      75,
+      135
+     ],
+     "estimated": true,
+     "elevation_m": 459,
+     "evidence": "351고지 서북쪽, 적 지역"
+    },
+    {
+     "id": "T208",
+     "name": "208고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      115,
+      98
+     ],
+     "estimated": true,
+     "elevation_m": 208,
+     "evidence": "351고지 남동쪽"
+    },
+    {
+     "id": "T148",
+     "name": "148고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      113,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 148,
+     "evidence": "351고지 북동쪽"
+    },
+    {
+     "id": "T187",
+     "name": "187고지",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      125,
+      133
+     ],
+     "estimated": true,
+     "elevation_m": 187,
+     "evidence": "148고지 북동쪽, 적 지역"
+    },
+    {
+     "id": "T339",
+     "name": "339고지",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      98,
+      96
+     ],
+     "estimated": true,
+     "elevation_m": 339,
+     "evidence": "351고지 남쪽"
+    },
+    {
+     "id": "T345",
+     "name": "345고지",
+     "alias": "고지 G",
+     "kind": "hill",
+     "xy": [
+      94,
+      86
+     ],
+     "estimated": true,
+     "elevation_m": 345,
+     "evidence": "339고지 남쪽"
+    },
+    {
+     "id": "T263",
+     "name": "263고지",
+     "alias": "고지 H",
+     "kind": "hill",
+     "xy": [
+      88,
+      76
+     ],
+     "estimated": true,
+     "elevation_m": 263,
+     "evidence": "345고지 남쪽"
+    },
+    {
+     "id": "T554",
+     "name": "554고지",
+     "alias": "고지 I",
+     "kind": "hill",
+     "xy": [
+      20,
+      95
+     ],
+     "estimated": true,
+     "elevation_m": 554,
+     "evidence": "사단 좌측 끝"
+    },
+    {
+     "id": "R1",
+     "name": "남강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      110,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "금강산에서 고성 부근 동해로 흐름",
+     "line": [
+      [
+       20,
+       175
+      ],
+      [
+       80,
+       165
+      ],
+      [
+       130,
+       170
+      ],
+      [
+       175,
+       180
+      ]
+     ]
+    },
+    {
+     "id": "V1",
+     "name": "고성",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      150,
+      185
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "전선 북방 적 지역"
+    },
+    {
+     "id": "L1",
+     "name": "감호",
+     "alias": "호수 1",
+     "kind": "lake",
+     "xy": [
+      150,
+      90
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "연대 우측 끝"
+    }
+   ],
+   "routes": [
+    {
+     "id": "RD1",
+     "name": "고성-통천 해안도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       160,
+       20
+      ],
+      [
+       163,
+       60
+      ],
+      [
+       165,
+       100
+      ],
+      [
+       158,
+       140
+      ],
+      [
+       150,
+       185
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG1",
+     "name": "월비산-351고지 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       75,
+       135
+      ],
+      [
+       83,
+       127
+      ],
+      [
+       91,
+       119
+      ],
+      [
+       100,
+       110
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RG2",
+     "name": "351고지-339고지-263고지 능선",
+     "alias": "능선 2",
+     "kind": "ridge",
+     "xy": [
+      [
+       100,
+       110
+      ],
+      [
+       99,
+       103
+      ],
+      [
+       98,
+       96
+      ],
+      [
+       94,
+       86
+      ],
+      [
+       88,
+       76
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "L1P",
+     "name": "감호",
+     "alias": "호수 1",
+     "polygon": [
+      [
+       143,
+       84
+      ],
+      [
+       156,
+       84
+      ],
+      [
+       158,
+       96
+      ],
+      [
+       145,
+       97
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제86연대 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": true,
+    "known_at_start": "D일 01:00 351고지를 점령해 급편방어 중",
+    "posture": "방어",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      100,
+      110
+     ],
+     "note": "351고지 주봉과 동쪽 진지",
+     "ref": "T351",
+     "frontage_m": 1000
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제86연대(-)",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "-",
+    "strength_pct": 90,
+    "identified": true,
+    "known_at_start": "월비산과 148고지-187고지 일대에서 측방화력 지원",
+    "posture": "방어",
+    "preparation": "deliberate",
+    "position": {
+     "xy": [
+      85,
+      130
+     ],
+     "note": "월비산-148고지-187고지",
+     "frontage_m": 4000
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제9사단 포병",
+    "alias": "적 포병 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 100,
+    "identified": false,
+    "known_at_start": "D-1일 22:00 2천여 발 포격",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      95,
+      160
+     ],
+     "note": "남강 남쪽 추정"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 08:00",
+   "light": "day",
+   "notes": "하계. 함포와 항공지원 가능. 적은 351고지 측방에서 자동화기 화력을 보강 중이다."
+  }
+ }
+}

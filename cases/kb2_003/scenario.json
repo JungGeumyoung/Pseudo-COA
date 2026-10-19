@@ -1,0 +1,429 @@
+{
+ "id": "kb2_003",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 96,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 월비산 방어대대 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G1",
+    "fraction": 0.7,
+    "text": "제2대대 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제19사단은 월비산 일대에 강력한 거점을 편성해 국군의 전진을 저지하고, 월비산을 잃으면 곧바로 역습해 되찾아 향후 공격 발판으로 삼는다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "월비산 정상과 사면의 축성 진지를 고수한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         90,
+         110
+        ],
+        [
+         90,
+         110
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 이후 계속"
+       },
+       "basis": "서술: 월비산 부근에 강력한 거점을 형성해 국군의 전진을 저지"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 월비산에서 북쪽 201고지 방향으로 철수한다.",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         90,
+         112
+        ],
+        [
+         93,
+         120
+        ],
+        [
+         96,
+         130
+        ],
+        [
+         98,
+         138
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.6,
+        "text": "적 월비산 방어대대 손실 0.6 초과"
+       },
+       "basis": "추정: D+3일 진내 돌격으로 정상이 탈취됨"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "350고지 진지를 고수한다.",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         100,
+         124
+        ],
+        [
+         100,
+         124
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 이후 계속"
+       },
+       "basis": "서술: 제2대대가 10시간 격전 끝에 350고지 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "350고지에서 북쪽 201고지-146고지 일대로 철수한다.",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         100,
+         124
+        ],
+        [
+         101,
+         130
+        ],
+        [
+         102,
+         135
+        ],
+        [
+         104,
+         139
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "적 350고지 대대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "201고지-146고지 일대를 확보하고 월비산 증원로를 엄호한다.",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         104,
+         139
+        ],
+        [
+         104,
+         139
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 이후 계속"
+       },
+       "basis": "서술: 350고지 북쪽 201고지와 146고지를 북한군이 점령"
+      },
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "월비산 방어대대의 손실이 늘면 1개 중대를 북사면으로 보내 월비산을 증원한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         100,
+         138
+        ],
+        [
+         96,
+         130
+        ],
+        [
+         93,
+         120
+        ],
+        [
+         90,
+         114
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "적 월비산 방어대대 손실 0.25 초과"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       },
+       "basis": "서술: 201·146고지의 적을 격퇴하지 않고는 월비산 증원 차단이 불가능. 문턱은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 중대 이상이 350고지에 있으면 북쪽에서 350고지와 그 배후로 역습한다.",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         104,
+         139
+        ],
+        [
+         103,
+         134
+        ],
+        [
+         101,
+         128
+        ],
+        [
+         100,
+         124
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T9",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 350고지 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       },
+       "basis": "서술: 주공 제2대대가 배후 위협을 받음. 규칙화는 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "남강 북쪽에서 월비산 동쪽 접근로와 350고지에 포격한다.",
+       "objective_ref": "T10",
+       "axis_xy": [
+        [
+         95,
+         168
+        ],
+        [
+         98,
+         140
+        ],
+        [
+         101,
+         106
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 이후 계속"
+       },
+       "basis": "서술: 제1대대가 북한군의 포격과 방어사격으로 고지 점령 실패"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군 대대 이상이 월비산에 있으면 야간에 남강 남안에서 북사면을 따라 월비산으로 역습한다.",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         96,
+         150
+        ],
+        [
+         98,
+         140
+        ],
+        [
+         95,
+         130
+        ],
+        [
+         92,
+         120
+        ],
+        [
+         90,
+         112
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T1",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 월비산 안에 있음"
+       },
+       "basis": "서술: D+4일 자정 무렵 월비산을 탈환하려는 북한군 역습. 문턱은 추정"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "남강 북쪽 해안지역을 방어한다.",
+       "objective_ref": "T14",
+       "axis_xy": [
+        [
+         150,
+         170
+        ],
+        [
+         150,
+         170
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 이후 계속"
+       },
+       "basis": "서술: 적 제6군단이 제9사단을 해안지역에 배치"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제19사단 역습대대",
+    "alias": "적 대대 4",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "position": {
+     "xy": [
+      96,
+      152
+     ],
+     "ref": "T13",
+     "note": "남강 남안 월비산 북쪽(추정)"
+    },
+    "other_names": [
+     "월비산 역습부대"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명. 공격 개시 무렵 시계 제한"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 12,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D일 18:00",
+    "t": 18,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 12,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 18:00",
+    "t": 42,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 12,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 18:00",
+    "t": 66,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 06:00",
+    "t": 78,
+    "kind": "air_window",
+    "duration_h": 12,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+3일 18:00",
+    "t": 90,
+    "kind": "night",
+    "duration_h": 12,
+    "note": "야간"
+   }
+  ]
+ }
+}

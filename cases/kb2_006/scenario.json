@@ -1,0 +1,456 @@
+{
+ "id": "kb2_006",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 05:00",
+  "start_t": 5,
+  "horizon_h": 85,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "group": "E1",
+    "fraction": 0.7,
+    "text": "적 1211고지 방어 연대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "group": "G4",
+    "fraction": 0.7,
+    "text": "제1대대 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제2군단은 1211고지를 주거점으로 고수한다. 전진거점과 접근로마다 화력거점을 두어 공격을 소모시키고, 아군이 H-G-F고지선을 차지하면 제2사단 예비 연대로 역습해 전진진지를 되찾는다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T2",
+       "text": "1211고지 정상과 서북·서쪽 능선 화력거점을 고수한다.",
+       "basis": "서술: 화력거점을 형성하고 완강히 저항",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         95,
+         125
+        ],
+        [
+         90,
+         121
+        ],
+        [
+         86,
+         117
+        ],
+        [
+         84,
+         113
+        ]
+       ],
+       "text": "F고지에 아군 대대 이상이 있으면 1211고지 서쪽 능선으로 국지 역습한다.",
+       "basis": "추정: F고지-1211고지 사이 일진일퇴 공방",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T5",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 F고지 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 24
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T6",
+       "text": "H고지 전진거점에서 F고지까지 능선을 방어한다.",
+       "basis": "서술: 전진거점과 F고지의 북한군 저항",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         86,
+         101
+        ],
+        [
+         84,
+         113
+        ],
+        [
+         90,
+         121
+        ],
+        [
+         95,
+         125
+        ]
+       ],
+       "text": "손실이 커지면 1211고지 주진지로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "E2 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "RT2",
+       "text": "1211고지 동북능선 접근로마다 거점을 두고 방어한다.",
+       "basis": "서술: 접근로마다 배치된 북한군의 완강한 저항",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         112,
+         110
+        ],
+        [
+         105,
+         120
+        ],
+        [
+         100,
+         124
+        ]
+       ],
+       "text": "손실이 커지면 1211고지 동측 사면으로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.6,
+        "text": "E3 손실 0.6 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T3",
+       "text": "1052고지 일대를 방어하며 1211고지 서측을 엄호한다.",
+       "basis": "서술: 제13사단 1211고지 서쪽 배치",
+       "start": {
+        "type": "time_elapsed",
+        "value": 5,
+        "text": "D일 05:00부터"
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T3",
+       "axis_xy": [
+        [
+         50,
+         118
+        ],
+        [
+         50,
+         112
+        ],
+        [
+         50,
+         108
+        ]
+       ],
+       "text": "1052고지에 아군 중대 이상이 있으면 증강된 1개 대대로 역습한다.",
+       "basis": "서술: D-1일 18:00 증강 1개 대대의 파상공세. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T3",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 1052고지 안에 있음"
+       },
+       "repeat": {
+        "max": 2,
+        "interval_h": 12
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T10",
+       "axis_xy": [
+        [
+         50,
+         108
+        ],
+        [
+         40,
+         118
+        ],
+        [
+         25,
+         125
+        ]
+       ],
+       "text": "손실이 커지면 문등리 계곡 방향으로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.5,
+        "text": "E4 손실 0.5 초과"
+       }
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         100,
+         145
+        ],
+        [
+         97,
+         132
+        ],
+        [
+         95,
+         125
+        ],
+        [
+         90,
+         121
+        ],
+        [
+         84,
+         113
+        ],
+        [
+         86,
+         101
+        ]
+       ],
+       "text": "아군이 H-G-F고지선을 차지하고 전진거점 대대가 크게 손실되면 예비 제4연대로 H-G-F고지선을 역습한다.",
+       "basis": "서술: 예비인 제2사단 제4연대마저 투입. 문턱은 추정",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "T6",
+        "min_echelon": "대대",
+        "text": "아군 대대 이상이 G고지 안에 있음",
+        "and": [
+         {
+          "type": "losses_exceed",
+          "group": "E2",
+          "fraction": 0.5,
+          "text": "E2 손실 0.5 초과"
+         }
+        ]
+       }
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         86,
+         101
+        ],
+        [
+         89,
+         89
+        ]
+       ],
+       "text": "이어서 H고지를 공격한다.",
+       "basis": "추정: 전진진지 탈환 의도"
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         100,
+         185
+        ],
+        [
+         100,
+         160
+        ],
+        [
+         97,
+         140
+        ],
+        [
+         95,
+         125
+        ]
+       ],
+       "text": "1211고지 방어 연대가 크게 손실되면 군단 예비 제27사단 1개 연대로 1211고지를 증원한다.",
+       "basis": "서술: 제27사단을 일선 사단 증원용 예비로 둠. 문턱은 추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "E1 손실 0.5 초과"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "E5",
+    "unit": "북한군 제2사단 제4연대",
+    "alias": "적 연대 3",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "position": {
+     "xy": [
+      100,
+      145
+     ],
+     "ref": "T2",
+     "note": "1211고지 북쪽 후사면 사단 예비 위치(추정)"
+    },
+    "other_names": [
+     "제2사단 4연대"
+    ]
+   },
+   {
+    "id": "E6",
+    "unit": "북한군 제27사단 1개 연대",
+    "alias": "적 연대 4",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "position": {
+     "xy": [
+      100,
+      185
+     ],
+     "note": "성내천 북쪽 군단 예비 위치(추정)"
+    },
+    "other_names": [
+     "제27사단"
+    ]
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 05:00",
+    "t": 5,
+    "kind": "night",
+    "duration_h": 1.8,
+    "note": "공격 개시 시 야간, 06:50 일출"
+   },
+   {
+    "when": "D일 06:50",
+    "t": 6.83,
+    "kind": "air_window",
+    "duration_h": 10.9,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D일 17:40",
+    "t": 17.67,
+    "kind": "night",
+    "duration_h": 13.1,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 06:50",
+    "t": 30.83,
+    "kind": "air_window",
+    "duration_h": 10.9,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+1일 17:40",
+    "t": 41.67,
+    "kind": "night",
+    "duration_h": 13.1,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 06:50",
+    "t": 54.83,
+    "kind": "air_window",
+    "duration_h": 10.9,
+    "note": "주간 근접항공지원 가능 시간대"
+   },
+   {
+    "when": "D+2일 17:40",
+    "t": 65.67,
+    "kind": "night",
+    "duration_h": 13.1,
+    "note": "야간"
+   },
+   {
+    "when": "D+3일 06:50",
+    "t": 78.83,
+    "kind": "air_window",
+    "duration_h": 10.9,
+    "note": "주간 근접항공지원 가능 시간대"
+   }
+  ]
+ }
+}

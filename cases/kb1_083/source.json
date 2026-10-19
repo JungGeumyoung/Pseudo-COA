@@ -1,0 +1,159 @@
+{
+ "id": "kb1_083",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1950-07-30",
+   "end_date": "1950-08-01",
+   "d_day": "1950-07-30",
+   "order_time": "D일 06:00 (1950-07-30 06:00 추정)",
+   "text": "제17연대가 551고지-망일산선을 점령한 때부터 북한군 제5연대의 공격을 저지하고 역습으로 주저항선을 회복한 8월 1일까지",
+   "why": "구간 지정이 없어 전투 전체를 쓰고, 명령 시점은 연대의 첫 결심인 주저항선 점령으로 둔다."
+  },
+  "perspective_rationale": "관점 지정이 국군 제17연대이며 이 연대가 권빈리 서쪽 551고지-망일산선의 작전지역을 맡았다. 미 제34연대는 전방 가천-명당산선의 엄호 부대로서 인접 부대로 둔다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "8월 1일 주저항선이 한때 돌파되어 숙성산-상현리선으로 철수했으나 역습으로 551고지와 망일산을 탈환했고, 북한군 제5연대는 명당산·대야리 일대로 퇴각하여 동진이 돈좌되었다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)=남서 모서리. 권빈리를 (150,100)에 두고 서술의 거리(551고지 권빈리 서쪽 3km, 가천리 서쪽 6km, 317고지 가천리 서쪽 1km, 감토봉 거창 동남쪽 6km, 명당산 감토봉 남쪽 3km)로 추정 배치",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb1_083_권빈리_전투",
+  "title": "권빈리 전투",
+  "dates": "1950. 7. 30. ~ 8. 1.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '권빈리 전투' (pdf 292쪽)",
+  "pdf_page": 292,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 3,
+    "B2": 3,
+    "B3": 3,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 13
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "예비 제3대대를 망일산으로 전진시켜 북한군을 제압하도록 함",
+    "alternative": "예비대를 공격축선 전진이 아니라 주저항선(551고지·망일산) 증원 또는 돌파구 역습에 투입",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "그러나 북한군은제3대대의 공격축선을 피하여 계속 연대 주저항선인 망일산과 551고지에 공격을 시도하였다. 이에 전력의 열세로 점차 위기에 처하게 되어 주저항선이 돌파되었고"
+   },
+   {
+    "decision": "주저항선 돌파 후 숙성산∼상현리선으로 철수해 정비한 뒤 역습",
+    "alternative": "철수선에서 방어만 지속하고 역습하지 않음",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제1대대가 551고지 동쪽 사면에서 전방의 미 제34연대를 지원",
+    "alternative": "명당산·317고지 전방 진지에 대대를 증원해 전방에서 저지",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.7525,
+   "duration_s": 546.4,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 10,
+     "output_tokens": 59749,
+     "cache_read_input_tokens": 172473,
+     "cache_creation_input_tokens": 29401
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 8181,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 15143
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 35,
+   "flagged": [
+    {
+     "id": "E:E1[1]",
+     "verdict": "hidden_condition",
+     "reason": "'격퇴되면 정비 후 되풀이한다'는 전투 결과(격퇴)를 조건으로 쓴 것이어서 전투력 조건이 아니다.",
+     "fix": "격퇴라는 서술을 빼고 'E1 손실 X% 초과 시 정비 후 재공격'처럼 전투력 손실 문턱값 조건으로 바꾼다."
+    },
+    {
+     "id": "E:E2[1]",
+     "verdict": "hidden_condition",
+     "reason": "'격퇴되면 정비 후 되풀이한다'가 전투 결과를 트리거로 삼고 있어 전투력 조건이 아니다.",
+     "fix": "격퇴 서술을 빼고 'E2 손실 X% 초과 시 정비 후 재공격'과 같이 손실 비율 조건으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.0489092
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [
+   "E1[1](이어서): '격퇴'",
+   "E2[1](이어서): '격퇴'"
+  ],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}

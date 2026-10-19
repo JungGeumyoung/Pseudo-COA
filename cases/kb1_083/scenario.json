@@ -1,0 +1,525 @@
+{
+ "id": "kb1_083",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 06:00",
+  "start_t": 6,
+  "horizon_h": 66,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "side": "friendly",
+    "fraction": 0.7,
+    "text": "아군 연대 전투력 30% 미만"
+   },
+   {
+    "type": "losses_exceed",
+    "side": "enemy",
+    "fraction": 0.7,
+    "text": "적 제5연대 전투력 30% 미만"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "적 제5연대는 감토봉을 거점으로 명당산과 317고지의 미 제34연대를 1개 대대씩으로 공격해 탈취하고, 이어서 551고지-망일산선을 돌파하여 권빈리 교차로를 장악하고 대구 방향 동진로를 연다. 적 제18연대는 합천 방향으로 진출한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         70,
+         80
+        ],
+        [
+         75,
+         72
+        ],
+        [
+         80,
+         62
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 28,
+        "text": "D+1일 04:00 공격 개시(추정)"
+       },
+       "text": "감토봉에서 명당산의 미 제34연대를 공격한다.",
+       "basis": "서술: 31일 명당산을 1개 대대 규모로 공격. 개시 시각은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         80,
+         62
+        ],
+        [
+         88,
+         62
+        ],
+        [
+         95,
+         62
+        ],
+        [
+         103,
+         65
+        ],
+        [
+         110,
+         68
+        ],
+        [
+         124,
+         72
+        ]
+       ],
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       },
+       "text": "명당산에서 능선을 따라 망일산을 공격한다. 격퇴되면 정비 후 되풀이한다.",
+       "basis": "서술: D+2일 주저항선 공격, 패주 후 전열을 가다듬고 재공격. 횟수와 간격은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         110,
+         68
+        ],
+        [
+         95,
+         62
+        ],
+        [
+         80,
+         62
+        ],
+        [
+         70,
+         55
+        ],
+        [
+         62,
+         50
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "E1 손실 0.5 초과(추정)"
+       },
+       "text": "손실이 크면 명당산을 거쳐 대야리로 철수한다.",
+       "basis": "서술: 명당산·대야리 일대로 퇴각. 문턱값 추정"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         60,
+         106
+        ],
+        [
+         66,
+         105
+        ],
+        [
+         72,
+         104
+        ],
+        [
+         80,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 28,
+        "text": "D+1일 04:00 공격 개시(추정)"
+       },
+       "text": "황강 연안에서 317고지를 공격한다.",
+       "basis": "서술: 31일 317고지를 1개 대대 규모로 공격. 개시 시각은 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         80,
+         102
+        ],
+        [
+         90,
+         101
+        ],
+        [
+         98,
+         100
+        ],
+        [
+         106,
+         103
+        ],
+        [
+         112,
+         106
+        ],
+        [
+         120,
+         108
+        ]
+       ],
+       "repeat": {
+        "max": 3,
+        "interval_h": 6
+       },
+       "text": "317고지에서 가천리를 거쳐 551고지를 공격한다. 격퇴되면 정비 후 되풀이한다.",
+       "basis": "서술: 가천리 방면에서 551고지 공격 후 패주, 재공격. 횟수와 간격은 추정"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         106,
+         103
+        ],
+        [
+         90,
+         101
+        ],
+        [
+         85,
+         85
+        ],
+        [
+         80,
+         62
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.5,
+        "text": "E2 손실 0.5 초과(추정)"
+       },
+       "text": "손실이 크면 명당산 방향으로 철수한다.",
+       "basis": "서술: 317고지와 명당산 쪽으로 패주. 문턱값 추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         55,
+         95
+        ],
+        [
+         66,
+         88
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       },
+       "text": "감토봉 일대에서 연대 예비로 대기한다.",
+       "basis": "추정: 3개 대대 편성 연대의 예비 대대"
+      },
+      {
+       "timing": "조건",
+       "mode": "infiltrate",
+       "objective_ref": "CM9",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         80,
+         62
+        ],
+        [
+         100,
+         50
+        ],
+        [
+         120,
+         55
+        ],
+        [
+         135,
+         65
+        ],
+        [
+         140,
+         72
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.25,
+        "text": "E1 손실 0.25 초과(추정)"
+       },
+       "text": "망일산 정면 공격이 막히면 망일산 남측으로 우회하여 권빈리 후방을 위협한다.",
+       "basis": "서술: 연대 후방지역이 위협받음. 투입 조건 추정"
+      },
+      {
+       "timing": "이어서",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         140,
+         72
+        ],
+        [
+         132,
+         72
+        ],
+        [
+         124,
+         72
+        ]
+       ],
+       "text": "후방에서 망일산을 공격한다.",
+       "basis": "서술: 제3대대 공격축선을 피해 망일산 공격 지속"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T11",
+       "axis_xy": [
+        [
+         124,
+         72
+        ],
+        [
+         110,
+         60
+        ],
+        [
+         100,
+         50
+        ],
+        [
+         80,
+         50
+        ],
+        [
+         62,
+         50
+        ]
+       ],
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "E3 손실 0.5 초과(추정)"
+       },
+       "text": "손실이 크면 대야리로 철수한다.",
+       "basis": "서술: 대야리 일대로 퇴각. 문턱값 추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T14",
+       "axis_xy": [
+        [
+         90,
+         25
+        ],
+        [
+         120,
+         18
+        ],
+        [
+         150,
+         14
+        ],
+        [
+         175,
+         10
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00부터"
+       },
+       "text": "합천 방향으로 진출하여 미 제21연대 제1대대를 공격한다.",
+       "basis": "서술: 제18연대를 합천 쪽으로 진출시켜 미 제21연대 제1대대 공격"
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         50,
+         100
+        ],
+        [
+         80,
+         102
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 27,
+        "text": "D+1일 03:00(추정)"
+       },
+       "text": "317고지와 명당산의 미 제34연대 진지를 포격한다.",
+       "basis": "추정: 사단 포병의 공격 지원"
+      },
+      {
+       "timing": "이어서",
+       "mode": "bombard",
+       "objective_ref": "CM1",
+       "axis_xy": [
+        [
+         60,
+         90
+        ],
+        [
+         118,
+         90
+        ]
+       ],
+       "text": "551고지-망일산 주저항선을 포격한다.",
+       "basis": "추정: 주저항선 공격 지원"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "북한군 제4사단 포병 1개 대대(추정)",
+    "alias": "적 포병 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 60,
+    "equipment": "76mm 야포·122mm 곡사포 수 문(추정)",
+    "position": {
+     "xy": [
+      50,
+      100
+     ],
+     "note": "감토봉 서쪽 황강 연안(추정)",
+     "ref": "R1"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 20:00",
+    "t": 20,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:00",
+    "t": 29,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+1일 20:00",
+    "t": 44,
+    "kind": "night",
+    "duration_h": 9,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:00",
+    "t": 53,
+    "kind": "dawn",
+    "duration_h": 1,
+    "note": "여명"
+   },
+   {
+    "when": "D+2일 20:00",
+    "t": 68,
+    "kind": "night",
+    "duration_h": 4,
+    "note": "야간(구간 끝까지)"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+1일 06:00",
+    "t": 30,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D+2일 06:00",
+    "t": 54,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 항공 가능 시간대"
+   },
+   {
+    "when": "D일 06:00",
+    "t": 6,
+    "kind": "weather",
+    "duration_h": 66,
+    "note": "7월 말 혹서. 산악 기동 시 피로 누적"
+   }
+  ]
+ }
+}

@@ -1,0 +1,583 @@
+{
+ "id": "kb2_020",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D일 00:00",
+  "start_t": 0,
+  "horizon_h": 76,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "text": "제7연대 H중대 손실 0.7 초과(전투력 30% 미만)",
+    "group": "G2",
+    "fraction": 0.7
+   },
+   {
+    "type": "losses_exceed",
+    "text": "중공군 제118사단 제352연대 손실 0.7 초과(전투력 30% 미만)",
+    "group": "E1",
+    "fraction": 0.7
+   }
+  ],
+  "enemy_plan": {
+   "intent": "중공군 제118사단은 벙커고지를 되찾아 미 제1해병연대 주저항선 전방의 관측 거점을 없애려 한다. 매 야간 포격 뒤 벙커고지를 되풀이해 공격하고, 판문점 사격제한구역을 이용해 GOP 2를 견제한다. 마지막으로 사단 예비 대대로 벙커고지를 서쪽과 북쪽에서 협공한다.",
+   "groups": [
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         90,
+         160
+        ],
+        [
+         85,
+         145
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D일 00:30 벙커고지와 서남쪽 경사 진지를 포격한다.",
+       "basis": "서술: D일 01:00 공격 전 I중대 진지를 포격했다. 시각은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 00:30",
+        "value": 0.5
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         70,
+         160
+        ],
+        [
+         55,
+         130
+        ],
+        [
+         47,
+         101
+        ]
+       ],
+       "text": "D일 일몰 무렵 GOP 2와 벙커고지를 포격한다.",
+       "basis": "서술: 일몰 무렵 GOP 2 포격, 같은 시각 벙커고지 포격 집중",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 19:00",
+        "value": 19
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         90,
+         160
+        ],
+        [
+         85,
+         145
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D+2일 새벽 벙커고지와 주저항선을 포격한다.",
+       "basis": "서술: D+2일 새벽 중공군 도발로 치열한 포격전. 시각은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D+2일 01:00",
+        "value": 49
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         95,
+         180
+        ],
+        [
+         90,
+         160
+        ],
+        [
+         85,
+         145
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D+3일 00:30 벙커고지를 포격한다.",
+       "basis": "서술: D+3일 00:40 공격은 야포 지원 아래 실시. 시각은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D+3일 00:30",
+        "value": 72.5
+       }
+      }
+     ]
+    },
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         70,
+         150
+        ],
+        [
+         68,
+         140
+        ],
+        [
+         70,
+         132
+        ],
+        [
+         74,
+         127
+        ],
+        [
+         79,
+         126
+        ]
+       ],
+       "text": "D일 01:00 1개 대대로 벙커고지 서남쪽 경사의 I중대 진지를 공격한다.",
+       "basis": "서술: D일 01:00 대대 규모 공격",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 01:00",
+        "value": 1
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T12",
+       "axis_xy": [
+        [
+         79,
+         126
+        ],
+        [
+         72,
+         134
+        ],
+        [
+         68,
+         142
+        ],
+        [
+         70,
+         150
+        ]
+       ],
+       "text": "공격 대대 손실이 크면 전진 고지군으로 철수한다.",
+       "basis": "추정: 연대 기준 손실 0.1은 공격 대대 약 30% 손실에 해당",
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "제352연대 손실 0.1 초과",
+        "group": "E1",
+        "fraction": 0.1
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         85,
+         152
+        ],
+        [
+         86,
+         142
+        ],
+        [
+         84,
+         134
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D일 21:00 증강된 1개 중대로 벙커고지를 공격한다.",
+       "basis": "서술: D일 21:00 증강 중대 규모 공격",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 21:00",
+        "value": 21
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         85,
+         152
+        ],
+        [
+         86,
+         142
+        ],
+        [
+         84,
+         134
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D+2일 02:30 벙커고지를 공격한다.",
+       "basis": "서술: D+2일 02:30 공격 재개. 규모 미상, 중대 규모 추정",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D+2일 02:30",
+        "value": 50.5
+       }
+      },
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         70,
+         150
+        ],
+        [
+         68,
+         140
+        ],
+        [
+         72,
+         132
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D+2일 오후 1개 중대로 벙커고지를 공격한다.",
+       "basis": "서술: 진지 인수 직후 중대 규모 공격, 17:50 격퇴. 개시 시각은 추정",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D+2일 14:00",
+        "value": 62
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T12",
+       "axis_xy": [
+        [
+         80,
+         128
+        ],
+        [
+         84,
+         134
+        ],
+        [
+         86,
+         142
+        ],
+        [
+         85,
+         152
+        ]
+       ],
+       "text": "누적 손실이 커지면 벙커고지 공격을 멈추고 전진 고지군으로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "제352연대 손실 0.3 초과",
+        "group": "E1",
+        "fraction": 0.3
+       }
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         50,
+         165
+        ],
+        [
+         52,
+         145
+        ],
+        [
+         52,
+         130
+        ],
+        [
+         49,
+         112
+        ],
+        [
+         47,
+         101
+        ]
+       ],
+       "text": "D일 일몰 무렵 증강된 1개 중대로 GOP 2를 공격한다.",
+       "basis": "서술: 일몰 무렵 증강 중대가 사격제한구역 동쪽 GOP 2 공격. 소속은 판문점 북쪽 배치로 추정",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 19:30",
+        "value": 19.5
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         47,
+         101
+        ],
+        [
+         50,
+         115
+        ],
+        [
+         52,
+         140
+        ],
+        [
+         50,
+         165
+        ]
+       ],
+       "text": "공격 중대 손실이 크면 망해산 방향으로 철수한다.",
+       "basis": "추정: 연대 기준 0.05는 공격 중대 약 40% 손실",
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "제180연대 손실 0.05 초과",
+        "group": "E3",
+        "fraction": 0.05
+       }
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "objective_ref": "T10",
+       "axis_xy": [
+        [
+         135,
+         160
+        ],
+        [
+         150,
+         170
+        ]
+       ],
+       "text": "207고지 일대 진지를 고수한다.",
+       "basis": "서술: 구간 중 48A 방향 공격 기록 없음",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D일 00:00",
+        "value": 0
+       }
+      }
+     ]
+    },
+    {
+     "group": "H1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         95,
+         165
+        ],
+        [
+         85,
+         150
+        ],
+        [
+         72,
+         138
+        ],
+        [
+         70,
+         131
+        ],
+        [
+         80,
+         128
+        ]
+       ],
+       "text": "D+3일 00:40 1개 대대로 벙커고지를 서쪽과 북쪽에서 협공한다.",
+       "basis": "서술: D+3일 00:40 대대 규모가 야포 지원 아래 서·북 협공, 파상공격",
+       "start": {
+        "type": "time_elapsed",
+        "text": "D+3일 00:40",
+        "value": 72.67
+       }
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         80,
+         128
+        ],
+        [
+         84,
+         138
+        ],
+        [
+         88,
+         150
+        ],
+        [
+         95,
+         165
+        ]
+       ],
+       "text": "손실이 크면 대덕산 방향으로 철수한다.",
+       "basis": "추정",
+       "trigger": {
+        "type": "losses_exceed",
+        "text": "예비 대대 손실 0.4 초과",
+        "group": "H1",
+        "fraction": 0.4
+       }
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "H1",
+    "unit": "중공군 제118사단 예비 1개 대대",
+    "alias": "적 대대 1",
+    "nation": "중국",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 700,
+    "position": {
+     "xy": [
+      95,
+      165
+     ],
+     "note": "대덕산 남측 사단 예비 위치 추정",
+     "ref": "T8"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D일 00:00",
+    "t": 0,
+    "kind": "night",
+    "duration_h": 5.5,
+    "note": "야간"
+   },
+   {
+    "when": "D일 05:30",
+    "t": 5.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D일 19:30",
+    "t": 19.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 05:30",
+    "t": 29.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+1일 19:30",
+    "t": 43.5,
+    "kind": "night",
+    "duration_h": 10,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 05:30",
+    "t": 53.5,
+    "kind": "air_window",
+    "duration_h": 14,
+    "note": "주간 근접항공지원 가능"
+   },
+   {
+    "when": "D+2일 19:30",
+    "t": 67.5,
+    "kind": "night",
+    "duration_h": 8.5,
+    "note": "야간"
+   }
+  ]
+ }
+}

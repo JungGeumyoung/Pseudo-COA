@@ -1,0 +1,890 @@
+{
+ "id": "kb1_080",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제1사단 제13연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제13연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "D일 06:00부로 군단 서측방 동막리-366고지 간을 방어한다.",
+   "higher_intent": "함창 서쪽 접근로를 막아 군단 서측방과 제6사단 후방을 보호하고 후속 방어선 형성의 시간을 확보한다.",
+   "assigned_task": "D일 06:00부 992번 도로 축선 366고지-동막리 간을 방어한다. 제3대대는 D일 06:00부 제11연대 작전통제로 전환한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "국군 제1사단 제11연대",
+     "alias": "인접 연대 1",
+     "side": "좌측(남쪽)",
+     "type": "infantry",
+     "echelon": "연대",
+     "mission": "D일 06:00부 지평리-동막리 간을 방어하고 국사봉을 점령한다.",
+     "xy": [
+      128,
+      40
+     ],
+     "other_names": [
+      "제11연대"
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "국군 제6사단",
+     "alias": "인접 사단 1",
+     "side": "우측(북쪽)",
+     "type": "infantry",
+     "echelon": "사단",
+     "mission": "연대 북쪽 문경 방면 정면에서 적을 저지한다.",
+     "xy": [
+      165,
+      160
+     ],
+     "other_names": [
+      "제6사단"
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "제6사단 포병대대",
+     "alias": "포병 대대 1",
+     "side": "후방(동북쪽)",
+     "type": "artillery",
+     "echelon": "대대",
+     "mission": "요청 시 제1사단 정면에 화력을 지원한다.",
+     "xy": [
+      170,
+      135
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "국군 제1사단",
+     "text": "사단은 D일 06:00부로 동막리-366고지 간 방어 책임을 진다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "H366"
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "제11연대는 D일 06:00까지 국사봉을 점령한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "GUKSA"
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "제11연대는 D일 06:00부 제13연대 제3대대를 작전통제한다.",
+     "timing": "계획",
+     "trigger": {
+      "type": "time_elapsed",
+      "value": 6,
+      "text": "D일 06:00"
+     },
+     "action": {
+      "mode": "hold",
+      "objective_ref": "YEJU"
+     }
+    },
+    {
+     "unit": "A1",
+     "text": "제11연대는 적 중대 이상이 예주리에 있으면 예하 대대로 예주리 방향 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "YEJU",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 예주리 안에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "YEJU",
+      "axis_xy": [
+       [
+        125,
+        40
+       ],
+       [
+        125,
+        48
+       ],
+       [
+        125,
+        56
+       ]
+      ]
+     }
+    },
+    {
+     "unit": "A3",
+     "text": "제6사단 포병대대는 적 대대 이상이 428고지 일대에 있으면 요청에 따라 화력을 지원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H428",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 428고지 안에 있음"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "H428"
+     }
+    },
+    {
+     "unit": "A3",
+     "text": "제6사단 포병대대는 적 대대 이상이 366고지 일대에 있으면 요청에 따라 화력을 지원한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H366",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 366고지 안에 있음"
+     },
+     "action": {
+      "mode": "bombard",
+      "objective_ref": "H366"
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "연대 작전지역은 남쪽 이안천-동막리 선(제11연대와 경계)에서 북쪽 428고지 북방(제6사단과 경계)까지이며 992번 도로 축선 366고지-212고지 일대다.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "제13연대-제11연대 전투지경선",
+     "between": [
+      "국군 제1사단 제13연대",
+      "A1"
+     ],
+     "xy": [
+      [
+       60,
+       64
+      ],
+      [
+       100,
+       69
+      ],
+      [
+       130,
+       76
+      ],
+      [
+       165,
+       88
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "제1사단-제6사단 전투지경선",
+     "between": [
+      "국군 제1사단 제13연대",
+      "A2"
+     ],
+     "xy": [
+      [
+       60,
+       136
+      ],
+      [
+       110,
+       134
+      ],
+      [
+       165,
+       128
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "U1",
+    "unit": "제13연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "U2",
+    "unit": "제13연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "U3",
+    "unit": "제13연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 75,
+    "personnel": 600,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 남단, D일 06:00부 제11연대 작전통제 예정"
+    }
+   },
+   {
+    "id": "U4",
+    "unit": "제13연대 정찰대",
+    "alias": "정찰대",
+    "echelon": "소대",
+    "type": "recon",
+    "modifier": "",
+    "strength_pct": 100,
+    "personnel": 40,
+    "relationship": "건제",
+    "location": {
+     "note": "아천리 서쪽에서 정찰 중",
+     "ref": "ACHEON"
+    }
+   },
+   {
+    "id": "U5",
+    "unit": "제13연대 대전차포소대",
+    "alias": "대전차포소대",
+    "echelon": "소대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "57mm 대전차포 2문",
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "함창은 소백산맥 남사면 낙동강 상류의 분지다. 992번 도로가 주막동에서 아천리를 거쳐 함창으로 동진하고, 3번 도로가 문경-함창-상주를 잇는다. 이안천이 연대 남쪽을 동류하고 북서쪽에는 760고지-428고지 능선이 있다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "HAMCHANG",
+     "name": "함창",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      165,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "3번 도로와 992번 도로의 교차점"
+    },
+    {
+     "id": "JUMAK",
+     "name": "주막동",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      45,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "함창 서쪽 12km"
+    },
+    {
+     "id": "ACHEON",
+     "name": "아천리",
+     "alias": "마을 3",
+     "other_names": [
+      "감바우"
+     ],
+     "kind": "town",
+     "xy": [
+      90,
+      100
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "992번 도로상, 366고지 서쪽"
+    },
+    {
+     "id": "H366",
+     "name": "366고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      108,
+      108
+     ],
+     "estimated": true,
+     "elevation_m": 366,
+     "evidence": "992번 도로 북측, 사단 방어선 북단",
+     "preparation": "hasty"
+    },
+    {
+     "id": "H212",
+     "name": "212고지",
+     "alias": "고지 B",
+     "kind": "hill",
+     "xy": [
+      132,
+      94
+     ],
+     "estimated": true,
+     "elevation_m": 212,
+     "evidence": "992번 도로 남측, 366고지 동쪽 종심",
+     "preparation": "hasty"
+    },
+    {
+     "id": "H428",
+     "name": "428고지",
+     "alias": "고지 C",
+     "kind": "hill",
+     "xy": [
+      100,
+      122
+     ],
+     "estimated": true,
+     "elevation_m": 428,
+     "evidence": "366고지 북서쪽, 760고지 능선 끝",
+     "preparation": "hasty"
+    },
+    {
+     "id": "H760",
+     "name": "760고지",
+     "alias": "고지 D",
+     "kind": "hill",
+     "xy": [
+      78,
+      142
+     ],
+     "estimated": true,
+     "elevation_m": 760,
+     "evidence": "428고지 북서쪽 고지"
+    },
+    {
+     "id": "GUKSA",
+     "name": "국사봉",
+     "alias": "고지 E",
+     "kind": "hill",
+     "xy": [
+      125,
+      46
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "예주리 남쪽 1km"
+    },
+    {
+     "id": "EUNCHEOK",
+     "name": "은척산",
+     "alias": "고지 F",
+     "kind": "hill",
+     "xy": [
+      85,
+      30
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "함창 남서쪽 산"
+    },
+    {
+     "id": "GYEONGDEUL",
+     "name": "경들마을",
+     "alias": "마을 4",
+     "kind": "town",
+     "xy": [
+      104,
+      88
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "992번 도로 남쪽 산기슭"
+    },
+    {
+     "id": "RES",
+     "name": "경들저수지",
+     "alias": "지점 1",
+     "kind": "lake",
+     "xy": [
+      113,
+      84
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "경들마을 동쪽"
+    },
+    {
+     "id": "YEJU",
+     "name": "예주리",
+     "alias": "마을 5",
+     "kind": "town",
+     "xy": [
+      125,
+      56
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "국사봉 북쪽 1km, 이안천 남안"
+    },
+    {
+     "id": "DONGMAK",
+     "name": "동막리",
+     "alias": "마을 6",
+     "kind": "town",
+     "xy": [
+      130,
+      77
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "사단 방어선상 제11연대와 접점"
+    },
+    {
+     "id": "JIPYEONG",
+     "name": "지평리",
+     "alias": "마을 7",
+     "kind": "town",
+     "xy": [
+      130,
+      22
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "제11연대 방어선 남단"
+    },
+    {
+     "id": "JANGAM",
+     "name": "장암리",
+     "alias": "마을 8",
+     "kind": "town",
+     "xy": [
+      88,
+      132
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "760고지와 428고지 사이"
+    },
+    {
+     "id": "GUMI",
+     "name": "구미리",
+     "alias": "마을 9",
+     "kind": "town",
+     "xy": [
+      98,
+      150
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "428고지 북쪽"
+    },
+    {
+     "id": "MUNGYEONG",
+     "name": "문경",
+     "alias": "마을 10",
+     "kind": "town",
+     "xy": [
+      160,
+      192
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "3번 도로 북쪽"
+    },
+    {
+     "id": "XING",
+     "name": "이안천 도하지점",
+     "alias": "지점 2",
+     "kind": "crossing",
+     "xy": [
+      118,
+      67
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "무명 도로가 이안천을 건너 예주리로 이어지는 곳"
+    }
+   ],
+   "routes": [
+    {
+     "id": "R992",
+     "name": "992번 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       45,
+       105
+      ],
+      [
+       65,
+       103
+      ],
+      [
+       90,
+       100
+      ],
+      [
+       105,
+       99
+      ],
+      [
+       120,
+       96
+      ],
+      [
+       140,
+       97
+      ],
+      [
+       165,
+       100
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "R3",
+     "name": "3번 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       160,
+       195
+      ],
+      [
+       162,
+       150
+      ],
+      [
+       165,
+       100
+      ],
+      [
+       163,
+       50
+      ],
+      [
+       160,
+       5
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RUN",
+     "name": "무명 도로",
+     "alias": "도로 3",
+     "kind": "road",
+     "xy": [
+      [
+       45,
+       105
+      ],
+      [
+       55,
+       92
+      ],
+      [
+       75,
+       80
+      ],
+      [
+       95,
+       74
+      ],
+      [
+       110,
+       70
+      ],
+      [
+       118,
+       67
+      ],
+      [
+       125,
+       56
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RDG",
+     "name": "760고지-428고지 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      [
+       78,
+       142
+      ],
+      [
+       88,
+       132
+      ],
+      [
+       95,
+       126
+      ],
+      [
+       100,
+       122
+      ],
+      [
+       104,
+       115
+      ],
+      [
+       108,
+       108
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": [
+    {
+     "id": "IAN",
+     "name": "이안천",
+     "alias": "하천 1",
+     "polygon": [
+      [
+       20,
+       54
+      ],
+      [
+       70,
+       64
+      ],
+      [
+       115,
+       69
+      ],
+      [
+       150,
+       76
+      ],
+      [
+       172,
+       86
+      ],
+      [
+       172,
+       82
+      ],
+      [
+       150,
+       72
+      ],
+      [
+       115,
+       65
+      ],
+      [
+       70,
+       60
+      ],
+      [
+       20,
+       50
+      ]
+     ],
+     "gap_at": [
+      118,
+      67
+     ]
+    },
+    {
+     "id": "YEONG",
+     "name": "영강",
+     "alias": "하천 2",
+     "polygon": [
+      [
+       176,
+       195
+      ],
+      [
+       179,
+       140
+      ],
+      [
+       177,
+       100
+      ],
+      [
+       181,
+       40
+      ],
+      [
+       186,
+       5
+      ],
+      [
+       190,
+       5
+      ],
+      [
+       185,
+       40
+      ],
+      [
+       181,
+       100
+      ],
+      [
+       183,
+       140
+      ],
+      [
+       180,
+       195
+      ]
+     ]
+    }
+   ]
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "북한군 제1사단 예하 연대 북쪽 제대",
+    "alias": "적 대대 1",
+    "other_names": [
+     "적 제1사단 예하 연대 주력"
+    ],
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "+",
+    "strength_pct": 90,
+    "equipment": "장갑차",
+    "identified": false,
+    "known_at_start": "정찰대가 D-1일 22:00 장갑차를 동반한 연대 규모 적이 주막동에서 두 제대로 나뉘어 1개 제대는 992번 도로를 따라 아천리 방면으로 동진 중이라고 보고했다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      60,
+      103
+     ],
+     "note": "주막동 동쪽 992번 도로상 동진 중",
+     "ref": "R992",
+     "frontage_m": 500
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "북한군 제1사단 예하 연대 남쪽 제대",
+    "alias": "적 대대 2",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 90,
+    "identified": false,
+    "known_at_start": "정찰대가 D-1일 22:00 다른 1개 제대가 주막동에서 무명 도로를 따라 동쪽으로 이동 중이라고 보고했다.",
+    "posture": "이동",
+    "position": {
+     "xy": [
+      55,
+      92
+     ],
+     "note": "주막동 남동쪽 무명 도로상 동진 중",
+     "ref": "RUN",
+     "frontage_m": 500
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "북한군 제13사단 제21연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 95,
+    "identified": true,
+    "known_at_start": "D-1일 문경 방면에서 사단의 공격을 집중 포격으로 저지했다.",
+    "posture": "미상",
+    "preparation": "hasty",
+    "position": {
+     "xy": [
+      120,
+      178
+     ],
+     "note": "문경 남서쪽 영강 서쪽 일대",
+     "frontage_m": 3000
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "북한군 제13사단 포병연대",
+    "alias": "적 포병 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 95,
+    "identified": true,
+    "known_at_start": "D-1일 문경 방면에서 사단 공격에 집중 포격을 가했다.",
+    "posture": "미상",
+    "position": {
+     "xy": [
+      125,
+      188
+     ],
+     "note": "문경 남쪽 일대"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D-1일 22:00",
+   "light": "night",
+   "notes": "7월 하순 장마철이다. 이안천변에 새벽 안개가 잦다. 진지는 D-2일 제5연대로부터 인수한 급편진지다."
+  }
+ }
+}

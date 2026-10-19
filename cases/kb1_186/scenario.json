@@ -1,0 +1,449 @@
+{
+ "id": "kb1_186",
+ "schema": "reduced-opord/0.6",
+ "scenario": {
+  "start": "D-1일 13:00",
+  "start_t": -11,
+  "horizon_h": 83,
+  "stop_conditions": [
+   {
+    "type": "losses_exceed",
+    "side": "friendly",
+    "fraction": 0.7,
+    "text": "아군 연대 누적 손실 0.7 초과(전투력 30% 미만)"
+   },
+   {
+    "type": "losses_exceed",
+    "side": "enemy",
+    "fraction": 0.7,
+    "text": "적 북한군 제45사단 투입 부대 누적 손실 0.7 초과(전투력 30% 미만)"
+   }
+  ],
+  "enemy_plan": {
+   "intent": "북한군 제45사단은 884고지·602고지·591고지의 유개호 진지를 고수하고, 884고지를 잃으면 591고지 북쪽의 역습대대로 파상역습해 되찾는다. 122mm 포병대대로 884고지와 접근 능선을 집중사격하고, 역습부대가 크게 소모되면 남강 북쪽의 예비대대로 증원한다.",
+   "groups": [
+    {
+     "group": "E1",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "884고지 유개호 진지를 고수한다.",
+       "objective_ref": "H884",
+       "start": {
+        "type": "time_elapsed",
+        "value": -11,
+        "text": "구간 시작부터"
+       },
+       "basis": "제9연대와 1주일 교전 동안 884고지 고수 확인"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 884고지 북사면을 따라 591고지로 철수한다.",
+       "axis_xy": [
+        [
+         100,
+         101
+        ],
+        [
+         101,
+         105
+        ],
+        [
+         101,
+         110
+        ],
+        [
+         100,
+         114
+        ],
+        [
+         100,
+         118
+        ]
+       ],
+       "objective_ref": "H591",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E1",
+        "fraction": 0.5,
+        "text": "884고지 방어대대 손실 0.5 초과"
+       },
+       "basis": "추정: 제9연대 공격 때 백병전 뒤 진지를 내준 양상"
+      }
+     ]
+    },
+    {
+     "group": "E2",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "591고지 유개호 진지를 고수한다.",
+       "objective_ref": "H591",
+       "start": {
+        "type": "time_elapsed",
+        "value": -11,
+        "text": "구간 시작부터"
+       },
+       "basis": "제9연대 특공대의 3차례 돌격을 격퇴한 진지"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 남강 북쪽으로 철수한다.",
+       "axis_xy": [
+        [
+         100,
+         118
+        ],
+        [
+         100,
+         124
+        ],
+        [
+         100,
+         130
+        ],
+        [
+         100,
+         140
+        ]
+       ],
+       "objective_ref": "RV_NAM",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E2",
+        "fraction": 0.6,
+        "text": "591고지 방어대대 손실 0.6 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E3",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "602고지 진지를 고수하며 884고지 북서사면에 측방사격한다.",
+       "objective_ref": "H602",
+       "start": {
+        "type": "time_elapsed",
+        "value": -11,
+        "text": "구간 시작부터"
+       },
+       "basis": "602고지가 884고지 북서 측방을 감제"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "손실이 커지면 591고지 방향으로 철수한다.",
+       "axis_xy": [
+        [
+         93,
+         107
+        ],
+        [
+         94,
+         111
+        ],
+        [
+         96,
+         114
+        ],
+        [
+         100,
+         118
+        ]
+       ],
+       "objective_ref": "H591",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E3",
+        "fraction": 0.5,
+        "text": "602고지 방어중대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E4",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "counterattack",
+       "text": "아군이 884고지에 들어오면 591고지에서 북사면 능선을 따라 3개 제대로 파상역습한다.",
+       "axis_xy": [
+        [
+         101,
+         126
+        ],
+        [
+         100,
+         118
+        ],
+        [
+         101,
+         113
+        ],
+        [
+         101,
+         107
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "objective_ref": "H884",
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H884",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 884고지 안에 있음"
+       },
+       "repeat": {
+        "max": 3,
+        "interval_h": 1.5
+       },
+       "basis": "제9연대가 점령할 때마다 3개 제대 파상역습으로 탈환한 반복 양상"
+      },
+      {
+       "timing": "조건",
+       "mode": "withdraw",
+       "text": "역습 손실이 커지면 591고지 북쪽 남강 남안으로 물러난다.",
+       "axis_xy": [
+        [
+         100,
+         105
+        ],
+        [
+         100,
+         114
+        ],
+        [
+         101,
+         122
+        ],
+        [
+         101,
+         126
+        ]
+       ],
+       "objective_ref": "RV_NAM",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.5,
+        "text": "역습대대 손실 0.5 초과"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E5",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "bombard",
+       "text": "아군 공격 개시부터 884고지와 동·서 접근 능선에 집중사격한다.",
+       "objective_ref": "H884",
+       "axis_xy": [
+        [
+         100,
+         145
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "start": {
+        "type": "time_elapsed",
+        "value": 6,
+        "text": "D일 06:00 아군 공격 개시"
+       },
+       "basis": "사단 직접지원 122mm 포병대대"
+      },
+      {
+       "timing": "조건",
+       "mode": "bombard",
+       "text": "아군이 591고지에 들어오면 591고지에 집중사격한다.",
+       "objective_ref": "H591",
+       "axis_xy": [
+        [
+         100,
+         145
+        ],
+        [
+         100,
+         118
+        ]
+       ],
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "friendly",
+        "ref": "H591",
+        "min_echelon": "중대",
+        "text": "아군 중대 이상이 591고지 안에 있음"
+       },
+       "basis": "추정"
+      }
+     ]
+    },
+    {
+     "group": "E6",
+     "items": [
+      {
+       "timing": "계획",
+       "mode": "hold",
+       "text": "954고지 진지를 고수하며 서측 능선 접근로에 측방사격한다.",
+       "objective_ref": "H954",
+       "start": {
+        "type": "time_elapsed",
+        "value": -11,
+        "text": "구간 시작부터"
+       },
+       "basis": "북한군 제13사단이 751고지-954고지 방어"
+      }
+     ]
+    },
+    {
+     "group": "HE1",
+     "items": [
+      {
+       "timing": "조건",
+       "mode": "reinforce",
+       "text": "역습대대가 크게 소모되면 남강을 건너 591고지로 증원한다.",
+       "axis_xy": [
+        [
+         100,
+         150
+        ],
+        [
+         100,
+         140
+        ],
+        [
+         101,
+         130
+        ],
+        [
+         101,
+         126
+        ],
+        [
+         100,
+         118
+        ]
+       ],
+       "objective_ref": "H591",
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "E4",
+        "fraction": 0.5,
+        "text": "역습대대 손실 0.5 초과"
+       },
+       "basis": "추정: D+3일 이후 역습이 계속된 점으로 보아 사단 예비 존재"
+      },
+      {
+       "timing": "이어서",
+       "mode": "counterattack",
+       "text": "591고지에서 884고지로 역습한다.",
+       "axis_xy": [
+        [
+         100,
+         118
+        ],
+        [
+         101,
+         113
+        ],
+        [
+         101,
+         107
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "objective_ref": "H884",
+       "basis": "추정"
+      }
+     ]
+    }
+   ]
+  },
+  "hidden_enemy": [
+   {
+    "id": "HE1",
+    "unit": "북한군 제45사단 예비대대",
+    "alias": "적 대대 4",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 85,
+    "personnel": 500,
+    "position": {
+     "xy": [
+      100,
+      150
+     ],
+     "note": "남강 북쪽 사단 예비 대기지역(추정)"
+    }
+   }
+  ],
+  "exogenous": [
+   {
+    "when": "D-1일 19:20",
+    "t": -4.67,
+    "kind": "night",
+    "duration_h": 10.33,
+    "note": "야간. 공격대기선 이동 시간대"
+   },
+   {
+    "when": "D일 05:40",
+    "t": 5.67,
+    "kind": "dawn",
+    "duration_h": 0.5,
+    "note": "일출"
+   },
+   {
+    "when": "D일 19:20",
+    "t": 19.33,
+    "kind": "night",
+    "duration_h": 10.33,
+    "note": "야간"
+   },
+   {
+    "when": "D+1일 19:20",
+    "t": 43.33,
+    "kind": "night",
+    "duration_h": 10.33,
+    "note": "야간"
+   },
+   {
+    "when": "D+2일 19:20",
+    "t": 67.33,
+    "kind": "night",
+    "duration_h": 4.67,
+    "note": "야간(구간 끝까지)"
+   },
+   {
+    "when": "D-1일 13:00",
+    "t": -11,
+    "kind": "weather",
+    "duration_h": 83,
+    "note": "장마 직후 험준한 산악. 능선 이동이 느리고 지뢰·철조망이 남아 있음"
+   }
+  ]
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "id": "kb2_011",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1952-12-11",
+   "end_date": "1952-12-13",
+   "d_day": "1952-12-11",
+   "order_time": "1952-12-11 13:00",
+   "text": "전투 전체(12.11 01:30 중공군 기습~12.13 일몰 전 철수 명령). 명령 시점은 사단의 리틀 노리고지 탈취 명령을 받은 제11연대의 첫 결심(12.11 13:00).",
+   "why": "구간 지정이 없어 전투 전체를 쓴다. 제11연대의 첫 결심은 사단장이 12.11 13:00 1개 대대로 리틀 노리고지 탈취를 명령하고 연대장이 제2대대를 공격부대로 정한 시점이다. 그 전 수색중대 지원은 제15연대 지휘 아래 이루어졌다."
+  },
+  "perspective_rationale": "작전지역은 제15연대(제3대대 전초)가 맡고 있었다. 그러나 관점 지정에 따라 리틀 노리·빅 노리고지 역습의 주체인 제11연대를 관점으로 쓴다. 제11연대는 11월 11일 전선을 제15연대에 넘기고 사단 예비였다. 이번 역습에서는 리틀 노리고지 일대를 연대 공격지역으로 받은 것으로 재구성한다.",
+  "outcome": {
+   "label": "partial",
+   "evidence": "리틀 노리고지는 다섯 차례 주인이 바뀌었다. 제2대대는 D일 14:00과 D+1일 정오에 고지를 탈취했으나 두 번 모두 적의 야간·파상 역습에 밀려 69고지로 물러났다. D+2일 10:35 제3대대 제11중대가 고지를 완전히 점령했다. 빅 노리고지는 D+1일 16:30에 탈취했다가 다시 잃었다. D+2일 공격은 7부 능선에서 멈췄고 철수 명령이 내려졌다. 적은 388명 사살 등의 손실을 입었고 제420연대가 교체되었다. 아군 손실은 전사 230명, 부상 481명이다."
+  },
+  "mission_type": "역습",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "캔버스 (0,0)은 작전지역 남서쪽 끝이다. 리틀 노리고지는 약 (117,108), 69고지는 약 (120,101)이다. 모든 좌표는 서술의 상대 위치(베티고지 남쪽 500m 니키고지, 베티고지 서쪽 1km 105고지, 리틀 노리고지 전방 150m 무명고지, 적과 300m 대치)로 추정했다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_011_임진강_부근_전투",
+  "title": "임진강 부근 전투",
+  "dates": "1952. 12. 11.~13.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '임진강 부근 전투' (pdf 54쪽)",
+  "pdf_page": 54,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 3,
+    "B2": 4,
+    "B3": 4,
+    "B4": 3,
+    "B5": 3,
+    "B6": 4
+   },
+   "sim_value": 9,
+   "richness": 15
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "리틀 노리고지 탈환 후 중대 규모로만 고지를 점령·유지하여 대대규모 중공군의 삼면 반격에 반복 피탈",
+    "alternative": "탈환 직후 증원 중대를 초월·증강 배치하고 측방(제방·좌측 계곡) 접근로에 화력 구역과 차단 부대를 미리 지정",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "12월 13일 전차 4대의 직사화력과 남쪽 능선 배후 우회를 결합해 리틀 노리고지 공격",
+    "alternative": "이전처럼 협소한 기동공간으로 종대 정면 공격만 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "제15연대 제3대대가 예비 없이 전초에 소대 규모만 배치한 채 리틀 노리고지 고수",
+    "alternative": "대대 예비를 임진강 대안 69고지에 사전 배치하여 즉각 역습",
+    "effect": "degree",
+    "representable": true,
+    "explicit": true,
+    "quote": "예비 병력이 없는 제3대대가 리틀 노리고지를 탈환하기가 어려울 것으로 보고 제 11연대 수색중대를 합류시켰다."
+   }
+  ],
+  "segment_suggestion": "",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.3696,
+   "duration_s": 397.2,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 4,
+     "output_tokens": 36297,
+     "cache_read_input_tokens": 49087,
+     "cache_creation_input_tokens": 20574
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 10732,
+     "cache_read_input_tokens": 0,
+     "cache_creation_input_tokens": 31819
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 31,
+   "flagged": [
+    {
+     "id": "E:E2[1]",
+     "verdict": "hidden_condition",
+     "reason": "일몰 후 삼면 역습은 아군이 리틀 노리고지를 점령한 데 대한 반응인데 고정 시각의 계획 공격으로 되어 있다.",
+     "fix": "시각 대신 아군 중대 이상이 리틀 노리고지 안에 있고 야간임을 조건으로 하는 역습으로 바꾼다."
+    }
+   ],
+   "cost_usd": 0.0567472
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "E2[1]: counterattack"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "고양대": "지점 1'",
+  "니키": "지점 2'"
+ }
+}

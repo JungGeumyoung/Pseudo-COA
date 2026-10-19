@@ -1,0 +1,161 @@
+{
+ "id": "kb2_020",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1952-08-13",
+   "end_date": "1952-08-16",
+   "d_day": "1952-08-13",
+   "order_time": "D-1일 18:00",
+   "text": "8월 12일 새벽 122고지(벙커고지)를 점령한 뒤 미 제1해병연대가 벙커고지 전초와 주저항선을 방어한 구간이다. 8월 13일 01:00 공격부터 8월 16일 03:15 격퇴까지 포함한다.",
+   "why": "구간 지정 ②와 임무 유형 '지역방어'를 따랐다. 구간 ①의 58A 쟁탈과 122고지 공격은 출발 상황으로 input에 반영했다."
+  },
+  "perspective_rationale": "지정에 따라 미 제1해병연대를 관점으로 했다. 이 연대가 판문점 동쪽 주저항선과 벙커고지 전초를 맡았다. 제7해병연대 H·I중대는 배속 부대로 두고, 사단 예비 G중대의 증원은 상급 규칙으로 처리했다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "중공군의 반복 공격(대대 규모 2회 포함)을 모두 격퇴하고 벙커고지를 확보했다. 8월 16일 진지 일부가 돌파되었으나 03:15에 격퇴했다. 사단 손실은 전사 92명, 부상 529명이다."
+  },
+  "mission_type": "지역방어",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "판문점을 (40,100)에 두고, 벙커고지를 판문점 북동쪽 약 5km인 (80,128)에 둔 서술 기반 추정 좌표다.",
+   "source": "text",
+   "atlas_pages": "없음"
+  },
+  "seed_id": "kb2_020_벙커고지_122고지_부근_전투",
+  "title": "벙커고지(122고지) 부근 전투",
+  "dates": "1952. 8. 9.~16.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 2』(2017), '벙커고지(122고지) 부근 전투' (pdf 89쪽)",
+  "pdf_page": 89,
+  "bucket": "고지 방어·탈환",
+  "triage": {
+   "total": 22,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 3,
+    "B5": 2,
+    "B6": 3
+   },
+   "sim_value": 8,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "감제당하는 58A 진지 재탈환을 포기하고 122고지를 새 전초진지로 선정",
+    "alternative": "58A 진지 쟁탈을 계속 반복",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "58A 진지가 중공군 고지에서 감제되어 포격의 표적이 되는 등 지형과 입지 조건이 전초진지로서의 유지가 곤란하다는 결론을 내렸다."
+   },
+   {
+    "decision": "58A 고지에 대한 양공으로 기만한 뒤 B중대가 벙커고지를 야간 기습",
+    "alternative": "양공 없이 벙커고지를 정면 공격",
+    "effect": "degree",
+    "representable": false,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "8월 13일과 16일 대대규모 공격 때 벙커고지 후방의 중대·사단예비를 증원 투입",
+    "alternative": "증원 없이 고지 수비 중대만으로 방어",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 8월 9일~12일: 58A 진지 상실·3차 쟁탈 실패 후 122고지로 전환해 야간 공격으로 점령(미 제1해병연대 2대대, 공격). ② 8월 13일~16일: 벙커고지 방어, 제7연대 H중대 인수(8월 13일 정오)와 제1연대 1대대 B중대 인수(8월 15일 오전)를 거치며 중공군 반복 공격 격퇴(지역방어).",
+  "spec_used": false,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.4675,
+   "duration_s": 470.8,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 45936,
+     "cache_read_input_tokens": 89517,
+     "cache_creation_input_tokens": 24238
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9688,
+     "cache_read_input_tokens": 15054,
+     "cache_creation_input_tokens": 17519
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "refs_normalized": 0,
+  "conditions_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 39,
+   "flagged": [
+    {
+     "id": "E:E4[2]",
+     "verdict": "disguised_result",
+     "reason": "‘치열한 포격전’은 교전 중 쌍방 사격의 실제 결과이지 적이 사전에 정한 포격 계획이 아니다.",
+     "fix": "이 항목을 시나리오 입력에서 빼고 실제 경과(history) 기록으로만 남긴다."
+    },
+    {
+     "id": "E:E1[3]",
+     "verdict": "time_copied",
+     "reason": "‘공격 재개’는 D일 21:00 공격이 격퇴된 뒤 실제로 재시도한 시각을 그대로 옮긴 반응이며 전투 전에 정해진 시각이 아니다.",
+     "fix": "고정 시각 대신 앞 공격 실패 후 '이어서' 재공격하거나 아군·적 전투력 조건으로 재공격을 트리거하도록 바꾼다."
+    }
+   ],
+   "cost_usd": 0.06407919999999999
+  }
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [
+   "E1[4]: '격퇴'"
+  ],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ },
+ "aliases_extra": {
+  "58A": "지점 1'"
+ }
+}

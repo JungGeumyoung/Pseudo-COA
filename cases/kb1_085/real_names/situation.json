@@ -1,0 +1,586 @@
+{
+ "id": "kb1_085",
+ "schema": "reduced-opord/0.6",
+ "input": {
+  "perspective": {
+   "unit": "국군 제1사단 제15연대",
+   "alias": "아군 연대",
+   "echelon": "연대",
+   "other_names": [
+    "제15연대"
+   ]
+  },
+  "higher_context": {
+   "higher_unit": "국군 제1사단",
+   "higher_alias": "상급 사단",
+   "higher_other_names": [
+    "제1사단"
+   ],
+   "higher_mission": "제1사단은 위천 하구에서 왜관 북방까지 42km 정면의 낙동강 동안을 방어하여 적 제13사단과 적 제15사단의 도하를 저지한다.",
+   "higher_intent": "2개 연대로 강안을 방어하고 제12연대(-)를 예비로 두어 도하한 적을 역습으로 강 서쪽으로 격퇴한다. 낙동강 장애물과 유엔 항공 지원을 최대로 활용한다.",
+   "assigned_task": "제15연대는 해평천 남측에서 왜관 북방까지 낙동강 동안을 방어하여 154고지 일대로 도하하는 적을 격퇴한다.",
+   "adjacent_units": [
+    {
+     "id": "A1",
+     "unit": "제11연대",
+     "alias": "인접 연대 1",
+     "side": "북측",
+     "mission": "해평천 이북 낙동강 동안을 방어한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      90,
+      185
+     ]
+    },
+    {
+     "id": "A2",
+     "unit": "제12연대(-)",
+     "alias": "인접 연대 2",
+     "other_names": [
+      "제12연대"
+     ],
+     "side": "사단 예비(후방)",
+     "mission": "사단 예비로서 위기 지역에 역습한다.",
+     "type": "infantry",
+     "echelon": "연대",
+     "xy": [
+      160,
+      110
+     ]
+    },
+    {
+     "id": "A3",
+     "unit": "미 제1기병사단",
+     "alias": "인접 사단 1",
+     "side": "남측",
+     "mission": "왜관 일대 낙동강 동안을 방어한다.",
+     "type": "infantry",
+     "echelon": "사단",
+     "xy": [
+      90,
+      5
+     ]
+    }
+   ],
+   "higher_rules": [
+    {
+     "unit": "A2",
+     "text": "적 대대 이상이 154고지 일대에 있으면 사단 예비 제12연대(-)가 154고지로 역습한다.",
+     "timing": "조건",
+     "trigger": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H154",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 154고지에 있음"
+     },
+     "action": {
+      "mode": "counterattack",
+      "objective_ref": "H154",
+      "axis_xy": [
+       [
+        160,
+        110
+       ],
+       [
+        140,
+        98
+       ],
+       [
+        120,
+        96
+       ],
+       [
+        100,
+        100
+       ],
+       [
+        80,
+        105
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  "area_of_operations": {
+   "text": "북쪽 해평천 남측(제11연대와 경계)에서 남쪽 왜관 북방(미 제1기병사단과 경계)까지 약 14km의 낙동강 동안, 종심 약 9km.",
+   "boundaries": [
+    {
+     "id": "B1",
+     "name": "북측 전투지경선",
+     "between": [
+      "제15연대",
+      "제11연대"
+     ],
+     "xy": [
+      [
+       60,
+       165
+      ],
+      [
+       150,
+       160
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B2",
+     "name": "남측 전투지경선",
+     "between": [
+      "제15연대",
+      "미 제1기병사단"
+     ],
+     "xy": [
+      [
+       58,
+       22
+      ],
+      [
+       150,
+       25
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "B3",
+     "name": "후방 전투지경선",
+     "between": [
+      "제15연대",
+      "제12연대(-)"
+     ],
+     "xy": [
+      [
+       150,
+       160
+      ],
+      [
+       150,
+       25
+      ]
+     ],
+     "estimated": true
+    }
+   ]
+  },
+  "available_forces": [
+   {
+    "id": "F1",
+    "unit": "제15연대 제1대대",
+    "alias": "제1대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F2",
+    "unit": "제15연대 제2대대",
+    "alias": "제2대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F3",
+    "unit": "제15연대 제3대대",
+    "alias": "제3대대",
+    "echelon": "대대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 70,
+    "relationship": "건제",
+    "location": {
+     "note": "연대 작전지역 내"
+    }
+   },
+   {
+    "id": "F4",
+    "unit": "제15연대 대전차특공조",
+    "alias": "대전차특공조",
+    "echelon": "소대",
+    "type": "antitank",
+    "modifier": "",
+    "strength_pct": 100,
+    "relationship": "건제",
+    "equipment": "2.36인치 로켓포, 수류탄·폭약",
+    "location": {
+     "note": "연대 지휘소 부근"
+    }
+   },
+   {
+    "id": "F5",
+    "unit": "사단 포병대대",
+    "alias": "포병 대대 1",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "-",
+    "strength_pct": 80,
+    "relationship": "직접지원",
+    "equipment": "105mm 곡사포",
+    "location": {
+     "note": "연대 후방",
+     "xy": [
+      125,
+      90
+     ]
+    }
+   }
+  ],
+  "terrain": {
+   "area_text": "낙동강 동안의 기복이 심한 암석 고지대. 강폭 500~1000m이나 가뭄으로 수심 1~1.5m라 대부분 도섭 가능하다. 154고지가 강안 도로와 도섭장을 감제한다.",
+   "canvas": [
+    200,
+    200
+   ],
+   "scale_m_per_unit": 100,
+   "features": [
+    {
+     "id": "H154",
+     "name": "154고지",
+     "alias": "고지 A",
+     "kind": "hill",
+     "xy": [
+      80,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 154,
+     "evidence": "서술: 8.9 탈환한 154고지",
+     "preparation": "hasty"
+    },
+    {
+     "id": "RV1",
+     "name": "낙동강",
+     "alias": "하천 1",
+     "kind": "river",
+     "xy": [
+      60,
+      100
+     ],
+     "line": [
+      [
+       62,
+       200
+      ],
+      [
+       60,
+       170
+      ],
+      [
+       63,
+       140
+      ],
+      [
+       58,
+       110
+      ],
+      [
+       62,
+       80
+      ],
+      [
+       58,
+       50
+      ],
+      [
+       60,
+       20
+      ],
+      [
+       55,
+       0
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 강폭 500~1000m, 수심 1~1.5m 도섭 가능"
+    },
+    {
+     "id": "RV2",
+     "name": "해평천",
+     "alias": "하천 2",
+     "kind": "river",
+     "xy": [
+      95,
+      178
+     ],
+     "line": [
+      [
+       140,
+       190
+      ],
+      [
+       110,
+       182
+      ],
+      [
+       80,
+       176
+      ],
+      [
+       61,
+       174
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 제11연대 철수선"
+    },
+    {
+     "id": "X1",
+     "name": "154고지 정면 도섭장",
+     "alias": "지점 1",
+     "kind": "crossing",
+     "xy": [
+      60,
+      105
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "추정: 154고지 정면 도하 지점"
+    },
+    {
+     "id": "RG1",
+     "name": "154고지 동측 능선",
+     "alias": "능선 1",
+     "kind": "ridge",
+     "xy": [
+      100,
+      100
+     ],
+     "line": [
+      [
+       85,
+       104
+      ],
+      [
+       100,
+       100
+      ],
+      [
+       115,
+       96
+      ]
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "추정: 154고지 후사면 능선"
+    },
+    {
+     "id": "T1",
+     "name": "선산",
+     "alias": "마을 1",
+     "kind": "town",
+     "xy": [
+      25,
+      170
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 적 제15사단 집결지"
+    },
+    {
+     "id": "T2",
+     "name": "왜관",
+     "alias": "마을 2",
+     "kind": "town",
+     "xy": [
+      66,
+      5
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 사단 지역 남단"
+    },
+    {
+     "id": "T3",
+     "name": "다부동",
+     "alias": "마을 3",
+     "kind": "town",
+     "xy": [
+      190,
+      40
+     ],
+     "estimated": true,
+     "elevation_m": 0,
+     "evidence": "서술: 후방 방어선"
+    }
+   ],
+   "routes": [
+    {
+     "id": "RD1",
+     "name": "강안 도로",
+     "alias": "도로 1",
+     "kind": "road",
+     "xy": [
+      [
+       72,
+       200
+      ],
+      [
+       72,
+       165
+      ],
+      [
+       75,
+       130
+      ],
+      [
+       78,
+       100
+      ],
+      [
+       75,
+       70
+      ],
+      [
+       72,
+       40
+      ],
+      [
+       68,
+       5
+      ]
+     ],
+     "estimated": true
+    },
+    {
+     "id": "RD2",
+     "name": "다부동 도로",
+     "alias": "도로 2",
+     "kind": "road",
+     "xy": [
+      [
+       78,
+       100
+      ],
+      [
+       100,
+       93
+      ],
+      [
+       130,
+       80
+      ],
+      [
+       160,
+       60
+      ],
+      [
+       190,
+       40
+      ]
+     ],
+     "estimated": true
+    }
+   ],
+   "impassable": []
+  },
+  "enemy_forces": [
+   {
+    "id": "E1",
+    "unit": "적 제15사단 예하 1개 연대",
+    "alias": "적 연대 1",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 45,
+    "personnel": 1700,
+    "identified": false,
+    "known_at_start": "선산 일대 집결·도하 준비 중인 적 제15사단 일부로 파악",
+    "posture": "공격준비",
+    "preparation": "none",
+    "position": {
+     "xy": [
+      38,
+      110
+     ],
+     "frontage_m": 3000,
+     "note": "154고지 정면 낙동강 서안"
+    }
+   },
+   {
+    "id": "E2",
+    "unit": "적 제15사단 배속 전차중대",
+    "alias": "적 중대 1",
+    "nation": "북한",
+    "echelon": "중대",
+    "type": "armor",
+    "modifier": "",
+    "strength_pct": 100,
+    "equipment": "T-34 약 6대",
+    "identified": false,
+    "known_at_start": "적 전차 보유는 알려졌으나 도하 수단은 미상",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      30,
+      105
+     ],
+     "note": "낙동강 서안 후방"
+    }
+   },
+   {
+    "id": "E3",
+    "unit": "적 제15사단 포병",
+    "alias": "적 대대 1",
+    "nation": "북한",
+    "echelon": "대대",
+    "type": "artillery",
+    "modifier": "",
+    "strength_pct": 60,
+    "equipment": "76.2mm·122mm 곡사포",
+    "identified": false,
+    "known_at_start": "서안 포병 사격 관측",
+    "posture": "방어",
+    "position": {
+     "xy": [
+      15,
+      120
+     ],
+     "note": "서안 포진지"
+    }
+   },
+   {
+    "id": "E4",
+    "unit": "적 제13사단 예하 1개 연대",
+    "alias": "적 연대 2",
+    "nation": "북한",
+    "echelon": "연대",
+    "type": "infantry",
+    "modifier": "",
+    "strength_pct": 80,
+    "identified": false,
+    "known_at_start": "제11연대 정면 서안 집결",
+    "posture": "공격준비",
+    "position": {
+     "xy": [
+      35,
+      185
+     ],
+     "frontage_m": 3000,
+     "note": "제11연대 정면 서안"
+    }
+   }
+  ],
+  "conditions": {
+   "start_time": "D일 04:00",
+   "light": "dawn",
+   "notes": "8월 혹서, 가뭄으로 낙동강 대부분 도섭 가능. 주간 유엔 근접항공지원 가능."
+  }
+ }
+}

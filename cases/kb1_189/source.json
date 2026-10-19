@@ -1,0 +1,147 @@
+{
+ "id": "kb1_189",
+ "schema": "reduced-opord/0.6",
+ "meta": {
+  "segment": {
+   "start_date": "1951-10-10",
+   "end_date": "1951-10-13",
+   "d_day": "1951-10-10 (터치다운 작전 6일째)",
+   "order_time": "1951-10-10 공격 개시 직전(H시 06:00 추정)",
+   "text": "단장의 능선 전투 구간 4: 894·931·850고지를 확보한 미 제2사단 제23연대(프랑스대대 배속)가 능선 북단 851고지를 공격한다. H시부터 72시간.",
+   "why": "구간 지정에 따름. 마지막 목표 851고지 공격의 초기 배치 단계이며 선도 대대 소모에 대비한 프랑스대대 초월 계획이 핵심 결심이다."
+  },
+  "perspective_rationale": "관점 지정에 따라 사단 주공인 미 제23연대(프랑스대대 배속)를 관점으로 한다. 연대가 3개 대대, 배속 대대, 전차중대 특수임무부대를 직접 운용해 851고지를 탈취했다.",
+  "outcome": {
+   "label": "success",
+   "evidence": "10월 11일 야간 제1대대를 초월한 프랑스대대가 10월 13일 동틀 무렵 851고지 정상을 점령했다. 제2대대는 문등리 남쪽 고지를 점령해 적 증원을 차단했고 양 계곡의 전차 특수임무부대가 851고지를 측방에서 차단했다."
+  },
+  "mission_type": "공격",
+  "geo": {
+   "scale_m_per_unit": 100,
+   "origin": "931고지 정상 = (110,100), 1단위 100m, 북쪽 +y. 상황도를 시계 방향 90도 돌려 측정, 오차 약 ±200m",
+   "source": "atlas+text",
+   "atlas_pages": "아틀라스 4권 178쪽 상황도, 179쪽 본문"
+  },
+  "seed_id": "kb1_189_단장의_능선_전투",
+  "title": "단장의 능선 전투",
+  "dates": "1951. 9. 13.∼10. 15.",
+  "branch": "육군편",
+  "source": "국방부 군사편찬연구소, 『6·25전쟁 주요전투 1』(2017), '단장의 능선 전투' (pdf 566쪽)",
+  "pdf_page": 566,
+  "bucket": "능선 공격",
+  "triage": {
+   "total": 24,
+   "score": {
+    "B1": 4,
+    "B2": 3,
+    "B3": 4,
+    "B4": 4,
+    "B5": 2,
+    "B6": 3
+   },
+   "sim_value": 10,
+   "richness": 14
+  },
+  "triage_counterfactuals": [
+   {
+    "decision": "제1차 공격에서 1개 연대(미 제23연대)만으로 단장의 능선을 공격",
+    "alternative": "처음부터 3개 연대 협조 공격으로 문등리 계곡 증원로를 함께 차단",
+    "effect": "direction",
+    "representable": true,
+    "explicit": true,
+    "quote": "이와 같은 상황을 고려해 볼 때 단장의 능선 전투는 연대의 작전능력을 넘어서는 것이었다."
+   },
+   {
+    "decision": "931고지를 남쪽(제2·제3대대)과 북쪽(프랑스대대)에서 협공하고 인접 연대가 문등리 축선을 동시 공격",
+    "alternative": "제1차와 같이 능선상 정면 공격을 반복하고 문등리 계곡 증원을 방치",
+    "effect": "direction",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   },
+   {
+    "decision": "9월 23일 새벽 931고지 점령 후 역습에 피탈",
+    "alternative": "점령 직후 예비대를 증원해 고지를 고수하고 문등리 방면 증원을 화력으로 차단",
+    "effect": "degree",
+    "representable": true,
+    "explicit": false,
+    "quote": ""
+   }
+  ],
+  "segment_suggestion": "① 9월 13일~9월 18일: 미 제23연대의 제1차 공격, 850고지 점령과 미 제9연대 제2대대의 894고지 점령(6일). ② 9월 23일~9월 27일: 미 제9연대 주력 투입, 931고지 점령·피탈, 프랑스대대 투입 후 작전 중지(5일). ③ 10월 5일~10월 9일: 터치다운 작전의 931고지 남북 협공과 문등리 축선 통제(5일). ④ 10월 10일~10월 13일: 851고지 공격, 프랑스대대의 초월 공격과 정상 점령(4일). 연대 관점 참조 사례로는 ③ 또는 ④가 가장 적합하고, ①은 실패 대조 사례로 쓸 수 있다.",
+  "spec_used": true,
+  "sim_unit_table": "sim_unit_table.json",
+  "gen": {
+   "model": "claude-opus-5-5",
+   "cost_usd": 1.5894,
+   "duration_s": 476.1,
+   "usage": {
+    "stage_a": {
+     "input_tokens": 6,
+     "output_tokens": 50561,
+     "cache_read_input_tokens": 117234,
+     "cache_creation_input_tokens": 17449
+    },
+    "stage_b": {
+     "input_tokens": 2,
+     "output_tokens": 9293,
+     "cache_read_input_tokens": 14850,
+     "cache_creation_input_tokens": 28285
+    }
+   },
+   "two_stage": true
+  },
+  "dates_normalized": 0,
+  "times_normalized": 0,
+  "semantic_audit": {
+   "model": "claude-sonnet-5",
+   "effort": "low",
+   "n_items": 44,
+   "flagged": [],
+   "cost_usd": 0.08697359999999998
+  },
+  "refs_normalized": 0,
+  "conditions_normalized": 0
+ },
+ "checks": {
+  "bad_ref": [],
+  "unknown_group": [],
+  "org_uncovered": [],
+  "task_missing": [],
+  "verb_outside": [],
+  "verb_params": [],
+  "forbidden_words": [],
+  "on_order_no_trigger": [],
+  "on_order_not_state": [],
+  "basis_missing": [],
+  "deploy_missing": [],
+  "coords_out": [],
+  "cm_bad_terrain": [],
+  "unstructured_events": [],
+  "enemy_sentence": [],
+  "task_text_ending": [
+   "G5[1]: …지원한다"
+  ],
+  "enemy_rule_not_state": [],
+  "enemy_plan_no_start": [],
+  "higher_rule_not_state": [],
+  "horizon_missing": [],
+  "result_in_scenario": [],
+  "plan_reactive": [
+   "E2[0]: counterattack"
+  ],
+  "plan_combat_cue": [],
+  "plan_basis_outcome": [],
+  "immediate_conditional": [],
+  "result_in_input_order": [],
+  "reserve_commit_not_power": [],
+  "sequence_invalid": [],
+  "power_cond_incomplete": [],
+  "history_ref": [],
+  "leaks": {},
+  "sim_projectable": true,
+  "outcome_free": false,
+  "doctrine_clean": true,
+  "anonymization_clean": true
+ }
+}
