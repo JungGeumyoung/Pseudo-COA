@@ -1,0 +1,723 @@
+{
+ "id": "kb2_023",
+ "cond": "D",
+ "order": {
+  "task_organization": {
+   "text": "G1 제1대대 / G2 제2대대 / G3 제3대대+전차중대 1(예비) / G4 포병대대 1. 지원: 포병대대 1 직접지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대(고지 A 방어)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대(고지 B 방어)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "예비(제3대대+전차중대 1)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      },
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "화력지원(포병대대 1)",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F5"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "고지 A(395m)가 감제 핵심지형이며 능선 1이 북동으로 고지 B로 뻗어 적 접근로가 된다. 북쪽 고지 D·고지 E에 적이 있고 남쪽은 하천 1과 지점 3 개활지다. 구간 중 지점 4 범람이 발생하고 지점 2만 통과 가능하다.",
+    "key_terrain": [
+     {
+      "ref": "H395",
+      "why": "사단이 끝까지 확보해야 할 감제 고지"
+     },
+     {
+      "ref": "H_HR",
+      "why": "능선 1 상 고지 A 동측방을 지배하는 접근로 요충"
+     },
+     {
+      "ref": "R_SE",
+      "why": "예비 기동과 사단 예비 역습로를 연결하는 능선"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "능선 1 접근로",
+      "user": "enemy",
+      "refs": [
+       "R_CAMEL",
+       "H_HR"
+      ],
+      "xy": [
+       [
+        119,
+        122
+       ],
+       [
+        116,
+        114
+       ],
+       [
+        112,
+        109.5
+       ],
+       [
+        106,
+        105
+       ],
+       [
+        100,
+        100
+       ]
+      ]
+     },
+     {
+      "name": "고지 D 남쪽 도로변 접근로",
+      "user": "enemy",
+      "refs": [
+       "H_HS",
+       "H395"
+      ],
+      "xy": [
+       [
+        105,
+        125
+       ],
+       [
+        102,
+        115
+       ],
+       [
+        100,
+        100
+       ]
+      ]
+     },
+     {
+      "name": "도로 2 역습로",
+      "user": "friendly",
+      "refs": [
+       "RT_SUP",
+       "X_YG"
+      ],
+      "xy": [
+       [
+        126.6,
+        62.2
+       ],
+       [
+        111,
+        74
+       ],
+       [
+        104,
+        88
+       ],
+       [
+        100,
+        99
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 대대 1은 고지 E 갱도 진지, 적 대대 2는 고지 D 남쪽, 적 대대 3은 예비, 적 연대 1은 고지 D 서쪽이며 적 포병 1이 후사면에서 지원한다. 귀순자 진술로 야간 전면공격이 임박했다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E6",
+       "mode": "bombard",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         110,
+         150
+        ],
+        [
+         105,
+         120
+        ]
+       ],
+       "when": "공격 개시 직전 야간",
+       "t": 20
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "H_HR",
+       "axis_xy": [
+        [
+         121,
+         124
+        ],
+        [
+         116,
+         114
+        ],
+        [
+         112,
+         109.5
+        ]
+       ],
+       "when": "야간 포격 후 능선 1을 따라",
+       "t": 21
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         105,
+         125
+        ],
+        [
+         102,
+         114
+        ],
+        [
+         100,
+         100
+        ]
+       ],
+       "when": "적 대대 1과 동시",
+       "t": 21
+      },
+      {
+       "group": "E4",
+       "mode": "fix",
+       "objective_ref": "H395",
+       "axis_xy": [
+        [
+         88,
+         130
+        ],
+        [
+         92,
+         115
+        ]
+       ],
+       "when": "서쪽에서 견제",
+       "t": 21
+      },
+      {
+       "group": "E3",
+       "mode": "reinforce",
+       "objective_ref": "H_HR",
+       "axis_xy": [
+        [
+         131,
+         134
+        ],
+        [
+         124,
+         118
+        ],
+        [
+         116,
+         114
+        ]
+       ],
+       "when": "돌파구 확대 시",
+       "t": 23
+      }
+     ],
+     "risk_point": "야간에 고지 B가 먼저 돌파되고 이어 고지 A 동측방이 노출되는 점. 지점 4 범람으로 인접 연대 2의 하천 1 도하가 지연될 수 있다."
+    },
+    "unknowns": [
+     "적 포병 1의 정확한 위치",
+     "적 연대 2의 투입 시기",
+     "범람 시각"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적은 D일 야간에 고지 A와 능선 1로 공격한다.",
+     "why": "귀순자 진술과 적 야간 선호"
+    },
+    {
+     "text": "인접 연대 2는 지점 2를 통해 역습한다.",
+     "why": "범람 시에도 지점 2는 통과 가능"
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 06:00부터 고지 A 일대에서 방어하여 고지 A를 확보하고 도로 1을 감제한다.",
+   "task_verb": "방어",
+   "objective_ref": "H395",
+   "when": {
+    "type": "time_elapsed",
+    "value": 6,
+    "text": "D일 06:00"
+   },
+   "purpose": "사단이 지점 3와 도로 1을 감제하게 하기 위함이다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A와 고지 B를 보유한 채 적 공격을 격퇴하고 주저항선 좌단을 유지한다.",
+    "friendly": "제1대대와 제2대대가 진지를 보유하고 예비가 재편된다.",
+    "enemy": "적 대대 1과 적 대대 2가 고지 A 전방에서 공격력을 상실한다.",
+    "terrain": "고지 A, 고지 B, 능선 1, 능선 2를 아군이 통제한다."
+   },
+   "concept": {
+    "text": "2개 대대를 고지 A와 고지 B에 전방 배치하고 제3대대와 전차중대 1을 능선 2 후방 예비로 둔다. 포병은 교전지역에 집중한다.",
+    "maneuver": "제1대대는 고지 A를, 제2대대는 고지 B와 능선 1을 방어한다. 적은 능선 1과 고지 A 북쪽으로 접근하므로 교전지역에서 격멸한다. 예비는 고지 B 돌파 시 역습한다.",
+    "fires": "포병대대 1은 교전지역 북쪽과 동쪽에 저지사격을 지속하고 야간 조명과 방어사격을 계획한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "RES_AA",
+     "xy": [
+      108,
+      88
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H_HR",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 고지 B 안에 있음"
+     },
+     "priorities": [
+      "고지 B 상실 시 역습",
+      "고지 A 측방 돌파 차단",
+      "인접 연대 2 역습 지원"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "EA_N",
+      "EA_E"
+     ],
+     "restrictions": "아군 진지 전방 200m 안에는 사격을 금지하고 역습 개시 후 역습로 인근은 통제한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "고지 A를 끝까지 확보해 도로 1을 감제하기 위함이다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       100,
+       101
+      ],
+      "frontage_m": 1400,
+      "polygon": [
+       [
+        94,
+        95
+       ],
+       [
+        104,
+        96
+       ],
+       [
+        106,
+        106
+       ],
+       [
+        95,
+        107
+       ]
+      ],
+      "preparation": "deliberate",
+      "note": "고지 A 북사면과 정상 중심 방어"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A 일대 진지를 방어",
+       "params": {
+        "area": "BP_A"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "고지 A를 고수",
+       "params": {
+        "objective": "H395"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "고지 A 동측방을 보호하고 능선 1 접근을 거부하기 위함이다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       113,
+       108
+      ],
+      "frontage_m": 1600,
+      "polygon": [
+       [
+        108,
+        103
+       ],
+       [
+        120,
+        106
+       ],
+       [
+        119,
+        115
+       ],
+       [
+        110,
+        113
+       ]
+      ],
+      "preparation": "hasty",
+      "note": "고지 B와 능선 1 방어"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 B와 능선 1 일대를 방어",
+       "params": {
+        "area": "BP_B"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "능선 3 방향 적 진출을 저지",
+       "params": {
+        "area": "R_E"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "적 돌파 시 결정적 시기에 역습하기 위함이다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       108,
+       88
+      ],
+      "frontage_m": 1000,
+      "polygon": [
+       [
+        103,
+        84
+       ],
+       [
+        112,
+        84
+       ],
+       [
+        112,
+        92
+       ],
+       [
+        103,
+        92
+       ]
+      ],
+      "preparation": "hasty",
+      "note": "능선 2 후방 은폐 대기"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "능선 2 후방을 경계",
+       "params": {
+        "area": "R_SE"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "고지 B를 역습",
+       "params": {
+        "objective": "H_HR",
+        "route": "CATK_RTE"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H_HR",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 고지 B 안에 있음"
+       },
+       "basis": "고지 B 상실은 고지 A 측방 노출을 뜻하며 즉시 회복해야 한다."
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "교전지역에서 적을 분쇄하고 방어를 지원하기 위함이다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       135,
+       50
+      ],
+      "frontage_m": 500,
+      "preparation": "hasty",
+      "note": "하천 1 남쪽 지점 3 현 위치"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "제1대대 전방 교전지역을 화력지원",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "EA_N"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력지원",
+       "text": "제2대대 전방 교전지역을 화력지원",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "EA_E"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "06:00 진지 보강과 장애물 구축을 시작한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "18:00 전 부대 전투준비를 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 18,
+       "text": "D일 18:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "BP_A",
+      "name": "고지 A 방어진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        94,
+        95
+       ],
+       [
+        104,
+        96
+       ],
+       [
+        106,
+        106
+       ],
+       [
+        95,
+        107
+       ]
+      ],
+      "estimated": false,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "H395"
+      ]
+     },
+     {
+      "id": "BP_B",
+      "name": "고지 B 방어진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        108,
+        103
+       ],
+       [
+        120,
+        106
+       ],
+       [
+        119,
+        115
+       ],
+       [
+        110,
+        113
+       ]
+      ],
+      "estimated": false,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "H_HR",
+       "R_CAMEL"
+      ]
+     },
+     {
+      "id": "EA_N",
+      "name": "북쪽 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        96,
+        108
+       ],
+       [
+        108,
+        114
+       ],
+       [
+        120,
+        117
+       ],
+       [
+        112,
+        121
+       ],
+       [
+        98,
+        115
+       ]
+      ],
+      "estimated": false
+     },
+     {
+      "id": "EA_E",
+      "name": "동쪽 교전지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        118,
+        100
+       ],
+       [
+        130,
+        104
+       ],
+       [
+        132,
+        112
+       ],
+       [
+        120,
+        111
+       ]
+      ],
+      "estimated": false
+     },
+     {
+      "id": "RES_AA",
+      "name": "예비 대기지점",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        103,
+        84
+       ],
+       [
+        112,
+        84
+       ],
+       [
+        112,
+        92
+       ],
+       [
+        103,
+        92
+       ]
+      ],
+      "estimated": false,
+      "terrain_refs": [
+       "R_SE"
+      ]
+     },
+     {
+      "id": "CATK_RTE",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        108,
+        88
+       ],
+       [
+        109,
+        95
+       ],
+       [
+        111,
+        102
+       ],
+       [
+        112,
+        109
+       ]
+      ],
+      "estimated": false,
+      "terrain_refs": [
+       "R_SE",
+       "R_CAMEL"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.2133508,
+  "duration_s": 70.0,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 10522,
+   "cache_read_input_tokens": 40508,
+   "cache_creation_input_tokens": 26018
+  },
+  "examples": []
+ }
+}

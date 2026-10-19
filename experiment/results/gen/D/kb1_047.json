@@ -1,0 +1,697 @@
+{
+ "id": "kb1_047",
+ "cond": "D",
+ "order": {
+  "task_organization": {
+   "text": "지원: 포병 포대 1 직접지원. 제2대대 1개 중대를 떼어 연대 예비로 둔다.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "동측 방어부대(고지 A)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1",
+       "part": "제1대대"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "서측 방어부대(고지 B)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2",
+       "part": "-1개 중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "연대 예비",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F2",
+       "part": "1개 중대"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "대전차 부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "화력지원 부대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "지점 1과 지점 2가 도로 1를 내려다보는 관측·사격 요지다. 고지 A와 고지 B가 도로 양측 감제고지이며 하천 1이 동남측 측방을 막는다. 도로 1 외 기동로가 좁아 자주포는 도로에 묶인다.",
+    "key_terrain": [
+     {
+      "ref": "T1",
+      "why": "도로 1 협로로 적 종대를 막고 대전차포 사격을 집중할 지점이다."
+     },
+     {
+      "ref": "T8",
+      "why": "도로 동측 감제고지로 측방 사격과 관측을 준다."
+     },
+     {
+      "ref": "T9",
+      "why": "도로 서측 감제고지로 서측 우회로를 통제한다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "도로 1 접근로",
+      "user": "enemy",
+      "refs": [
+       "R44",
+       "T1",
+       "T2"
+      ],
+      "xy": [
+       [
+        136,
+        175
+       ],
+       [
+        130,
+        145
+       ],
+       [
+        121,
+        125
+       ],
+       [
+        115,
+        116
+       ],
+       [
+        98,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "도로 2 서측 능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "R451",
+       "T9"
+      ],
+      "xy": [
+       [
+        118,
+        199
+       ],
+       [
+        126,
+        170
+       ],
+       [
+        110,
+        135
+       ],
+       [
+        102,
+        116
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1과 적 연대 2가 각 3개 대대로 도로 1과 도로 2로 추격 중이며 적 대대 1의 SU-76 약 16대가 선두에 선다. 각 85% 전력이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E3",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         140,
+         192
+        ],
+        [
+         136,
+         175
+        ],
+        [
+         130,
+         145
+        ],
+        [
+         121,
+         125
+        ]
+       ],
+       "when": "접촉 직후 도로 1을 따라 보병 선두와 함께 돌진",
+       "t": -6
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         136,
+         178
+        ],
+        [
+         130,
+         158
+        ],
+        [
+         132,
+         136
+        ]
+       ],
+       "when": "자주포 뒤를 이어 마을 1에서 고지 A 방향 전개",
+       "t": -5.5
+      },
+      {
+       "group": "E2",
+       "mode": "infiltrate",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         124,
+         188
+        ],
+        [
+         126,
+         170
+        ],
+        [
+         110,
+         135
+        ],
+        [
+         102,
+         116
+        ]
+       ],
+       "when": "도로 2 서측 능선으로 고지 B 측방 침투",
+       "t": -5
+      }
+     ],
+     "risk_point": "적 연대 2가 서측 능선으로 고지 B를 돌아 지점 3으로 들어오는 경우다."
+    },
+    "unknowns": [
+     "적 연대 2의 정확한 서측 진출로",
+     "적 자주포 실제 수와 후속 제대"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "사단 예비 인접 연대 2는 적 연대 이상이 지점 3에 들어오기 전에는 투입되지 않는다.",
+     "why": "상급 규칙이 지점 3 조건을 두었다."
+    },
+    {
+     "text": "진지는 급편 수준이라 첫 교전 전까지 임시 보강만 가능하다.",
+     "why": "재편성 직후이며 적이 1~2시간 안에 도달한다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D-1일 17:00부터 지점 1 일대에서 도로 1를 따라 오는 적 제12사단을 방어하여 마을 4 축선과 사단 동측방을 보호한다.",
+   "task_verb": "방어",
+   "objective_ref": "T1",
+   "when": {
+    "type": "time_elapsed",
+    "value": -7,
+    "text": "D-1일 17:00부터"
+   },
+   "purpose": "마을 4과 사단 주력의 동측방을 보호한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "지점 1 일대를 유지하고 적 선두 제대와 자주포가 격멸된 상태다.",
+    "friendly": "연대가 고지 A와 고지 B를 유지하고 예비를 재구성한 상태다.",
+    "enemy": "적 제12사단 선두가 지점 1 앞에서 저지되고 자주포 다수가 격멸된 상태다.",
+    "terrain": "지점 1·지점 2·고지 A·고지 B가 아군 통제하에 있다."
+   },
+   "concept": {
+    "text": "고지 A와 고지 B에 보병을 두고 도로 1 협로에 대전차포를 집중하여 교전지역에서 자주포를 격멸한다. 예비는 지점 3 후방에서 돌파나 서측 침투에 투입한다.",
+    "maneuver": "G1이 고지 A를, G2가 고지 B를 방어하여 도로 양측에서 교차사격한다. G4는 지점 2 부근에서 도로 1를 차단한다. G3은 마을 3 북쪽에 대기한다.",
+    "fires": "포병 포대 1은 교전지역 1과 도로 1 접근로에 우선 사격하고 자주포 종대 선두와 후미를 먼저 막아 가둔다.",
+    "main_effort": "G4와 G1이 맡는 도로 1 교전지역 방어가 주력이다.",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "CM_RP",
+     "xy": [
+      108,
+      100
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "T3",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 지점 3 안으로 들어옴",
+      "and": [
+       {
+        "type": "losses_exceed",
+        "group": "G2",
+        "fraction": 0.3,
+        "text": "G2 손실이 30%를 넘음"
+       }
+      ]
+     },
+     "priorities": [
+      "고지 B 서측 침투 차단",
+      "지점 3 돌파 시 역습",
+      "G4 대전차포 진지 엄호"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G4",
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM_EA1",
+      "T1",
+      "T2"
+     ],
+     "restrictions": "아군 보병 위치와 150m 안에는 사격하지 않는다. 자주포 격멸 사격 후 즉시 진지를 바꾼다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "도로 동측 감제고지를 유지하여 교전지역을 측방 사격한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       132,
+       136
+      ],
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "ref": "T8",
+      "polygon": [
+       [
+        124,
+        130
+       ],
+       [
+        140,
+        132
+       ],
+       [
+        142,
+        142
+       ],
+       [
+        128,
+        144
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1선 병력",
+        "xy": [
+         130,
+         138
+        ]
+       },
+       {
+        "label": "제2선 병력",
+        "xy": [
+         134,
+         134
+        ]
+       }
+      ],
+      "note": "급편 진지를 야간 전에 보강한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A 일대를 방어한다.",
+       "params": {
+        "area": "T8"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "지연",
+       "text": "손실이 크면 지연선 1까지 지연한다.",
+       "params": {
+        "lines": [
+         "CM_PL1"
+        ],
+        "disengage": {
+         "type": "losses_exceed",
+         "group": "G1",
+         "fraction": 0.5,
+         "text": "G1 손실이 50%를 넘음"
+        }
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.5,
+        "text": "G1 손실이 50%를 넘음"
+       },
+       "basis": "고지 A 상실을 늦추고 연대 전투력을 보존하기 위함이다."
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "도로 서측 고지를 유지하고 서측 우회를 막는다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       102,
+       116
+      ],
+      "frontage_m": 1200,
+      "preparation": "hasty",
+      "ref": "T9",
+      "polygon": [
+       [
+        96,
+        110
+       ],
+       [
+        108,
+        110
+       ],
+       [
+        108,
+        122
+       ],
+       [
+        96,
+        122
+       ]
+      ],
+      "elements": [
+       {
+        "label": "주진지",
+        "xy": [
+         102,
+         116
+        ]
+       },
+       {
+        "label": "서측 경계",
+        "xy": [
+         97,
+         120
+        ]
+       }
+      ],
+      "note": "서측 능선에 경계조를 둔다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 B 일대를 방어한다.",
+       "params": {
+        "area": "T9"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "서측 능선 접근로의 적 침투를 저지한다.",
+       "params": {
+        "area": "T9"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "자주포를 도로상 교전지역에서 격멸한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       117,
+       120
+      ],
+      "frontage_m": 600,
+      "preparation": "hasty",
+      "ref": "T2",
+      "elements": [
+       {
+        "label": "대전차포 1진지",
+        "xy": [
+         120,
+         123
+        ]
+       },
+       {
+        "label": "대전차포 2진지",
+        "xy": [
+         114,
+         118
+        ]
+       }
+      ],
+      "note": "도로를 향해 측방 엇갈리게 배치하며 예비 진지를 정한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "격멸",
+       "text": "도로 1의 적 대대 1을 격멸한다.",
+       "params": {
+        "target_group": "E3"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "돌파나 침투 시 진지를 회복한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       108,
+       100
+      ],
+      "frontage_m": 500,
+      "preparation": "none",
+      "note": "마을 3 북쪽 대기하며 두 방향 투입을 준비한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "예비진지 주변을 경계한다.",
+       "params": {
+        "area": "CM_RP"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "지점 3에 들어온 적을 역습한다.",
+       "params": {
+        "objective": "T1",
+        "route": "CM_RT"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T3",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 지점 3 안에 있음"
+       },
+       "basis": "적이 협로를 돌파하기 전에 측방에서 막기 위함이다."
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "교전지역에 지속 화력을 제공한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       75,
+       75
+      ],
+      "frontage_m": 300,
+      "preparation": "hasty",
+      "note": "현 위치를 유지하며 진지 변환을 준비한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "G4의 교전지역을 화력지원한다.",
+       "params": {
+        "supported_group": "G4",
+        "target_ref": "CM_EA1"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "18:00까지 진지 보강과 대전차포 위장을 끝낸다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": -6,
+       "text": "D-1일 18:00"
+      }
+     },
+     {
+      "text": "20:00까지 예비 투입 경로를 확인한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": -4,
+       "text": "D-1일 20:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM_EA1",
+      "name": "교전지역 1",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        126,
+        136
+       ],
+       [
+        124,
+        128
+       ],
+       [
+        116,
+        112
+       ],
+       [
+        108,
+        106
+       ],
+       [
+        116,
+        106
+       ],
+       [
+        128,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T1",
+       "T2",
+       "R44"
+      ]
+     },
+     {
+      "id": "CM_RP",
+      "name": "예비진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        108,
+        100
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T6"
+      ]
+     },
+     {
+      "id": "CM_RT",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        108,
+        100
+       ],
+       [
+        110,
+        108
+       ],
+       [
+        116,
+        116
+       ],
+       [
+        121,
+        125
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R44"
+      ]
+     },
+     {
+      "id": "CM_PL1",
+      "name": "지연선 1",
+      "kind": "phase_line",
+      "xy": [
+       [
+        96,
+        104
+       ],
+       [
+        112,
+        100
+       ],
+       [
+        120,
+        102
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "B3",
+       "T12"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.2284025,
+  "duration_s": 75.4,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 10506,
+   "cache_read_input_tokens": 39625,
+   "cache_creation_input_tokens": 29843
+  },
+  "examples": []
+ }
+}

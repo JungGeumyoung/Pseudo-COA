@@ -1,0 +1,698 @@
+{
+ "id": "kb2_019",
+ "cond": "D",
+ "order": {
+  "task_organization": {
+   "text": "G1 제3대대(+) 주공, G2 제4대대(+) 조공, G3 제2대대 예비, G4 화력지원, G5 제1대대 경계. 지원: 포병대대 1 직접지원, 포병대대 2 일반지원.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제3대대(+)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      },
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제4대대(+)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F5"
+      },
+      {
+       "force": "F9"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "예비 제2대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "화력지원",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F6"
+      },
+      {
+       "force": "F7"
+      },
+      {
+       "force": "F8"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "우측 경계 제1대대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "고지 A는 능선 2 북단의 닻 모양 고지로 남쪽 접근은 능선 2가 좁은 축선이다. 동쪽은 고지 C 야산과 개활지다. 북서 고지 B와 북동 고지 D-고지 E에서 적 측방화력이 가능하다.",
+    "key_terrain": [
+     {
+      "ref": "T351",
+      "why": "탈환 목표이며 동해안 저지대와 고지 B 접근로를 감제한다."
+     },
+     {
+      "ref": "T208",
+      "why": "동쪽 측방 접근과 전차 화력지원 위치를 제공한다."
+     },
+     {
+      "ref": "T339",
+      "why": "능선 2상 고지 A 직전 발판이다."
+     },
+     {
+      "ref": "T148",
+      "why": "적 측방화력 진지로 동쪽 접근을 위협한다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "능선 2 접근로",
+      "user": "friendly",
+      "refs": [
+       "RG2",
+       "T263",
+       "T345",
+       "T339"
+      ],
+      "xy": [
+       [
+        88,
+        76
+       ],
+       [
+        94,
+        86
+       ],
+       [
+        98,
+        96
+       ],
+       [
+        100,
+        104
+       ]
+      ]
+     },
+     {
+      "name": "고지 C 동측 접근로",
+      "user": "friendly",
+      "refs": [
+       "T208"
+      ],
+      "xy": [
+       [
+        108,
+        72
+       ],
+       [
+        115,
+        85
+       ],
+       [
+        115,
+        98
+       ],
+       [
+        108,
+        106
+       ]
+      ]
+     },
+     {
+      "name": "능선 1 접근로",
+      "user": "enemy",
+      "refs": [
+       "RG1",
+       "T459"
+      ],
+      "xy": [
+       [
+        75,
+        135
+       ],
+       [
+        83,
+        127
+       ],
+       [
+        91,
+        119
+       ],
+       [
+        100,
+        110
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 대대 1(80%)이 고지 A를 급편방어 중이고 적 연대 1이 고지 B-고지 D-고지 E에서 측방화력을 지원한다. 적 포병 1이 하천 1 남쪽에서 지원한다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "objective_ref": "T351",
+       "axis_xy": [
+        [
+         100,
+         110
+        ],
+        [
+         106,
+         108
+        ]
+       ],
+       "when": "공격 개시 시 고지 A 주봉과 동쪽 진지를 고수",
+       "t": 9.5
+      },
+      {
+       "group": "E2",
+       "mode": "bombard",
+       "objective_ref": "T339",
+       "axis_xy": [
+        [
+         113,
+         122
+        ],
+        [
+         100,
+         104
+        ]
+       ],
+       "when": "아군이 고지 F와 고지 C로 접근하면 측방 자동화기와 화력 지원",
+       "t": 10
+      },
+      {
+       "group": "E3",
+       "mode": "bombard",
+       "objective_ref": "T208",
+       "axis_xy": [
+        [
+         95,
+         160
+        ],
+        [
+         110,
+         100
+        ]
+       ],
+       "when": "아군 공격 시 접근로와 공격대기지점에 포격",
+       "t": 9.5
+      },
+      {
+       "group": "E2",
+       "mode": "counterattack",
+       "objective_ref": "T351",
+       "axis_xy": [
+        [
+         91,
+         119
+        ],
+        [
+         100,
+         110
+        ]
+       ],
+       "when": "아군이 고지 A에 진입하면 능선 1로 역습",
+       "t": 11
+      }
+     ],
+     "risk_point": "고지 D-고지 E 측방화력으로 G2 동측 접근과 G1 능선 2 접근이 노출되는 점"
+    },
+    "unknowns": [
+     "적 포병 1 위치와 잔여 탄량",
+     "고지 A 적 진지 편성 정도",
+     "적 연대 1 예비 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "함포와 항공지원이 공격 개시 전후에 가용하다.",
+     "why": "하계 주간이며 지원 가용이 명시되었다."
+    },
+    {
+     "text": "수색중대와 제4대대는 09시까지 공격대기지점에 도달한다.",
+     "why": "사단 후방에서 약 4km 거리이다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 09시 30분 고지 A 일대에서 적 대대 1을 격멸하고 고지 A를 탈취하여 동해안 저지대 감제와 고지 B 접근로 통제를 회복한다.",
+   "task_verb": "탈취",
+   "objective_ref": "T351",
+   "when": {
+    "type": "time_elapsed",
+    "value": 9.5,
+    "text": "D일 09시 30분"
+   },
+   "purpose": "동해안 저지대 감제와 고지 B 접근로 통제를 회복한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A를 탈환하고 적 대대 1을 격멸 또는 축출한다.",
+    "friendly": "G1과 G2가 고지 A를 확보하고 G3가 전투력을 보존한다.",
+    "enemy": "적 대대 1이 격멸 또는 축출되고 적 연대 1의 측방화력이 제압된다.",
+    "terrain": "고지 A 주봉과 동쪽 진지를 아군이 통제한다."
+   },
+   "concept": {
+    "text": "G1이 능선 2로 정면 공격하고 G2가 고지 C를 거쳐 동쪽 측방을 공격하여 고지 A를 협공한다. 화력으로 고지 A와 측방화력 진지를 제압한다.",
+    "maneuver": "09시 준비사격 후 09시 30분 공격개시선에서 G1은 고지 H-고지 G-고지 F로, G2는 고지 C를 점령한 뒤 고지 A 동쪽으로 공격한다. 점령 후 고수로 전환한다.",
+    "fires": "준비사격 30분을 고지 A에 집중하고 공격 중에는 고지 D-고지 E와 고지 B를 제압한다. 함포와 항공은 적 포병 접근로에 투입한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "T263",
+     "xy": [
+      95,
+      68
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.4,
+      "text": "G1 누적 손실 40% 초과"
+     },
+     "priorities": [
+      "G1 공격이 정체되면 후속인수하여 고지 A 공격을 계속한다.",
+      "적 역습으로 고지 A가 위협받으면 역습한다.",
+      "고지 H-고지 F 축선 방어를 유지한다."
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "TGT_A",
+      "TGT_DE",
+      "TGT_B"
+     ],
+     "restrictions": "아군이 공격개시선을 넘은 뒤 고지 A 사격은 근접 시 연신하고 통제선 이내로 제한한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "고지 A 주봉을 탈취하여 사단 의도를 달성한다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       90,
+       78
+      ],
+      "note": "고지 H 일대에서 공격 준비",
+      "frontage_m": 1200,
+      "preparation": "hasty",
+      "ref": "AA1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "능선 2를 따라 고지 A를 공격",
+       "params": {
+        "objective": "T351"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "고수",
+       "text": "탈환한 고지 A를 고수",
+       "params": {
+        "objective": "T351"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "동쪽 측방에서 적을 협공하고 고지 D 측방화력을 차단한다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       108,
+       72
+      ],
+      "note": "고지 C 남쪽에서 공격 준비",
+      "frontage_m": 1000,
+      "preparation": "hasty",
+      "ref": "AA2"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "고지 C를 거쳐 고지 A 동쪽 진지를 공격",
+       "params": {
+        "objective": "OBJ_EAST"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "고지 A 동쪽 진지를 확보",
+       "params": {
+        "objective": "OBJ_EAST"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "결정적 시기에 투입하여 공격을 지속하거나 방어선을 유지한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       95,
+       68
+      ],
+      "note": "고지 H 후방에서 대기",
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "ref": "T263"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "주저항선 고지 H 일대를 방어",
+       "params": {
+        "area": "T263"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "후속인수",
+       "text": "G1을 후속인수",
+       "params": {
+        "followed_group": "G1"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "G1 손실 40% 초과"
+       },
+       "basis": "G1 공격력 소진 시 사단 예비 인수 전에 공격을 유지한다."
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "공격부대를 지원하고 적 측방화력을 제압한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       103,
+       65
+      ],
+      "note": "연대 후방 포병 및 박격포 진지",
+      "frontage_m": 600,
+      "preparation": "hasty",
+      "ref": "AA1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "G1의 고지 A 공격을 화력지원",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "TGT_A"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "화력공격",
+       "text": "고지 D-고지 E 측방화력 진지를 화력공격",
+       "params": {
+        "target_ref": "TGT_DE"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "우측 측방을 경계하여 G2를 보호한다.",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       125,
+       95
+      ],
+      "note": "호수 1 서쪽 전초",
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "ref": "OP_E"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "우측 전초지역을 경계",
+       "params": {
+        "area": "OP_E"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "09시 준비사격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 9,
+       "text": "D일 09시"
+      }
+     },
+     {
+      "text": "09시 30분 공격개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 9.5,
+       "text": "D일 09시 30분"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "LD1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        88,
+        84
+       ],
+       [
+        100,
+        84
+       ],
+       [
+        112,
+        88
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "AA1",
+      "name": "G1 공격대기지점",
+      "kind": "attack_position",
+      "xy": [
+       [
+        85,
+        74
+       ],
+       [
+        95,
+        74
+       ],
+       [
+        95,
+        82
+       ],
+       [
+        85,
+        82
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "AA2",
+      "name": "G2 공격대기지점",
+      "kind": "attack_position",
+      "xy": [
+       [
+        104,
+        68
+       ],
+       [
+        114,
+        68
+       ],
+       [
+        114,
+        76
+       ],
+       [
+        104,
+        76
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "OBJ_EAST",
+      "name": "고지 A 동쪽 진지",
+      "kind": "objective",
+      "xy": [
+       [
+        104,
+        104
+       ],
+       [
+        110,
+        106
+       ],
+       [
+        110,
+        114
+       ],
+       [
+        104,
+        112
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BND_12",
+      "name": "G1-G2 전투지경선",
+      "kind": "boundary",
+      "xy": [
+       [
+        104,
+        70
+       ],
+       [
+        104,
+        90
+       ],
+       [
+        104,
+        104
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "TGT_A",
+      "name": "고지 A 표적",
+      "kind": "target",
+      "xy": [
+       [
+        100,
+        110
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "TGT_DE",
+      "name": "고지 D-E 표적",
+      "kind": "target",
+      "xy": [
+       [
+        119,
+        127
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "TGT_B",
+      "name": "고지 B 표적",
+      "kind": "target",
+      "xy": [
+       [
+        75,
+        135
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "OP_E",
+      "name": "우측 전초지역",
+      "kind": "outpost",
+      "xy": [
+       [
+        120,
+        92
+       ],
+       [
+        132,
+        92
+       ],
+       [
+        132,
+        102
+       ],
+       [
+        120,
+        102
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.2213193,
+  "duration_s": 75.8,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 10871,
+   "cache_read_input_tokens": 34053,
+   "cache_creation_input_tokens": 27299
+  },
+  "examples": []
+ }
+}

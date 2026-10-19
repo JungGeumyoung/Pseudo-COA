@@ -9,15 +9,15 @@ python3 tutorial/tutorial.py 3 4    # 3, 4단계만
 
 | 단계 | 내용 | 더 읽을 곳 |
 |---|---|---|
-| 1 | 파일 세 종류: `inputs` / `anon` / `cases` | README "데이터 세 가지" |
-| 2 | `input`: 생성 모델이 받는 상황 | [01 §input](../docs/01_schema.md) |
-| 3 | `order`: 생성 모델이 쓰는 COA | [01 §order](../docs/01_schema.md) |
-| 4 | 조건과 timing | [02 §4](../docs/02_simulator_contract.md) |
-| 5 | `scenario`: 시뮬레이터만 받는 것 | [02 §5–6](../docs/02_simulator_contract.md) |
-| 6 | `history`: 평가에만 쓰는 것 | [02 §7](../docs/02_simulator_contract.md) |
-| 7 | 유닛 환산 | [02 §3](../docs/02_simulator_contract.md), `sim_unit_table.json` |
+| 1 | 파일 세 종류: `situations` / `pseudo_gt` / `sim_cases` | [data/README](../data/README.md) |
+| 2 | `input`: 생성 모델이 받는 상황 | [01 §input](../docs/01_json_fields.md) |
+| 3 | `order`: 생성 모델이 쓰는 COA | [01 §order](../docs/01_json_fields.md) |
+| 4 | 조건과 timing | [02 §4](../docs/02_how_to_simulate.md) |
+| 5 | `scenario`: 시뮬레이터만 받는 것 | [02 §5–6](../docs/02_how_to_simulate.md) |
+| 6 | `history`: 평가에만 쓰는 것 | [02 §7](../docs/02_how_to_simulate.md) |
+| 7 | 유닛 환산 | [02 §3](../docs/02_how_to_simulate.md), `sim_unit_table.json` |
 | 8 | 검사: 잘못된 order가 어떻게 걸리는가 | `tools/validate_order.py` |
-| 9 | 파이프라인: 프롬프트 → 생성 → 검사 → 시뮬레이터 입력 | [06](../docs/06_pipeline.md) |
+| 9 | 파이프라인: 프롬프트 → 생성 → 검사 → 시뮬레이터 입력 | [06](../docs/06_coa_generation.md) |
 
 ## 1. 파일 세 종류
 
@@ -25,9 +25,9 @@ python3 tutorial/tutorial.py 3 4    # 3, 4단계만
 
 | 폴더 | 블록 | 누가 받나 |
 |---|---|---|
-| `data/inputs/<id>.json` | `input` (+ `mission_type`) | 생성 모델. 이것이 "COA를 만들어야 할 상황"이다 |
-| `data/anon/<id>.json` | `input` + `order` | 생성 모델의 few-shot 예시(pseudo-GT COA) |
-| `data/cases/<id>.json` | `meta` `input` `order` `scenario` `history` `checks` | 시뮬레이터(`input`·`order`·`scenario`)와 평가(`history`) |
+| `data/situations/<id>.json` | `input` (+ `mission_type`) | 생성 모델. 이것이 "COA를 만들어야 할 상황"이다 |
+| `data/pseudo_gt/<id>.json` | `input` + `order` | 생성 모델의 few-shot 예시(pseudo-GT COA) |
+| `data/sim_cases/<id>.json` | `meta` `input` `order` `scenario` `history` `checks` | 시뮬레이터(`input`·`order`·`scenario`)와 평가(`history`) |
 
 `meta`는 출처, 결과 라벨, 생성 기록이다. 생성 모델에도 시뮬레이터에도 주지 않는다.
 
@@ -95,8 +95,8 @@ python3 tutorial/tutorial.py 3 4    # 3, 4단계만
 ## 9. 파이프라인
 
 ```bash
-python3 pipeline/generate_coa.py --case kb2_023 --dry-run | less                  # 프롬프트 보기 (모델 없이)
-python3 pipeline/generate_coa.py --case kb2_023 --out runs/kb2_023.json --sim-out runs/kb2_023.sim.json
+python3 generation/generate_coa.py --case kb2_023 --dry-run | less                  # 프롬프트 보기 (모델 없이)
+python3 generation/generate_coa.py --case kb2_023 --out runs/kb2_023.json --sim-out runs/kb2_023.sim.json
 ```
 
-`runs/kb2_023.sim.json`이 시뮬레이터 입력이다. 사례의 `input`·`scenario`는 그대로이고 `order`만 새 COA로 바뀐다. 자세한 내용은 [06. 파이프라인](../docs/06_pipeline.md)에 있다.
+`runs/kb2_023.sim.json`이 시뮬레이터 입력이다. 사례의 `input`·`scenario`는 그대로이고 `order`만 새 COA로 바뀐다. 자세한 내용은 [06. COA 생성](../docs/06_coa_generation.md)에 있다.

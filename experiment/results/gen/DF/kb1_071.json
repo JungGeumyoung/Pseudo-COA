@@ -1,0 +1,906 @@
+{
+ "id": "kb1_071",
+ "cond": "DF",
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제2대대(-H중대), H중대, 중박격포중대, 정보수색소대 / 지원: 포병대대(직접지원), 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제2대대(-H중대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2",
+       "part": "-H중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "중박격포중대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "정보수색소대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "H중대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F2",
+       "part": "H중대"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "하천 1은 비로 도섭이 불가능하고 교량이 모두 파괴되어 적은 선박이나 부교로만 도하한다. 지점 1 정면과 마을 1 제방이 교두보 후보이고 고지 A는 동측 도하를 감제한다. 도로 1은 마을 8로 이어지는 주보급로다.",
+    "key_terrain": [
+     {
+      "ref": "T4",
+      "why": "적 주공격로 정면이며 도로 1 시작점"
+     },
+     {
+      "ref": "T6",
+      "why": "동측 도하와 마을 1 측방을 감제"
+     },
+     {
+      "ref": "R1",
+      "why": "주보급로이며 상실 시 마을 8 방어 불가"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "지점 1-마을 1 접근로",
+      "user": "enemy",
+      "refs": [
+       "T8",
+       "T4",
+       "R1"
+      ],
+      "xy": [
+       [
+        96,
+        120
+       ],
+       [
+        94,
+        112
+       ],
+       [
+        93,
+        104
+       ],
+       [
+        92,
+        97
+       ],
+       [
+        91,
+        90
+       ]
+      ]
+     },
+     {
+      "name": "마을 3-고지 A 접근로",
+      "user": "enemy",
+      "refs": [
+       "T7",
+       "T6"
+      ],
+      "xy": [
+       [
+        116,
+        122
+       ],
+       [
+        116,
+        112
+       ],
+       [
+        112,
+        102
+       ],
+       [
+        109,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "도로 2 서측 접근로",
+      "user": "both",
+      "refs": [
+       "R2"
+      ],
+      "xy": [
+       [
+        22,
+        88
+       ],
+       [
+        50,
+        91
+       ],
+       [
+        80,
+        94
+       ],
+       [
+        92,
+        97
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 제3사단 3개 연대가 하천 1 북안에 전개하고 포병과 전차가 북안에서 지원한다. 주공은 마을 4에서 지점 1 정면으로 도하해 마을 1을 탈취한다. 조공은 마을 3 서쪽과 마을 5에서 도하한다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         98,
+         138
+        ],
+        [
+         93,
+         104
+        ]
+       ],
+       "when": "D일 10:00 전후 준비사격",
+       "t": 10
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "T9",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         96,
+         120
+        ],
+        [
+         94,
+         112
+        ],
+        [
+         93,
+         104
+        ],
+        [
+         92,
+         97
+        ]
+       ],
+       "when": "D일 12:00 전후 도하",
+       "t": 12
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "T7",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         116,
+         122
+        ],
+        [
+         116,
+         112
+        ],
+        [
+         112,
+         102
+        ],
+        [
+         109,
+         96
+        ]
+       ],
+       "when": "D일 13:00 전후 도하",
+       "t": 13
+      },
+      {
+       "group": "E3",
+       "mode": "infiltrate",
+       "from_ref": "T10",
+       "objective_ref": "T5",
+       "axis_xy": [
+        [
+         76,
+         121
+        ],
+        [
+         78,
+         106
+        ],
+        [
+         82,
+         98
+        ],
+        [
+         90,
+         90
+        ]
+       ],
+       "when": "D일 14:00 전후 도하",
+       "t": 14
+      },
+      {
+       "group": "E5",
+       "mode": "fix",
+       "from_ref": "T8",
+       "objective_ref": "T4",
+       "axis_xy": [
+        [
+         94,
+         112
+        ],
+        [
+         93,
+         104
+        ]
+       ],
+       "when": "북안에서 도하 엄호",
+       "t": 10
+      }
+     ],
+     "risk_point": "적 연대 1이 마을 1 제방에 교두보를 만들고 도로 1로 돌파하는 순간"
+    },
+    "unknowns": [
+     "적 도하 수단과 시각",
+     "적 전차의 도하 가능 여부",
+     "마을 5와 하천 3 방면 조공 규모"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적은 선박과 부교로 야간이 아닌 낮에도 도하를 시도한다.",
+     "why": "교량이 파괴되고 도섭이 불가능하며 시간이 촉박하다."
+    },
+    {
+     "text": "하천 3 서측 방면은 소규모 적만 접근한다.",
+     "why": "적 주력이 마을 5에서 마을 3까지에 집중되어 있다."
+    },
+    {
+     "text": "대대 세부 중대 배치는 보충했다.",
+     "why": "상황은 대대 단위 위치만 준다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 09:30부 마을 1 정면 하천 3-마을 7 하천 1 남안에서 방어하여 적 제3사단의 도하를 저지하고 마을 8 방어 준비 시간을 확보한다.",
+   "task_verb": "방어",
+   "objective_ref": "T4",
+   "when": {
+    "type": "time_elapsed",
+    "value": 9.5,
+    "text": "D일 09:30부"
+   },
+   "purpose": "적 제3사단의 도하를 저지하고 마을 8 방어 준비 시간을 확보한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "하천 1 남안 방어선을 유지하고 도하한 적을 강안에서 격멸한다.",
+    "friendly": "마을 1, 고지 A, 마을 2 확보, 예비 보존",
+    "enemy": "도하 기도 저지, 도하 적 격멸",
+    "terrain": "하천 1 남안과 도로 1 확보"
+   },
+   "concept": {
+    "text": "제1대대를 주력으로 마을 1-지점 1 정면에 집중하고 제2대대(-)는 고지 A에서 마을 7까지 동측을 방어한다. 서측은 정보수색소대가 경계하고 H중대를 마을 2 예비로 둔다. 포병대대와 중박격포중대는 지점 1 정면 교전지역에 집중한다.",
+    "maneuver": "제1대대는 제방과 마을 1에 방어진지를 편성하여 도하 중인 적을 강안에서 격멸한다. 제2대대(-)는 고지 A를 고수하고 마을 3 정면 도하를 저지한다. 예비는 교두보 적을 역습한다.",
+    "fires": "포병대대는 지점 1 정면 교전지역을 우선하고 이어 마을 3 정면에 둔다. 중박격포중대는 제1대대를 직접 지원한다. 주간 근접항공은 북안 적 전차와 도하 수단을 공격한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G5",
+     "position_ref": "CM5",
+     "xy": [
+      90,
+      90
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM2",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 마을 1 방어지역 안에 있음"
+     },
+     "priorities": [
+      "마을 1 교두보 역습",
+      "고지 A 방향 돌파 차단",
+      "도로 1 확보"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "CM1",
+      "CM9"
+     ],
+     "restrictions": "아군 진지 200m 이내 사격은 연대 승인. 근접항공은 주간에 한한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "적 주공격로의 도하를 강안에서 저지한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       92,
+       96
+      ],
+      "frontage_m": 6000,
+      "polygon": [
+       [
+        70,
+        90
+       ],
+       [
+        112,
+        92
+       ],
+       [
+        112,
+        102
+       ],
+       [
+        70,
+        98
+       ]
+      ],
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         92,
+         100
+        ],
+        "ref": "T4"
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         78,
+         96
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         104,
+         97
+        ]
+       }
+      ],
+      "note": "제방과 마을 1에 방어진지 편성"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "마을 1 일대 하천 1 남안을 방어한다.",
+       "params": {
+        "area": "CM2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "지점 1 정면에서 적의 도하를 저지한다.",
+       "params": {
+        "area": "CM1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "동측 도하를 저지하고 마을 1 측방을 보호한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       135,
+       106
+      ],
+      "frontage_m": 9000,
+      "polygon": [
+       [
+        112,
+        96
+       ],
+       [
+        168,
+        108
+       ],
+       [
+        168,
+        114
+       ],
+       [
+        112,
+        104
+       ]
+      ],
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "E중대",
+        "xy": [
+         110,
+         97
+        ],
+        "ref": "T6"
+       },
+       {
+        "label": "F중대",
+        "xy": [
+         126,
+         106
+        ]
+       },
+       {
+        "label": "G중대",
+        "xy": [
+         160,
+         111
+        ],
+        "ref": "T12"
+       }
+      ],
+      "note": "고지 A에서 마을 7까지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "고지 A를 고수한다.",
+       "params": {
+        "objective": "T6"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "마을 3와 마을 7 일대 하천 1 남안을 방어한다.",
+       "params": {
+        "area": "CM3"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "도하 중인 적에게 화력을 집중한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       90,
+       88
+      ],
+      "frontage_m": 500,
+      "note": "마을 2 부근 포진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "제1대대를 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "서측 접근을 조기경보한다.",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       45,
+       92
+      ],
+      "frontage_m": 7000,
+      "polygon": [
+       [
+        22,
+        84
+       ],
+       [
+        70,
+        90
+       ],
+       [
+        70,
+        97
+       ],
+       [
+        22,
+        91
+       ]
+      ],
+      "preparation": "none",
+      "note": "하천 3에서 마을 1 서측까지 경계"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "하천 3에서 마을 1 서측까지 도로 2 일대를 경계한다.",
+       "params": {
+        "area": "CM4"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "철수",
+       "text": "적 중대 이상이 접근하면 마을 2로 철수한다.",
+       "params": {
+        "destination": "T5"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM4",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 서측 경계지역 안에 있음"
+       },
+       "basis": "unknowns: 서측 조공 규모"
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "교두보를 즉시 소멸시킨다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       90,
+       90
+      ],
+      "frontage_m": 400,
+      "preparation": "hasty",
+      "ref": "CM5",
+      "note": "마을 2 예비진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "마을 2 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM5"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "역습로로 마을 1 교두보를 역습한다.",
+       "params": {
+        "objective": "T4",
+        "route": "CM6"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM2",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 마을 1 방어지역 안에 있음"
+       },
+       "basis": "risk_point: 적이 마을 1 제방에 교두보를 형성"
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "진지 보강과 교전지역 사격계획을 D일 11:00까지 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 11,
+       "text": "D일 11:00"
+      }
+     },
+     {
+      "text": "예비 역습 준비를 D일 12:00까지 완료한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 12,
+       "text": "D일 12:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "EA 지점 1",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        85,
+        104
+       ],
+       [
+        105,
+        106
+       ],
+       [
+        105,
+        114
+       ],
+       [
+        85,
+        112
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T8",
+       "T14"
+      ]
+     },
+     {
+      "id": "CM2",
+      "name": "제1대대 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        70,
+        90
+       ],
+       [
+        112,
+        92
+       ],
+       [
+        112,
+        102
+       ],
+       [
+        70,
+        98
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "T4"
+      ]
+     },
+     {
+      "id": "CM3",
+      "name": "제2대대 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        112,
+        96
+       ],
+       [
+        168,
+        108
+       ],
+       [
+        168,
+        114
+       ],
+       [
+        112,
+        104
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "T6",
+       "T7",
+       "T12"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "서측 경계지역",
+      "kind": "outpost",
+      "xy": [
+       [
+        22,
+        84
+       ],
+       [
+        70,
+        90
+       ],
+       [
+        70,
+        97
+       ],
+       [
+        22,
+        91
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R2"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        86,
+        86
+       ],
+       [
+        94,
+        86
+       ],
+       [
+        94,
+        92
+       ],
+       [
+        86,
+        92
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T5"
+      ]
+     },
+     {
+      "id": "CM6",
+      "name": "마을 1 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        90,
+        90
+       ],
+       [
+        91,
+        94
+       ],
+       [
+        92,
+        97
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R1"
+      ]
+     },
+     {
+      "id": "CM7",
+      "name": "제1·제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        112,
+        92
+       ],
+       [
+        112,
+        104
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "서측 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G4",
+       "G1"
+      ],
+      "xy": [
+       [
+        70,
+        88
+       ],
+       [
+        70,
+        98
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM9",
+      "name": "EA 마을 3",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        115,
+        108
+       ],
+       [
+        135,
+        110
+       ],
+       [
+        135,
+        118
+       ],
+       [
+        115,
+        116
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T7"
+      ]
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.4081057,
+  "duration_s": 104.4,
+  "usage": {
+   "input_tokens": 6,
+   "output_tokens": 17132,
+   "cache_read_input_tokens": 130297,
+   "cache_creation_input_tokens": 55936
+  },
+  "examples": [
+   "kb1_080",
+   "kb2_018",
+   "kb1_085"
+  ]
+ }
+}

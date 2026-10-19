@@ -1,0 +1,582 @@
+{
+ "id": "kb1_047",
+ "cond": "Z",
+ "order": {
+  "task_organization": {
+   "text": "건제 유지. 지원: 포병 포대 1 직접지원.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "우측 방어대대(고지 A)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "좌측 방어대대(고지 B)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "대전차 저지조",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "화력지원조",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "도로 1이 지점 2와 지점 1를 지나 마을 3으로 이어지는 유일한 접근로다. 고지 A와 고지 B가 도로 양측에서 지점 1·지점 2를 내려다본다. 하천 1은 동남측 장애물이다.",
+    "key_terrain": [
+     {
+      "ref": "T8",
+      "why": "도로 1 동측을 감제하고 측방 사격이 가능하다."
+     },
+     {
+      "ref": "T9",
+      "why": "도로 1 서측을 감제하며 서측 우회로를 막는다."
+     },
+     {
+      "ref": "T1",
+      "why": "도로 1 병목으로 자주포 종대를 저지할 지점이다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "도로 1 접근로",
+      "user": "enemy",
+      "refs": [
+       "R44",
+       "T1",
+       "T2"
+      ],
+      "xy": [
+       [
+        136,
+        175
+       ],
+       [
+        130,
+        158
+       ],
+       [
+        126,
+        136
+       ],
+       [
+        121,
+        125
+       ],
+       [
+        115,
+        116
+       ]
+      ]
+     },
+     {
+      "name": "서측 능선 접근로",
+      "user": "enemy",
+      "refs": [
+       "R451",
+       "T9"
+      ],
+      "xy": [
+       [
+        124,
+        188
+       ],
+       [
+        126,
+        170
+       ],
+       [
+        115,
+        140
+       ],
+       [
+        102,
+        116
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1이 적 대대 1 자주포를 앞세워 도로 1로 남하하고 적 연대 2가 도로 2와 서측 능선으로 따른다. 모두 추격 중이며 재편성 중인 아군의 급편 진지를 노린다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E3",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         140,
+         192
+        ],
+        [
+         136,
+         175
+        ],
+        [
+         130,
+         158
+        ],
+        [
+         126,
+         136
+        ],
+        [
+         121,
+         125
+        ]
+       ],
+       "when": "접촉 직후 도로 1 정면 돌파",
+       "t": -4
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         136,
+         178
+        ],
+        [
+         130,
+         158
+        ],
+        [
+         132,
+         142
+        ]
+       ],
+       "when": "자주포 뒤따라 고지 A 공격",
+       "t": -4
+      },
+      {
+       "group": "E2",
+       "mode": "infiltrate",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         124,
+         188
+        ],
+        [
+         126,
+         170
+        ],
+        [
+         115,
+         140
+        ],
+        [
+         102,
+         116
+        ]
+       ],
+       "when": "서측 능선으로 측방 우회",
+       "t": -3
+      }
+     ],
+     "risk_point": "서측 능선을 따라 고지 B 측방이 우회되고 자주포가 지점 1을 돌파하는 것"
+    },
+    "unknowns": [
+     "적 제12사단 후속 규모",
+     "적 자주포의 정확한 수",
+     "개방된 동측방 적 동향"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적 선두는 약 2시간 안에 지점 1 전방에 도달한다.",
+     "why": "적 위치와 이동속도로 추정"
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D-1일 18:00까지 지점 1 일대 고지 A와 고지 B에서 도로 1를 따라 남하하는 적 제12사단을 저지하여 마을 4과 사단 주력의 동측방을 보호한다.",
+   "task_verb": "저지",
+   "objective_ref": "T1",
+   "when": {
+    "type": "time_elapsed",
+    "value": -6,
+    "text": "D-1일 18:00까지 진지 점령"
+   },
+   "purpose": "마을 4과 사단 주력의 동측방 보호"
+  },
+  "execution": {
+   "end_state": {
+    "text": "지점 1 전방에서 적 선두가 저지되고 진지가 유지된다.",
+    "friendly": "고지 A·고지 B와 대전차 진지를 유지한다.",
+    "enemy": "자주포와 선두 보병이 격멸되어 공격이 정지된다.",
+    "terrain": "지점 1과 도로 1 병목을 확보한다."
+   },
+   "concept": {
+    "text": "고지 A와 고지 B를 양익 거점으로 하고 도로 1 병목에 대전차포를 두어 교전지역에서 자주포를 잡는다.",
+    "maneuver": "제1대대는 고지 A, 제2대대는 고지 B를 급편 방어한다. 대전차포중대는 도로 1 남서측에서 지점 2 방향을 지향한다.",
+    "fires": "포병 포대 1은 교전지역과 지점 1 전방 도로에 집중한다. 보병 후속과 자주포를 분리한다.",
+    "main_effort": "G3",
+    "reserve": {
+     "group": "없음",
+     "position_ref": "T6",
+     "xy": [
+      98,
+      96
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G2",
+      "fraction": 0.4,
+      "text": "제2대대 손실 40% 초과"
+     },
+     "priorities": [
+      "예비 없음: 2개 대대 모두 전방 진지에 필요하다.",
+      "고지 B 측방 위협 시 사단 예비 제19연대 증원을 요청한다."
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G3",
+      "G1"
+     ],
+     "zone_refs": [
+      "EA1",
+      "T1"
+     ],
+     "restrictions": "아군 진지 전방 200m 안 사격은 관측자 요청 시에만 한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "도로 동측을 막고 자주포 측방을 사격한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       132,
+       136
+      ],
+      "note": "고지 A 역사면 포함 방어",
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "ref": "BPA",
+      "polygon": [
+       [
+        126,
+        130
+       ],
+       [
+        140,
+        132
+       ],
+       [
+        142,
+        142
+       ],
+       [
+        128,
+        144
+       ]
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A 일대를 방어한다.",
+       "params": {
+        "area": "BPA"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "지연",
+       "text": "마을 3 방향으로 지연한다.",
+       "params": {
+        "lines": [
+         "PL1"
+        ],
+        "disengage": {
+         "type": "losses_exceed",
+         "group": "G1",
+         "fraction": 0.5,
+         "text": "제1대대 손실 50% 초과"
+        }
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.5,
+        "text": "제1대대 손실 50% 초과"
+       },
+       "basis": "전투력 상실 전에 이탈해 전선 붕괴를 막는다."
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "서측 능선 우회를 막고 도로를 사격한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       102,
+       116
+      ],
+      "note": "고지 B 방어",
+      "frontage_m": 1400,
+      "preparation": "hasty",
+      "ref": "BPB",
+      "polygon": [
+       [
+        96,
+        110
+       ],
+       [
+        108,
+        112
+       ],
+       [
+        110,
+        122
+       ],
+       [
+        96,
+        122
+       ]
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 B 일대를 방어한다.",
+       "params": {
+        "area": "BPB"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "경계",
+       "text": "서측 능선 방향을 경계한다.",
+       "params": {
+        "area": "T9"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "자주포의 도로 돌파를 저지한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       113,
+       118
+      ],
+      "note": "도로 1 남서측 사선 확보",
+      "frontage_m": 600,
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "대전차포 1반",
+        "xy": [
+         114,
+         119
+        ]
+       },
+       {
+        "label": "대전차포 2반",
+        "xy": [
+         110,
+         114
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "교전지역에서 자주포를 저지한다.",
+       "params": {
+        "area": "EA1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "교전지역에 화력을 집중한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       75,
+       75
+      ],
+      "note": "현 위치 사격",
+      "frontage_m": 300,
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "대전차 저지조를 화력지원한다.",
+       "params": {
+        "supported_group": "G3",
+        "target_ref": "EA1"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "진지 점령과 사격계획 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": -6,
+       "text": "D-1일 18:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "EA1",
+      "name": "교전지역 1",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        112,
+        114
+       ],
+       [
+        124,
+        122
+       ],
+       [
+        128,
+        134
+       ],
+       [
+        116,
+        130
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BPA",
+      "name": "고지 A 방어진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        126,
+        130
+       ],
+       [
+        140,
+        132
+       ],
+       [
+        142,
+        142
+       ],
+       [
+        128,
+        144
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "BPB",
+      "name": "고지 B 방어진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        96,
+        110
+       ],
+       [
+        108,
+        112
+       ],
+       [
+        110,
+        122
+       ],
+       [
+        96,
+        122
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "PL1",
+      "name": "지연선 1",
+      "kind": "phase_line",
+      "xy": [
+       [
+        85,
+        100
+       ],
+       [
+        110,
+        98
+       ],
+       [
+        120,
+        95
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.06082800000000001,
+  "duration_s": 35.5,
+  "usage": {
+   "input_tokens": 2,
+   "output_tokens": 4361,
+   "cache_read_input_tokens": 8220,
+   "cache_creation_input_tokens": 4098
+  },
+  "examples": []
+ }
+}

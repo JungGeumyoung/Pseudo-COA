@@ -1,0 +1,567 @@
+{
+ "id": "kb2_013",
+ "cond": "D",
+ "order": {
+  "task_organization": {
+   "text": "G1(주공)=제1대대+전차중대 1, G2=제3대대, G3(예비)=제2대대, G4=포병대대 1 직접지원+항공 1. 지원: 상급 사단 포병 공격준비사격.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "주공 공격대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U1"
+      },
+      {
+       "force": "U5"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "조공 공격대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U3"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "예비대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "U2"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "화력지원대",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "U4"
+      },
+      {
+       "force": "U6"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "평탄하고 얼어붙은 지형에 고지 A가 고립되어 접근로가 관측과 화력에 노출된다. 고지 F가 북서쪽에서 감제한다. 도로 1이 고지 B를 거쳐 고지 A로 이어지고 능선 1이 고지 E와 고지 D로 이어진다.",
+    "key_terrain": [
+     {
+      "ref": "F1",
+      "why": "고지 A는 탈취 대상이며 고지 F 동측방을 위협하는 전진거점이다."
+     },
+     {
+      "ref": "F4",
+      "why": "고지 D는 전초진지로 확보 대상이다."
+     },
+     {
+      "ref": "F5",
+      "why": "고지 E는 능선 1 상 접근로의 요충이며 고지 A와 고지 D를 연결한다."
+     },
+     {
+      "ref": "F2",
+      "why": "고지 B는 공격 발진 거점이며 예비 전개지이다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "도로 1 접근로",
+      "user": "both",
+      "refs": [
+       "R1"
+      ],
+      "xy": [
+       [
+        115,
+        70
+       ],
+       [
+        114,
+        92
+       ],
+       [
+        114,
+        108
+       ]
+      ]
+     },
+     {
+      "name": "능선 1 접근로",
+      "user": "both",
+      "refs": [
+       "R3"
+      ],
+      "xy": [
+       [
+        106,
+        100
+       ],
+       [
+        101,
+        109
+       ],
+       [
+        100,
+        119
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 대대 1이 고지 A·고지 E·고지 D를 급편방어한다. 적 대대 2가 고지 C-고지 G-고지 H 일대에서 예비이며 적 전차소대 1이 고지 C 북쪽에서 사격한다. 적 연대 1은 고지 F에서 방어하고 적 포병대대 1이 지원한다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         105,
+         114
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "when": "아군 공격 시 현 진지를 고수",
+       "t": 7.5
+      },
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "objective_ref": "F2",
+       "axis_xy": [
+        [
+         90,
+         150
+        ],
+        [
+         112,
+         102
+        ]
+       ],
+       "when": "아군 접근 시 고지 B와 접근로에 포격",
+       "t": 7.5
+      },
+      {
+       "group": "E2",
+       "mode": "counterattack",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         106,
+         125
+        ],
+        [
+         108,
+         117
+        ],
+        [
+         110,
+         112
+        ]
+       ],
+       "when": "아군이 고지 A에 진입하면 도로 2를 따라 역습",
+       "t": 9
+      }
+     ],
+     "risk_point": "고지 A 점령 직후 적 대대 2의 역습과 고지 F의 측사 및 포격으로 주공이 약해지는 시점"
+    },
+    "unknowns": [
+     "적 대대 2 정확한 위치",
+     "적 전차소대 1 사격진지",
+     "고지 A 지하 진지 구축 정도"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "공격준비사격 후 적 대대 1이 상당히 약화된다.",
+     "why": "30분간 사단 포병이 고지 A·D를 제압하기 때문이다."
+    },
+    {
+     "text": "인접 연대 2는 고지 B에 적 대대 이상이 있을 때만 역습한다.",
+     "why": "상급 지침이 조건부 역습이다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 07:30 고지 A와 고지 D 일대에서 적 대대 1을 격멸하고 고지 A를 탈취하여 전진거점을 확보한다.",
+   "task_verb": "탈취",
+   "objective_ref": "F1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 7.5,
+    "text": "D일 07:30"
+   },
+   "purpose": "고지 F 동측방을 위협하고 적 수색을 거부하며 공격 전환의 발판을 확보하기 위함이다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A와 고지 D를 확보하고 적 대대 1을 격멸한 상태이다.",
+    "friendly": "연대가 전투력을 보존하고 예비를 재편성한 상태이다.",
+    "enemy": "적 대대 1이 격멸되고 적 대대 2의 역습이 격퇴된 상태이다.",
+    "terrain": "고지 A·고지 E·고지 D를 아군이 통제한다."
+   },
+   "concept": {
+    "text": "공격준비사격 직후 주공이 도로 1을 따라 고지 A를 탈취하고 조공이 능선 1로 고지 E와 고지 D를 탈취한다. 예비는 주공을 후속인수한다.",
+    "maneuver": "G1이 공격개시선에서 도로 1 동측으로 전차와 함께 고지 A를 공격한다. G2는 능선 1을 따라 고지 E를 거쳐 고지 D를 탈취한다. G3는 고지 B에서 대기하며 G1을 후속인수한다.",
+    "fires": "07:00~07:30 사단 포병 공격준비사격 후 포병대대 1이 G1과 G2를 직접지원하고 항공 1은 고지 G·고지 H의 적 예비와 전차에 사용한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "F2",
+     "xy": [
+      112,
+      100
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.35,
+      "text": "G1 손실이 35%를 넘음"
+     },
+     "priorities": [
+      "G1 후속인수 후 고지 A 확보",
+      "적 대대 2 역습 격퇴",
+      "고지 D 증원 차단"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "F1",
+      "F4",
+      "F5"
+     ],
+     "restrictions": "아군 전방 접근 시 고지 A 사격은 G1 통제 하에 전이한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "고지 A를 탈취하여 전진거점을 확보하기 위함이다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       114,
+       90
+      ],
+      "frontage_m": 1500,
+      "note": "도로 1 동측 공격대기지점",
+      "polygon": [
+       [
+        108,
+        88
+       ],
+       [
+        122,
+        88
+       ],
+       [
+        122,
+        94
+       ],
+       [
+        108,
+        94
+       ]
+      ],
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "도로 1을 따라 고지 A를 공격한다.",
+       "params": {
+        "objective": "F1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "고지 A를 확보한다.",
+       "params": {
+        "objective": "F1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "고지 E와 고지 D를 탈취하여 주공 측방을 보호하기 위함이다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       96,
+       92
+      ],
+      "frontage_m": 1500,
+      "note": "능선 1 남단 공격대기지점",
+      "polygon": [
+       [
+        90,
+        90
+       ],
+       [
+        104,
+        90
+       ],
+       [
+        104,
+        96
+       ],
+       [
+        90,
+        96
+       ]
+      ],
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "탈취",
+       "text": "능선 1을 따라 고지 E를 탈취한다.",
+       "params": {
+        "objective": "F5"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "고지 D를 탈취한다.",
+       "params": {
+        "objective": "F4"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "고지 D를 확보한다.",
+       "params": {
+        "objective": "F4"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "주공을 후속인수하고 적 역습에 대비하기 위함이다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       112,
+       100
+      ],
+      "frontage_m": 1000,
+      "note": "고지 B 일대 예비진지",
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "후속인수",
+       "text": "G1을 후속인수한다.",
+       "params": {
+        "followed_group": "G1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "적 역습 시 도로 2 방향으로 역습한다.",
+       "params": {
+        "objective": "F1",
+        "route": "R1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "F1",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 고지 A 안에 있음"
+       },
+       "basis": "고지 A 점령 직후 적 대대 2의 역습을 격퇴하기 위함이다."
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "공격부대를 화력으로 지원하기 위함이다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       115,
+       70
+      ],
+      "frontage_m": 800,
+      "note": "하천 1 북안 연대 후방",
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "G1을 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "F1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력지원",
+       "text": "G2를 화력지원한다.",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "F4"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력공격",
+       "text": "고지 G의 적 예비를 화력공격한다.",
+       "params": {
+        "target_ref": "F7"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "F7",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 고지 G에 있음"
+       },
+       "basis": "적 대대 2의 증원과 역습을 차단하기 위함이다."
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 07:00 사단 포병 공격준비사격을 개시한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 7,
+       "text": "D일 07:00"
+      }
+     },
+     {
+      "text": "D일 07:30 공격개시선을 통과한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 7.5,
+       "text": "D일 07:30"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM_LD",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        96,
+        94
+       ],
+       [
+        122,
+        94
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_AA1",
+      "name": "공격대기지점 1",
+      "kind": "attack_position",
+      "xy": [
+       [
+        108,
+        88
+       ],
+       [
+        122,
+        88
+       ],
+       [
+        122,
+        93
+       ],
+       [
+        108,
+        93
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_LOA",
+      "name": "전진한계선",
+      "kind": "limit_of_advance",
+      "xy": [
+       [
+        96,
+        123
+       ],
+       [
+        116,
+        123
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM_PL1",
+      "name": "통제선 1",
+      "kind": "phase_line",
+      "xy": [
+       [
+        96,
+        104
+       ],
+       [
+        118,
+        104
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  },
+  "__section_note": ""
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.20709339999999998,
+  "duration_s": 70.4,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 9349,
+   "cache_read_input_tokens": 34754,
+   "cache_creation_input_tokens": 27530
+  },
+  "examples": []
+ }
+}

@@ -4,7 +4,7 @@
     python3 tutorial/tutorial.py 4          # 4단계만
 
 단계
-  1. 파일 세 종류: inputs / anon / cases
+  1. 파일 세 종류: situations / pseudo_gt / sim_cases
   2. input: 생성 모델이 받는 상황
   3. order: 생성 모델이 쓰는 명령(COA)
   4. 조건과 timing: 언제 움직이나
@@ -23,7 +23,7 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, os.path.join(ROOT, "tools"))
-sys.path.insert(0, os.path.join(ROOT, "pipeline"))
+sys.path.insert(0, os.path.join(ROOT, "generation"))
 from validate_order import validate  # noqa: E402
 from case_io import sim_view, eval_view  # noqa: E402
 
@@ -46,19 +46,19 @@ def h(n, title):
 
 def step1():
     h(1, "파일 세 종류")
-    full, an, inp = load("data", "cases", CID + ".json"), load("data", "anon", CID + ".json"), load("data", "inputs", CID + ".json")
-    for name, x, use in (("data/inputs", inp, "생성 모델 입력(situation). 익명화"),
-                         ("data/anon", an, "few-shot 예시 {input → order}. 익명화"),
-                         ("data/cases", full, "전체: 시뮬레이터 입력과 평가 기준. 실명")):
-        print("- %-12s 키 %s\n  %s" % (name, list(x.keys()), use))
+    full, gt, sit = load("data", "sim_cases", CID + ".json"), load("data", "pseudo_gt", CID + ".json"), load("data", "situations", CID + ".json")
+    for name, x, use in (("data/situations", sit, "① 상황: COA를 만들어야 할 상황. 생성 모델이 받는다 (익명화)"),
+                         ("data/pseudo_gt", gt, "② 상황 + pseudo-GT COA: 그 연대가 실제로 내린 명령. few-shot 예시 (익명화)"),
+                         ("data/sim_cases", full, "③ 시뮬레이션 사례: ②의 실명판 + 적 계획·환경(scenario) + 실제 경과(history)")):
+        print("- %-16s 키 %s\n  %s" % (name, list(x.keys()), use))
     print("\n세 파일의 id·좌표는 같다. 익명화는 이름만 바꾼다(395고지 → %s)." %
           next(f["alias"] for f in full["input"]["terrain"]["features"] if f["id"] == "H395"))
-    print("전체판의 블록: meta(출처·결과 요약, 아무에게도 주지 않음) / input / order / scenario / history / checks(자동 검사 결과)")
+    print("③의 블록: meta(출처·결과 라벨, 아무에게도 주지 않음) / input / order / scenario(시뮬레이터만) / history(평가만) / checks(자동 검사 결과)")
 
 
 def step2():
     h(2, "input: 명령 시점의 상황")
-    I = load("data", "inputs", CID + ".json")["input"]
+    I = load("data", "situations", CID + ".json")["input"]
     print("관점 부대:", I["perspective"]["alias"], "| 상급 임무:", I["higher_context"]["higher_mission"])
     print("부여 과업:", I["higher_context"]["assigned_task"])
     print("\n가용 부대(available_forces) — order의 전투편성이 이 id를 쓴다")
@@ -78,7 +78,7 @@ def step2():
 
 def step3():
     h(3, "order: 생성 모델이 쓰는 COA")
-    O = load("data", "anon", CID + ".json")["order"]
+    O = load("data", "pseudo_gt", CID + ".json")["order"]
     print("명령서 번호와 키: 전투편성 task_organization / 1.상황 situation / 2.임무 mission / 3.실시 execution")
     print("\n전투편성:", O["task_organization"]["text"])
     for g in O["task_organization"]["groups"]:
@@ -113,7 +113,7 @@ def step4():
 
 def step5():
     h(5, "scenario: 시뮬레이터만 받는 것")
-    S = load("data", "cases", CID + ".json")["scenario"]
+    S = load("data", "sim_cases", CID + ".json")["scenario"]
     print("시작 t=%s, 시뮬레이션 %sh → 끝 t=%s" % (S["start_t"], S["horizon_h"], S["start_t"] + S["horizon_h"]))
     print("\n적의 실제 계획(enemy_plan) — 결과와 무관하게 정해진 계획과 전투력 반응")
     for g in S["enemy_plan"]["groups"]:
@@ -134,7 +134,7 @@ def step5():
 
 def step6():
     h(6, "history: 평가 전용 (시뮬레이터에 주지 않는다)")
-    E = eval_view(load("data", "cases", CID + ".json"))
+    E = eval_view(load("data", "sim_cases", CID + ".json"))
     print("구간 결과:", E["outcome_label"], "| 끝 시각 t =", E["horizon_t"])
     print("끝 시각 실제 상태(outcome_metrics):")
     show(E["history"]["outcome_metrics"], 500)
@@ -152,7 +152,7 @@ def step7():
 
 def step8():
     h(8, "검사: 잘못된 order")
-    case = load("data", "cases", CID + ".json")
+    case = load("data", "sim_cases", CID + ".json")
     good = case["order"]
     print("모범 답안: 오류 %d" % len(validate(case, good)[0]))
     bad = copy.deepcopy(good)
@@ -170,12 +170,12 @@ def step8():
 def step9():
     h(9, "파이프라인")
     from prompt import build_user, GEN_SYSTEM
-    s = load("data", "inputs", CID + ".json")
+    s = load("data", "situations", CID + ".json")
     for cond in ("Z", "D", "F", "DF"):
         u, ex = build_user(s["input"], s["mission_type"], cond, exclude_id=CID)
         print("   조건 %-2s 프롬프트 %6d자  예시 %s" % (cond, len(GEN_SYSTEM) + len(u), ex or "-"))
-    print("\n실제 생성:  python3 pipeline/generate_coa.py --case %s --out runs/%s.json --sim-out runs/%s.sim.json" % (CID, CID, CID))
-    v = sim_view(load("data", "cases", CID + ".json"))
+    print("\n실제 생성:  python3 generation/generate_coa.py --case %s --out runs/%s.json --sim-out runs/%s.sim.json" % (CID, CID, CID))
+    v = sim_view(load("data", "sim_cases", CID + ".json"))
     print("시뮬레이터 입력(sim_view)의 키:", list(v.keys()), "— order만 새 COA로 바뀐다")
 
 

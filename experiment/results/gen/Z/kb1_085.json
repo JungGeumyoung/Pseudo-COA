@@ -1,0 +1,617 @@
+{
+ "id": "kb1_085",
+ "cond": "Z",
+ "order": {
+  "task_organization": {
+   "text": "지원: 상급 사단 유엔 근접항공지원(주간). 포병 대대 1은 직접지원.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "북부 방어부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "고지 A 주력",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "남부 방어부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "대전차 예비",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "직접지원 포병",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F5"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "하천 1은 가뭄으로 대부분 도섭 가능해 장애물 효과가 낮다. 고지 A(H154)가 도로 1·도로 2와 지점 1 도섭장을 감제하는 핵심지형이다. 능선 1은 고지 A 후방의 종심 방어·역습 거점이다.",
+    "key_terrain": [
+     {
+      "ref": "H154",
+      "why": "도로 1과 도섭장을 감제하며 상실 시 적 전차가 도로 2로 종심 돌파한다."
+     },
+     {
+      "ref": "X1",
+      "why": "고지 A 정면 주 도섭장이다."
+     },
+     {
+      "ref": "RG1",
+      "why": "고지 A 후방 제2 방어선이며 예비 역습 발진 기지다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "지점 1-고지 A-도로 2 접근로",
+      "user": "enemy",
+      "refs": [
+       "X1",
+       "H154",
+       "RD2"
+      ],
+      "xy": [
+       [
+        38,
+        110
+       ],
+       [
+        60,
+        105
+       ],
+       [
+        80,
+        105
+       ],
+       [
+        100,
+        93
+       ]
+      ]
+     },
+     {
+      "name": "도로 1 종심 접근로",
+      "user": "enemy",
+      "refs": [
+       "RD1"
+      ],
+      "xy": [
+       [
+        72,
+        165
+       ],
+       [
+        75,
+        130
+       ],
+       [
+        78,
+        100
+       ],
+       [
+        72,
+        40
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1(45%)이 고지 A 정면 서안에서 도하 준비 중이고 적 중대 1(T-34 약 6대)이 후방에 있다. 적 대대 1이 서안에서 포사격 중이다. 적 연대 2는 인접 연대 1 정면에 있다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E3",
+       "mode": "bombard",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         15,
+         120
+        ],
+        [
+         60,
+         105
+        ]
+       ],
+       "when": "새벽 도하 직전 준비사격",
+       "t": 4.5
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "H154",
+       "axis_xy": [
+        [
+         38,
+         110
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         80,
+         105
+        ]
+       ],
+       "when": "준비사격 직후 지점 1 도섭 후 고지 A 공격",
+       "t": 5
+      },
+      {
+       "group": "E2",
+       "mode": "reinforce",
+       "objective_ref": "RD2",
+       "axis_xy": [
+        [
+         30,
+         105
+        ],
+        [
+         60,
+         105
+        ],
+        [
+         78,
+         100
+        ],
+        [
+         100,
+         93
+        ]
+       ],
+       "when": "보병이 교두보 확보 후 도로 따라 전과확대",
+       "t": 7
+      }
+     ],
+     "risk_point": "적이 고지 A를 점령하고 전차가 도로 2로 돌파하는 것"
+    },
+    "unknowns": [
+     "적 전차 도하 수단",
+     "적 연대 1의 실제 병력과 주공 방향",
+     "적 연대 2의 아군 지역 전환 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "유엔 근접항공지원이 주간에 가능하다.",
+     "why": "상황 조건에 명시되어 있다."
+    },
+    {
+     "text": "인접 연대 2는 고지 A에 적 대대 이상이 있으면 역습한다.",
+     "why": "상급 사단 규칙이다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 04:00부터 하천 1 동안 고지 A 일대에서 방어하여 도하하는 적을 격퇴하고 사단의 역습 기반을 보장한다.",
+   "task_verb": "방어",
+   "objective_ref": "H154",
+   "when": {
+    "type": "time_elapsed",
+    "value": 4,
+    "text": "D일 04:00부터"
+   },
+   "purpose": "적 제13사단·제15사단의 도하를 저지하고 사단 예비의 역습 기반을 보장하기 위해"
+  },
+  "execution": {
+   "end_state": {
+    "text": "하천 1 동안과 고지 A를 유지하고 도하 적을 격퇴한다.",
+    "friendly": "제2대대가 고지 A를 유지하고 대대 전투력을 보존한다.",
+    "enemy": "적 연대 1이 도섭장 부근에서 격퇴되어 교두보가 없다.",
+    "terrain": "고지 A, 도로 1, 도로 2를 확보한다."
+   },
+   "concept": {
+    "text": "고지 A를 중심으로 동안을 방어하고 포병과 항공으로 도하 중인 적을 타격한다. 침투한 적은 능선 1에서 저지하고 예비가 역습한다.",
+    "maneuver": "제2대대가 고지 A에서 주력으로 방어하고 제1대대와 제3대대는 남북 측방에서 도하를 저지한다. 대전차특공조는 능선 1에서 도로 접근 전차를 차단한다.",
+    "fires": "포병 대대 1은 도섭장 TG1에 준비사격 후 도하 중 집중 사격하고 전차는 근접항공지원으로 타격한다.",
+    "main_effort": "G2",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "RG1",
+     "xy": [
+      100,
+      100
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H154",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 고지 A에 침투함"
+     },
+     "priorities": [
+      "고지 A 후방 전차 차단",
+      "침투 적 격퇴",
+      "능선 1 확보"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G2",
+      "G1",
+      "G3"
+     ],
+     "zone_refs": [
+      "TG1",
+      "X1"
+     ],
+     "restrictions": "아군 전방 500m 이내 사격은 G2 승인 후 실시한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "북측 도하를 저지하고 인접 연대 1과 연계한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       70,
+       148
+      ],
+      "frontage_m": 3500,
+      "polygon": [
+       [
+        62,
+        165
+       ],
+       [
+        82,
+        165
+       ],
+       [
+        82,
+        128
+       ],
+       [
+        62,
+        128
+       ]
+      ],
+      "preparation": "deliberate",
+      "note": "하천 1 동안 북부 방어"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "북부 구역을 방어",
+       "params": {
+        "area": "BP1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "고지 A와 도섭장을 확보해 도하를 저지한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       78,
+       105
+      ],
+      "frontage_m": 3500,
+      "polygon": [
+       [
+        62,
+        125
+       ],
+       [
+        88,
+        125
+       ],
+       [
+        88,
+        88
+       ],
+       [
+        62,
+        88
+       ]
+      ],
+      "preparation": "fortified",
+      "note": "고지 A 중심 방어"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A 일대를 방어",
+       "params": {
+        "area": "BP2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "고지 A를 고수",
+       "params": {
+        "objective": "H154"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "남측 도하를 저지하고 마을 2 방면을 보호한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       68,
+       55
+      ],
+      "frontage_m": 6000,
+      "polygon": [
+       [
+        60,
+        85
+       ],
+       [
+        82,
+        85
+       ],
+       [
+        82,
+        22
+       ],
+       [
+        58,
+        22
+       ]
+      ],
+      "preparation": "deliberate",
+      "note": "하천 1 동안 남부 방어"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "남부 구역을 방어",
+       "params": {
+        "area": "BP3"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "침투한 적 전차와 보병을 격멸한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       100,
+       100
+      ],
+      "frontage_m": 1000,
+      "preparation": "hasty",
+      "note": "능선 1 후방"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "능선 1 일대를 경계",
+       "params": {
+        "area": "RG1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "고지 A에 침투한 적을 역습",
+       "params": {
+        "objective": "H154",
+        "route": "CMR1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H154",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 고지 A에 침투함"
+       },
+       "basis": "고지 A 상실은 도로 2 돌파로 직결된다."
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "도하 중인 적을 타격하고 방어를 지원한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       125,
+       90
+      ],
+      "frontage_m": 500,
+      "preparation": "hasty",
+      "note": "연대 후방"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "고지 A 방어를 화력지원",
+       "params": {
+        "supported_group": "G2",
+        "target_ref": "TG1"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "방어 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "BP1",
+      "name": "북부 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        62,
+        165
+       ],
+       [
+        82,
+        165
+       ],
+       [
+        82,
+        128
+       ],
+       [
+        62,
+        128
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate"
+     },
+     {
+      "id": "BP2",
+      "name": "고지 A 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        62,
+        125
+       ],
+       [
+        88,
+        125
+       ],
+       [
+        88,
+        88
+       ],
+       [
+        62,
+        88
+       ]
+      ],
+      "estimated": true,
+      "preparation": "fortified"
+     },
+     {
+      "id": "BP3",
+      "name": "남부 방어지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        60,
+        85
+       ],
+       [
+        82,
+        85
+       ],
+       [
+        82,
+        22
+       ],
+       [
+        58,
+        22
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate"
+     },
+     {
+      "id": "TG1",
+      "name": "도섭장 집중사격지점",
+      "kind": "target",
+      "xy": [
+       [
+        55,
+        105
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CMR1",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        100
+       ],
+       [
+        92,
+        102
+       ],
+       [
+        85,
+        104
+       ],
+       [
+        80,
+        105
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.060849999999999994,
+  "duration_s": 31.9,
+  "usage": {
+   "input_tokens": 2,
+   "output_tokens": 4494,
+   "cache_read_input_tokens": 8220,
+   "cache_creation_input_tokens": 3771
+  },
+  "examples": []
+ }
+}

@@ -1,0 +1,605 @@
+{
+ "id": "kb2_030",
+ "cond": "Z",
+ "order": {
+  "task_organization": {
+   "text": "지원: 포병 대대 1(직접지원), 포병 포대 1(일반지원), 전차 중대 1(일반지원). G4가 화력을 통제한다.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "주공(제1대대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "조공(제2대대)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "예비(제3대대)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "화력지원",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      },
+      {
+       "force": "F5"
+      },
+      {
+       "force": "F6",
+       "part": "도로 1 연한 직접사격 지원"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "고지 A(973m)는 남쪽 능선 2와 남서쪽 능선 3, 동쪽 능선 5, 남쪽 능선 4로 접근한다. 하천 1이 후방을 감싸 교량(지점 3)으로만 연결되며 산악이라 전차 기동은 도로 1 종단 이후 제한된다. 야간이라 능선 접근로가 한정된다.",
+    "key_terrain": [
+     {
+      "ref": "H973",
+      "why": "주저항선의 핵심이며 탈취 목표다."
+     },
+     {
+      "ref": "P_SW_SHOULDER",
+      "why": "지점 1은 능선 3의 서남 견부로 고지 A 돌격 발판이다."
+     },
+     {
+      "ref": "H_UNN",
+      "why": "고지 E는 고지 A와 고지 B 연결부로 적 상호지원을 차단하는 지형이다."
+     },
+     {
+      "ref": "R_OBONG",
+      "why": "능선 1은 적 대대 3 예비 위치로 역습 출발지다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "능선 3 접근로",
+      "user": "friendly",
+      "refs": [
+       "RG_SW",
+       "P_SW_SHOULDER"
+      ],
+      "xy": [
+       [
+        99,
+        100
+       ],
+       [
+        98,
+        110
+       ],
+       [
+        101,
+        120
+       ],
+       [
+        104,
+        127
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     },
+     {
+      "name": "능선 2 접근로",
+      "user": "friendly",
+      "refs": [
+       "RG_S"
+      ],
+      "xy": [
+       [
+        108,
+        103
+       ],
+       [
+        110,
+        112
+       ],
+       [
+        111,
+        122
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     },
+     {
+      "name": "능선 4 적 증원로",
+      "user": "enemy",
+      "refs": [
+       "TR_OBONG"
+      ],
+      "xy": [
+       [
+        115,
+        152
+       ],
+       [
+        113,
+        147
+       ],
+       [
+        112,
+        141
+       ],
+       [
+        110,
+        135
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 대대 1(70%)이 고지 A 주봉을 급편방어하고 적 대대 2(70%)가 고지 B를 점령 중이다. 적 대대 3(85%)이 능선 1에서 예비로 대기하며 적 연대 1이 마을 2-마을 3에 집결해 있다. 적 포병 1이 전역 사격 가능하다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         110,
+         136
+        ],
+        [
+         108,
+         132
+        ]
+       ],
+       "when": "아군 공격 시 고지 A 주봉과 서남 견부를 고수",
+       "t": 4.5
+      },
+      {
+       "group": "E2",
+       "mode": "hold",
+       "objective_ref": "H883",
+       "axis_xy": [
+        [
+         130,
+         129
+        ],
+        [
+         133,
+         127
+        ]
+       ],
+       "when": "고지 B에서 인접 연대 2와 교전하며 고지 E 방향 화력 지원",
+       "t": 4.5
+      },
+      {
+       "group": "E6",
+       "mode": "bombard",
+       "objective_ref": "P_SW_SHOULDER",
+       "axis_xy": [
+        [
+         115,
+         190
+        ],
+        [
+         104,
+         127
+        ]
+       ],
+       "when": "아군 공격 개시 후 능선 3과 능선 2에 사격",
+       "t": 4.5
+      },
+      {
+       "group": "E3",
+       "mode": "counterattack",
+       "objective_ref": "H973",
+       "axis_xy": [
+        [
+         115,
+         152
+        ],
+        [
+         113,
+         147
+        ],
+        [
+         112,
+         141
+        ],
+        [
+         110,
+         135
+        ]
+       ],
+       "when": "고지 A 정상이 위협받으면 능선 4로 증원 및 역습",
+       "t": 5.5
+      },
+      {
+       "group": "E4",
+       "mode": "reinforce",
+       "objective_ref": "R_OBONG",
+       "axis_xy": [
+        [
+         118,
+         180
+        ],
+        [
+         115,
+         165
+        ],
+        [
+         115,
+         152
+        ]
+       ],
+       "when": "전투 진행 중 능선 1로 진출",
+       "t": 7
+      }
+     ],
+     "risk_point": "고지 A 점령 직후 적 대대 3의 능선 4 역습과 적 포병 사격으로 아군이 재편성 전에 격퇴될 위험"
+    },
+    "unknowns": [
+     "적 연대 1의 투입 시기",
+     "고지 A 적 화기 배치와 지뢰 유무",
+     "적 대대 3의 정확한 위치"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "인접 연대 2가 D일 04:30에 고지 B를 역습한다.",
+     "why": "사단 명령에 계획된 시각이다."
+    },
+    {
+     "text": "사단 포병과 중포 화력이 공격 준비사격에 지원된다.",
+     "why": "장비 완편이며 화력지원이 가능하다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 04:30 마을 1에서 공격하여 고지 A를 탈취하고 확보함으로써 인접 연대 2와 함께 주저항선을 회복한다.",
+   "task_verb": "탈취",
+   "objective_ref": "H973",
+   "when": {
+    "type": "time_elapsed",
+    "value": 4.5,
+    "text": "D일 04:30 역습 개시"
+   },
+   "purpose": "적이 진지를 강화하기 전에 주저항선 원진지를 회복하기 위해"
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A를 확보하고 인접 연대 2와 전선이 연결된다.",
+    "friendly": "제1대대와 제2대대가 고지 A에 진지를 편성하고 제3대대가 재역습에 대비한다.",
+    "enemy": "적 대대 1이 격멸되고 적 대대 3의 역습이 격퇴된다.",
+    "terrain": "고지 A와 능선 2·능선 3·능선 5 접근로를 장악한다."
+   },
+   "concept": {
+    "text": "제1대대 주공이 능선 3으로 지점 1을 거쳐 고지 A 서남 견부를 돌격하고 제2대대는 능선 2로 남쪽에서 견제하며 공격한다. 04:30에 공격준비사격을 전이하며 돌격한다. 제3대대는 예비로 능선 4 적 역습에 대비한다.",
+    "maneuver": "G1은 능선 3으로 은밀히 접근해 지점 1에서 돌격 후 고지 A 주봉을 점령하고 G2는 능선 2로 공격하여 남쪽에서 고지 A를 압박한 뒤 능선 5를 차단한다. G3은 마을 1 북쪽에서 G1을 후속한다.",
+    "fires": "공격 개시 전 15분 고지 A에 공격준비사격을 하고 돌격 시 능선 4와 능선 1로 전이한다. 일반지원 포대는 적 포병과 능선 1을 제압한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "AP_RSV",
+     "xy": [
+      102,
+      96
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.3,
+      "text": "G1 손실 30% 초과"
+     },
+     "priorities": [
+      "G1 돌격 실패 시 증원하여 고지 A를 탈취한다",
+      "능선 4로 오는 적 대대 3 역습을 격퇴한다",
+      "G2 측방을 보강한다"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "H973",
+      "TR_OBONG",
+      "R_OBONG"
+     ],
+     "restrictions": "인접 연대 2 구역 고지 B 방향 사격은 전투지경선 BD_R 동쪽 금지"
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       99,
+       100
+      ],
+      "frontage_m": 600,
+      "note": "능선 3 남단에서 04:00까지 전개",
+      "preparation": "hasty",
+      "ref": "AP_1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "능선 3을 따라 지점 1을 거쳐 고지 A를 공격",
+       "params": {
+        "objective": "H973"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "고지 A 주봉을 확보",
+       "params": {
+        "objective": "H973"
+       }
+      }
+     ],
+     "purpose": "주력으로 고지 A를 탈취하기 위해"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       108,
+       100
+      ],
+      "frontage_m": 600,
+      "note": "능선 2 남단에서 04:00까지 전개",
+      "preparation": "hasty",
+      "ref": "AP_2"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "능선 2를 따라 고지 A 남쪽을 공격",
+       "params": {
+        "objective": "H973"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "차단",
+       "text": "능선 5 방향의 적 증원을 차단",
+       "params": {
+        "line": "TR_883"
+       }
+      }
+     ],
+     "purpose": "주공의 측방을 보호하고 고지 B 적의 증원을 차단하기 위해"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       102,
+       96
+      ],
+      "frontage_m": 500,
+      "note": "마을 1 북쪽에서 대기",
+      "preparation": "none",
+      "ref": "AP_RSV"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "후속지원",
+       "text": "G1을 후속지원",
+       "params": {
+        "followed_group": "G1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "격퇴",
+       "text": "능선 4로 진출한 적을 격퇴",
+       "params": {
+        "target_ref": "E3"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "TR_OBONG",
+        "min_echelon": "중대",
+        "text": "능선 4에 적 중대 이상이 있음"
+       },
+       "basis": "고지 A 점령 직후 적 대대 3 역습이 예상되기 때문"
+      }
+     ],
+     "purpose": "돌파 확대와 역습 격퇴를 위해"
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       95,
+       72
+      ],
+      "frontage_m": 800,
+      "note": "마을 1 남쪽 포진지",
+      "preparation": "hasty",
+      "ref": "FSA_1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "G1을 화력지원",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "H973"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력공격",
+       "text": "능선 1을 화력공격",
+       "params": {
+        "target_ref": "R_OBONG"
+       }
+      }
+     ],
+     "purpose": "공격 준비사격과 역습 저지를 위해"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 03:30 공격대기지점에 전개한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 3.5,
+       "text": "D일 03:30"
+      }
+     },
+     {
+      "text": "D일 04:15 공격준비사격을 개시한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4.25,
+       "text": "D일 04:15"
+      }
+     },
+     {
+      "text": "D일 04:30 공격개시선을 통과하여 공격한다.",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4.5,
+       "text": "D일 04:30"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "AP_1",
+      "name": "공격대기지점 1",
+      "kind": "attack_position",
+      "xy": [
+       [
+        99,
+        100
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "AP_2",
+      "name": "공격대기지점 2",
+      "kind": "attack_position",
+      "xy": [
+       [
+        108,
+        100
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "AP_RSV",
+      "name": "예비 대기지점",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        102,
+        96
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "FSA_1",
+      "name": "포진지",
+      "kind": "other",
+      "xy": [
+       [
+        95,
+        72
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "LD_1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        98,
+        102
+       ],
+       [
+        108,
+        104
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "PL_1",
+      "name": "통제선 1",
+      "kind": "phase_line",
+      "xy": [
+       [
+        100,
+        125
+       ],
+       [
+        112,
+        124
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.08012,
+  "duration_s": 39.2,
+  "usage": {
+   "input_tokens": 2,
+   "output_tokens": 5661,
+   "cache_read_input_tokens": 8220,
+   "cache_creation_input_tokens": 5671
+  },
+  "examples": []
+ }
+}

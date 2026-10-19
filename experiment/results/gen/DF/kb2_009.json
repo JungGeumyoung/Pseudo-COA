@@ -1,0 +1,1084 @@
+{
+ "id": "kb2_009",
+ "cond": "DF",
+ "order": {
+  "task_organization": {
+   "text": "제4대대(-)(+수색중대 1) 전초, 제1대대, 제2대대, 제3대대(예비) / 지원: 포병 대대 1(직접지원), 항공 1(일반지원)",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제4대대(-)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U4"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "수색중대 1",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "U5"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U1"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U2"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "U3"
+      }
+     ]
+    },
+    {
+     "id": "G6",
+     "label": "포병 대대 1",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "U6"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "고지 A는 최고봉으로 하천 1과 도로 1을 감제한다. 고지 B와 고지 C는 능선 1로 이어져 고지 A 상실 시 2차 저지선이 된다. 적 접근로는 능선 2를 따라 고지 A로 오르는 축선과 도로 1 해안 축선이다. 호수 1과 해역 1은 통과 불가다.",
+    "key_terrain": [
+     {
+      "ref": "F1",
+      "why": "하천 1과 도로 1 감제, 전초 거점"
+     },
+     {
+      "ref": "F2",
+      "why": "고지 A 후방 능선 거점, 상실 시 주저항선 직접 위협"
+     },
+     {
+      "ref": "F10",
+      "why": "주저항선, 상급 사단이 고수할 지점"
+     },
+     {
+      "ref": "F4",
+      "why": "고지 A 동측방과 도로 1 접근 감제"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "능선 2 축선",
+      "user": "enemy",
+      "refs": [
+       "R3",
+       "F1"
+      ],
+      "xy": [
+       [
+        85,
+        155
+       ],
+       [
+        86,
+        145
+       ],
+       [
+        87,
+        135
+       ],
+       [
+        88,
+        128
+       ],
+       [
+        90,
+        121
+       ]
+      ]
+     },
+     {
+      "name": "도로 1 해안 축선",
+      "user": "enemy",
+      "refs": [
+       "R1",
+       "F6"
+      ],
+      "xy": [
+       [
+        118,
+        168
+       ],
+       [
+        125,
+        160
+       ],
+       [
+        130,
+        150
+       ],
+       [
+        131,
+        130
+       ],
+       [
+        131,
+        110
+       ]
+      ]
+     },
+     {
+      "name": "능선 1 역습 접근로",
+      "user": "friendly",
+      "refs": [
+       "R2",
+       "F1"
+      ],
+      "xy": [
+       [
+        92,
+        70
+       ],
+       [
+        90,
+        85
+       ],
+       [
+        88,
+        100
+       ],
+       [
+        88,
+        110
+       ],
+       [
+        90,
+        120
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1은 포격 후 능선 2로 고지 A를 공격하고 적 연대 2는 도로 1로 고지 F와 고지 D 방향을 공격해 올 것이다. 적 연대 3은 고지 A 탈취 후 확장한다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "from_ref": "F7",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         92,
+         178
+        ],
+        [
+         88,
+         150
+        ],
+        [
+         90,
+         120
+        ]
+       ],
+       "when": "D일 21:00 공격준비사격",
+       "t": 21
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "from_ref": "F9",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         85,
+         152
+        ],
+        [
+         86,
+         145
+        ],
+        [
+         87,
+         135
+        ],
+        [
+         88,
+         128
+        ],
+        [
+         90,
+         121
+        ]
+       ],
+       "when": "D일 22:00",
+       "t": 22
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "from_ref": "F9",
+       "objective_ref": "F6",
+       "axis_xy": [
+        [
+         118,
+         168
+        ],
+        [
+         125,
+         160
+        ],
+        [
+         130,
+         150
+        ],
+        [
+         128,
+         140
+        ],
+        [
+         122,
+         126
+        ]
+       ],
+       "when": "D일 22:00",
+       "t": 22
+      },
+      {
+       "group": "E3",
+       "mode": "reinforce",
+       "from_ref": "F9",
+       "objective_ref": "F1",
+       "axis_xy": [
+        [
+         100,
+         182
+        ],
+        [
+         90,
+         160
+        ],
+        [
+         88,
+         135
+        ],
+        [
+         90,
+         121
+        ]
+       ],
+       "when": "고지 A 탈취 후 D+1일 새벽",
+       "t": 27
+      }
+     ],
+     "risk_point": "적 연대 1이 신병 위주 제4대대를 고지 A에서 격파하고 능선 1로 고지 B까지 진출하는 D일 야간"
+    },
+    "unknowns": [
+     "적 연대 3 투입 시기",
+     "적 포병 규모와 위치",
+     "적 연대 2의 주공 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "제4대대 중대 위치는 서술에 없어 지형에 맞게 보충했다.",
+     "why": "대대 세부 보충"
+    },
+    {
+     "text": "인수 중인 제1·제2·제3대대는 D일 18:00 이후 진지 점령을 마친다.",
+     "why": "상급 사단 전선 인수 시한"
+    },
+    {
+     "text": "주간에는 항공 1의 근접항공지원을 받을 수 있다.",
+     "why": "항공 1 일반지원"
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 18:00부터 고지 A 전초와 지점 1 주저항선에서 방어하여 적 연대 1·2의 공격을 저지하고 고지 A와 주저항선을 보전한다.",
+   "task_verb": "방어",
+   "objective_ref": "F1",
+   "when": {
+    "type": "time_elapsed",
+    "value": 18,
+    "text": "D일 18:00 전선 인수 완료"
+   },
+   "purpose": "고지 A 감제를 유지하고 주저항선을 보전하기 위해"
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A 전초가 아군 수중에 있고 지점 1 주저항선이 온전하며 적 공격은 하천 1 이남에서 격퇴된다.",
+    "friendly": "제4대대 고지 A 유지, 제1·제2대대 주저항선 온전, 제3대대 보존",
+    "enemy": "적 연대 1과 적 연대 2 공격 격퇴",
+    "terrain": "고지 A, 고지 B, 고지 C, 지점 1 확보"
+   },
+   "concept": {
+    "text": "고지 A 전초로 적을 경고·약화시키고 고지 B·고지 C와 지점 1에서 결정적으로 막는다. 제3대대 예비로 고지 A를 회복한다.",
+    "maneuver": "제4대대는 고지 A를 고수하고 수색중대 1은 하천 1선에서 차장한다. 제1대대는 고지 B·고지 C와 지점 1 서측을, 제2대대는 지점 1 동측과 도로 1을 방어한다. 제3대대는 지점 1 후방에서 능선 1 역습을 준비한다.",
+    "fires": "포병 대대 1은 고지 A 북측 EA 1에 우선, 다음으로 도로 1 EA 2에 사격한다. 항공 1은 주간 적 집결지와 포진지를 타격한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G5",
+     "position_ref": "CM5",
+     "xy": [
+      95,
+      65
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.4,
+      "text": "제4대대 손실 0.4 초과"
+     },
+     "priorities": [
+      "1순위 고지 A 회복",
+      "2순위 도로 1 축선 돌파 차단",
+      "3순위 고지 B 회복"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G4",
+      "G3"
+     ],
+     "zone_refs": [
+      "CM3",
+      "CM4"
+     ],
+     "restrictions": "역습로 CM6 위 사격은 역습 개시 전에 통제한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       90,
+       120
+      ],
+      "frontage_m": 2500,
+      "preparation": "hasty",
+      "note": "고지 A·고지 D 전초",
+      "ref": "CM2",
+      "polygon": [
+       [
+        76,
+        114
+       ],
+       [
+        106,
+        114
+       ],
+       [
+        106,
+        128
+       ],
+       [
+        76,
+        128
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대(고지 A)",
+        "xy": [
+         90,
+         122
+        ],
+        "ref": "F1"
+       },
+       {
+        "label": "제2중대(고지 D)",
+        "xy": [
+         100,
+         120
+        ],
+        "ref": "F4"
+       },
+       {
+        "label": "제4중대",
+        "xy": [
+         84,
+         116
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A 전초를 방어한다.",
+       "params": {
+        "area": "CM2"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "고지 A를 고수한다.",
+       "params": {
+        "objective": "F1"
+       }
+      }
+     ],
+     "purpose": "하천 1과 도로 1 감제 유지, 적 공격 조기 경고"
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       100,
+       134
+      ],
+      "frontage_m": 6000,
+      "preparation": "hasty",
+      "note": "하천 1 이남 차장선",
+      "elements": [
+       {
+        "label": "수색 1소대",
+        "xy": [
+         80,
+         134
+        ]
+       },
+       {
+        "label": "수색 2소대",
+        "xy": [
+         100,
+         136
+        ]
+       },
+       {
+        "label": "수색 3소대",
+        "xy": [
+         128,
+         146
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "차장",
+       "text": "하천 1선에서 차장한다.",
+       "params": {
+        "area": "F9"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "정찰",
+       "text": "고지 G 일대를 정찰한다.",
+       "params": {
+        "area": "F7"
+       }
+      }
+     ],
+     "purpose": "적 접근 조기 경고와 적 정찰 거부"
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       80,
+       96
+      ],
+      "frontage_m": 5500,
+      "preparation": "hasty",
+      "note": "고지 B·고지 C와 지점 1 서측",
+      "ref": "CM8",
+      "polygon": [
+       [
+        42,
+        78
+       ],
+       [
+        104,
+        80
+       ],
+       [
+        104,
+        92
+       ],
+       [
+        98,
+        116
+       ],
+       [
+        78,
+        116
+       ],
+       [
+        42,
+        92
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대(고지 B)",
+        "xy": [
+         88,
+         110
+        ],
+        "ref": "F2"
+       },
+       {
+        "label": "제2중대(고지 C)",
+        "xy": [
+         88,
+         100
+        ],
+        "ref": "F3"
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         60,
+         84
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 B·고지 C와 지점 1 서측을 방어한다.",
+       "params": {
+        "area": "CM8"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "고수",
+       "text": "고지 B를 고수한다.",
+       "params": {
+        "objective": "F2"
+       }
+      }
+     ],
+     "purpose": "고지 A 후방 능선 보전과 주저항선 서측 유지"
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       120,
+       86
+      ],
+      "frontage_m": 4000,
+      "preparation": "hasty",
+      "note": "지점 1 동측과 도로 1",
+      "ref": "CM9",
+      "polygon": [
+       [
+        104,
+        78
+       ],
+       [
+        138,
+        80
+       ],
+       [
+        138,
+        94
+       ],
+       [
+        104,
+        106
+       ],
+       [
+        104,
+        92
+       ]
+      ],
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         110,
+         100
+        ],
+        "ref": "F5"
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         124,
+         88
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         132,
+         100
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "지점 1 동측과 도로 1을 방어한다.",
+       "params": {
+        "area": "CM9"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "도로 1 해안 축선의 적을 EA 2에서 저지한다.",
+       "params": {
+        "area": "CM4"
+       }
+      }
+     ],
+     "purpose": "적 연대 2의 도로 1 남하 저지"
+    },
+    {
+     "group": "G5",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       95,
+       65
+      ],
+      "frontage_m": 1500,
+      "preparation": "none",
+      "note": "지점 1 후방 예비진지",
+      "ref": "CM5",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         90,
+         65
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         96,
+         66
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         101,
+         64
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "점령",
+       "text": "지점 1 후방 예비진지를 점령한다.",
+       "params": {
+        "objective": "CM5"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "능선 1 역습로로 고지 A에 역습한다.",
+       "params": {
+        "objective": "F1",
+        "route": "CM6"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "제4대대 손실 0.4 초과"
+       },
+       "basis": "risk_point: 신병 위주 제4대대가 고지 A에서 격파됨"
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "도로 1 역습로로 고지 E에 역습한다.",
+       "params": {
+        "objective": "F5",
+        "route": "CM7"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM9",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 제2대대 지역 안에 있음"
+       },
+       "basis": "적 연대 2가 도로 1로 돌파할 경우 대비"
+      }
+     ],
+     "purpose": "돌파한 적을 격멸하고 진지를 회복하기 위해"
+    },
+    {
+     "group": "G6",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       95,
+       55
+      ],
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "note": "주저항선 후방 포진지"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "제4대대를 위해 EA 1에 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "CM3"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "제2대대를 위해 EA 2에 화력지원한다.",
+       "params": {
+        "supported_group": "G4",
+        "target_ref": "CM4"
+       }
+      }
+     ],
+     "purpose": "접근하는 적 공격 제대에 최대 손실 강요"
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 18:00 전선 인수와 전 진지 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 18,
+       "text": "D일 18:00"
+      }
+     },
+     {
+      "text": "D일 20:00 예비 역습 준비와 포병 사격 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 20,
+       "text": "D일 20:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "제1·제2대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G3",
+       "G4"
+      ],
+      "xy": [
+       [
+        104,
+        78
+       ],
+       [
+        104,
+        92
+       ],
+       [
+        104,
+        106
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM2",
+      "name": "고지 A 전초 지역",
+      "kind": "battle_position",
+      "xy": [
+       [
+        76,
+        114
+       ],
+       [
+        106,
+        114
+       ],
+       [
+        106,
+        128
+       ],
+       [
+        76,
+        128
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F1",
+       "F4"
+      ],
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM3",
+      "name": "EA 1(고지 A 북측)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        78,
+        128
+       ],
+       [
+        100,
+        128
+       ],
+       [
+        100,
+        142
+       ],
+       [
+        80,
+        142
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R3"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "EA 2(도로 1)",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        120,
+        148
+       ],
+       [
+        134,
+        148
+       ],
+       [
+        134,
+        166
+       ],
+       [
+        120,
+        164
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R1"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "연대 예비진지",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        85,
+        58
+       ],
+       [
+        105,
+        58
+       ],
+       [
+        105,
+        72
+       ],
+       [
+        85,
+        72
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM6",
+      "name": "능선 1 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        92,
+        70
+       ],
+       [
+        90,
+        85
+       ],
+       [
+        88,
+        100
+       ],
+       [
+        88,
+        110
+       ],
+       [
+        90,
+        120
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R2"
+      ]
+     },
+     {
+      "id": "CM7",
+      "name": "도로 1 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        100,
+        72
+       ],
+       [
+        108,
+        84
+       ],
+       [
+        108,
+        96
+       ],
+       [
+        106,
+        108
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM8",
+      "name": "제1대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        42,
+        78
+       ],
+       [
+        104,
+        80
+       ],
+       [
+        104,
+        92
+       ],
+       [
+        98,
+        116
+       ],
+       [
+        78,
+        116
+       ],
+       [
+        42,
+        92
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F2",
+       "F3",
+       "F10"
+      ],
+      "preparation": "hasty"
+     },
+     {
+      "id": "CM9",
+      "name": "제2대대 진지",
+      "kind": "battle_position",
+      "xy": [
+       [
+        104,
+        78
+       ],
+       [
+        138,
+        80
+       ],
+       [
+        138,
+        94
+       ],
+       [
+        104,
+        106
+       ],
+       [
+        104,
+        92
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "F5",
+       "F10"
+      ],
+      "preparation": "hasty"
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.36298949999999996,
+  "duration_s": 85.5,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 13478,
+   "cache_read_input_tokens": 69935,
+   "cache_creation_input_tokens": 55302
+  },
+  "examples": [
+   "kb2_035",
+   "kb1_102",
+   "kb2_020"
+  ]
+ }
+}

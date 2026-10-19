@@ -1,0 +1,755 @@
+{
+ "id": "kb1_080",
+ "cond": "D",
+ "order": {
+  "task_organization": {
+   "text": "지원: 포병 대대 1(사단 직접 통제, 요청 사격). 제3대대는 D일 06:00부 인접 연대 1 작전통제로 전환한다.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "주방어부대(주력)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U1"
+      },
+      {
+       "force": "U5",
+       "part": "대전차포소대"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "남익 방어부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U2",
+       "part": "-1개 중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "연대 예비",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "U2",
+       "part": "1개 중대"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "전방 차장부대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "U4"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "남단 방어부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "U3"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "도로 1은 마을 3에서 고지 A 남쪽을 지나 마을 1으로 동진하는 주접근로다. 도로 3은 지점 2의 하천 1 틈새를 지나 마을 5·마을 6 방향으로 이어진다. 고지 A와 고지 C는 능선 1로 이어져 도로 1을 내려다본다. 하천 1은 연대 남쪽의 장애물이며 새벽 안개가 잦다.",
+    "key_terrain": [
+     {
+      "ref": "H366",
+      "why": "도로 1을 통제하고 마을 3 방면을 관측하는 최고 지형이다."
+     },
+     {
+      "ref": "H212",
+      "why": "마을 1 전방 마지막 방어 지형이며 예비 위치로 적합하다."
+     },
+     {
+      "ref": "GYEONGDEUL",
+      "why": "도로 1과 도로 3 사이 연결 지점으로 적의 두 제대 합류를 막는 곳이다."
+     },
+     {
+      "ref": "XING",
+      "why": "하천 1 유일한 통과 틈새로 적 대대 2의 남익 우회로다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "도로 1 접근로",
+      "user": "enemy",
+      "refs": [
+       "R992",
+       "ACHEON",
+       "H366"
+      ],
+      "xy": [
+       [
+        60,
+        103
+       ],
+       [
+        90,
+        100
+       ],
+       [
+        105,
+        99
+       ],
+       [
+        132,
+        96
+       ]
+      ]
+     },
+     {
+      "name": "도로 3 접근로",
+      "user": "enemy",
+      "refs": [
+       "RUN",
+       "XING",
+       "DONGMAK"
+      ],
+      "xy": [
+       [
+        55,
+        92
+       ],
+       [
+        95,
+        74
+       ],
+       [
+        118,
+        67
+       ],
+       [
+        130,
+        77
+       ]
+      ]
+     },
+     {
+      "name": "능선 1",
+      "user": "both",
+      "refs": [
+       "RDG",
+       "H428",
+       "H366"
+      ],
+      "xy": [
+       [
+        100,
+        122
+       ],
+       [
+        104,
+        115
+       ],
+       [
+        108,
+        108
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 대대 1은 장갑차를 동반해 도로 1로, 적 대대 2는 도로 3으로 동진 중이다. 적 연대 1과 적 포병 연대 1은 마을 10 방면에 있어 당장은 사단 우측 정면에 묶여 있다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "H366",
+       "axis_xy": [
+        [
+         60,
+         103
+        ],
+        [
+         90,
+         100
+        ],
+        [
+         105,
+         99
+        ]
+       ],
+       "when": "마을 3 통과 후 새벽 안개를 이용해 고지 A 정면 공격",
+       "t": 6
+      },
+      {
+       "group": "E2",
+       "mode": "attack",
+       "objective_ref": "DONGMAK",
+       "axis_xy": [
+        [
+         55,
+         92
+        ],
+        [
+         95,
+         74
+        ],
+        [
+         118,
+         67
+        ],
+        [
+         130,
+         77
+        ]
+       ],
+       "when": "지점 2 통과 후 마을 6·마을 4 방향 남익 공격",
+       "t": 7
+      },
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "objective_ref": "H366",
+       "axis_xy": [
+        [
+         125,
+         188
+        ],
+        [
+         110,
+         150
+        ]
+       ],
+       "when": "공격 개시와 함께 고지 A 일대 포격",
+       "t": 6
+      }
+     ],
+     "risk_point": "적 대대 2가 지점 2를 지나 마을 6에서 인접 연대 1 경계와 연대 남익을 돌파하는 것이다."
+    },
+    "unknowns": [
+     "적 대대 2의 정확한 진출 속도",
+     "적 연대 1의 북상 또는 전환 여부",
+     "새벽 안개 시 적 장갑차 접근 경로"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "급편진지는 최소한의 보강만으로 사용 가능하다.",
+     "why": "D-2일 인수한 진지로 구축 시간이 짧다."
+    },
+    {
+     "text": "포병 대대 1은 요청 시 고지 A와 지점 2 일대에 사격한다.",
+     "why": "상급 사단 화력지원 계획이 있다."
+    },
+    {
+     "text": "제3대대는 06:00에 인접 연대 1로 전환되며 마을 6 남쪽을 맡는다.",
+     "why": "상급 사단 명령에 따른다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 06:00부 도로 1 축선 고지 A-마을 6 간에서 방어하여 마을 1 서쪽 접근로를 차단하고 후속 방어선 형성 시간을 확보한다.",
+   "task_verb": "방어",
+   "objective_ref": "H366",
+   "when": {
+    "type": "time_elapsed",
+    "value": 6,
+    "text": "D일 06:00"
+   },
+   "purpose": "군단 서측방과 인접 사단 1 후방을 보호하고 후속 방어선 형성 시간을 확보한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 A-마을 6 선을 유지하고 적 두 제대를 격퇴한다.",
+    "friendly": "연대 전투력 60% 이상을 보존하고 예비를 재편성한다.",
+    "enemy": "적 대대 1·2가 와해되어 도로 1·3 전방에서 공세력을 잃는다.",
+    "terrain": "고지 A, 마을 4, 고지 B, 마을 6을 아군이 확보한다."
+   },
+   "concept": {
+    "text": "고지 A에 주력을 두고 도로 1 교전지역에서 적 대대 1을 격멸하며, 남익은 마을 4-마을 6 선에서 지점 2로 오는 적 대대 2를 저지한다. 예비는 고지 B에 두고 돌파나 측방 노출 시 역습한다.",
+    "maneuver": "G1은 고지 A에서 도로 1 정면을 방어한다. G2는 마을 4와 지점 1 일대에서 도로 3 접근로를 차단한다. G4는 마을 3 서쪽에서 조기경보 후 고지 B로 이탈한다. G5는 마을 6 남단을 방어한다.",
+    "fires": "포병 대대 1 사격을 도로 1 교전지역과 지점 2 교전지역에 우선 집중한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G3",
+     "position_ref": "H212",
+     "xy": [
+      132,
+      94
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "H366",
+      "min_echelon": "중대",
+      "text": "적 중대 이상이 고지 A 안에 있음"
+     },
+     "priorities": [
+      "고지 A 상실 시 역습",
+      "마을 4·마을 6 돌파 시 역습",
+      "G2 후방 차단"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "EA_ROAD1",
+      "EA_GAP"
+     ],
+     "restrictions": "포병 대대 1은 사단 통제 하 요청 사격이며 아군 전방 500m 이내 사격은 승인을 받는다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "도로 1 주접근로를 차단하고 적 대대 1을 격멸한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       108,
+       106
+      ],
+      "frontage_m": 3000,
+      "polygon": [
+       [
+        98,
+        100
+       ],
+       [
+        118,
+        100
+       ],
+       [
+        118,
+        114
+       ],
+       [
+        100,
+        116
+       ]
+      ],
+      "preparation": "deliberate",
+      "ref": "BP_A",
+      "note": "고지 A 전방사면 사격과 도로 1 직사 화력 통제, 대전차포 2문은 도로 1 남측 배치",
+      "elements": [
+       {
+        "label": "대전차포소대",
+        "xy": [
+         102,
+         100
+        ]
+       },
+       {
+        "label": "주진지",
+        "xy": [
+         108,
+         108
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A에서 도로 1 정면을 방어한다.",
+       "params": {
+        "area": "H366"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "격퇴",
+       "text": "교전지역에 진입한 적 대대 1을 격퇴한다.",
+       "params": {
+        "target_group": "E1"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "도로 1과 도로 3 연결부를 막아 남익을 보호한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       108,
+       86
+      ],
+      "frontage_m": 2500,
+      "polygon": [
+       [
+        98,
+        80
+       ],
+       [
+        122,
+        80
+       ],
+       [
+        122,
+        92
+       ],
+       [
+        98,
+        92
+       ]
+      ],
+      "preparation": "hasty",
+      "ref": "BP_4",
+      "note": "마을 4와 지점 1 일대에서 도로 3과 지점 2를 감시한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "마을 4와 지점 1 일대를 방어한다.",
+       "params": {
+        "area": "GYEONGDEUL"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "저지",
+       "text": "지점 2를 통과하는 적 대대 2를 저지한다.",
+       "params": {
+        "area": "EA_GAP"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "돌파나 고지 상실 시 즉시 역습한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       132,
+       94
+      ],
+      "frontage_m": 800,
+      "preparation": "hasty",
+      "ref": "H212",
+      "note": "고지 B 후사면에 대기하며 두 역습로를 정찰한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 B를 방어한다.",
+       "params": {
+        "area": "H212"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "고지 A로 역습한다.",
+       "params": {
+        "objective": "H366",
+        "route": "CA_A"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "H366",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 고지 A 안에 있음"
+       },
+       "basis": "고지 A가 무너지면 연대 방어선이 붕괴한다."
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "마을 4로 역습한다.",
+       "params": {
+        "objective": "GYEONGDEUL",
+        "route": "CA_4"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "GYEONGDEUL",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 마을 4 안에 있음"
+       },
+       "basis": "남익 돌파를 즉시 봉합해야 한다."
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "적 접근을 조기경보하고 교전지역으로 유도한다.",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       85,
+       100
+      ],
+      "frontage_m": 2000,
+      "preparation": "none",
+      "ref": "ACHEON",
+      "note": "마을 3 서쪽에서 도로 1과 도로 3을 관측한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "차장",
+       "text": "마을 3 서쪽에서 적 접근을 차장한다.",
+       "params": {
+        "area": "ACHEON"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "이탈",
+       "text": "고지 B로 이탈한다.",
+       "params": {
+        "destination": "H212"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "ACHEON",
+        "min_echelon": "중대",
+        "text": "적 중대 이상이 마을 3 안에 있음"
+       },
+       "basis": "소규모 정찰대가 결정적 교전에 말려드는 것을 피한다."
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "연대 남익과 인접 연대 1 접합부를 지킨다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       130,
+       72
+      ],
+      "frontage_m": 2000,
+      "preparation": "hasty",
+      "ref": "DONGMAK",
+      "note": "마을 6 남단에서 전투지경선 B1을 따라 배치한다. D일 06:00부 인접 연대 1 작전통제로 전환한다."
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "마을 6 남단을 방어한다.",
+       "params": {
+        "area": "DONGMAK"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "06:00 방어 준비 완료 및 제3대대 작전통제 전환",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "03:00 진지 보강과 사격 준비 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": 3,
+       "text": "D일 03:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "BP_A",
+      "name": "전투진지 고지 A",
+      "kind": "battle_position",
+      "xy": [
+       [
+        98,
+        100
+       ],
+       [
+        118,
+        100
+       ],
+       [
+        118,
+        114
+       ],
+       [
+        100,
+        116
+       ]
+      ],
+      "estimated": true,
+      "preparation": "deliberate",
+      "terrain_refs": [
+       "H366"
+      ]
+     },
+     {
+      "id": "BP_4",
+      "name": "전투진지 마을 4",
+      "kind": "battle_position",
+      "xy": [
+       [
+        98,
+        80
+       ],
+       [
+        122,
+        80
+       ],
+       [
+        122,
+        92
+       ],
+       [
+        98,
+        92
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty",
+      "terrain_refs": [
+       "GYEONGDEUL",
+       "RES"
+      ]
+     },
+     {
+      "id": "EA_ROAD1",
+      "name": "교전지역 도로 1",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        84,
+        94
+       ],
+       [
+        100,
+        94
+       ],
+       [
+        100,
+        106
+       ],
+       [
+        84,
+        106
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "R992"
+      ]
+     },
+     {
+      "id": "EA_GAP",
+      "name": "교전지역 지점 2",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        108,
+        62
+       ],
+       [
+        126,
+        62
+       ],
+       [
+        126,
+        74
+       ],
+       [
+        108,
+        74
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "XING",
+       "RUN"
+      ]
+     },
+     {
+      "id": "CA_A",
+      "name": "고지 A 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        132,
+        94
+       ],
+       [
+        122,
+        100
+       ],
+       [
+        114,
+        104
+       ],
+       [
+        108,
+        108
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CA_4",
+      "name": "마을 4 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        132,
+        94
+       ],
+       [
+        124,
+        90
+       ],
+       [
+        114,
+        88
+       ],
+       [
+        104,
+        88
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.156126,
+  "duration_s": 58.4,
+  "usage": {
+   "input_tokens": 2,
+   "output_tokens": 7806,
+   "cache_read_input_tokens": 8220,
+   "cache_creation_input_tokens": 19310
+  },
+  "examples": []
+ }
+}

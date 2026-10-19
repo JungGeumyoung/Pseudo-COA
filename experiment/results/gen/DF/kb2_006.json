@@ -1,0 +1,919 @@
+{
+ "id": "kb2_006",
+ "cond": "DF",
+ "order": {
+  "task_organization": {
+   "text": "제1대대, 제4대대(배속), 제2대대, 제3대대(예비) / 지원: 포병대대 1(직접지원), 근접항공지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "제1대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "제4대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "제2대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "제3대대",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "고지 B는 도로 1와 지점 2를 감제하는 공격 목표다. 접근로는 고지 A에서 고지 G-고지 F-고지 E를 거치는 능선 1과 고지 D를 거쳐 동쪽으로 우회하는 능선 2 둘이다. 능선 1은 적 대대 1이 축차 방어하고 능선 2는 적 경계부대가 지킨다.",
+    "key_terrain": [
+     {
+      "ref": "T2",
+      "why": "도로 1와 지점 2를 감제하는 연대 목표다."
+     },
+     {
+      "ref": "T4",
+      "why": "능선 2 우회의 발판이다."
+     },
+     {
+      "ref": "T7",
+      "why": "능선 1의 첫 거점이며 서측 역습을 막는 요충이다."
+     },
+     {
+      "ref": "T1",
+      "why": "연대 출발 기지와 예비 위치다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "능선 1 정면 접근로",
+      "user": "friendly",
+      "refs": [
+       "RT1",
+       "T7",
+       "T6",
+       "T5"
+      ],
+      "xy": [
+       [
+        90,
+        72
+       ],
+       [
+        89,
+        89
+       ],
+       [
+        86,
+        101
+       ],
+       [
+        84,
+        113
+       ],
+       [
+        90,
+        121
+       ],
+       [
+        95,
+        125
+       ]
+      ]
+     },
+     {
+      "name": "능선 2 동측 접근로",
+      "user": "friendly",
+      "refs": [
+       "RT2",
+       "T4"
+      ],
+      "xy": [
+       [
+        92,
+        72
+       ],
+       [
+        105,
+        77
+       ],
+       [
+        118,
+        84
+       ],
+       [
+        117,
+        100
+       ],
+       [
+        110,
+        115
+       ],
+       [
+        100,
+        124
+       ]
+      ]
+     },
+     {
+      "name": "고지 C 방면 적 역습로",
+      "user": "enemy",
+      "refs": [
+       "T3",
+       "T7"
+      ],
+      "xy": [
+       [
+        50,
+        110
+       ],
+       [
+        62,
+        100
+       ],
+       [
+        75,
+        95
+       ],
+       [
+        89,
+        89
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1은 고지 B 화력거점을 고수하고 적 대대 1은 고지 G-고지 E 능선에서 축차 방어한다. 적 대대 2는 능선 2에서 경계하고, 적 연대 2는 야간에 고지 C에서 고지 G 쪽 연대 서측방으로 역습해 올 것이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "from_ref": "T2",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         95,
+         125
+        ],
+        [
+         95,
+         125
+        ]
+       ],
+       "when": "D일 05:00부터",
+       "t": 5
+      },
+      {
+       "group": "E2",
+       "mode": "hold",
+       "from_ref": "T6",
+       "objective_ref": "T6",
+       "axis_xy": [
+        [
+         86,
+         102
+        ],
+        [
+         86,
+         102
+        ]
+       ],
+       "when": "D일 05:00부터",
+       "t": 5
+      },
+      {
+       "group": "E3",
+       "mode": "hold",
+       "from_ref": "RT2",
+       "objective_ref": "RT2",
+       "axis_xy": [
+        [
+         112,
+         110
+        ],
+        [
+         112,
+         110
+        ]
+       ],
+       "when": "D일 05:00부터",
+       "t": 5
+      },
+      {
+       "group": "E4",
+       "mode": "counterattack",
+       "from_ref": "T3",
+       "objective_ref": "T7",
+       "axis_xy": [
+        [
+         50,
+         110
+        ],
+        [
+         62,
+         100
+        ],
+        [
+         75,
+         95
+        ],
+        [
+         89,
+         89
+        ]
+       ],
+       "when": "D일 야간 연대 공격 개시 직후",
+       "t": 7
+      }
+     ],
+     "risk_point": "적 연대 2가 고지 C에서 고지 G로 역습해 제1대대 서측방과 고지 A를 위협하는 때"
+    },
+    "unknowns": [
+     "능선 2 적 경계부대의 규모와 위치",
+     "고지 B 화력거점의 화기 배치",
+     "적 연대 2 역습 병력의 규모와 시기"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "인접 연대 1은 D일 06:00 고지 C를 재공격해 적 연대 2를 고착한다.",
+     "why": "사단 계획에 인접 연대 1의 06:00 공격이 있다."
+    },
+    {
+     "text": "근접항공지원은 일출 후 요청하면 받을 수 있다.",
+     "why": "군단 요청으로 가능하다."
+    },
+    {
+     "text": "대대 세부 보충: 각 대대는 3개 소총중대로 중대 위치를 추정해 배치한다.",
+     "why": "서술에 대대 이하 배치가 없다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 06:00 능선 1과 능선 2로 공격하여 고지 B를 탈취함으로써 사단이 북한군을 고지 H-고지 I선까지 밀어 올릴 발판을 확보한다.",
+   "task_verb": "탈취",
+   "objective_ref": "T2",
+   "when": {
+    "type": "time_elapsed",
+    "value": 6,
+    "text": "D일 06:00 H시"
+   },
+   "purpose": "도로 1와 지점 2를 감제하고 고지 A 일대의 만곡된 전선을 정리한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "연대가 고지 B를 탈취하고 능선 1과 능선 2를 장악한다.",
+    "friendly": "제4대대가 고지 B를, 제1대대가 고지 G-고지 E 능선을, 제2대대가 능선 2 동측을 확보하고 제3대대가 고지 A 서측방을 지킨다.",
+    "enemy": "적 연대 1과 적 대대 1·2가 격멸되거나 격퇴되고 적 연대 2의 서측 역습이 저지된다.",
+    "terrain": "고지 B, 능선 1, 능선 2, 고지 A를 확보한다."
+   },
+   "concept": {
+    "text": "야간 은밀 접근으로 능선 2의 적 경계부대를 먼저 제거하고 주공 제4대대가 동측에서 고지 B를 공격한다. 제1대대는 능선 1 정면에서 적 대대 1을 고착하며 주공을 돕고 제3대대는 예비로 서측 역습에 대비한다.",
+    "maneuver": "제4대대는 고지 D 서남쪽 공격대기지점에서 능선 2를 따라 적 대대 2 지역을 공격하고 이어서 고지 B를 탈취한다. 제2대대는 제4대대를 후속지원하다 필요하면 초월한다. 제1대대는 능선 1을 따라 고지 G-고지 E 능선을 공격한다. 제3대대는 고지 A를 방어하며 대기한다.",
+    "fires": "포병대대 1은 H시 전 고지 B 화력거점과 능선 2 적 경계부대를 제압하고 공격 중에는 주공 전방을 사격한다. 일출 후 근접항공지원을 고지 B 정상에 요청한다.",
+    "main_effort": "G2",
+    "reserve": {
+     "group": "G4",
+     "position_ref": "CM9",
+     "xy": [
+      90,
+      66
+     ],
+     "commit": {
+      "type": "strength_in_area",
+      "side": "enemy",
+      "ref": "CM10",
+      "min_echelon": "대대",
+      "text": "적 대대 이상이 서측방 지역 안에 있음"
+     },
+     "priorities": [
+      "1. 고지 G 방향으로 침투하는 적 연대 2의 역습 격퇴",
+      "2. 주공이 막히면 능선 1에서 고지 B 공격 가담"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G2",
+      "G1"
+     ],
+     "zone_refs": [
+      "CM8",
+      "CM2",
+      "CM7"
+     ],
+     "restrictions": "제4대대가 능선 2 중간목표에 접근하면 사격을 고지 B 사면으로 옮긴다. 제1대대 선두가 고지 G를 넘으면 사격을 고지 E 북쪽으로 연신한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       88,
+       76
+      ],
+      "frontage_m": 1000,
+      "note": "고지 A 북쪽 능선 1 기점",
+      "ref": "T1",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         86,
+         77
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         90,
+         77
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         88,
+         73
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "D일 06:00 능선 1을 따라 고지 G-고지 E 능선을 공격한다.",
+       "params": {
+        "objective": "CM7",
+        "route": "CM3"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "확보",
+       "text": "고지 G-고지 E 능선을 확보한다.",
+       "params": {
+        "objective": "CM7"
+       }
+      }
+     ],
+     "purpose": "조공으로서 적 대대 1을 정면에 고착하고 주공의 동측 공격을 돕는다."
+    },
+    {
+     "group": "G2",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       110,
+       78
+      ],
+      "frontage_m": 900,
+      "note": "고지 D 서남쪽 능선 2 기점",
+      "ref": "T4",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제1중대",
+        "xy": [
+         108,
+         79
+        ]
+       },
+       {
+        "label": "제2중대",
+        "xy": [
+         112,
+         79
+        ]
+       },
+       {
+        "label": "제3중대",
+        "xy": [
+         110,
+         75
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "D일 06:00 능선 2를 따라 적 대대 2 지역을 공격한다.",
+       "params": {
+        "objective": "CM8",
+        "route": "CM4"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "이어서 고지 B를 탈취한다.",
+       "params": {
+        "objective": "CM2",
+        "route": "CM4"
+       }
+      }
+     ],
+     "purpose": "연대 주공으로서 적 측방에서 고지 B를 탈취한다."
+    },
+    {
+     "group": "G3",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       104,
+       72
+      ],
+      "frontage_m": 800,
+      "note": "제4대대 후방 능선 2 기점",
+      "ref": "T4",
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "제5중대",
+        "xy": [
+         102,
+         73
+        ]
+       },
+       {
+        "label": "제6중대",
+        "xy": [
+         106,
+         73
+        ]
+       },
+       {
+        "label": "제7중대",
+        "xy": [
+         104,
+         69
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "후속지원",
+       "text": "제4대대를 후속지원한다.",
+       "params": {
+        "followed_group": "G2"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "초월",
+       "text": "명에 의해 통과지점에서 제4대대를 초월한다.",
+       "params": {
+        "passed_group": "G2",
+        "passage_point": "CM11"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G2",
+        "fraction": 0.4,
+        "text": "제4대대 손실 0.4 초과"
+       },
+       "basis": "가정: 좁은 능선에서 주공이 축차 소모될 수 있다."
+      },
+      {
+       "timing": "이어서",
+       "verb": "탈취",
+       "text": "이어서 고지 B를 탈취한다.",
+       "params": {
+        "objective": "CM2",
+        "route": "CM4"
+       }
+      }
+     ],
+     "purpose": "주공의 기세를 유지하고 막히면 공격을 잇는다."
+    },
+    {
+     "group": "G4",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       90,
+       66
+      ],
+      "frontage_m": 1200,
+      "note": "고지 A 주진지 일대",
+      "ref": "CM9",
+      "preparation": "deliberate",
+      "elements": [
+       {
+        "label": "제9중대",
+        "xy": [
+         86,
+         68
+        ]
+       },
+       {
+        "label": "제10중대",
+        "xy": [
+         94,
+         68
+        ]
+       },
+       {
+        "label": "제11중대",
+        "xy": [
+         90,
+         63
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A를 방어한다.",
+       "params": {
+        "area": "CM9"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "명에 의해 서측방으로 침투한 적을 향해 역습한다.",
+       "params": {
+        "objective": "CM10",
+        "route": "CM12"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "CM10",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 서측방 지역 안에 있음"
+       },
+       "basis": "risk_point: 적 연대 2가 고지 C에서 고지 G로 역습해 제1대대 서측방과 고지 A를 위협한다."
+      }
+     ],
+     "purpose": "출발 기지를 지키고 서측 역습을 격퇴한다."
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 05:00 각 대대 공격대기지점 점령 완료, 포병 사격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     },
+     {
+      "text": "D일 06:00 H시, 제1대대·제4대대 공격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 6,
+       "text": "D일 06:00"
+      }
+     },
+     {
+      "text": "D일 07:00 일출 후 근접항공지원 요청 가능",
+      "event": {
+       "type": "time_elapsed",
+       "value": 7,
+       "text": "D일 07:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "CM1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        84,
+        76
+       ],
+       [
+        100,
+        76
+       ],
+       [
+        118,
+        80
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM2",
+      "name": "목표 고지 B",
+      "kind": "objective",
+      "xy": [
+       [
+        86,
+        120
+       ],
+       [
+        95,
+        132
+       ],
+       [
+        106,
+        126
+       ],
+       [
+        98,
+        117
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T2"
+      ],
+      "preparation": "fortified"
+     },
+     {
+      "id": "CM3",
+      "name": "제1대대 공격로(능선 1)",
+      "kind": "route",
+      "xy": [
+       [
+        90,
+        72
+       ],
+       [
+        89,
+        89
+       ],
+       [
+        86,
+        101
+       ],
+       [
+        84,
+        113
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RT1"
+      ]
+     },
+     {
+      "id": "CM4",
+      "name": "제4대대 공격로(능선 2)",
+      "kind": "route",
+      "xy": [
+       [
+        105,
+        77
+       ],
+       [
+        118,
+        84
+       ],
+       [
+        117,
+        100
+       ],
+       [
+        110,
+        115
+       ],
+       [
+        100,
+        124
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RT2"
+      ]
+     },
+     {
+      "id": "CM5",
+      "name": "제1대대-제4대대 전투지경선",
+      "kind": "boundary",
+      "between": [
+       "G1",
+       "G2"
+      ],
+      "xy": [
+       [
+        100,
+        72
+       ],
+       [
+        102,
+        100
+       ],
+       [
+        104,
+        120
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CM7",
+      "name": "중간목표 고지 G-고지 E 능선",
+      "kind": "objective",
+      "xy": [
+       [
+        84,
+        88
+       ],
+       [
+        92,
+        90
+       ],
+       [
+        89,
+        115
+       ],
+       [
+        81,
+        113
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T7",
+       "T6",
+       "T5"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM8",
+      "name": "중간목표 능선 2 적 경계지역",
+      "kind": "objective",
+      "xy": [
+       [
+        106,
+        104
+       ],
+       [
+        118,
+        104
+       ],
+       [
+        116,
+        116
+       ],
+       [
+        106,
+        116
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RT2"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM9",
+      "name": "예비진지 고지 A",
+      "kind": "battle_position",
+      "xy": [
+       [
+        82,
+        62
+       ],
+       [
+        98,
+        62
+       ],
+       [
+        98,
+        74
+       ],
+       [
+        82,
+        74
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T1"
+      ],
+      "preparation": "deliberate"
+     },
+     {
+      "id": "CM10",
+      "name": "서측방 역습 저지지역",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        62,
+        86
+       ],
+       [
+        84,
+        86
+       ],
+       [
+        84,
+        102
+       ],
+       [
+        62,
+        102
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "T7"
+      ]
+     },
+     {
+      "id": "CM11",
+      "name": "통과지점",
+      "kind": "passage_point",
+      "xy": [
+       [
+        117,
+        96
+       ]
+      ],
+      "estimated": true,
+      "terrain_refs": [
+       "RT2"
+      ]
+     },
+     {
+      "id": "CM12",
+      "name": "서측 역습로",
+      "kind": "route",
+      "xy": [
+       [
+        90,
+        66
+       ],
+       [
+        86,
+        76
+       ],
+       [
+        80,
+        86
+       ],
+       [
+        72,
+        94
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.35339760000000003,
+  "duration_s": 78.5,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 12683,
+   "cache_read_input_tokens": 61516,
+   "cache_creation_input_tokens": 55102
+  },
+  "examples": [
+   "kb2_003",
+   "kb1_103",
+   "kb2_005"
+  ]
+ }
+}

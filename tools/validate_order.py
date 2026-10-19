@@ -1,7 +1,7 @@
 """새로 생성한 order가 그 사례의 시뮬레이터에 들어갈 수 있는지 검사한다.
 
-    python3 tools/validate_order.py data/cases/kb2_023.json new_order.json
-    python3 tools/validate_order.py data/cases/kb2_023.json            # 모범 답안 order를 검사(자기 점검)
+    python3 tools/validate_order.py data/sim_cases/kb2_023.json new_order.json
+    python3 tools/validate_order.py data/sim_cases/kb2_023.json            # 모범 답안 order를 검사(자기 점검)
     python3 tools/validate_order.py --all                              # 50건 모범 답안 전체
 
 검사는 둘이다.
@@ -222,10 +222,10 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("case", nargs="?")
     ap.add_argument("order", nargs="?")
-    ap.add_argument("--all", action="store_true", help="data/cases의 모범 답안 50건 전체")
+    ap.add_argument("--all", action="store_true", help="data/sim_cases의 모범 답안 50건 전체")
     a = ap.parse_args()
     if a.all:
-        paths = sorted(glob.glob(os.path.join(ROOT, "data", "cases", "*.json")))
+        paths = sorted(glob.glob(os.path.join(ROOT, "data", "sim_cases", "*.json")))
         n = sum(run(p, quiet=True) for p in paths)
         print("통과 %d / %d" % (n, len(paths)))
         sys.exit(0 if n == len(paths) else 1)

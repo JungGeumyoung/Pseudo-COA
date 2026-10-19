@@ -1,0 +1,805 @@
+{
+ "id": "kb1_054",
+ "cond": "D",
+ "order": {
+  "task_organization": {
+   "text": "지원: 없음(포병 지원 없음). 장갑차중대는 작전통제. 제3대대는 혼성중대 위주 50% 전력이다.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "서부 지연부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "중앙 지연부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "마을 2 방어부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F5"
+      },
+      {
+       "force": "F6"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "경계부대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F7"
+      }
+     ]
+    },
+    {
+     "id": "G5",
+     "label": "연대 예비",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G6",
+     "label": "공병 장애물부대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "주 접근로는 비행장에서 도로 2를 따라 마을 1로 내려오는 축선과 도로 1을 따라 마을 2로 향하는 축선이다. 고지 B와 고지 H가 도로 2 양측을 감제한다. 마을 2 동쪽 하천 1이 우측 경계다. 장마철이라 기동로가 도로에 제한된다.",
+    "key_terrain": [
+     {
+      "ref": "M1",
+      "why": "고지 H는 도로 2 축선과 마을 1을 감제하며 인접 연대 1이 고수한다."
+     },
+     {
+      "ref": "T1",
+      "why": "마을 1은 도로 1과 도로 2의 교차점이다."
+     },
+     {
+      "ref": "T2",
+      "why": "마을 2는 도로 1 동진 축선의 관문이다."
+     },
+     {
+      "ref": "H4",
+      "why": "고지 D는 마을 2 북쪽 접근로를 관측한다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "도로 2 축선",
+      "user": "enemy",
+      "refs": [
+       "RD2",
+       "T5",
+       "T1"
+      ],
+      "xy": [
+       [
+        62,
+        104
+       ],
+       [
+        66,
+        96
+       ],
+       [
+        68,
+        86
+       ],
+       [
+        64,
+        76
+       ],
+       [
+        60,
+        64
+       ],
+       [
+        57,
+        48
+       ]
+      ]
+     },
+     {
+      "name": "도로 1 축선",
+      "user": "both",
+      "refs": [
+       "RD1",
+       "T2"
+      ],
+      "xy": [
+       [
+        57,
+        48
+       ],
+       [
+        80,
+        54
+       ],
+       [
+        101,
+        60
+       ],
+       [
+        125,
+        70
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1(80%)이 고지 B-마을 5 일대를 장악했고 적 연대 2(85%)는 고지 E-지점 1 남단에서 예비다. 적 중대 1(전차 2, 자주포 4)은 도로 2 상에서 공격을 준비한다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E3",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         62,
+         104
+        ],
+        [
+         66,
+         96
+        ],
+        [
+         64,
+         76
+        ],
+        [
+         60,
+         64
+        ],
+        [
+         57,
+         48
+        ]
+       ],
+       "when": "D일 09:00 이후 선도",
+       "t": 9
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "T1",
+       "axis_xy": [
+        [
+         66,
+         88
+        ],
+        [
+         64,
+         76
+        ],
+        [
+         60,
+         64
+        ],
+        [
+         57,
+         48
+        ]
+       ],
+       "when": "E3 뒤따라 도로 2 축선으로 공격",
+       "t": 10
+      },
+      {
+       "group": "E2",
+       "mode": "reinforce",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         64,
+         110
+        ],
+        [
+         80,
+         86
+        ],
+        [
+         92,
+         80
+        ],
+        [
+         101,
+         60
+        ]
+       ],
+       "when": "E1 돌파구 확대 시 고지 C·D 경유 마을 2로 지원",
+       "t": 13
+      }
+     ],
+     "risk_point": "E2가 고지 C-고지 D를 거쳐 마을 2의 약한 G3를 돌파하면 도로 1 측후방이 노출된다."
+    },
+    "unknowns": [
+     "적 연대 2 투입 방향과 시기",
+     "적 전차 추가 보유 여부",
+     "제5대대 손실 후 실전투력"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "인접 연대 1은 고지 H를 고수한다.",
+     "why": "상급 사단 명령에 명시되었다."
+    },
+    {
+     "text": "포병 지원은 받을 수 없다.",
+     "why": "상황에 아군은 포병 지원이 없다고 명시되었다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D일 09:00부로 마을 1-마을 2 일대에서 적 제6사단의 도로 1 진출을 지연하여 상급 사단의 서측방을 보호한다.",
+   "task_verb": "지연",
+   "objective_ref": "T2",
+   "when": {
+    "type": "time_elapsed",
+    "value": 9,
+    "text": "D일 09:00부터"
+   },
+   "purpose": "상급 사단의 서측방을 보호한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "적 제6사단의 도로 1 진출이 늦춰지고 연대가 건제를 유지한 채 마을 1-마을 2 선에서 상급 사단 서측방이 유지된다.",
+    "friendly": "연대 주력이 PL_C 이북에서 건제를 유지하고 예비를 보유한다.",
+    "enemy": "적 연대 1이 PL_B 북쪽에서 소모되고 적 연대 2가 도로 1에 진입하지 못한다.",
+    "terrain": "마을 1과 마을 2를 아군이 통제한다."
+   },
+   "concept": {
+    "text": "종심 있는 지연으로 도로 2 축선의 적 중대 1과 적 연대 1을 PL_A에서 PL_B로 끌어들이며 소모시킨다. 공병 장애물과 로켓포 화력으로 전차·자주포를 먼저 격멸하고 제2대대가 교대 지연한다. 마을 2의 제5·제6대대가 동측방을 보호하고 예비가 돌파구를 막는다.",
+    "maneuver": "G1이 BP1에서 도로 2 축선을 방어하고 PL_A에서 PL_B로 지연한다. G2가 BP2에서 G1을 엄호하며 교대 지연한다. G3가 마을 2에서 도로 1 동측방을 방어한다. G4가 고지 D-고지 F에서 경계한다. G6이 도로 2에 장애물을 설치한다.",
+    "fires": "2.36인치 로켓포와 박격포를 EA1에 집중해 전차 선두를 먼저 격멸한다. 포병 지원은 없으므로 탄약을 아껴 EA1 진입 시에만 사격한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G5",
+     "position_ref": "AA_RES",
+     "xy": [
+      90,
+      48
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G3",
+      "fraction": 0.3,
+      "text": "G3 누적 손실이 30%를 넘음"
+     },
+     "priorities": [
+      "마을 2 돌파 시 역습",
+      "G1 지연선 붕괴 시 PL_B 확보",
+      "도로 1 측방 차단"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "EA1",
+      "PL_A"
+     ],
+     "restrictions": "포병이 없으므로 박격포와 로켓포 탄약을 EA1 진입 시에만 사격한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "적 주공을 도로 2에서 늦춘다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       62,
+       62
+      ],
+      "note": "고지 H 동사면과 도로 2 축선 전방",
+      "frontage_m": 2000,
+      "preparation": "hasty",
+      "ref": "BP1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "BP1에서 도로 2 축선의 적을 방어한다.",
+       "params": {
+        "area": "BP1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "지연",
+       "text": "PL_A에서 PL_B로 지연한다.",
+       "params": {
+        "lines": [
+         "PL_A",
+         "PL_B"
+        ],
+        "disengage": {
+         "type": "losses_exceed",
+         "group": "G1",
+         "fraction": 0.3,
+         "text": "G1 손실이 30%를 넘음"
+        }
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "PL_A",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 PL_A 안에 있음"
+       },
+       "basis": "종심을 이용해 결정적 교전을 피한다."
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "G1을 엄호하고 교대 지연한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       76,
+       58
+      ],
+      "note": "마을 1 동북 구릉",
+      "frontage_m": 1800,
+      "preparation": "hasty",
+      "ref": "BP2"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "엄호",
+       "text": "BP2에서 G1을 엄호한다.",
+       "params": {
+        "covered_group": "G1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "지연",
+       "text": "PL_B에서 PL_C로 지연한다.",
+       "params": {
+        "lines": [
+         "PL_B",
+         "PL_C"
+        ],
+        "disengage": {
+         "type": "losses_exceed",
+         "group": "G2",
+         "fraction": 0.3,
+         "text": "G2 손실이 30%를 넘음"
+        }
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "PL_B",
+        "min_echelon": "대대",
+        "text": "적 대대 이상이 PL_B 안에 있음"
+       },
+       "basis": "G1과 교대로 지연해 접촉을 유지한다."
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "도로 1 동측방을 보호한다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       101,
+       60
+      ],
+      "note": "마을 2 일대 기배치",
+      "frontage_m": 2500,
+      "preparation": "hasty",
+      "ref": "BP3"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "BP3에서 마을 2를 방어한다.",
+       "params": {
+        "area": "BP3"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "적 적 접근을 조기 경보한다.",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       95,
+       76
+      ],
+      "note": "고지 D-고지 F 일대",
+      "frontage_m": 3000,
+      "preparation": "none",
+      "ref": "OP_SCR"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "OP_SCR에서 고지 C 방면 적 접근로를 경계한다.",
+       "params": {
+        "area": "OP_SCR"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G5",
+     "purpose": "돌파구를 막고 역습한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       90,
+       48
+      ],
+      "note": "마을 2 남서 도로 1 남측",
+      "frontage_m": 1500,
+      "preparation": "none",
+      "ref": "AA_RES"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "AA_RES에서 예비로 대기하며 방어한다.",
+       "params": {
+        "area": "AA_RES"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "RT_CA를 따라 마을 2로 역습한다.",
+       "params": {
+        "objective": "T2",
+        "route": "RT_CA"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G3",
+        "fraction": 0.3,
+        "text": "G3 손실이 30%를 넘음"
+       },
+       "basis": "마을 2 돌파 시 도로 1 측방을 막기 위함이다."
+      }
+     ]
+    },
+    {
+     "group": "G6",
+     "purpose": "적 기동을 늦추고 전차를 EA1에 가둔다.",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       63,
+       70
+      ],
+      "note": "도로 2 PL_A 부근",
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "ref": "PL_A"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "차단",
+       "text": "PL_A에서 도로 2를 차단한다.",
+       "params": {
+        "line": "PL_A"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D일 09:00 진지 점령 완료 및 장애물 설치",
+      "event": {
+       "type": "time_elapsed",
+       "value": 9,
+       "text": "D일 09:00"
+      }
+     },
+     {
+      "text": "D일 12:00 PL_A 접촉 예상",
+      "event": {
+       "type": "time_elapsed",
+       "value": 12,
+       "text": "D일 12:00"
+      }
+     },
+     {
+      "text": "D일 15:00 PL_B 지연 개시 예상",
+      "event": {
+       "type": "time_elapsed",
+       "value": 15,
+       "text": "D일 15:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "PL_A",
+      "name": "지연선 1",
+      "kind": "phase_line",
+      "xy": [
+       [
+        58,
+        68
+       ],
+       [
+        84,
+        70
+       ],
+       [
+        100,
+        72
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "PL_B",
+      "name": "지연선 2",
+      "kind": "phase_line",
+      "xy": [
+       [
+        57,
+        54
+       ],
+       [
+        80,
+        58
+       ],
+       [
+        100,
+        64
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "PL_C",
+      "name": "최종 지연선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        56,
+        38
+       ],
+       [
+        80,
+        42
+       ],
+       [
+        118,
+        45
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "BP1",
+      "name": "전투진지 1",
+      "kind": "battle_position",
+      "xy": [
+       [
+        56,
+        58
+       ],
+       [
+        68,
+        58
+       ],
+       [
+        68,
+        66
+       ],
+       [
+        56,
+        66
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "BP2",
+      "name": "전투진지 2",
+      "kind": "battle_position",
+      "xy": [
+       [
+        70,
+        54
+       ],
+       [
+        82,
+        54
+       ],
+       [
+        82,
+        62
+       ],
+       [
+        70,
+        62
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "BP3",
+      "name": "전투진지 3",
+      "kind": "battle_position",
+      "xy": [
+       [
+        94,
+        54
+       ],
+       [
+        108,
+        54
+       ],
+       [
+        108,
+        66
+       ],
+       [
+        94,
+        66
+       ]
+      ],
+      "estimated": true,
+      "preparation": "hasty"
+     },
+     {
+      "id": "OP_SCR",
+      "name": "경계 구역",
+      "kind": "outpost",
+      "xy": [
+       [
+        86,
+        70
+       ],
+       [
+        104,
+        70
+       ],
+       [
+        104,
+        82
+       ],
+       [
+        86,
+        82
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "AA_RES",
+      "name": "예비 대기지역",
+      "kind": "assembly_area",
+      "xy": [
+       [
+        84,
+        42
+       ],
+       [
+        96,
+        42
+       ],
+       [
+        96,
+        52
+       ],
+       [
+        84,
+        52
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "EA1",
+      "name": "교전지역 1",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        58,
+        70
+       ],
+       [
+        70,
+        70
+       ],
+       [
+        70,
+        82
+       ],
+       [
+        58,
+        82
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "RT_CA",
+      "name": "역습로",
+      "kind": "route",
+      "xy": [
+       [
+        90,
+        48
+       ],
+       [
+        96,
+        54
+       ],
+       [
+        101,
+        60
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.2279581,
+  "duration_s": 94.1,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 11332,
+   "cache_read_input_tokens": 34541,
+   "cache_creation_input_tokens": 27794
+  },
+  "examples": []
+ }
+}

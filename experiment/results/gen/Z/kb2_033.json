@@ -1,0 +1,547 @@
+{
+ "id": "kb2_033",
+ "cond": "Z",
+ "order": {
+  "task_organization": {
+   "text": "지원: 항공 1(일반지원, 여명 후 근접항공지원). 제1중대는 인접 대대 1에 배속 중이므로 제외한다.",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "주공(공격)",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "예비(제2梯)",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F1",
+       "part": "-제1중대"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "우측방 경계",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "화력지원",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "능선 3이 지점 1에서 고지 E와 고지 D를 거쳐 고지 B로 이어진다. 지점 1과 도로 1은 은폐된 접근로이고 동쪽 지점 3과 개활지는 능선에서 감제되어 야간에도 노출된다.",
+    "key_terrain": [
+     {
+      "ref": "F-H365",
+      "why": "고지 E는 지점 1에서 능선 3을 따라 진출하는 첫 목표이며 좌측 주저항선의 열쇠다."
+     },
+     {
+      "ref": "F-H380",
+      "why": "고지 D는 능선의 최고점으로 동측 개활지와 마을 1을 감제한다."
+     },
+     {
+      "ref": "F-SEND",
+      "why": "지점 1은 공격 발판이며 인접 대대 1이 고수 중이다."
+     },
+     {
+      "ref": "F-HZ",
+      "why": "고지 I는 지점 3 방향 우측방을 감제한다."
+     }
+    ],
+    "avenues": [
+     {
+      "name": "능선 3 접근로",
+      "user": "friendly",
+      "refs": [
+       "R2",
+       "F-SEND"
+      ],
+      "xy": [
+       [
+        82,
+        86
+       ],
+       [
+        86,
+        91
+       ],
+       [
+        90,
+        96
+       ],
+       [
+        96,
+        104
+       ]
+      ]
+     },
+     {
+      "name": "도로 1 기동로",
+      "user": "friendly",
+      "refs": [
+       "R1"
+      ],
+      "xy": [
+       [
+        110,
+        55
+       ],
+       [
+        100,
+        66
+       ],
+       [
+        90,
+        75
+       ],
+       [
+        80,
+        84
+       ]
+      ]
+     },
+     {
+      "name": "고지 B 증원로",
+      "user": "enemy",
+      "refs": [
+       "F-H400",
+       "F-HK",
+       "R2"
+      ],
+      "xy": [
+       [
+        101,
+        121
+       ],
+       [
+        99,
+        117
+       ],
+       [
+        98,
+        110
+       ],
+       [
+        96,
+        104
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 대대 1(증강, 80%)이 고지 E와 고지 D를 임시 방어 중이다. 적 연대 1은 고지 B, 고지 C, 지점 2에 견고히 배치된 예비로 증원 가능하고 적 포병 1이 지점 2 후사면에서 지원한다. 적 연대 2는 인접 연대 2 정면을 공격 준비 중이다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E1",
+       "mode": "hold",
+       "objective_ref": "F-H365",
+       "axis_xy": [
+        [
+         93,
+         100
+        ],
+        [
+         90,
+         96
+        ]
+       ],
+       "when": "역습 접촉 시 고지 E와 고지 D에서 임시 방어",
+       "t": 3
+      },
+      {
+       "group": "E3",
+       "mode": "bombard",
+       "objective_ref": "F-SEND",
+       "axis_xy": [
+        [
+         104,
+         140
+        ],
+        [
+         90,
+         96
+        ]
+       ],
+       "when": "아군 공격 개시 시 지점 1과 능선 3에 사격",
+       "t": 3.5
+      },
+      {
+       "group": "E2",
+       "mode": "counterattack",
+       "objective_ref": "F-H380",
+       "axis_xy": [
+        [
+         101,
+         121
+        ],
+        [
+         98,
+         110
+        ],
+        [
+         96,
+         104
+        ]
+       ],
+       "when": "아군이 고지 E를 탈취하면 고지 B에서 능선 3을 따라 역습",
+       "t": 4.5
+      }
+     ],
+     "risk_point": "고지 E 탈취 직후 적 연대 1이 고지 C에서 증원 역습하고 적 포병이 지점 1에 사격하는 시점"
+    },
+    "unknowns": [
+     "적 대대 1의 고지 D 배치 세부",
+     "적 연대 1 예비 투입 시기",
+     "인접 대대 1 잔여 진지의 전투력"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "인접 대대 1이 H시까지 지점 1을 고수한다.",
+     "why": "지점 1은 공격 발판이다."
+    },
+    {
+     "text": "여명(05:00경)부터 근접항공지원이 가능하다.",
+     "why": "야간에는 항공 지원이 제한된다."
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 H시(D일 03:00) 이후 능선 1에서 고지 E와 고지 D를 공격하여 탈환하고 사단 좌측 주저항선을 회복한다.",
+   "task_verb": "공격",
+   "objective_ref": "F-H380",
+   "when": {
+    "type": "time_elapsed",
+    "value": 3,
+    "text": "H시(D일 03:00)"
+   },
+   "purpose": "사단 좌측 주저항선을 회복하여 사단의 주저항선 고수를 가능하게 한다."
+  },
+  "execution": {
+   "end_state": {
+    "text": "고지 E와 고지 D를 확보하고 주저항선을 회복한다.",
+    "friendly": "연대가 고지 E와 고지 D에 방어 편성하고 예비를 재편한다.",
+    "enemy": "적 대대 1을 격멸하고 적 연대 1의 증원 역습을 격퇴한다.",
+    "terrain": "고지 E, 고지 D, 지점 1 및 능선 3 확보"
+   },
+   "concept": {
+    "text": "포병 준비사격 후 지점 1에서 능선 3을 따라 제2대대가 고지 E를, 이어 제1대대가 고지 D를 공격한다. 수색중대는 우측방을 경계한다.",
+    "maneuver": "G1은 공격대기지점에서 공격개시선을 넘어 능선 3을 따라 고지 E를 공격하고 G2는 후속하다 고지 D를 공격한다. G3는 고지 I와 지점 3에서 우측방을 경계한다.",
+    "fires": "H시부터 고지 D, 고지 E에 집중사격하고 돌격 직전 고지 B 증원로와 지점 2로 사격을 전이한다. 여명 후 근접항공지원을 고지 D에 지향한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G2",
+     "position_ref": "AP1",
+     "xy": [
+      88,
+      78
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.3,
+      "text": "G1 손실 30% 초과"
+     },
+     "priorities": [
+      "G1 돌파 후 고지 D 공격",
+      "적 연대 1 증원 역습 격퇴",
+      "G1 손실 시 고지 E 공격 인수"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1",
+      "G2"
+     ],
+     "zone_refs": [
+      "F-H365",
+      "F-H380",
+      "F-H400",
+      "F-AZONE"
+     ],
+     "restrictions": "돌격 개시 후 고지 E 300m 이내 사격을 중지하고 PL1 이북으로 전이한다."
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "고지 E를 탈취하여 사단 좌측 주저항선을 회복한다.",
+     "deploy": {
+      "kind": "공격대기지점",
+      "xy": [
+       84,
+       79
+      ],
+      "note": "공격대기지점에서 대기 후 능선 3을 따라 진출",
+      "frontage_m": 800,
+      "preparation": "none",
+      "ref": "AP1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "공격",
+       "text": "능선 3을 따라 고지 E를 공격한다.",
+       "params": {
+        "objective": "F-H365",
+        "route": "R2"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "방어",
+       "text": "고지 E 일대를 방어한다.",
+       "params": {
+        "area": "F-H365"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "고지 D를 탈취하고 적 증원 역습에 대비한다.",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       88,
+       78
+      ],
+      "note": "도로 1 인근 대기",
+      "frontage_m": 600,
+      "preparation": "none",
+      "ref": "AP1"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "후속지원",
+       "text": "G1을 후속지원한다.",
+       "params": {
+        "followed_group": "G1"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "공격",
+       "text": "고지 D를 공격한다.",
+       "params": {
+        "objective": "F-H380"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "공격",
+       "text": "G1 손실 시 고지 E를 공격한다.",
+       "params": {
+        "objective": "F-H365"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.4,
+        "text": "G1 손실 40% 초과"
+       },
+       "basis": "G1이 약화되면 예비로 고지 E 공격을 이어간다."
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "우측방을 보호한다.",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       112,
+       95
+      ],
+      "note": "고지 I와 지점 3 일대",
+      "frontage_m": 1500,
+      "preparation": "hasty",
+      "ref": "F-HZ"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "고지 I와 지점 3 일대를 경계한다.",
+       "params": {
+        "area": "F-OPEN"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "정찰",
+       "text": "지점 3 일대를 정찰한다.",
+       "params": {
+        "area": "F-OPEN"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "공격을 화력으로 지원한다.",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       100,
+       60
+      ],
+      "note": "마을 4 북쪽 포진지",
+      "frontage_m": 500,
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "H시부터 G1의 고지 E 공격을 화력지원한다.",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "F-H365"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "화력공격",
+       "text": "고지 B 증원로를 화력공격한다.",
+       "params": {
+        "target_ref": "F-H400"
+       }
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "H시 포병 준비사격 개시",
+      "event": {
+       "type": "time_elapsed",
+       "value": 3,
+       "text": "D일 03:00"
+      }
+     },
+     {
+      "text": "고지 E 돌격",
+      "event": {
+       "type": "time_elapsed",
+       "value": 4,
+       "text": "D일 04:00"
+      }
+     },
+     {
+      "text": "고지 D 공격 및 여명 후 근접항공지원",
+      "event": {
+       "type": "time_elapsed",
+       "value": 5,
+       "text": "D일 05:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "AP1",
+      "name": "공격대기지점 1",
+      "kind": "attack_position",
+      "xy": [
+       [
+        84,
+        79
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "LD1",
+      "name": "공격개시선",
+      "kind": "line_of_departure",
+      "xy": [
+       [
+        76,
+        84
+       ],
+       [
+        88,
+        84
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "PL1",
+      "name": "통제선 1",
+      "kind": "phase_line",
+      "xy": [
+       [
+        84,
+        98
+       ],
+       [
+        96,
+        98
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "OBJ1",
+      "name": "고지 D 목표",
+      "kind": "objective",
+      "xy": [
+       [
+        93,
+        100
+       ],
+       [
+        99,
+        104
+       ],
+       [
+        96,
+        108
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.1483314,
+  "duration_s": 63.2,
+  "usage": {
+   "input_tokens": 4,
+   "output_tokens": 9771,
+   "cache_read_input_tokens": 27214,
+   "cache_creation_input_tokens": 11973
+  },
+  "examples": []
+ }
+}

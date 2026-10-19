@@ -1,9 +1,9 @@
 """사례 파일을 시뮬레이터 입력과 평가 기록으로 나눈다.
 
-    python3 tools/case_io.py sim  data/cases/kb2_023.json                       > sim.json   # 모범 답안 명령으로
-    python3 tools/case_io.py sim  data/cases/kb2_023.json --order new_order.json > sim.json   # 새로 생성한 명령으로
-    python3 tools/case_io.py eval data/cases/kb2_023.json                       > eval.json
-    python3 tools/case_io.py prompt data/cases/kb2_023.json                     > given.json # 생성 모델에 줄 입력(익명화본)
+    python3 tools/case_io.py sim  data/sim_cases/kb2_023.json                       > sim.json   # 모범 답안 명령으로
+    python3 tools/case_io.py sim  data/sim_cases/kb2_023.json --order new_order.json > sim.json   # 새로 생성한 명령으로
+    python3 tools/case_io.py eval data/sim_cases/kb2_023.json                       > eval.json
+    python3 tools/case_io.py prompt data/sim_cases/kb2_023.json                     > given.json # 생성 모델에 줄 입력(익명화본)
 
 --order 파일은 order 블록 하나({"task_organization": …}) 또는 {"order": {…}} 꼴 모두 받는다.
 표준 라이브러리만 쓴다.
@@ -50,9 +50,9 @@ def eval_view(case):
 
 
 def prompt_view(case_path):
-    """생성 모델(에이전트)에 주는 것: 익명화된 input. 모범 답안 order는 few-shot 예시로만 쓴다."""
+    """생성 모델(에이전트)에 주는 것: 익명화된 input (data/situations와 같다)."""
     cid = load(case_path)["id"]
-    return load(os.path.join(ROOT, "data", "anon", cid + ".json"))["input"]
+    return load(os.path.join(ROOT, "data", "situations", cid + ".json"))["input"]
 
 
 def main():

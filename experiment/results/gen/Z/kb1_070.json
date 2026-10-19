@@ -1,0 +1,600 @@
+{
+ "id": "kb1_070",
+ "cond": "Z",
+ "order": {
+  "task_organization": {
+   "text": "G1 제제3대대 주력 방어, G2 제제1대대 예비, G3 수색중대 서측 경계, 지원: 포병대대 1 직접지원",
+   "groups": [
+    {
+     "id": "G1",
+     "label": "주방어대대",
+     "kind": "기동",
+     "composition": [
+      {
+       "force": "F1"
+      }
+     ]
+    },
+    {
+     "id": "G2",
+     "label": "연대 예비",
+     "kind": "예비",
+     "composition": [
+      {
+       "force": "F2"
+      }
+     ]
+    },
+    {
+     "id": "G3",
+     "label": "서측 경계부대",
+     "kind": "경계",
+     "composition": [
+      {
+       "force": "F3"
+      }
+     ]
+    },
+    {
+     "id": "G4",
+     "label": "직접지원포병",
+     "kind": "화력지원",
+     "composition": [
+      {
+       "force": "F4"
+      }
+     ]
+    }
+   ]
+  },
+  "situation": {
+   "terrain": {
+    "text": "하천 1은 도섭이 불가능한 장애물이며 적은 보트로 지점 1과 지점 2에서 도하한다. 고지 A는 마을 1 일대를 관측하는 하천 남안 유일한 지배 지형이다. 서측 마을 2 방면은 병력 공백으로 개방되어 있다.",
+    "key_terrain": [
+     {
+      "ref": "T8",
+      "why": "하천 남안 지배고지로 도하 지점 1을 관측 사격한다"
+     },
+     {
+      "ref": "T2",
+      "why": "도로 1과 도로 2가 만나는 마을로 지점 2' 축선의 입구다"
+     },
+     {
+      "ref": "T9",
+      "why": "하천 2와 접한 도하 가능 지역으로 인접 연대 1과의 접합부다"
+     }
+    ],
+    "avenues": [
+     {
+      "name": "지점 2' 도하 접근로",
+      "user": "enemy",
+      "refs": [
+       "T7",
+       "T9",
+       "R2"
+      ],
+      "xy": [
+       [
+        115,
+        150
+       ],
+       [
+        115,
+        124
+       ],
+       [
+        115,
+        112
+       ]
+      ]
+     },
+     {
+      "name": "도로 1 남진로",
+      "user": "both",
+      "refs": [
+       "R1",
+       "T6"
+      ],
+      "xy": [
+       [
+        115,
+        112
+       ],
+       [
+        130,
+        92
+       ],
+       [
+        90,
+        72
+       ]
+      ]
+     },
+     {
+      "name": "서측 개방 측방로",
+      "user": "enemy",
+      "refs": [
+       "T4",
+       "R3"
+      ],
+      "xy": [
+       [
+        58,
+        112
+       ],
+       [
+        70,
+        92
+       ],
+       [
+        85,
+        78
+       ]
+      ]
+     }
+    ]
+   },
+   "enemy": {
+    "text": "적 연대 1이 적 대대 1 전차와 적 연대 3 포병의 지원으로 마을 1 정면에서 도하하고 적 연대 2가 후속한다.",
+    "most_likely_coa": {
+     "steps": [
+      {
+       "group": "E4",
+       "mode": "bombard",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         112,
+         160
+        ],
+        [
+         112,
+         140
+        ]
+       ],
+       "when": "도하 직전 준비사격",
+       "t": -29
+      },
+      {
+       "group": "E1",
+       "mode": "attack",
+       "objective_ref": "T2",
+       "axis_xy": [
+        [
+         115,
+         138
+        ],
+        [
+         115,
+         121
+        ],
+        [
+         115,
+         112
+        ]
+       ],
+       "when": "야간 보트 도하",
+       "t": -28
+      },
+      {
+       "group": "E3",
+       "mode": "fix",
+       "objective_ref": "T8",
+       "axis_xy": [
+        [
+         115,
+         145
+        ],
+        [
+         115,
+         130
+        ]
+       ],
+       "when": "북안에서 직접사격",
+       "t": -28
+      },
+      {
+       "group": "E2",
+       "mode": "reinforce",
+       "objective_ref": "T9",
+       "axis_xy": [
+        [
+         113,
+         170
+        ],
+        [
+         115,
+         140
+        ],
+        [
+         140,
+         122
+        ]
+       ],
+       "when": "교두보 확보 후 도하",
+       "t": -24
+      }
+     ],
+     "risk_point": "G1 정면 공백과 지점 2 접합부 돌파 및 서측 개방 측방 우회"
+    },
+    "unknowns": [
+     "적 연대 2의 도하 시각과 지점",
+     "적 포병 진지",
+     "서측 하천 도하 여부"
+    ]
+   },
+   "assumptions": [
+    {
+     "text": "적 주력 도하는 D-2일 야간에서 D-1일 새벽 사이에 시작한다",
+     "why": "도하 장비를 갖추고 공격준비 중이다"
+    },
+    {
+     "text": "재편성 중인 제제1대대는 D-2일 22시까지 예비진지에 도착한다",
+     "why": "후방으로 이동 중이다"
+    }
+   ]
+  },
+  "mission": {
+   "text": "아군 연대는 D-2일 22:00까지 마을 1 동쪽 하천 2에서 마을 2까지 하천 1 남안을 방어하여 지점 2' 축선으로 도하하는 적의 남진을 저지한다.",
+   "task_verb": "방어",
+   "objective_ref": "T8",
+   "when": {
+    "type": "time_elapsed",
+    "value": -26,
+    "text": "D-2일 22:00"
+   },
+   "purpose": "사단이 하천 1선을 고수하고 마을 6 방향 적 남진을 저지하도록 한다"
+  },
+  "execution": {
+   "end_state": {
+    "text": "적이 하천 1 남안에 교두보를 확보하지 못하고 연대는 고지 A와 마을 1을 유지한다.",
+    "friendly": "제제3대대가 고지 A와 마을 1을 유지하고 예비가 재편성 상태를 유지한다",
+    "enemy": "도하한 적이 격멸되고 후속 연대가 북안에 고착된다",
+    "terrain": "고지 A 마을 1 지점 2 확보"
+   },
+   "concept": {
+    "text": "도하 중인 적을 교전지역 1에서 격멸하는 하천 방어를 한다. 병력이 부족하므로 도하 가능성이 높은 지점 1과 지점 2에 집중하고 서측은 수색중대로 경계한다.",
+    "maneuver": "G1은 고지 A 마을 1 지점 2에 중대를 배치하고 기관총 사격을 교전지역 1에 집중한다. G2는 마을 1 후방에서 대기하다 교두보를 역습한다. G3은 마을 2 일대에서 서측을 경계한다.",
+    "fires": "G4는 G1을 우선 지원하여 도하 지점과 교두보를 사격하고 적 도하 개시와 동시에 집중사격한다.",
+    "main_effort": "G1",
+    "reserve": {
+     "group": "G2",
+     "position_ref": "T8",
+     "xy": [
+      122,
+      95
+     ],
+     "commit": {
+      "type": "losses_exceed",
+      "group": "G1",
+      "fraction": 0.3,
+      "text": "G1 손실 30퍼센트 초과",
+      "and": [
+       {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T9",
+        "min_echelon": "중대",
+        "text": "지점 2에 적 중대 이상 상륙"
+       }
+      ]
+     },
+     "priorities": [
+      "지점 2 교두보 역습",
+      "마을 1 탈환 방지",
+      "서측 개방 측방 대응"
+     ]
+    },
+    "fire_support": {
+     "priority_groups": [
+      "G1"
+     ],
+     "zone_refs": [
+      "EA1",
+      "T7",
+      "T9"
+     ],
+     "restrictions": "포병은 진지 노출을 피해 사격 후 위치를 변환한다"
+    }
+   },
+   "tasks": [
+    {
+     "group": "G1",
+     "purpose": "고지 A와 마을 1을 지켜 도하 적을 저지한다",
+     "deploy": {
+      "kind": "진지",
+      "xy": [
+       118,
+       110
+      ],
+      "note": "고지 A 서 마을 1 중앙 지점 2 동 3개 중대 횡대와 화기중대 후방",
+      "frontage_m": 5500,
+      "polygon": [
+       [
+        93,
+        118
+       ],
+       [
+        150,
+        120
+       ],
+       [
+        150,
+        104
+       ],
+       [
+        95,
+        104
+       ]
+      ],
+      "preparation": "hasty",
+      "elements": [
+       {
+        "label": "K중대",
+        "xy": [
+         102,
+         112
+        ]
+       },
+       {
+        "label": "I중대",
+        "xy": [
+         116,
+         112
+        ]
+       },
+       {
+        "label": "L중대",
+        "xy": [
+         140,
+         110
+        ]
+       },
+       {
+        "label": "M중대",
+        "xy": [
+         120,
+         106
+        ]
+       }
+      ]
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "방어",
+       "text": "고지 A 마을 1 지점 2 일대를 방어",
+       "params": {
+        "area": "T8"
+       }
+      },
+      {
+       "timing": "즉시",
+       "verb": "저지",
+       "text": "교전지역 1에서 도하하는 적을 저지",
+       "params": {
+        "area": "EA1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "격퇴",
+       "text": "지점 2에 상륙한 적을 격퇴",
+       "params": {
+        "target_group": "E1"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T9",
+        "min_echelon": "중대",
+        "text": "지점 2에 적 중대 이상"
+       },
+       "basis": "교두보가 커지기 전에 격퇴해야 한다"
+      }
+     ]
+    },
+    {
+     "group": "G2",
+     "purpose": "예비로 돌파된 곳을 역습한다",
+     "deploy": {
+      "kind": "예비진지",
+      "xy": [
+       122,
+       95
+      ],
+      "note": "고지 A 후방 도로 1 인접",
+      "frontage_m": 1500,
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "경계",
+       "text": "예비진지 일대를 경계",
+       "params": {
+        "area": "PL1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "역습",
+       "text": "지점 2 교두보를 역습",
+       "params": {
+        "objective": "T9",
+        "route": "R1"
+       },
+       "trigger": {
+        "type": "losses_exceed",
+        "group": "G1",
+        "fraction": 0.3,
+        "text": "G1 손실 30퍼센트 초과"
+       },
+       "basis": "주방어대대 방어가 약화되면 즉시 투입한다"
+      }
+     ]
+    },
+    {
+     "group": "G3",
+     "purpose": "서측 개방 측방을 조기 경고하고 차장한다",
+     "deploy": {
+      "kind": "전초",
+      "xy": [
+       58,
+       105
+      ],
+      "note": "마을 2 남쪽 도로 3 인접",
+      "frontage_m": 4000,
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "차장",
+       "text": "마을 2 일대 서측을 차장",
+       "params": {
+        "area": "T4"
+       }
+      },
+      {
+       "timing": "이어서",
+       "verb": "정찰",
+       "text": "도로 3 방면을 정찰",
+       "params": {
+        "area": "R3"
+       }
+      }
+     ]
+    },
+    {
+     "group": "G4",
+     "purpose": "도하 적을 사격으로 격멸한다",
+     "deploy": {
+      "kind": "화력지원진지",
+      "xy": [
+       112,
+       82
+      ],
+      "note": "마을 4 북동 후방 고지 A 사거리 내",
+      "frontage_m": 800,
+      "preparation": "hasty"
+     },
+     "items": [
+      {
+       "timing": "즉시",
+       "verb": "화력지원",
+       "text": "G1을 교전지역 1에 화력지원",
+       "params": {
+        "supported_group": "G1",
+        "target_ref": "EA1"
+       }
+      },
+      {
+       "timing": "명에 의해",
+       "verb": "화력공격",
+       "text": "지점 2 교두보를 화력공격",
+       "params": {
+        "target_ref": "T9"
+       },
+       "trigger": {
+        "type": "strength_in_area",
+        "side": "enemy",
+        "ref": "T9",
+        "min_echelon": "중대",
+        "text": "지점 2에 적 중대 이상"
+       },
+       "basis": "역습 전 교두보를 제압한다"
+      }
+     ]
+    }
+   ],
+   "coordinating": {
+    "time_plan": [
+     {
+      "text": "D-2일 22:00까지 방어 진지 점령 완료",
+      "event": {
+       "type": "time_elapsed",
+       "value": -26,
+       "text": "D-2일 22:00"
+      }
+     },
+     {
+      "text": "D-1일 06:00까지 장애물과 사격계획 완성",
+      "event": {
+       "type": "time_elapsed",
+       "value": -18,
+       "text": "D-1일 06:00"
+      }
+     }
+    ],
+    "control_measures": [
+     {
+      "id": "EA1",
+      "name": "교전지역 1",
+      "kind": "engagement_area",
+      "xy": [
+       [
+        98,
+        121
+       ],
+       [
+        150,
+        121
+       ],
+       [
+        150,
+        106
+       ],
+       [
+        98,
+        106
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "PL1",
+      "name": "예비 한계선",
+      "kind": "phase_line",
+      "xy": [
+       [
+        95,
+        98
+       ],
+       [
+        150,
+        98
+       ]
+      ],
+      "estimated": true
+     },
+     {
+      "id": "CP1",
+      "name": "접촉점 1",
+      "kind": "contact_point",
+      "xy": [
+       [
+        150,
+        112
+       ]
+      ],
+      "estimated": true
+     }
+    ]
+   }
+  }
+ },
+ "gen": {
+  "model": "claude-sonnet-5-5",
+  "effort": "medium",
+  "cost_usd": 0.0739304,
+  "duration_s": 42.0,
+  "usage": {
+   "input_tokens": 2,
+   "output_tokens": 5001,
+   "cache_read_input_tokens": 10524,
+   "cache_creation_input_tokens": 5716
+  },
+  "examples": []
+ }
+}
